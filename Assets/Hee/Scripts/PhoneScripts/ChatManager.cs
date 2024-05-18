@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Yarn.Unity;
 
 public class ChatManager : MonoBehaviour
 {
+    public static ChatManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     struct chat{
         public bool JisooSaying;  // 지수의 대사이면 true
         public string text;  // 대사
@@ -48,6 +55,8 @@ public class ChatManager : MonoBehaviour
     GameObject ChatBox_Opponent;
 
     public ScrollRect sr;
+
+    [YarnCommand("StartPhoneChat")]
     public void StartChat(int i)  // yarn에서 호출
     {
         chatting = ChattingList[i];
@@ -73,7 +82,8 @@ public class ChatManager : MonoBehaviour
             GenerateChat(c.JisooSaying, c.text);
             yield return new WaitForSeconds(0.5f);
         }
-        // startdialog(chatting.NextDialogue);
+        var runner = FindObjectOfType<DialogueRunner>();
+        runner.StartDialogue(chatting.NextDialogue);
     }
 
     public void PrintChatLog(){  // 저장 후 로드 시 호출
@@ -102,7 +112,10 @@ public class ChatManager : MonoBehaviour
 
     void Start(){
         // 입력예시
-        // ChattingList.Add(new Chatting(false, "Haesol", "YarnDialogue"));  // 0
-        // ChattingList[0].chatList.Add(new chat(false,"Im Log 0"));
+        ChattingList.Add(new Chatting(false, "Geonwoo", "AfterGeonwooChatAsJiwon"));  // 0
+        ChattingList[0].chatList.Add(new chat(false,"Jiwon"));
+        ChattingList[0].chatList.Add(new chat(false, "1st row"));
+
+
     }
 }
