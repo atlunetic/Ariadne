@@ -62,7 +62,7 @@ public class ChatManager : MonoBehaviour
         chatting = ChattingList[i];
         PhoneController.instance.ActivePhone();
         if(chatting.IsDgram){
-
+            // DgramController 생성 후 작성
             ChatBox_Me = DgramChatBox_Me;
             ChatBox_Opponent = DgramChatBox_Opponent;
         }
@@ -80,7 +80,7 @@ public class ChatManager : MonoBehaviour
         
         foreach(chat c in chatting.chatList){   
             GenerateChat(c.JisooSaying, c.text);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(2f);
         }
         var runner = FindObjectOfType<DialogueRunner>();
         runner.StartDialogue(chatting.NextDialogue);
@@ -93,15 +93,15 @@ public class ChatManager : MonoBehaviour
     public void GenerateChat(bool me,string text){
         GameObject ChatBox;
         if(me){
-            ChatBox = Instantiate(ChocoChatBox_Me, Chatroom.transform);
+            ChatBox = Instantiate(ChocoChatBox_Me, Chatroom.content.transform);
         }
         else{
-            ChatBox = Instantiate(ChatBox_Opponent, Chatroom.transform);
+            ChatBox = Instantiate(ChatBox_Opponent, Chatroom.content.transform);
         }
         ChatBox.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = text;
 
         // 말풍선의 content size fitter 동작 보장 -> 불필요, 삭제
-        // LayoutRebuilder.ForceRebuildLayoutImmediate(ChatBox.GetComponent<RectTransform>());
+        LayoutRebuilder.ForceRebuildLayoutImmediate(ChatBox.GetComponent<RectTransform>());
 
         // 채팅방의 content size fitter 동작 보장
         LayoutRebuilder.ForceRebuildLayoutImmediate(Chatroom.content);
@@ -113,7 +113,7 @@ public class ChatManager : MonoBehaviour
     void Start(){
         // 입력예시
         ChattingList.Add(new Chatting(false, "Geonwoo", "AfterGeonwooChatAsJiwon"));  // 0
-        ChattingList[0].chatList.Add(new chat(false,"Jiwon"));
+        ChattingList[0].chatList.Add(new chat(true,"Jiwon"));
         ChattingList[0].chatList.Add(new chat(false, "1st row"));
 
 

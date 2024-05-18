@@ -8,7 +8,7 @@ public class DontDestroy : MonoBehaviour
     public static DontDestroy instance;
     void Awake() {
 
-        StartCoroutine("init");
+        //StartCoroutine("init");
 
         if(instance == null){
             instance = this;
@@ -19,7 +19,6 @@ public class DontDestroy : MonoBehaviour
         }
     }
     IEnumerator init(){
-        SceneManager.LoadScene("SampleScene");
         yield return new WaitForSeconds(0.1f);
     }
 }
