@@ -31,6 +31,7 @@ public class ChocoTalkController : MonoBehaviour
     void Start(){
         ChatScroll = ChatTab.transform.GetChild(0).GetComponent<ScrollRect>();
         CreateChatRoom("Someone");
+        CreateChatRoom("Geonwoo");
     }
 
     public void CreateChatRoom(string name){  // 채팅방 생성
