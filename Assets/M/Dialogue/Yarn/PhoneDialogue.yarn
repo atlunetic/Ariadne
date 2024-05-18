@@ -74,7 +74,7 @@ title:Chocotalk1st
 
 ===
 
-title: ChatWithGeonwoo
+title: ChooseChatName
 
 ---
 
@@ -82,10 +82,10 @@ title: ChatWithGeonwoo
 아. 근데 이거 지원이 휴대폰인데.
 나라고 밝혀야 하나?
 ...
-
--> 지원이인척 말을 걸자.
-
--> 나라고 밝히자.
+    -> 지원이인척 말을 걸자.
+        <<StartPhoneChat PhoneController 0>>
+        <<stop>>
+    -> 나라고 밝히자.
 
 ===
 
