@@ -8,20 +8,20 @@ using TMPro;
 public class ClickToAdd : MonoBehaviour
 {
     public SceneItem sceneItem; // Reference to the SceneItem script attached to the item GameObject
-    public Inventory inventory; // Reference to the InventoryObject
+    //public Inventory inventory; // Reference to the InventoryObject
 
     [SerializeField]
-    public TMP_Text AlertText;
+    //public TMP_Text AlertText;
 
     private void OnMouseDown()
     {
-        if (inventory != null && sceneItem != null)
+        if (Inventory.instance != null && sceneItem != null)
         {
             // Get the item from the SceneItem script
             item newItem = sceneItem.GetItem();
 
             // Add the item to the inventory
-            inventory.Additem(newItem);
+            Inventory.instance.Additem(newItem);
             //inventory.AddItemFromLastSlot(newItem);
 
             // Destroy the item GameObject after adding it to the inventory
@@ -37,6 +37,6 @@ public class ClickToAdd : MonoBehaviour
 
     private void HideAlert()
     {
-        AlertText.gameObject.SetActive(false);
+        //AlertText.gameObject.SetActive(false);
     }
 }

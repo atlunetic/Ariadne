@@ -123,6 +123,7 @@ title: HaesolSuspicious
 ...
 해솔이한테는 솔직하게 말해도 되지 않을까.
 ...
+<<StartPhoneChat PhoneController 1>>
 
 ===
 
@@ -163,6 +164,7 @@ title: HaesolDropperCaution
 뭐...?
 마약 운반책?
 왜 지원이한테 그런 걸 권유하는거야...?
+<<StartPhoneChat PhoneController 2>>
 
 ===
 
@@ -227,6 +229,7 @@ D gram 아이디였여?
 아무래도 수상해.
 
 -> 말을 걸어보자.
+    <<StartPhoneChat PhoneController 3>>
 
 ===
 
@@ -236,6 +239,7 @@ title: DrugDeal1
 
 //보낸 메시지 ‘안녕하세요’
 ….
+<<StartPhoneChat PhoneController 4>>
 
 ===
 
@@ -258,6 +262,7 @@ title: DrugDeal3
 이렇게 거래 해도 되는 거야?
 그래도…. 증거를 얻을 수 있을지 모르니까.
 일단은 맞다고 해보자.
+<<StartPhoneChat PhoneController 5>>
 
 ===
 
@@ -283,6 +288,7 @@ title: DrugDeal4
 -> 계속 말을 걸어볼까?
     지원이가 이 사람이랑 연락하고 나서 관련된 걸 다 지웠을 수도 있잖아.
     계속 대화하다 보면 뭐라도 알아낼 수 있지 않을까?
+    <<StartPhoneChat PhoneController 6>>
     <<stop>>
 
 ===
@@ -306,6 +312,7 @@ title: DrugDeal5
     ...
     일단 입금해보자.
     ...
+    <<StartPhoneChat PhoneController 7>>
     <<stop>>
 
 ===
@@ -327,6 +334,8 @@ title: DrugDeal7
 D가 보낸 메시지에 심장이 빨리 뛰기 시작한다.
 진짜로 마약을 보게 되면 어떡하지?
 범죄 아니야?
+
+<<StartPhoneChat PhoneController 7>>
 
 ===
 
