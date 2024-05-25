@@ -203,7 +203,6 @@ title: Realized
 
 //BGM 추가: 지원이의 방 Theme
 
-<<Flip 지수>>
 지원이는 뭐 하고 있으려나.
 오랜만에 맛있는 거 시켜먹자고 해야지.
 
@@ -224,7 +223,7 @@ title: Jiwon_Room
 
 ---
 
-<<Scene JiwonRoomBG>>
+<<Scene FullJiwonRoomBG>>
 
 매일 집에만 있더니. 꼭 찾을 때 없어.
 아무튼 얘는 깔끔하게 해놓고 사네.
@@ -235,7 +234,7 @@ title: Jiwon_Room
 
 ===
 
-title: LetterContent
+title: Memory_LetterContent
 
 ---
 
@@ -323,7 +322,7 @@ title: JisooPhone
 다시 충전하려면 한참 걸릴텐데.
 어쩔 수 없지. 일단은 지원이의 휴대폰을 찾아보자.
 
-<<HideAllSprites>>
+<<Hide 지수>>
 
 ===
 
@@ -346,26 +345,22 @@ title: FoundJiwonPhone
 휴대폰 두고 간 걸 모를 수가 있나?
 ….
 
-<<wait 2.0>>
 
 휴….
 대체 어디 간거야~.
 ….
 
-<<wait 2.0>>
 
 혹시 모르니 지원이의 휴대폰을 확인해보자.
 
-//휴대폰 아이콘 클릭 유도
 
-//이미지 추가: 휴대폰 UI 확대
+<<Draw phone_first 0.75 0.75>>
 
-<<wait 1.0>>
 잠금도 안 걸어뒀네?
 평소 같으면 내가 휴대폰 볼까봐 기겁해서 달려 올텐데.
 …걱정되네.
 
-//사운드 추가: 아리아드네 연락 도착음
+<<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom, Menu>>
 
 ===
 
@@ -433,7 +428,7 @@ title: Park
 지원이랑 가끔 산책하러 갔었지….
 동네 공원으로 가볼까?
     -> 예
-        //씬 이동
+        <<ChangeSceneTo S1_Park>>
     -> 아니오
         다른 곳으로 가자….
 
@@ -504,7 +499,7 @@ title: Barstreet
 지원이도 한 번 데려가긴 했었지.
 술집 거리로 가볼까?
     -> 예
-        //씬 이동 (술집거리)
+        <<ChangeSceneTo S1_Street>>
     -> 아니오
         다른 곳으로 가자...
 
@@ -545,7 +540,7 @@ title: Hospital
 지원이를 찾기도 전에 아파서 쓰러지면 안되니까.
 생각난 김에 병원이라도 빨리 갔다 올까?
     -> 예
-        //씬 이동
+        <<ChangeSceneTo S1_Hospital>>
     -> 아니오
         괜찮으려나?
 
@@ -803,6 +798,30 @@ title:JW_Hairpin
 // 팝업이미지 종료
 
 * '헤어핀'을 습득했다. *
+
+===
+
+title: JW_Wallet
+
+---
+
+어...
+지갑도 놓고 나갔네?
+
+...
+...
+혹시 모르니 챙겨두자.
+
+* '지원의 지갑'을 습득했다. *
+
+===
+
+title: WrongItem
+
+---
+
+...
+아무 일도 일어나지 않았다.
 
 ===
 

@@ -6,15 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Hee/Scenes/Menu.unity
-    guid: 5288e2da389047245b84dbc83e01a879
+    path: Assets/M/Scenes_M/S1/S1.unity
+    guid: 7dab7e09a43e41248a14141387204b19
+  - enabled: 1
+    path: Assets/M/Scenes_M/S1/S1_1_JiwonRoom.unity
+    guid: 3c470575b5cca3c40a62d671470e0202
   - enabled: 1
     path: Assets/M/Scenes_M/S1/S1_2_JiwonRoom.unity
     guid: 22e782cbd654742498ece93c21d8f18d
+  - enabled: 1
+    path: Assets/Hee/Scenes/Menu.unity
+    guid: 5288e2da389047245b84dbc83e01a879
   - enabled: 0
     path: Assets/Hee/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
     path: Assets/Scenes/NewScene.unity
     guid: 69b234d858ce42c439d74cbb2144bb40
+  - enabled: 1
+    path: Assets/M/Scenes_M/S1/S1_Hospital.unity
+    guid: 570271b71d797984fa389f3236cb9b82
+  - enabled: 1
+    path: Assets/M/Scenes_M/S1/S1_Park.unity
+    guid: f2e496cdaf1caab42895e1c7b613a1ae
+  - enabled: 1
+    path: Assets/M/Scenes_M/S1/S1_Street.unity
+    guid: 0df01122a10d8054183f63257eb048cf
   m_configObjects: {}
