@@ -8,10 +8,17 @@ using Yarn.Unity;
 public class ChatManager : MonoBehaviour
 {
     public static ChatManager instance;
+    
+    public Sprite[] profileSprite;
+    public Dictionary<string, Sprite> profileImage = new Dictionary<string, Sprite>();
 
     private void Awake()
     {
-        instance = this;
+        if(instance == null)
+            instance = this;
+        profileImage.Add("건우오빠", profileSprite[0]);
+        profileImage.Add("의사 선생님", profileSprite[1]);
+        profileImage.Add("해솔", profileSprite[2]);
     }
     struct chat{
         public bool JisooSaying;  // 지수의 대사이면 true
@@ -51,29 +58,18 @@ public class ChatManager : MonoBehaviour
 
     Chatting chatting;  // 지금 출력중인 채팅
     ScrollRect Chatroom;  // 지금 채팅을 출력중인 채팅방
-    GameObject ChatBox_Me; 
+    GameObject ChatBox_Me;
     GameObject ChatBox_Opponent;
-
-    public ScrollRect sr;
 
     [YarnCommand("StartPhoneChat")]
     public void StartChat(int i)  // yarn에서 호출
     {
-        chatting = ChattingList[i];
+        SetChat(i);
         PhoneController.instance.ActivePhone();
-        if(chatting.IsDgram){
-            // DgramController 생성 후 작성
-            ChatBox_Me = DgramChatBox_Me;
-            ChatBox_Opponent = DgramChatBox_Opponent;
-        }
-        else {
-            PhoneController.instance.ActiveChocoTalk();
-            ChocoTalkController.instance.ActiveChatRoom(chatting.name);
-            Chatroom = ChocoTalkController.instance.getScrollrectof(chatting.name);
-            ChatBox_Me = ChocoChatBox_Me;
-            ChatBox_Opponent = ChocoChatBox_Opponent;
-            ChatBox_Opponent.transform.GetChild(2).GetComponent<TMP_Text>().text = chatting.name;
-        }
+        if(chatting.IsDgram) PhoneController.instance.ActiveDgram();
+        else PhoneController.instance.ActiveChocoTalk();
+        ChocoTalkController.instance.ActiveChatRoom(chatting.name);
+        
         StartCoroutine("UpdatingChat");
         GameManager.Instance.ChattingLog.Add(i);
     } 
@@ -92,6 +88,17 @@ public class ChatManager : MonoBehaviour
 
     public void PrintChat(int i){  // 저장 후 로드 시 호출
         chatting = ChattingList[i];
+        SetChat(i);
+        foreach(chat c in chatting.chatList){
+            GameObject ChatBox;   
+            if(c.JisooSaying) ChatBox = Instantiate(ChocoChatBox_Me, Chatroom.content.transform);
+            else ChatBox = Instantiate(ChatBox_Opponent, Chatroom.content.transform);
+            ChatBox.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = c.text;
+        }
+    }
+
+    private void SetChat(int i){
+        chatting = ChattingList[i];
         if(chatting.IsDgram){
             // DgramController 생성 후 작성
             ChatBox_Me = DgramChatBox_Me;
@@ -101,13 +108,8 @@ public class ChatManager : MonoBehaviour
             Chatroom = ChocoTalkController.instance.getScrollrectof(chatting.name);
             ChatBox_Me = ChocoChatBox_Me;
             ChatBox_Opponent = ChocoChatBox_Opponent;
+            ChatBox_Opponent.transform.GetChild(1).GetComponent<Image>().sprite = profileImage[chatting.name];
             ChatBox_Opponent.transform.GetChild(2).GetComponent<TMP_Text>().text = chatting.name;
-        }
-        foreach(chat c in chatting.chatList){
-            GameObject ChatBox;   
-            if(c.JisooSaying) ChatBox = Instantiate(ChocoChatBox_Me, Chatroom.content.transform);
-            else ChatBox = Instantiate(ChatBox_Opponent, Chatroom.content.transform);
-            ChatBox.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = c.text;
         }
     }
 

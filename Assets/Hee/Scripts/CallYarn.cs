@@ -26,7 +26,7 @@ public class CallYarn : MonoBehaviour
             runner.StartDialogue(dialogname);
     }
 
-    // 버튼 클릭 이벤트로 얀 다이얼로그를 부를 때 사용
+    // 버튼 클릭 이벤트로 얀 다이얼로그를 한 번만 부를 때 사용
     void Callbybutton (Button button, string dialogname){
         UnityAction myAction = null;
         myAction = () => {callYarn(dialogname); button.onClick.RemoveListener(myAction);};

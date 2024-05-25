@@ -31,9 +31,9 @@ public class ChocoTalkController : MonoBehaviour
     }
     void Start(){
         ChatScroll = ChatTab.transform.GetChild(0).GetComponent<ScrollRect>();
-        CreateChatRoom("해솔");
         CreateChatRoom("건우오빠");
         CreateChatRoom("의사 선생님");
+        CreateChatRoom("해솔");
         ChatMap.Add("D", D);
     }
 
@@ -41,6 +41,7 @@ public class ChocoTalkController : MonoBehaviour
         GameObject chatroom;
         chatroom = Instantiate(PChatRoom, ChatRooms);
         chatroom.transform.GetChild(0).GetComponent<TMP_Text>().text = name;
+        
         // 이하 두줄 나중에 삭제!!
         LayoutRebuilder.ForceRebuildLayoutImmediate(chatroom.GetComponent<ScrollRect>().content);
         LayoutRebuilder.ForceRebuildLayoutImmediate(chatroom.GetComponent<ScrollRect>().content);
@@ -50,6 +51,7 @@ public class ChocoTalkController : MonoBehaviour
         GameObject chatbutton;
         chatbutton = Instantiate(PChatButton, ChatScroll.content);
         chatbutton.transform.GetChild(0).GetComponent<TMP_Text>().text = name;
+        chatbutton.transform.GetChild(1).GetComponent<Image>().sprite = ChatManager.instance.profileImage[name];
         chatbutton.name = name;
 
         ChatMap.Add(name, chatroom);
