@@ -50,7 +50,7 @@ public class CameraController : MonoBehaviour
         // UI 다 켜기 
     }
 
-    public void SaveImmediate(){  // <TakePicture> 에서 호출
+    public void SaveImmediate(){  // <TakePicture> 에서 호출, 증거사진일때
 
     }
 

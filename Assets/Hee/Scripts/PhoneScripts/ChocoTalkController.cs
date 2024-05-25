@@ -23,6 +23,7 @@ public class ChocoTalkController : MonoBehaviour
     public GameObject TrendsTab;
     public Button[] Buttons;
     public TMP_Text TXT;
+    public GameObject D;
     void Awake()
     {
         if (instance == null)
@@ -30,13 +31,16 @@ public class ChocoTalkController : MonoBehaviour
     }
     void Start(){
         ChatScroll = ChatTab.transform.GetChild(0).GetComponent<ScrollRect>();
-        CreateChatRoom("Someone");
-        CreateChatRoom("Geonwoo");
+        CreateChatRoom("해솔");
+        CreateChatRoom("건우오빠");
+        CreateChatRoom("의사 선생님");
+        ChatMap.Add("D", D);
     }
 
     public void CreateChatRoom(string name){  // 채팅방 생성
         GameObject chatroom;
         chatroom = Instantiate(PChatRoom, ChatRooms);
+        chatroom.transform.GetChild(0).GetComponent<TMP_Text>().text = name;
         // 이하 두줄 나중에 삭제!!
         LayoutRebuilder.ForceRebuildLayoutImmediate(chatroom.GetComponent<ScrollRect>().content);
         LayoutRebuilder.ForceRebuildLayoutImmediate(chatroom.GetComponent<ScrollRect>().content);
@@ -52,7 +56,11 @@ public class ChocoTalkController : MonoBehaviour
     }
     public void ActiveChatRoom(string name)  // 채팅방 켜기
     {
-        PhoneController.instance.ActiveTab(ChatMap[name]);
+        GameObject chatroom = ChatMap[name];
+        PhoneController.instance.ActiveTab(chatroom);
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(chatroom.GetComponent<ScrollRect>().content);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(chatroom.GetComponent<ScrollRect>().content);
     }
 
     public ScrollRect getScrollrectof(string name)
@@ -62,7 +70,7 @@ public class ChocoTalkController : MonoBehaviour
 
     public void OpenFriendsTab(){
         disablebutton(0);
-        TXT.text = "Friends";
+        TXT.text = "친구";
         ChatTab.SetActive(false);
         OPChatTab.SetActive(false);
         friendsTab.SetActive(true);
@@ -70,7 +78,7 @@ public class ChocoTalkController : MonoBehaviour
     }
     public void OpenChatTab(){
         disablebutton(1);
-        TXT.text = "Chat";
+        TXT.text = "채팅";
         ChatTab.SetActive(true);
         OPChatTab.SetActive(false);
         friendsTab.SetActive(false);
@@ -78,7 +86,7 @@ public class ChocoTalkController : MonoBehaviour
     }
     public void OpenOPChatTab(){
         disablebutton(2);
-        TXT.text = "OPChat";
+        TXT.text = "오픈채팅";
         ChatTab.SetActive(false);
         OPChatTab.SetActive(true);
         friendsTab.SetActive(false);
@@ -86,7 +94,7 @@ public class ChocoTalkController : MonoBehaviour
     }
     public void OpenTrendsTab(){
         disablebutton(3);
-        TXT.text = "Trends";
+        TXT.text = "트렌드";
         ChatTab.SetActive(false);
         OPChatTab.SetActive(false);
         friendsTab.SetActive(false);

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Yarn.Unity;
+using UnityEngine.UI; 
 
 public class PhoneController : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class PhoneController : MonoBehaviour
     public GameObject Dgram;
     private Stack<GameObject> TabStack;
     public int NumOfScreenShots = 1;  
-    // GameManager로 옮기기, 세이브 시 같이 저장하되 로드 시 원래 값과 비교하여 더 큰 수로 적용!!
+    // GameManager로 옮기기, 세이브 시 같이 저장하되 로드 시 원래 값과 비교하여 더 큰 수로 적용!
 
     void Awake(){
         if(instance == null){
@@ -27,6 +27,7 @@ public class PhoneController : MonoBehaviour
         // UI 숨기기
     }
     public void ActiveTab(GameObject tab){
+        if(tab.activeSelf) return;
         TabStack.Push(tab);
         tab.SetActive(true);
     }
