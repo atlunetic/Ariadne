@@ -31,10 +31,11 @@ public class GalleryController : MonoBehaviour
     void Start() 
     { 
         Path = CameraController.instance.FolderPath;
-
-        for(int i=0; i < originPictures.Length; i++){
-            Pictures.Add("origin"+ i.ToString(), originPictures[i]);
-        }
+        Pictures.Add("ClubPhoto", originPictures[0]);
+        Pictures.Add("ClubPhoto1", originPictures[1]);
+        Pictures.Add("ClubPhoto2", originPictures[2]);
+        Pictures.Add("JellyPhoto", originPictures[3]);
+        Pictures.Add("OfficetelPhoto", originPictures[4]);
     }
     public void PrintToGallery(string screenshotname){  // String으로 바꾸기
         
