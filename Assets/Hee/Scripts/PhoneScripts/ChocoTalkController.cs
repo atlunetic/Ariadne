@@ -8,6 +8,7 @@ public class ChocoTalkController : MonoBehaviour
 {
     public static ChocoTalkController instance;
     private Dictionary<string, GameObject> ChatMap = new Dictionary<string, GameObject>();
+    public Dictionary<string, Button> chatbuttons = new Dictionary<string, Button>();
 
     [SerializeField]
     private GameObject PChatButton;
@@ -31,7 +32,7 @@ public class ChocoTalkController : MonoBehaviour
     }
     void Start(){
         ChatScroll = ChatTab.transform.GetChild(0).GetComponent<ScrollRect>();
-        CreateChatRoom("건우오빠");
+        CreateChatRoom("건우 오빠");
         CreateChatRoom("의사 선생님");
         CreateChatRoom("해솔");
         ChatMap.Add("D", D);
@@ -41,10 +42,6 @@ public class ChocoTalkController : MonoBehaviour
         GameObject chatroom;
         chatroom = Instantiate(PChatRoom, ChatRooms);
         chatroom.transform.GetChild(0).GetComponent<TMP_Text>().text = name;
-        
-        // 이하 두줄 나중에 삭제!!
-        LayoutRebuilder.ForceRebuildLayoutImmediate(chatroom.GetComponent<ScrollRect>().content);
-        LayoutRebuilder.ForceRebuildLayoutImmediate(chatroom.GetComponent<ScrollRect>().content);
         chatroom.SetActive(false);
         chatroom.name = name;
 
@@ -54,6 +51,7 @@ public class ChocoTalkController : MonoBehaviour
         chatbutton.transform.GetChild(1).GetComponent<Image>().sprite = ChatManager.instance.profileImage[name];
         chatbutton.name = name;
 
+        chatbuttons.Add(name, chatbutton.GetComponent<Button>());
         ChatMap.Add(name, chatroom);
     }
     public void ActiveChatRoom(string name)  // 채팅방 켜기
