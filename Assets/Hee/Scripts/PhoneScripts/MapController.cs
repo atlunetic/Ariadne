@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using Yarn.Unity;
 
 public class MapController : MonoBehaviour
 {
@@ -25,10 +27,32 @@ public class MapController : MonoBehaviour
         
     }
 
+    [YarnCommand("GoPark")]
     public void GoPark(){
         // 씬 바꾸기
         CurrPoint.transform.position = new Vector2(2,0);
         DisableButton(Parkbutton);
+    }
+
+    [YarnCommand("GoBarStreet")]
+    public void GoBarStreet(){
+        // 씬 바꾸기
+        CurrPoint.transform.position = new Vector2(2,0);
+        DisableButton(BarStreetbutton);
+    }
+
+    [YarnCommand("GoHospital")]
+    public void GoHospital(){
+        // 씬 바꾸기
+        CurrPoint.transform.position = new Vector2(2,0);
+        DisableButton(Hospitalbutton);
+    }
+
+    [YarnCommand("GoOfficetel")]
+    public void GoOfficetel(){
+        // 씬 바꾸기
+        CurrPoint.transform.position = new Vector2(2,0);
+        DisableButton(Officetelbutton);
     }
 
     public void DisableButton(Button Next){
