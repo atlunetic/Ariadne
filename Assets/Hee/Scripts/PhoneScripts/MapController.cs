@@ -55,6 +55,12 @@ public class MapController : MonoBehaviour
         DisableButton(Officetelbutton);
     }
 
+    void SceneManage(){
+        GameObject[] objectlist = (GameObject.Find("SceneManager")).GetComponent<SceneInfo>().Objectlist;
+        foreach(GameObject obj in objectlist)
+	        obj.SetActive(GameManager.instance.ObjectState[obj.name]);
+    }
+
     public void DisableButton(Button Next){
         CurrLocationbutton.enabled = true;
         Next.enabled = false;

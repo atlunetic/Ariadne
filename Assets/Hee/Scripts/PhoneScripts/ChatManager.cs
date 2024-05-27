@@ -79,7 +79,7 @@ public class ChatManager : MonoBehaviour
         }
         
         StartCoroutine("UpdatingChat");
-        GameManager.Instance.ChattingLog.Add(i);
+        GameManager.instance.ChattingLog.Add(i);
     } 
 
     public IEnumerator UpdatingChat(){
