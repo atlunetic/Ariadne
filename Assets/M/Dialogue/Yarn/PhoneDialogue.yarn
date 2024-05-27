@@ -74,18 +74,37 @@ title:Chocotalk1st
 
 ===
 
-title: ChooseChatName
+title: ChooseChatName1
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 
-아. 근데 이거 지원이 휴대폰인데.
 나라고 밝혀야 하나?
 ...
     -> 지원이인척 말을 걸자.
         <<StartPhoneChat PhoneController 0>>
-        <<stop>>
+        <<SetCanvasTo VisualNovelPrefab false>>
     -> 나라고 밝히자.
+        <<StartPhoneChat PhoneController 12>>
+        <<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: ChooseChatName2
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+나라고 밝혀야 하나?
+...
+    -> 지원이인척 말을 걸자.
+        <<StartPhoneChat PhoneController 8>>
+        <<SetCanvasTo VisualNovelPrefab false>>
+    -> 나라고 밝히자.
+        <<StartPhoneChat PhoneController 13>>
+        <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -93,11 +112,12 @@ title: AfterGeonwooChatAsJiwon
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 무슨 소리지...?
 지원이가 클럽을...?
 그나저나 건우 오빠는 아직도 클럽 열심히 다니나보네...
 
-<<stop>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -105,18 +125,21 @@ title: AfterHaesolChat
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 ...
 지원이가 클럽에?
 그런데 관심도 없는 애가 무슨 바람이 불어서...
 설마...
 ...
-
+<<StartPhoneChat PhoneController 10>>
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: HaesolSuspicious
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 ...
 얘는 이걸 어떻게 알았지?
 어느 순간부터 지원이랑 맨날 붙어다니더니...
@@ -124,6 +147,7 @@ title: HaesolSuspicious
 해솔이한테는 솔직하게 말해도 되지 않을까.
 ...
 <<StartPhoneChat PhoneController 1>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -131,8 +155,24 @@ title: HaesolAftertruth
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 ...
 ...
+<<StartPhoneChat PhoneController 11>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+
+===
+
+title: Haesol2
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+...
+<<StartPhoneChat PhoneController 9>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 
@@ -140,11 +180,12 @@ title: AfterGeonwooChatAsHerself
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 지원이가 클럽을...?
 ...
 그나저나 건우 오빠는 아직도 클럽 열심히 다니나보네...
 
-<<stop>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -152,8 +193,11 @@ title: AfterDropperChat
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 ...
 드랍퍼에 대해 물어볼까?
+<<StartPhoneChat PhoneController 14>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -161,6 +205,7 @@ title: HaesolDropperCaution
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 뭐...?
 마약 운반책?
 왜 지원이한테 그런 걸 권유하는거야...?
@@ -172,6 +217,8 @@ title: OpenChat
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 뭐야...?
 엄청 수상해보이네.
 한정판 술이라도 사는거야?
@@ -185,6 +232,7 @@ title: DGram1st
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 이건 무슨 어플이지?
 처음 보는데.
 ...
@@ -200,6 +248,8 @@ title: Chatlist
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 뭐야. 무슨 소리야?
 내 이름은 왜 보내둔 거지? 무서워.
 일단 무시할까….
@@ -215,11 +265,14 @@ title: DrugDeal
 
 //(오픈채팅에서 drgg24와의 채팅 내용 확인 후, 아이디 검색 버튼 클릭 시)
 
+
+<<SetCanvasTo VisualNovelPrefab true>>
 ….
 ….
 drgg24라도 쳐볼까.
 ….
 ….
+<<Seachdrgg24 Controllers>>
 
 뭐야…. 설마 해서 쳐봤는데.
 D gram 아이디였여?
@@ -229,6 +282,7 @@ D gram 아이디였여?
 아무래도 수상해.
 
 -> 말을 걸어보자.
+    <<DestroySearch Controllers>>
     <<StartPhoneChat PhoneController 3>>
 
 ===
@@ -250,6 +304,8 @@ title: DrugDeal2
 //보낸 메시지 ‘오픈 카톡으로 연락 드렸던 사람인데요.’
 
 이러면 자연스럽겠지?
+
+<<StartPhoneChat PhoneController 15>>
 
 ===
 
@@ -303,7 +359,8 @@ title: DrugDeal5
 어떡하지?
 
 -> 찝찝해. 이제 답장하지 말자.
-    채팅창을 껐다.
+    채팅창을 끄자.
+    <<StartPhoneChat PhoneController 16>>
 -> 궁금한데 계속 답장해보자.
     근데... 조금 궁금하기도 하고.
     혹시 모르잖아.
@@ -365,10 +422,24 @@ title: IceiceChat
 
 ---
 
+<<wait 0.5>>
 물건..? 지원이한테 왜 이런 연락이 와 있지?
 
 ===
 
+
+title: AriadneAlarm
+
+---
+
+//지수방 2 진입 시 바로 재생
+
+//알림 사운드
+<<DgramAlarm Controllers>>
+<<wait 2.0>>
+알림을 확인해보자.
+
+===
 
 
 
