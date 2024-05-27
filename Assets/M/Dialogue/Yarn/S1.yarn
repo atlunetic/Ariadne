@@ -428,7 +428,7 @@ title: Park
 지원이랑 가끔 산책하러 갔었지….
 동네 공원으로 가볼까?
     -> 예
-        <<ChangeSceneTo S1_Park>>
+        //<<MapController GoPark>>
     -> 아니오
         다른 곳으로 가자….
 
@@ -499,7 +499,7 @@ title: Barstreet
 지원이도 한 번 데려가긴 했었지.
 술집 거리로 가볼까?
     -> 예
-        <<ChangeSceneTo S1_Street>>
+        //<<MapController GoBarStreet>>
     -> 아니오
         다른 곳으로 가자...
 
@@ -540,7 +540,7 @@ title: Hospital
 지원이를 찾기도 전에 아파서 쓰러지면 안되니까.
 생각난 김에 병원이라도 빨리 갔다 올까?
     -> 예
-        <<ChangeSceneTo S1_Hospital>>
+        //<<MapController GoHospital>>
     -> 아니오
         괜찮으려나?
 
