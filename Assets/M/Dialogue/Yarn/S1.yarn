@@ -230,6 +230,7 @@ title: Jiwon_Room
 주위를 둘러볼까?
 
 <<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
+<<SetCanvasTo VisualNovelPrefab false>>
 <<stop>>
 
 ===
@@ -238,11 +239,14 @@ title: Memory_LetterContent
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 
 ‘나도 이제 더 이상은 못해먹겠어.’
 ‘내 인생 내가 알아서 살 테니까 훈수 두지마.’ 
 ‘이번이 진짜 마지막이야. 반성하면 연락해.’
 ‘오지랖 좀 그만 부려.’
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -323,6 +327,7 @@ title: JisooPhone
 어쩔 수 없지. 일단은 지원이의 휴대폰을 찾아보자.
 
 <<Hide 지수>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -333,6 +338,7 @@ title: FoundJiwonPhone
 
 //휴대폰 오브젝트 선택 시 동생의 휴대폰 획득. 휴대폰 아이콘 생성.
 
+<<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo1_smile 1.17 0.322 black>>
 여기 있다.
 
@@ -429,6 +435,7 @@ title: Park
 
 // 장소 1. 동네 공원
 
+<<SetCanvasTo VisualNovelPrefab false>>
 동네 공원이다.
 지원이랑 가끔 산책하러 갔었지….
 동네 공원으로 가볼까?
@@ -453,6 +460,8 @@ title: Newspaper
 *해당 의원에서 처방한 약물인 ‘펜디메트라진’의 경우…*
 *과도하게 사용할 경우 정신병을 유발할 수 있다.*
 *금단현상으로는 우울증과 무기력증이 있다.*
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -479,6 +488,8 @@ title: ParkStudents
 학생 B: “다이어트약 먹으면 다 그렇다던데?”
 학생 A: “그런가….”
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: VendingMachine
@@ -493,6 +504,8 @@ title: VendingMachine
 지원이가 뒤집어 썼었는데.
 그때도 화 한 번 안 내고 웃어넘기던 애가….
 밥은 먹었으려나.
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -520,6 +533,8 @@ title: Weedhof
 ….
 사람들이 저런 걸 보고 마약에 호기심을 갖게 되는 거 아닐까?
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: Drugsnacks
@@ -533,6 +548,8 @@ title: Drugsnacks
 그런데….
 중독적이라는 걸 굳이 마약이라는 단어로 표현해야 하나?
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: Hospital
@@ -541,6 +558,7 @@ title: Hospital
 
 //장소 3. 병원
 
+<<SetCanvasTo VisualNovelPrefab true>>
 약이 다 떨어졌는데.
 지원이를 찾기도 전에 아파서 쓰러지면 안되니까.
 생각난 김에 병원이라도 빨리 갔다 올까?
@@ -607,6 +625,7 @@ title: HospitalWaitingRoom
 
                 병원을 나섰다.
                 //씬 변경: 지도
+                <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -619,6 +638,7 @@ title: Officetel
 //클릭 시
 
 뭔가 번쩍번쩍한 오피스텔이네.
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -630,6 +650,7 @@ title: Where
 ...
 대체 어디 있는 거지?
 ...
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -639,6 +660,7 @@ title: WalletX
 
 그래도...
 남의 지갑을 함부로 열어보면 안되지.
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -667,6 +689,7 @@ title: WalletO
 일단은 영수증에 나온 편의점을 찾아가야 하나.
 
 <<New711 Controllers>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -691,6 +714,7 @@ title: SevenEleven
 
 //클럽 아이콘 활성화
 <<Club Controllers>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -698,13 +722,14 @@ title: Club_S1End
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 ...
 지원이가 갔던 클럽이 여긴가?
 ...
 들어가보자.
 
-//2장으로 이동
-
+<<SetCanvasTo VisualNovelPrefab false>>
+\
 ===
 
 
@@ -717,6 +742,7 @@ title: CheckAlert
 
 ...
 더 살펴볼까?
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -755,6 +781,8 @@ title: Laptop
 위험한 생각 하고 있는 거 아니야…?
 
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: AfterLaptop
@@ -777,6 +805,8 @@ title: Drawer_News
 ….
 흉흉한 세상이네….
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 
@@ -795,6 +825,8 @@ title: JW_Meds
 
 나한테 말도 안하고. 대체 무슨 일이 있는 거야.
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title:JW_Hairpin
@@ -806,6 +838,8 @@ title:JW_Hairpin
 // 팝업이미지 종료
 
 * '헤어핀'을 습득했다. *
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -822,6 +856,8 @@ title: JW_Wallet
 
 * '지원의 지갑'을 습득했다. *
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: WrongItem
@@ -830,6 +866,8 @@ title: WrongItem
 
 ...
 아무 일도 일어나지 않았다.
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
