@@ -203,34 +203,28 @@ public class ChatManager : MonoBehaviour
         AddimageToLast(false, "Fromdrgg24");
         AddChatToLast(false, "이 근처 공중전화에 뒀습니다. 1시간 안에 가져가세요.");
 
-        ChattingList.Add(new Chatting(true, "drgg24", "DrugDeal8"));  // 8
-        AddChatToLast(false, "좋은 거 구매하시는 거예요.");
-        AddChatToLast(false, "즐거운 시간 되시길 ^^ ~");
-        
-
-
-        // 이하 재넘버링 필요
-
-        ChattingList.Add(new Chatting(false, "해솔", "AfterHaesolChat"));  // 2
+        ChattingList.Add(new Chatting(false, "해솔", "Haesol2"));  // 8
         AddChatToLast(true, "해솔아. 뭐해?");
         AddChatToLast(false, "나 지금 홍대 쪽이야");
         AddChatToLast(false, "근데 너 얼마전에 클럽 갔어?");
+
+        ChattingList.Add(new Chatting(false, "해솔", "AfterHaesolChat")); // 9
         AddChatToLast(true, "왜?");
         AddChatToLast(false, "윤아가 클럽에서 너 봤다길래");
         AddChatToLast(false, "너 요즘 클럽 엄청 자주 간다?");
         AddChatToLast(false, "그런 데 관심도 없다더니.");
         AddChatToLast(true, "아...");
 
-        ChattingList.Add(new Chatting(false, "해솔", "HaelsolSuspicious"));  // 2
+        ChattingList.Add(new Chatting(false, "해솔", "HaelsolSuspicious"));  // 10
         AddChatToLast(false, "근데 너 혹시 지수야?");
         AddChatToLast(false, "말투가 지원이가 아닌데...");
 
-        ChattingList.Add(new Chatting(false, "해솔", null));  // 2
+        ChattingList.Add(new Chatting(false, "해솔", null));  // 11
         AddChatToLast(false, "지원이가 휴대폰을 두고 사라졌다고?");
         AddChatToLast(false, "그럴 애가 아닌데...");
         AddChatToLast(false, "나도 찾아보고 연락해줄게.");
 
-        ChattingList.Add(new Chatting(false, "건우 오빠", "AfterGeonwooChatAsHerself"));  // 2
+        ChattingList.Add(new Chatting(false, "건우 오빠", "AfterGeonwooChatAsHerself"));  // 12
         AddChatToLast(true, "오빠. 저 지수인데요");
         AddChatToLast(true, "지원이 어디 있는지 아세요?");
         AddChatToLast(false, "아... 글쎄?");
@@ -238,7 +232,7 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "근데 왜 지원이걸로 톡하냐?");
         AddChatToLast(false, "아무튼…. 바빠서 나중에 연락할게.");
 
-        ChattingList.Add(new Chatting(false, "해솔", null));  // 2
+        ChattingList.Add(new Chatting(false, "해솔", null));  // 13
         AddChatToLast(true, "해솔아. 나 지수인데.");
         AddChatToLast(true, "혹시 최근에 지원이 만났어?");
         AddChatToLast(false, "연락은 자주 하는데 못본지는 좀 됐지. 왜?");
@@ -248,7 +242,7 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "그러고 나선 연락이 안돼서 모르겠어.");
         AddChatToLast(false, "요즘 맨날 클럽 가는 것 같던데 거기 있는 거 아냐?");
 
-        ChattingList.Add(new Chatting(false, "해솔", "HaesolDropperCaution"));
+        ChattingList.Add(new Chatting(false, "해솔", "HaesolDropperCaution"));  // 14
         AddChatToLast(true, "해솔아. 혹시 드랍퍼가 뭔지 알아?");
         AddChatToLast(false, "어? 갑자기 그건 왜...?");
         AddChatToLast(true, "아... 지원이 폰에 드랍퍼 할 생각 있냐는 메시지가 와 있길래.");
@@ -256,8 +250,18 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "뭐...?");
         AddChatToLast(false, "그 계정 빨리 차단해.");
         AddChatToLast(false, "드랍퍼 그거 마약 운반책 말하는 거야.");
+        
+        ChattingList.Add(new Chatting(true, "drgg24", "DrugDeal3"));  // 15
+        AddChatToLast(false, "술 필요하신 거 맞죠?");
+        
+        ChattingList.Add(new Chatting(true, "drgg24", "DrugDeal6"));  // 16
+        AddChatToLast(false, "거래 안하심?");
+        
+        ChattingList.Add(new Chatting(true, "drgg24", "DrugDeal8"));  // 17
+        AddChatToLast(false, "좋은 거 구매하시는 거예요.");
+        AddChatToLast(false, "즐거운 시간 되시길 ^^ ~");
 
-        ChattingList.Add(new Chatting(false, "의사 선생님", "null"));
+        ChattingList.Add(new Chatting(false, "의사 선생님", "null"));  // 18
         AddChatToLast(true, "안녕하세요. 전에 연락 드렸던 사람입니다.");
         AddimageToLast(true, "ToDoctor");
         AddChatToLast(true, "한 번에 이만큼 처방해주시나요?");
@@ -271,15 +275,11 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "네. 그렇습니다.");
         PrintChat(ChattingList.Count-1);
 
-        ChattingList.Add(new Chatting(true, "아리아드네", "Chatlist"));
+        ChattingList.Add(new Chatting(true, "아리아드네", "Chatlist"));  // 19
         AddChatToLast(false, "지수.");
         AddChatToLast(false, "중요한 걸 잊어버리지 않았어?");
-
-        ChattingList.Add(new Chatting(true, "drgg24", "DrugDeal3"));  // 4
-        AddChatToLast(false, "술 필요하신 거 맞죠?");
-
-        ChattingList.Add(new Chatting(true, "drgg24", "DrugDeal6"));  // 4
-        AddChatToLast(false, "거래 안하심?");
+        
+        // 이하 재넘버링 필요
 
     }
 }

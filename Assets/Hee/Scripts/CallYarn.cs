@@ -26,7 +26,7 @@ public class CallYarn : MonoBehaviour
 
     private void callYarn(string dialogname){
         var runner = FindObjectOfType<DialogueRunner>();
-        if(runner.NodeExists(dialogname))
+        if(runner is not null && runner.NodeExists(dialogname))
             runner.StartDialogue(dialogname);
     }
 
@@ -46,6 +46,9 @@ public class CallYarn : MonoBehaviour
         Callbybutton(chocotalkbutton,"Chocotalk1st");  // 초코톡 켰을 때
         Callbybutton(openchatDbutton,"OpenChat");  // 오픈채팅 켰을 때
 
+        Callbybutton(ChocoTalkController.instance.chatbuttons["건우 오빠"], "ChooseChatName1");  // 건우 채팅창 켰을 때
+        Callbybutton(ChocoTalkController.instance.chatbuttons["해솔"], "ChooseChatName2");  // 해솔 채팅창 켰을 때
+
         UnityAction drgg24 = null;  // D 채팅창 켰을 때
         drgg24 = () => {Callbybutton(IDSearchbutton, "DrugDeal");
                         openchatDbutton.onClick.RemoveListener(drgg24);};
@@ -53,7 +56,7 @@ public class CallYarn : MonoBehaviour
 
         Callbybutton(work8282chatbutton,"DropperRecruit");  // work8282 채팅창 켰을 때
         UnityAction work8282 = null;
-        work8282 = () => {Callbybutton(Haesolchatbutton, "AfterDropperChat"); 
+        work8282 = () => {Callbybutton(Haesolchatbutton, "AfterDropperChat");
                           work8282chatbutton.transform.GetChild(2).gameObject.SetActive(false);
                           work8282chatbutton.onClick.RemoveListener(work8282);};
         work8282chatbutton.onClick.AddListener(work8282);
@@ -79,7 +82,10 @@ public class CallYarn : MonoBehaviour
                       MapController.instance.BarStreetbutton.onClick.RemoveListener(barstreet);};
         MapController.instance.BarStreetbutton.onClick.AddListener(barstreet);
 
+        MapController.instance.Officetelbutton.onClick.AddListener(()=>callYarn("Officetel"));  // 3장 진입전 오피스텔 눌렀을 때
+
         MapController.instance.Hospitalbutton.onClick.AddListener(()=>callYarn("Hospital"));  // 병원 눌렀을 때: Persistent!!
+
     }
 
     public void Searchdrgg24(){
@@ -93,6 +99,20 @@ public class CallYarn : MonoBehaviour
     
     [YarnCommand("DgramAlarm")]
     public void DgramAlarm(){
-        // 점찍기
+        GameObject dgramDot = dgrambutton.transform.GetChild(0).gameObject;
+        dgramDot.SetActive(true);
+        UnityAction deactiveDot = null;
+        deactiveDot = () => {dgramDot.SetActive(false);
+                             dgrambutton.onClick.RemoveListener(deactiveDot);};
+        dgrambutton.onClick.AddListener(deactiveDot);
+    }
+
+    [YarnCommand("New711")]
+    public void New711(){
+        Callbybutton(MapController.instance.편의점711button,"SevenEleven");
+        UnityAction ClubActive = null;
+        ClubActive = () => {Callbybutton(MapController.instance.Clubbutton,"Club_S1End");
+                            MapController.instance.편의점711button.onClick.RemoveListener(ClubActive);};
+        MapController.instance.편의점711button.onClick.AddListener(ClubActive);
     }
 }

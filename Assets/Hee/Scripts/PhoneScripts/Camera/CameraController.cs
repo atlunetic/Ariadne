@@ -40,7 +40,6 @@ public class CameraController : MonoBehaviour
     public void ActiveCamera(){
         CameraRect.SetActive(true);
         Phone.SetActive(false);
-        // UI 다 끄기
     }
 
     public void TakeScreenShot(){
