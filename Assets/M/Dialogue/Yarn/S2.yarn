@@ -2,12 +2,12 @@
 
 ---
 
-//클럽 입구로 배경 이미지 변경
+<<Scene ClubEntrance>>
 
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 이런 데가 있구나....
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 왠지 모르게 익숙한 분위기다.
 <<wait 2.0>>
 ….
@@ -24,36 +24,36 @@ title: meet_gunwoo
 ---
 
 //클럽 theme 재생
-//건우0
+<<Act 건우 Geonwoo0 0.322 0.227 black>>
 
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 어...
 뭔가 익숙한 얼굴이 보인다.
 <<wait 2.0>>
 ….
 
-//건우1
+<<Act 건우 Geonwoo1 0.322 0.227 black>>
 건우: 어!
 
-//건우3
+<<Act 건우 Geonwoo3 0.322 0.227 black>>
 건우: 지…. 
 <<wait 2.0>>
 
-//지수1
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 건우 오빠다.
 곤란한 표정을 짓고 있는 걸 보니….
 분명히 지원인지 나인지 구분 못하는 것 같은데.
 몇 년째 보는데 항상 저런다니까.
 <<wait 2.0>>
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 뭐라고 대답할까?
 -> 지원이라고 거짓말 해보자.
-	//지수1
+	<<Act 지수 Jisoo1 1.17 0.322 black>>
 	지수: (웃으며) 저 지원이예요.
 
-	//건우4
+	<<Act 건우 Geonwoo4 0.322 0.227 black>>
 	건우: (겁에 질린 듯) ….
 	건우: 너 어떻게 나왔어?
 	건우: 그것보다 지원이 너 지금 여기 있으면 안돼.
@@ -72,22 +72,22 @@ title: meet_gunwoo
 	//엔딩 3. ??? : 무슨 일이 일어난 걸까. 
 
 -> 나라고 밝히자.
-	//지수1
+	<<Act 지수 Jisoo1 1.17 0.322 black>>
 	지수: 저 지수예요.
 
-	//건우1
+	<<Act 건우 Geonwoo1 0.322 0.227 black>>
 	건우: 아…. 지수.
 	건우: 지원인 줄 알고 깜짝 놀랐네.
 
 	지수: 왜요? 지원이한테 죄라도 지었어요?
 
-	//건우3
+	<<Act 건우 Geonwoo3 0.322 0.227 black>>
 	건우: 뭐? 뭔 소리 하는 거야.
 
-	//건우1
+	<<Act 건우 Geonwoo1 0.322 0.227 black>>
 	건우: 아무튼, 오늘은 왜 안오나 했다.
 
-	//지수4
+	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	오늘은 왜 안오나 했다고?
 	
 	//지수2, 건우 이미지 살짝 작아짐, 어두워짐(대화상태 아닐때)
@@ -105,16 +105,16 @@ title: meet_gunwoo
 	지수: 어제 지원이랑 마주쳤다면서요.
 	<<wait 2.0>>
 
-	//건우3
+	<<Act 건우 Geonwoo3 0.322 0.227 black>>
 	건우: 아, 난 바빠서 이만.
 	건우: 재밌게 놀다 가고~.
 	//건우 이미지 종료
 
-	//지수3
+	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	….
 	<<wait 2.0>>
 
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	일단 안으로 들어가보자.
 	
 	<<jump club_bar>>
@@ -122,15 +122,32 @@ title: meet_gunwoo
 
 ===
 
+title: club_bar_BG
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<set $randchoice = random_range(1, 3)>>
+
+<<if $randchoice < 1 >>
+    담배 냄새가 많이 난다.
+<<elseif $randchoice < 2>>
+    노래 소리가 시끄럽다…. 
+<<else>>
+    귀가 아파.
+<<endif>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
+===
+
 title: club_bar
 
 ---
 
-//카운터&바로 배경이미지 변경
-//배경 클릭 시 #담배 냄새가 많이 난다. #노래 소리가 시끄럽다…. 귀가 아파. 랜덤 노출
-
+<<SetCanvasTo VisualNovelPrefab true>>
 지원이가 여기서 대체 뭘 했을까….
 ….
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -140,10 +157,12 @@ title: obj_cctv1
 ---
 
 //클릭할 경우
-//지수1
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 CCTV가 있네.
 ….
 CCTV라도 볼 수 있으면 좋을텐데.
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -153,17 +172,20 @@ title: obj_clock1
 ---
 
 //클릭할 경우
-//시계 이미지 확대 prescription
-//시계 이미지 종료
+<<Draw Clock1_0>>
 
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 클럽에 웬 벽시계…?
 엄청 안어울리네.
 
-//지수2
+<<Hide Clock1_0>>
+
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 <<wait 2.0>>
 손을 뻗으면 닿을 것 같다.
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -173,7 +195,7 @@ title: obj_emptyglass
 ---
 
 //클릭할 경우
-//지수1
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 비어있는 술잔이다.
 혹시 모르니 챙겨둘까?
 ….
@@ -183,6 +205,7 @@ title: obj_emptyglass
 
 //인벤토리에 빈 술잔 아이템 추가
 
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -195,7 +218,7 @@ title: obj_minirefrigerator
 ….
 //술장고 이미지 종료
 
-//지수1
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 생수 1인 2병 무료 제공?
 챙겨갈까?
 
@@ -203,22 +226,32 @@ title: obj_minirefrigerator
 	그래…. 하나만 챙기자.
 	//지수1 이미지 종료
 	* 생수가 든 페트병을 습득했다. *
+	<<SetCanvasTo VisualNovelPrefab false>>
 
 -> 두 개 다 챙겨가자.
 	혹시 모르니 두 개 챙겨두자.
 	//지수1 이미지 종료
 	* 생수가 든 페트병을 습득했다. *
+	<<SetCanvasTo VisualNovelPrefab false>>
+
 
 
 ===
 
-title: club_table
+
+title: club_table_BG
 
 ---
 
-//테이블로 배경 이미지 변경
-//배경 클릭 시 #곳곳에 먼지가 많이 쌓여있다. #조명이 너무 강한걸. 눈이 아프다…. 랜덤 노출
+<<set $randchoice = random_range(1, 3)>>
 
+<<if $randchoice < 1.5 >>
+    곳곳에 먼지가 많이 쌓여있다.
+<<else>>
+    조명이 너무 강한걸. 눈이 아프다.
+<<endif>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -227,7 +260,7 @@ title: obj_customers
 ---
 
 //클릭할 경우
-//지수1
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 두 사람이 대화하고 있다.
 
 //왼쪽에 D&E묶음, 오른쪽에 지수 캐릭터 등장
@@ -235,7 +268,7 @@ title: obj_customers
 클럽 고객D: 이렇게 만난 것도 인연인데 한 잔 사드리고 싶어서요.
 클럽 고객D가 E에게 술잔을 내민다.
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 
 클럽 고객E: 감사해요.
@@ -244,7 +277,7 @@ title: obj_customers
 //술이 들어있는 술잔 팝업 이미지
 
 ….
-//지수3
+<<Act 지수 Jisoo3 1.17 0.322 black>>
 뭔가 수상한데?
 술잔 바닥에 가루가 가라앉아 있어.
 <<wait 2.0>>
@@ -257,16 +290,17 @@ title: obj_customers
 <<wait 2.0>>
 
 -> 모르는 척 하자.
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
 	그래. 괜히 나섰다가 욕 먹는 것보단 낫지.
+	<<SetCanvasTo VisualNovelPrefab false>>
 
 -> 가서 도와주자
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
 	진짜로 약을 탄거면….
 	
-	//지수3
+	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	무슨 일을 당할지 몰라.
 	<<wait 2.0>>
 	....
@@ -277,12 +311,13 @@ title: obj_customers
 	
 	//클럽고객D 이미지 종료, E만 남아있음, E가 왼쪽으로 조금 더 이동
 
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
 	이 틈에 E를 도울 수 있는 방법이 없을까?
 	우선 말을 걸어보자.
 
 	-> E에게 말을 걸어보자
+		<<SetCanvasTo VisualNovelPrefab false>>
 
 
 
@@ -293,13 +328,14 @@ title: obj_lsdsticker
 ---
 
 //클릭할 경우
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 우표인가? 귀엽게 생겼네.
 //지수 이미지 종료
 
 * 마약사전에 ‘LSD 스티커’가 추가되었습니다. *
 
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -313,6 +349,7 @@ title: obj_menu
 
 메뉴판이다.
 
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -324,6 +361,7 @@ title: menu_kratom
 크라톰? 어디서 본 것 같은데…. 
 설마 저기에 진짜 크라톰이 들어가 있나…?
 
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -336,6 +374,7 @@ title: menu_philopon
 술 이름이 왜 이래?
 * 마약사전에 ‘필로폰’이 추가되었습니다. *
 
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -344,8 +383,16 @@ title: menu_othertext
 ---
 
 //메뉴판 이미지의 크라톰, 필로폰을 제외한 다른 텍스트 클릭 시
-// #(클릭한 술 이름)…. or #메뉴가 그렇게 많지는 않네. or #지금은 술을 마실 때가 아닌 것 같다. 중 랜덤 출력
 
+<<set $randchoice = random_range(1, 3)>>
+
+<<if $randchoice < 1.5 >>
+    메뉴가 그렇게 많지는 않네.
+<<else>>
+    지금은 술을 마실 때가 아닌 것 같다.
+<<endif>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -354,15 +401,16 @@ title: event_gunwoo_begin1
 ---
 
 //건우 클릭시
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 어…. 
 건우 오빠다.
 <<wait 2.0>>
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 …. 
 어제 지원이랑 클럽에서 마주쳤다고 했지.
 그러면…. 뭐라도 알고 있을 것 같은데.
 
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -371,7 +419,7 @@ title: event_gunwoo_begin2
 ---
 
 //건우 두번째 클릭 시
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 뭐라도 아는 게 있는지 물어보자.
 지수: 건우 오빠.
 <<wait 2.0>>
@@ -405,11 +453,11 @@ title: event_gunwoo_q1
 
 ---
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 오빠. 어제 지원이랑 마주쳤다고 했잖아요.
 지수: 지원이 상태가 어땠어요?
 
-//건우3
+<<Act 건우 Geonwoo3 0.322 0.227 black>>
 건우: …글쎄?
 건우: 잠깐 인사만 해서. 기억이 안나네.
 ….
@@ -418,14 +466,14 @@ title: event_gunwoo_q1
 //선택지 랜덤 출력
 --> 정말 기억이 안나는 거예요?
 	//설득점수 +1
-	//지수4
+	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	지수: 정말 기억이 안나는 거예요?
 	지수: 처음 본 사람들 상태도 잘 파악하는 사람이….
 	
-	//건우2
+	<<Act 건우 Geonwoo2 0.322 0.227 black>>
 	건우: ….
 	
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지수: 다른 사람도 아니고 지원이면 당연히 알 것 같아서 물어봤어요.
 	건우: …그러게.
 	<<wait 2.0>>
@@ -436,14 +484,14 @@ title: event_gunwoo_q1
 
 -> 정말 마주친 건 맞아요?
 	//설득점수 -1
-	//지수3
+	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 정말 마주친 건 맞아요?
 	
-	//건우2
+	<<Act 건우 Geonwoo2 0.322 0.227 black>>
 	건우: …. 그런 걸로 왜 거짓말을 하겠냐.
 	<<wait 2.0>>
 
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
 	건우 오빠의 표정이 좋지 않다.
 	<<jump event_gunwoo_q2>>
@@ -455,11 +503,11 @@ title: event_gunwoo_q2
 
 ---
 
-//지수5
+<<Act 지수 Jisoo5 1.17 0.322 black>>
 지수: 어제 이후로 지원이랑 연락이 안 돼요.
 지수: 집 나간다고 편지 하나 남겨두고 사라졌어요.
 
-//건우2
+<<Act 건우 Geonwoo2 0.322 0.227 black>>
 건우: ….
 ….
 <<wait 2.0>>
@@ -467,11 +515,11 @@ title: event_gunwoo_q2
 //선택지 랜덤 출력
 -> 왜 아무런 말도 없어요?
 	//설득점수 +1
-	//지수3
+	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 왜 아무런 말도 없어요?
 	지수: 평소 같으면 무슨 일이냐고 난리쳤을 사람이….
 
-	건우2
+	<<Act 건우 Geonwoo2 0.322 0.227 black>>
 	건우: ….
 	건우: ….
 	<<wait 2.0>>
@@ -482,12 +530,12 @@ title: event_gunwoo_q2
 
 -> 걱정되지도 않아요?
 	//설득점수 -1
-	//지수3
+	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 오빠는 지원이가 걱정되지도 않아요?
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지수: 예전에 오빠 아팠을 때 지원이가 간병도 해줬는데….
 	
-	//건우2
+	<<Act 건우 Geonwoo2 0.322 0.227 black>>
 	건우: ….
 	건우: 그랬었지.
 	<<wait 2.0>>
@@ -503,14 +551,14 @@ title: event_gunwoo_q3
 
 ---
 
-//지수5
+<<Act 지수 Jisoo5 1.17 0.322 black>>
 지수: 지원이가 너무 걱정돼요.
 지수: 한 번도 이런 적 없는 애라서….
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 오빠도 알잖아요.
 
-건우2
+<<Act 건우 Geonwoo2 0.322 0.227 black>>
 건우: ….
 건우: 나도 걱정되지. 당연히….
 ….
@@ -519,21 +567,21 @@ title: event_gunwoo_q3
 //선택지 랜덤 출력
 -> 오빠한테도 아무런 얘기 없었어요?
 	//설득점수 +1
-	//지수4
+	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	지수: 정말 오빠한테도 아무런 얘기 없었어요?
 	지수: 맨날 둘이 고민상담 주고받던 거 아는데….
 	
-	//건우4
+	<<Act 건우 Geonwoo4 0.322 0.227 black>>
 	건우: …그건 어떻게 알았어?
 	
-	//지수3
+	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 지원이 걔 어릴 때부터 저랑 싸우면 맨날….
 	지수: 방에 틀어박혀서 오빠랑 전화했잖아요.
 
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지수: 안 듣고 싶어도 들리던데….
 	
-	//건우3
+	<<Act 건우 Geonwoo3 0.322 0.227 black>>
 	건우: ….
 	건우: …. 나도 지원이도 네 욕은 안했어.
 	건우: …진짜로.
@@ -550,15 +598,15 @@ title: event_gunwoo_q3
 	지수: 오빠 저한테 뭐 숨기는 거 있어요?
 	지수: 아는 거 있죠.
 	
-	//건우3
+	<<Act 건우 Geonwoo3 0.322 0.227 black>>
 	건우: ….
 	건우: 왜 이렇게 사람을 몰아가냐….
 
-	//건우2
+	<<Act 건우 Geonwoo2 0.322 0.227 black>>
 	건우: 정신없는 건 알겠는데 네가 그러니까 나도 당황스럽네.
 	<<wait 2.0>>	
 
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
 	건우 오빠의 표정이 좋지 않다.
 	<<jump event_gunwoo_q4>>
@@ -570,34 +618,34 @@ title: event_gunwoo_q4
 
 ---
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 정말 아는 거 없어요?
 지수: 오빠는 클럽 자주 다니니까….
 지수: 전해 들은 거라도 있나 싶어서요.
 
-//건우2
+<<Act 건우 Geonwoo2 0.322 0.227 black>>
 건우: ….
 <<wait 2.0>>
 
-//건우3
+<<Act 건우 Geonwoo3 0.322 0.227 black>>
 건우: 지수야 내가 지금 좀 바빠서….
 
 //선택지 랜덤 출력
 -> 지원이가 오빠한테 숨기는 건 없을텐데….
 	//설득점수 +1
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지수: 지원이가 오빠한테 숨기는 건….
 
-	//지수4
+	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	지수: ….
 
-	//지수1
+	<<Act 지수 Jisoo1 1.17 0.322 black>>
 	지수: 하…하나도 없을텐데.
 
-	//건우3
+	<<Act 건우 Geonwoo3 0.322 0.227 black>>
 	건우: ….
 	
-	//건우2
+	<<Act 건우 Geonwoo2 0.322 0.227 black>>
 	건우: ….
 	<<wait 2.0>>
 
@@ -607,11 +655,11 @@ title: event_gunwoo_q4
 
 -> 뭐라도 알고 있을 줄 알았는데….
 	//설득점수 -1
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지수: ….
 	지수: 오빠라면 뭐라도 알고 있을 줄 알았는데….
 	
-	//건우2
+	<<Act 건우 Geonwoo2 0.322 0.227 black>>
 	건우: ….
 	<<wait 2.0>>
 
@@ -626,40 +674,40 @@ title: event_gunwoo_q5
 
 ---
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 정말 아는 게 없는 걸까…?
 ….
 ….
 차라리 내 생각을 말해보는게 낫겠어.
 <<wait 2.0>>
 
-//건우3
+<<Act 건우 Geonwoo3 0.322 0.227 black>>
 건우: …지수야.
 건우: 내가 좀 바빠서. 이제 가봐야 할 것 같은데.
 <<wait 2.0>>
 
-///지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 오빠…. 잠시만요!
 
-//지수3
+<<Act 지수 Jisoo3 1.17 0.322 black>>
 지수: 사실….
 지수: 지원이가 마약에 관심을 갖고 있는 것 같아요.
 
-//건우3
+<<Act 건우 Geonwoo3 0.322 0.227 black>>
 건우: 어….
 건우: 지수야. 일단 목소리 좀 낮추자.
 
-//건우2
+<<Act 건우 Geonwoo2 0.322 0.227 black>>
 건우: 그게 무슨 소리야?
 <<wait 2.0>>
 
 //선택지 랜덤 출력
 -> 지원이가 마약상을 찾아 다녔다.
 	//설득점수 +1
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지수: 지원이가 마약상을 찾아 다닌 것 같아요.
 
-	//건우4
+	<<Act 건우 Geonwoo4 0.322 0.227 black>>
 	건우: 어…?
 	
 	//처음 초코톡에서 지수라 밝힌 경우 <<jump event_gunwoo_q5_jisu1>>
@@ -677,7 +725,7 @@ title: event_gunwoo_q5_jisu1
 
 ---
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 아까 제가 지원이 초코톡으로 연락했잖아요.
 지수: 사실…. 지원이가 사라졌어요.
 지수: 휴대폰도 두고 가서….
@@ -687,7 +735,7 @@ title: event_gunwoo_q5_jisu1
 지수: 수상한 사람이랑 오픈 채팅을 했더라구요.
 지수: 누군가 싶어서 연락해봤는데….
 
-//지수3
+<<Act 지수 Jisoo3 1.17 0.322 black>>
 지수: ….
 지수: 마약상이었어요.
 <<jump event_gunwoo_q5_1>>
@@ -699,22 +747,22 @@ title: event_gunwoo_q5_jiwon1
 
 ---
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 아까 지원이한테서 연락 왔죠?
 지수: 그거 제가 보낸 거에요.
 
-//건우4
+<<Act 건우 Geonwoo4 0.322 0.227 black>>
 건우: 어…?
 건우: 무슨 소리야.
 <<wait 2.0>>
 
-//지수5
+<<Act 지수 Jisoo5 1.17 0.322 black>>
 지수: 사실…. 지원이가 사라졌어요.
 지수: 휴대폰도 두고 가서….
 지수: 안에 뭐라도 남겨뒀나 하고 살펴봤어요.
 지수: 그러다 오빠한테 연락한 거에요.
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: ….
 <<wait 2.0>>
 
@@ -722,7 +770,7 @@ title: event_gunwoo_q5_jiwon1
 지수: 지원이가 수상한 사람이랑 오픈 채팅을 했더라구요.
 지수: 누군가 싶어서 연락해봤는데….
 
-//지수3
+<<Act 지수 Jisoo3 1.17 0.322 black>>
 지수: ….
 지수: 마약상이었어요.
 <<jump event_gunwoo_q5_1>>
@@ -734,11 +782,11 @@ title: event_gunwoo_q5_1
 
 ---
 
-//건우4
+<<Act 건우 Geonwoo4 0.322 0.227 black>>
 건우: ….
 건우: 아….
 
-//건우3
+<<Act 건우 Geonwoo3 0.322 0.227 black>>
 건우: 그랬구나.
 <<wait 2.0>>
 
@@ -753,7 +801,7 @@ title: event_gunwoo_q5_jisu2
 
 ---
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 아까 제가 지원이 초코톡으로 연락했잖아요.
 지수: 사실…. 지원이가 사라졌어요.
 지수: 휴대폰도 두고 가서….
@@ -763,7 +811,7 @@ title: event_gunwoo_q5_jisu2
 지수: 어떤 의사랑 채팅을 했더라구요.
 지수: 무슨 내용인지 봤는데….
 
-//지수3
+<<Act 지수 Jisoo3 1.17 0.322 black>>
 지수: ….
 지수: 마약성 진통제에 대해 물어보는 내용이었어요.
 <<jump event_gunwoo_q5_2>>
@@ -775,21 +823,21 @@ title: event_gunwoo_q5_jiwon2
 
 ---
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 아까 지원이한테서 연락 왔죠?
 지수: 그거 제가 보낸 거에요.
 
-//건우4
+<<Act 건우 Geonwoo4 0.322 0.227 black>>
 건우: 어…?
 건우: 무슨 소리야.
 
-//지수5
+<<Act 지수 Jisoo5 1.17 0.322 black>>
 지수: 사실…. 지원이가 사라졌어요.
 지수: 휴대폰도 두고 가서….
 지수: 안에 뭐라도 남겨뒀나 하고 살펴봤어요.
 지수: 그러다 오빠한테 연락한 거에요.
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: ….
 <<wait 2.0>>
 
@@ -797,7 +845,7 @@ title: event_gunwoo_q5_jiwon2
 지수: 어떤 의사랑 채팅을 했더라구요.
 지수: 무슨 내용인지 봤는데….
 
-//지수3
+<<Act 지수 Jisoo3 1.17 0.322 black>>
 지수: ….
 지수: 마약성 진통제에 대해 물어보는 내용이었어요.
 <<jump event_gunwoo_q5_2>>
@@ -825,19 +873,19 @@ title: event_gunwoo_q6
 
 ---
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: …오빠라도 도와주세요.
 
-//지수5
+<<Act 지수 Jisoo5 1.17 0.322 black>>
 지수: 지원이가 진짜로 마약을 한 거면 어떡해요?
 지수: 중독되기라도 하면요…?
 지수: ….
 
-//지수3
+<<Act 지수 Jisoo3 1.17 0.322 black>>
 지수: 오빠도 클럽 자주 오면 보고 듣는 것도 있지 않아요?
 지수: 요즘 이런 데서 마약 많이 한다던데….
 
-//건우2
+<<Act 건우 Geonwoo2 0.322 0.227 black>>
 건우: ….
 건우: 잘 모르겠네.
 <<wait 2.0>>
@@ -849,27 +897,27 @@ title: event_gunwoo_q6
 //선택지 랜덤 출력
 -> 지원이가 여기서 뭘 하고 다녔는지 알고 싶다.
 	//설득점수 +1
-	//지수3
+	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 지원이가 여기서 뭘 하고 다녔는지라도 알고 싶어요.
 	지수: 그러면…. 
 	지수: 행방을 알 수 있지 않을까 싶어서요.
 	<<wait 2.0>>
 
-	//건우2
+	<<Act 건우 Geonwoo2 0.322 0.227 black>>
 	건우: ….
 	건우: 아마 그렇겠지.
 	<<jump event_gunwoo_end>>
 
 -> 지원이가 연락했던 마약상에 대해 알고 싶다.
 	//설득점수 -1
-	//지수3
+	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 지원이가 연락했던 마약상에 대해 알고 싶어요.
 	지수: 그러면….
 	지수: 그 사람들이 지원이 행방을 알 수도 있잖아요.
 	지수: 어딨는지 물어봐야죠.
 	<<wait 2.0>>
 
-	//건우3
+	<<Act 건우 Geonwoo3 0.322 0.227 black>>
 	건우: ….
 	건우: 내가 그걸 어떻게 아냐…?
 	<<wait 2.0>>
@@ -885,7 +933,7 @@ title: event_gunwoo_end
 
 ---
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 그럼 CCTV라도 볼 수 있게 도와달라고 할까?
 
@@ -902,11 +950,11 @@ title: event_gunwoo_success
 
 ---
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 오빠는 클럽 직원들이랑 친하니까….
 지수: CCTV라도 볼 수 있게 도와주면 안돼요?
 
-//건우2
+<<Act 건우 Geonwoo2 0.322 0.227 black>>
 건우: ….
 <<wait 2.0>>
 
@@ -914,7 +962,7 @@ title: event_gunwoo_success
 건우: 그 정도는 껌이지.
 건우: 내가 잘 말해둘게.
 
-//지수1
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 지수: ….
 지수: 고마워요.
 
@@ -928,11 +976,11 @@ title: event_gunwoo_fail
 
 ---
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 오빠는 클럽 직원들이랑 친하니까….
 지수: CCTV라도 볼 수 있게 도와주면 안돼요?
 
-//건우2
+<<Act 건우 Geonwoo2 0.322 0.227 black>>
 건우: ….
 <<wait 2.0>>
 
@@ -942,10 +990,10 @@ title: event_gunwoo_fail
 지수: 아…. 알겠어요.
 <<wait 2.0>>
 
-//지수1
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 지수: (예의상 웃는 표정) …. 믿을게요.
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 건우가 자리를 떠났다.
 ….
 
@@ -957,11 +1005,11 @@ title: obj_studentid
 ---
 
 //클릭할 경우
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 건우 오빠가 뭘 흘리고 갔네….
 고등학교 학생증…?
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 <<wait 2.0>>
 건우 오빠 동생 이름인데…?
@@ -978,7 +1026,7 @@ title: memory_studentid
 
 ???: 오빠, 왜 동생 학생증을 들고 다녀요?
 
-//건우0
+<<Act 건우 Geonwoo0 0.322 0.227 black>>
 건우: 아….
 건우: 학생인 척 하는 게 일할 때 편하거든.
 건우: 사람들이 미성년자는 의심을 잘 안 해.
@@ -1012,7 +1060,7 @@ title: obj_customer_f
 
 -> 말을 걸어보자
 	//클럽고객F 왼쪽, 지수 오른쪽 배치
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	클럽 고객F: ….
 	<<wait 2.0>>
 	….
@@ -1026,7 +1074,7 @@ title: obj_customer_f
 	<<wait 2.0>>
 
 	-> 다시 말을 걸어보자
-		//지수2
+		<<Act 지수 Jisoo2 1.17 0.322 black>>
 		지수: 저기요….
 		지수: 괜찮으세요?
 		클럽 고객F: ….
@@ -1058,11 +1106,11 @@ title: obj_drugjelly
 //젤리 팝업 이미지
 //팝업이미지 종료
 
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 젤리인가?
 어디서 본 것 같이 생겼네.
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 
 -> 주워보자
@@ -1084,7 +1132,7 @@ title: obj_drugjelly
 	클럽 고객F “나비가 걸어다니고 있잖아.”
 	<<wait 2.0>>
 
-	//지수4
+	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	….
 	그 곳에는 아무것도 없었다.
 	<<wait 2.0>>
@@ -1092,13 +1140,13 @@ title: obj_drugjelly
 	클럽 고객F “얼른 따라가야 되는데….”
 	<<wait 2.0>>
 	….
-	//지수3
+	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	술을 얼마나 많이 마신 거야.
 	직원이라도 불러와야 하나?
 	….
 	<<wait 2.0>>
 
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	마침 직원이 화장실에 들어왔다.
 	불러볼까?
 	
@@ -1175,7 +1223,7 @@ title: obj_staffonly_lockeropen
 스태프 복장이 있다.
 //스태프 복장 이미지 팝업
 //팝업이미지 종료
-//지수1
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 혹시 모르니 챙겨갈까?
 
 * 스태프 복장을 습득했다. *
@@ -1191,18 +1239,18 @@ title: obj_toiletpaper
 //클릭할 경우
 
 //휴지 팝업 이미지
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 휴지에 구멍이 뚫려있다.
 피 같은 게 묻어있는데…?
 
-//지수3
+<<Act 지수 Jisoo3 1.17 0.322 black>>
 ….
 <<wait 2.0>>
 
 ….
 어디서 본 것 같은데.
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 혹시 모르니까…. 건들지 말자.
 //팝업이미지 종료
@@ -1241,7 +1289,7 @@ title: obj_staffroomdoor
 
 ---
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지원이가 여기서 대체 뭘 했을까….
 CCTV라도 볼 수 있으면 좋을텐데.
 ….
@@ -1251,7 +1299,7 @@ CCTV라도 볼 수 있으면 좋을텐데.
 
 -> CCTV를 보고 싶다고 말하자
 	//클럽직원 C 왼쪽, 지수 오른쪽 배치 
-	//지수1
+	<<Act 지수 Jisoo1 1.17 0.322 black>>
 	지수: 저기 혹시, CCTV 좀 확인할 수 있을까요?
 	
 	//아는 오빠A의 조력 있는 경우 <<jump obj_staffroomdoor_1>>	
@@ -1284,7 +1332,7 @@ title: obj_staffroomdoor_2
 클럽 직원C: 아…. 죄송합니다.
 클럽 직원C: CCTV는 함부로 보여드리면 안돼요.
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 설득해볼까?
 <<wait 2.0>>
@@ -1301,7 +1349,7 @@ title: obj_staffroomdoor_2
 지수: 아…. 아니예요. 제가 더 찾아볼게요. 
 
 //클럽 직원C 이미지 종료
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 어떡하면 좋지….
 ….
 지금은 들어갈 수 없을 것 같아.
@@ -1316,10 +1364,10 @@ title: club_staffroom_nostaff
 
 //직원과의 대화 이후, 다른 장소로 이동했다 Staff Room 앞으로 돌아올 경우
 
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 어…. 직원이 자리를 비웠네.
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….	
 
 
@@ -1344,15 +1392,15 @@ title: game_openthedoor_intro
 
 //인벤토리에서 헤어핀 선택, 사용 시
 
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 아 맞다…. 헤어핀이 있었네.
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 학창 시절에 자주 썼었는데.
 친구들이 사물함 열쇠 두고 오면 나부터 찾았었지.
 
-//지수1
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 ….
 이걸로 문을 따 볼까?
 ….
@@ -1398,11 +1446,11 @@ title: game_openthedoor_success
 
 ---
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 <<wait 2.0>>
 
-//지수1
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 문이 열렸다.
 누가 보기 전에 빨리 들어가자.
 ….
@@ -1417,7 +1465,7 @@ title: obj_cocatree
 ---
 
 //클릭할 경우
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 나무를 심어뒀네.
 * 마약사전에 ‘코카나무’가 추가되었습니다. *
@@ -1483,7 +1531,7 @@ CCTV 화면이다.
 
 	//팝업 이미지 종료
 
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
 	….
 	아리아드네에게 CCTV 사진을 찍어 보냈다.
@@ -1505,15 +1553,15 @@ title: chocotalk_cctv
 //아리아드네 채팅 누르고 사진을 확인하고 나온 뒤
 //핸폰 화면 왼쪽(원래배치)에 지수가 오른쪽에 뜸.
 
-//지수3
+<<Act 지수 Jisoo3 1.17 0.322 black>>
 ….
 지원이가 맞는 것 같아.
 
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 저 사람들이랑 뭘 하고 있는거지…?
 ….
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 
 //핸드폰, 지수이미지 종료
@@ -1549,17 +1597,17 @@ title: obj_radio
 //무전기 팝업 이미지 종료
 <<wait 2.0>>
 
-//지수3
+<<Act 지수 Jisoo3 1.17 0.322 black>>
 ….
 대체 무슨 얘기를 하는 거지…?
 잘 안들려….
 ….
 ….
 
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 혹시 모르니 녹음해둘까?
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 ….
 휴대폰 녹음 버튼을 눌렀다.
@@ -1573,10 +1621,10 @@ title: obj_radio
 ….
 ….
 ….
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 이게 대체 무슨 소리지?
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 아리아드네에게 보내볼까….
 ….
 ….
@@ -1607,7 +1655,7 @@ title: event_staffroom
 //무전기(obj_radio)이후 아무데나 한 번 마우스로 클릭하고 나면
 //문 밖에서 발소리가 가까워지는 사운드
 
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 ….
 어….
 발소리가 들린다.
@@ -1630,7 +1678,7 @@ title: event_staffroom_gunwoo1
 클럽 직원C: (멋쩍은 표정) 아…. 두고 온 게 있어서요.
 클럽 직원C: (예의상 웃는 표정) 원하는 건 찾으셨어요?
 
-//지수1
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 지수: (예의상 웃는 표정) 아, 아직이요. 
 
 클럽 직원C가 주위를 둘러보더니, 책상 위로 손을 뻗었다.
@@ -1639,7 +1687,7 @@ title: event_staffroom_gunwoo1
 클럽 직원C: (어색한 표정) 그러시구나….
 클럽 직원C: (예의상 웃는 표정) 천천히 살펴보세요.
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 클럽 직원C가 밖으로 나갔다.
 ….
@@ -1656,7 +1704,7 @@ title: event_staffroom_gunwoo2
 
 ---
 
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 어떡하지….
 일단 숨어야겠다…!
 ….
@@ -1687,12 +1735,12 @@ title: event_staffroom_gunwoo2_choose
 	….
 	//잠시 화면이 어두워졌다 다시 밝아지는 등의…. 이전으로 돌아간 연출)
 	
-	//지수4
+	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	….
 	순간 무서운 상상을 했네.
 	거기 숨으면 안될 것 같아.
 	
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
 	어디로 숨지? 
 	<<jump event_staffroom_gunwoo2_choose>>
@@ -1714,12 +1762,12 @@ title: event_staffroom_gunwoo2_choose
 	….
 	//잠시 화면이 어두워졌다 다시 밝아지는 등의…. 이전으로 돌아간 연출)
 	
-	//지수4
+	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	….
 	순간 무서운 상상을 했네.
 	거기 숨으면 안될 것 같아.
 	
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
 	어디로 숨지? 
 	<<jump event_staffroom_gunwoo2_choose>>
@@ -1814,10 +1862,10 @@ title: obj_viplist
 	….
 	//팝업이미지 종료
 	
-	//지수4
+	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	클럽 다니는 걸 오늘 알았는데.
 	
-	//지수2
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
 	지원이한테 너무 관심이 없었나.
 	….
@@ -1845,7 +1893,7 @@ title: obj_locker
 ---
 
 //클릭할 경우
-//지수1
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 어, 그냥 열리네?
 안이 비어있다
 ….
@@ -1859,7 +1907,7 @@ title: club_viproom_entry
 ---
 
 //나머지 장소(카운터&바/테이블/화장실/Staff room 전체) 다 둘러보고 나서, 이동 버튼을 누르면
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 어….
 직원이 어딘가로 들어간다.
 저긴 어디지?
@@ -2268,7 +2316,7 @@ title: obj_clock2
 ---
 
 //클릭할 경우
-//지수2(직원복장 해제상태)
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 가만보니 저 시계, 아까부터 계속 멈춰 있네.
 ….
 
@@ -2381,7 +2429,7 @@ title: club_stair
 //문틈 사이로 보는 듯한 주차장 배경
 
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 다 비슷하게 생겼네.
 ….
@@ -2448,22 +2496,23 @@ CCTV에 찍힌 그 인형이야.
 //건우, 지수가 대화하는 계단 배경으로 변경
 //건우 왼쪽, 지수 오른쪽
 
-//지수3, 건우2
+<<Act 지수 Jisoo3 1.17 0.322 black>>
+<<Act 건우 Geonwoo2 0.322 0.227 black>>
 지수: 제일 오른쪽에 있는 차요.
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: ….
 지수: 차 안이라도 살펴볼 수 있으면 좋을텐데….
 지수: ….
 //차 문 열리고 닫히는 사운드 재생
 
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 지수: 어…. 누가 나오는데요?
 건우: ….
 건우: 저 사람 내가 아는 사람인데.
 건우: 뭐…. 잠깐 다른 데로 데리고 갔다 오면 돼?
 
 지수: ….
-//지수1
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 지수: 그렇게 할 수 있어요?
 
 건우: 응. 그런데 어디 데려갈 명분이 없긴 해.
@@ -2485,7 +2534,7 @@ title: inventory_notjelly
 ---
 
 //인벤토리에서 젤리 봉지가 아니라 다른 아이템 사용시
-//건우1
+<<Act 건우 Geonwoo1 0.322 0.227 black>>
 건우: ….
 건우: 다른 거 없냐?
 
@@ -2497,11 +2546,11 @@ title: inventory_drugjelly
 ---
 
 //인벤토리에서 젤리 봉지 사용시
-//건우2
+<<Act 건우 Geonwoo2 0.322 0.227 black>>
 건우: ….
 건우: 이거 어디서 났어?
 
-//지수4
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 지수: 아…. 아까 화장실에서 주웠어요.
 건우: ….
 건우: 너 이거 먹었냐?
@@ -2513,11 +2562,11 @@ title: inventory_drugjelly
 지수:  네…?
 건우: 안 먹었다니 다행이네.
 
-//건우1
+<<Act 건우 Geonwoo1 0.322 0.227 black>>
 건우: 이걸로 유인할 수 있을 것 같은데.
 건우: 내가 가져간다?
 
-//지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 아…. 네.
 
 //건우, 지수이미지 종료, 그냥 계단 배경

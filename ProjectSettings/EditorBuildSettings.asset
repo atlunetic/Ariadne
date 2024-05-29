@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Hee/Scenes/Menu.unity
     guid: 5288e2da389047245b84dbc83e01a879
-  - enabled: 0
+  - enabled: 1
     path: Assets/Hee/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
