@@ -425,6 +425,7 @@ D가 보낸 메시지에 심장이 빨리 뛰기 시작한다.
 진짜로 마약을 보게 되면 어떡하지?
 범죄 아니야?
 
+<<StartPhoneChat PhoneController 17>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

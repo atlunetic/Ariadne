@@ -251,6 +251,7 @@ title: Letter
 ---
 
 
+<<SetCanvasTo VisualNovelPrefab true>>
 <<Scene NoBG>>
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 
@@ -311,12 +312,12 @@ title: JisooPhone
 (전송)
 
 
-//사운드 추가: 휴대폰 알람음
+<<PlayAudio PhoneAlarm>>
 어? 설마 휴대폰도 두고 갔나?
 …. 
 
 
-// 사운드 추가: 휴대폰 전원 꺼지는 소리
+<<PlayAudio PhoneOff>>
 앗…. 내 휴대폰 전원이 꺼졌다.
 배터리가 다 됐나.
 다시 충전하려면 한참 걸릴텐데.
@@ -375,29 +376,28 @@ title: PhoneBoothEnd2
 D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다.
 와…. 진짜 마약인가?
 
-//pause
-
+<<wait 0.5>>
 ….
 
 손을 뻗는 순간….
+
+<<wait 0.5>>
 
 //이미지 추가: 누군가 지수의 등 뒤로 손을 올린 이미지
 
 누군가 말을 걸어왔다.
 
-//pause
 
 ….
-
-//pause
 
 경찰이었다. 
 
-//pause
+<<wait 0.5>>
 
 ….
 
-//pause
+<<wait 0.5>>
+
 
 아….
 그래 이건 범죄잖아.
@@ -405,6 +405,9 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 지원이를 찾기 위해서라고 해놓고….
 범죄를 정당화하려고 했어.
 …. 변함이 없구나?
+
+// 엔딩 2. 정당화의 방식
+
 
 ===
 
@@ -529,11 +532,13 @@ title: Weedhof
 
 ---
 
-//이미지 추가: 가게 홍보 포스터 확대본
+<<Draw Suljiproad_Poster 0.75 0.75>>
 ….
 홍보 문구가 너무 마약에 치우쳐 있는 것 같아.
 ….
 사람들이 저런 걸 보고 마약에 호기심을 갖게 되는 거 아닐까?
+
+<<Hide Suljiproad_Poster>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -655,7 +660,9 @@ title: Where
 ---
 
 //모든 장소를 둘러보았을 경우
-<<SetCanvasTo VisualNovelPrefab false>>
+
+<<if>> visited(string node_name)
+<<SetCanvasTo VisualNovelPrefab true>>
 ...
 대체 어디 있는 거지?
 ...
@@ -680,14 +687,14 @@ title: WalletO
 ...
 지갑 안에 뭐가 있는지라도 볼까?
 
-//이미지 추가: 영수증 확대 이미지
+<<Draw receipt 0.75 0.75>>
 
 ...
 ...
 어?
 영수증이다.
 
-//pause
+<<wait 0.5>>
 
 ….
 어제 날짜네?
@@ -696,6 +703,8 @@ title: WalletO
 ...
 ...
 일단은 영수증에 나온 편의점을 찾아가야 하나.
+
+<<Hide receipt>>
 
 <<New711 Controllers>>
 <<SetCanvasTo VisualNovelPrefab false>>
