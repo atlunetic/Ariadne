@@ -21,11 +21,12 @@ public class PhoneController : MonoBehaviour
             TabStack = new Stack<GameObject>();
         }
     }
-
+    
     public void ActivePhone(){
         Phone.SetActive(true);
-        // UI 숨기기
+        Menu.instance.UI_on();
     }
+    
     public void ActiveTab(GameObject tab){
         if(tab.activeSelf) return;
         TabStack.Push(tab);
