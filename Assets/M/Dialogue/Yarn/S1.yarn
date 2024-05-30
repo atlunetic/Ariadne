@@ -33,9 +33,6 @@ tags:
 
 <<Scene Maze>>
 
-1장
-
-//배경 변경: 미로임을 파악할 수 있는 이미지
 지수: 길을 잃었다.
 지수: 미로 속 가장 깊은 곳에 괴물이 있다고 했는데...
 지수: 내가 잡을 수 있을까.
@@ -201,7 +198,7 @@ title: Realized
 
 ---
 
-//BGM 추가: 지원이의 방 Theme
+<<PlayAudio JiwonRoomTheme 1.0 loop>>
 
 지원이는 뭐 하고 있으려나.
 오랜만에 맛있는 거 시켜먹자고 해야지.
@@ -231,7 +228,6 @@ title: Jiwon_Room
 
 <<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
 <<SetCanvasTo VisualNovelPrefab false>>
-<<stop>>
 
 ===
 
@@ -728,8 +724,7 @@ title: Club_S1End
 ...
 들어가보자.
 
-<<SetCanvasTo VisualNovelPrefab false>>
-\
+<<SetCanvasTo VisualNovelPrefab false>>.
 ===
 
 
