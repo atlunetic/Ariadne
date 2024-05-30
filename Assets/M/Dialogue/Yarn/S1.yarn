@@ -212,7 +212,7 @@ title: Realized
     -> (문을 열어본다.)
         잠깐 들어가도 괜찮겠지.
         <<PlayAudio DoorOpeningSound>>
-        <<jump Jiwon_Room>>
+        <<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
 
 ===
 
@@ -220,13 +220,13 @@ title: Jiwon_Room
 
 ---
 
-<<Scene FullJiwonRoomBG>>
+//<<PlayAudio JiwonRoomTheme 1.0 loop>>
 
 매일 집에만 있더니. 꼭 찾을 때 없어.
 아무튼 얘는 깔끔하게 해놓고 사네.
 주위를 둘러볼까?
 
-<<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -252,7 +252,7 @@ title: Letter
 
 
 <<Scene NoBG>>
-<<Act 지수 Jisoo1_smile 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 
 뭐야.
 어제 내가 잔소리 좀 했다고 화났나?
@@ -431,14 +431,16 @@ title: Park
 
 // 장소 1. 동네 공원
 
-<<SetCanvasTo VisualNovelPrefab false>>
+<<SetCanvasTo VisualNovelPrefab true>>
 동네 공원이다.
 지원이랑 가끔 산책하러 갔었지….
 동네 공원으로 가볼까?
     -> 예
         //<<GoPark MapController>>
+        <<SetCanvasTo VisualNovelPrefab false>>
     -> 아니오
         다른 곳으로 가자….
+        <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -446,6 +448,7 @@ title: Park
 title: Newspaper
 
 ---
+
 
 *(제목) 유명 의원 A, 마약류 처방으로 경찰 입건*
 
@@ -509,13 +512,16 @@ title: Barstreet
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 예전에 자주 갔던 곳인데.
 지원이도 한 번 데려가긴 했었지.
 술집 거리로 가볼까?
     -> 예
         //<<GoBarStreet MapController>>
+        <<SetCanvasTo VisualNovelPrefab false>>
     -> 아니오
         다른 곳으로 가자...
+        <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -560,8 +566,10 @@ title: Hospital
 생각난 김에 병원이라도 빨리 갔다 올까?
     -> 예
         //<<GoHospital MapController>>
+        <<SetCanvasTo VisualNovelPrefab false>>
     -> 아니오
         괜찮으려나?
+        <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -570,6 +578,7 @@ title: HospitalWaitingRoom
 ---
 
 
+<<SetCanvasTo VisualNovelPrefab true>>
 병원에 사람이 많다.
 언제쯤 들어갈 수 있으려나.
 …
@@ -614,6 +623,7 @@ title: HospitalWaitingRoom
                 의사 선생님은 할 말이 끝났다는 듯 컴퓨터로 시선을 옮겼다.
                 어쩔 수 없지. 돌아가자.
                     // 씬 변경: 지도
+                    <<SetCanvasTo VisualNovelPrefab false>>
             -> 아 맞다. 그랬었지.
                 지수 “아…. 그랬죠. 참.”
                 지수 “알겠습니다.” 
@@ -633,6 +643,8 @@ title: Officetel
 //3장에서 상호작용 예정
 //클릭 시
 
+<<SetCanvasTo VisualNovelPrefab true>>
+
 뭔가 번쩍번쩍한 오피스텔이네.
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -643,6 +655,7 @@ title: Where
 ---
 
 //모든 장소를 둘러보았을 경우
+<<SetCanvasTo VisualNovelPrefab false>>
 ...
 대체 어디 있는 거지?
 ...
@@ -724,7 +737,8 @@ title: Club_S1End
 ...
 들어가보자.
 
-<<SetCanvasTo VisualNovelPrefab false>>.
+<<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 
