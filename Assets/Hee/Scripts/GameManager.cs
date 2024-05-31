@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
             instance = this;
     }
 
-    public List<int> ChattingLog = new List<int>(); 
-    public Dictionary<string, bool> ObjectState = new Dictionary<string, bool>();
+    public string NowScene;
+    public int NumOfScreenShots = 1;
+    public List<int> ChattingLog = new List<int>();
+    public List<string> PhotoList = new List<string>();
+    public HashSet<string> FindedObjects = new HashSet<string>();
+    public HashSet<string> FindedClues = new HashSet<string>();
+    public HashSet<string> FinishedDialogues = new HashSet<string>();
 }

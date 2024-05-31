@@ -7,6 +7,7 @@ using Yarn.Unity;
 
 public class CallYarn : MonoBehaviour
 {
+    Dictionary<string, bool> IsDialogShowed;
     public Button gallerybutton;
     public Button camerabutton;
     public Button chocotalkbutton;
@@ -26,12 +27,15 @@ public class CallYarn : MonoBehaviour
 
     private void callYarn(string dialogname){
         var runner = FindObjectOfType<DialogueRunner>();
-        if(runner is not null && runner.NodeExists(dialogname))
+        if(runner is not null && runner.NodeExists(dialogname)){
             runner.StartDialogue(dialogname);
+            GameManager.instance.FinishedDialogues.Add(dialogname);
+        }
     }
 
     // 버튼 클릭 이벤트로 얀 다이얼로그를 한 번만 부를 때 사용
     void Callbybutton (Button button, string dialogname){
+        if(GameManager.instance.FinishedDialogues.Contains(dialogname)) return;
         UnityAction myAction = null;
         myAction = () => {callYarn(dialogname); button.onClick.RemoveListener(myAction);};
         button.onClick.AddListener(myAction);
@@ -39,6 +43,7 @@ public class CallYarn : MonoBehaviour
 
     IEnumerator LateStart(){
         yield return new WaitForSeconds(2f);
+        HashSet<string> FinishedDialogues = GameManager.instance.FinishedDialogues;
         Haesolchatbutton = ChocoTalkController.instance.chatbuttons["해솔"];
 
         Callbybutton(gallerybutton, "Gallery");  // 갤러리 켰을 때
@@ -47,7 +52,7 @@ public class CallYarn : MonoBehaviour
         Callbybutton(openchatDbutton,"OpenChat");  // 오픈채팅 켰을 때
 
         Callbybutton(ChocoTalkController.instance.chatbuttons["건우 오빠"], "ChooseChatName1");  // 건우 채팅창 켰을 때
-        Callbybutton(ChocoTalkController.instance.chatbuttons["해솔"], "ChooseChatName2");  // 해솔 채팅창 켰을 때
+        Callbybutton(Haesolchatbutton, "ChooseChatName2");  // 해솔 채팅창 켰을 때
 
         UnityAction drgg24 = null;  // D 채팅창 켰을 때
         drgg24 = () => {Callbybutton(IDSearchbutton, "DrugDeal");
@@ -56,10 +61,13 @@ public class CallYarn : MonoBehaviour
 
         Callbybutton(work8282chatbutton,"DropperRecruit");  // work8282 채팅창 켰을 때
         UnityAction work8282 = null;
-        work8282 = () => {Callbybutton(Haesolchatbutton, "AfterDropperChat");
+        work8282 = () => {ChatManager.Chatting c = ChatManager.instance.ChattingList[13];
+                          c.NextDialogue = "AfterDropperChat";
+                          ChatManager.instance.ChattingList[13] = c;
                           work8282chatbutton.transform.GetChild(2).gameObject.SetActive(false);
                           work8282chatbutton.onClick.RemoveListener(work8282);};
-        work8282chatbutton.onClick.AddListener(work8282);
+        if(FinishedDialogues.Contains("DropperRecruit")) work8282.Invoke();
+        else work8282chatbutton.onClick.AddListener(work8282);
 
         Callbybutton(Iceicechatbutton, "IceiceChat");  // Iceice 채팅창 켰을 때
         UnityAction Iceice = null;

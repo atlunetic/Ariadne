@@ -18,7 +18,7 @@ public class ImageToPicture : MonoBehaviour
 
     private void callYarn(){
         var runner = FindObjectOfType<DialogueRunner>();
-        if(runner.NodeExists(gameObject.name))
+        if(runner is not null && runner.NodeExists(gameObject.name))
             runner.StartDialogue(gameObject.name);
         button.onClick.RemoveListener(callYarn);
     }

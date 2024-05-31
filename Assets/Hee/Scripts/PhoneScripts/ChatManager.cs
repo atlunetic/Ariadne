@@ -20,7 +20,7 @@ public class ChatManager : MonoBehaviour
         profileImage.Add("의사 선생님", profileSprite[1]);
         profileImage.Add("해솔", profileSprite[2]);
     }
-    struct chat{
+    public struct chat{
         public bool JisooSaying;  // 지수의 대사이면 true
         public string text;  // 대사
         public string image;  // 이미지라면 이름
@@ -30,7 +30,7 @@ public class ChatManager : MonoBehaviour
             image = null;
         }
     }
-    struct Chatting
+    public struct Chatting
     {
         public bool IsDgram;  // 초코톡인지 디그램인지
         public string name;  // 누구와 채팅하는지 (채팅방 이름)
@@ -44,7 +44,7 @@ public class ChatManager : MonoBehaviour
             this.NextDialogue = NextDialogue;
         }
     }
-    List<Chatting> ChattingList= new List<Chatting>();
+    public List<Chatting> ChattingList = new List<Chatting>();
 
     [SerializeField]
     private GameObject ChocoChatBox_Me;
