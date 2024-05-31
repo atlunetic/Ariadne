@@ -11,10 +11,20 @@ public class GameManager : MonoBehaviour
     }
 
     public string NowScene;
-    public int NumOfScreenShots = 1;
+    public int NumOfScreenShots = 1;  // 불러오기 시 더 큰 수로 적용
     public List<int> ChattingLog = new List<int>();
     public List<string> PhotoList = new List<string>();
     public HashSet<string> FindedObjects = new HashSet<string>();
     public HashSet<string> FindedClues = new HashSet<string>();
     public HashSet<string> FinishedDialogues = new HashSet<string>();
+    public HashSet<string> GottenPage = new HashSet<string>();
+
+    public int visited;
+
+    public bool S1Ended(){
+        // Letter, Meds, Laptop, Drawer_Hairpin, DrawerR_Wallet
+        return FindedClues.Contains("Laptop") && FindedClues.Contains("Meds") && FindedClues.Contains("Letter") &&
+               FindedObjects.Contains("Drawer_Hairpin") && FindedObjects.Contains("DrawerR_Wallet") &&
+               visited == 7;
+    }
 }
