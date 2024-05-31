@@ -49,21 +49,18 @@ public class CameraController : MonoBehaviour
         // 로딩 띄우기?
     }
 
-    public void SaveImmediate(string cluename){  // <TakePicture> 에서 호출, 증거사진일때
+    public void SaveImmediate(string cluename, byte[] PNGbuffer){  // <TakePicture> 에서 호출, 증거사진일때
         if (Directory.Exists(FolderPath) == false){
             Directory.CreateDirectory(FolderPath);
         }
         TotalPath = string.Copy(FolderPath) + cluename;
 
         int i=0;
-        while (File.Exists(TotalPath)){
-            TotalPath = string.Copy(TotalPath) + i.ToString();
-        }
-        File.WriteAllBytes(TotalPath, PNGbuffer);
+        while (File.Exists(TotalPath + i.ToString())) i++;
+        File.WriteAllBytes(string.Copy(TotalPath) + i.ToString(), PNGbuffer);
             
-        GalleryController.instance.PrintToGallery(cluename);
+        GalleryController.instance.PrintToGallery(cluename + i.ToString());
         GameManager.instance.PhotoList.Add(cluename + i.ToString());
-
     }
 
     public void SaveTemporary(byte[] PNGbuffer){  // <TakePicture> 에서 호출

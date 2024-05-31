@@ -57,7 +57,7 @@ public class GalleryController : MonoBehaviour
         pictureSet.SetActive(false);
         imageIcon.transform.SetAsFirstSibling();
 
-        if(screenshotname.Substring(0,10).Equals("ScreenShot")){
+        if(screenshotname.StartsWith("ScreenShot")){
             // 프리팹으로 삭제버튼 만들어서 추가, 이름으로 찾기
         }
         else{
