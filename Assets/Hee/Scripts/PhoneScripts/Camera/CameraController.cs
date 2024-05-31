@@ -46,10 +46,23 @@ public class CameraController : MonoBehaviour
         GameObject.Find("Main Camera").GetComponent<TakePicture>().ScreenShot(CameraRect.GetComponent<RectTransform>());
         CameraRect.SetActive(false);
         Phone.SetActive(true);
-        // UI 다 켜기 
+        // 로딩 띄우기?
     }
 
-    public void SaveImmediate(){  // <TakePicture> 에서 호출, 증거사진일때
+    public void SaveImmediate(string cluename){  // <TakePicture> 에서 호출, 증거사진일때
+        if (Directory.Exists(FolderPath) == false){
+            Directory.CreateDirectory(FolderPath);
+        }
+        TotalPath = string.Copy(FolderPath) + cluename;
+
+        int i=0;
+        while (File.Exists(TotalPath)){
+            TotalPath = string.Copy(TotalPath) + i.ToString();
+        }
+        File.WriteAllBytes(TotalPath, PNGbuffer);
+            
+        GalleryController.instance.PrintToGallery(cluename);
+        GameManager.instance.PhotoList.Add(cluename + i.ToString());
 
     }
 
@@ -64,7 +77,7 @@ public class CameraController : MonoBehaviour
     }
 
     public void SaveScreenShot(){
-        int num = PhoneController.instance.NumOfScreenShots++;
+        int num = GameManager.instance.NumOfScreenShots++;
 
         if (Directory.Exists(FolderPath) == false){
             Directory.CreateDirectory(FolderPath);
@@ -75,6 +88,7 @@ public class CameraController : MonoBehaviour
         File.WriteAllBytes(TotalPath, PNGbuffer);
             
         GalleryController.instance.PrintToGallery(filename);
+        GameManager.instance.PhotoList.Add(filename);
         closePopUP();
     }
 
@@ -86,6 +100,5 @@ public class CameraController : MonoBehaviour
     private void closePopUP(){
         SaveOrNotPopUp.SetActive(false);
         ShowScreenShotBG.SetActive(false);
-        // UI 다시 활성화
     }
 }

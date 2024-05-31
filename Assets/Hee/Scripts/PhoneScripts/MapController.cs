@@ -73,7 +73,11 @@ public class MapController : MonoBehaviour
         // 씬 바꾸기
         CurrPoint.anchoredPosition = new Vector2(108,-61);
         Menu.instance.UI_off();
-        DisableButton(Clubbutton);
+        Homebutton.onClick.RemoveAllListeners();
+        Parkbutton.onClick.RemoveAllListeners();
+        Clubbutton.onClick.RemoveAllListeners();
+        Officetelbutton.onClick.RemoveAllListeners();
+        BarStreetbutton.onClick.RemoveAllListeners();
     }
 
     public void DisableButton(Button Next){
