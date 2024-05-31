@@ -5,16 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    public void Change()
+    public void StartScene()
     {
-        if(SceneManager.GetActiveScene().name == "Test1")
-        {
-            SceneManager.LoadScene("Test2");
-        }
-        else
-        {
-            SceneManager.LoadScene("Test1");
-        }
-        
+          SceneManager.LoadScene("S1");
+          SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
     }
 }

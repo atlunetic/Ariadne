@@ -23,6 +23,7 @@ public class ActionPanelButtons : MonoBehaviour
         Debug.Log( connectedItem.itemName + " is currently being used");
 
 
+        /*
 
         if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended == false)
         {
@@ -42,6 +43,8 @@ public class ActionPanelButtons : MonoBehaviour
             currentSlot.RemoveSlot();
         }
 
+        
+
         else
         {
             GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
@@ -49,6 +52,8 @@ public class ActionPanelButtons : MonoBehaviour
             var runner = FindObjectOfType<DialogueRunner>();
             runner.StartDialogue("WrongItem");
         }
+
+        */
 
 
 

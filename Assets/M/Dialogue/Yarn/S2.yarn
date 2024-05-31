@@ -9,9 +9,9 @@
 
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 왠지 모르게 익숙한 분위기다.
-<<wait 2.0>>
+<<wait 1.0>>
 ….
-<<wait 2.0>>
+<<wait 1.0>>
 그런데 클럽엔 관심도 없다던 애가 여긴 왜 왔었대?
 아무튼, 들어가보자.
 <<jump meet_gunwoo>>
@@ -23,13 +23,15 @@ title: meet_gunwoo
 
 ---
 
-//클럽 theme 재생
+//<<PlayAudio 클럽내부theme파일이름>>
+
+
 <<Act 건우 Geonwoo0 0.322 0.227 black>>
 
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 어...
 뭔가 익숙한 얼굴이 보인다.
-<<wait 2.0>>
+<<wait 1.0>>
 ….
 
 <<Act 건우 Geonwoo1 0.322 0.227 black>>
@@ -44,21 +46,21 @@ title: meet_gunwoo
 곤란한 표정을 짓고 있는 걸 보니….
 분명히 지원인지 나인지 구분 못하는 것 같은데.
 몇 년째 보는데 항상 저런다니까.
-<<wait 2.0>>
+<<wait 1.0>>
 
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 뭐라고 대답할까?
 -> 지원이라고 거짓말 해보자.
 	<<Act 지수 Jisoo1 1.17 0.322 black>>
-	지수: (웃으며) 저 지원이예요.
+	지수: 저 지원이예요.
 
 	<<Act 건우 Geonwoo4 0.322 0.227 black>>
-	건우: (겁에 질린 듯) ….
+	건우: ….
 	건우: 너 어떻게 나왔어?
 	건우: 그것보다 지원이 너 지금 여기 있으면 안돼.
 	건우: 빨리 다른 곳으로….
-	//화면이 흔들리고, 화면이 흐려지는 연출
+	<<Fade black 0.0 1.0 2.0>>
 	어….
 	갑작스레 느껴지는 통증에 머리가 울렸다.
 	<<wait 2.0>>
@@ -70,6 +72,7 @@ title: meet_gunwoo
 	….
 	<<wait 2.0>>
 	//엔딩 3. ??? : 무슨 일이 일어난 걸까. 
+	<<ChangeSceneTo VisualNovelPrefab S0>>
 
 -> 나라고 밝히자.
 	<<Act 지수 Jisoo1 1.17 0.322 black>>
