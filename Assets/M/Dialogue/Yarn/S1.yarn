@@ -1,29 +1,4 @@
-﻿title: Test
----
-
-//오른쪽 캐릭터 등장
-
-//<<Act 지수 Jisoo1_smile 1.17 0.322 black>>
-
-지수: Hi
-
-<<set $randchoice = random_range(1, 3)>>
-
-<<if $randchoice < 1 >>
-    Case 1
-    //왼쪽 캐릭터 등장
-
-    //<<Act 건우 Geonwoo1_smile 0.322 0.227 green>>
-
-// 사운드 추가
-//<<PlayAudio 파일명>>
-
-<<elseif $randchoice < 2>>
-    Case 2
-<<else>>
-    Case 3
-<<endif>>
-===
+﻿
 
 title: S1_Nightmare
 tags:
@@ -47,7 +22,7 @@ title: S1_path1
 -> 앞으로 가보자.
     <<jump LeftPath>>
 -> 오른쪽으로 가보자.
-        //배경 변경: 막다른길 이미지
+        <<Scene DeadEnd>>
         막다른 길이다. 돌아가자.
         <<jump S1_path1>>
 
@@ -63,8 +38,10 @@ title: LeftPath
 
 <<PlayAudio MonsterSound1>>
 
-<<wait 5.0>>
+<<wait 1.0>>
+...
 불길한 소리가 들린다.
+
 
 -> 왼쪽으로 가보자.
     <<jump Minotaur>>
@@ -114,10 +91,11 @@ title: S1_path4
         <<PlayAudio CardiacArrest>>
         엔딩 0: 악몽 속에 잠들다: 혼수상태에서 깨어나지 못함
         <<Fade white 0.0 1.0 2.0>>
-        <<stop>>
+        <<ChangeSceneTo VisualNovelPrefab S0>>
 
-        ===
+        
 
+===
 
 
 title: Minotaur
@@ -129,25 +107,20 @@ title: Minotaur
 
 <<PlayAudio MonsterSound2>>
 
-<<wait 3.0>>
+<<wait 1.0>>
 불길한 소리가 들린다.
 
 저게 말로만 듣던 미노타우르스….
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
 검을 쥔 손에 힘이 들어가지 않아.
 
-
-//배경 추가: 거대한 그림자가 보다 가까이 다가온 1인칭 시점 이미지
-
 <<PlayAudio MonsterSound3>>
-<<wait 3.0>>
+<<wait 1.0>>
 
 녀석이 서서히 내게 다가온다.
 이대로 잡아먹히는걸까.
 
-//이미지, 효과 추가: 손모양 그림자가 지수를 향해 뻗어옴.
-//이미지 추가?: 지수에게 천천히 그림자가 드리운다.
-//효과 추가: 서서히 암전. 어두워진다.
+<<Draw Hand 0.75 0.75>>
 
 <<Fade black 0.0 1.0 2.0>>
 
@@ -214,13 +187,29 @@ title: Realized
         <<PlayAudio DoorOpeningSound>>
         <<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
 
+
+===
+
+title: Jiwon_Room_Default
+
+---
+
+<<set $randchoice = random_range(1, 3)>>
+
+<<if $randchoice < 1 >>
+    창문으로 햇볕이 들어오는데도... 왠지 춥게 느껴지네.
+<<elseif $randchoice < 2>>
+    늘 있던 애가 없으니까 뭔가 허전한걸.
+<<endif>>
+
+
 ===
 
 title: Jiwon_Room
 
 ---
 
-//<<PlayAudio JiwonRoomTheme 1.0 loop>>
+
 
 매일 집에만 있더니. 꼭 찾을 때 없어.
 아무튼 얘는 깔끔하게 해놓고 사네.
@@ -250,6 +239,7 @@ title: Letter
 
 ---
 
+//편지 클릭 시
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Scene NoBG>>
@@ -294,8 +284,7 @@ title: Ending1
 동생이….
 
 
-
-//  엔딩 1. 무관심의 결말: 동생의 실종 및 사망 
+<<ChangeSceneTo VisualNovelPrefab S0>>
 
 ===
 
@@ -303,7 +292,6 @@ title: JisooPhone
 
 ---
 
-// 나레이션(텍스트)로만 진행. 휴대폰 화면 등 세부적인 화면은 보여주지 않는다.
 
 (초코톡을 켰다.)
 톡이라도 하나 보내둬야지.
@@ -363,7 +351,13 @@ title: FoundJiwonPhone
 평소 같으면 내가 휴대폰 볼까봐 기겁해서 달려 올텐데.
 …걱정되네.
 
-<<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom, Menu>>
+<<ActivePI MenuUI>>
+<<PlayAudio PhoneAlarm>>
+
+어... 연락이 온 것 같은데.
+확인해볼까?
+
+<<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom>>
 
 ===
 
@@ -383,8 +377,6 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 
 <<wait 0.5>>
 
-//이미지 추가: 누군가 지수의 등 뒤로 손을 올린 이미지
-
 누군가 말을 걸어왔다.
 
 
@@ -392,8 +384,7 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 
 경찰이었다. 
 
-<<wait 0.5>>
-
+<<Fade black 0.0 1.0 2.0>>
 ….
 
 <<wait 0.5>>
@@ -406,7 +397,10 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 범죄를 정당화하려고 했어.
 …. 변함이 없구나?
 
-// 엔딩 2. 정당화의 방식
+
+엔딩 2. 정당화의 방식
+<<ChangeSceneTo VisualNovelPrefab S0>>
+
 
 
 ===
@@ -446,6 +440,20 @@ title: Park
         <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
+
+title: ParkDefault
+
+---
+
+
+<<set $randchoice = random_range(1, 2)>>
+
+<<if $randchoice < 1.5 >>
+    어릴 때 지원이랑 하루 종일 미끄럼틀 타고 놀았었는데.
+<<else>>
+    바람에 나뭇잎이 흔들린다. 
+<<endif>>
+
 
 
 title: Newspaper
@@ -511,6 +519,17 @@ title: VendingMachine
 
 ===
 
+title: MDMA
+
+---
+
+….
+비타민인가?
+* 일기장에 ‘MDMA’가 추가되었습니다. *
+// 버튼에 AddDiaryPage 추가하기
+
+===
+
 title: Barstreet
 
 ---
@@ -525,6 +544,20 @@ title: Barstreet
     -> 아니오
         다른 곳으로 가자...
         <<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: BarStreetDefault
+
+---
+
+<<set $randchoice = random_range(1, 2)>>
+
+<<if $randchoice < 1.5 >>
+    사람들이 시끄럽게 떠들고 있다.
+<<else>>
+    맛있는 냄새가 난다. 배고픈걸...
+<<endif>>
 
 ===
 
@@ -889,5 +922,23 @@ title: WrongItem
 
 ===
 
+title: Diary1
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+이게 뭐지...?
+군데군데 비어 있네.
+...
+
+*일기장을 습득했습니다.*
+
+...
+일기장? 어디 쓰는거지...?
+일단 챙겨보자.
+<<SetCanvasTo VisualNovelPrefab false>>
+
+
+===
 
 
