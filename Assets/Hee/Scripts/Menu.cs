@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Yarn.Unity;
 
 public class Menu : MonoBehaviour
 {
@@ -41,5 +42,15 @@ public class Menu : MonoBehaviour
         Phone.SetActive(false);
         Inventory.SetActive(false);
         Diary.SetActive(false);
+    }
+
+    [YarnCommand("ActivePI")]
+    public void ActivePI(){
+        PhoneButton.SetActive(true);
+        InventoryButton.SetActive(true);
+    }
+    [YarnCommand("ActiveD")]
+    public void ActiveD(){
+        DiaryButton.SetActive(true);
     }
 }
