@@ -124,7 +124,8 @@ title: Minotaur
 
 <<Fade black 0.0 1.0 2.0>>
 
-<<wait 2.0>>
+<<wait 1.0>>
+<<HideAll>>
 <<StopAudioAll>>
 <<jump Jisoo_Room>>
 
@@ -138,7 +139,6 @@ title: Jisoo_Room
 <<Scene JisooRoomBG>>
 흐릿한 시야 사이로 익숙한 풍경이 보인다.
 
-<<Act 지수 Jisoo1_test1 left center Black>>
 …악몽을 꿨나? 머리가 지끈거린다.
 이 놈의 지긋지긋한 두통….
 
@@ -186,6 +186,7 @@ title: Realized
         잠깐 들어가도 괜찮겠지.
         <<PlayAudio DoorOpeningSound>>
         <<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
+        <<jump Jiwon_Room>>
 
 
 ===
