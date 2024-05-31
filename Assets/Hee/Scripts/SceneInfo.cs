@@ -27,8 +27,8 @@ public class SceneInfo : MonoBehaviour
         foreach(GameObject obj in Cluelist){
             if(GameManager.instance.FindedClues.Contains(obj.name)) continue;
             Vector3 pos = Camera.main.WorldToScreenPoint(obj.transform.position);
-            if((rect.x + rect.width/4)<pos.x && (rect.x + rect.width/4 * 3)>pos.x){
-                if((rect.y + rect.height/4)<pos.y && (rect.y + rect.height/4 * 3)>pos.y){
+            if((rect.x + rect.width/5)<pos.x && (rect.x + rect.width/5 * 4)>pos.x){
+                if((rect.y + rect.height/5)<pos.y && (rect.y + rect.height/5 * 4)>pos.y){
                     GameManager.instance.FindedClues.Add(obj.name);
                     return obj.name;
                 }
