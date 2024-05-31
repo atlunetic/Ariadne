@@ -23,6 +23,8 @@ public class MapController : MonoBehaviour
     public Button 편의점711button;
 
     public Button CurrLocationbutton;
+
+    public int visited;
     void Start()
     {
         
@@ -42,6 +44,7 @@ public class MapController : MonoBehaviour
         Menu.instance.UI_off();
         DisableButton(Parkbutton);
         SceneManager.LoadScene("S1_Park");
+        visited |= 1;
     }
 
     [YarnCommand("GoBarStreet")]
@@ -50,6 +53,7 @@ public class MapController : MonoBehaviour
         CurrPoint.anchoredPosition = new Vector2(27,251);
         Menu.instance.UI_off();
         DisableButton(BarStreetbutton);
+        visited |= 2;
     }
 
     [YarnCommand("GoHospital")]
@@ -58,6 +62,7 @@ public class MapController : MonoBehaviour
         CurrPoint.anchoredPosition = new Vector2(273,32);
         Menu.instance.UI_off();
         DisableButton(Hospitalbutton);
+        visited |= 4;
     }
 
     [YarnCommand("GoOfficetel")]
@@ -66,6 +71,7 @@ public class MapController : MonoBehaviour
         CurrPoint.anchoredPosition = new Vector2(715,204);
         Menu.instance.UI_off();
         DisableButton(Officetelbutton);
+        visited |= 8;
     }
 
     [YarnCommand("GoClub")]

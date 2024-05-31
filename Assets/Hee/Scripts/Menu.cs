@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Yarn.Unity;
 
-public class Menu : MonoBehaviour
+public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
 {
     public static Menu instance;
     void Awake() {
@@ -42,6 +43,18 @@ public class Menu : MonoBehaviour
         Phone.SetActive(false);
         Inventory.SetActive(false);
         Diary.SetActive(false);
+    }
+    void Start(){
+        PhoneButton.GetComponent<Button>().onClick.AddListener(where);
+    }
+    public void where(){
+        if(!GameManager.instance.S1Ended()) return;
+        if(GameManager.instance.FinishedDialogues.Contains("Where")) return;
+        var runner = FindObjectOfType<DialogueRunner>();
+        if(runner is not null && runner.NodeExists("Where")){
+            runner.StartDialogue("Where");
+            GameManager.instance.FinishedDialogues.Add("Where");
+        }
     }
 
     [YarnCommand("ActivePI")]

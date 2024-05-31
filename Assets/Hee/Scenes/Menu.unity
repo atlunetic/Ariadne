@@ -6521,7 +6521,6 @@ MonoBehaviour:
   Gallery: {fileID: 1632377085}
   Map: {fileID: 350570429}
   Dgram: {fileID: 1650539640}
-  NumOfScreenShots: 0
 --- !u!114 &797798387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8614,7 +8613,8 @@ PrefabInstance:
       value: -67.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5199027046500831917, guid: 893c726b4d5978247b82f88e5bf55e91, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 893c726b4d5978247b82f88e5bf55e91, type: 3}
@@ -11812,7 +11812,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82825f283148fa149881a8119fa40410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NowScene: 
+  NumOfScreenShots: 1
   ChattingLog: 
+  PhotoList: []
 --- !u!114 &1460325643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16424,7 +16427,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8292988001801996432, guid: a95c8f77a7cd42a48a39917efb4b3004, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a95c8f77a7cd42a48a39917efb4b3004, type: 3}
@@ -18857,6 +18861,7 @@ MonoBehaviour:
   Clubbutton: {fileID: 575705258}
   "\uD3B8\uC758\uC810711button": {fileID: 0}
   CurrLocationbutton: {fileID: 276803897}
+  visited: 0
 --- !u!1001 &2111141003
 PrefabInstance:
   m_ObjectHideFlags: 0
