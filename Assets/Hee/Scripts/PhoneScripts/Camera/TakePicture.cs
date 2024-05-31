@@ -32,7 +32,7 @@ public class TakePicture : MonoBehaviour  // 모든 Main Camera에 부착
             string clue = sceneInfo.FindClue(rect);
             
             if(clue is not null)
-                CameraController.instance.SaveImmediate(clue); 
+                CameraController.instance.SaveImmediate(clue, screenTex.EncodeToPNG()); 
             else
                 CameraController.instance.SaveTemporary(screenTex.EncodeToPNG());
             
