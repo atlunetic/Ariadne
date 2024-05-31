@@ -24,7 +24,6 @@ public class MapController : MonoBehaviour
 
     public Button CurrLocationbutton;
 
-    public int visited;
     void Start()
     {
         
@@ -44,7 +43,7 @@ public class MapController : MonoBehaviour
         Menu.instance.UI_off();
         DisableButton(Parkbutton);
         SceneManager.LoadScene("S1_Park");
-        visited |= 1;
+        GameManager.instance.visited |= 1;
     }
 
     [YarnCommand("GoBarStreet")]
@@ -53,7 +52,7 @@ public class MapController : MonoBehaviour
         CurrPoint.anchoredPosition = new Vector2(27,251);
         Menu.instance.UI_off();
         DisableButton(BarStreetbutton);
-        visited |= 2;
+        GameManager.instance.visited |= 2;
     }
 
     [YarnCommand("GoHospital")]
@@ -62,20 +61,19 @@ public class MapController : MonoBehaviour
         CurrPoint.anchoredPosition = new Vector2(273,32);
         Menu.instance.UI_off();
         DisableButton(Hospitalbutton);
-        visited |= 4;
+        GameManager.instance.visited |= 4;
     }
 
     [YarnCommand("GoOfficetel")]
-    public void GoOfficetel(){
+    public void GoOfficetel(){  // 3장
         // 씬 바꾸기
         CurrPoint.anchoredPosition = new Vector2(715,204);
         Menu.instance.UI_off();
         DisableButton(Officetelbutton);
-        visited |= 8;
     }
 
     [YarnCommand("GoClub")]
-    public void GoClub(){
+    public void GoClub(){  // 2장으로 넘어가기
         // 씬 바꾸기
         CurrPoint.anchoredPosition = new Vector2(108,-61);
         Menu.instance.UI_off();

@@ -23,6 +23,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     public GameObject PhoneButton;
     public GameObject InventoryButton;
     public GameObject DiaryButton;
+    public GameObject UIButtons;
 
     public GameObject Phone;
     public GameObject Inventory;
@@ -30,25 +31,24 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
 
     public void UI_on(){
         UIMode.SetActive(true);
-        PhoneButton.SetActive(false);
-        InventoryButton.SetActive(false);
-        DiaryButton.SetActive(false);
+        UIButtons.SetActive(false);
     }
     
     public void UI_off(){
         UIMode.SetActive(false);
-        PhoneButton.SetActive(true);
-        InventoryButton.SetActive(true);
-        DiaryButton.SetActive(true);
+        UIButtons.SetActive(true);
         Phone.SetActive(false);
         Inventory.SetActive(false);
         Diary.SetActive(false);
     }
+
+
     void Start(){
         PhoneButton.GetComponent<Button>().onClick.AddListener(where);
     }
     public void where(){
         if(!GameManager.instance.S1Ended()) return;
+        PhoneButton.GetComponent<Button>().onClick.RemoveListener(where);
         if(GameManager.instance.FinishedDialogues.Contains("Where")) return;
         var runner = FindObjectOfType<DialogueRunner>();
         if(runner is not null && runner.NodeExists("Where")){
