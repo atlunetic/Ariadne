@@ -19,6 +19,7 @@ public class SceneInfo : MonoBehaviour
     void SceneManage(Scene scene, LoadSceneMode mode){
         foreach(GameObject obj in Objectlist)
 	        obj.SetActive(!GameManager.instance.FindedObjects.Contains(obj.name));
+        GameManager.instance.NowScene = scene.name;
     }
 
     public string FindClue(Rect rect){

@@ -49,7 +49,7 @@ public class CallYarn : MonoBehaviour
         Callbybutton(gallerybutton, "Gallery");  // 갤러리 켰을 때
         Callbybutton(camerabutton, "Camera");  // 카메라 켰을 때
         Callbybutton(chocotalkbutton,"Chocotalk1st");  // 초코톡 켰을 때
-        Callbybutton(openchatDbutton,"OpenChat");  // 오픈채팅 켰을 때
+        Callbybutton(openchatDbutton,"OpenChat");  // 오픈채팅 D 채팅창 켰을 때
 
         Callbybutton(ChocoTalkController.instance.chatbuttons["건우 오빠"], "ChooseChatName1");  // 건우 채팅창 켰을 때
         Callbybutton(Haesolchatbutton, "ChooseChatName2");  // 해솔 채팅창 켰을 때
@@ -73,6 +73,8 @@ public class CallYarn : MonoBehaviour
         UnityAction Iceice = null;
         Iceice = () => {Iceicechatbutton.transform.GetChild(2).gameObject.SetActive(false);
                         Iceicechatbutton.onClick.RemoveListener(Iceice);};
+        if(FinishedDialogues.Contains("IceiceChat")) Iceice.Invoke();
+        else Iceicechatbutton.onClick.AddListener(Iceice);
 
         Callbybutton(dgrambutton,"DGram1st");  // Dgram 켰을 때
 
@@ -83,12 +85,16 @@ public class CallYarn : MonoBehaviour
         park = () => {MapController.instance.Parkbutton.onClick.AddListener(MapController.instance.GoPark);
                       MapController.instance.Parkbutton.onClick.RemoveListener(park);};
         MapController.instance.Parkbutton.onClick.AddListener(park);
+        if(FinishedDialogues.Contains("Park")) Iceice.Invoke();
 
         Callbybutton(MapController.instance.BarStreetbutton,"BarStreet");  // 술집거리 눌렀을 때
         UnityAction barstreet = null;
         barstreet = () => {MapController.instance.BarStreetbutton.onClick.AddListener(MapController.instance.GoBarStreet);
                       MapController.instance.BarStreetbutton.onClick.RemoveListener(barstreet);};
         MapController.instance.BarStreetbutton.onClick.AddListener(barstreet);
+        if(FinishedDialogues.Contains("BarStreet")) Iceice.Invoke();
+
+        // 이상 저장 구현됨
 
         MapController.instance.Officetelbutton.onClick.AddListener(()=>callYarn("Officetel"));  // 3장 진입전 오피스텔 눌렀을 때
 
