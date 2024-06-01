@@ -217,6 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 647445092}
   - component: {fileID: 647445091}
+  - component: {fileID: 647445093}
   m_Layer: 0
   m_Name: Clubtable_Drug
   m_TagString: Untagged
@@ -291,6 +292,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &647445093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647445090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueTitle: obj_lsdsticker
 --- !u!1 &918098989
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 918098991}
   - component: {fileID: 918098990}
+  - component: {fileID: 918098992}
   m_Layer: 0
   m_Name: ClubTable_Geonwoo
   m_TagString: Untagged
@@ -375,6 +390,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &918098992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918098989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueTitle: event_gunwoo_begin1
 --- !u!1 &1160706652
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueTitle: obj_lsdsticker
+  DialogueTitle: obj_menu
 --- !u!1 &2089414106
 GameObject:
   m_ObjectHideFlags: 0

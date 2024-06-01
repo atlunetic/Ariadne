@@ -159,6 +159,7 @@ title: obj_cctv1
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 CCTV가 있네.
@@ -173,6 +174,8 @@ CCTV라도 볼 수 있으면 좋을텐데.
 title: obj_clock1
 
 ---
+
+<<SetCanvasTo VisualNovelPrefab true>>
 
 //클릭할 경우
 <<Draw Clock1_0>>
@@ -197,13 +200,15 @@ title: obj_emptyglass
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
+
 //클릭할 경우
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 비어있는 술잔이다.
 혹시 모르니 챙겨둘까?
 ….
 
-//지수이미지 종료
+<<Hide 지수>>
 * 비어있는 술잔을 획득했다. *
 
 //인벤토리에 빈 술잔 아이템 추가
@@ -216,6 +221,7 @@ title: obj_minirefrigerator
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 미니 술장고다.
 ….
@@ -248,7 +254,7 @@ title: club_table_BG
 
 <<set $randchoice = random_range(1, 3)>>
 
-<<if $randchoice < 1.5 >>
+<<if $randchoice < 2 >>
     곳곳에 먼지가 많이 쌓여있다.
 <<else>>
     조명이 너무 강한걸. 눈이 아프다.
@@ -262,7 +268,7 @@ title: obj_customers
 
 ---
 
-//클릭할 경우
+<<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 두 사람이 대화하고 있다.
 
@@ -389,7 +395,7 @@ title: menu_othertext
 
 <<set $randchoice = random_range(1, 3)>>
 
-<<if $randchoice < 1.5 >>
+<<if $randchoice < 2 >>
     메뉴가 그렇게 많지는 않네.
 <<else>>
     지금은 술을 마실 때가 아닌 것 같다.
@@ -403,15 +409,20 @@ title: event_gunwoo_begin1
 
 ---
 
-//건우 클릭시
-<<Act 지수 Jisoo4 1.17 0.322 black>>
-어…. 
-건우 오빠다.
-<<wait 2.0>>
-<<Act 지수 Jisoo2 1.17 0.322 black>>
-…. 
-어제 지원이랑 클럽에서 마주쳤다고 했지.
-그러면…. 뭐라도 알고 있을 것 같은데.
+<<SetCanvasTo VisualNovelPrefab true>>
+<<if visited(event_gunwoo_begin1) == false>>
+	//건우 클릭시
+	<<Act 지수 Jisoo4 1.17 0.322 black>>
+	어…. 
+	건우 오빠다.
+	<<wait 2.0>>
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
+	…. 
+	어제 지원이랑 클럽에서 마주쳤다고 했지.
+	그러면…. 뭐라도 알고 있을 것 같은데.
+<<else>>
+	<<jump event_gunwoo_begin2>>
+<<endif>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 

@@ -22,8 +22,6 @@ public class StartDialogueButton: MonoBehaviour
     private void OnMouseDown()
     {
         //DialogueParent.SetActive(true);
-        GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
-        dialogueCanvas.SetActive(true);
         var runner = FindObjectOfType<DialogueRunner>();
         runner.StartDialogue(DialogueTitle);
 
