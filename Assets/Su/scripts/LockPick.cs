@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class LockPick : MonoBehaviour
 {
@@ -74,14 +75,14 @@ public class LockPick : MonoBehaviour
         {
             if (attemptCount >= maxAttempts)
             {
-                Debug.Log("You can't try it again");
-                isGameActive = false; // 게임 상태 비활성화/ 추후 엔딩대화로 연결
+                //Debug.Log("You can't try it again");
+                var runner = FindObjectOfType<DialogueRunner>();
+                //runner.StartDialogue(game_openthedoor_gameover);
             }
             else
             {
                 ++attemptCount;
-                Debug.Log("You lose!"); // 2번까지 실패했을때 대화로 진행
-                newLock();
+                //Debug.Log("You lose!"); // 2번까지 실패했을때 대화로 진행&대화후 게임 다시 실행해야함
             }
         }
 
