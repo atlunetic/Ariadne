@@ -10367,8 +10367,8 @@ MonoBehaviour:
   DiaryButton: {fileID: 1871308458}
   UIButtons: {fileID: 558936099}
   Phone: {fileID: 1803340215}
-  Inventory: {fileID: 1552534575}
-  Diary: {fileID: 952412733}
+  Inventory: {fileID: 540606606}
+  Diary: {fileID: 1266879036}
 --- !u!1 &1266879036 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 503128792475686430, guid: a95c8f77a7cd42a48a39917efb4b3004, type: 3}
