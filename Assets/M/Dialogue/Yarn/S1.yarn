@@ -547,6 +547,7 @@ title: MDMA
 비타민인가?
 * 일기장에 ‘MDMA’가 추가되었습니다. *
 
+<<RevealDiary DiaryManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 

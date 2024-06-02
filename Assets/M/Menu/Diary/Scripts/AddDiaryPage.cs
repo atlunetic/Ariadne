@@ -8,56 +8,75 @@ using Yarn.Unity;
 
 public class AddDiaryPage : MonoBehaviour
 {
-    public string menuSceneName = "Menu";
+    public GameObject Page1;
+    public GameObject Page2;
+    public GameObject Page3;
+    public GameObject Page4;
+    public GameObject Page5;
+    public GameObject Page6;
+    public GameObject Page7;
+    public GameObject Page8;
+    public GameObject Page9;
+    public GameObject Page10;
 
-    private string diaryRootPath = "MenuUI/Diary/Diary/EmptyDiary";
-    private GameObject[] pages;
-
-    private void Start()
+    [YarnCommand("RevealDiary")]
+    public void RevealPage1(string PageNum)
     {
-        StartCoroutine(FindDiaryPages());
-    }
-
-    private IEnumerator FindDiaryPages()
-    {
-
-        Scene menuScene = SceneManager.GetSceneByName(menuSceneName);
-        foreach (GameObject obj in menuScene.GetRootGameObjects())
+        if(PageNum == "Page1")
         {
-            Transform diaryTransform = obj.transform.Find(diaryRootPath);
-            if (diaryTransform != null)
-            {
-                pages = new GameObject[10];
-                for (int i = 0; i < pages.Length; i++)
-                {
-                    Transform pageTransform = diaryTransform.Find("Page" + (i + 1));
-                    if (pageTransform != null)
-                    {
-                        pages[i] = pageTransform.gameObject;
-                    }
-                }
-                break;
-            }
-        }
-        yield return null;
-    }
-
-    public void RevealPage(int pageNumber)
-    {
-        if (pages == null || pages.Length < pageNumber || pageNumber <= 0)
-        {
-            Debug.LogError($"Page {pageNumber} not found or not properly initialized.");
-            return;
+            Page1.SetActive(true);
         }
 
-        // Activate the specified page
-        if (pages[pageNumber - 1] != null)
+        else if(PageNum == "Page2")
         {
-            pages[pageNumber - 1].SetActive(true);
+            Page2.SetActive(true);
         }
+
+        else if (PageNum == "Page3")
+        {
+            Page3.SetActive(true);
+        }
+
+        else if (PageNum == "Page4")
+        {
+            Page4.SetActive(true);
+        }
+
+        else if (PageNum == "Page5")
+        {
+            Page5.SetActive(true);
+        }
+
+        else if (PageNum == "Page6")
+        {
+            Page6.SetActive(true);
+        }
+
+        else if (PageNum == "Page7")
+        {
+            Page7.SetActive(true);
+        }
+
+        else if (PageNum == "Page8")
+        {
+            Page8.SetActive(true);
+        }
+
+        else if (PageNum == "Page9")
+        {
+            Page9.SetActive(true);
+        }
+
+        else if (PageNum == "Page10")
+        {
+            Page10.SetActive(true);
+        }
+
         else
         {
-            Debug.LogError($"Page {pageNumber} GameObject is not assigned.");
+            Debug.Log("Wrong Page Number In Yarn");
         }
+
     }
+
 }
