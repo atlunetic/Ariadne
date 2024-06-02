@@ -15,6 +15,12 @@ public class DgramController : MonoBehaviour
     private GameObject PChatRoom; 
     [SerializeField]
     private RectTransform ChatRooms;
+
+    public GameObject AriadneChatroom; 
+    public GameObject work8282Chatroom; 
+    public GameObject IceiceChatroom; 
+    public GameObject drgg24Chatroom; 
+
     void Awake()
     {
         if (instance == null)
@@ -22,7 +28,10 @@ public class DgramController : MonoBehaviour
     }
     void Start(){
         ChatScroll = PhoneController.instance.Dgram.transform.GetChild(0).GetComponent<ScrollRect>();
-        CreateDChatRoom("Someone");
+        ChatMap.Add("아리아드네", AriadneChatroom);
+        ChatMap.Add("work8282", work8282Chatroom);
+        ChatMap.Add("Iceice", IceiceChatroom);
+        ChatMap.Add("drgg24", drgg24Chatroom);
     }
 
     public void CreateDChatRoom(string name){  // 채팅방 생성
@@ -44,5 +53,10 @@ public class DgramController : MonoBehaviour
     public void ActiveDChatRoom(string name)  // 채팅방 켜기
     {
         PhoneController.instance.ActiveTab(ChatMap[name]);
+    }
+
+    public ScrollRect getScrollrectof(string name)
+    {
+        return ChatMap[name].GetComponent<ScrollRect>();
     }
 }

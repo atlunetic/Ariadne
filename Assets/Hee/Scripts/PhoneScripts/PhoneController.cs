@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using Yarn.Unity;
 
 public class PhoneController : MonoBehaviour
 {
@@ -12,8 +13,6 @@ public class PhoneController : MonoBehaviour
     public GameObject Map;
     public GameObject Dgram;
     private Stack<GameObject> TabStack;
-    public int NumOfScreenShots = 1;  
-    // GameManager로 옮기기, 세이브 시 같이 저장하되 로드 시 원래 값과 비교하여 더 큰 수로 적용!
 
     void Awake(){
         if(instance == null){
@@ -21,11 +20,12 @@ public class PhoneController : MonoBehaviour
             TabStack = new Stack<GameObject>();
         }
     }
-
+    
     public void ActivePhone(){
         Phone.SetActive(true);
-        // UI 숨기기
+        Menu.instance.UI_on();
     }
+    
     public void ActiveTab(GameObject tab){
         if(tab.activeSelf) return;
         TabStack.Push(tab);
