@@ -28,6 +28,7 @@ public class LockPick : MonoBehaviour
     private int attemptCount = 0; // 시도 횟수 추적
     private const int maxAttempts = 2; // 최대 시도 횟수
 
+    public bool gameSuccess = false;
     private bool movePick = true;
     private bool isGameActive = true; // 게임 상태 확인
 
@@ -75,14 +76,17 @@ public class LockPick : MonoBehaviour
         {
             if (attemptCount >= maxAttempts)
             {
-                //Debug.Log("You can't try it again");
+                Debug.Log("You can't try it again"); //테스트 후 이부분 삭제하면 됨
+                isGameActive = false;
                 var runner = FindObjectOfType<DialogueRunner>();
                 //runner.StartDialogue(game_openthedoor_gameover);
             }
             else
             {
                 ++attemptCount;
-                //Debug.Log("You lose!"); // 2번까지 실패했을때 대화로 진행&대화후 게임 다시 실행해야함
+                Debug.Log(attemptCount);
+                Debug.Log("You lose!"); // 이부분 삭제 후 2번까지 실패했을때의 대화로 연결 & 대화 후 게임 다시 실행해야함
+                newLock(); //여기도 어차피 대화로 연결되니 삭제해도 될 것 같습니다.
             }
         }
 
@@ -97,9 +101,10 @@ public class LockPick : MonoBehaviour
         {
             if (eulerAngle < unlockRange.y && eulerAngle > unlockRange.x)
             {
-                Debug.Log("Unlocked!");
-                newLock();
-                resetGame();
+                Debug.Log("Unlocked!"); // 테스트 후 삭제해도 ㄱㅊ
+                gameSuccess = true;
+                newLock(); //새로운 lock 꺼낼 필요 없음
+                resetGame(); // 그냥 문을 따고 난 다음 대화로 이어지면 됨
             }
             else
             {

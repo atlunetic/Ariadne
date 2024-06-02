@@ -1900,10 +1900,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 812430519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80.5, y: -27.5}
+  m_SizeDelta: {x: 113, y: 30.999998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &391520307
 MonoBehaviour:
@@ -5052,7 +5052,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -394.31097, y: 164}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 161, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &812430520
 MonoBehaviour:
@@ -5164,10 +5164,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1944675729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 513.50494, y: -115.5}
+  m_SizeDelta: {x: 987.0099, y: 191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &832834900
 MonoBehaviour:
@@ -5883,10 +5883,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1047810481}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 56.005, y: -20.005001}
+  m_SizeDelta: {x: 96.01, y: 24.010002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &910306296
 MonoBehaviour:
@@ -6327,7 +6327,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 33, y: 20}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 112.01, y: 40.010002}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1047810482
 MonoBehaviour:
@@ -7020,7 +7020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1260337730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10624,7 +10624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1936019924836874, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4626815408203434, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: m_RootOrder

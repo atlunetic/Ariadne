@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb79aba6e5df35248ae82a576d8f3e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 5
+  maxTime: 10
 --- !u!1 &1757220896
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,7 +756,8 @@ MonoBehaviour:
   maxAngle: 90
   lockSpeed: 10
   lockRange: 10
-  timeLimit: 5
+  timeLimit: 10
+  gameSuccess: 0
 --- !u!4 &1757220898
 Transform:
   m_ObjectHideFlags: 0
