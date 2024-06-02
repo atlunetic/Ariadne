@@ -2,6 +2,7 @@
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 <<Scene ClubEntrance>>
 
 <<Act 지수 Jisoo4 1.17 0.322 black>>
@@ -9,9 +10,9 @@
 
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 왠지 모르게 익숙한 분위기다.
-<<wait 2.0>>
+<<wait 1.0>>
 ….
-<<wait 2.0>>
+<<wait 1.0>>
 그런데 클럽엔 관심도 없다던 애가 여긴 왜 왔었대?
 아무튼, 들어가보자.
 <<jump meet_gunwoo>>
@@ -23,13 +24,15 @@ title: meet_gunwoo
 
 ---
 
-//클럽 theme 재생
+//<<PlayAudio 클럽내부theme파일이름>>
+
+
 <<Act 건우 Geonwoo0 0.322 0.227 black>>
 
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 어...
 뭔가 익숙한 얼굴이 보인다.
-<<wait 2.0>>
+<<wait 1.0>>
 ….
 
 <<Act 건우 Geonwoo1 0.322 0.227 black>>
@@ -44,21 +47,21 @@ title: meet_gunwoo
 곤란한 표정을 짓고 있는 걸 보니….
 분명히 지원인지 나인지 구분 못하는 것 같은데.
 몇 년째 보는데 항상 저런다니까.
-<<wait 2.0>>
+<<wait 1.0>>
 
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 뭐라고 대답할까?
 -> 지원이라고 거짓말 해보자.
 	<<Act 지수 Jisoo1 1.17 0.322 black>>
-	지수: (웃으며) 저 지원이예요.
+	지수: 저 지원이예요.
 
 	<<Act 건우 Geonwoo4 0.322 0.227 black>>
-	건우: (겁에 질린 듯) ….
+	건우: ….
 	건우: 너 어떻게 나왔어?
 	건우: 그것보다 지원이 너 지금 여기 있으면 안돼.
 	건우: 빨리 다른 곳으로….
-	//화면이 흔들리고, 화면이 흐려지는 연출
+	<<Fade black 0.0 1.0 2.0>>
 	어….
 	갑작스레 느껴지는 통증에 머리가 울렸다.
 	<<wait 2.0>>
@@ -70,6 +73,7 @@ title: meet_gunwoo
 	….
 	<<wait 2.0>>
 	//엔딩 3. ??? : 무슨 일이 일어난 걸까. 
+	<<ChangeSceneTo VisualNovelPrefab S0>>
 
 -> 나라고 밝히자.
 	<<Act 지수 Jisoo1 1.17 0.322 black>>
@@ -156,6 +160,7 @@ title: obj_cctv1
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 CCTV가 있네.
@@ -170,6 +175,8 @@ CCTV라도 볼 수 있으면 좋을텐데.
 title: obj_clock1
 
 ---
+
+<<SetCanvasTo VisualNovelPrefab true>>
 
 //클릭할 경우
 <<Draw Clock1_0>>
@@ -194,13 +201,15 @@ title: obj_emptyglass
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
+
 //클릭할 경우
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 비어있는 술잔이다.
 혹시 모르니 챙겨둘까?
 ….
 
-//지수이미지 종료
+<<Hide 지수>>
 * 비어있는 술잔을 획득했다. *
 
 //인벤토리에 빈 술잔 아이템 추가
@@ -213,6 +222,7 @@ title: obj_minirefrigerator
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 미니 술장고다.
 ….
@@ -245,7 +255,7 @@ title: club_table_BG
 
 <<set $randchoice = random_range(1, 3)>>
 
-<<if $randchoice < 1.5 >>
+<<if $randchoice < 2 >>
     곳곳에 먼지가 많이 쌓여있다.
 <<else>>
     조명이 너무 강한걸. 눈이 아프다.
@@ -259,7 +269,7 @@ title: obj_customers
 
 ---
 
-//클릭할 경우
+<<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 두 사람이 대화하고 있다.
 
@@ -347,6 +357,7 @@ title: obj_menu
 //메뉴판 팝업 이미지 띄우기: 각 텍스트마다 클릭하여 상호작용 가능
 //지수 이미지는 노출 X
 
+<<SetCanvasTo VisualNovelPrefab true>>
 메뉴판이다.
 
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -357,9 +368,12 @@ title: menu_kratom
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 //메뉴판 이미지의 ‘크라톰’ 클릭 시
 크라톰? 어디서 본 것 같은데…. 
 설마 저기에 진짜 크라톰이 들어가 있나…?
+
+
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -368,6 +382,8 @@ title: menu_kratom
 title: menu_philopon
 
 ---
+
+<<SetCanvasTo VisualNovelPrefab true>>
 
 //메뉴판 이미지의 ‘필로폰’ 텍스트 클릭 시
 ….
@@ -386,7 +402,7 @@ title: menu_othertext
 
 <<set $randchoice = random_range(1, 3)>>
 
-<<if $randchoice < 1.5 >>
+<<if $randchoice < 2 >>
     메뉴가 그렇게 많지는 않네.
 <<else>>
     지금은 술을 마실 때가 아닌 것 같다.
@@ -400,15 +416,20 @@ title: event_gunwoo_begin1
 
 ---
 
-//건우 클릭시
-<<Act 지수 Jisoo4 1.17 0.322 black>>
-어…. 
-건우 오빠다.
-<<wait 2.0>>
-<<Act 지수 Jisoo2 1.17 0.322 black>>
-…. 
-어제 지원이랑 클럽에서 마주쳤다고 했지.
-그러면…. 뭐라도 알고 있을 것 같은데.
+<<SetCanvasTo VisualNovelPrefab true>>
+<<if visited("event_gunwoo_begin1") == false>>
+	//건우 클릭시
+	<<Act 지수 Jisoo4 1.17 0.322 black>>
+	어…. 
+	건우 오빠다.
+	<<wait 2.0>>
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
+	…. 
+	어제 지원이랑 클럽에서 마주쳤다고 했지.
+	그러면…. 뭐라도 알고 있을 것 같은데.
+<<else>>
+	<<jump event_gunwoo_begin2>>
+<<endif>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -441,9 +462,9 @@ title: event_gunwoo_tutorial
 ---
 
 //텍스트 볼드체
-* 건우와 대화해보자! *
-* 건우와의 대화를 통해 도움을 요청해봅시다. *
-* 어쩌면 건우가 도움을 줄 수도…. *
+<b>* 건우와 대화해보자! *</b>
+<b>* 건우와의 대화를 통해 도움을 요청해봅시다. *</b>
+<b>* 어쩌면 건우가 도움을 줄 수도…. *</b>
 <<jump event_gunwoo_q1>>
 
 
@@ -593,7 +614,7 @@ title: event_gunwoo_q3
 
 -> 저한테 뭐 숨기는 거 있어요?
 	//설득점수 -1
-	//지수3
+	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 뭔가 평소같지 않은데….
 	지수: 오빠 저한테 뭐 숨기는 거 있어요?
 	지수: 아는 거 있죠.
@@ -1024,6 +1045,7 @@ title: memory_studentid
 
 //증거 촬영 시 돌아오는 기억: 바뀌고 어두워지는 배경, 팝업이미지X, 건우와의 대화 형식, 건우만 왼쪽
 
+<<SetCanvasTo VisualNovelPrefab true>>
 ???: 오빠, 왜 동생 학생증을 들고 다녀요?
 
 <<Act 건우 Geonwoo0 0.322 0.227 black>>
@@ -1032,7 +1054,7 @@ title: memory_studentid
 건우: 사람들이 미성년자는 의심을 잘 안 해.
 건우: 애들이 이런 거 옮긴다고 상상이나 하겠어?
 
-
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: club_toilet
@@ -1042,10 +1064,11 @@ title: club_toilet
 //클럽 화장실로 배경 이미지 변경
 //배경 클릭 시: #바닥이 찐득찐득해…. 뭘 많이 쏟았나. #이상한 냄새가 뒤섞인 것 같아.=> 랜덤 노출
 
+<<SetCanvasTo VisualNovelPrefab true>>
 화장실이다.
 여기서 얻을 만한 증거가 있을까?
 
-
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: obj_customer_f
@@ -1054,12 +1077,13 @@ title: obj_customer_f
 
 //클릭할 경우
 
+<<SetCanvasTo VisualNovelPrefab true>>
 누군가 바닥에 주저앉아 있다.
 상태가 안좋아 보이는데.
 말을 걸어볼까? 
 
 -> 말을 걸어보자
-	//클럽고객F 왼쪽, 지수 오른쪽 배치
+	<<Act CustomerF Toilet_costomerF1_0 0.322 0.227 black>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	클럽 고객F: ….
 	<<wait 2.0>>
@@ -1103,8 +1127,9 @@ title: obj_drugjelly
 조심스레 겉옷을 주워 클럽 고객F에게 덮어줬다.
 그 순간 바닥으로 무언가 떨어졌다.
 
-//젤리 팝업 이미지
-//팝업이미지 종료
+<<Draw Toilet_drugjelly 0.75 0.75>>
+<<wait 1.0>>
+<<Hide Toilet_drugjelly>>
 
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 젤리인가?
@@ -1176,6 +1201,8 @@ title: obj_staffonly
 
 ---
 
+
+<<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 ….
 들어가면 안될 것 같은데.
@@ -1190,7 +1217,7 @@ title: obj_staffonly
 -> 살펴보자
 	혹시 모르니 살펴보자.
 
-	//Staff Only 칸 내부 배경 이미지로 배경변경, 지수이미지 노출X
+	<<Scene InStaffroom_bg>>
 
 	청소용품만 있을 줄 알았는데.
 	직원용 사물함이 있다.
@@ -1221,8 +1248,9 @@ title: obj_staffonly_lockeropen
 <<wait 2.0>>
 
 스태프 복장이 있다.
-//스태프 복장 이미지 팝업
-//팝업이미지 종료
+<<Draw Toilet_staffclothe 0.75 0.75>>
+<<wait 1.0>>
+<<Draw Toilet_staffclothe 0.75 0.75>>
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 혹시 모르니 챙겨갈까?
 
@@ -1238,7 +1266,7 @@ title: obj_toiletpaper
 
 //클릭할 경우
 
-//휴지 팝업 이미지
+<<Toilet_rollpapaer_big(1) 0.75 0.75>>
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 휴지에 구멍이 뚫려있다.
 피 같은 게 묻어있는데…?
@@ -1253,7 +1281,7 @@ title: obj_toiletpaper
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 혹시 모르니까…. 건들지 말자.
-//팝업이미지 종료
+<<Hide Toilet_rollpaper_big(1)>>
 
 
 ===
@@ -1377,11 +1405,17 @@ title: club_staffroomdoor_nostaff
 
 ---
 
-//문을 선택할 경우 문 손잡이(열쇠부분)가 확대
+<<SetCanvasTo VisualNovelPrefab true>>
+<<Draw keyhole_outer(bg) 0.75 0.75>>
 ….
 몰래 들어가볼까.
 ….
 문을 딸 수 있을만한 도구가 있나?
+
+<<Hide keyhole_outer(bg)>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
 
 
 ===
@@ -1408,7 +1442,8 @@ title: game_openthedoor_intro
 
 * 미니게임: 헤어핀으로 문을 따자! *
 * 헤어핀을 이용해 Staff Room의 문을 열어봅시다. *
-//미니게임 시작
+
+//미니게임 씬으로 이동
 
 
 ===
@@ -1421,6 +1456,8 @@ title: game_openthedoor_gameover
 
 //화면이 흔들리고, 흐려짐
 //지수이미지 노출X
+
+<<Fade black 0.0 1.0 2.0>>
 
 ???: 거기 누구야!
 어….
@@ -1465,12 +1502,13 @@ title: obj_cocatree
 ---
 
 //클릭할 경우
+<<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 나무를 심어뒀네.
 * 마약사전에 ‘코카나무’가 추가되었습니다. *
 
-
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: club_staffroom_inside
@@ -1490,6 +1528,10 @@ title: obj_cctv2
 //4분할 cctv 이미지
 //지수이미지노출X
 
+<<SetCanvasTo VisualNovelPrefab true>>
+
+<<Draw CCTV_first 0.75 0.75>>
+
 CCTV 화면이다.
 ….
 ….
@@ -1500,20 +1542,22 @@ CCTV 화면이다.
 
 //선택지 랜덤 노출
 -> 클럽 카운터&바
-	//클럽 카운터&바 이미지로 팝업 변함
+	<<Draw CCTV_counterbar 0.75 0.75>>
 	중요한 영상은 없는 것 같다….
+	<<Hide CCTV_counterbar>>
 
 -> VIP Room
-	//VIP Room 이미지로 팝업 변함
+	<<Draw CCTV_VIP 0.75 0.75>>
 	중요한 영상은 없는 것 같다….
+	<<Hide CCTV_VIP>>
 
 -> 클럽 입구
-	//클럽 입구 이미지로 팝업 변함
+	<<Draw CCTV_entrance 0.75 0.75>>
 	중요한 영상은 없는 것 같다….
+	<<Hide CCTV_entrance>>
 
 -> 주차장
-	//풀화면으로 주차장 cctv 이미지 노출
-	//지수 이미지 노출X
+	<<Draw CCTV_parking_jisoo 0.75 0.75>>
 	
 	…어.
 	실루엣이 지원이 같은데.
@@ -1529,7 +1573,7 @@ CCTV 화면이다.
 	아리아드네는 뭘 알고 있지 않을까?
 	도움을 요청해봐야겠다.
 
-	//팝업 이미지 종료
+	<<Hide CCTV_parking_jisoo>>
 
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
@@ -1541,7 +1585,9 @@ CCTV 화면이다.
 	….
 	….
 	//핸드폰 알람음+빨간색 동그라미 (초코톡 알림)
-	//지수 이미지 종료.
+	<<Hide 지수>>
+
+	<<SetCanvasTo VisualNovelPrefab false>>
 	
 	
 ===
@@ -1552,6 +1598,8 @@ title: chocotalk_cctv
 
 //아리아드네 채팅 누르고 사진을 확인하고 나온 뒤
 //핸폰 화면 왼쪽(원래배치)에 지수가 오른쪽에 뜸.
+
+<<SetCanvasTo VisualNovelPrefab true>>
 
 <<Act 지수 Jisoo3 1.17 0.322 black>>
 ….
@@ -1566,6 +1614,9 @@ title: chocotalk_cctv
 
 //핸드폰, 지수이미지 종료
 
+<<Hide 지수>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 
@@ -1573,13 +1624,15 @@ title: obj_radio
 
 ---
 
-//클릭할 경우
-//확대된 무전기 팝업 이미지
+<<SetCanvasTo VisualNovelPrefab true>>
+
+<<Draw Radio 0.75 0.75>>
 직원들끼리 쓰는 무전기인가보다.
 
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
--치직.
-<<wait 2.0>>
+
+<i>-치직.</i>
+<<wait 1.0>>
 
 ….
 무슨 소리가 들리는 것 같은데.
@@ -1588,14 +1641,14 @@ title: obj_radio
 <<wait 2.0>>
 
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
-공지할게… … …다.
-요즘 ………를 빼가려고 하는 …들이 많아졌다.
-어제도 ……가 ……해서 가둬두는 일이 생겼고….
-……보안을 강화할 필……가 있으니….
-이 ……를 듣고 꼭 …………
-기억해야 ………….
-//무전기 팝업 이미지 종료
-<<wait 2.0>>
+<i>공지할게… … …다.
+<i>요즘 ………를 빼가려고 하는 …들이 많아졌다.
+<i>어제도 ……가 ……해서 가둬두는 일이 생겼고….
+<i>……보안을 강화할 필……가 있으니….
+<i>이 ……를 듣고 꼭 …………
+<i>기억해야 ………….</i>
+<<Hide Radio>>
+<<wait 1.0>>
 
 <<Act 지수 Jisoo3 1.17 0.322 black>>
 ….
@@ -1634,7 +1687,7 @@ title: obj_radio
 <<wait 2.0>>
 
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
-그럼 …… …하도록 하자. 이만.
+<i>그럼 …… …하도록 하자. 이만.</i>
 <<wait 2.0>>
 
 ….
@@ -1645,6 +1698,9 @@ title: obj_radio
 //핸드폰 알람음+빨간색 동그라미 (초코톡 알림)
 //지수이미지 노출X
 
+<<wait 1.0>>
+<<jump event_staffroom>>
+
 
 ===
 
@@ -1652,6 +1708,8 @@ title: event_staffroom
 
 ---
 
+
+<<SetCanvasTo VisualNovelPrefab true>>
 //무전기(obj_radio)이후 아무데나 한 번 마우스로 클릭하고 나면
 //문 밖에서 발소리가 가까워지는 사운드
 
@@ -1670,6 +1728,8 @@ title: event_staffroom_gunwoo1
 
 ---
 
+
+<<SetCanvasTo VisualNovelPrefab true>>
 누구지…?
 //문 열리는 사운드
 문이 열리고, 클럽 직원C가 들어왔다.
@@ -1697,12 +1757,15 @@ title: event_staffroom_gunwoo1
 너무 오래 있으면 안될 것 같아.
 얼른 둘러보고 나가자….
 
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
 title: event_staffroom_gunwoo2
 
 ---
+
+<<SetCanvasTo VisualNovelPrefab true>>
 
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 어떡하지….
@@ -1808,6 +1871,7 @@ title: event_staffroom_gunwoo2_choose
 	//배경 이미지 스태프룸으로 변경
 	문을 열어보니 아무도 없다.
 	다행이야….
+	<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -1816,23 +1880,27 @@ title: obj_key
 
 ---
 
+
+<<SetCanvasTo VisualNovelPrefab true>>
 //서랍 클릭 시
 여기도 열어볼까…?
 ….
 어…. 열쇠다.
 ….
 어디 쓰는 열쇠지?
-//열쇠 이미지 확대 팝업
+<<Draw Key 0.75 0.75>>
 
 ….
 어디든 쓸모가 있지 않을까?
 일단 가져가자.
 //팝업이미지 종료, 지수노출X
+<<Hide Key>>
 
 * 열쇠를 습득했습니다. *
 
 //인벤토리에 열쇠 아이템이 추가됨. 
 
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -1840,13 +1908,13 @@ title: obj_viplist
 
 ---
 
-//파일 클릭 시)
+<<SetCanvasTo VisualNovelPrefab true>>
+
 ‘VIP 고객 명단’이라고 적힌 파일이다.
 살펴볼까?
 
 -> 살펴보자
-	//고객 명단이 적힌 파일 내부 팝업 이미지
-	//지수이미지X
+	<<Draw VIPlist 0.75 0.75>>
 	
 	VIP가 이렇게 많단 말이야…?
 	직업은 어떻게 알았대.
@@ -1870,13 +1938,17 @@ title: obj_viplist
 	지원이한테 너무 관심이 없었나.
 	….
 
+	<<Hide VIPlist>>
+
+	<<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 
 title: memory_viplist
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //증거 촬영 시 돌아오는 기억: 건우가 ??에게 VIP 명단을 보여주는 기억
 
 건우: 야, 이거 봐라.
@@ -1885,27 +1957,27 @@ title: memory_viplist
 ???: 우와….
 ???: 이런 것도 있어요?
 
-
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: obj_locker
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 어, 그냥 열리네?
 안이 비어있다
 ….
 나도 들어갈 수 있겠는데?
-
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
 title: club_viproom_entry
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //나머지 장소(카운터&바/테이블/화장실/Staff room 전체) 다 둘러보고 나서, 이동 버튼을 누르면
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 어….
@@ -1917,14 +1989,14 @@ VIP 룸? 한 번 가볼까?
 
 이대로 들어가면 의심받을 것 같아.
 직원 복장을 입을까?
-
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
 title: club_viproom_changeuniform
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //club_viproom_entry 이후 플레이어가 인벤토리에서 직원복장 사용시
 직원 복장을 입고 있으니까….
 의심 받을 일은 없겠지?
@@ -1939,7 +2011,7 @@ title: club_viproom_changeuniform
 title: club_viproom
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //배경이미지 viproom으로 전환
 //배경 클릭 시: #여긴 좀 조용하네. #바닥이 깨끗해…. 먼지도 별로 없어. 랜덤 노출
 
@@ -1953,7 +2025,7 @@ VIP룸이다.
 title: obj_customerg
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 
 //직원지수3
@@ -2166,7 +2238,7 @@ title: obj_customerg_choose
 title: chocotalk_ariadne_customerg
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //초코톡에서 아리아드네의 톡 확인 후
 ….
 
@@ -2205,7 +2277,7 @@ title: obj_customerg_end
 ---
 
 	//클럽 고객G의 가족사진 위로 메시지 팝업 뜸
-	
+	<<SetCanvasTo VisualNovelPrefab true>>
 	어…?
 	저게 무슨 얘기지.
 	….
@@ -2227,6 +2299,7 @@ title: obj_customerg_end
 	….
 	아무래도 수상해.
 	마약 거래를 하려는 걸까?
+	<<SetCanvasTo VisualNovelPrefab false>>
 	
 
 ===
@@ -2234,7 +2307,7 @@ title: obj_customerg_end
 title: obj_customerh
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 어…. 눈이 마주쳤다. 
 ….
@@ -2276,6 +2349,7 @@ title: obj_customerh
 ….
 ….
 이상한 사람이다.
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -2283,7 +2357,7 @@ title: obj_customerh
 title: event_customergh_end
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //클럽 고객G,H와 상호작용 종료 후
 //직원지수3
 ….
@@ -2308,13 +2382,14 @@ title: club_re_bar
 //직원 복장이 자동으로 착용해제. 이후 직원 복장 사용 시 #지금 입으면 의심받을 것 같아. 대사출력
 //배경 클릭 시: #담배 냄새가 많이 난다. #노래 소리가 시끄럽다…. 귀가 아파. 랜덤 출력
 
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
 title: obj_clock2
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 가만보니 저 시계, 아까부터 계속 멈춰 있네.
@@ -2328,13 +2403,13 @@ title: obj_clock2
 
 //미니게임 시작(시계 11시로 맞추기)
 
-
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: game_clock_success
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //시계를 11시로 맞출 경우
 ….
 아까 클럽 고객G에게 연락온 건 분명 ‘drgg24’….
@@ -2372,16 +2447,16 @@ title: game_clock_success
 title: club_11_viproom
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //배경 11시 이후 viproom 이미지
 //배경 클릭 시: #주변 공기가 달라진 것 같아. #눈 앞이 일렁인다. 랜덤 노출
-
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: obj_viproomdoor
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 //효과지수3
 ….
@@ -2458,6 +2533,8 @@ title: club_stair
 지수: ….
 <<wait 2.0>>
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 
@@ -2526,25 +2603,28 @@ CCTV에 찍힌 그 인형이야.
 인벤토리를 살펴보자.
 //건우, 지수 이미지 종료
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 
 title: inventory_notjelly
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //인벤토리에서 젤리 봉지가 아니라 다른 아이템 사용시
 <<Act 건우 Geonwoo1 0.322 0.227 black>>
 건우: ….
 건우: 다른 거 없냐?
 
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
 title: inventory_drugjelly
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //인벤토리에서 젤리 봉지 사용시
 <<Act 건우 Geonwoo2 0.322 0.227 black>>
 건우: ….
@@ -2590,17 +2670,17 @@ title: inventory_drugjelly
 title: club_parkinggarage
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //배경이미지 주차장으로 변경
 //배경 클릭 시: #평범한 주차장이다. #관리인은 자리를 비운 모양이다. 랜덤 출력
-
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
 title: obj_car_outside
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //가운데 차 클릭할 경우
 //지수 이미지 노출X
 
@@ -2672,13 +2752,13 @@ title: obj_car_inside
 중요한 단서가 있을지도 몰라….
 꼼꼼하게 살펴보자.
 
-
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: obj_navigation
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 네비게이션이다.
 ….
@@ -2690,6 +2770,7 @@ title: obj_navigation
 -> 클럽 A
 	….
 	이 클럽의 주소인 것 같다.
+	<<SetCanvasTo VisualNovelPrefab false>>
 
 -> XX 오피스텔
 	….
@@ -2697,23 +2778,24 @@ title: obj_navigation
 	….
 	수상한데?
 	주소를 기억해둬야 할 것 같아.
+	<<SetCanvasTo VisualNovelPrefab false>>
 
 -> 마약 떡볶이&마약 김밥
 	….
 	여기를 갔었나보네.
-
+	<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
 title: obj_brokenglasses
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 안경…?
 깨져있네….
 
-
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: memory_brokenglasses
@@ -2721,7 +2803,7 @@ title: memory_brokenglasses
 ---
 
 //증거 촬영 시 돌아오는 기억: 건우가 지수에게 지원의 유품인 ‘깨진 안경’을 건넸을 때의 기억이 돌아옴.
-
+<<SetCanvasTo VisualNovelPrefab true>>
 건우: 현장에 이게 있었어.
 건우: 몰래 챙겨왔는데….
 ???(지수): ….
@@ -2730,7 +2812,7 @@ title: memory_brokenglasses
 건우: 미안하다.
 ???(지수): ….
 
-
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: event_movetostairs
@@ -2739,6 +2821,7 @@ title: event_movetostairs
 
 //‘네비게이션:오피스텔 주소’ + ‘깨진 안경: 최종 추리 증거’를 습득한 이후
 
+<<SetCanvasTo VisualNovelPrefab true>>
 일단….
 XX 오피스텔로 가보자.
 
@@ -2765,6 +2848,8 @@ title: club_stair_chocotalk
 //초코톡 건우 알림
 //초코톡 건우와의 대화 진행
 
+<<SetCanvasTo VisualNovelPrefab true>>
+
 ….
 젤리는 어떻게 했으려나?
 궁금하네. 물어보자.
@@ -2776,5 +2861,5 @@ title: club_stair_chocotalk
 ….
 일단 XX 오피스텔로 가보자.
 
-
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
