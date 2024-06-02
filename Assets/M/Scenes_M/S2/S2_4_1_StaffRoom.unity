@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 112009777}
   - component: {fileID: 112009776}
   - component: {fileID: 112009775}
+  - component: {fileID: 112009778}
   m_Layer: 0
   m_Name: InStaffroom_Radio
   m_TagString: Untagged
@@ -253,6 +254,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &112009778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112009774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueTitle: obj_radio
 --- !u!1 &351266804
 GameObject:
   m_ObjectHideFlags: 0
