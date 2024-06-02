@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02889b7d9f768cb47b0cfea5bc7b584d
+guid: a72dfaf22b855c34c931e366d5b7e9a2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,43 +97,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hair-pin_0
+      name: HairPin (2)_0
       rect:
         serializedVersion: 2
-        x: 147
-        y: 0
-        width: 59
-        height: 410
+        x: 986
+        y: 639
+        width: 318
+        height: 417
       alignment: 9
-      pivot: {x: 0.7599304, y: 0.03333268}
+      pivot: {x: 0.023537306, y: 0.024855653}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07a2da16d5a3446438256520f96b6fea
-      internalID: 332934941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hair-pin_1
-      rect:
-        serializedVersion: 2
-        x: 271
-        y: 0
-        width: 94
-        height: 512
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1003acae9bd23fd4286a9ad8d16b3571
-      internalID: 62946035
+      spriteID: 1632fc08cc8ced349832a59462a66ece
+      internalID: -743299342
       vertices: []
       indices: 
       edges: []
@@ -149,8 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hair-pin_0: 332934941
-      hair-pin_1: 62946035
+      HairPin (2)_0: -743299342
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

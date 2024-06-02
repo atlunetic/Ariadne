@@ -14,13 +14,21 @@ public class LockPick : MonoBehaviour
     [Range(1, 25)]
     public float lockRange = 10;
 
+    [SerializeField]
+    private float timeLimit = 10f; // 게임의 시간 제한을 설정할 수 있는 필드
+
     private float eulerAngle;
     private float unlockAngle;
     private Vector2 unlockRange;
 
     private float keyPressTime = 0;
+    private float timer = 0; // 타이머 추가
+
+    private int attemptCount = 0; // 시도 횟수 추적
+    private const int maxAttempts = 2; // 최대 시도 횟수
 
     private bool movePick = true;
+    private bool isGameActive = true; // 게임 상태 확인
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +39,8 @@ public class LockPick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isGameActive) return;
+
         transform.localPosition = pickPosition.position;
 
         if (movePick)
@@ -59,6 +69,22 @@ public class LockPick : MonoBehaviour
             keyPressTime = 0;
         }
 
+        timer += Time.deltaTime; // 타이머 업데이트
+        if (timer > timeLimit)
+        {
+            if (attemptCount >= maxAttempts)
+            {
+                Debug.Log("You can't try it again");
+                isGameActive = false; // 게임 상태 비활성화/ 추후 엔딩대화로 연결
+            }
+            else
+            {
+                ++attemptCount;
+                Debug.Log("You lose!"); // 2번까지 실패했을때 대화로 진행
+                newLock();
+            }
+        }
+
         float percentage = Mathf.Round(100 - Mathf.Abs(((eulerAngle - unlockAngle) / 100) * 100));
         float lockRotation = ((percentage / 100) * maxAngle) * keyPressTime;
         float maxRotation = (percentage / 100) * maxAngle;
@@ -72,9 +98,7 @@ public class LockPick : MonoBehaviour
             {
                 Debug.Log("Unlocked!");
                 newLock();
-
-                movePick = true;
-                keyPressTime = 0;
+                resetGame();
             }
             else
             {
@@ -88,6 +112,15 @@ public class LockPick : MonoBehaviour
     {
         unlockAngle = Random.Range(-maxAngle + lockRange, maxAngle - lockRange);
         unlockRange = new Vector2(unlockAngle - lockRange, unlockAngle + lockRange);
+        resetGame(); // 게임을 재시작 할 때마다 타이머를 리셋합니다.
+    }
+
+    void resetGame()
+    {
+        timer = 0; // 타이머 리셋
+        isGameActive = true; // 게임 상태를 활성화합니다.
     }
 }
+
+
 
