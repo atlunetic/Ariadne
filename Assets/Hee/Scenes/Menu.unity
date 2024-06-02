@@ -7810,7 +7810,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 952412734}
-  - component: {fileID: 952412735}
   m_Layer: 5
   m_Name: Diary
   m_TagString: Untagged
@@ -7838,28 +7837,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &952412735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952412733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 453bfb43b4c233a4aa0230c8dd13d207, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Page1: {fileID: 597396302}
-  Page2: {fileID: 1712973357}
-  Page3: {fileID: 221363076}
-  Page4: {fileID: 2037880326}
-  Page5: {fileID: 166490788}
-  Page6: {fileID: 1414010467}
-  Page7: {fileID: 1872155118}
-  Page8: {fileID: 2011909207}
-  Page9: {fileID: 912774397}
-  Page10: {fileID: 1467377946}
 --- !u!1 &962148424
 GameObject:
   m_ObjectHideFlags: 0
@@ -10362,6 +10339,7 @@ RectTransform:
   - {fileID: 1803340216}
   - {fileID: 1202174236}
   - {fileID: 1552534576}
+  - {fileID: 1267050375}
   - {fileID: 952412734}
   - {fileID: 558936100}
   m_Father: {fileID: 0}
@@ -10396,6 +10374,64 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 503128792475686430, guid: a95c8f77a7cd42a48a39917efb4b3004, type: 3}
   m_PrefabInstance: {fileID: 1832977862}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1267050374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1267050375}
+  - component: {fileID: 1267050376}
+  m_Layer: 5
+  m_Name: DiaryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1267050375
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267050374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1260337733}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1267050376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267050374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453bfb43b4c233a4aa0230c8dd13d207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Page1: {fileID: 597396302}
+  Page2: {fileID: 1712973357}
+  Page3: {fileID: 221363076}
+  Page4: {fileID: 2037880326}
+  Page5: {fileID: 166490788}
+  Page6: {fileID: 1414010467}
+  Page7: {fileID: 1872155118}
+  Page8: {fileID: 2011909207}
+  Page9: {fileID: 912774397}
+  Page10: {fileID: 1467377946}
 --- !u!1 &1285689037
 GameObject:
   m_ObjectHideFlags: 0
@@ -15132,7 +15168,7 @@ PrefabInstance:
       objectReference: {fileID: 7545569452688597077, guid: b26f8dfb85448cf4b8b358cc4be0a481, type: 3}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: startAutomatically
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: yarnScripts.Array.size
