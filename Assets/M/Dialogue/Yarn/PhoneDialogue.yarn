@@ -97,9 +97,11 @@ title: ChooseChatName1
 나라고 밝혀야 하나?
 ...
     -> 지원이인척 말을 걸자.
+        <<set $ActAs to "Jiwon">>
         <<StartPhoneChat PhoneController 0>>
         <<SetCanvasTo VisualNovelPrefab false>>
     -> 나라고 밝히자.
+        <<set $ActAs to "Myself">>
         <<StartPhoneChat PhoneController 12>>
         <<SetCanvasTo VisualNovelPrefab false>>
 
