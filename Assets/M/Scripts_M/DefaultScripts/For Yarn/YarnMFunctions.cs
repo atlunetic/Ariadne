@@ -20,12 +20,12 @@ public class YarnMFunctions : MonoBehaviour
         }
     }
 
-    [YarnCommand("SetActive")]
+    [YarnCommand("SetActiveFalse")]
     public void SetActiveObject(string ObjectName)
     {
-        GameObject ObjectToOpen = GameObject.Find(ObjectName);
-        ObjectToOpen.SetActive(true);
-        Debug.Log(ObjectToOpen + "SetActive by Yarn");
+        GameObject Object = GameObject.Find(ObjectName);
+        Object.SetActive(false);
+        Debug.Log(Object + "Set Active False by Yarn");
     }
 
 
@@ -53,4 +53,5 @@ public class YarnMFunctions : MonoBehaviour
             Debug.LogWarning("Item not found: " + ItemName);
         }
     }
+
 }
