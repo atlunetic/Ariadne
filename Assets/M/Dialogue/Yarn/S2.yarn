@@ -277,70 +277,88 @@ title: obj_customers
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 Jisoo1 1.17 0.322 black>>
-두 사람이 대화하고 있다.
+<<if visited("obj_customers") == true>>
+	<<jump checkClothes>>
+<<else>>
+	<<Act 지수 Jisoo1 1.17 0.322 black>>
+	두 사람이 대화하고 있다.
 
-<<Act 클럽고객D 0.75 0.75 black>>
-<<Act 클럽고객E 0.75 0.75 black>>
+	<<Act 클럽고객D 0.75 0.75 black>>
+	<<Act 클럽고객E 0.75 0.75 black>>
 
 
-클럽고객D: 이렇게 만난 것도 인연인데 한 잔 사드리고 싶어서요.
-클럽고객D가 E에게 술잔을 내민다.
+	클럽고객D: 이렇게 만난 것도 인연인데 한 잔 사드리고 싶어서요.
+	클럽고객D가 E에게 술잔을 내민다.
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
-….
-
-클럽 고객E: 감사해요.
-클럽 고객E가 술잔을 받았다.
-
-<<Draw Clubtable_Glass 0.75 0.75>>
-
-….
-<<Act 지수 Jisoo3 1.17 0.322 black>>
-뭔가 수상한데?
-술잔 바닥에 가루가 가라앉아 있어.
-<<wait 2.0>>
-….
-약을 탔나?
-<<wait 2.0>>
-….
-….
-어떡하지. 도와줄까?
-<<wait 2.0>>
-
--> 모르는 척 하자.
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
-	그래. 괜히 나섰다가 욕 먹는 것보단 낫지.
-	<<SetCanvasTo VisualNovelPrefab false>>
--> 가서 도와주자
-	<<Act 지수 Jisoo2 1.17 0.322 black>>
+
+	클럽 고객E: 감사해요.
+	클럽 고객E가 술잔을 받았다.
+
+	<<Draw Clubtable_Glass 0.75 0.75>>
+
 	….
-	진짜로 약을 탄거면….
-	
 	<<Act 지수 Jisoo3 1.17 0.322 black>>
-	무슨 일을 당할지 몰라.
+	뭔가 수상한데?
+	술잔 바닥에 가루가 가라앉아 있어.
 	<<wait 2.0>>
-	....
-	<<wait 2.0>>
-	
-	클럽 고객D: 저는 잠깐 화장실 좀 다녀올게요.
-	마침 클럽 고객D가 자리를 뜬다.
-	
-	<<Hide 클럽고객D>>
-	<<SetActiveFalse VisualNovelPrefab ClubTable_NPCD>>
-
-	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
-	이 틈에 E를 도울 수 있는 방법이 없을까?
-	우선 말을 걸어보자.
-	-> E에게 말을 걸어보자
+	약을 탔나?
+	<<wait 2.0>>
+	….
+	….
+	어떡하지. 도와줄까?
+	<<wait 2.0>>
+
+	-> 모르는 척 하자.
+		<<Act 지수 Jisoo2 1.17 0.322 black>>
+		….
+		그래. 괜히 나섰다가 욕 먹는 것보단 낫지.
+		<<SetCanvasTo VisualNovelPrefab false>>
+	-> 가서 도와주자
+		<<Act 지수 Jisoo2 1.17 0.322 black>>
+		….
+		진짜로 약을 탄거면….
+		
+		<<Act 지수 Jisoo3 1.17 0.322 black>>
+		무슨 일을 당할지 몰라.
+		<<wait 2.0>>
+		....
+		<<wait 2.0>>
+		
+		클럽 고객D: 저는 잠깐 화장실 좀 다녀올게요.
+		마침 클럽 고객D가 자리를 뜬다.
+		
+		<<Hide 클럽고객D>>
+		<<SetActiveFalse VisualNovelPrefab ClubTable_NPCD>>
+
+		<<Act 지수 Jisoo2 1.17 0.322 black>>
+		….
+		이 틈에 E를 도울 수 있는 방법이 없을까?
+		우선 말을 걸어보자.
+		-> E에게 말을 걸어보자
+			<<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
+===
+
+title: checkClothes
+
+---
+
+<<if visited("ClothesUsed")==true>>
+	<<jump E_Clothes>>
+<<else>>
+	<<jump E_NoClothes>>
+<<endif>>
+
 ===
 
 title: E_NoClothes
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 
 지수: 안녕하세요.
@@ -357,13 +375,16 @@ title: E_NoClothes
 이 상태로 말을 걸면 계속 경계할 것 같아. 
 어떡하지….
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: E_Clothes
 
 ---
 
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<SetCanvasTo VisualNovelPrefab true>>
+<<Act 지수 CoJisoo1 1.17 0.322 black>>
 
 이제 말을 걸어도 괜찮을 것 같아.
 ….
@@ -372,7 +393,7 @@ title: E_Clothes
 지수: 혼자 오셨어요?
 클럽 고객E: 네. 종종 와요.
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 CoJisoo2 1.17 0.322 black>>
 
 일행은 아닌 건가….
 E는 아무 것도 모르는 눈치다.
@@ -380,16 +401,171 @@ E는 아무 것도 모르는 눈치다.
 ….
 어떻게 도와줄 수 있을까?
 ….
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 CoJisoo4 1.17 0.322 black>>
 …!
 술잔을 바꿔치기 해야겠다.
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 CoJisoo2 1.17 0.322 black>>
 ….
 
 나한테 바꿔치기 할 만한 게 있나?
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
+title: ClothesUsed
+
+---
+<<SetCanvasTo VisualNovelPrefab true>>
+직원 복장 옷을 입었다.
+<<SetCanvasTo VisualNovelPrefab false>>
+===
+
+title: CombineSuccess
+
+---
+<<SetCanvasTo VisualNovelPrefab true>>
+<<Act 지수 CoJisoo1 1.17 0.322 black>>
+
+... 좋아.
+이걸 써야겠다.
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: UsedWaterCup
+
+---
+<<SetCanvasTo VisualNovelPrefab true>>
+
+<<Act 지수 CoJisoo1 1.17 0.322 black>>
+
+... 좋아.
+이걸 써야겠다.
+
+...
+우선 클럽 고객 E의 주의를 돌려볼까?
+
+-> 주의를 돌리자.
+	<<Act 지수 CoJisoo4 1.17 0.322 black>>
+	지수: 와~ 저기 엄청 재밌게 노네요.
+	E의 주의를 돌리기 위해 다른 곳을 가리켰다.
+
+	….
+	E가 고개를 돌렸다.
+	<<Act 지수 CoJisoo3 1.17 0.322 black>>
+	지금이야! 술잔을 바꿔치기 하자.
+
+	<<Act 지수 CoJisoo2 1.17 0.322 black>>
+	….
+	//(♫Sound: 휘릭!하는 소리)
+	….
+	<<Act 지수 CoJisoo1 1.17 0.322 black>>
+	됐다.
+
+	<<Act 지수 CoJisoo2 1.17 0.322 black>>
+	….
+	이렇게 바꿔도, 클럽 고객D가 계속 약을 타려고 한다면
+	위험한 건 여전할 거야. 
+	클럽 고객E에게 이 사실을 알릴까? 
+	-> 알린다.
+		<<jump letEknow>>
+	-> 알리지 않는다.
+		<<jump DontTellE>>
+
+===
+
+title: letEknow
+
+---
+
+지수: 이상한 소리 한다고 생각하실 수도 있겠지만….
+지수: 저 사람이 그쪽 술에 약을 탄 것 같아서요.
+
+클럽 고객E가 고개를 돌려 나를 바라봤다.
+
+바꿔치기한 술잔을 보여줬다. 
+술잔에는 여전히 미세한 가루가 가라앉아 있었다. 
+
+<<Act 지수 CoJisoo3 1.17 0.322 black>>
+지수: 밑에 가라앉은 가루 보이세요?
+클럽 고객E는 술잔을 자세히 바라봤다. 
+
+클럽 고객E: ….
+클럽 고객E: 네…. 보여요.
+
+…. 
+….
+
+클럽 고객E: 이런 경우가 있다곤 들었는데….
+클럽 고객E: 직접 겪는 건 처음이네요….
+클럽 고객E는 충격을 받은 듯 했다.
+
+클럽 고객E: 너무 감사해서 그런데….
+클럽 고객E: 다음 번에 밥이라도 사고 싶어서요.
+클럽 고객E: 휴대폰 번호 좀 받을 수 있을까요?
+
+<<Act 지수 CoJisoo4 1.17 0.322 black>>
+….
+<<Act 지수 CoJisoo2 1.17 0.322 black>>
+지원이 휴대폰 밖에 없는데.
+<<Act 지수 CoJisoo1 1.17 0.322 black>>
+일단 받아둘까?
+
+-> 번호를 교환하자. 
+	클럽 고객E와 번호를 교환했다.
+	….
+	클럽 고객E가 갑자기 놀란 눈으로 나를 바라봤다.
+
+	클럽 고객E: 어…. 혹시 그 때 메일 주셨던 분 아니예요?
+	<<Act 지수 CoJisoo4 1.17 0.322 black>>
+	….
+	이건 또 무슨 소리지?
+
+	지수: 어….
+	<<Act 지수 CoJisoo2 1.17 0.322 black>>
+	지수: ….
+
+	클럽 고객E: 아…. 일단 저는 (클럽 고객D)가 돌아오기 전에 먼저 가볼게요.
+	클럽 고객E: 도와주셔서 감사해요.
+	클럽 고객E: 연락주세요!
+
+	클럽 고객E는 서둘러 짐을 챙기더니, 눈인사를 하고 자리를 벗어났다.
+	<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
+	….
+	일단 의심받기 전에 옷부터 갈아입자.
+	//(이후 기본 복장으로 자동 변경)
+	//상호작용 종료 및 히든 스토리 해금 (초코톡에 클럽 고객E의 프로필이 생성됨)
+	<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: DontTellE
+
+---
+
+<Act 지수 CoJisoo2 1.17 0.322 black>>
+그래….오지랖 부리지 말자.
+….
+E는 신나게 춤추고 있는 사람들을 바라봤다.
+
+<Act 지수 CoJisoo1 1.17 0.322 black>>
+지수:저는 먼저 가볼게요.
+E가 고개를 돌려 눈인사를 했다.
+
+E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
+<Act 지수 CoJisoo2 1.17 0.322 black>>
+….
+
+클럽 고객D가 E를 향해 걸어가는 모습이 보였다.
+걱정되네….
+….
+일단 의심받기 전에 옷부터 갈아입자.
+//(이후 기본 복장으로 자동 변경)
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
 
 title: obj_lsdsticker
 
@@ -412,8 +588,6 @@ title: obj_lsdsticker
 <<else>>
     <<SetCanvasTo VisualNovelPrefab false>>
 <<endif>>
-
-<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -1515,7 +1689,7 @@ title: event_gunwoo_fail
 
 <<Act 건우 Geonwoo2 0.322 0.227 black>>
 건우: ….
-<<wait 2.0>>
+<<wait 1.0>>
 
 건우: 알겠으니까….
 건우: 나 이제 가봐도 되냐? 바쁘다고….
@@ -1890,6 +2064,8 @@ title: obj_staffroomdoor_1
 //클럽직원C, 지수 이미지 종료
 
 직원이 스태프룸 문을 열어줬다.
+<<SetActiveFalse VisualNovelPrefab StaffRoom_staff_C>>
+<<ChangeSceneTo S2_5_ >>
 <<jump club_staffroom_inside>>
 
 
@@ -1924,6 +2100,7 @@ title: obj_staffroomdoor_2
 ….
 지금은 들어갈 수 없을 것 같아.
 조금 있다 다시 와볼까….
+<<SetActiveFalse VisualNovelPrefab StaffRoom_staff_C>>
 
 
 ===
