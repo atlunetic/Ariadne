@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 03e5ad4b5735bb541b4b97a8e911ef64
+guid: eeee2033a095e8a4e8bfbb033785ae60
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: StaffRoom_staff_C_0
+      name: Toilet_staffclothe 1_0
       rect:
         serializedVersion: 2
-        x: 839
-        y: 0
-        width: 323
-        height: 873
+        x: 446
+        y: 198
+        width: 975
+        height: 789
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ae54c32364cf694693e6c6a62391be7
-      internalID: 138694842
+      spriteID: f752b4020c4aedf47a92020df21865b0
+      internalID: -369426209
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      StaffRoom_staff_C_0: 138694842
+      Toilet_staffclothe 1_0: -369426209
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

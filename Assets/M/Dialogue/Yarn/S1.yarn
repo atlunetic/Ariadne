@@ -101,15 +101,8 @@ title: S1_path4
 title: Minotaur
 
 ---
-//###이 파트 뭔가 틀린거 같음
 //(Chapter 1) 앞으로 가보자. 선택시
-
-왼쪽에 길이 나있다.
-
 <<PlayAudio MonsterSound2>>
-
-<<wait 1.0>>
-불길한 소리가 들린다.
 
 저게 말로만 듣던 미노타우르스….
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
@@ -121,7 +114,7 @@ title: Minotaur
 녀석이 서서히 내게 다가온다.
 이대로 잡아먹히는걸까.
 
-<<Draw Hand 0.75 0.75>>
+<<DrawFadeIn Hand 0.75 0.75 2>>
 
 <<Fade black 0.0 1.0 2.0>>
 
@@ -177,13 +170,12 @@ title: Realized
 오랜만에 맛있는 거 시켜먹자고 해야지.
 
 <<Scene JiwonRoomDoor>>
-//###선택지는 다 괄호 처리 한건지 포멧 물어보기
--> (문을 두드린다)
+-> 문을 두드린다
     <<PlayAudio KnockingSound>>
     지수: “지원아. 뭐해?”
     아무런 반응이 없다.
     밖에 나갔나?
-    -> (문을 열어본다.)
+    -> 문을 열어본다.
         잠깐 들어가도 괜찮겠지.
         ….
         <<PlayAudio DoorOpeningSound>>
@@ -228,7 +220,6 @@ title: Memory_LetterContent
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-//### 여기서 지수 지원 실루엣은 어떻게 나오나요?
 ‘나도 이제 더 이상은 못해먹겠어.’
 ‘내 인생 내가 알아서 살 테니까 훈수 두지마.’ 
 ‘이번이 진짜 마지막이야. 반성하면 연락해.’
@@ -266,10 +257,14 @@ title: TowardsEnding1_1
 
 ---
 
--> 뭐 자기가 알아서 하겠지.
-    //###여기도 원래 랜덤 텍스트 노출?인데 어떻게 할건지... 일단 그냥 하나로 하기로 했었나??
-    무슨 일 생기면 어떡하지. 
-    <<jump TowardsEnding1_2>>
+<<set $ran = random_range(1,3)>>
+
+<<if $ran > 2 >> 
+    -> 뭐 자기가 알아서 하겠지.
+<<else>>
+    -> 무슨 일 생기면 어떡하지.
+<<endif>> 
+<<jump TowardsEnding1_2>>
 -> 미안하다고 사과하자.
 	<<jump JisooPhone>>
 
@@ -279,8 +274,11 @@ title: TowardsEnding1_2
 
 ---
 
--> 뭐 자기가 알아서 하겠지.
-    무슨 일 생기면 어떡하지. 
+<<if $ran > 2 >> 
+    -> 뭐 자기가 알아서 하겠지.
+<<else>>
+    -> 무슨 일 생기면 어떡하지.
+<<endif>>
     <<jump Ending1>>
 -> 미안하다고 사과하자.
 	<<jump JisooPhone>>
@@ -557,12 +555,19 @@ title: MDMA
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Scene NoBG>>
+
 ….
 비타민인가?
 * 일기장에 ‘MDMA’가 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page4>>
+
+<<if visited("DiaryTutorial")==false>>
+    <<jump DiaryTutorial>>
+<<else>>
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -831,7 +836,7 @@ title: Club_S1End
 들어가보자.
 
 <<GoClub MapController>>
-<<SetCanvasTo VisualNovelPrefab false>>
+<<jump StartClub>>
 ===
 
 
@@ -1039,6 +1044,21 @@ title: WrongItem
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
+===
+
+title: DiaryTutorial
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+어...
+갑자기 일기장이 움직였다.
+내가 꿈을 꾸나...?
+
+* 마약 습득 시 일기장이 채워집니다. *
+* 일기장의 모든 내용을 채워보세요. *
+
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 

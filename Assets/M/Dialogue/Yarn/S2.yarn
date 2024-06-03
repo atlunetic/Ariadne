@@ -313,7 +313,6 @@ title: obj_customers
 	….
 	그래. 괜히 나섰다가 욕 먹는 것보단 낫지.
 	<<SetCanvasTo VisualNovelPrefab false>>
-
 -> 가서 도와주자
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
@@ -329,18 +328,68 @@ title: obj_customers
 	마침 클럽 고객D가 자리를 뜬다.
 	
 	<<Hide 클럽고객D>>
+	<<SetActiveFalse VisualNovelPrefab ClubTable_NPCD>>
 
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
 	이 틈에 E를 도울 수 있는 방법이 없을까?
 	우선 말을 걸어보자.
-
 	-> E에게 말을 걸어보자
-		<<SetCanvasTo VisualNovelPrefab false>>
+===
 
+title: E_NoClothes
 
+---
+
+<<Act 지수 Jisoo1 1.17 0.322 black>>
+
+지수: 안녕하세요.
+클럽 고객E: 아, 안녕하세요.
+지수: 혼자 오셨어요?
+클럽 고객E: 아…. 네.
+클럽 고객E: ….
+클럽 고객E가 불편한 듯 자리를 떴다.
+….
+….
+<<Act 지수 Jisoo4 1.17 0.322 black>>
+내가 뭘 잘못했나?
+….
+이 상태로 말을 걸면 계속 경계할 것 같아. 
+어떡하지….
 
 ===
+
+title: E_Clothes
+
+---
+
+<<Act 지수 Jisoo1 1.17 0.322 black>>
+
+이제 말을 걸어도 괜찮을 것 같아.
+….
+지수: 안녕하세요.
+클럽 고객E: 아, 안녕하세요.
+지수: 혼자 오셨어요?
+클럽 고객E: 네. 종종 와요.
+
+<<Act 지수 Jisoo2 1.17 0.322 black>>
+
+일행은 아닌 건가….
+E는 아무 것도 모르는 눈치다.
+
+….
+어떻게 도와줄 수 있을까?
+….
+<<Act 지수 Jisoo4 1.17 0.322 black>>
+…!
+술잔을 바꿔치기 해야겠다.
+<<Act 지수 Jisoo2 1.17 0.322 black>>
+….
+
+나한테 바꿔치기 할 만한 게 있나?
+
+===
+
 
 title: obj_lsdsticker
 
@@ -357,6 +406,13 @@ title: obj_lsdsticker
 * 일기장에 ‘LSD 스티커’가 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page6>>
+
+<<if visited("DiaryTutorial")==false>>
+    <<jump DiaryTutorial>>
+<<else>>
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -401,6 +457,13 @@ title: menu_philopon
 * 일기장에 ‘필로폰’이 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page7>>
+
+<<if visited("DiaryTutorial")==false>>
+    <<jump DiaryTutorial>>
+<<else>>
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1714,22 +1777,22 @@ title: obj_staffonly_lockeropen
 
 혹시 이 열쇠가 사물함 열쇠인가?
 한번 열어보자.
-<<wait 2.0>>
-
 ….
+<<Fade black 0.0 1.0 1.0>>
 //♫Sound: 열쇠 잘그락 소리
+<<FadeIn>>
 ...됐다!!
-<<wait 2.0>>
-
-스태프 복장이 있다.
-<<Draw Toilet_staffclothe 0.75 0.75>>
 <<wait 1.0>>
 <<Draw Toilet_staffclothe 0.75 0.75>>
+스태프 복장이 있다.
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 혹시 모르니 챙겨갈까?
 
+<<HideAll>>
+
 * 스태프 복장을 습득했다. *
-//인벤토리에 「젤리 봉지」 아이템이 추가됨.
+//인벤토리에 「스태프 복장」 아이템이 추가됨.
+<<AddToInventory VisualNovelPrefab Clothes>>
 
 
 ===
@@ -1791,24 +1854,29 @@ title: obj_staffroomdoor
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
+
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 지원이가 여기서 대체 뭘 했을까….
 CCTV라도 볼 수 있으면 좋을텐데.
 ….
-<<wait 2.0>>
-
 직원에게 물어볼까?
 
 -> CCTV를 보고 싶다고 말하자
-	//클럽직원 C 왼쪽, 지수 오른쪽 배치 
+	<<Act 클럽직원C StaffRoom_staff_C_0 0.322 0.227 black>>
 	<<Act 지수 Jisoo1 1.17 0.322 black>>
 	지수: 저기 혹시, CCTV 좀 확인할 수 있을까요?
 	
-	//아는 오빠A의 조력 있는 경우 <<jump obj_staffroomdoor_1>>	
-	//아는 오빠A의 조력 없는 경우 <<jump obj_staffroomdoor_2>>
-	
+	<<if $Persuade >= 7>>
+		<<HideAll>>
+		<<jump obj_staffroomdoor_1>>	
+	<<else>>
+		<<HideAll>> 
+		<<jump obj_staffroomdoor_2>>
+	<<endif>>
 -> 조금 있다 다시 오자
-
+	<<HideAll>>
+	<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -1990,7 +2058,6 @@ title: club_staffroom_inside
 ---
 
 //배경 클릭 시: #건들면 안될 것 같은 게 많네…. #여긴 CCTV가 없다. 랜덤 노출
-
 
 ===
 

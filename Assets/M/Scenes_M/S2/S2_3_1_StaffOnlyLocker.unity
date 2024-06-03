@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 190446668}
   - component: {fileID: 190446667}
   - component: {fileID: 190446669}
+  - component: {fileID: 190446670}
   m_Layer: 0
   m_Name: Locker
   m_TagString: Untagged
@@ -170,7 +171,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.9316769, y: -0.020550013}
@@ -217,6 +218,23 @@ MonoBehaviour:
   CorrectItemDialogue: 'obj_staffonly_lockeropen '
   NoItemDialogue: StaffLocker
   WrongItemDialogue: WrongItemUsed
+--- !u!114 &190446670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190446666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e975710f4f1b34f8ce401df8be1da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newItem:
+    ItemType: 0
+    itemName: Clothes
+    itemImage: {fileID: -369426209, guid: eeee2033a095e8a4e8bfbb033785ae60, type: 3}
+  image: {fileID: 0}
 --- !u!1 &332024884
 GameObject:
   m_ObjectHideFlags: 0

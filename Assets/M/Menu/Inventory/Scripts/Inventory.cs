@@ -9,6 +9,9 @@ public class Inventory : MonoBehaviour
     public List<item> items = new List<item>();
     private item usingitem;
 
+    public delegate void OnChangeItem();
+    public OnChangeItem onChangeItem;
+
 
     #region Singleton
     public static Inventory instance;
@@ -28,7 +31,7 @@ public class Inventory : MonoBehaviour
     {
         
         items.Add(_item);
-        //onChangeItem.Invoke();
+        onChangeItem.Invoke();
         return true;
        
     }

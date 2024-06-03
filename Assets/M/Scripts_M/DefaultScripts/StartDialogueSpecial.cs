@@ -18,9 +18,11 @@ public class StartDialogueSpecial : MonoBehaviour
     private void OnMouseDown()
     {
 
-        var runner = FindObjectOfType<DialogueRunner>();
+        Debug.Log("Object is clicked");
 
+        var runner = FindObjectOfType<DialogueRunner>();
         item currentItem = Inventory.instance.GetUsingItem();
+
         if (currentItem != null && currentItem.itemName == RequiredItemName)
         {
             Debug.Log("Requirement met by using: " + currentItem.itemName);
@@ -31,7 +33,7 @@ public class StartDialogueSpecial : MonoBehaviour
             runner.StartDialogue(WrongItemDialogue);
         }
 
-        else if (currentItem != null)
+        else
         {
             runner.StartDialogue(NoItemDialogue);
         }

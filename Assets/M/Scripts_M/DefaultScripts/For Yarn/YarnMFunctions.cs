@@ -44,7 +44,7 @@ public class YarnMFunctions : MonoBehaviour
         SceneItem ItemToAdd = SceneItem.Find(ItemName);
         if (ItemToAdd != null)
         {
-            Debug.Log(ItemToAdd + " found.");
+            Debug.Log(ItemToAdd.newItem.itemName + " found.");
             item newItem = ItemToAdd.GetItem();
             Inventory.instance.Additem(newItem);
         }
