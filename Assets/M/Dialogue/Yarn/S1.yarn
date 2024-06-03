@@ -101,6 +101,7 @@ title: S1_path4
 title: Minotaur
 
 ---
+//###이 파트 뭔가 틀린거 같음
 //(Chapter 1) 앞으로 가보자. 선택시
 
 왼쪽에 길이 나있다.
@@ -161,7 +162,6 @@ title: Jisoo_Room
 ….
 
 이제 정신 차리고 일어나야지.
-벌써 오후 2시잖아?
 
 <<jump Realized>>
 
@@ -177,6 +177,7 @@ title: Realized
 오랜만에 맛있는 거 시켜먹자고 해야지.
 
 <<Scene JiwonRoomDoor>>
+//###선택지는 다 괄호 처리 한건지 포멧 물어보기
 -> (문을 두드린다)
     <<PlayAudio KnockingSound>>
     지수: “지원아. 뭐해?”
@@ -184,6 +185,7 @@ title: Realized
     밖에 나갔나?
     -> (문을 열어본다.)
         잠깐 들어가도 괜찮겠지.
+        ….
         <<PlayAudio DoorOpeningSound>>
         <<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
         <<jump Jiwon_Room>>
@@ -199,7 +201,7 @@ title: Jiwon_Room_Default
 
 <<if $randchoice < 1 >>
     창문으로 햇볕이 들어오는데도... 왠지 춥게 느껴지네.
-<<elseif $randchoice < 2>>
+<<elseif $randchoice < 2 >>
     늘 있던 애가 없으니까 뭔가 허전한걸.
 <<endif>>
 
@@ -226,7 +228,7 @@ title: Memory_LetterContent
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-
+//### 여기서 지수 지원 실루엣은 어떻게 나오나요?
 ‘나도 이제 더 이상은 못해먹겠어.’
 ‘내 인생 내가 알아서 살 테니까 훈수 두지마.’ 
 ‘이번이 진짜 마지막이야. 반성하면 연락해.’
@@ -265,6 +267,7 @@ title: TowardsEnding1_1
 ---
 
 -> 뭐 자기가 알아서 하겠지.
+    //###여기도 원래 랜덤 텍스트 노출?인데 어떻게 할건지... 일단 그냥 하나로 하기로 했었나??
     무슨 일 생기면 어떡하지. 
     <<jump TowardsEnding1_2>>
 -> 미안하다고 사과하자.
