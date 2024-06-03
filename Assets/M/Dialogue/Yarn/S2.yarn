@@ -221,30 +221,35 @@ title: obj_emptyglass
 title: obj_minirefrigerator
 
 ---
-
 <<SetCanvasTo VisualNovelPrefab true>>
-//클릭할 경우
-미니 술장고다.
-….
-//술장고 이미지 종료
+<<if visited("obj_minirefrigerator") == false>>
+	//클릭할 경우
+	미니 술장고다.
+	….
+	//술장고 이미지 종료
 
-<<Act 지수 Jisoo1 1.17 0.322 black>>
-생수 1인 2병 무료 제공?
-챙겨갈까?
+	<<Act 지수 Jisoo1 1.17 0.322 black>>
+	생수 1인 2병 무료 제공?
+	챙겨갈까?
 
--> 한 개만 챙겨가자.
-	그래…. 하나만 챙기자.
-	//지수1 이미지 종료
-	* 생수가 든 페트병을 습득했다. *
+	-> 한 개만 챙겨가자.
+		그래…. 하나만 챙기자.
+		<<Hide 지수>>
+		* 생수가 든 페트병을 습득했다. *
+		<<AddToInventory VisualNovelPrefab WaterBottle>>
+		<<SetCanvasTo VisualNovelPrefab false>>
+	-> 두 개 다 챙겨가자.
+		혹시 모르니 두 개 챙겨두자.
+		<<Hide 지수>>
+		* 생수가 든 페트병을 습득했다. *
+		<<AddToInventory VisualNovelPrefab WaterBottle>>
+		<<AddToInventory VisualNovelPrefab WaterBottle>>
+		<<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+	미니 술장고다.
 	<<SetCanvasTo VisualNovelPrefab false>>
 
--> 두 개 다 챙겨가자.
-	혹시 모르니 두 개 챙겨두자.
-	//지수1 이미지 종료
-	* 생수가 든 페트병을 습득했다. *
-	<<SetCanvasTo VisualNovelPrefab false>>
-
-
+<<endif>>
 
 ===
 
@@ -284,7 +289,7 @@ title: obj_customers
 클럽 고객E: 감사해요.
 클럽 고객E가 술잔을 받았다.
 
-//술이 들어있는 술잔 팝업 이미지
+<<Draw Clubtable_Glass 0.75 0.75>>
 
 ….
 <<Act 지수 Jisoo3 1.17 0.322 black>>
@@ -1448,10 +1453,29 @@ title: game_openthedoor_intro
 
 ===
 
+
+title: game_retry
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+조직원: …뭐하는 거예요?
+지수: 아….
+지수: 땅에 뭐가 떨어져서요.
+…들킬 뻔했네.
+다시 해보자.
+
+<<NewLock LockPick>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
 title: game_openthedoor_gameover
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 //문 따기에 3번 이상 실패할 경우
 
 //화면이 흔들리고, 흐려짐
@@ -1475,7 +1499,7 @@ title: game_openthedoor_gameover
 ….
 
 //엔딩 3. ??? : 무슨 일이 일어난 걸까. 
-
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -1483,6 +1507,7 @@ title: game_openthedoor_success
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 <<wait 2.0>>
@@ -1516,8 +1541,8 @@ title: club_staffroom_inside
 ---
 
 //배경 클릭 시: #건들면 안될 것 같은 게 많네…. #여긴 CCTV가 없다. 랜덤 노출
-
-
+이런 젠장!!!!!!!!!!!
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: obj_cctv2

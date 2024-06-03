@@ -71,6 +71,11 @@ namespace Yarn.Unity.Example {
 			runner.AddCommandHandler<float>("FadeIn", SetFadeIn );
 			runner.AddCommandHandler<string,string,float>("CamOffset", SetCameraOffset );
 
+			//M Function Command
+
+			runner.AddCommandHandler<string, string,string, float>("DrawFadeIn", FadeInSprite);
+
+
 			// adds all Resources to internal lists / one big pile... it
 			// will scan inside all subfolders too! note: but when
 			// referencing sprites in the Yarn script, just use the file
@@ -379,13 +384,50 @@ namespace Yarn.Unity.Example {
 			StartCoroutine( MoveCoroutine( parent, newPos, moveTime ) );
 		}
 
+        //M Functions
+
+        public void FadeInSprite(string spriteName, string positionX = "", string positionY = "", float fadeTime = 1)
+        {
+            Image sprite = SetSpriteUnity(spriteName, positionX, positionY);
+            StartCoroutine(FadeSpriteCoroutine(sprite, 0f, 1f, fadeTime));
+        }
+
+        /* Fade out a sprite
+        public void FadeOutSprite(Image sprite, float fadeTime = 1)
+        {
+            StartCoroutine(FadeSpriteCoroutine(sprite, 1f, 0f, fadeTime));
+        }
+		*/
+
+        private IEnumerator FadeSpriteCoroutine(Image sprite, float startAlpha, float endAlpha, float fadeTime)
+        {
+            Color color = sprite.color;
+            color.a = startAlpha;
+            sprite.color = color;
+
+            float elapsedTime = 0f;
+
+            while (elapsedTime < fadeTime)
+            {
+                elapsedTime += Time.deltaTime;
+                color.a = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / fadeTime);
+                sprite.color = color;
+                yield return null;
+            }
+
+            color.a = endAlpha;
+            sprite.color = color;
+        }
+
+
+
         #endregion
 
 
 
         #region Utility
 
-		/*
+        /*
         public override void RunLine(LocalizedLine dialogueLine, System.Action onDialogueLineFinished)
         {
             var actorName = dialogueLine.CharacterName;
@@ -402,7 +444,7 @@ namespace Yarn.Unity.Example {
         }
 		*/
 
-		public void HighlightSprite (Image sprite) {
+        public void HighlightSprite (Image sprite) {
 			StopCoroutine( "HighlightSpriteCoroutine" ); // use StartCoroutine(string) overload so that we can Stop and Start the coroutine (it doesn't work otherwise?)
 			StartCoroutine( "HighlightSpriteCoroutine", sprite );
 		}

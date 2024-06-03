@@ -12,6 +12,8 @@ public class rotateMinute : MonoBehaviour
     public Transform hourHand; // 시침에 대한 참조
     private float lastMinuteAngle; // 마지막으로 저장된 분침의 각도
 
+    private bool canDrag = true; // 드래그 가능 여부를 제어하는 변수
+
     private void Start()
     {
         myCam = Camera.main;
@@ -21,6 +23,8 @@ public class rotateMinute : MonoBehaviour
 
     private void Update()
     {
+        if (!canDrag) return; // 드래그가 비활성화된 경우 업데이트를 종료
+
         Vector3 mousePos = myCam.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButtonDown(0))
         {
@@ -58,6 +62,18 @@ public class rotateMinute : MonoBehaviour
                 lastMinuteAngle = adjustedMinuteAngle; // 현재 분침 각도를 저장
             }
         }
+    }
+
+    // 드래그 비활성화 함수
+    public void DisableDragging()
+    {
+        canDrag = false;
+    }
+
+    // 드래그 활성화 함수
+    public void EnableDragging()
+    {
+        canDrag = true;
     }
 }
 

@@ -20,8 +20,63 @@ public class AddDiaryPage : MonoBehaviour
     public GameObject Page10;
 
     [YarnCommand("RevealDiary")]
-    public void RevealPage(GameObject PageNum)
+    public void RevealPage1(string PageNum)
     {
-        PageNum.SetActive(true);
+        if(PageNum == "Page1")
+        {
+            Page1.SetActive(true);
+        }
+
+        else if(PageNum == "Page2")
+        {
+            Page2.SetActive(true);
+        }
+
+        else if (PageNum == "Page3")
+        {
+            Page3.SetActive(true);
+        }
+
+        else if (PageNum == "Page4")
+        {
+            Page4.SetActive(true);
+        }
+
+        else if (PageNum == "Page5")
+        {
+            Page5.SetActive(true);
+        }
+
+        else if (PageNum == "Page6")
+        {
+            Page6.SetActive(true);
+        }
+
+        else if (PageNum == "Page7")
+        {
+            Page7.SetActive(true);
+        }
+
+        else if (PageNum == "Page8")
+        {
+            Page8.SetActive(true);
+        }
+
+        else if (PageNum == "Page9")
+        {
+            Page9.SetActive(true);
+        }
+
+        else if (PageNum == "Page10")
+        {
+            Page10.SetActive(true);
+        }
+
+        else
+        {
+            Debug.Log("Wrong Page Number In Yarn");
+        }
+
     }
+
 }
