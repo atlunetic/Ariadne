@@ -32,15 +32,25 @@ public class LockPick : MonoBehaviour
     private bool movePick = true;
     private bool isGameActive = true; // 게임 상태 확인
 
+    private GameOver gameOver;  // GameOver 스크립트 참조
+
     // Start is called before the first frame update
     void Start()
     {
+        gameOver = FindObjectOfType<GameOver>();  // GameOver 인스턴스 찾기
+
+        if (gameOver == null)
+        {
+            Debug.LogError("GameOver script not found in the scene.");  // GameOver 인스턴스가 없을 경우 에러 로깅
+        }
+
         newLock();
     }
 
     // Update is called once per frame
     void Update()
     {
+        var runner = FindObjectOfType<DialogueRunner>();
         if (!isGameActive) return;
 
         transform.localPosition = pickPosition.position;
@@ -73,20 +83,25 @@ public class LockPick : MonoBehaviour
 
         timer += Time.deltaTime; // 타이머 업데이트
         if (timer > timeLimit)
-        {
-            if (attemptCount >= maxAttempts)
+        {   
+            if(gameSuccess == false)
             {
-                Debug.Log("You can't try it again"); //테스트 후 이부분 삭제하면 됨
-                isGameActive = false;
-                var runner = FindObjectOfType<DialogueRunner>();
-                //runner.StartDialogue(game_openthedoor_gameover);
-            }
-            else
-            {
-                ++attemptCount;
-                Debug.Log(attemptCount);
-                Debug.Log("You lose!"); // 이부분 삭제 후 2번까지 실패했을때의 대화로 연결 & 대화 후 게임 다시 실행해야함
-                newLock(); //여기도 어차피 대화로 연결되니 삭제해도 될 것 같습니다.
+                if (attemptCount >= maxAttempts)
+                {
+                    Debug.Log("You can't try it again"); //테스트 후 이부분 삭제하면 됨
+                    isGameActive = false;
+                    movePick = false;
+                    runner.StartDialogue("game_openthedoor_gameover");
+                }
+                else
+                {
+                    ++attemptCount;
+                    Debug.Log(attemptCount);
+                    isGameActive = false;
+                    movePick = false;
+                    Debug.Log("You lose");
+                    runner.StartDialogue("game_retry");
+                }
             }
         }
 
@@ -103,8 +118,13 @@ public class LockPick : MonoBehaviour
             {
                 Debug.Log("Unlocked!"); // 테스트 후 삭제해도 ㄱㅊ
                 gameSuccess = true;
-                newLock(); //새로운 lock 꺼낼 필요 없음
-                resetGame(); // 그냥 문을 따고 난 다음 대화로 이어지면 됨
+                isGameActive = false;
+                movePick = false;
+                if (gameOver != null)
+                {
+                    gameOver.HideTimer();  // 타임바를 숨김
+                }
+                runner.StartDialogue("game_openthedoor_success");
             }
             else
             {
@@ -114,11 +134,16 @@ public class LockPick : MonoBehaviour
         }
     }
 
-    void newLock()
+    [YarnCommand("NewLock")]
+    public void newLock()
     {
         unlockAngle = Random.Range(-maxAngle + lockRange, maxAngle - lockRange);
         unlockRange = new Vector2(unlockAngle - lockRange, unlockAngle + lockRange);
         resetGame(); // 게임을 재시작 할 때마다 타이머를 리셋합니다.
+        if (gameOver != null)
+        {
+            gameOver.RestartTimer();  // 타이머 리셋
+        }
     }
 
     void resetGame()
@@ -127,6 +152,7 @@ public class LockPick : MonoBehaviour
         isGameActive = true; // 게임 상태를 활성화합니다.
     }
 }
+
 
 
 

@@ -315,7 +315,7 @@ title: JisooPhone
 ‘배고프다~ 같이 맛있는 거 먹자.’
 (전송)
 
-
+//###지수는 없는건가요
 <<PlayAudio PhoneAlarm>>
 <<wait 0.5>>
 어? 설마 휴대폰도 두고 갔나?
@@ -361,7 +361,7 @@ title: FoundJiwonPhone
 
 
 혹시 모르니 지원이의 휴대폰을 확인해보자.
-
+//### 캐릭터 종료 빠진건지 원래
 
 <<Draw phone_first 0.75 0.75>>
 

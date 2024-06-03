@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
-    [SerializeField] float maxTime = 5f;
+    [SerializeField]
+    float maxTime = 5f;
     float timeLeft;
     Image timerBar;
 
@@ -32,9 +33,18 @@ public class GameOver : MonoBehaviour
             timeLeft -= Time.deltaTime;
             timerBar.fillAmount = timeLeft / maxTime;
         }
-        else if (timeLeft <= 0)
-        {
-            Time.timeScale = 0;  // 시간이 0이 되면 게임 정지
-        }
+    }
+
+    // Restart the timer
+    public void RestartTimer()
+    {
+        timeLeft = maxTime;
+        timerBar.fillAmount = timeLeft / maxTime;
+    }
+
+    public void HideTimer()
+    {
+        timerBar.gameObject.SetActive(false);  // 타임바를 비활성화
     }
 }
+

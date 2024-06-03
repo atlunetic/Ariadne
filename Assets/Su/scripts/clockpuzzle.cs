@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class clockpuzzle : MonoBehaviour
 {
@@ -8,21 +9,40 @@ public class clockpuzzle : MonoBehaviour
     [SerializeField]
     private Transform MinuteHand, HourHand;
 
-    [SerializeField]
-    // 맞추면 나타나는 메시지
-    private GameObject winText;
+    private bool gameWin = false;
+    private bool isGameActive = true;
+
+    private rotateMinute rotateminute;
 
     private void Start()
     {
-        winText.SetActive(false);
+        rotateminute = FindObjectOfType<rotateMinute>();
+
+        if (rotateminute == null)
+        {
+            Debug.LogError("clockPuzzle script not found in the scene.");  // GameOver 인스턴스가 없을 경우 에러 로깅
+        }
+
+        gameWin = false;
     }
 
     // Update is called once per frame
     private void Update()
     {
+        if (!isGameActive) return;
+
+        rotateminute.EnableDragging();
+        var runner = FindObjectOfType<DialogueRunner>();
         if (Input.GetMouseButtonUp(0)) // 마우스 버튼을 놓았을 때
         {
             CheckIfCorrectTime();
+        }
+
+        if (gameWin)
+        {   
+            rotateminute.DisableDragging();
+            isGameActive = false;
+            runner.StartDialogue("game_clock_success");
         }
     }
 
@@ -36,7 +56,7 @@ public class clockpuzzle : MonoBehaviour
 
         if (minuteCheck && hourCheck)
         {
-            winText.SetActive(true);
+            gameWin = true;
         }
     }
 

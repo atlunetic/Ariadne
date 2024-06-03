@@ -1453,10 +1453,29 @@ title: game_openthedoor_intro
 
 ===
 
+
+title: game_retry
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+조직원: …뭐하는 거예요?
+지수: 아….
+지수: 땅에 뭐가 떨어져서요.
+…들킬 뻔했네.
+다시 해보자.
+
+<<NewLock LockPick>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
 title: game_openthedoor_gameover
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 //문 따기에 3번 이상 실패할 경우
 
 //화면이 흔들리고, 흐려짐
@@ -1480,7 +1499,7 @@ title: game_openthedoor_gameover
 ….
 
 //엔딩 3. ??? : 무슨 일이 일어난 걸까. 
-
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -1488,6 +1507,7 @@ title: game_openthedoor_success
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 <<wait 2.0>>
@@ -1521,8 +1541,8 @@ title: club_staffroom_inside
 ---
 
 //배경 클릭 시: #건들면 안될 것 같은 게 많네…. #여긴 CCTV가 없다. 랜덤 노출
-
-
+이런 젠장!!!!!!!!!!!
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: obj_cctv2
