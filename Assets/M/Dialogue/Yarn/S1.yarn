@@ -102,13 +102,7 @@ title: Minotaur
 
 ---
 //(Chapter 1) 앞으로 가보자. 선택시
-
-왼쪽에 길이 나있다.
-
 <<PlayAudio MonsterSound2>>
-
-<<wait 1.0>>
-불길한 소리가 들린다.
 
 저게 말로만 듣던 미노타우르스….
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
@@ -120,7 +114,7 @@ title: Minotaur
 녀석이 서서히 내게 다가온다.
 이대로 잡아먹히는걸까.
 
-<<Draw Hand 0.75 0.75>>
+<<DrawFadeIn Hand 0.75 0.75 2>>
 
 <<Fade black 0.0 1.0 2.0>>
 
@@ -161,7 +155,6 @@ title: Jisoo_Room
 ….
 
 이제 정신 차리고 일어나야지.
-벌써 오후 2시잖아?
 
 <<jump Realized>>
 
@@ -177,13 +170,14 @@ title: Realized
 오랜만에 맛있는 거 시켜먹자고 해야지.
 
 <<Scene JiwonRoomDoor>>
--> (문을 두드린다)
+-> 문을 두드린다
     <<PlayAudio KnockingSound>>
     지수: “지원아. 뭐해?”
     아무런 반응이 없다.
     밖에 나갔나?
-    -> (문을 열어본다.)
+    -> 문을 열어본다.
         잠깐 들어가도 괜찮겠지.
+        ….
         <<PlayAudio DoorOpeningSound>>
         <<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
         <<jump Jiwon_Room>>
@@ -199,7 +193,7 @@ title: Jiwon_Room_Default
 
 <<if $randchoice < 1 >>
     창문으로 햇볕이 들어오는데도... 왠지 춥게 느껴지네.
-<<elseif $randchoice < 2>>
+<<elseif $randchoice < 2 >>
     늘 있던 애가 없으니까 뭔가 허전한걸.
 <<endif>>
 
@@ -226,7 +220,6 @@ title: Memory_LetterContent
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-
 ‘나도 이제 더 이상은 못해먹겠어.’
 ‘내 인생 내가 알아서 살 테니까 훈수 두지마.’ 
 ‘이번이 진짜 마지막이야. 반성하면 연락해.’
@@ -253,7 +246,7 @@ title: Letter
 
 
 -> 뭐 자기가 알아서 하겠지.
-    그래도…. 걱정되니까 연락해볼까? or 무슨 일 생기면 어떡하지. 
+    그래도…. 걱정되니까 연락해볼까?
     <<jump TowardsEnding1_1>>
 -> 미안하다고 사과하자.
 	<<jump JisooPhone>>
@@ -264,11 +257,29 @@ title: TowardsEnding1_1
 
 ---
 
--> 뭐 자기가 알아서 하겠지.
-    그래도…. 걱정되니까 연락해볼까? or 무슨 일 생기면 어떡하지. 
-    <<jump TowardsEnding1_2>>
+<<set $ran = random_range(1,3)>>
 
+<<if $ran > 2 >> 
+    -> 뭐 자기가 알아서 하겠지.
+<<else>>
+    -> 무슨 일 생기면 어떡하지.
+<<endif>> 
+<<jump TowardsEnding1_2>>
+-> 미안하다고 사과하자.
+	<<jump JisooPhone>>
 
+===
+
+title: TowardsEnding1_2
+
+---
+
+<<if $ran > 2 >> 
+    -> 뭐 자기가 알아서 하겠지.
+<<else>>
+    -> 무슨 일 생기면 어떡하지.
+<<endif>>
+    <<jump Ending1>>
 -> 미안하다고 사과하자.
 	<<jump JisooPhone>>
 
@@ -279,6 +290,8 @@ title: TowardsEnding1_1
 title: Ending1
 
 ---
+
+<<Fade Black 0.0 1.0 2.0>>
 
 동생은 그 후로 소식이 없었다. 
 정확히 한 달 후에 경찰에서 연락이 왔다. 
@@ -300,7 +313,7 @@ title: JisooPhone
 ‘배고프다~ 같이 맛있는 거 먹자.’
 (전송)
 
-
+//###지수는 없는건가요
 <<PlayAudio PhoneAlarm>>
 <<wait 0.5>>
 어? 설마 휴대폰도 두고 갔나?
@@ -346,7 +359,7 @@ title: FoundJiwonPhone
 
 
 혹시 모르니 지원이의 휴대폰을 확인해보자.
-
+//### 캐릭터 종료 빠진건지 원래
 
 <<Draw phone_first 0.75 0.75>>
 
@@ -361,8 +374,8 @@ title: FoundJiwonPhone
 어... 연락이 온 것 같은데.
 확인해볼까?
 
-<<Hide phone_first>>
-<<SetCanvasTo VisualNovelPrefab true>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
 <<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom>>
 
 ===
@@ -542,12 +555,19 @@ title: MDMA
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Scene NoBG>>
+
 ….
 비타민인가?
 * 일기장에 ‘MDMA’가 추가되었습니다. *
 
-<<RevealDiary Diary Page4>>
+<<RevealDiary DiaryManager Page4>>
+
+<<if visited("DiaryTutorial")==false>>
+    <<jump DiaryTutorial>>
+<<else>>
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -816,7 +836,7 @@ title: Club_S1End
 들어가보자.
 
 <<GoClub MapController>>
-<<SetCanvasTo VisualNovelPrefab false>>
+<<jump StartClub>>
 ===
 
 
@@ -1024,6 +1044,21 @@ title: WrongItem
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
+===
+
+title: DiaryTutorial
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+어...
+갑자기 일기장이 움직였다.
+내가 꿈을 꾸나...?
+
+* 마약 습득 시 일기장이 채워집니다. *
+* 일기장의 모든 내용을 채워보세요. *
+
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 

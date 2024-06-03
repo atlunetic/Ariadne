@@ -20,12 +20,12 @@ public class YarnMFunctions : MonoBehaviour
         }
     }
 
-    [YarnCommand("SetActive")]
+    [YarnCommand("SetActiveFalse")]
     public void SetActiveObject(string ObjectName)
     {
-        GameObject ObjectToOpen = GameObject.Find(ObjectName);
-        ObjectToOpen.SetActive(true);
-        Debug.Log(ObjectToOpen + "SetActive by Yarn");
+        GameObject Object = GameObject.Find(ObjectName);
+        Object.SetActive(false);
+        Debug.Log(Object + "Set Active False by Yarn");
     }
 
 
@@ -37,27 +37,21 @@ public class YarnMFunctions : MonoBehaviour
         DialogueCanvas.SetActive(command);
     }
 
-
-    public SceneItem sceneItem; // Reference to the SceneItem script attached to the item GameObject
-
     [YarnCommand("AddToInventory")]
-    public void AddItemForY()
+    public void AddItemForY(string ItemName)
     {
-        if (Inventory.instance != null && sceneItem != null)
+
+        SceneItem ItemToAdd = SceneItem.Find(ItemName);
+        if (ItemToAdd != null)
         {
-            // Get the item from the SceneItem script
-            item newItem = sceneItem.GetItem();
-
-            // Add the item to the inventory
+            Debug.Log(ItemToAdd.newItem.itemName + " found.");
+            item newItem = ItemToAdd.GetItem();
             Inventory.instance.Additem(newItem);
-
-
-
-            //GameManager.instance.FindedObjects.Add(obj.name);
+        }
+        else
+        {
+            Debug.LogWarning("Item not found: " + ItemName);
         }
     }
-
-
-
 
 }
