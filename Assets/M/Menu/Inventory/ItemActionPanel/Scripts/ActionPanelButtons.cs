@@ -20,10 +20,23 @@ public class ActionPanelButtons : MonoBehaviour
 
     public void UseItem()
     {
+        var runner = FindObjectOfType<DialogueRunner>();
         Scene currentscene = SceneManager.GetSceneAt(0);//Scene With story checked
         item connectedItem = currentSlot.Item;
         Inventory.instance.UseItem(connectedItem.itemName);
         Debug.Log(connectedItem.itemName + " is currently being used");
+
+        if(connectedItem.itemName == "WaterCup" && currentscene.name == "S2_2_Table")
+        {
+            runner.StartDialogue("UsedWaterCup");
+        }
+
+        if(connectedItem.itemName == "Clothes")
+        {
+            runner.StartDialogue("ClothesUsed");
+        }
+
+
 
         /*
         if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended == false)
