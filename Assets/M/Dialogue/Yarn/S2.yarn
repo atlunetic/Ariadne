@@ -289,7 +289,7 @@ title: obj_customers
 클럽 고객E: 감사해요.
 클럽 고객E가 술잔을 받았다.
 
-//술이 들어있는 술잔 팝업 이미지
+<<Draw Clubtable_Glass 0.75 0.75>>
 
 ….
 <<Act 지수 Jisoo3 1.17 0.322 black>>
