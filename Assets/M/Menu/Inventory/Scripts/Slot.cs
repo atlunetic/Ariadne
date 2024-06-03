@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 
 public class Slot : MonoBehaviour, IDropHandler
 {
@@ -31,19 +32,21 @@ public class Slot : MonoBehaviour, IDropHandler
     {
         GameObject dropped = eventData.pointerDrag;
         Draggable draggableItem = dropped.GetComponent<Draggable>();
-        if (draggableItem.currentSlot.Item.itemName == "Meds" && Item.itemName == "Diary") 
+        SceneItem WaterCup = SceneItem.Find("WaterCup");
+        if (draggableItem.currentSlot.Item.itemName == "Cup" && Item.itemName == "WaterBottle") 
         {
             Inventory.instance.items.Remove(Item);
             Inventory.instance.items.Remove(draggableItem.currentSlot.Item);
-            inventory.Additem(WaterBottleSceneItemObj.GetItem());
+            Inventory.instance.Additem(WaterCup.GetItem());
+
 
         }
 
-        else if (draggableItem.currentSlot.Item.itemName == "Diary" && Item.itemName == "Meds")
+        else if (draggableItem.currentSlot.Item.itemName == "WaterBottle" && Item.itemName == "Cup")
         {
             Inventory.instance.items.Remove(Item);
             Inventory.instance.items.Remove(draggableItem.currentSlot.Item);
-            inventory.Additem(WaterBottleSceneItemObj.GetItem());
+            Inventory.instance.Additem(WaterCup.GetItem());
         }
 
         else
