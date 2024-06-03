@@ -40,12 +40,12 @@ public class CameraController : MonoBehaviour
     public void ActiveCamera(){
         CameraRect.SetActive(true);
         Phone.SetActive(false);
+        Menu.instance.UIMode.SetActive(false);
     }
 
     public void TakeScreenShot(){
         GameObject.Find("Main Camera").GetComponent<TakePicture>().ScreenShot(CameraRect.GetComponent<RectTransform>());
         CameraRect.SetActive(false);
-        Phone.SetActive(true);
         // 로딩 띄우기?
     }
 
@@ -67,6 +67,7 @@ public class CameraController : MonoBehaviour
         
         this.PNGbuffer = PNGbuffer; 
 
+        Phone.SetActive(true);
         // Save or Not 띄우기
         ShowScreenShot.GetComponent<Image>().sprite = GalleryController.instance.MakeSprite(PNGbuffer);
         ShowScreenShotBG.SetActive(true);
@@ -97,5 +98,6 @@ public class CameraController : MonoBehaviour
     private void closePopUP(){
         SaveOrNotPopUp.SetActive(false);
         ShowScreenShotBG.SetActive(false);
+        Menu.instance.UIMode.SetActive(true);
     }
 }
