@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 {
 
     public List<item> items = new List<item>();
+    private item usingitem;
 
     public delegate void OnChangeItem();
     public OnChangeItem onChangeItem;
@@ -30,29 +31,33 @@ public class Inventory : MonoBehaviour
     {
         
         items.Add(_item);
-        //onChangeItem.Invoke();
-        onChangeItem?.Invoke();
+        onChangeItem.Invoke();
         return true;
-        
-        /*
-        // Iterate through the slots
-        for (int i = 0; i < items.Count; i++)
+       
+    }
+
+    public void UseItem(string itemName)
+    {
+        usingitem = items.Find(i => i.itemName == itemName);
+        if (usingitem != null)
         {
-            // Check if the slot is empty
-            if (items[i] == null)
-            {
-                // Add the item to the empty slot
-                items[i] = _item;
-                // Invoke the onChangeItem event
-                onChangeItem?.Invoke();
-                return true;
-            }
+            Debug.Log("Using item: " + usingitem.itemName);
+            usingitem.Use();
         }
-        
-        // If no empty slots were found
-        Debug.LogWarning("Inventory is full. Cannot add " + _item.itemName);
-        return false;
-        */
+        else
+        {
+            Debug.LogWarning("Item not found in inventory: " + itemName);
+        }
+    }
+
+    public item GetUsingItem()
+    {
+        return usingitem;
+    }
+
+    public void ClearUsingItem()
+    {
+        usingitem = null;
     }
 }
 

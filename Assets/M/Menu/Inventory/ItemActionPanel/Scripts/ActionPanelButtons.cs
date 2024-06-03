@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
+using UnityEngine.SceneManagement;
 
 public class ActionPanelButtons : MonoBehaviour
 {
@@ -19,12 +20,12 @@ public class ActionPanelButtons : MonoBehaviour
 
     public void UseItem()
     {
+        Scene currentscene = SceneManager.GetSceneAt(0);//Scene With story checked
         item connectedItem = currentSlot.Item;
-        Debug.Log( connectedItem.itemName + " is currently being used");
-
+        Inventory.instance.UseItem(connectedItem.itemName);
+        Debug.Log(connectedItem.itemName + " is currently being used");
 
         /*
-
         if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended == false)
         {
             GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
@@ -32,7 +33,6 @@ public class ActionPanelButtons : MonoBehaviour
             var runner = FindObjectOfType<DialogueRunner>();
             runner.StartDialogue("WalletX");
         }
-
         if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended == true)
         {
             GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
@@ -42,9 +42,6 @@ public class ActionPanelButtons : MonoBehaviour
             Inventory.instance.items.Remove(connectedItem);
             currentSlot.RemoveSlot();
         }
-
-        
-
         else
         {
             GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
@@ -54,17 +51,11 @@ public class ActionPanelButtons : MonoBehaviour
         }
 
         */
+            //connectedItem.Use();
+            //Inventory.instance.items.Remove(connectedItem);
+            //currentSlot.RemoveSlot();
 
-
-
-
-
-
-        //connectedItem.Use();
-        //Inventory.instance.items.Remove(connectedItem);
-        //currentSlot.RemoveSlot();
-
-        // After performing functionality, hide action panel
+            // After performing functionality, hide action panel
         HideActionPanel();
 
     }

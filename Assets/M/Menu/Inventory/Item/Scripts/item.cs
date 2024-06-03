@@ -17,6 +17,7 @@ public class item {
 
     public bool Use()
     {
+        Debug.Log(itemName + " used.");
         return true;
     }
 }
