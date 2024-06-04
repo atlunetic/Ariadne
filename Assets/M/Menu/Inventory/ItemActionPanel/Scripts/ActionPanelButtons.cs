@@ -36,21 +36,16 @@ public class ActionPanelButtons : MonoBehaviour
             runner.StartDialogue("ClothesUsed");
         }
 
-
-
-        /*
-        if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended == false)
+        if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended() == false)
         {
             GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
             dialogueCanvas.SetActive(true);
-            var runner = FindObjectOfType<DialogueRunner>();
             runner.StartDialogue("WalletX");
         }
-        if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended == true)
+        if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended() == true)
         {
             GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
             dialogueCanvas.SetActive(true);
-            var runner = FindObjectOfType<DialogueRunner>();
             runner.StartDialogue("WalletO");
             Inventory.instance.items.Remove(connectedItem);
             currentSlot.RemoveSlot();
@@ -59,11 +54,8 @@ public class ActionPanelButtons : MonoBehaviour
         {
             GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
             dialogueCanvas.SetActive(true);
-            var runner = FindObjectOfType<DialogueRunner>();
             runner.StartDialogue("WrongItem");
         }
-
-        */
             //connectedItem.Use();
             //Inventory.instance.items.Remove(connectedItem);
             //currentSlot.RemoveSlot();

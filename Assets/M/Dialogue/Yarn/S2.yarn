@@ -131,11 +131,11 @@ title: club_bar_BG
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<set $randchoice = random_range(1, 3)>>
+<<set $rand = random_range(1, 3)>>
 
-<<if $randchoice < 1 >>
+<<if $rand < 1 >>
     담배 냄새가 많이 난다.
-<<elseif $randchoice < 2>>
+<<elseif $rand < 2>>
     노래 소리가 시끄럽다…. 
 <<else>>
     귀가 아파.
@@ -239,6 +239,8 @@ title: obj_minirefrigerator
 		<<Hide 지수>>
 		* 생수가 든 페트병을 습득했다. *
 		<<AddToInventory VisualNovelPrefab WaterBottle>>
+		<<declare $WaterBottle = 0 as number>>
+		<<set $WaterBottle = 1>>
 		<<SetCanvasTo VisualNovelPrefab false>>
 	-> 두 개 다 챙겨가자.
 		혹시 모르니 두 개 챙겨두자.
@@ -246,6 +248,7 @@ title: obj_minirefrigerator
 		* 생수가 든 페트병을 습득했다. *
 		<<AddToInventory VisualNovelPrefab WaterBottle>>
 		<<AddToInventory VisualNovelPrefab WaterBottle>>
+		<<set $WaterBottle = 2>>
 		<<SetCanvasTo VisualNovelPrefab false>>
 <<else>>
 	미니 술장고다.
@@ -260,9 +263,9 @@ title: club_table_BG
 
 ---
 
-<<set $randchoice = random_range(1, 3)>>
+<<set $rand = random_range(1, 3)>>
 
-<<if $randchoice < 2 >>
+<<if $rand < 2 >>
     곳곳에 먼지가 많이 쌓여있다.
 <<else>>
     조명이 너무 강한걸. 눈이 아프다.
@@ -283,8 +286,8 @@ title: obj_customers
 	<<Act 지수 Jisoo1 1.17 0.322 black>>
 	두 사람이 대화하고 있다.
 
-	<<Act 클럽고객D 0.75 0.75 black>>
-	<<Act 클럽고객E 0.75 0.75 black>>
+	<<Act 클럽고객D NPC_Clubcustomer_D 0.75 0.75 black>>
+	<<Act 클럽고객E NPC_Clubcustomer_E 0.75 0.75 black>>
 
 
 	클럽고객D: 이렇게 만난 것도 인연인데 한 잔 사드리고 싶어서요.
@@ -415,8 +418,13 @@ E는 아무 것도 모르는 눈치다.
 title: ClothesUsed
 
 ---
+
 <<SetCanvasTo VisualNovelPrefab true>>
-직원 복장 옷을 입었다.
+<<if visited("club_viproom_entry")==true>>
+	<<jump club_viproom_changeuniform>>
+<<else>>
+	직원 복장 옷을 입었다.
+<<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -648,9 +656,9 @@ title: menu_othertext
 
 //메뉴판 이미지의 크라톰, 필로폰을 제외한 다른 텍스트 클릭 시
 
-<<set $randchoice = random_range(1, 3)>>
+<<set $rand = random_range(1, 3)>>
 
-<<if $randchoice < 2 >>
+<<if $rand < 2 >>
     메뉴가 그렇게 많지는 않네.
 <<else>>
     지금은 술을 마실 때가 아닌 것 같다.
@@ -714,7 +722,8 @@ title: event_gunwoo_tutorial
 <b>* 건우와의 대화를 통해 도움을 요청해봅시다. *</b>
 <b>* 어쩌면 건우가 도움을 줄 수도…. *</b>
 
-<<set $Persuade = 0>>
+<<declare $persuade = 0 as number>>
+<<set $persuade = 0>>
 <<set $rand = random_range(1,3)>>
 
 <<if $rand < 2 >>
@@ -743,7 +752,7 @@ title: event_gunwoo_q1a
 //선택지 랜덤 출력
 --> 정말 기억이 안나는 거예요?
 	//설득점수 +1
-	<<$persuade = $persuade + 1>>
+	<<set $persuade += 1>>
 	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	지수: 정말 기억이 안나는 거예요?
 	지수: 처음 본 사람들 상태도 잘 파악하는 사람이….
@@ -765,7 +774,7 @@ title: event_gunwoo_q1a
 	<<endif>>
 -> 정말 마주친 건 맞아요?
 	//설득점수 -1
-	<<$persuade = $persuade - 1>>
+	<<set $persuade = $persuade - 1>>
 	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 정말 마주친 건 맞아요?
 	
@@ -803,7 +812,7 @@ title: event_gunwoo_q1b
 //선택지 랜덤 출력
 -> 정말 마주친 건 맞아요?
 	//설득점수 -1
-	<<$persuade = $persuade - 1>>
+	<<set $persuade = $persuade - 1>>
 	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 정말 마주친 건 맞아요?
 	
@@ -822,7 +831,7 @@ title: event_gunwoo_q1b
 	<<endif>>
 --> 정말 기억이 안나는 거예요?
 	//설득점수 +1
-	<<$persuade = $persuade + 1>>
+	<<set $persuade = $persuade + 1>>
 	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	지수: 정말 기억이 안나는 거예요?
 	지수: 처음 본 사람들 상태도 잘 파악하는 사람이….
@@ -862,7 +871,7 @@ title: event_gunwoo_q2a
 //선택지 랜덤 출력
 -> 왜 아무런 말도 없어요?
 	//설득점수 +1
-	<<$persuade = $persuade + 1>>
+	<<set $persuade = $persuade + 1>>
 	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 왜 아무런 말도 없어요?
 	지수: 평소 같으면 무슨 일이냐고 난리쳤을 사람이….
@@ -881,7 +890,7 @@ title: event_gunwoo_q2a
 	<<endif>>
 -> 걱정되지도 않아요?
 	//설득점수 -1
-	<<$persuade = $persuade - 1>>
+	<<set $persuade = $persuade - 1>>
 	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 오빠는 지원이가 걱정되지도 않아요?
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
@@ -919,7 +928,7 @@ title: event_gunwoo_q2b
 //선택지 랜덤 출력
 -> 걱정되지도 않아요?
 	//설득점수 -1
-	<<$persuade = $persuade - 1>>
+	<<set $persuade = $persuade - 1>>
 	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 오빠는 지원이가 걱정되지도 않아요?
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
@@ -939,7 +948,7 @@ title: event_gunwoo_q2b
 	<<endif>>
 -> 왜 아무런 말도 없어요?
 	//설득점수 +1
-	<<$persuade = $persuade + 1>>
+	<<set $persuade = $persuade + 1>>
 	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 왜 아무런 말도 없어요?
 	지수: 평소 같으면 무슨 일이냐고 난리쳤을 사람이….
@@ -979,7 +988,7 @@ title: event_gunwoo_q3a
 //선택지 랜덤 출력
 -> 오빠한테도 아무런 얘기 없었어요?
 	//설득점수 +1
-	<<$persuade = $persuade + 1>>
+	<<set $persuade = $persuade + 1>>
 	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	지수: 정말 오빠한테도 아무런 얘기 없었어요?
 	지수: 맨날 둘이 고민상담 주고받던 거 아는데….
@@ -1010,7 +1019,7 @@ title: event_gunwoo_q3a
 	<<endif>>
 -> 저한테 뭐 숨기는 거 있어요?
 	//설득점수 -1
-	<<$persuade = $persuade - 1>>
+	<<set $persuade = $persuade - 1>>
 	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 뭔가 평소같지 않은데….
 	지수: 오빠 저한테 뭐 숨기는 거 있어요?
@@ -1057,7 +1066,7 @@ title: event_gunwoo_q3b
 //선택지 랜덤 출력
 -> 저한테 뭐 숨기는 거 있어요?
 	//설득점수 -1
-	<<$persuade = $persuade - 1>>
+	<<set $persuade = $persuade - 1>>
 	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 뭔가 평소같지 않은데….
 	지수: 오빠 저한테 뭐 숨기는 거 있어요?
@@ -1082,7 +1091,7 @@ title: event_gunwoo_q3b
 	<<endif>>
 -> 오빠한테도 아무런 얘기 없었어요?
 	//설득점수 +1
-	<<$persuade = $persuade + 1>>
+	<<set $persuade = $persuade + 1>>
 	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	지수: 정말 오빠한테도 아무런 얘기 없었어요?
 	지수: 맨날 둘이 고민상담 주고받던 거 아는데….
@@ -1134,7 +1143,7 @@ title: event_gunwoo_q4a
 //선택지 랜덤 출력
 -> 지원이가 오빠한테 숨기는 건 없을텐데….
 	//설득점수 +1
-	<<$persuade = $persuade + 1>>
+	<<set $persuade = $persuade + 1>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지수: 지원이가 오빠한테 숨기는 건….
 
@@ -1160,7 +1169,7 @@ title: event_gunwoo_q4a
 	<<endif>>
 -> 뭐라도 알고 있을 줄 알았는데….
 	//설득점수 -1
-	<<$persuade = $persuade - 1>>
+	<<set $persuade = $persuade - 1>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지수: ….
 	지수: 오빠라면 뭐라도 알고 있을 줄 알았는데….
@@ -1200,7 +1209,7 @@ title: event_gunwoo_q4b
 //선택지 랜덤 출력
 -> 지원이가 오빠한테 숨기는 건 없을텐데….
 	//설득점수 +1
-	<<$persuade = $persuade + 1>>
+	<<set $persuade = $persuade + 1>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지수: 지원이가 오빠한테 숨기는 건….
 
@@ -1226,7 +1235,7 @@ title: event_gunwoo_q4b
 	<<endif>>
 -> 뭐라도 알고 있을 줄 알았는데….
 	//설득점수 -1
-	<<$persuade = $persuade - 1>>
+	<<set $persuade = $persuade - 1>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지수: ….
 	지수: 오빠라면 뭐라도 알고 있을 줄 알았는데….
@@ -1280,7 +1289,7 @@ title: event_gunwoo_q5a
 //선택지 랜덤 출력
 -> 지원이가 마약상을 찾아 다녔다.
 	//설득점수 +1
-	<<$persuade = $persuade + 1>>
+	<<set $persuade = $persuade + 1>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지수: 지원이가 마약상을 찾아 다닌 것 같아요.
 
@@ -1295,7 +1304,7 @@ title: event_gunwoo_q5a
 	//처음 초코톡에서 지수라 밝힌 경우 <<jump event_gunwoo_q5_jiwon1>>
 -> 지원이가 마약성 진통제를 찾아봤다.
 	//설득점수 -1
-	<<$persuade = $persuade - 1>>
+	<<set $persuade = $persuade - 1>>
 	<<if $ActAs == "Myself">>
 		<<jump event_gunwoo_q5_jisu2>>
 	<<elseif $ActAs == "Jiwon">>
@@ -1340,7 +1349,7 @@ title: event_gunwoo_q5b
 
 -> 지원이가 마약성 진통제를 찾아봤다.
 	//설득점수 -1
-	<<$persuade = $persuade - 1>>
+	<<set $persuade = $persuade - 1>>
 	<<if $ActAs == "Myself">>
 		<<jump event_gunwoo_q5_jisu1>>
 	<<elseif $ActAs == "Jiwon">>
@@ -1348,7 +1357,7 @@ title: event_gunwoo_q5b
 	<<endif>>
 -> 지원이가 마약상을 찾아 다녔다.
 	//설득점수 +1
-	<<$persuade = $persuade + 1>>
+	<<set $persuade = $persuade + 1>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지수: 지원이가 마약상을 찾아 다닌 것 같아요.
 
@@ -1642,7 +1651,7 @@ title: event_gunwoo_end
 ….
 그럼 CCTV라도 볼 수 있게 도와달라고 할까?
 
-<<if $Persuade >= 7>>
+<<if $persuade >= 7>>
 	<<jump event_gunwoo_success>>
 <<else>>
 	<<jump event_gunwoo_fail>>
@@ -1771,7 +1780,7 @@ title: obj_customer_f
 말을 걸어볼까? 
 
 -> 말을 걸어보자
-	<<Act CustomerF Toilet_costomerF1_0 0.322 0.227 black>>
+	<<Act CustomerF NPC_clubcustomer_F 0.322 0.227 black>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	클럽 고객F: ….
 	<<wait 2.0>>
@@ -1802,6 +1811,7 @@ title: obj_customer_f
 -> 무시하자
 	<<wait 2.0>>
 	그냥 냅두자….
+	<<HideAll>>
 
 ===
 
@@ -1881,6 +1891,7 @@ title: obj_drugjelly
 
 		….
 		우선 자리를 피해야겠다.
+		<<HideAll>>
 		
 		
 ===
@@ -1977,7 +1988,7 @@ title: obj_toiletpaper
 
 //클릭할 경우
 
-<<Toilet_rollpapaer_big(1) 0.75 0.75>>
+<<Draw   positionX positionYToilet_rollpapaer_big(1) 0.75 0.75>>
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 휴지에 구멍이 뚫려있다.
 피 같은 게 묻어있는데…?
@@ -2020,7 +2031,7 @@ title: club_staffroom_front
 ---
 
 //배경 클릭 시: #이 근처엔 사람이 별로 없네. #조명이 약해서 눈이 덜 아파. 랜덤 노출
-
+랜덤 적용 필요
 
 ===
 
@@ -2030,27 +2041,32 @@ title: obj_staffroomdoor
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
-지원이가 여기서 대체 뭘 했을까….
-CCTV라도 볼 수 있으면 좋을텐데.
-….
-직원에게 물어볼까?
+<<if visited("obj_staffroomdoor") == false>>
 
--> CCTV를 보고 싶다고 말하자
-	<<Act 클럽직원C StaffRoom_staff_C_0 0.322 0.227 black>>
-	<<Act 지수 Jisoo1 1.17 0.322 black>>
-	지수: 저기 혹시, CCTV 좀 확인할 수 있을까요?
-	
-	<<if $Persuade >= 7>>
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
+	지원이가 여기서 대체 뭘 했을까….
+	CCTV라도 볼 수 있으면 좋을텐데.
+	….
+	직원에게 물어볼까?
+
+	-> CCTV를 보고 싶다고 말하자
+		<<Act 클럽직원C StaffRoom_staff_C_0 0.322 0.227 black>>
+		<<Act 지수 Jisoo1 1.17 0.322 black>>
+		지수: 저기 혹시, CCTV 좀 확인할 수 있을까요?
+		
+		<<if $persuade >= 7>>
+			<<HideAll>>
+			<<jump obj_staffroomdoor_1>>	
+		<<else>>
+			<<HideAll>> 
+			<<jump obj_staffroomdoor_2>>
+		<<endif>>
+	-> 조금 있다 다시 오자
 		<<HideAll>>
-		<<jump obj_staffroomdoor_1>>	
-	<<else>>
-		<<HideAll>> 
-		<<jump obj_staffroomdoor_2>>
-	<<endif>>
--> 조금 있다 다시 오자
-	<<HideAll>>
-	<<SetCanvasTo VisualNovelPrefab false>>
+		<<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+	<<jump club_staffroomdoor_nostaff>>
+<<endif>>
 
 ===
 
@@ -2145,6 +2161,8 @@ title: game_openthedoor_intro
 
 //인벤토리에서 헤어핀 선택, 사용 시
 
+<<SetCanvasTo VisualNovelPrefab true>>
+
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 아 맞다…. 헤어핀이 있었네.
 
@@ -2163,6 +2181,9 @@ title: game_openthedoor_intro
 * 헤어핀을 이용해 Staff Room의 문을 열어봅시다. *
 
 //미니게임 씬으로 이동
+<<ChangeSceneTo VisualNovelPrefab lockpick>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -2170,6 +2191,8 @@ title: game_openthedoor_intro
 title: game_openthedoor_gameover
 
 ---
+
+<<SetCanvasTo VisualNovelPrefab true>>
 
 //문 따기에 3번 이상 실패할 경우
 
@@ -2194,6 +2217,7 @@ title: game_openthedoor_gameover
 ….
 
 //엔딩 3. ??? : 무슨 일이 일어난 걸까. 
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -2201,6 +2225,8 @@ title: game_openthedoor_gameover
 title: game_openthedoor_success
 
 ---
+
+<<SetCanvasTo VisualNovelPrefab true>>
 
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
@@ -2212,6 +2238,8 @@ title: game_openthedoor_success
 ….
 
 <<jump club_staffroom_inside>>
+<<SetCanvasTo VisualNovelPrefab S2_4_1_StaffRoom>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -2225,9 +2253,18 @@ title: obj_cocatree
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 나무를 심어뒀네.
-* 마약사전에 ‘코카나무’가 추가되었습니다. *
+* 일기장에 '코카인'이 추가되었습니다. *
+
+<<RevealDiary DiaryManager Page8>>
+
+<<if visited("DiaryTutorial")==false>>
+    <<jump DiaryTutorial>>
+<<else>>
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: club_staffroom_inside
@@ -2235,6 +2272,7 @@ title: club_staffroom_inside
 ---
 
 //배경 클릭 시: #건들면 안될 것 같은 게 많네…. #여긴 CCTV가 없다. 랜덤 노출
+이런 젠장
 
 ===
 
@@ -2253,58 +2291,63 @@ title: obj_cctv2
 CCTV 화면이다.
 ….
 ….
-<<wait 2.0>>
 
 어제 찍힌 영상을 찾아보자.
+<<jump cctvOptions>>
+
+===
+
+title: cctvOptions
+
+---
 어느 장소를 확인해볼까?
 
 //선택지 랜덤 노출
 -> 클럽 카운터&바
+	<<Hide CCTV_first>>
 	<<Draw CCTV_counterbar 0.75 0.75>>
 	중요한 영상은 없는 것 같다….
 	<<Hide CCTV_counterbar>>
-
+	<<jump cctvOptions>>
 -> VIP Room
+	<<Hide CCTV_first>>
 	<<Draw CCTV_VIP 0.75 0.75>>
 	중요한 영상은 없는 것 같다….
 	<<Hide CCTV_VIP>>
-
+	<<jump cctvOptions>>
 -> 클럽 입구
+	<<Hide CCTV_first>>
 	<<Draw CCTV_entrance 0.75 0.75>>
 	중요한 영상은 없는 것 같다….
 	<<Hide CCTV_entrance>>
-
+	<<jump cctvOptions>>
 -> 주차장
+	<<Hide CCTV_first>>
 	<<Draw CCTV_parking_jisoo 0.75 0.75>>
-	
 	…어.
 	실루엣이 지원이 같은데.
-	<<wait 2.0>>
-
+	<<wait 1.0>>
 	….
 	화질이 너무 안 좋아서….
 	어떤 상황인지 파악이 안 돼.
 	차를 타고 가는 건가…?
-	<<wait 2.0>>
-
+	<<wait 1.0>>
 	….
 	아리아드네는 뭘 알고 있지 않을까?
 	도움을 요청해봐야겠다.
-
 	<<Hide CCTV_parking_jisoo>>
-
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
 	….
 	아리아드네에게 CCTV 사진을 찍어 보냈다.
-	<<wait 2.0>>
-
+	<<wait 1.0>>
 	….
 	….
 	….
+	<<PlayAudio PhoneAlarm>>
+	<<ChocotalkAlarm Controllers>>
 	//핸드폰 알람음+빨간색 동그라미 (초코톡 알림)
 	<<Hide 지수>>
-
 	<<SetCanvasTo VisualNovelPrefab false>>
 	
 	
@@ -2356,7 +2399,7 @@ title: obj_radio
 무슨 소리가 들리는 것 같은데.
 ….
 ….
-<<wait 2.0>>
+<<wait 1.0>>
 
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
 <i>공지할게… … …다.
@@ -2383,18 +2426,15 @@ title: obj_radio
 ….
 휴대폰 녹음 버튼을 눌렀다.
 ….
-
-<<wait 2.0>>
+<<wait 1.0>>
 //무전기 지지직 사운드
 //모스부호 사운드 시작
-
 ….
 ….
 ….
 ….
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 이게 대체 무슨 소리지?
-
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 아리아드네에게 보내볼까….
 ….
@@ -2402,23 +2442,19 @@ title: obj_radio
 아리아드네에게 녹음 파일을 보냈다.
 ….
 ….
-<<wait 2.0>>
-
+<<wait 1.0>>
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
 <i>그럼 …… …하도록 하자. 이만.</i>
-<<wait 2.0>>
-
+<<wait 1.0>>
 ….
 무전이 끊겼다.
 //모스부호 사운드 및 상호작용 종료
-
-
+<<PlayAudio PhoneAlarm>>
+<<ChocotalkAlarm Controllers>>
 //핸드폰 알람음+빨간색 동그라미 (초코톡 알림)
 //지수이미지 노출X
-
 <<wait 1.0>>
 <<jump event_staffroom>>
-
 
 ===
 
@@ -2436,8 +2472,11 @@ title: event_staffroom
 어….
 발소리가 들린다.
 
-//이전에 건우의 조력이 있었을 경우 <<jump event_staffroom_gunwoo1>>
-//이전에 건우의 조력이 없었을 경우 <<jump event_staffroom_gunwoo2>>
+<<if $persuade >= 7>>
+	<<jump event_staffroom_gunwoo1>>
+<<else>>
+	<<jump event_staffroom_gunwoo2>>
+<<endif>>
 
 
 ===
@@ -2453,17 +2492,17 @@ title: event_staffroom_gunwoo1
 문이 열리고, 클럽 직원C가 들어왔다.
 눈이 마주쳤다.
 
-클럽 직원C: (멋쩍은 표정) 아…. 두고 온 게 있어서요.
-클럽 직원C: (예의상 웃는 표정) 원하는 건 찾으셨어요?
+클럽 직원C: 아…. 두고 온 게 있어서요.
+클럽 직원C: 원하는 건 찾으셨어요?
 
 <<Act 지수 Jisoo1 1.17 0.322 black>>
-지수: (예의상 웃는 표정) 아, 아직이요. 
+지수: 아, 아직이요. 
 
 클럽 직원C가 주위를 둘러보더니, 책상 위로 손을 뻗었다.
 무전기를 챙기고 내 눈치를 살피던 그는 눈인사를 했다.
 
-클럽 직원C: (어색한 표정) 그러시구나….
-클럽 직원C: (예의상 웃는 표정) 천천히 살펴보세요.
+클럽 직원C: 그러시구나….
+클럽 직원C: 천천히 살펴보세요.
 
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
@@ -2500,21 +2539,25 @@ title: event_staffroom_gunwoo2_choose
 ---
 
 -> 문 뒤
-	//지수이미지 종료
-	//#문 뒤로 숨자마자 누군가 들어왔다. or #책상 밑으로 숨자마자 누군가 들어왔다. 랜덤 출력	
+	<<Hide 지수>>
+	<<set $rand = random_range(1,3)>>
+	<<if $rand > 2 >>
+		문 뒤로 숨자마자 누군가 들어왔다.
+	<<else>>
+		책상 밑으로 숨자마자 누군가 들어왔다.
+	<<endif>>
 	???: 아…. 무전기가 여기 있었네.
-	??? (클럽 직원C): ….
-	??? (클럽 직원C): ….
+	???: ….
+	???: ….
 	
-	//갑자기 화면에 그림자가 진다거나…들킨 게 티나는 연출
-	//화면이 어두워지는 연출-> 완전한 블랙아웃
+	<<Fade black 0.0 1.0 1.0>>
 	….
 	….
 	여기 숨는 게 아니었나.
 	
 	….
 	….
-	//잠시 화면이 어두워졌다 다시 밝아지는 등의…. 이전으로 돌아간 연출)
+	<<FadeIn>>
 	
 	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	….
@@ -2527,21 +2570,26 @@ title: event_staffroom_gunwoo2_choose
 	<<jump event_staffroom_gunwoo2_choose>>
 
 -> 책상 밑
-	//지수이미지 종료
-	//#문 뒤로 숨자마자 누군가 들어왔다. or #책상 밑으로 숨자마자 누군가 들어왔다. 랜덤 출력	
-	??? (클럽 직원C): 아…. 무전기가 여기 있었네.
-	??? (클럽 직원C): ….
-	??? (클럽 직원C): ….
+	<<Hide 지수>>
+	<<set $rand = random_range(1,3)>>
+	<<if $rand > 2 >>
+		문 뒤로 숨자마자 누군가 들어왔다. 
+	<<else>>
+		책상 밑으로 숨자마자 누군가 들어왔다.
+	<<endif>>
+		
+	???: 아…. 무전기가 여기 있었네.
+	???: ….
+	???: ….
 	
-	//갑자기 화면에 그림자가 진다거나…들킨 게 티나는 연출
-	//화면이 어두워지는 연출-> 완전한 블랙아웃
+	<<Fade black 0.0 1.0 1.0>>
 	….
 	….
 	여기 숨는 게 아니었나.
 	
 	….
 	….
-	//잠시 화면이 어두워졌다 다시 밝아지는 등의…. 이전으로 돌아간 연출)
+	<<FadeIn>>
 	
 	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	….
@@ -2550,33 +2598,33 @@ title: event_staffroom_gunwoo2_choose
 	
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
-	어디로 숨지? 
+	어디로 숨지?
 	<<jump event_staffroom_gunwoo2_choose>>
 
 -> 락카 안
-	//지수이미지 종료
+	<<Hide 지수>>
 	락카 안에 숨자마자 누군가 들어왔다
 	
-	//화면 블랙, 텍스트로 진행.
+	<<Fade black 0.0 1.0 0.3>>
 	….
 	….
-	??? (클럽 직원C): 아…. 무전기가 여기 있었네.
-	??? (클럽 직원C): ….
-	??? (클럽 직원C): ….
-	??? (클럽 직원C): 내가 옷을 락카 안에 뒀던가?
+	???: 아…. 무전기가 여기 있었네.
+	???: ….
+	???: ….
+	???: 내가 옷을 락카 안에 뒀던가?
 	
 	//가까워지는 발소리 사운드
 	발소리가 가까워졌다.
 	….
 	….
-	<<wait 2.0>>
+	<<wait 1.0>>
 
 	//가까이서 발소리가 뚝 멈추는 사운드 연출
 	제발 열지마라….
 	….
 	//무전기 지지직 소리
-	??? (클럽 직원C): 아….
-	??? (클럽 직원C): 가야겠네.
+	???: 아….
+	???: 가야겠네.
 	
 	/.멀어지는 발소리 사운드
 	….
@@ -2584,9 +2632,10 @@ title: event_staffroom_gunwoo2_choose
 	//문 닫히는 사운드
 	갔나…?
 	….
-	<<wait 2.0>>
+	<<wait 1.0>>
 
 	//배경 이미지 스태프룸으로 변경
+	<<FadeIn>>
 	문을 열어보니 아무도 없다.
 	다행이야….
 	<<SetCanvasTo VisualNovelPrefab false>>
@@ -2616,7 +2665,9 @@ title: obj_key
 
 * 열쇠를 습득했습니다. *
 
-//인벤토리에 열쇠 아이템이 추가됨. 
+//인벤토리에 열쇠 아이템이 추가됨.
+
+<<AddToInventory VisualNovelPrefab Key>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -2636,7 +2687,7 @@ title: obj_viplist
 	
 	VIP가 이렇게 많단 말이야…?
 	직업은 어떻게 알았대.
-	<<wait 2.0>>
+	<<wait 1.0>>
 
 	….
 	어…?
@@ -2646,7 +2697,7 @@ title: obj_viplist
 	
 	뭐야. 지원…이…?
 	….
-	//팝업이미지 종료
+	<<Hide VIPlist>>
 	
 	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	클럽 다니는 걸 오늘 알았는데.
@@ -2655,9 +2706,6 @@ title: obj_viplist
 	….
 	지원이한테 너무 관심이 없었나.
 	….
-
-	<<Hide VIPlist>>
-
 	<<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2703,7 +2751,7 @@ title: club_viproom_entry
 저긴 어디지?
 ….
 VIP 룸? 한 번 가볼까?
-<<wait 2.0>>
+<<wait 1.0>>
 
 이대로 들어가면 의심받을 것 같아.
 직원 복장을 입을까?
@@ -2722,8 +2770,8 @@ title: club_viproom_changeuniform
 들어가보자.
 
 <<jump club_viproom>>
-
-
+<<ChangeSceneTo VisualNovelPrefab S2_6_VipRoomEntrance>>
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: club_viproom
@@ -2737,6 +2785,8 @@ title: club_viproom
 ….
 VIP룸이다.
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 
@@ -2746,27 +2796,27 @@ title: obj_customerg
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 
-//직원지수3
+<<Act 지수 CoJisoo1 1.17 0.322 black>>
 술냄새가 진동한다…. 
 얼른 지나갈까?
-<<wait 2.0>>
+<<wait 1.0>>
 ….
 클럽 고객G: 어이 거기!
 
-//클럽고객G 왼쪽에 등장
+<<Act 클럽고객G NPC_clubcustomer_G 0.322 0.227 black>>
 
 ….
-<<wait 2.0>>
-//직원지수4
+<<wait 1.0>>
+<<Act 지수 CoJisoo4 1.17 0.322 black>>
 나를 부르는 건가?
 
 클럽 고객G: 어어, 그래. 너 말이야.
 
-//직원지수2
+<<Act 지수 CoJisoo2 1.17 0.322 black>>
 ….
 지수: 네, 무슨 일이시죠?
 클럽 고객G: 물 좀 갖다줘.
-<<wait 2.0>>
+<<wait 1.0>>
 
 ….
 …. 
@@ -2774,101 +2824,117 @@ title: obj_customerg
 직원인 줄 아는 것 같은데….
 어떡하지?
 
-//생수 아이템이 하나 남아 있을 경우에만 선택지 노출
--> 챙겨뒀던 생수병을 주자
-	생각해보니 생수병을 챙겨 뒀었지.
-	이걸 주면 될 것 같은데?
-	
-	//직원지수1
-	지수: 여기 있습니다.
-	클럽 고객G: 어어~ 고마워.
-	
-	//직원지수2
-	….
-	이 사람은 지원이의 행방을 알고 있을까?
-	….
-	클럽 고객G는 휴대폰을 바라보며 실실 웃고 있다.
-	….
-	그냥 다른 곳을 둘러보자.
-	
-	클럽 고객G: 어어, 학생. 어디가.
-	클럽 고객G: 내가 말이야~. 예전에 어떤 일 했는지 알아?
-	
-	….
-	클럽 고객G: 어마어마한 사람이었다~ 이거야.
-	클럽 고객G: 다들 사장님, 사장님하고 말이야….
-	클럽 고객G: 부인도 자식도 다들 얼마나 다정하고 좋은 사람인지….
-	….
-	….
-	계속 들어줘야 할까?
-	예의상 다른 질문이라도 해볼까.
-	<<wait 2.0>>
+<<if $WaterBottle == 2>>
+	-> 챙겨뒀던 생수병을 주자
+		<<jump WaterToE>>
+	-> 지원이를 찾는 게 급하다. 무시하자.
+		<<jump IgnoreE>>
+<<else>>
+	-> 지원이를 찾는 게 급하다. 무시하자.
+		<<jump IgnoreE>>
+<<endif>>
 
-	<<jump obj_customerg_choose>>
 
--> 지원이를 찾는 게 급하다. 무시하자.
-	//직원지수2
-	지금 이럴 때가 아니야.
-	한 시가 급하니까…. 거절하자.
-	
-	지수: 아 죄송합니다, 지금 다른 업무 중이라서요.
-	지수: 바에 있는 술장고에서 가져가시겠어요?
-	
-	….
-	클럽 고객G: 뭐? 손님을 오라가라 해?
-	클럽 고객G: 에잇…!
-	
-	클럽 고객G는 씩씩거리며 자리를 비웠다.
-	//클럽고객G 배경에서 사라짐
-	<<wait 2.0>>
+===
 
-	….
-	휴대폰을 놓고 갔네.
-	
-	//테이블 위에 놓여있는 클럽 고객G의 휴대폰 팝업 이미지
-	….
-	메시지가 온다.
-	
-	//텍스트로 진행
-	우리 여보 ‘수진이 아빠. 애들 봐서라도 이제 정신 좀 차리면 안될까?’
-	우리 여보 ‘애들도 알 거 아는 나이야. 자기 약에 빠져 사는 걸 모르겠어?’
-	우리 여보 ‘나도 옆에서 계속 마음 졸이는 거 그만하고 싶어.’
-	우리 여보 ‘약 안 끊을 거면 우리 이혼하자.’
-	<<wait 2.0>>
+title: WaterToE
 
-	….
-	….
-	클럽 고객G: 어어~ 왜 남의 휴대폰을 함부로 보고 그래!
-	//클럽고객G 왼쪽에 등장
-	
-	클럽 고객G가 언성을 높이며 휴대폰을 가져갔다.
-	….
-	….
-	클럽 고객G는 휴대폰을 확인하기 시작했다.
-	….
-	….
-	
-	클럽 고객G: 아~. 간만에 술 마시러 왔는데.
-	클럽 고객G: 부인이 내가 보고 싶은가봐~.
-	
-	클럽 고객G는 머쓱한 듯 말을 돌렸다.
-	….
-	<<wait 2.0>>
+---
 
-	클럽 고객G: 학생, 이거 좀 봐봐.
-	//클럽 고객G의 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
-	클럽 고객G는 가족사진을 보여줬다.
-	
-	클럽 고객G: 우리 딸이 말이야.
-	클럽 고객G: 공부도 잘 하고, 모범생이야.
-	클럽 고객G: 부인은 또 얼마나 착한지~.
-	
-	클럽 고객G: ….
-	클럽 고객G: 사업이 망하지만 않았어도….
-	클럽 고객G: 내가 이렇게 되지는 않았을텐데….
-
-	<<jump obj_customerg_end>>
+생각해보니 생수병을 챙겨 뒀었지.
+이걸 주면 될 것 같은데?
 		
+<<Act 지수 CoJisoo1 1.17 0.322 black>>
+지수: 여기 있습니다.
+클럽 고객G: 어어~ 고마워.
+
+<<Act 지수 CoJisoo2 1.17 0.322 black>>
+….
+이 사람은 지원이의 행방을 알고 있을까?
+….
+클럽 고객G는 휴대폰을 바라보며 실실 웃고 있다.
+….
+그냥 다른 곳을 둘러보자.
+
+클럽 고객G: 어어, 학생. 어디가.
+클럽 고객G: 내가 말이야~. 예전에 어떤 일 했는지 알아?
+
+….
+클럽 고객G: 어마어마한 사람이었다~ 이거야.
+클럽 고객G: 다들 사장님, 사장님하고 말이야….
+클럽 고객G: 부인도 자식도 다들 얼마나 다정하고 좋은 사람인지….
+….
+….
+계속 들어줘야 할까?
+예의상 다른 질문이라도 해볼까.
+<<wait 1.0>>
+<<jump obj_customerg_choose>>
+
+===
+
+title: IgnoreE
+
+---
+
+<<Act 지수 CoJisoo2 1.17 0.322 black>>
+지금 이럴 때가 아니야.
+한 시가 급하니까…. 거절하자.
+
+지수: 아 죄송합니다, 지금 다른 업무 중이라서요.
+지수: 바에 있는 술장고에서 가져가시겠어요?
+
+….
+클럽 고객G: 뭐? 손님을 오라가라 해?
+클럽 고객G: 에잇…!
+
+클럽 고객G는 씩씩거리며 자리를 비웠다.
+<<Hide 클럽고객G>>
+<<wait 1.0>>
+….
+휴대폰을 놓고 갔네.
+//테이블 위에 놓여있는 클럽 고객G의 휴대폰 팝업 이미지
+….
+메시지가 온다.
+
+//텍스트로 진행
+우리 여보 ‘수진이 아빠. 애들 봐서라도 이제 정신 좀 차리면 안될까?’
+우리 여보 ‘애들도 알 거 아는 나이야. 자기 약에 빠져 사는 걸 모르겠어?’
+우리 여보 ‘나도 옆에서 계속 마음 졸이는 거 그만하고 싶어.’
+우리 여보 ‘약 안 끊을 거면 우리 이혼하자.’
+<<wait 2.0>>
+
+….
+….
+클럽 고객G: 어어~ 왜 남의 휴대폰을 함부로 보고 그래!
+//클럽고객G 왼쪽에 등장
+
+클럽 고객G가 언성을 높이며 휴대폰을 가져갔다.
+….
+….
+클럽 고객G는 휴대폰을 확인하기 시작했다.
+….
+….
+
+클럽 고객G: 아~. 간만에 술 마시러 왔는데.
+클럽 고객G: 부인이 내가 보고 싶은가봐~.
+
+클럽 고객G는 머쓱한 듯 말을 돌렸다.
+….
+<<wait 2.0>>
+
+클럽 고객G: 학생, 이거 좀 봐봐.
+//클럽 고객G의 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
+클럽 고객G는 가족사진을 보여줬다.
+
+클럽 고객G: 우리 딸이 말이야.
+클럽 고객G: 공부도 잘 하고, 모범생이야.
+클럽 고객G: 부인은 또 얼마나 착한지~.
+
+클럽 고객G: ….
+클럽 고객G: 사업이 망하지만 않았어도….
+클럽 고객G: 내가 이렇게 되지는 않았을텐데….
+
+<<jump obj_customerg_end>>
 
 ===
 
@@ -2883,7 +2949,6 @@ title: obj_customerg_choose
 	클럽 고객G는 눈을 반짝였다.
 	클럽 고객G: 아 내가 말이지~.
 	클럽 고객G: 예전에 어마어마한 분이랑 술자리를 가졌는데~.
-	
 	//직원지수2
 	….
 	….
@@ -2910,9 +2975,7 @@ title: obj_customerg_choose
 		//직원지수2
 		어…. 아리아드네다.
 		확인해볼까?
-
-		<<jump chocotalk_ariadne_customerg>>
-		
+		<<SetCanvasTo VisualNovelPrefab false>>	
 -> 과거에 어떤 일을 했는지 물어보자
 	//직원지수1
 	지수: 아, 그러셨구나.
@@ -2947,8 +3010,7 @@ title: obj_customerg_choose
 		//직원지수2
 		어…. 아리아드네다.
 		확인해볼까?
-
-		<<jump chocotalk_ariadne_customerg>>
+		<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
