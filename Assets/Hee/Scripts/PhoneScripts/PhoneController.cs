@@ -21,6 +21,7 @@ public class PhoneController : MonoBehaviour
         }
     }
     
+    [YarnCommand("ActivePhone")]
     public void ActivePhone(){
         Phone.SetActive(true);
         Menu.instance.UI_on();
