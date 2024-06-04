@@ -928,7 +928,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1168690033}
-        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
         m_MethodName: StartScene
         m_Mode: 1
         m_Arguments:
