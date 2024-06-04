@@ -47,7 +47,14 @@ public class CallYarn : MonoBehaviour
         Haesolchatbutton = ChocoTalkController.instance.chatbuttons["해솔"];
 
         Callbybutton(gallerybutton, "Gallery");  // 갤러리 켰을 때
+
         Callbybutton(camerabutton, "Camera");  // 카메라 켰을 때
+        UnityAction camera = null;
+        camera = () => {camerabutton.onClick.AddListener(CameraController.instance.ActiveCamera);
+                        camerabutton.onClick.RemoveListener(camera);};
+        if(FinishedDialogues.Contains("Camera")) camera.Invoke();
+        else camerabutton.onClick.AddListener(camera);
+
         Callbybutton(chocotalkbutton,"Chocotalk1st");  // 초코톡 켰을 때
         Callbybutton(openchatDbutton,"OpenChat");  // 오픈채팅 D 채팅창 켰을 때
 
@@ -102,10 +109,12 @@ public class CallYarn : MonoBehaviour
 
     }
 
+    [YarnCommand("Searchdrgg24")]
     public void Searchdrgg24(){
         IDSearchbutton.transform.GetChild(0).gameObject.SetActive(true);
     }
-
+    
+    [YarnCommand("DestroySearch")]
     public void DestroySearch(){
         IDSearchbutton.gameObject.SetActive(false);
         drgg24chatbutton.gameObject.SetActive(true);
@@ -121,11 +130,22 @@ public class CallYarn : MonoBehaviour
         dgrambutton.onClick.AddListener(deactiveDot);
     }
 
+    [YarnCommand("ChocotalkAlarm")]
+    public void ChocotalkAlarm(){
+        GameObject ChocotalkDot = chocotalkbutton.transform.GetChild(0).gameObject;
+        ChocotalkDot.SetActive(true);
+        UnityAction deactiveDot = null;
+        deactiveDot = () => {ChocotalkDot.SetActive(false);
+                             chocotalkbutton.onClick.RemoveListener(deactiveDot);};
+        chocotalkbutton.onClick.AddListener(deactiveDot);
+    }
+
     [YarnCommand("New711")]
     public void New711(){
         Callbybutton(MapController.instance.편의점711button,"SevenEleven");
         UnityAction ClubActive = null;
         ClubActive = () => {Callbybutton(MapController.instance.Clubbutton,"Club_S1End");
+                            MapController.instance.Clubbutton.gameObject.SetActive(true);
                             MapController.instance.편의점711button.onClick.RemoveListener(ClubActive);};
         MapController.instance.편의점711button.onClick.AddListener(ClubActive);
     }

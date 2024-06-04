@@ -15,7 +15,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
             DontDestroyOnLoad(gameObject);
         }
         else{
-            Destroy(gameObject);
+            DestroyImmediate(gameObject);
         }
     }
 

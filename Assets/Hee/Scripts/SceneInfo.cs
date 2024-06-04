@@ -60,6 +60,7 @@ public class SceneInfo : MonoBehaviour
         //runner.StartDialogue(cluename);
     }
 
+    [YarnCommand("StopMemory")]
     public void StopMemory(){  // 얀에서 부를 함수
         MemoriesBG[3].SetActive(false);
         memoryImg.SetActive(false);

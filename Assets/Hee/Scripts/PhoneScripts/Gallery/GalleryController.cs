@@ -36,6 +36,9 @@ public class GalleryController : MonoBehaviour
         Pictures.Add("ClubPhoto2", originPictures[2]);
         Pictures.Add("JellyPhoto", originPictures[3]);
         Pictures.Add("OfficetelPhoto", originPictures[4]);
+
+        foreach(string photo in GameManager.instance.PhotoList)
+            PrintToGallery(photo);
     }
     public void PrintToGallery(string screenshotname){  // String으로 바꾸기
         

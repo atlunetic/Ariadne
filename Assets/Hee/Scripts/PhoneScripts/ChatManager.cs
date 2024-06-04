@@ -281,5 +281,7 @@ public class ChatManager : MonoBehaviour
         
         // 이하 재넘버링 필요
 
+        foreach(int i in GameManager.instance.ChattingLog)
+            PrintChat(i);
     }
 }
