@@ -13,7 +13,6 @@ public class SceneInfo : MonoBehaviour
     void Awake(){
         SceneManager.sceneLoaded += SceneManage;
     } 
-
     void OnDestroy() {
         SceneManager.sceneLoaded -= SceneManage;
     }
@@ -21,7 +20,7 @@ public class SceneInfo : MonoBehaviour
     void SceneManage(Scene scene, LoadSceneMode mode){
         foreach(GameObject obj in Objectlist)
 	        obj.SetActive(!GameManager.instance.FindedObjects.Contains(obj.name));
-        GameManager.instance.NowScene = scene.name;
+        //GameManager.instance.NowScene = scene.name;
     }
 
     public string FindClue(Rect rect){
@@ -46,7 +45,7 @@ public class SceneInfo : MonoBehaviour
 
         foreach(GameObject BG in MemoriesBG){
             BG.SetActive(true);
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(0.6f);
         }
         
         foreach(GameObject BG in MemoriesBG){
