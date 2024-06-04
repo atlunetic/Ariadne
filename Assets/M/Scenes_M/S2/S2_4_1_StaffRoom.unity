@@ -454,6 +454,7 @@ GameObject:
   - component: {fileID: 1037844916}
   - component: {fileID: 1037844915}
   - component: {fileID: 1037844914}
+  - component: {fileID: 1037844917}
   m_Layer: 0
   m_Name: InStaffroom_cctv
   m_TagString: Untagged
@@ -573,6 +574,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1037844917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037844913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueTitle: obj_cctv2
 --- !u!1 &1286961615
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,8 +598,9 @@ GameObject:
   - component: {fileID: 1286961618}
   - component: {fileID: 1286961617}
   - component: {fileID: 1286961616}
+  - component: {fileID: 1286961619}
   m_Layer: 0
-  m_Name: InStaffroom_VIPrist
+  m_Name: InStaffroom_VIPlist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -703,6 +718,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1286961619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286961615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueTitle: 'obj_viplist '
 --- !u!1 &1453516167
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,6 +742,7 @@ GameObject:
   - component: {fileID: 1453516170}
   - component: {fileID: 1453516169}
   - component: {fileID: 1453516168}
+  - component: {fileID: 1453516171}
   m_Layer: 0
   m_Name: InStaffroom_locker
   m_TagString: Untagged
@@ -833,6 +862,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1453516171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453516167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueTitle: obj_locker
 --- !u!1 &1514151991
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,6 +886,8 @@ GameObject:
   - component: {fileID: 1514151994}
   - component: {fileID: 1514151993}
   - component: {fileID: 1514151992}
+  - component: {fileID: 1514151996}
+  - component: {fileID: 1514151995}
   m_Layer: 0
   m_Name: InStaffroom_Key
   m_TagString: Untagged
@@ -963,6 +1007,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1514151995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514151991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e975710f4f1b34f8ce401df8be1da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newItem:
+    ItemType: 0
+    itemName: Key
+    itemImage: {fileID: -1531323709, guid: bfd07370b87bed7448186446a5f73ab6, type: 3}
+  image: {fileID: 0}
+--- !u!114 &1514151996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514151991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueTitle: obj_key
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

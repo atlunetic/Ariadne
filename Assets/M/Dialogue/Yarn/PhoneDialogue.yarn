@@ -53,6 +53,11 @@ title: Camera
 <<SetCanvasTo VisualNovelPrefab true>>
 평범한 카메라 어플이다.
 
+카메라로 증거가 될만한 걸 찍어두면 좋을 것 같네….
+네모칸 안에 잘 맞춰서 찍어야겠지.
+그래야 나중에 알아보기 쉬울 테니까.
+
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -93,6 +98,7 @@ title: ChooseChatName1
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<declare $ActAs = "" as string>>
 
 나라고 밝혀야 하나?
 ...
@@ -295,7 +301,7 @@ title: DrugDeal
 drgg24라도 쳐볼까.
 ….
 ….
-<<Seachdrgg24 Controllers>>
+<<Searchdrgg24 Controllers>>
 
 뭐야…. 설마 해서 쳐봤는데.
 D gram 아이디였여?
