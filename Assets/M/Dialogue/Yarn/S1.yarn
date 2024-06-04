@@ -112,15 +112,15 @@ title: Minotaur
 <<wait 1.0>>
 
 녀석이 서서히 내게 다가온다.
-이대로 잡아먹히는걸까.
-
 <<DrawFadeIn Hand 0.75 0.75 2>>
-
+이대로 잡아먹히는걸까.
+<<wait  1.0>>
+<<Hide Hand>>
 <<Fade black 0.0 1.0 2.0>>
 
 <<wait 1.0>>
-<<HideAll>>
 <<StopAudioAll>>
+
 <<jump Jisoo_Room>>
 
 ===
