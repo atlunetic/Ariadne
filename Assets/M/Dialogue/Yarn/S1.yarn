@@ -362,7 +362,7 @@ title: FoundJiwonPhone
 혹시 모르니 지원이의 휴대폰을 확인해보자.
 //### 캐릭터 종료 빠진건지 원래
 
-<<Draw phone_first 0.75 0.75>>
+<<ActivePhone PhoneController>>
 
 잠금도 안 걸어뒀네?
 평소 같으면 내가 휴대폰 볼까봐 기겁해서 달려 올텐데.
