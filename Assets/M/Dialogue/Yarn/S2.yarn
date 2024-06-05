@@ -36,12 +36,12 @@ title: meet_gunwoo
 <<wait 1.0>>
 ….
 
-<<Act 건우 Geonwoo1 0.322 0.227 black>>
+<<UpdateAct 건우 Geonwoo1>>
 건우: 어!
 
-<<Act 건우 Geonwoo3 0.322 0.227 black>>
+<<UpdateAct 건우 Geonwoo3>>
 건우: 지…. 
-<<wait 2.0>>
+<<wait 1.0>>
 
 <<UpdateAct 지수 Jisoo1>>
 건우 오빠다.
@@ -57,7 +57,7 @@ title: meet_gunwoo
 	<<UpdateAct 지수 Jisoo1>>
 	지수: 저 지원이예요.
 
-	<<Act 건우 Geonwoo4 0.322 0.227 black>>
+	<<UpdateAct 건우 Geonwoo4>>
 	건우: ….
 	건우: 너 어떻게 나왔어?
 	건우: 그것보다 지원이 너 지금 여기 있으면 안돼.
@@ -75,56 +75,57 @@ title: meet_gunwoo
 	<<wait 2.0>>
 	//엔딩 3. ??? : 무슨 일이 일어난 걸까. 
 	<<ChangeSceneTo VisualNovelPrefab S0>>
-
 -> 나라고 밝히자.
-	<<Act 지수 Jisoo1 1.17 0.322 black>>
+	<<UpdateAct 지수 Jisoo1>>
 	지수: 저 지수예요.
 
-	<<Act 건우 Geonwoo1 0.322 0.227 black>>
+	<<UpdateAct 건우 Geonwoo1>>
 	건우: 아…. 지수.
 	건우: 지원인 줄 알고 깜짝 놀랐네.
 
 	지수: 왜요? 지원이한테 죄라도 지었어요?
 
-	<<Act 건우 Geonwoo3 0.322 0.227 black>>
+	<<UpdateAct 건우 Geonwoo3>>
 	건우: 뭐? 뭔 소리 하는 거야.
 
-	<<Act 건우 Geonwoo1 0.322 0.227 black>>
+	<<UpdateAct 건우 Geonwoo1>>
 	건우: 아무튼, 오늘은 왜 안오나 했다.
 
-	<<Act 지수 Jisoo4 1.17 0.322 black>>
+	<<UpdateAct 지수 Jisoo4>>
 	오늘은 왜 안오나 했다고?
 	
 	//지수2, 건우 이미지 살짝 작아짐, 어두워짐(대화상태 아닐때)
 	….
-	<<wait 2.0>>
+	<<wait 1.0>>
 	분명 아까 초코톡으로….
 	어제 지원이랑 클럽에서 마주쳤다고 했는데.
-	<<wait 2.0>>
+	<<wait 1.0>>
 	….
-	<<wait 2.0>>
+	<<wait 1.0>>
 	술을 마신 것 같진 않은데. 취했나?
 	어제 누구랑 봤는지도 헷갈릴 정도로?
-	<<wait 2.0>>
+	<<wait 1.0>>
 	지수: 건우 오빠, 무슨 소리에요?
 	지수: 어제 지원이랑 마주쳤다면서요.
-	<<wait 2.0>>
+	<<wait 1.0>>
 
-	<<Act 건우 Geonwoo3 0.322 0.227 black>>
+	<<UpdateAct 건우 Geonwoo3>>
 	건우: 아, 난 바빠서 이만.
 	건우: 재밌게 놀다 가고~.
 	//건우 이미지 종료
 
-	<<Act 지수 Jisoo3 1.17 0.322 black>>
-	….
-	<<wait 2.0>>
+	<<Hide 건우>>
 
-	<<Act 지수 Jisoo2 1.17 0.322 black>>
+	<<UpdateAct 지수 Jisoo3>>
+	….
+	<<wait 1.0>>
+
+	<<UpdateAct 지수 Jisoo2>>
 	일단 안으로 들어가보자.
+
+	<<Hide 지수>>
 	
 	<<jump club_bar>>
-
-
 ===
 
 title: club_bar_BG
@@ -216,6 +217,9 @@ title: obj_emptyglass
 
 //인벤토리에 빈 술잔 아이템 추가 (구현 완료)
 
+<<SetActiveFalse VisualNovelPrefab Cup>>
+<<FinishedObj VisualNovelPrefab Cup>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -242,6 +246,8 @@ title: obj_minirefrigerator
 		<<AddToInventory VisualNovelPrefab WaterBottle>>
 		<<declare $WaterBottle = 0 as number>>
 		<<set $WaterBottle = 1>>
+		<<SetActiveFalse VisualNovelPrefab Suljango>>
+		<<FinishedObj VisualNovelPrefab Suljango>>
 		<<SetCanvasTo VisualNovelPrefab false>>
 	-> 두 개 다 챙겨가자.
 		혹시 모르니 두 개 챙겨두자.
@@ -250,6 +256,8 @@ title: obj_minirefrigerator
 		<<AddToInventory VisualNovelPrefab WaterBottle>>
 		<<AddToInventory VisualNovelPrefab WaterBottle>>
 		<<set $WaterBottle = 2>>
+		<<SetActiveFalse VisualNovelPrefab Suljango>>
+		<<FinishedObj VisualNovelPrefab Suljango>>
 		<<SetCanvasTo VisualNovelPrefab false>>
 <<else>>
 	미니 술장고다.
@@ -336,6 +344,7 @@ title: obj_customers
 		
 		<<Hide 클럽고객D>>
 		<<SetActiveFalse VisualNovelPrefab ClubTable_NPCD>>
+		<<FinishedObj VisualNovelPrefab ClubTable_NPCD>>
 
 		<<Act 지수 Jisoo2 1.17 0.322 black>>
 		….
@@ -541,6 +550,7 @@ title: letEknow
 
 	클럽 고객E는 서둘러 짐을 챙기더니, 눈인사를 하고 자리를 벗어났다.
 	<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
+	<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
 	….
 	일단 의심받기 전에 옷부터 갈아입자.
 	//(이후 기본 복장으로 자동 변경)
@@ -561,6 +571,8 @@ E는 신나게 춤추고 있는 사람들을 바라봤다.
 <Act 지수 CoJisoo1 1.17 0.322 black>>
 지수:저는 먼저 가볼게요.
 E가 고개를 돌려 눈인사를 했다.
+<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
+<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
 
 E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
 <Act 지수 CoJisoo2 1.17 0.322 black>>
@@ -591,6 +603,9 @@ title: obj_lsdsticker
 * 일기장에 ‘LSD 스티커’가 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page6>>
+
+<<SetActiveFalse VisualNovelPrefab Clubtable_Drug>>
+<<FinishedObj VisualNovelPrefab ClubTable_Drug>>
 
 <<if visited("DiaryTutorial")==false>>
     <<jump DiaryTutorial>>
@@ -640,6 +655,8 @@ title: menu_philopon
 * 일기장에 ‘필로폰’이 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page7>>
+<<SetActiveFalse VisualNovelPrefab Philopon>>
+<<FinishedObj VisualNovelPrefab Philopon>>
 
 <<if visited("DiaryTutorial")==false>>
     <<jump DiaryTutorial>>
@@ -1297,19 +1314,19 @@ title: event_gunwoo_q5a
 	<<Act 건우 Geonwoo4 0.322 0.227 black>>
 	건우: 어…?
 	
-	<<if $ActAs == "Myself">>
-		<<jump event_gunwoo_q5_jisu1>>
-	<<elseif $ActAs == "Jiwon">>
+	<<if ActedAs() == true>>
 		<<jump event_gunwoo_q5_jiwon1>>
+	<<else>>
+		<<jump event_gunwoo_q5_jisu1>>
 	<<endif>>
 	//처음 초코톡에서 지수라 밝힌 경우 <<jump event_gunwoo_q5_jiwon1>>
 -> 지원이가 마약성 진통제를 찾아봤다.
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
-	<<if $ActAs == "Myself">>
-		<<jump event_gunwoo_q5_jisu2>>
-	<<elseif $ActAs == "Jiwon">>
+	<<if ActedAs() == true>>
 		<<jump event_gunwoo_q5_jiwon2>>
+	<<else>>
+		<<jump event_gunwoo_q5_jisu2>>
 	<<endif>>
 
 
@@ -1351,10 +1368,10 @@ title: event_gunwoo_q5b
 -> 지원이가 마약성 진통제를 찾아봤다.
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
-	<<if $ActAs == "Myself">>
-		<<jump event_gunwoo_q5_jisu1>>
-	<<elseif $ActAs == "Jiwon">>
+	<<if ActedAs() == true>>
 		<<jump event_gunwoo_q5_jiwon1>>
+	<<else>>
+		<<jump event_gunwoo_q5_jisu1>>
 	<<endif>>
 -> 지원이가 마약상을 찾아 다녔다.
 	//설득점수 +1
@@ -1364,11 +1381,11 @@ title: event_gunwoo_q5b
 
 	<<Act 건우 Geonwoo4 0.322 0.227 black>>
 	건우: 어…?
-	
-	<<if $ActAs == "Myself">>
-		<<jump event_gunwoo_q5_jisu2>>
-	<<elseif $ActAs == "Jiwon">>
+
+	<<if ActedAs() == true>>
 		<<jump event_gunwoo_q5_jiwon2>>
+	<<else>>
+		<<jump event_gunwoo_q5_jisu2>>
 	<<endif>>
 
 ===
@@ -1656,8 +1673,16 @@ title: event_gunwoo_end
 ….
 그럼 CCTV라도 볼 수 있게 도와달라고 할까?
 
+<<Act 지수 Jisoo2 1.17 0.322 black>>
+지수: 오빠는 클럽 직원들이랑 친하니까….
+지수: CCTV라도 볼 수 있게 도와주면 안돼요?
+
+<<PersuadeScore VisualNovelPrefab $persuade>>
+
 <<if $persuade >= 7>>
 	<<jump event_gunwoo_success>>
+<<elseif $persuade >= 3>>
+	<<jump event_gunwoo_3_6>>
 <<else>>
 	<<jump event_gunwoo_fail>>
 <<endif>>
@@ -1669,9 +1694,6 @@ title: event_gunwoo_success
 
 ---
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
-지수: 오빠는 클럽 직원들이랑 친하니까….
-지수: CCTV라도 볼 수 있게 도와주면 안돼요?
 
 <<Act 건우 Geonwoo2 0.322 0.227 black>>
 건우: ….
@@ -1685,21 +1707,40 @@ title: event_gunwoo_success
 지수: ….
 지수: 고마워요.
 
-건우가 자리를 떠났다.
+건우 오빠가 자리를 떠났다.
 ….
 
 <<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
-
+<<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
 
 ===
+
+title: event_gunwoo_3_6
+
+---
+
+건우2
+건우: (심각한 표정)….
+건우: (짜증난 표정) 알겠으니까….
+건우: 나 이제 가봐도 되냐? 바쁘다고….
+
+지수: 아…. 알겠어요.
+지수1
+지수: (예의상 웃는 표정) …. 믿을게요.
+
+지수2
+건우 오빠가 자리를 떠났다.
+….
+
+<<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
+<<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
+
+===
+
 
 title: event_gunwoo_fail
 
 ---
-
-<<Act 지수 Jisoo2 1.17 0.322 black>>
-지수: 오빠는 클럽 직원들이랑 친하니까….
-지수: CCTV라도 볼 수 있게 도와주면 안돼요?
 
 <<Act 건우 Geonwoo2 0.322 0.227 black>>
 건우: ….
@@ -1719,6 +1760,7 @@ title: event_gunwoo_fail
 ….
 
 <<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
+<<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
 
 
 ===
@@ -1896,6 +1938,8 @@ title: obj_drugjelly
 
 		….
 		우선 자리를 피해야겠다.
+		<<SetActiveFalse VisualNovelPrefab Toilet_costomerF>>
+		<<FinishedObj VisualNovelPrefab Toilet_costomerF>>
 		<<HideAll>>
 		
 		
@@ -1982,7 +2026,11 @@ title: obj_staffonly_lockeropen
 
 * 스태프 복장을 습득했다. *
 //인벤토리에 「스태프 복장」 아이템이 추가됨.
+<<SetActiveFalse VisualNovelPrefab Locker>>
+<<FinishedObj VisualNovelPrefab Locker>>
 <<AddToInventory VisualNovelPrefab Clothes>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -2048,6 +2096,8 @@ title: obj_staffroomdoor
 
 <<if visited("obj_staffroomdoor") == false>>
 
+<<set $persuade = GetScore()>>
+
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지원이가 여기서 대체 뭘 했을까….
 	CCTV라도 볼 수 있으면 좋을텐데.
@@ -2086,6 +2136,7 @@ title: obj_staffroomdoor_1
 
 직원이 스태프룸 문을 열어줬다.
 <<SetActiveFalse VisualNovelPrefab StaffRoom_staff_C>>
+<<FinishedObj VisualNovelPrefab StaffRoom_staff_C>>
 <<ChangeSceneTo S2_5_ >>
 <<jump club_staffroom_inside>>
 
@@ -2122,6 +2173,7 @@ title: obj_staffroomdoor_2
 지금은 들어갈 수 없을 것 같아.
 조금 있다 다시 와볼까….
 <<SetActiveFalse VisualNovelPrefab StaffRoom_staff_C>>
+<<FinishedObj VisualNovelPrefab StaffRoom_staff_C>>
 
 
 ===
@@ -2261,6 +2313,8 @@ title: obj_cocatree
 * 일기장에 '코카인'이 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page8>>
+<<SetActiveFalse VisualNovelPrefab StaffRoom_Tree>>
+<<FinishedObj VisualNovelPrefab StaffRoom_Tree>>
 
 <<if visited("DiaryTutorial")==false>>
     <<jump DiaryTutorial>>
@@ -2347,6 +2401,8 @@ title: cctvOptions
 	<<StartPhoneChat PhoneController 20>>
 	//핸드폰 알람음+빨간색 동그라미 (초코톡 알림)
 	<<Hide 지수>>
+	<<SetActiveFalse VisualNovelPrefab InStaffroom_cctv>>
+	<<FinishedObj VisualNovelPrefab InStaffroom_cctv>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 	
 	
@@ -2450,6 +2506,8 @@ title: obj_radio
 <<StartPhoneChat PhoneController 21>>
 //핸드폰 알람음+빨간색 동그라미 (초코톡 알림)
 //지수이미지 노출X
+<<SetActiveFalse VisualNovelPrefab InStaffroom_Radio>>
+<<FinishedObj VisualNovelPrefab InStaffroom_Radio>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -2519,7 +2577,7 @@ title: event_staffroom_gunwoo2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-
+<<set $persuade = GetScore()>>
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 어떡하지….
 일단 숨어야겠다…!
@@ -2564,7 +2622,6 @@ title: event_staffroom_gunwoo2_choose
 	….
 	어디로 숨지? 
 	<<jump event_staffroom_gunwoo2_choose>>
-
 -> 책상 밑
 	<<Hide 지수>>
 	<<set $rand = random_range(1,3)>>
@@ -2596,7 +2653,6 @@ title: event_staffroom_gunwoo2_choose
 	….
 	어디로 숨지?
 	<<jump event_staffroom_gunwoo2_choose>>
-
 -> 락카 안
 	<<Hide 지수>>
 	락카 안에 숨자마자 누군가 들어왔다
@@ -2664,6 +2720,9 @@ title: obj_key
 //인벤토리에 열쇠 아이템이 추가됨.
 
 <<AddToInventory VisualNovelPrefab Key>>
+
+<<SetActiveFalse VisualNovelPrefab InStaffroom_Key>>
+<<FinishedObj VisualNovelPrefab InStaffroom_Key>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -2747,7 +2806,14 @@ title: club_viproom_entry
 저긴 어디지?
 ….
 VIP 룸? 한 번 가볼까?
-<<wait 1.0>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: yay
+
+---
+
 
 이대로 들어가면 의심받을 것 같아.
 직원 복장을 입을까?

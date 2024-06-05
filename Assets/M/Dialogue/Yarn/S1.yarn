@@ -251,6 +251,7 @@ title: Letter
     <<jump TowardsEnding1_1>>
 -> 미안하다고 사과하자.
     <<SetActiveFalse VisualNovelPrefab Letter>>
+    <<FinishedObj VisualNovelPrefab Letter>>
 	<<jump JisooPhone>>
 
 ===
@@ -263,12 +264,20 @@ title: TowardsEnding1_1
 
 <<if $rand > 2 >> 
     -> 뭐 자기가 알아서 하겠지.
+        <<jump TowardsEnding1_2>>
+    -> 미안하다고 사과하자.
+        <<SetActiveFalse VisualNovelPrefab Letter>>
+        <<FinishedObj VisualNovelPrefab Letter>>
+	    <<jump JisooPhone>>
 <<else>>
-    -> 무슨 일 생기면 어떡하지.
+    -> 뭐 자기가 알아서 하겠지.
+        <<jump TowardsEnding1_2>>
+    -> 미안하다고 사과하자.
+        <<SetActiveFalse VisualNovelPrefab Letter>>
+        <<FinishedObj VisualNovelPrefab Letter>>
+	    <<jump JisooPhone>>
 <<endif>> 
-<<jump TowardsEnding1_2>>
--> 미안하다고 사과하자.
-	<<jump JisooPhone>>
+
 
 ===
 
@@ -278,14 +287,19 @@ title: TowardsEnding1_2
 
 <<if $rand > 2 >> 
     -> 뭐 자기가 알아서 하겠지.
+        <<jump Ending1>>
+    -> 미안하다고 사과하자.
+        <<SetActiveFalse VisualNovelPrefab Letter>>
+        <<FinishedObj VisualNovelPrefab Letter>>
+        <<jump JisooPhone>>
 <<else>>
     -> 무슨 일 생기면 어떡하지.
+        <<jump Ending1>>
+    -> 미안하다고 사과하자.
+        <<SetActiveFalse VisualNovelPrefab Letter>>
+        <<FinishedObj VisualNovelPrefab Letter>>
+	    <<jump JisooPhone>>
 <<endif>>
-    <<jump Ending1>>
--> 미안하다고 사과하자.
-    <<SetActiveFalse VisualNovelPrefab Letter>>
-    <<FinishedObj VisualNovelPrefab Letter>>
-	<<jump JisooPhone>>
 
 ===
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Yarn.Unity;
@@ -63,6 +64,26 @@ public class YarnMFunctions : MonoBehaviour
     public void FinishedObjects(string ObjectName)
     {
         GameManager.instance.FindedObjects.Add(ObjectName);
+    }
+
+    [YarnCommand("FinishedDialogue")]
+    public void FinishedDialogue(string DialogueTitle)
+    {
+        GameManager.instance.FinishedDialogues.Add(DialogueTitle);
+    }
+
+    [YarnCommand("PersuadeScore")]
+    public void PersuadeScore(int Score)
+    {
+        GameManager.instance.GeonWooScore = Score;
+    }
+
+
+
+    [YarnCommand("DoorOpened")]
+    public void DoorOpened(bool open)
+    {
+        GameManager.instance.StaffroomOpen = open;
     }
 
 }
