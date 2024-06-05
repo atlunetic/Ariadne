@@ -15,9 +15,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public bool 불러오기 = false;
+    public bool IsLoad = false;  // 불러오기 시 true
     public string NowScene;
     public int NumOfScreenShots = 1;  // 불러오기 시 더 큰 수로 적용
+    public int GeonWooScore = 0;
+    public bool StaffroomOpen = false;
     public List<int> ChattingLog = new List<int>();
     public List<string> PhotoList = new List<string>();
     public HashSet<string> FindedObjects = new HashSet<string>();

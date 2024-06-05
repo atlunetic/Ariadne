@@ -53,12 +53,7 @@ public class CallYarn : MonoBehaviour
         HashSet<string> FinishedDialogues = GameManager.instance.FinishedDialogues;
         Haesolchatbutton = ChocoTalkController.instance.chatbuttons["해솔"];
 
-        if(GameManager.instance.NowScene is not null) {
-            if(GameManager.instance.NowScene.StartsWith("S2")) InS2();
-            else if(GameManager.instance.NowScene.StartsWith("S3")) InS3();
-            SceneManager.LoadScene(GameManager.instance.NowScene);
-        }
-        if(GameManager.instance.불러오기) Menu.instance.ActivePI();
+        if(GameManager.instance.IsLoad) Menu.instance.ActivePI();
 
         Callbybutton(gallerybutton, "Gallery");  // 갤러리 켰을 때
 
@@ -129,6 +124,12 @@ public class CallYarn : MonoBehaviour
 
         MapController.instance.Hospitalbutton.onClick.AddListener(()=>callYarn("Hospital"));  // 병원 눌렀을 때: Persistent!!
 
+        if(GameManager.instance.NowScene is not null) {
+            if(GameManager.instance.NowScene.StartsWith("S2")) InS2();
+            else if(GameManager.instance.NowScene.StartsWith("S3")) InS3();
+            SceneManager.LoadScene(GameManager.instance.NowScene);
+        }
+
     }
 
     public void InS2(){
@@ -137,12 +138,15 @@ public class CallYarn : MonoBehaviour
         MapController.instance.Parkbutton.onClick.RemoveAllListeners();
         MapController.instance.Officetelbutton.onClick.RemoveAllListeners();
         MapController.instance.BarStreetbutton.onClick.RemoveAllListeners();
+        MapController.instance.Hospitalbutton.onClick.RemoveAllListeners();
 
         UnityAction wrongplace = () => callYarn("wrongplaceS2");
         MapController.instance.Homebutton.onClick.AddListener(wrongplace);
         MapController.instance.Parkbutton.onClick.AddListener(wrongplace);
         MapController.instance.Officetelbutton.onClick.AddListener(wrongplace);
         MapController.instance.BarStreetbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Hospitalbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Clubbutton.enabled = false;
     }
     public void InS3(){
         MapController.instance.CurrPoint.anchoredPosition = new Vector2(715,204);
@@ -150,12 +154,15 @@ public class CallYarn : MonoBehaviour
         MapController.instance.Parkbutton.onClick.RemoveAllListeners();
         MapController.instance.Clubbutton.onClick.RemoveAllListeners();
         MapController.instance.BarStreetbutton.onClick.RemoveAllListeners();
+        MapController.instance.Hospitalbutton.onClick.RemoveAllListeners();
 
         UnityAction wrongplace = () => callYarn("wrongplaceS2");
         MapController.instance.Homebutton.onClick.AddListener(wrongplace);
         MapController.instance.Parkbutton.onClick.AddListener(wrongplace);
         MapController.instance.Clubbutton.onClick.AddListener(wrongplace);
         MapController.instance.BarStreetbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Hospitalbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Officetelbutton.enabled = false;
     }
 
     [YarnCommand("Searchdrgg24")]

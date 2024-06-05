@@ -64,7 +64,6 @@ public class MapController : MonoBehaviour
         // 씬 바꾸기
         CurrPoint.anchoredPosition = new Vector2(715,204);
         Menu.instance.UI_off();
-        DisableButton(Officetelbutton);
         CallYarn.instance.InS3();
     }
 
@@ -72,7 +71,6 @@ public class MapController : MonoBehaviour
     public void GoClub(){  // 2장으로 넘어가기
         SceneManager.LoadScene("S2_1_ClubCounter_Bar");
         CurrPoint.anchoredPosition = new Vector2(108,-61);
-        DisableButton(Clubbutton);
         Menu.instance.UI_off();
         CallYarn.instance.InS2();
     }
