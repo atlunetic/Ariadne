@@ -250,6 +250,7 @@ title: Letter
     그래도…. 걱정되니까 연락해볼까?
     <<jump TowardsEnding1_1>>
 -> 미안하다고 사과하자.
+    <<SetActiveFalse VisualNovelPrefab Letter>>
 	<<jump JisooPhone>>
 
 ===
@@ -282,6 +283,8 @@ title: TowardsEnding1_2
 <<endif>>
     <<jump Ending1>>
 -> 미안하다고 사과하자.
+    <<SetActiveFalse VisualNovelPrefab Letter>>
+    <<FinishedObj VisualNovelPrefab Letter>>
 	<<jump JisooPhone>>
 
 ===
@@ -379,6 +382,7 @@ title: FoundJiwonPhone
 
 
 <<SetCanvasTo VisualNovelPrefab false>>
+<<SetActiveFalse VisualNovelPrefab JiwonPhone>>
 <<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom>>
 
 ===
@@ -468,7 +472,7 @@ title: ParkDefault
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Scene NoBG>>
+
 <<set $rand = random_range(1, 3)>>
 
 <<if $rand < 2 >>
@@ -478,7 +482,6 @@ title: ParkDefault
 <<endif>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
-<<stop>>
 
 ===
 
@@ -487,7 +490,7 @@ title: Newspaper
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Scene NoBG>>
+
 
 *(제목) 유명 의원 A, 마약류 처방으로 경찰 입건*
 
@@ -513,7 +516,6 @@ title: ParkStudents
 //동네 학생들 NPC 무리를 클릭할 경우
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Scene NoBG>>
 
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 근처 학교의 학생들인가보다.
@@ -540,7 +542,7 @@ title: VendingMachine
 //자판기 클릭 시
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Scene NoBG>>
+
 
 음료수 자판기다.
 예전에 지원이랑 산책하다가 음료수를 뽑아 먹었지.
@@ -564,12 +566,16 @@ title: MDMA
 * 일기장에 ‘MDMA’가 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page4>>
+<<SetActiveFalse VisualNovelPrefab 3Drug>>
+<<FinishedObj VisualNovelPrefab 3Drug>>
 
 <<if visited("DiaryTutorial")==false>>
     <<jump DiaryTutorial>>
 <<else>>
     <<SetCanvasTo VisualNovelPrefab false>>
 <<endif>>
+
+
 
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
@@ -974,6 +980,8 @@ title: JW_Wallet
 * '지원의 지갑'을 습득했다. *
 
 <<Hide Wallet(E)>>
+<<SetActiveFalse VisualNovelPrefab DrawerR_Wallet>>
+<<FinishedObj VisualNovelPrefab DrawerR_Wallet>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1036,6 +1044,9 @@ title:JW_Hairpin
 <<Hide Hairpin(E)_0>>
 
 * '헤어핀'을 습득했다. *
+
+<<SetActiveFalse VisualNovelPrefab Drawer_Hairpin>>
+<<FinishedObj VisualNovelPrefab Drawer_Hairpin>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
