@@ -36,12 +36,12 @@ title: meet_gunwoo
 <<wait 1.0>>
 ….
 
-<<Act 건우 Geonwoo1 0.322 0.227 black>>
+<<UpdateAct 건우 Geonwoo1>>
 건우: 어!
 
-<<Act 건우 Geonwoo3 0.322 0.227 black>>
+<<UpdateAct 건우 Geonwoo3>>
 건우: 지…. 
-<<wait 2.0>>
+<<wait 1.0>>
 
 <<UpdateAct 지수 Jisoo1>>
 건우 오빠다.
@@ -57,7 +57,7 @@ title: meet_gunwoo
 	<<UpdateAct 지수 Jisoo1>>
 	지수: 저 지원이예요.
 
-	<<Act 건우 Geonwoo4 0.322 0.227 black>>
+	<<UpdateAct 건우 Geonwoo4>>
 	건우: ….
 	건우: 너 어떻게 나왔어?
 	건우: 그것보다 지원이 너 지금 여기 있으면 안돼.
@@ -75,58 +75,57 @@ title: meet_gunwoo
 	<<wait 2.0>>
 	//엔딩 3. ??? : 무슨 일이 일어난 걸까. 
 	<<ChangeSceneTo VisualNovelPrefab S0>>
-
 -> 나라고 밝히자.
-	<<Act 지수 Jisoo1 1.17 0.322 black>>
+	<<UpdateAct 지수 Jisoo1>>
 	지수: 저 지수예요.
 
-	<<Act 건우 Geonwoo1 0.322 0.227 black>>
+	<<UpdateAct 건우 Geonwoo1>>
 	건우: 아…. 지수.
 	건우: 지원인 줄 알고 깜짝 놀랐네.
 
 	지수: 왜요? 지원이한테 죄라도 지었어요?
 
-	<<Act 건우 Geonwoo3 0.322 0.227 black>>
+	<<UpdateAct 건우 Geonwoo3>>
 	건우: 뭐? 뭔 소리 하는 거야.
 
-	<<Act 건우 Geonwoo1 0.322 0.227 black>>
+	<<UpdateAct 건우 Geonwoo1>>
 	건우: 아무튼, 오늘은 왜 안오나 했다.
 
-	<<Act 지수 Jisoo4 1.17 0.322 black>>
+	<<UpdateAct 지수 Jisoo4>>
 	오늘은 왜 안오나 했다고?
 	
 	//지수2, 건우 이미지 살짝 작아짐, 어두워짐(대화상태 아닐때)
 	….
-	<<wait 2.0>>
+	<<wait 1.0>>
 	분명 아까 초코톡으로….
 	어제 지원이랑 클럽에서 마주쳤다고 했는데.
-	<<wait 2.0>>
+	<<wait 1.0>>
 	….
-	<<wait 2.0>>
+	<<wait 1.0>>
 	술을 마신 것 같진 않은데. 취했나?
 	어제 누구랑 봤는지도 헷갈릴 정도로?
-	<<wait 2.0>>
+	<<wait 1.0>>
 	지수: 건우 오빠, 무슨 소리에요?
 	지수: 어제 지원이랑 마주쳤다면서요.
-	<<wait 2.0>>
+	<<wait 1.0>>
 
-	<<Act 건우 Geonwoo3 0.322 0.227 black>>
+	<<UpdateAct 건우 Geonwoo3>>
 	건우: 아, 난 바빠서 이만.
 	건우: 재밌게 놀다 가고~.
 	//건우 이미지 종료
 
 	<<Hide 건우>>
 
-	<<Act 지수 Jisoo3 1.17 0.322 black>>
+	<<UpdateAct 지수 Jisoo3>>
 	….
-	<<wait 2.0>>
+	<<wait 1.0>>
 
-	<<Act 지수 Jisoo2 1.17 0.322 black>>
+	<<UpdateAct 지수 Jisoo2>>
 	일단 안으로 들어가보자.
+
+	<<Hide 지수>>
 	
 	<<jump club_bar>>
-
-
 ===
 
 title: club_bar_BG
@@ -2807,7 +2806,14 @@ title: club_viproom_entry
 저긴 어디지?
 ….
 VIP 룸? 한 번 가볼까?
-<<wait 1.0>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: yay
+
+---
+
 
 이대로 들어가면 의심받을 것 같아.
 직원 복장을 입을까?
