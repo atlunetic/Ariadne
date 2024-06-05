@@ -382,6 +382,7 @@ title: FoundJiwonPhone
 <<Hide 지수>>
 
 <<ActivePhone PhoneController>>
+<<SetActiveFalse VisualNovelPrefab Jiwon_Phone>>
 
 잠금도 안 걸어뒀네?
 평소 같으면 내가 휴대폰 볼까봐 기겁해서 달려 올텐데.
@@ -398,7 +399,6 @@ title: FoundJiwonPhone
 
 
 <<SetCanvasTo VisualNovelPrefab false>>
-<<SetActiveFalse VisualNovelPrefab JiwonPhone>>
 <<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom>>
 
 ===
