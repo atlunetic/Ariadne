@@ -10,7 +10,8 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public Image image;
     private Camera mainCamera;
     [HideInInspector] public Transform parentAfterDrag; // Save the original parent of the object (to set to the original parent after drag)
-    
+
+
     // to set the drag to be only possible when trying to combine
     private bool isDraggable = false;
 
@@ -51,12 +52,13 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             return;
         }
         Debug.Log("Dragging");
-        //transform.position = Input.mousePosition;
+        transform.position = Input.mousePosition;
+
+
         Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
         transform.position = mousePosition;
-        Debug.Log("CheckCombine Initiated");
-        //CheckCombine();
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -70,6 +72,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         transform.SetParent(parentAfterDrag); //set the parent back
         SetDraggable(false);
         image.raycastTarget = true;
+
     }
 
 }
