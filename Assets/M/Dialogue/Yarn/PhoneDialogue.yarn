@@ -364,6 +364,7 @@ title: DrugDeal4
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait  1.0>>
 
 뭔가 좀 이상한데. 코카인은 마약 아니야?
 ...
@@ -450,8 +451,8 @@ title: DrugDeal8
 ...
 조금 긴장한 채, 나갈 준비를 했다.
 ...
+<<jump PhoneBoothEnd2>>
 
-<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: DropperRecruit
@@ -464,6 +465,11 @@ title: DropperRecruit
 ….
 월세도 내야하고…. 일단 신청해볼까?
 이상하면 안 하면 되니까.
+-> 예
+    음... 일단은 지원이부터 찾고 나서 연락해보자.
+->아니오
+    그래. 무슨 일인지 모르니까 신청하지 말자.
+    분명히 위험하거나 불법적인 일이겠지.
 
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
