@@ -74,14 +74,23 @@ public class MapController : MonoBehaviour
 
     [YarnCommand("GoClub")]
     public void GoClub(){  // 2장으로 넘어가기
-        // 씬 바꾸기
+        SceneManager.LoadScene("S2_1_ClubCounter_Bar");
         CurrPoint.anchoredPosition = new Vector2(108,-61);
+        DisableButton(Clubbutton);
+        //wrongplaceS2
+    }
+
+    public void AfterS1(UnityAction wrongplace){
         Menu.instance.UI_off();
         Homebutton.onClick.RemoveAllListeners();
         Parkbutton.onClick.RemoveAllListeners();
-        Clubbutton.onClick.RemoveAllListeners();
         Officetelbutton.onClick.RemoveAllListeners();
         BarStreetbutton.onClick.RemoveAllListeners();
+
+        Homebutton.onClick.AddListener(wrongplace);
+        Parkbutton.onClick.AddListener(wrongplace);
+        Officetelbutton.onClick.AddListener(wrongplace);
+        BarStreetbutton.onClick.AddListener(wrongplace);
     }
 
     public void DisableButton(Button Next){

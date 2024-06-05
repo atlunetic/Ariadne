@@ -25,7 +25,7 @@ public class CallYarn : MonoBehaviour
         StartCoroutine("LateStart");
     }
 
-    private void callYarn(string dialogname){
+    public void callYarn(string dialogname){
         var runner = FindObjectOfType<DialogueRunner>();
         if(runner is not null && runner.NodeExists(dialogname)){
             runner.StartDialogue(dialogname);
@@ -34,7 +34,7 @@ public class CallYarn : MonoBehaviour
     }
 
     // 버튼 클릭 이벤트로 얀 다이얼로그를 한 번만 부를 때 사용
-    void Callbybutton (Button button, string dialogname){
+    public void Callbybutton (Button button, string dialogname){
         if(GameManager.instance.FinishedDialogues.Contains(dialogname)) return;
         UnityAction myAction = null;
         myAction = () => {callYarn(dialogname); button.onClick.RemoveListener(myAction);};
