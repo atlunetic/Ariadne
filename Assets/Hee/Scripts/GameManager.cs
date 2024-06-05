@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public bool StaffroomOpen = false;
     public List<int> ChattingLog = new List<int>();
     public List<string> PhotoList = new List<string>();
-    public List<item> items = new List<item>();
+    public List<item> items = new List<item>();  // 저장할때 Inventory 에서 받아오기
     public HashSet<string> FindedObjects = new HashSet<string>();
     public HashSet<string> FindedClues = new HashSet<string>();
     public HashSet<string> FinishedDialogues = new HashSet<string>();
