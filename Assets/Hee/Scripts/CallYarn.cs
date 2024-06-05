@@ -125,6 +125,8 @@ public class CallYarn : MonoBehaviour
 
         if(FinishedDialogues.Contains("New711")) New711();
 
+        MapController.instance.Homebutton.onClick.AddListener(MapController.instance.GoHome);
+
         MapController.instance.Officetelbutton.onClick.AddListener(()=>callYarn("Officetel"));  // 3장 진입전 오피스텔 눌렀을 때
 
         MapController.instance.Hospitalbutton.onClick.AddListener(()=>callYarn("Hospital"));  // 병원 눌렀을 때: Persistent!!
