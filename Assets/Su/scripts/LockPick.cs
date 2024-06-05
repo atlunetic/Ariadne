@@ -34,14 +34,26 @@ public class LockPick : MonoBehaviour
 
     private GameOver gameOver;  // GameOver 스크립트 참조
 
+    public AudioClip[] hairpinSounds; // 여러 개의 hairpin 사운드 파일을 참조하는 배열
+    private AudioSource audioSource; // AudioSource 컴포넌트
+
+    private DialogueRunner runner; // DialogueRunner 참조
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = gameObject.AddComponent<AudioSource>(); // AudioSource 컴포넌트 추가
         gameOver = FindObjectOfType<GameOver>();  // GameOver 인스턴스 찾기
+        runner = FindObjectOfType<DialogueRunner>(); // DialogueRunner 인스턴스 찾기
 
         if (gameOver == null)
         {
             Debug.LogError("GameOver script not found in the scene.");  // GameOver 인스턴스가 없을 경우 에러 로깅
+        }
+
+        if (runner == null)
+        {
+            Debug.LogError("DialogueRunner script not found in the scene.");  // DialogueRunner 인스턴스가 없을 경우 에러 로깅
         }
 
         newLock();
@@ -50,7 +62,6 @@ public class LockPick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var runner = FindObjectOfType<DialogueRunner>();
         if (!isGameActive) return;
 
         transform.localPosition = pickPosition.position;
@@ -74,6 +85,7 @@ public class LockPick : MonoBehaviour
         {
             movePick = false;
             keyPressTime = 1;
+            PlayRandomHairpinSound(); // 마우스 클릭 시 랜덤한 사운드 재생
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -83,15 +95,18 @@ public class LockPick : MonoBehaviour
 
         timer += Time.deltaTime; // 타이머 업데이트
         if (timer > timeLimit)
-        {   
-            if(gameSuccess == false)
+        {
+            if (gameSuccess == false)
             {
                 if (attemptCount >= maxAttempts)
                 {
                     Debug.Log("You can't try it again"); //테스트 후 이부분 삭제하면 됨
                     isGameActive = false;
                     movePick = false;
-                    runner.StartDialogue("game_openthedoor_gameover");
+                    if (runner != null)
+                    {
+                        runner.StartDialogue("game_openthedoor_gameover");
+                    }
                 }
                 else
                 {
@@ -100,7 +115,10 @@ public class LockPick : MonoBehaviour
                     isGameActive = false;
                     movePick = false;
                     Debug.Log("You lose");
-                    runner.StartDialogue("game_retry");
+                    if (runner != null)
+                    {
+                        runner.StartDialogue("game_retry");
+                    }
                 }
             }
         }
@@ -124,7 +142,10 @@ public class LockPick : MonoBehaviour
                 {
                     gameOver.HideTimer();  // 타임바를 숨김
                 }
-                runner.StartDialogue("game_openthedoor_success");
+                if (runner != null)
+                {
+                    runner.StartDialogue("game_openthedoor_success");
+                }
             }
             else
             {
@@ -151,7 +172,17 @@ public class LockPick : MonoBehaviour
         timer = 0; // 타이머 리셋
         isGameActive = true; // 게임 상태를 활성화합니다.
     }
+
+    void PlayRandomHairpinSound()
+    {
+        if (hairpinSounds.Length > 0 && audioSource != null)
+        {
+            int randomIndex = Random.Range(0, hairpinSounds.Length);
+            audioSource.PlayOneShot(hairpinSounds[randomIndex]);
+        }
+    }
 }
+
 
 
 

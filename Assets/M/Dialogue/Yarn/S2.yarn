@@ -2279,9 +2279,10 @@ title: game_openthedoor_intro
 ….
 <<wait 1.0>>
 <<Hide 지수>>
-<<PlayAudio Minigame>>
+<<PlayAudio Minigame 1.0 loop>>
 * 미니게임: 헤어핀으로 문을 따자! *
 * 헤어핀을 이용해 Staff Room의 문을 열어봅시다. *
+* 제한 시간 내에 문을 열지 못하면 문따기에 실패합니다. *
 
 //미니게임 씬으로 이동
 <<ChangeSceneTo VisualNovelPrefab lockpick>>
@@ -2289,6 +2290,21 @@ title: game_openthedoor_intro
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
+
+===
+
+title: game_retry
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+조직원: …뭐하는 거예요?
+지수: 아….
+지수: 땅에 뭐가 떨어져서요.
+…들킬 뻔했네.
+다시 해보자.
+<<NewLock LockPick>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -2304,7 +2320,7 @@ title: game_openthedoor_gameover
 //지수이미지 노출X
 
 <<Fade black 0.0 1.0 2.0>>
-
+<<StopAudio Minigame>>
 ???: 거기 누구야!
 어….
 직원에게 들켰다.
@@ -2331,7 +2347,7 @@ title: game_openthedoor_success
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-
+<<PlayAudio HairpinSuccess>>
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
 <<wait 2.0>>
