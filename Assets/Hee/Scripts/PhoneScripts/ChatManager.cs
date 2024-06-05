@@ -218,7 +218,7 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "그런 데 관심도 없다더니.");
         AddChatToLast(true, "아...");
 
-        ChattingList.Add(new Chatting(false, "해솔", "HaelsolSuspicious"));  // 10
+        ChattingList.Add(new Chatting(false, "해솔", "HaesolSuspicious"));  // 10
         AddChatToLast(false, "근데 너 혹시 지수야?");
         AddChatToLast(false, "말투가 지원이가 아닌데...");
 
