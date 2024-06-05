@@ -30,11 +30,14 @@ public class YarnMFunctions : MonoBehaviour
 
 
     public GameObject DialogueCanvas;
+    public Collider2D CanvasCollider;
 
     [YarnCommand("SetCanvasTo")]
     public void SetDialogueCanvas(bool command)
     {
         DialogueCanvas.SetActive(command);
+        CanvasCollider.enabled = command;
+       
     }
 
     [YarnCommand("AddToInventory")]
