@@ -435,6 +435,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[0]
+      value: 
+      objectReference: {fileID: 1878884374}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[1]
+      value: 
+      objectReference: {fileID: 696875070}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[2]
+      value: 
+      objectReference: {fileID: 1832924449}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[3]
+      value: 
+      objectReference: {fileID: 2066506570}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1071,7 +1091,7 @@ SceneRoots:
   - {fileID: 928378175}
   - {fileID: 438750798}
   - {fileID: 1878884376}
-  - {fileID: 1832924451}
   - {fileID: 696875072}
+  - {fileID: 1832924451}
   - {fileID: 2066506572}
   - {fileID: 1873826083}

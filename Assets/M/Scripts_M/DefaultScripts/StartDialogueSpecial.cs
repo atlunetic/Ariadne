@@ -20,6 +20,8 @@ public class StartDialogueSpecial : MonoBehaviour
 
         Debug.Log("Object is clicked");
 
+        if (Menu.instance.BlockClick) return;
+
         var runner = FindObjectOfType<DialogueRunner>();
         item currentItem = Inventory.instance.GetUsingItem();
 
