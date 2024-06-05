@@ -1736,7 +1736,7 @@ title: obj_studentid
 
 ===
 
-title: memory_studentid
+title: memory_StudentID
 
 ---
 
@@ -2008,7 +2008,7 @@ title: obj_toiletpaper
 
 ===
 
-title: memory_toiletpaper
+title: memory_ToiletPaper
 
 ---
 
@@ -2711,7 +2711,7 @@ title: obj_viplist
 
 ===
 
-title: memory_viplist
+title: memory_VIPlist
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
@@ -2770,7 +2770,8 @@ title: club_viproom_changeuniform
 들어가보자.
 
 <<jump club_viproom>>
-<<ChangeSceneTo VisualNovelPrefab S2_6_VipRoomEntrance>>
+<<DeleteItem  Inventory Clothes>>
+<<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -2892,7 +2893,6 @@ title: IgnoreE
 <<wait 1.0>>
 ….
 휴대폰을 놓고 갔네.
-//테이블 위에 놓여있는 클럽 고객G의 휴대폰 팝업 이미지
 ….
 메시지가 온다.
 
@@ -2901,7 +2901,7 @@ title: IgnoreE
 우리 여보 ‘애들도 알 거 아는 나이야. 자기 약에 빠져 사는 걸 모르겠어?’
 우리 여보 ‘나도 옆에서 계속 마음 졸이는 거 그만하고 싶어.’
 우리 여보 ‘약 안 끊을 거면 우리 이혼하자.’
-<<wait 2.0>>
+<<wait 1.0>>
 
 ….
 ….
@@ -2919,10 +2919,12 @@ title: IgnoreE
 
 클럽 고객G는 머쓱한 듯 말을 돌렸다.
 ….
-<<wait 2.0>>
+<<wait 1.0>>
 
 클럽 고객G: 학생, 이거 좀 봐봐.
 //클럽 고객G의 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
+<<Hide 지수>>
+<<Draw ClubcustomerG_Phone 0.75 0.75>>
 클럽 고객G는 가족사진을 보여줬다.
 
 클럽 고객G: 우리 딸이 말이야.
@@ -2932,7 +2934,6 @@ title: IgnoreE
 클럽 고객G: ….
 클럽 고객G: 사업이 망하지만 않았어도….
 클럽 고객G: 내가 이렇게 되지는 않았을텐데….
-
 <<jump obj_customerg_end>>
 
 ===
@@ -2955,7 +2956,7 @@ title: obj_customerg_choose
 	알아낼 수 있는 게 없는 걸까….
 	
 	-> 과거에 어떤 일을 했는지 물어보자
-		//직원지수1
+		<<Act 지수 CoJisoo1 1.17 0.322 black>>
 		지수: 아, 그러셨구나.
 		지수: 그러면 예전엔 어떤 일을 하셨어요?
 		
@@ -2964,19 +2965,20 @@ title: obj_customerg_choose
 		클럽 고객G: 아 내가 예전에 말이야~.
 		클럽 고객G: 엄청 잘나가는 회사 사장이었다 이말이야.
 		
-		//직원지수2
+		<<Act 지수 CoJisoo2 1.17 0.322 black>>
 		….
 		….
 		이후로도 클럽 고객G의 말은 끊이지 않았다.
 		알아낼 수 있는 게 없는 걸까….
 			
 		//휴대폰 진동과 함께 알림이 온다.
-		//직원지수2
+		<<PlayAudio PhoneAlarm>>
+		<<Act 지수 CoJisoo2 1.17 0.322 black>>
 		어…. 아리아드네다.
 		확인해볼까?
 		<<SetCanvasTo VisualNovelPrefab false>>	
 -> 과거에 어떤 일을 했는지 물어보자
-	//직원지수1
+	<<Act 지수 CoJisoo1 1.17 0.322 black>>
 	지수: 아, 그러셨구나.
 	지수: 그러면 예전엔 어떤 일을 하셨어요?
 	
@@ -2984,21 +2986,21 @@ title: obj_customerg_choose
 	클럽 고객G: 아 내가 예전에 말이야~.
 	클럽 고객G: 엄청 잘나가는 회사 사장이었다 이말이야.
 	
-	//직원지수2
+	<<Act 지수 CoJisoo2 1.17 0.322 black>>
 	….
 	….
 	이후로도 클럽 고객G의 말은 끊이지 않았다.
 	알아낼 수 있는 게 없는 걸까….
 	
 	-> 클럽에 오게 된 계기를 물어보자
-		//직원지수1
+		<<Act 지수 CoJisoo1 1.17 0.322 black>>
 		지수: 아, 그러셨구나.
 		지수: 그러면 클럽에 다니게 된 계기가 있으신가요?
 		클럽 고객G는 눈을 반짝였다.
 		클럽 고객G: 아 내가 말이지~.
 		클럽 고객G: 예전에 어마어마한 분이랑 술자리를 가졌는데~.
 		
-		//직원지수2
+		<<Act 지수 CoJisoo2 1.17 0.322 black>>
 		….
 		….
 		이후로도 클럽 고객G의 말은 끊이지 않았다.
@@ -3006,7 +3008,8 @@ title: obj_customerg_choose
 		….
 
 		//휴대폰 진동과 함께 알림이 온다.
-		//직원지수2
+		<<PlayAudio PhoneAlarm>>
+		<<Act 지수 CoJisoo2 1.17 0.322 black>>
 		어…. 아리아드네다.
 		확인해볼까?
 		<<SetCanvasTo VisualNovelPrefab false>>
@@ -3025,7 +3028,7 @@ title: chocotalk_ariadne_customerg
 	그래….
 	가족에 대해 물어보자.
 	
-	//직원지수1
+	<<Act 지수 CoJisoo1 1.17 0.322 black>>
 	지수: 아까 가족분들이 다정하다고 하셨는데….
 	지수: 가족분들이랑은 요즘 어떠세요?
 	<<wait 2.0>>
@@ -3036,6 +3039,9 @@ title: chocotalk_ariadne_customerg
 	클럽 고객G: 학생, 이거 좀 봐봐.
 	
 	//클럽 고객G 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
+	<<Hide 지수>>
+	<<Draw ClubcustomerG_Phone 0.75 0.75>>
+
 	클럽 고객G는 가족사진을 보여줬다.
 	
 	클럽 고객G: 우리 딸이 말이야.
@@ -3045,7 +3051,6 @@ title: chocotalk_ariadne_customerg
 	클럽 고객G: ….
 	클럽 고객G: 사업이 망하지만 않았어도….
 	클럽 고객G: 내가 이렇게 되지는 않았을텐데….
-	
 	<<jump obj_customerg_end>>
 
 
@@ -3056,15 +3061,14 @@ title: obj_customerg_end
 ---
 
 	//클럽 고객G의 가족사진 위로 메시지 팝업 뜸
-	<<SetCanvasTo VisualNovelPrefab true>>
+	<<Draw  ClubcustomerG_Message 0.75 0.75>>
 	어…?
 	저게 무슨 얘기지.
 	….
-	<<wait 2.0>>
-
 	11시에 클럽에서 만난다고?
 	….
-	//팝업이미지 종료
+	<<Hide ClubcustomerG_Message>>
+	<<Hide ClubcustomerG_Phone>>
 	
 	클럽 고객G가 급하게 휴대폰을 감췄다.
 	클럽 고객G: 어어~. 아무튼.
@@ -3073,7 +3077,7 @@ title: obj_customerg_end
 	
 	클럽 고객G가 자리를 떴다.
 	
-	//직원지수3
+	<<Act 지수 CoJisoo3 1.17 0.322 black>>
 	….
 	….
 	아무래도 수상해.
@@ -3092,6 +3096,7 @@ title: obj_customerh
 ….
 
 //클럽고객H 왼쪽, 지수 오른쪽 배치
+<<Act 클럽고객H NPC_clubcustomer_H 0.322 0.227 black>>
 클럽 고객H: 지원씨! 어제 그렇게 나가셔서 걱정했어요
 클럽 고객H: 지수씨랑은 얘기 잘 하셨어요?
 클럽 고객H: 저도 항상 걱정했거든요….
@@ -3099,12 +3104,11 @@ title: obj_customerh
 클럽 고객H: 그런데 왜 직원 옷을 입고 있어요?
 클럽 고객H: 못 알아볼 뻔 했어요.
 
-//직원지수4
+<<Act 지수 CoJisoo4 1.17 0.322 black>>
 ….
 ….
 무슨 소리를 하는 거지?
-<<wait 2.0>>
-
+<<wait  0.5>>
 지수: 무슨 말씀이세요?
 
 클럽 고객H: ….
@@ -3112,7 +3116,7 @@ title: obj_customerh
 클럽 고객H: 아…. 지수 씨구나.
 클럽 고객H: 지원 씨인 줄 알 았어요.
 
-//직원지수3
+<<Act 지수 CoJisoo3 1.17 0.322 black>>
 ….
 ….
 분명 초면인데….
@@ -3124,7 +3128,7 @@ title: obj_customerh
 클럽 고객H: ….
 클럽 고객H: 이만 가볼게요! 지수 씨도 얼른 들어가세요.
 
-//직원지수2
+<<Act 지수 CoJisoo2 1.17 0.322 black>>
 ….
 ….
 이상한 사람이다.
@@ -3138,7 +3142,7 @@ title: event_customergh_end
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 //클럽 고객G,H와 상호작용 종료 후
-//직원지수3
+<<Act 지수 CoJisoo3 1.17 0.322 black>>
 ….
 ….
 혼란스럽다.
@@ -3148,8 +3152,7 @@ title: event_customergh_end
 아 맞다. 나가는 길에 옷도 갈아입어야겠어.
 사람들이 자꾸 직원인줄 알고 말을 거니까….
 
-<<jump club_re_bar>>
-
+<<ChangeSceneTo VisualNovelPrefab S2_6_CounterBar>>
 
 ===
 
@@ -3158,9 +3161,10 @@ title: club_re_bar
 ---
 
 //배경 카운터&바로 변경
+//더 이상 필요하지 않은 복장 삭제함 (문)
 //직원 복장이 자동으로 착용해제. 이후 직원 복장 사용 시 #지금 입으면 의심받을 것 같아. 대사출력
 //배경 클릭 시: #담배 냄새가 많이 난다. #노래 소리가 시끄럽다…. 귀가 아파. 랜덤 출력
-
+Random set needed
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -3178,9 +3182,12 @@ title: obj_clock2
 가까이 가서 구경이나 할까.
 
 //시계가 확대 팝업 이미지
+<<Draw  Clock1_0 0.75 0.75>>
 //지수이미지 노출X
 
 //미니게임 시작(시계 11시로 맞추기)
+
+<<ChangeSceneTo VisualNovelPrefab clockpuzzle>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
@@ -3190,35 +3197,45 @@ title: game_clock_success
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 //시계를 11시로 맞출 경우
+
+
 ….
 아까 클럽 고객G에게 연락온 건 분명 ‘drgg24’….
 분명 11시에 만나자고 했지.
 ….
+<<SetActiveFalse VisualNovelPrefab Clock>>
 
 //시계에서 빛이 새어 나온다. 빛이 화면을 뒤덮는다.
 //지수가 현기증을 느껴 정신을 잃는다. 화면이 잠깐 흐려졌다 돌아온다.
+<<Fade white 0.0 1.0 1.0>>
+<<wait 1.0>>
 
-//효과지수3
+<<FadeIn>>
+
 …아. 머리 아파.
 ….
-<<wait 2.0>>
+<<wait 1.0>>
 
-//효과지수4
+<<Act 지수 EJisoo3 1.17 0.322 black>>
 내가 꿈을 꾸나?
 시계에서 빛이 뿜어져 나온 것 같았는데.
 ….
 ….
 
-//클럽 배경 이미지 변경
+<<StartBackgroundLoop counterbar_bg>>
 
-//효과지수4
+<<Act 지수 EJisoo4 1.17 0.322 black>>
 주변 분위기가 달라진 것 같다.
 
-//효과지수3
+<<Act 지수 EJisoo3 1.17 0.322 black>>
 ….
 우선 옆으로 가보자.
 
-<<jump club_11_viproom>>
+<<StopBackgroundLoop counterbar_bg>>
+<<Fade black 0.0 1.0 0.5>>
+
+<<ChangeSceneTo  VisualNovelPrefab S2_6_ReVip>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -3227,8 +3244,11 @@ title: club_11_viproom
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<StartBackgroundLoop Infront_VIProom>>
 //배경 11시 이후 viproom 이미지
 //배경 클릭 시: #주변 공기가 달라진 것 같아. #눈 앞이 일렁인다. 랜덤 노출
+주변 공기가 달라진 것 같아.
+눈 앞이 일렁인다.
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -3237,7 +3257,7 @@ title: obj_viproomdoor
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
-//효과지수3
+<<Act 지수 EJisoo3 1.17 0.322 black>>
 ….
 문이 잠겨있다.
 안에서 소리가 들리는데?
@@ -3251,16 +3271,18 @@ title: obj_viproomdoor
 ???: ….
 ???: 슬슬 거래 방식을 바꿀 때도 안 됐나?
 ???: 우리가 그동안 쌓아온 신뢰가 있는데 말이야….
-<<wait 2.0>>
+<<wait 1.0>>
 
 ….
 ….
-//효과지수3
+//<<Act 지수 EJisoo3 1.17 0.322 black>>
 무슨 얘기지?
 다행히 내가 밖에 있는 걸 눈치채진 못한 것 같다.
 ….
 클럽 뒷문 주차장에 차를 대기시켜 놨다고….
 그쪽으로 가볼까?
+
+<<Hide 지수>>
 
 <<jump club_stair>>
 
@@ -3271,24 +3293,28 @@ title: club_stair
 
 ---
 
-//지수 이미지 효과에서 서서히 원래 지수이미지로 돌아옴
+<<DrawFadeIn Jisoo1 1.17 0.322>>
 바깥 공기가 들어온다.
 다시 머리가 맑아진 것 같아.
-<<wait 2.0>>
+<<wait 1.0>>
 
 ….
 뒷문이 열려있다.
 슬쩍 내다볼까?
 
 //문틈 사이로 보는 듯한 주차장 배경
+<<Scene Stair_parklot>>
 
 
 <<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Hide  Jisoo1>>
 ….
 다 비슷하게 생겼네.
 ….
 저 중에 지원이가 탔던 차가 있는 것 같은데…?
 ….
+
+<<Hide 지수>>
 
 //사운드
 //누군가 건든 것처럼 화면이 한번 흔들림
@@ -3299,6 +3325,8 @@ title: club_stair
 건우 오빠가 서 있었다.
 
 //건우, 지수 이미지
+<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 건우 Geonwoo1 0.322 0.227 black>>
 건우: 여기서 뭐해?
 지수: 아…. 오빠.
 
@@ -3310,7 +3338,7 @@ title: club_stair
 지수: 분명 저 차 중에 하나를 타고 간 것 같은데…
 지수: 대체 어디로 갔는지….
 지수: ….
-<<wait 2.0>>
+<<wait 1.0>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -3577,7 +3605,7 @@ title: obj_brokenglasses
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
-title: memory_brokenglasses
+title: memory_BrokenGlasses
 
 ---
 

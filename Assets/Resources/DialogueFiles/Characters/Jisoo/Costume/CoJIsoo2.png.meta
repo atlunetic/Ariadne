@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CoJIsoo2_0
+      name: CoJisoo2_0
       rect:
         serializedVersion: 2
         x: 270
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 116b8faffdbf7c24ea997b67ea521ea4
-      internalID: -613261302
+      spriteID: faf49acc4428783409c527f6a47ad65a
+      internalID: 1758911269
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CoJIsoo2_0: -613261302
+      CoJisoo2_0: 1758911269
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
