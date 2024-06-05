@@ -25,9 +25,15 @@ public class Inventory : MonoBehaviour
             return;
         }
         instance = this;
+        items = GameManager.instance.items;
+    }
+
+    void Start()
+    {
+        items.Add(GameManager.instance.items);
     }
     #endregion
-
+ 
 
     public bool Additem(item _item)
     {
