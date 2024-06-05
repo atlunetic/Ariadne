@@ -18234,7 +18234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: startNode
-      value: Hospital
+      value: S1_Nightmare
       objectReference: {fileID: 0}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: yarnProgram
@@ -22577,7 +22577,7 @@ MonoBehaviour:
   Hospitalbutton: {fileID: 1599614744}
   Officetelbutton: {fileID: 1016585416}
   Clubbutton: {fileID: 575705258}
-  "\uD3B8\uC758\uC810711button": {fileID: 0}
+  "\uD3B8\uC758\uC810711button": {fileID: 179173891}
   CurrLocationbutton: {fileID: 276803897}
 --- !u!1001 &2111141003
 PrefabInstance:
