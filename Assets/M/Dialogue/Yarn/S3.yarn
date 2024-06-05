@@ -481,7 +481,7 @@ title: OfficetelDoorwcard
 	확실히… 위험한 일에 엮인 것 같아.
 	빨리 움직여야겠다.
 
-	<<HideAll>
+	<<HideAll>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -512,7 +512,7 @@ title: Ending4
 대체 이게 무슨….
 ….
 //엔딩 4. 조직원에게 감금되다.
-<<HideAll>
+<<HideAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
