@@ -24,11 +24,6 @@ public class MapController : MonoBehaviour
 
     public Button CurrLocationbutton;
 
-    void Start()
-    {
-        
-    }
-
     [YarnCommand("GoHome")]
     public void GoHome(){
         CurrPoint.transform.position = new Vector2(-254,156);
@@ -70,6 +65,7 @@ public class MapController : MonoBehaviour
         CurrPoint.anchoredPosition = new Vector2(715,204);
         Menu.instance.UI_off();
         DisableButton(Officetelbutton);
+        CallYarn.instance.InS3();
     }
 
     [YarnCommand("GoClub")]
@@ -77,21 +73,10 @@ public class MapController : MonoBehaviour
         SceneManager.LoadScene("S2_1_ClubCounter_Bar");
         CurrPoint.anchoredPosition = new Vector2(108,-61);
         DisableButton(Clubbutton);
-        //wrongplaceS2
-    }
-
-    public void AfterS1(UnityAction wrongplace){
         Menu.instance.UI_off();
-        Homebutton.onClick.RemoveAllListeners();
-        Parkbutton.onClick.RemoveAllListeners();
-        Officetelbutton.onClick.RemoveAllListeners();
-        BarStreetbutton.onClick.RemoveAllListeners();
-
-        Homebutton.onClick.AddListener(wrongplace);
-        Parkbutton.onClick.AddListener(wrongplace);
-        Officetelbutton.onClick.AddListener(wrongplace);
-        BarStreetbutton.onClick.AddListener(wrongplace);
+        CallYarn.instance.InS2();
     }
+    
 
     public void DisableButton(Button Next){
         CurrLocationbutton.enabled = true;

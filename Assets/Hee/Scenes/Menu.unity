@@ -1329,7 +1329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6443902474889287042, guid: ac702809af30321489d33475316bd1aa, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8195012708279039692, guid: ac702809af30321489d33475316bd1aa, type: 3}
       propertyPath: m_Pivot.x
@@ -11394,6 +11394,7 @@ MonoBehaviour:
   Phone: {fileID: 1803340215}
   Inventory: {fileID: 1449754556}
   Diary: {fileID: 1266879036}
+  BlockClick: 0
 --- !u!1 &1266879036 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 503128792475686430, guid: a95c8f77a7cd42a48a39917efb4b3004, type: 3}
