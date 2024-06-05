@@ -205,7 +205,6 @@ title: Jiwon_Room
 
 ---
 
-<<Scene NoBG>>
 
 매일 집에만 있더니. 꼭 찾을 때 없어.
 아무튼 얘는 깔끔하게 해놓고 사네.
@@ -216,7 +215,7 @@ title: Jiwon_Room
 
 ===
 
-title: Memory_LetterContent
+title: memory_Letter
 
 ---
 
@@ -230,7 +229,7 @@ title: Memory_LetterContent
 
 ===
 
-title: memory_Letter
+title: Letter
 
 ---
 
@@ -314,7 +313,7 @@ title: JisooPhone
 ‘배고프다~ 같이 맛있는 거 먹자.’
 (전송)
 
-//###지수는 없는건가요
+//###지수는 없는건가요(지수 앞에서 이미 생성된 상태)
 <<PlayAudio PhoneAlarm>>
 <<wait 0.5>>
 어? 설마 휴대폰도 두고 갔나?
@@ -346,7 +345,7 @@ title: FoundJiwonPhone
 
 <<wait 1.0>>
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<UpdateAct 지수 Jisoo2>>
 
 ….
 맨날 휴대폰 끼고 사는 애가….
@@ -360,7 +359,7 @@ title: FoundJiwonPhone
 
 
 혹시 모르니 지원이의 휴대폰을 확인해보자.
-//### 캐릭터 종료 빠진건지 원래
+<<Hide  지수>>
 
 <<ActivePhone PhoneController>>
 
@@ -619,7 +618,7 @@ title: Weedhof
 ….
 사람들이 저런 걸 보고 마약에 호기심을 갖게 되는 거 아닐까?
 
-<<Hide Suljiproad_Poster>>
+<<HideAll>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -636,10 +635,11 @@ title: Drugsnacks
 어릴 때 나도 여기 자주 왔었지.
 지금은 웨이팅 필수 맛집이 돼버렸네….
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<UpdateAct 지수 Jisoo2>>
 그런데….
 중독적이라는 걸 굳이 마약이라는 단어로 표현해야 하나?
 
+<<HideAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -684,12 +684,10 @@ title: HospitalWaitingRoom
 
 의사선생님: “좀 어떠셨어요.”
 
-<<Act 지수 Jisoo1 1.17 0.322 black>>
-
 지수: “여전하네요. 약이 다 떨어져가서 왔어요.”
 의사 선생님: “일에 집중하시는 데 어려움은 없으셨나요?”
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<UpdateAct 지수 Jisoo2>>
 지수: ...
 지수: 병원에 매번 오기도 귀찮은데.
 지수: 약을 더 처방해달라고 할까?
@@ -714,6 +712,7 @@ title: HospitalWaitingRoom
                 의사 선생님은 할 말이 끝났다는 듯 컴퓨터로 시선을 옮겼다.
                 어쩔 수 없지. 돌아가자.
                     // 씬 변경: 지도
+                    <<HideAll>>
                     <<SetCanvasTo VisualNovelPrefab false>>
             -> 아 맞다. 그랬었지.
                 지수 “아…. 그랬죠. 참.”
@@ -722,7 +721,10 @@ title: HospitalWaitingRoom
 
                 병원을 나섰다.
                 //씬 변경: 지도
+                <<HideAll>>
                 <<SetCanvasTo VisualNovelPrefab false>>
+
+
 
 ===
 
@@ -797,6 +799,7 @@ title: WalletO
 일단은 영수증에 나온 편의점을 찾아가야 할 것 같아.
 
 <<DeleteItem  Inventory Wallet>>
+<<Hide  지수>>
 <<New711 Controllers>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -985,9 +988,11 @@ title: JW_Meds
 
 <<Hide Meds(E)_0>>
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<UpdateAct 지수 Jisoo2>>
 
 나한테 말도 안하고. 대체 무슨 일이 있는 거야.
+
+<<Hide 지수>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 

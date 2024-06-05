@@ -26,6 +26,7 @@ public class ActionPanelButtons : MonoBehaviour
         Inventory.instance.UseItem(connectedItem.itemName);
         Debug.Log(connectedItem.itemName + " is currently being used");
 
+
         if(connectedItem.itemName == "WaterCup" && currentscene.name == "S2_2_Table")
         {
             runner.StartDialogue("UsedWaterCup");
@@ -36,16 +37,27 @@ public class ActionPanelButtons : MonoBehaviour
             runner.StartDialogue("ClothesUsed");
         }
 
+        if(currentscene.name == "S2_7_Stairs")
+        {
+            if (connectedItem.itemName == "DrugJelly")
+            {
+                runner.StartDialogue("inventory_drugjelly");
+            }
+
+            else
+            {
+                runner.StartDialogue("inventory_notjelly");
+            }
+        }
+
+        if(connectedItem.itemName == "DrugJelly")
+
         if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended() == false)
         {
-            GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
-            dialogueCanvas.SetActive(true);
             runner.StartDialogue("WalletX");
         }
         if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended() == true)
         {
-            GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
-            dialogueCanvas.SetActive(true);
             runner.StartDialogue("WalletO");
             Inventory.instance.items.Remove(connectedItem);
             currentSlot.RemoveSlot();

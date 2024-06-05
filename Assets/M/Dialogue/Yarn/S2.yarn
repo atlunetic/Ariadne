@@ -8,13 +8,14 @@
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 이런 데가 있구나....
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<UpdateAct 지수 Jisoo2>>
 왠지 모르게 익숙한 분위기다.
 <<wait 1.0>>
 ….
 <<wait 1.0>>
 그런데 클럽엔 관심도 없다던 애가 여긴 왜 왔었대?
 아무튼, 들어가보자.
+
 <<jump meet_gunwoo>>
 
 
@@ -29,7 +30,7 @@ title: meet_gunwoo
 
 <<Act 건우 Geonwoo0 0.322 0.227 black>>
 
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<UpdateAct 지수 Jisoo4>>
 어...
 뭔가 익숙한 얼굴이 보인다.
 <<wait 1.0>>
@@ -42,18 +43,18 @@ title: meet_gunwoo
 건우: 지…. 
 <<wait 2.0>>
 
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<UpdateAct 지수 Jisoo1>>
 건우 오빠다.
 곤란한 표정을 짓고 있는 걸 보니….
 분명히 지원인지 나인지 구분 못하는 것 같은데.
 몇 년째 보는데 항상 저런다니까.
 <<wait 1.0>>
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<UpdateAct 지수 Jisoo2>>
 ….
 뭐라고 대답할까?
 -> 지원이라고 거짓말 해보자.
-	<<Act 지수 Jisoo1 1.17 0.322 black>>
+	<<UpdateAct 지수 Jisoo1>>
 	지수: 저 지원이예요.
 
 	<<Act 건우 Geonwoo4 0.322 0.227 black>>
@@ -1553,6 +1554,7 @@ title: event_gunwoo_q6a
 //선택지 랜덤 출력
 -> 지원이가 여기서 뭘 하고 다녔는지 알고 싶다.
 	//설득점수 +1
+	<<set $persuade = $persuade + 1>>
 	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 지원이가 여기서 뭘 하고 다녔는지라도 알고 싶어요.
 	지수: 그러면…. 
@@ -1565,6 +1567,7 @@ title: event_gunwoo_q6a
 	<<jump event_gunwoo_end>>
 -> 지원이가 연락했던 마약상에 대해 알고 싶다.
 	//설득점수 -1
+	<<set $persuade = $persuade - 1>>
 	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 지원이가 연락했던 마약상에 대해 알고 싶어요.
 	지수: 그러면….
@@ -1612,6 +1615,7 @@ title: event_gunwoo_q6b
 //선택지 랜덤 출력
 -> 지원이가 연락했던 마약상에 대해 알고 싶다.
 	//설득점수 -1
+	<<set $persuade = $persuade - 1>>
 	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 지원이가 연락했던 마약상에 대해 알고 싶어요.
 	지수: 그러면….
@@ -1629,6 +1633,7 @@ title: event_gunwoo_q6b
 	<<jump event_gunwoo_end>>
 -> 지원이가 여기서 뭘 하고 다녔는지 알고 싶다.
 	//설득점수 +1
+	<<set $persuade = $persuade + 1>>
 	<<Act 지수 Jisoo3 1.17 0.322 black>>
 	지수: 지원이가 여기서 뭘 하고 다녔는지라도 알고 싶어요.
 	지수: 그러면…. 
@@ -3264,8 +3269,8 @@ title: obj_viproomdoor
 귀를 기울여보자.
 ….
 
-??: 클럽 뒷문 주차장에 차 대기시켜 뒀습니다.
-: 그래. 요즘 별 이상한 애들이 꼬여.
+???: 클럽 뒷문 주차장에 차 대기시켜 뒀습니다.
+???: 그래. 요즘 별 이상한 애들이 꼬여.
 ???: 어떻게 알고 정보를 캐러 오는지….
 ???: 어제도 한 놈 걸려서 잡아뒀지.
 ???: ….
@@ -3275,7 +3280,7 @@ title: obj_viproomdoor
 
 ….
 ….
-//<<Act 지수 EJisoo3 1.17 0.322 black>>
+<<UpdateAct 지수 EJisoo2>>
 무슨 얘기지?
 다행히 내가 밖에 있는 걸 눈치채진 못한 것 같다.
 ….
@@ -3292,6 +3297,8 @@ title: obj_viproomdoor
 title: club_stair
 
 ---
+
+<<Scene  Clubstair_bg>>
 
 <<DrawFadeIn Jisoo1 1.17 0.322>>
 바깥 공기가 들어온다.
@@ -3327,6 +3334,7 @@ title: club_stair
 //건우, 지수 이미지
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 <<Act 건우 Geonwoo1 0.322 0.227 black>>
+
 건우: 여기서 뭐해?
 지수: 아…. 오빠.
 
@@ -3340,12 +3348,20 @@ title: club_stair
 지수: ….
 <<wait 1.0>>
 
-<<SetCanvasTo VisualNovelPrefab false>>
+<<set $rand = random_range(1,4)>>
+<<if $rand < 2>>
+	<<jump club_stair_choosethecar1>>
+<<elseif $rand <3>>
+	<<jump club_stair_choosethecar2>>
+<<else>>
+	<<jump club_stair_choosethecar3>>
+<<endif>>
+
 
 
 ===
 
-title: club_stair_choosethecar
+title: club_stair_choosethecar1
 
 ---
 
@@ -3353,18 +3369,60 @@ title: club_stair_choosethecar
 건우: 그래서 지원이가 저 중에 무슨 차를 탔는데?
 
 //선택지 랜덤하게 뜸
+
 -> 왼쪽 차
 	….
 	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar>>
-
+	<<jump club_stair_choosethecar2>>
 -> 오른쪽 차
 	….
 	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar>>
-
+	<<jump club_stair_choosethecar3>>
 -> 가운데 차
 	<<jump club_stair_middlecar>>
+
+
+===
+
+title: club_stair_choosethecar2
+
+---
+
+건우: ….
+건우: 그래서 지원이가 저 중에 무슨 차를 탔는데?
+
+//선택지 랜덤하게 뜸
+-> 가운데 차
+	<<jump club_stair_middlecar>>
+-> 오른쪽 차
+	….
+	저 차가 아닌 것 같아.
+	<<jump club_stair_choosethecar1>>
+-> 왼쪽 차
+	….
+	저 차가 아닌 것 같아.
+	<<jump club_stair_choosethecar3>>
+
+===
+
+title: club_stair_choosethecar3
+
+---
+
+건우: ….
+건우: 그래서 지원이가 저 중에 무슨 차를 탔는데?
+
+//선택지 랜덤하게 뜸
+-> 오른쪽 차
+	….
+	저 차가 아닌 것 같아.
+	<<jump club_stair_choosethecar1>>
+-> 가운데 차
+	<<jump club_stair_middlecar>>
+-> 왼쪽 차
+	….
+	저 차가 아닌 것 같아.
+	<<jump club_stair_choosethecar3>>
 
 
 ===
@@ -3378,25 +3436,27 @@ title: club_stair_middlecar
 CCTV에 찍힌 그 인형이야.
 
 //건우, 지수가 대화하는 계단 배경으로 변경
+<<ChangeSceneTo S2_7_Stairs>>
+
 //건우 왼쪽, 지수 오른쪽
 
 <<Act 지수 Jisoo3 1.17 0.322 black>>
 <<Act 건우 Geonwoo2 0.322 0.227 black>>
 지수: 제일 오른쪽에 있는 차요.
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<UpdateAct 지수 Jisoo2>>
 지수: ….
 지수: 차 안이라도 살펴볼 수 있으면 좋을텐데….
 지수: ….
 //차 문 열리고 닫히는 사운드 재생
 
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<UpdateAct 지수 Jisoo4>>
 지수: 어…. 누가 나오는데요?
 건우: ….
 건우: 저 사람 내가 아는 사람인데.
 건우: 뭐…. 잠깐 다른 데로 데리고 갔다 오면 돼?
 
 지수: ….
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<UpdateAct 지수>>
 지수: 그렇게 할 수 있어요?
 
 건우: 응. 그런데 어디 데려갈 명분이 없긴 해.
@@ -3404,11 +3464,12 @@ CCTV에 찍힌 그 인형이야.
 
 지수: 가지고 있는 거요?
 건우: 응. 뭐든.
-<<wait 2.0>>
+<<wait 1.0>>
 
 ….
 인벤토리를 살펴보자.
 //건우, 지수 이미지 종료
+<<HideAll>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -3423,6 +3484,8 @@ title: inventory_notjelly
 <<Act 건우 Geonwoo1 0.322 0.227 black>>
 건우: ….
 건우: 다른 거 없냐?
+
+<<Hide 건우>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -3445,30 +3508,37 @@ title: inventory_drugjelly
 건우: …. 이거 마약젤리 같은데.
 
 * 마약사전에 ‘마약 젤리’가 추가되었습니다. *
+<<RevealDiary DiaryManager Page1>>
 
 지수:  네…?
 건우: 안 먹었다니 다행이네.
 
-<<Act 건우 Geonwoo1 0.322 0.227 black>>
+<<UpdateAct 건우 Geonwoo1>>
 건우: 이걸로 유인할 수 있을 것 같은데.
 건우: 내가 가져간다?
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<DeleteItem Inventory DrugJelly>>
+
+<<UpdateAct 지수 Jisoo2>>
 지수: 아…. 네.
 
 //건우, 지수이미지 종료, 그냥 계단 배경
+<<HideAll>>
 
 건우가 젤리 봉지를 들고 밖으로 향했다.
 나는 문 뒤로 몸을 숨겼다.
 ….
 ….
-<<wait 2.0>>
+
+<<wait 1.0>>
 
 건우 오빠가 수상한 사람을 데리고 계단을 내려갔다.
 ….
 지금이야. 밖으로 나가자.
 
 ….
+<<SetCanvasTo VisualNovelPrefab false>>
+<<ChangeSceneTo VisualNovelPrefab S2_8_ParkingLot>>
 <<jump club_parkinggarage>>
 
 
@@ -3478,7 +3548,7 @@ title: club_parkinggarage
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
-//배경이미지 주차장으로 변경
+
 //배경 클릭 시: #평범한 주차장이다. #관리인은 자리를 비운 모양이다. 랜덤 출력
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -3487,6 +3557,7 @@ title: club_parkinggarage
 title: obj_car_outside
 
 ---
+
 <<SetCanvasTo VisualNovelPrefab true>>
 //가운데 차 클릭할 경우
 //지수 이미지 노출X
@@ -3496,27 +3567,28 @@ title: obj_car_outside
 //선택지 랜덤하게 출력
 -> 트렁크
 	안이 잘 보이지 않는다….
-
+	<<jump obj_car_outside>>
 -> 조수석
 	안이 잘 보이지 않는다….
-
+	<<jump obj_car_outside>>
 -> 뒷자석
 	안이 잘 보이지 않는다….
-
+	<<jump obj_car_outside>>
 -> 운전석
 	차 창문이 반쯤 내려가 있다.
 	창문 틈으로 차 내부가 보인다.
 	안으로 들어가려면….
-
 	-> 문
 		문을 열어볼까…?
 		문 손잡이를 잡아 당겼다.
 		….
 		
 		//경보음&경보가 울림을 알 수 있을 법한 연출
+		//....녜...???????????
+		//사운드 우선 추가
 		어….
 		큰일이다.
-		<<wait 2.0>>
+		<<wait 1.0>>
 
 		….
 		누군가 급하게 계단을 올라오는 소리가 들린다.
@@ -3524,15 +3596,16 @@ title: obj_car_outside
 		//화면이 흔들리고, 화면이 흐려지는 연출
 		어….
 		갑작스레 느껴지는 통증에 머리가 울렸다.
-		<<wait 2.0>>
+		<<wait 1.0>>
 
 		….	
 		누군가 내 팔을 붙잡았다.
 		시야가 흐려져 간다.
 		….
-		//엔딩 3. 막다른 길: 조직원에게 붙잡힌 엔딩
-
-
+		<<Fade black 0.0 1.0 1.0>>
+		엔딩 3. 막다른 길: 조직원에게 붙잡힌 엔딩 (확인용, 추후 주석 처리)
+		<<SetCanvasTo VisualNovelPrefab false>>
+		<<ChangeSceneTo VisualNovelPrefab S0>>
 	-> 창문
 		잠금 장치에 손이 닿는다.
 		….
@@ -3542,6 +3615,7 @@ title: obj_car_outside
 
 		운전석 문을 열었다.
 		얼른 안으로 들어가보자.
+		<<ChangeSceneTo VisualNovelPrefab S2_9_Car>>
 		
 		<<jump obj_car_inside>>
 
@@ -3552,12 +3626,21 @@ title: obj_car_inside
 
 ---
 
-//배경이미지 차 내부 이미지로 변경
 //배경 클릭 시: #은은하게 담배냄새가 난다. #뭔가 이상한 냄새가 섞여있어….  랜덤 노출
 //지수 이미지 노출 X
 
 중요한 단서가 있을지도 몰라….
 꼼꼼하게 살펴보자.
+
+<<SetCanvasTo VisualNovelPrefab false>>
+===
+
+title: obj_car_inside_Default
+
+---
+
+//배경 클릭 시:
+//#은은하게 담배냄새가 난다. #뭔가 이상한 냄새가 섞여있어….  랜덤 노출
 
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
@@ -3572,21 +3655,24 @@ title: obj_navigation
 검색 목록을 볼 수 있나?
 
 ….
-/네비게이션 검색 목록 이미지
+//네비게이션 검색 목록 이미지
 
 -> 클럽 A
 	….
 	이 클럽의 주소인 것 같다.
 	<<SetCanvasTo VisualNovelPrefab false>>
-
 -> XX 오피스텔
 	….
 	….
 	….
 	수상한데?
 	주소를 기억해둬야 할 것 같아.
+	<<declare $nav = 0 as number>>
+	<<set $nav = 1>>
+	<<if visited("memory_BrokenGlasses")==true>>
+		<<jump event_movetostairs>>
+	<<endif>>
 	<<SetCanvasTo VisualNovelPrefab false>>
-
 -> 마약 떡볶이&마약 김밥
 	….
 	여기를 갔었나보네.
@@ -3603,6 +3689,7 @@ title: obj_brokenglasses
 깨져있네….
 
 <<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: memory_BrokenGlasses
@@ -3618,6 +3705,10 @@ title: memory_BrokenGlasses
 건우: ….
 건우: 미안하다.
 ???(지수): ….
+
+<<if $nav == 1>>
+	<<jump event_movetostairs>>
+<<endif>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
@@ -3636,33 +3727,39 @@ XX 오피스텔로 가보자.
 혹시 모르니까….
 네비게이션에 묻은 손자국을 닦을까?
 //슥슥 하는 효과음
-<<wait 2.0>>
+<<wait 1.0>>
 
 ….
 …됐다.
 ….
 
-<<jump club_stair_exit>>
 
+<<ChangeSceneTo VisualNovelPrefab S2_10_Stairs>>
+<<wait 1.0>>
+<<PlayAudio PhoneAlarm>>
+<<ChocotalkAlarm Controllers>>
+<<SetCanvasTo  VisualNovelPrefab false>>
 
 ===
 
-title: club_stair_chocotalk
+title: stairchocotalk1
 
 ---
 
-//배경이미지 계단으로 변경
-//초코톡 건우 알림
 //초코톡 건우와의 대화 진행
-
 <<SetCanvasTo VisualNovelPrefab true>>
-
 ….
 젤리는 어떻게 했으려나?
 궁금하네. 물어보자.
 
 //초코톡 건우와의 대화 진행
 
+===
+
+title: stairchocotalk2
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
 ….
 그러면 마약 젤리는 어떻게 처분하려나.
 ….
