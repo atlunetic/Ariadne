@@ -307,6 +307,10 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(true, "마약젤리 준다고 하면서 그거 줬어");
         AddChatToLast(true, "이미 약에 취한건지...");
         AddChatToLast(true, "구분을 못하던데?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", "chocotalk_ariadne_customerg"));  // 24
+        AddChatToLast(false, "일이 잘 안풀려?");
+        AddChatToLast(false, "클럽 고객G는 가족 얘기에 약하대.");
         
         // 이하 재넘버링 필요
 

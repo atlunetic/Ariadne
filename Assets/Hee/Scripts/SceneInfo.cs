@@ -52,10 +52,11 @@ public class SceneInfo : MonoBehaviour
         }
         MemoriesBG[3].SetActive(true);
 
-        foreach(GameObject memoryImg in GalleryController.instance.MemoryImages)
-            if(memoryImg.name == cluename+"Img"){
-                print(memoryImg.name);
-                memoryImg.SetActive(true);
+        foreach(GameObject memoryimg in GalleryController.instance.MemoryImages)
+            if(memoryimg.name == cluename+"Img"){
+                Debug.Log(memoryimg.name);
+                memoryimg.SetActive(true);
+                memoryImg = memoryimg;
             }
 
         runner.StartDialogue("memory_"+cluename);

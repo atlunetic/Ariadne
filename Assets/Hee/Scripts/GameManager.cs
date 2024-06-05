@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public string NowScene;
     public int NumOfScreenShots = 1;  // 불러오기 시 더 큰 수로 적용
     public int GeonWooScore = 0;
+    public int SaengSoo = 0;
     public bool StaffroomOpen = false;
     public List<int> ChattingLog = new List<int>();
     public List<string> PhotoList = new List<string>();
