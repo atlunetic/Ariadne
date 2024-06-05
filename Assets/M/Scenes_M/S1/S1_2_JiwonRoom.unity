@@ -503,6 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: Laptop
 --- !u!61 &456905144
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -712,6 +713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: JW_Hairpin
 --- !u!1 &814202500
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,6 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: JW_Wallet
 --- !u!1 &959610586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,6 +1235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: Drawer_News
 --- !u!61 &1286354546
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1677,6 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: 
 --- !u!1 &1991467018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,6 +1936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: JW_Meds
 --- !u!61 &2081631687
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -342,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: Letter
 --- !u!114 &297933196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,6 +557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: FoundJiwonPhone
 --- !u!1 &1050762359
 GameObject:
   m_ObjectHideFlags: 0

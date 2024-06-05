@@ -4,7 +4,7 @@ using UnityEngine;
 using Yarn.Unity;
 using UnityEngine.UI;
 
-public class StartDialogueButton: MonoBehaviour
+public class StartDialogue: MonoBehaviour
 {
     public string DialogueTitle;
     //public GameObject DialogueParent;
