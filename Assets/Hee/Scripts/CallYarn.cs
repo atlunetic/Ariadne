@@ -46,6 +46,8 @@ public class CallYarn : MonoBehaviour
         HashSet<string> FinishedDialogues = GameManager.instance.FinishedDialogues;
         Haesolchatbutton = ChocoTalkController.instance.chatbuttons["해솔"];
 
+        if(GameManager.instance.불러오기) Menu.instance.ActivePI();
+
         Callbybutton(gallerybutton, "Gallery");  // 갤러리 켰을 때
 
         Callbybutton(camerabutton, "Camera");  // 카메라 켰을 때
@@ -101,6 +103,14 @@ public class CallYarn : MonoBehaviour
         MapController.instance.BarStreetbutton.onClick.AddListener(barstreet);
         if(FinishedDialogues.Contains("BarStreet")) Iceice.Invoke();
 
+        if(FinishedDialogues.Contains("DestroySearch")) DestroySearch();
+
+        if(FinishedDialogues.Contains("DgramAlarm")) DgramAlarm();
+
+        if(FinishedDialogues.Contains("ChocotalkAlarm")) ChocotalkAlarm();
+
+        if(FinishedDialogues.Contains("New711")) New711();
+
         // 이상 저장 구현됨
 
         MapController.instance.Officetelbutton.onClick.AddListener(()=>callYarn("Officetel"));  // 3장 진입전 오피스텔 눌렀을 때
@@ -116,16 +126,19 @@ public class CallYarn : MonoBehaviour
     
     [YarnCommand("DestroySearch")]
     public void DestroySearch(){
+        GameManager.instance.FinishedDialogues.Add("DestroySearch");
         IDSearchbutton.gameObject.SetActive(false);
         drgg24chatbutton.gameObject.SetActive(true);
     }
     
     [YarnCommand("DgramAlarm")]
     public void DgramAlarm(){
+        GameManager.instance.FinishedDialogues.Add("DgramAlarm");
         GameObject dgramDot = dgrambutton.transform.GetChild(0).gameObject;
         dgramDot.SetActive(true);
         UnityAction deactiveDot = null;
-        deactiveDot = () => {dgramDot.SetActive(false);
+        deactiveDot = () => {GameManager.instance.FinishedDialogues.Remove("DgramAlarm");
+                             dgramDot.SetActive(false);
                              dgrambutton.onClick.RemoveListener(deactiveDot);};
         dgrambutton.onClick.AddListener(deactiveDot);
     }
@@ -133,20 +146,24 @@ public class CallYarn : MonoBehaviour
     [YarnCommand("ChocotalkAlarm")]
     public void ChocotalkAlarm(){
         GameObject ChocotalkDot = chocotalkbutton.transform.GetChild(0).gameObject;
+        GameManager.instance.FinishedDialogues.Add("ChocotalkAlarm");
         ChocotalkDot.SetActive(true);
         UnityAction deactiveDot = null;
-        deactiveDot = () => {ChocotalkDot.SetActive(false);
+        deactiveDot = () => {GameManager.instance.FinishedDialogues.Remove("ChocotalkAlarm");
+                             ChocotalkDot.SetActive(false);
                              chocotalkbutton.onClick.RemoveListener(deactiveDot);};
         chocotalkbutton.onClick.AddListener(deactiveDot);
     }
 
     [YarnCommand("New711")]
     public void New711(){
+        GameManager.instance.FinishedDialogues.Add("New711");
         Callbybutton(MapController.instance.편의점711button,"SevenEleven");
         UnityAction ClubActive = null;
         ClubActive = () => {Callbybutton(MapController.instance.Clubbutton,"Club_S1End");
                             MapController.instance.Clubbutton.gameObject.SetActive(true);
                             MapController.instance.편의점711button.onClick.RemoveListener(ClubActive);};
         MapController.instance.편의점711button.onClick.AddListener(ClubActive);
+        if(GameManager.instance.FinishedDialogues.Contains("SevenEleven")) ClubActive.Invoke();
     }
 }

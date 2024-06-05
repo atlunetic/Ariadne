@@ -34,6 +34,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
         UIButtons.SetActive(false);
     }
     
+    [YarnCommand("UI_off")]
     public void UI_off(){
         UIMode.SetActive(false);
         UIButtons.SetActive(true);

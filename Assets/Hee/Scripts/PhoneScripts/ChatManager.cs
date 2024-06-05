@@ -278,6 +278,20 @@ public class ChatManager : MonoBehaviour
         ChattingList.Add(new Chatting(true, "아리아드네", "Chatlist"));  // 19
         AddChatToLast(false, "지수.");
         AddChatToLast(false, "중요한 걸 잊어버리지 않았어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", "chocotalk_cctv"));  // 20
+        AddimageToLast(true, "ToAriadne");
+        AddChatToLast(true, "혹시 이 CCTV 화면... 알아볼 수 있어요?");
+        AddChatToLast(true, "실루엣이 너무 지원이 같은 사람이 있는데...");
+        AddChatToLast(true, "화질이 너무 안 좋아서 구분이 안 돼요.");
+        AddimageToLast(false, "FromAriadne");
+        AddChatToLast(false, "이 정도면 알아볼 수 있어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", "null"));  // 21
+        AddimageToLast(true, "ToAriadne2");
+        AddChatToLast(true, "혹시 이게 뭔지 알아요?");
+        AddChatToLast(false, "잘 모르겠네...");
+        AddChatToLast(false, "이건 네가 알아봐야 할 것 같아.");
         
         // 이하 재넘버링 필요
 
