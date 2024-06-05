@@ -64,8 +64,7 @@ public class ActionPanelButtons : MonoBehaviour
         }
         else
         {
-            GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
-            dialogueCanvas.SetActive(true);
+
             runner.StartDialogue("WrongItem");
         }
             //connectedItem.Use();
