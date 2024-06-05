@@ -75,6 +75,7 @@ title: meet_gunwoo
 	<<wait 2.0>>
 	//엔딩 3. ??? : 무슨 일이 일어난 걸까. 
 	<<ChangeSceneTo VisualNovelPrefab S0>>
+	
 -> 나라고 밝히자.
 	<<UpdateAct 지수 Jisoo1>>
 	지수: 저 지수예요.
