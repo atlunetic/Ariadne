@@ -287,11 +287,22 @@ public class ChatManager : MonoBehaviour
         AddimageToLast(false, "FromAriadne");
         AddChatToLast(false, "이 정도면 알아볼 수 있어?");
 
-        ChattingList.Add(new Chatting(true, "아리아드네", "null"));  // 21
+        ChattingList.Add(new Chatting(true, "아리아드네", "event_staffroom"));  // 21
         AddimageToLast(true, "ToAriadne2");
         AddChatToLast(true, "혹시 이게 뭔지 알아요?");
         AddChatToLast(false, "잘 모르겠네...");
         AddChatToLast(false, "이건 네가 알아봐야 할 것 같아.");
+
+        ChattingList.Add(new Chatting(false, "건우 오빠", "stairchocotalk1"));  // 22
+        AddChatToLast(false, "뭐라도 알아냈어?");
+        AddChatToLast(true, "오피스텔 주소를 얻었어요.");
+        AddChatToLast(true, "제일 수상해 보여서... 여기를 조사해보려구요.");
+
+        ChattingList.Add(new Chatting(false, "건우 오빠", "stairchocotalk2"));  // 23
+        AddChatToLast(true, "그런데 젤리는 어떻게 했어요?");
+        AddChatToLast(false, "");
+        AddChatToLast(true, "그런데 젤리는 어떻게 했어요?");
+
         
         // 이하 재넘버링 필요
 
