@@ -1822,14 +1822,14 @@ title: memory_StudentID
 <<SetCanvasTo VisualNovelPrefab true>>
 ???: 오빠, 왜 동생 학생증을 들고 다녀요?
 
-<<Act 건우 Geonwoo0 0.322 0.227 black>>
+
 건우: 아….
 건우: 학생인 척 하는 게 일할 때 편하거든.
 건우: 사람들이 미성년자는 의심을 잘 안 해.
 건우: 애들이 이런 거 옮긴다고 상상이나 하겠어?
 
-<<Hide 건우>>
 
+<<StopMemory  SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -2110,7 +2110,7 @@ TV: ….
 
 지수: 저게 뭐야…?
 지원: 그러게. 조심해야겠네.
-
+<<StopMemory  SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2882,7 +2882,7 @@ title: memory_VIPlist
 건우: 이게 VIP 명단이라는 거야~.
 ???: 우와….
 ???: 이런 것도 있어요?
-
+<<StopMemory  SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -3914,7 +3914,7 @@ title: memory_BrokenGlasses
 건우: ….
 건우: 미안하다.
 ???(지수): ….
-
+<<StopMemory  SceneManager>>
 <<if $nav == 1>>
 	<<jump event_movetostairs>>
 <<endif>>
