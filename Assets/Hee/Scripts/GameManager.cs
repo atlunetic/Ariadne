@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         return FindedClues.Contains("Laptop") && FindedClues.Contains("Meds") && FindedClues.Contains("Letter") &&
                FindedObjects.Contains("Drawer_Hairpin") && FindedObjects.Contains("DrawerR_Wallet") &&
                (FinishedDialogues.Contains("AfterGeonwooChatAsJiwon") || FinishedDialogues.Contains("AfterGeonwooChatAsHerself")) &&
+               FinishedDialogues.Contains("Chatlist") &&
                visited == 7;
     }
 }
