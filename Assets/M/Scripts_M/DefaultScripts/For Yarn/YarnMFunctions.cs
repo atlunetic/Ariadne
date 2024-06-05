@@ -75,20 +75,15 @@ public class YarnMFunctions : MonoBehaviour
     [YarnCommand("PersuadeScore")]
     public void PersuadeScore(int Score)
     {
-        GameManager.instance.GeonWooScore.Add(Score);
+        GameManager.instance.GeonWooScore = Score;
     }
 
-    [YarnCommand("GetScore")]
-    public void GetScore()
-    {
-        int Score = GameManager.instance.GeonWooScore;
-        return Score;
-    }
+
 
     [YarnCommand("DoorOpened")]
     public void DoorOpened(bool open)
     {
-        GameManager.instance.StaffroomOpen.Add(open);
+        GameManager.instance.StaffroomOpen = open;
     }
 
 }
