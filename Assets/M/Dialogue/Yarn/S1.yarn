@@ -697,6 +697,7 @@ title: Hospital
 생각난 김에 병원이라도 빨리 갔다 올까?
     -> 예
         <<GoHospital MapController>>
+        <<jump HospitalWaitingRoom>>
         <<SetCanvasTo VisualNovelPrefab false>>
     -> 아니오
         괜찮으려나?
