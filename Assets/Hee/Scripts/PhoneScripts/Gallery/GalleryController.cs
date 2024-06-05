@@ -10,6 +10,7 @@ public class GalleryController : MonoBehaviour
     private string Path;
     public GameObject GalleryContent;
     public Transform PictureTab;
+    public GameObject[] MemoryImages;
 
     [SerializeField]
     private GameObject emptyImage;
@@ -21,7 +22,8 @@ public class GalleryController : MonoBehaviour
     private GameObject[] originPictures;
     
     private Dictionary<string,GameObject> Pictures = new Dictionary<string, GameObject>();
-    private List<GameObject> Clues = new List<GameObject>();
+    private List<GameObject> Clues = new List<GameObject>();  // 증거 이미지 아이콘
+
 
     void Awake(){
         if(instance==null){

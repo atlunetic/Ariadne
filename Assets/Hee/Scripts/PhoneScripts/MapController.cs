@@ -31,10 +31,10 @@ public class MapController : MonoBehaviour
 
     [YarnCommand("GoHome")]
     public void GoHome(){
-        // 씬 바꾸기
         CurrPoint.transform.position = new Vector2(-254,156);
         Menu.instance.UI_off();
         DisableButton(Parkbutton);
+        SceneManager.LoadScene("S1_2_JiwonRoom");
     }
 
     [YarnCommand("GoPark")]

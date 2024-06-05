@@ -9,7 +9,6 @@ public class SceneInfo : MonoBehaviour
     public GameObject[] Objectlist;  // 상호작용 후 다음에 다시 씬에 들어왔을 때 비활성화 되어야 하는 오브젝트들
     public GameObject[] Cluelist;  // 카메라로 찍어야 하는 증거 오브젝트들
     public GameObject[] MemoriesBG;  // 기억 돌아올때 연출 배경
-    public GameObject[] MemoriesImage;  // 기억 돌아올때 팝업이미지
     void Awake(){
         SceneManager.sceneLoaded += SceneManage;
     } 
@@ -20,7 +19,7 @@ public class SceneInfo : MonoBehaviour
     void SceneManage(Scene scene, LoadSceneMode mode){
         foreach(GameObject obj in Objectlist)
 	        obj.SetActive(!GameManager.instance.FindedObjects.Contains(obj.name));
-        //GameManager.instance.NowScene = scene.name;
+        GameManager.instance.NowScene = scene.name;
     }
 
     public string FindClue(Rect rect){
@@ -53,11 +52,13 @@ public class SceneInfo : MonoBehaviour
         }
         MemoriesBG[3].SetActive(true);
 
-        foreach(GameObject memoryImg in MemoriesImage)
-            if(memoryImg.name == cluename+"Img")
+        foreach(GameObject memoryImg in GalleryController.instance.MemoryImages)
+            if(memoryImg.name == cluename+"Img"){
+                print(memoryImg.name);
                 memoryImg.SetActive(true);
+            }
 
-        //runner.StartDialogue(cluename);
+        runner.StartDialogue("memory_"+cluename);
     }
 
     [YarnCommand("StopMemory")]
