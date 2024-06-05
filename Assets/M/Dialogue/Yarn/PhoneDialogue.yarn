@@ -392,6 +392,8 @@ title: DrugDeal5
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
+
 어...진짜 거래할 수 있는 건가?
 좀 무서운데. 이거 범죄잖아.
 <<wait 1.0>>
@@ -417,6 +419,7 @@ title: DrugDeal5
 title: DrugDeal6
 
 ---
+<<SetCanvasTo VisualNovelPrefab true>>
 
 메시지를 무시했다.
 
@@ -427,6 +430,8 @@ title: DrugDeal6
 title: DrugDeal7
 
 ---
+
+<<SetCanvasTo VisualNovelPrefab true>>
 
 D가 보낸 메시지에 심장이 빨리 뛰기 시작한다.
 진짜로 마약을 보게 되면 어떡하지?
@@ -441,31 +446,35 @@ title: DrugDeal8
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 ...
 조금 긴장한 채, 나갈 준비를 했다.
 ...
 
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: DropperRecruit
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 드랍퍼? 그게 뭐 하는 거지.
 저번 달에 알바 잘려서 새로 구해야 하는데.
 ….
 월세도 내야하고…. 일단 신청해볼까?
 이상하면 안 하면 되니까.
 
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: IceiceChat
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 <<wait 0.5>>
 물건..? 지원이한테 왜 이런 연락이 와 있지?
-
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 
@@ -473,12 +482,15 @@ title: AriadneAlarm
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 //지수방 2 진입 시 바로 재생
 
 //알림 사운드
 <<DgramAlarm Controllers>>
-<<wait 2.0>>
+<<wait 1.0>>
 알림을 확인해보자.
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
