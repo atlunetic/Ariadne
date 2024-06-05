@@ -54,6 +54,7 @@ public class CallYarn : MonoBehaviour
         Haesolchatbutton = ChocoTalkController.instance.chatbuttons["해솔"];
 
         if(GameManager.instance.IsLoad) Menu.instance.ActivePI();
+        if(GameManager.instance.FindedObjects.Contains("Books_Diary")) Menu.instance.ActiveD();
 
         Callbybutton(gallerybutton, "Gallery");  // 갤러리 켰을 때
 
@@ -124,9 +125,10 @@ public class CallYarn : MonoBehaviour
 
         MapController.instance.Hospitalbutton.onClick.AddListener(()=>callYarn("Hospital"));  // 병원 눌렀을 때: Persistent!!
 
-        if(GameManager.instance.NowScene is not null) {
+        if(GameManager.instance.NowScene != "n") {
             if(GameManager.instance.NowScene.StartsWith("S2")) InS2();
             else if(GameManager.instance.NowScene.StartsWith("S3")) InS3();
+            print(GameManager.instance.NowScene);
             SceneManager.LoadScene(GameManager.instance.NowScene);
         }
 

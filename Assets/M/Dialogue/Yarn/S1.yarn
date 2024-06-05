@@ -114,9 +114,11 @@ title: Minotaur
 녀석이 서서히 내게 다가온다.
 <<DrawFadeIn Hand 0.75 0.75 2>>
 이대로 잡아먹히는걸까.
-<<wait  1.0>>
-<<Hide Hand>>
+<<wait 1.0>>
+
 <<Fade black 0.0 1.0 2.0>>
+<<wait 2.5>>
+<<Hide Hand>>
 
 <<wait 1.0>>
 <<StopAudioAll>>
@@ -179,6 +181,7 @@ title: Realized
         잠깐 들어가도 괜찮겠지.
         ….
         <<PlayAudio DoorOpeningSound>>
+        <<Scene NoBG>>
         <<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
         <<HideAll>>
         <<jump Jiwon_Room>>
@@ -205,7 +208,6 @@ title: Jiwon_Room_Default
 title: Jiwon_Room
 
 ---
-
 
 매일 집에만 있더니. 꼭 찾을 때 없어.
 아무튼 얘는 깔끔하게 해놓고 사네.
@@ -380,6 +382,7 @@ title: FoundJiwonPhone
 <<Hide 지수>>
 
 <<ActivePhone PhoneController>>
+<<SetActiveFalse VisualNovelPrefab Jiwon_Phone>>
 
 잠금도 안 걸어뒀네?
 평소 같으면 내가 휴대폰 볼까봐 기겁해서 달려 올텐데.
@@ -396,7 +399,6 @@ title: FoundJiwonPhone
 
 
 <<SetCanvasTo VisualNovelPrefab false>>
-<<SetActiveFalse VisualNovelPrefab JiwonPhone>>
 <<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom>>
 
 ===

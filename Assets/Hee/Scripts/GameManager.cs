@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     void Awake(){
         if(instance == null){
+            NowScene = "n";
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     public bool StaffroomOpen = false;
     public List<int> ChattingLog = new List<int>();
     public List<string> PhotoList = new List<string>();
+    public List<item> items = new List<item>();
     public HashSet<string> FindedObjects = new HashSet<string>();
     public HashSet<string> FindedClues = new HashSet<string>();
     public HashSet<string> FinishedDialogues = new HashSet<string>();
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
         // Letter, Meds, Laptop, Drawer_Hairpin, DrawerR_Wallet
         return FindedClues.Contains("Laptop") && FindedClues.Contains("Meds") && FindedClues.Contains("Letter") &&
                FindedObjects.Contains("Drawer_Hairpin") && FindedObjects.Contains("DrawerR_Wallet") &&
+               (FinishedDialogues.Contains("AfterGeonwooChatAsJiwon") || FinishedDialogues.Contains("AfterGeonwooChatAsHerself")) &&
                visited == 7;
     }
 }
