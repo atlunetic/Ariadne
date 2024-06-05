@@ -20,6 +20,7 @@ public class CallYarn : MonoBehaviour
     public Button chocotalkbutton;
     public Button openchatDbutton;
     public Button dgrambutton;
+    public Button ariadnebutton;
     public Button Haesolchatbutton;
     public Button work8282chatbutton;
     public Button Iceicechatbutton;
@@ -65,6 +66,9 @@ public class CallYarn : MonoBehaviour
         if(FinishedDialogues.Contains("Camera")) camera.Invoke();
         else camerabutton.onClick.AddListener(camera);
 
+        ChatManager.instance.PrintChat(19);
+        ChatManager.instance.PrintChat(18);
+
         Callbybutton(chocotalkbutton,"Chocotalk1st");  // 초코톡 켰을 때
         Callbybutton(openchatDbutton,"OpenChat");  // 오픈채팅 D 채팅창 켰을 때
 
@@ -75,6 +79,8 @@ public class CallYarn : MonoBehaviour
         drgg24 = () => {Callbybutton(IDSearchbutton, "DrugDeal");
                         openchatDbutton.onClick.RemoveListener(drgg24);};
         openchatDbutton.onClick.AddListener(drgg24);
+
+        Callbybutton(ariadnebutton, "Chatlist");
 
         Callbybutton(work8282chatbutton,"DropperRecruit");  // work8282 채팅창 켰을 때
         UnityAction work8282 = null;
@@ -119,8 +125,6 @@ public class CallYarn : MonoBehaviour
 
         if(FinishedDialogues.Contains("New711")) New711();
 
-        // 이상 저장 구현됨
-
         MapController.instance.Officetelbutton.onClick.AddListener(()=>callYarn("Officetel"));  // 3장 진입전 오피스텔 눌렀을 때
 
         MapController.instance.Hospitalbutton.onClick.AddListener(()=>callYarn("Hospital"));  // 병원 눌렀을 때: Persistent!!
@@ -131,6 +135,8 @@ public class CallYarn : MonoBehaviour
             print(GameManager.instance.NowScene);
             SceneManager.LoadScene(GameManager.instance.NowScene);
         }
+
+        // 불러온거 적용하기는 여기서 해야겠다
 
     }
 

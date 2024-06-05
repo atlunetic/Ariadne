@@ -135,15 +135,17 @@ public class ChatManager : MonoBehaviour
         else if(c.JisooSaying){
             ChatBox = Instantiate(ChatBox_Me, Chatroom.content.transform);
             ChatBox.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = c.text;
+            LayoutRebuilder.ForceRebuildLayoutImmediate(ChatBox.GetComponent<RectTransform>());
         }
         else{
             ChatBox = Instantiate(ChatBox_Opponent, Chatroom.content.transform);
             ChatBox.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = c.text;
             ChatBox.GetComponent<AudioSource>().Play();
+            LayoutRebuilder.ForceRebuildLayoutImmediate(ChatBox.GetComponent<RectTransform>());
         }
 
         // 말풍선의 content size fitter 동작 보장 -> 불필요, 삭제
-        // LayoutRebuilder.ForceRebuildLayoutImmediate(ChatBox.GetComponent<RectTransform>());
+        
 
         // 채팅방의 content size fitter 동작 보장
         LayoutRebuilder.ForceRebuildLayoutImmediate(Chatroom.content);
@@ -274,9 +276,8 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "처벌 대상이란 말입니다.");
         AddChatToLast(true, "그럼 한 번에 이만큼은 처방하지 않는다는 말씀이시죠?");
         AddChatToLast(false, "네. 그렇습니다.");
-        PrintChat(ChattingList.Count-1);
 
-        ChattingList.Add(new Chatting(true, "아리아드네", "Chatlist"));  // 19
+        ChattingList.Add(new Chatting(true, "아리아드네", "null"));  // 19
         AddChatToLast(false, "지수.");
         AddChatToLast(false, "중요한 걸 잊어버리지 않았어?");
 

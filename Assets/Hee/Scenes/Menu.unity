@@ -13922,6 +13922,7 @@ MonoBehaviour:
   chocotalkbutton: {fileID: 237761665}
   openchatDbutton: {fileID: 1598156422}
   dgrambutton: {fileID: 1291989418}
+  ariadnebutton: {fileID: 1960668349}
   Haesolchatbutton: {fileID: 0}
   work8282chatbutton: {fileID: 1627414926}
   Iceicechatbutton: {fileID: 1836137975}
@@ -15761,11 +15762,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsLoad: 0
-  IsLoad: 0
   NowScene: 
   NumOfScreenShots: 1
-  GeonWooScore: 0
-  StaffroomOpen: 0
   GeonWooScore: 0
   StaffroomOpen: 0
   ChattingLog: 
@@ -17790,7 +17788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: startNode
-      value: 
+      value: FoundJiwonPhone
       objectReference: {fileID: 0}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: yarnProgram
@@ -17802,7 +17800,7 @@ PrefabInstance:
       objectReference: {fileID: 7545569452688597077, guid: b26f8dfb85448cf4b8b358cc4be0a481, type: 3}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: startAutomatically
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: yarnScripts.Array.size
@@ -21132,6 +21130,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952300210}
   m_CullTransparentMesh: 1
+--- !u!114 &1960668349 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1164286101157389460, guid: ac702809af30321489d33475316bd1aa, type: 3}
+  m_PrefabInstance: {fileID: 762324944}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1990868899
 GameObject:
   m_ObjectHideFlags: 0
