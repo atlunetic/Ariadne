@@ -23,11 +23,13 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     public GameObject PhoneButton;
     public GameObject InventoryButton;
     public GameObject DiaryButton;
+    public GameObject MoveS2Button;
     public GameObject UIButtons;
 
     public GameObject Phone;
     public GameObject Inventory;
     public GameObject Diary;
+    public GameObject MoveS2;
 
     public bool BlockClick = false;
 
