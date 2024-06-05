@@ -3768,3 +3768,13 @@ title: stairchocotalk2
 
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
+
+title: wrongplaceS2
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+지금은 거길 갈 때가 아닌 것 같아.
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===

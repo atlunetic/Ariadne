@@ -7,20 +7,11 @@ using UnityEngine.UI;
 public class StartDialogue: MonoBehaviour
 {
     public string DialogueTitle;
-    //public GameObject DialogueParent;
-
-    /*
-    public void CanStartDialogue()
-    {
-        var runner = FindObjectOfType<DialogueRunner>();
-        DialogueParent.SetActive(true);
-        runner.StartDialogue(DialogueTitle);
-     
-    }
-    */
 
     private void OnMouseDown()
     {
+
+        if (Menu.instance.BlockClick) return;
         //DialogueParent.SetActive(true);
         var runner = FindObjectOfType<DialogueRunner>();
         runner.StartDialogue(DialogueTitle);

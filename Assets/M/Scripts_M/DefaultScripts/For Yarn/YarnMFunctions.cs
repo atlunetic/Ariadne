@@ -30,13 +30,15 @@ public class YarnMFunctions : MonoBehaviour
 
 
     public GameObject DialogueCanvas;
-    public Collider2D CanvasCollider;
+    
 
     [YarnCommand("SetCanvasTo")]
     public void SetDialogueCanvas(bool command)
     {
         DialogueCanvas.SetActive(command);
-        CanvasCollider.enabled = command;
+        if (command == true) { Menu.instance.UI_on(); }
+        else {  Menu.instance.UI_off(); }
+        
        
     }
 
@@ -55,6 +57,12 @@ public class YarnMFunctions : MonoBehaviour
         {
             Debug.LogWarning("Item not found: " + ItemName);
         }
+    }
+
+    [YarnCommand("FinishedObj")]
+    public void FinishedObjects(string ObjectName)
+    {
+        GameManager.instance.FindedObjects.Add(ObjectName);
     }
 
 }

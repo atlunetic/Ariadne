@@ -180,6 +180,7 @@ title: Realized
         ….
         <<PlayAudio DoorOpeningSound>>
         <<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
+        <<HideAll>>
         <<jump Jiwon_Room>>
 
 
@@ -369,10 +370,12 @@ title: FoundJiwonPhone
 
 <<ActivePI MenuUI>>
 <<PlayAudio PhoneAlarm>>
+<<DgramAlarm Controllers>>
 <<wait 0.5>>
 
 어... 연락이 온 것 같은데.
 확인해볼까?
+
 
 
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -841,6 +844,7 @@ title: Club_S1End
 
 <<GoClub MapController>>
 <<jump StartClub>>
+
 ===
 
 
