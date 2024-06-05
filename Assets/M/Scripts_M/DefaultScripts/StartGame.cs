@@ -7,7 +7,7 @@ public class StartGame : MonoBehaviour
 {
     public void StartScene()
     {
+          SceneManager.LoadScene("Menu");
           SceneManager.LoadScene("S1");
-          SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
     }
 }

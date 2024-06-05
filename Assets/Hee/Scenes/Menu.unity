@@ -11478,10 +11478,12 @@ MonoBehaviour:
   PhoneButton: {fileID: 6173716002016111166}
   InventoryButton: {fileID: 302066266}
   DiaryButton: {fileID: 1871308458}
+  MoveS2Button: {fileID: 0}
   UIButtons: {fileID: 558936099}
   Phone: {fileID: 1803340215}
   Inventory: {fileID: 1449754556}
   Diary: {fileID: 1266879036}
+  MoveS2: {fileID: 0}
   BlockClick: 0
 --- !u!1 &1266879036 stripped
 GameObject:
@@ -15106,6 +15108,7 @@ MonoBehaviour:
   StaffroomOpen: 0
   ChattingLog: 
   PhotoList: []
+  items: []
   visited: 0
 --- !u!224 &1617503739
 RectTransform:
@@ -24645,6 +24648,6 @@ GameObject:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1617503739}
   - {fileID: 1260337733}
   - {fileID: 1699657713}
-  - {fileID: 1617503739}

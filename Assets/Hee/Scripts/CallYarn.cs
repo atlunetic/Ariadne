@@ -125,9 +125,10 @@ public class CallYarn : MonoBehaviour
 
         MapController.instance.Hospitalbutton.onClick.AddListener(()=>callYarn("Hospital"));  // 병원 눌렀을 때: Persistent!!
 
-        if(GameManager.instance.NowScene is not null) {
+        if(GameManager.instance.NowScene != "n") {
             if(GameManager.instance.NowScene.StartsWith("S2")) InS2();
             else if(GameManager.instance.NowScene.StartsWith("S3")) InS3();
+            print(GameManager.instance.NowScene);
             SceneManager.LoadScene(GameManager.instance.NowScene);
         }
 

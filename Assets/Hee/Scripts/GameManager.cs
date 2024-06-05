@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     void Awake(){
         if(instance == null){
+            NowScene = "n";
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
     }
 
     public bool IsLoad = false;  // 불러오기 시 true
-    public string NowScene = null;
+    public string NowScene;
     public int NumOfScreenShots = 1;  // 불러오기 시 더 큰 수로 적용
     public int GeonWooScore = 0;
     public bool StaffroomOpen = false;
