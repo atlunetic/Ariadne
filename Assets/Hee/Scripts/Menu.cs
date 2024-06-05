@@ -29,13 +29,17 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     public GameObject Inventory;
     public GameObject Diary;
 
+    public bool BlockClick = false;
+
     public void UI_on(){
+        BlockClick = true;
         UIMode.SetActive(true);
         UIButtons.SetActive(false);
     }
     
     [YarnCommand("UI_off")]
     public void UI_off(){
+        BlockClick = false;
         UIMode.SetActive(false);
         UIButtons.SetActive(true);
         Phone.SetActive(false);

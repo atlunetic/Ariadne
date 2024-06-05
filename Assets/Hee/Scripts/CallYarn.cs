@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using Yarn.Unity;
 
 public class CallYarn : MonoBehaviour
 {
+    public static CallYarn instance;
+
+    void Awake(){
+        if(instance == null)
+            instance = this;
+    }
     Dictionary<string, bool> IsDialogShowed;
     public Button gallerybutton;
     public Button camerabutton;
@@ -25,7 +32,7 @@ public class CallYarn : MonoBehaviour
         StartCoroutine("LateStart");
     }
 
-    private void callYarn(string dialogname){
+    public void callYarn(string dialogname){
         var runner = FindObjectOfType<DialogueRunner>();
         if(runner is not null && runner.NodeExists(dialogname)){
             runner.StartDialogue(dialogname);
@@ -34,7 +41,7 @@ public class CallYarn : MonoBehaviour
     }
 
     // 버튼 클릭 이벤트로 얀 다이얼로그를 한 번만 부를 때 사용
-    void Callbybutton (Button button, string dialogname){
+    public void Callbybutton (Button button, string dialogname){
         if(GameManager.instance.FinishedDialogues.Contains(dialogname)) return;
         UnityAction myAction = null;
         myAction = () => {callYarn(dialogname); button.onClick.RemoveListener(myAction);};
@@ -46,7 +53,7 @@ public class CallYarn : MonoBehaviour
         HashSet<string> FinishedDialogues = GameManager.instance.FinishedDialogues;
         Haesolchatbutton = ChocoTalkController.instance.chatbuttons["해솔"];
 
-        if(GameManager.instance.불러오기) Menu.instance.ActivePI();
+        if(GameManager.instance.IsLoad) Menu.instance.ActivePI();
 
         Callbybutton(gallerybutton, "Gallery");  // 갤러리 켰을 때
 
@@ -117,6 +124,45 @@ public class CallYarn : MonoBehaviour
 
         MapController.instance.Hospitalbutton.onClick.AddListener(()=>callYarn("Hospital"));  // 병원 눌렀을 때: Persistent!!
 
+        if(GameManager.instance.NowScene is not null) {
+            if(GameManager.instance.NowScene.StartsWith("S2")) InS2();
+            else if(GameManager.instance.NowScene.StartsWith("S3")) InS3();
+            SceneManager.LoadScene(GameManager.instance.NowScene);
+        }
+
+    }
+
+    public void InS2(){
+        MapController.instance.CurrPoint.anchoredPosition = new Vector2(108,-61);
+        MapController.instance.Homebutton.onClick.RemoveAllListeners();
+        MapController.instance.Parkbutton.onClick.RemoveAllListeners();
+        MapController.instance.Officetelbutton.onClick.RemoveAllListeners();
+        MapController.instance.BarStreetbutton.onClick.RemoveAllListeners();
+        MapController.instance.Hospitalbutton.onClick.RemoveAllListeners();
+
+        UnityAction wrongplace = () => callYarn("wrongplaceS2");
+        MapController.instance.Homebutton.onClick.AddListener(wrongplace);
+        MapController.instance.Parkbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Officetelbutton.onClick.AddListener(wrongplace);
+        MapController.instance.BarStreetbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Hospitalbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Clubbutton.enabled = false;
+    }
+    public void InS3(){
+        MapController.instance.CurrPoint.anchoredPosition = new Vector2(715,204);
+        MapController.instance.Homebutton.onClick.RemoveAllListeners();
+        MapController.instance.Parkbutton.onClick.RemoveAllListeners();
+        MapController.instance.Clubbutton.onClick.RemoveAllListeners();
+        MapController.instance.BarStreetbutton.onClick.RemoveAllListeners();
+        MapController.instance.Hospitalbutton.onClick.RemoveAllListeners();
+
+        UnityAction wrongplace = () => callYarn("wrongplaceS2");
+        MapController.instance.Homebutton.onClick.AddListener(wrongplace);
+        MapController.instance.Parkbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Clubbutton.onClick.AddListener(wrongplace);
+        MapController.instance.BarStreetbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Hospitalbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Officetelbutton.enabled = false;
     }
 
     [YarnCommand("Searchdrgg24")]
