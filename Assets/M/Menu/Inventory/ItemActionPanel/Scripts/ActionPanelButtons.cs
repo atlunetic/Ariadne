@@ -32,12 +32,12 @@ public class ActionPanelButtons : MonoBehaviour
             runner.StartDialogue("UsedWaterCup");
         }
 
-        if(connectedItem.itemName == "Clothes")
+        else if(connectedItem.itemName == "Clothes")
         {
             runner.StartDialogue("ClothesUsed");
         }
 
-        if(currentscene.name == "S2_7_Stairs")
+        else if(currentscene.name == "S2_7_Stairs")
         {
             if (connectedItem.itemName == "DrugJelly")
             {
@@ -50,17 +50,17 @@ public class ActionPanelButtons : MonoBehaviour
             }
         }
 
-        if(connectedItem.itemName == "DrugJelly")
+        //else if(connectedItem.itemName == "DrugJelly")
 
-        if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended() == false)
+        else if(connectedItem.itemName == "Wallet")
         {
-            runner.StartDialogue("WalletX");
-        }
-        if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended() == true)
-        {
-            runner.StartDialogue("WalletO");
-            Inventory.instance.items.Remove(connectedItem);
-            currentSlot.RemoveSlot();
+            if(GameManager.instance.S1Ended() == true) {
+                    runner.StartDialogue("WalletO");
+                    Inventory.instance.items.Remove(connectedItem);
+                    currentSlot.RemoveSlot();
+                }
+                else {runner.StartDialogue("WalletX"); }
+
         }
         else
         {

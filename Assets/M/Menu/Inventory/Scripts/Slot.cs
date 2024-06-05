@@ -9,8 +9,6 @@ public class Slot : MonoBehaviour, IDropHandler
 {
     public item Item;
     public Image itemIcon;
-    public SceneItem WaterBottleSceneItemObj;
-    public Inventory inventory;
     public GameObject WrongCombineAlertPanel;
 
 
@@ -32,9 +30,10 @@ public class Slot : MonoBehaviour, IDropHandler
     {
         GameObject dropped = eventData.pointerDrag;
         Draggable draggableItem = dropped.GetComponent<Draggable>();
-        SceneItem WaterCup = SceneItem.Find("WaterCup");
+        
         if (draggableItem.currentSlot.Item.itemName == "Cup" && Item.itemName == "WaterBottle") 
         {
+            SceneItem WaterCup = SceneItem.Find("WaterCup");
             Inventory.instance.items.Remove(Item);
             Inventory.instance.items.Remove(draggableItem.currentSlot.Item);
             Inventory.instance.Additem(WaterCup.GetItem());
@@ -44,6 +43,7 @@ public class Slot : MonoBehaviour, IDropHandler
 
         else if (draggableItem.currentSlot.Item.itemName == "WaterBottle" && Item.itemName == "Cup")
         {
+            SceneItem WaterCup = SceneItem.Find("WaterCup");
             Inventory.instance.items.Remove(Item);
             Inventory.instance.items.Remove(draggableItem.currentSlot.Item);
             Inventory.instance.Additem(WaterCup.GetItem());
