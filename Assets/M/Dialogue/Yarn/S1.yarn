@@ -995,7 +995,7 @@ title: JW_Wallet
 
 * '지원의 지갑'을 습득했다. *
 
-<<Hide Wallet(E)>>
+<<Hide Wallet(E)_0>>
 <<SetActiveFalse VisualNovelPrefab DrawerR_Wallet>>
 <<FinishedObj VisualNovelPrefab DrawerR_Wallet>>
 <<SetCanvasTo VisualNovelPrefab false>>

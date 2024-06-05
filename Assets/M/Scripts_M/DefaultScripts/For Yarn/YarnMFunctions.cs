@@ -37,8 +37,10 @@ public class YarnMFunctions : MonoBehaviour
     public void SetDialogueCanvas(bool command)
     {
         DialogueCanvas.SetActive(command);
+        /*
         if (command == true) { Menu.instance.UI_on(); }
         else {  Menu.instance.UI_off(); }
+        */
         
        
     }
