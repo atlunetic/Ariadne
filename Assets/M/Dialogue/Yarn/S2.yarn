@@ -3639,8 +3639,16 @@ title: obj_car_inside_Default
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 //배경 클릭 시:
 //#은은하게 담배냄새가 난다. #뭔가 이상한 냄새가 섞여있어….  랜덤 노출
+
+<<set $rand = random_range(1,3)>>
+<<if $rand < 2>>
+	은은하게 담배냄새가 난다.
+<<else>>
+	뭔가 이상한 냄새가 섞여있어...
+<<endif>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
