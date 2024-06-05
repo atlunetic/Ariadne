@@ -30,7 +30,8 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        items.Add(GameManager.instance.items);
+        foreach(item i in items)
+            Additem(i);
     }
     #endregion
  
