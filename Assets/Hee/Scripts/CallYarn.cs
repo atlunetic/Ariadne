@@ -54,6 +54,7 @@ public class CallYarn : MonoBehaviour
         Haesolchatbutton = ChocoTalkController.instance.chatbuttons["해솔"];
 
         if(GameManager.instance.IsLoad) Menu.instance.ActivePI();
+        if(GameManager.instance.FindedObjects.Contains("Books_Diary")) Menu.instance.ActiveD();
 
         Callbybutton(gallerybutton, "Gallery");  // 갤러리 켰을 때
 

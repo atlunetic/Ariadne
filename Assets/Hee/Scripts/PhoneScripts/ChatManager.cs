@@ -90,6 +90,7 @@ public class ChatManager : MonoBehaviour
         }
         if(chatting.NextDialogue!=null){
             var runner = FindObjectOfType<DialogueRunner>();
+            GameManager.instance.FinishedDialogues.Add(chatting.NextDialogue);
             runner.StartDialogue(chatting.NextDialogue);
         }
     }
