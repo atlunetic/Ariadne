@@ -60,6 +60,7 @@ title: Poppy
 왜 이 꽃이 여기 있지…?
 경찰에 신고해야겠다.
 ….
+<<PlayAudio PhoneDial>>
 // (♫Sound: 휴대폰 버튼음)
 // 지수2
 <<UpdateAct 지수 Jisoo2>>
@@ -290,6 +291,7 @@ title: Scribble1234
 ….
 ….
 //(♫Sound: 안내음 소리)
+<<PlayAudio WrongPW>>
 -비밀번호가 일치하지 않습니다.
 //지수2
 <<UpdateAct 지수 Jisoo2>>
@@ -382,6 +384,7 @@ title: IfnotEmployeeSuit
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //(인벤토리에서 다른 아이템을 사용할 경우)
+<<PlayAudio PocketSearch>>
 …이건 주머니가 없어.
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -395,6 +398,7 @@ title: IfEmployeeSuit
 //(인벤토리에서 ‘직원 복장’을 사용할 경우)
 ….
 //(♫Sound: 주머니 부스럭거리는 소리)
+<<PlayAudio PocketSearch>>
 //지수4
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 
@@ -423,6 +427,8 @@ title: OfficetelDoorwcard
 //(카드키 획득 후) 오브젝트 4. 오피스텔 출입문
 //(인벤토리의 카드키를 사용할 경우)
 //(♫Sound: 카드키 효과음)
+<<PlayAudio UseCard>>
+<<PlayAudio BuildingDoorOpen>>
 ….
 카드키를 가져다 대는 순간.
 누군가 내 어깨를 붙잡았다.
@@ -474,6 +480,7 @@ title: OfficetelDoorwcard
 	….
 	확실히… 위험한 일에 엮인 것 같아.
 	빨리 움직여야겠다.
+
 	<<HideAll>
 	<<SetCanvasTo VisualNovelPrefab false>>
 
@@ -496,6 +503,7 @@ title: Ending4
 ….
 ….
 //(♫Sound: 바닥에 떨어지는 쿵-소리)
+<<PlayAudio FalldownJisu>>
 
 //화면 블랙아웃, 엔딩 일러 팝업
 
@@ -595,6 +603,9 @@ title: Officetel15thfloor
 //장소 3. 오피스텔 꼭대기, 15층
 //(♫Sound: 엘리베이터 도착음)
 //(♫Sound: 아래층에서 소란스러운 소리가 들려옴+이후 문 닫히는 소리)
+<<PlayAudio ElevatorArrive>>
+<<PlayAudio ElevatorDoorOpen>>
+<<PlayAudio Crowded>>
 //지수2
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 ….
@@ -681,7 +692,7 @@ title: GangEvent
 ….
 
 //(♫Sound: 갑자기 누군가 가까워지는 소리가 복도에서 울림)
-
+<<PlayAudio CloserGang>>
 //지수4
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 어….
@@ -710,6 +721,7 @@ title: GangEvent
 	….
 
 	//(♫Sound: 수상한 사람이 멀어지는 소리)
+	<<PlayAudio FarawayGang>>
 	….
 	….
 	//지수 이미지 등장, 지수1
@@ -743,8 +755,9 @@ title: Ending4_2
 어….
 큰일이다.
 //(♫Sound: 휴대폰 다이얼 버튼음)
-조직원이 휴대폰을 꺼내 어딘가로 전화를 걸었다.
 
+조직원이 휴대폰을 꺼내 어딘가로 전화를 걸었다.
+<<PlayAudio PhonecallGang>>
 조직원: 쥐새끼가 들어왔다.
 //화면 어두워짐, 엔딩일러 팝업
 <<HideAll>>
@@ -972,6 +985,7 @@ title: JiwonIn1403
 지원: ….
 지원이를 일으켜 세웠다.
 //(♫Sound: 털썩 하고 주저앉는 소리)
+<<PlayAudio FalldownJiwon>>
 …!
 //지원2
 <<UpdateAct 지원 Jiwon2>>
@@ -1017,6 +1031,7 @@ title: escapegame_intro
 ---
 
 //14층 배경
+<<PlayAudio ChooseMinigame 1.0 loop>>
 * 오피스텔을 탈출하자! *
 * 당신의 선택이 중요합니다. *
 * 조직원에게 들키지 않도록 조심합시다. *
@@ -1039,9 +1054,11 @@ title: escapegame_checkpoint1
 어디로 가지?
 
 -> 엘리베이터 쪽으로 가자
+	<<PlayAudio WhenChoose>>
 	<<jump escapegame_elevator>>
 
 -> 계단으로 가자
+	<<PlayAudio WhenChoose>>
 	//블랙화면으로 페이드 아웃
 	//계단 이미지1 페이드인
 	비상계단 문을 여니 누군가 무전기로 연락하는 소리가 들렸다.
@@ -1052,12 +1069,15 @@ title: escapegame_checkpoint1
 	//블랙화면으로 페이드아웃
 	….
 	…. 
+	<<PlayAudio LoudDoor>>
 	…헉!
 	조직원: 거기 누구야!
 	…어떡하면 좋지?
 
 	//전부 블랙화면 그대로 진행
 	-> 엘리베이터까지 빠르게 뛰어가자
+		<<PlayAudio WhenChoose>>
+		<<PlayAudio Run>>
 		//뒤쫓는 발걸음 소리
 		….
 		엘리베이터가 너무 멀다….
@@ -1065,19 +1085,23 @@ title: escapegame_checkpoint1
 		//블랙화면으로 페이드아웃
 		<<jump escapegame_checkpoint1>>
 	-> 같은 조직원인 척 하자
+		<<PlayAudio WhenChoose>>
 		….
 		하필이면 상부 직원에게 걸렸다.
 		//[발각]
 		//블랙화면으로 페이드아웃
 		<<jump escapegame_checkpoint1>>
 	-> 옆에 있는 1407호에 들어가보자
+		<<PlayAudio WhenChoose>>
 		….
 		다행히 문이 열려있었다
 		….
 		//밖에서 발걸음 소리가 서서히 사라짐
+		<<PlayAudio CloseFarFootsteps>>
 		….
 		밖이 고요해졌다. 나가볼까?
 		-> 엘리베이터 쪽으로 가자
+			<<PlayAudio WhenChoose>>
 			<<jump escapegame_elevator>>
 
 
@@ -1091,8 +1115,10 @@ title: escapegame_elevator
 근처에서 누군가의 발소리가 들린다. 어떻게 할까?
 
 -> 옆에 보이는 캐비넷에 몸을 숨기자
+	<<PlayAudio WhenChoose>>
 	//블랙화면으로 페이드아웃
 	//사운드: 발소리가 들리다가 멀어짐
+	<<PlayAudio CloseFarFootsteps>>
 	마침 둘이 들어갈 수 있을 크기라서 다행이지….
 	아니었으면….
 	지원: ….
@@ -1101,8 +1127,11 @@ title: escapegame_elevator
 	엘리베이터를 탔다
 	<<jump escapegame_checkpoint2>>
 -> 엘리베이터까지 빠르게 뛰어가자
+	<<PlayAudio WhenChoose>>
+	<<PlayAudio Run>>
 	조직원: 너 뭐야!!!
 	-> 같은 조직원인 척 하자
+		<<PlayAudio WhenChoose>>
 		//블랙화면으로 페이드 아웃
 		….
 		하필이면 상부 직원에게 걸렸다.
@@ -1110,24 +1139,30 @@ title: escapegame_elevator
 		//블랙화면으로 페이드아웃
 		<<jump escapegame_checkpoint1>>
 	-> 무시하고 뛰어가자
+		<<PlayAudio WhenChoose>>
 		//블랙화면으로 페이드 아웃
 		….
 		겨우 엘리베이터를 탔다.
 		<<jump escapegame_checkpoint2>>
 -> 옆에 있는 1401호에 들어가보자
+	<<PlayAudio WhenChoose>>
 	//블랙화면으로 페이드아웃
 	//복도 이미지1
 	….
 	문이 안열린다….
 	-> 같은 조직원인 척 하자
+		<<PlayAudio WhenChoose>>
 		….
 		다행히 믿는 눈치였다.
 		….
 		무사히 엘리베이터를 탔다.
 		//엘리베이터 이미지
 	-> 엘리베이터까지 빠르게 뛰어가자
+		<<PlayAudio WhenChoose>>
+		<<PlayAudio Run>>
 		//블랙화면으로 페이드아웃
 		….
+		<<PlayAudio BlockingGang>>
 		갑자기 나타난 다른 조직원이 가로막았다.
 		//[발각]
 		//블랙화면으로 페이드아웃
@@ -1146,9 +1181,11 @@ title: escapegame_checkpoint2
 …휴. 위험했어.
 지원: ….
 지원이가 많이 힘들어보이네….
+<<PlayAudio MoveElevator>>
 ….
 //엘리베이터 내려가는 소리
 //덜커덩 멈추는 소리
+<<PlayAudio MoveElevator>>
 헉…. 엘리베이터가 갑자기 멈췄다. 어떡하지?
 <<jump escapegame_stopelevator>>
 
@@ -1161,6 +1198,7 @@ title: escapegame_stopelevator
 
 //엘리베이터 이미지 배경
 -> 비상버튼을 눌러보자
+	<<PlayAudio WhenChoose>>
 	-꾸욱
 	….	
 	….
@@ -1168,6 +1206,7 @@ title: escapegame_stopelevator
 	<<jump escapegame_stopelevator>>
 
 -> 문을 힘으로 열어보자
+	<<PlayAudio WhenChoose>>
 	….
 	//살짝 열린 엘리베이터 문 배경
 	어? 문이 살짝 밀려서 틈이 생겼다.
@@ -1185,6 +1224,7 @@ title: escapegame_stopelevator
 	<<jump escapegame_checkpoint2>>
 
 -> 열림 버튼을 눌러보자
+	<<PlayAudio WhenChoose>>
 	//덜커덩!! 하는 소리
 	….
 	엘리베이터가 약간 움직였다
@@ -1212,6 +1252,7 @@ title: escapegame_brokenelevator
 ---
 
 -> 1층 버튼을 눌러보자
+	<<PlayAudio WhenChoose>>
 	계속해서 1층 버튼을 눌렀다.
 	….
 	…!
@@ -1233,12 +1274,14 @@ title: escapegame_brokenelevator
 	<<jump escapegame_checkpoint2>>
 
 -> 2층 버튼을 눌러보자
+	<<PlayAudio WhenChoose>>
 	계속해서 2층 버튼을 눌러도 반응이 없다.
 	….
 	여기서 시간을 지체하면 안될 것 같아.
 	<<jump escapegame_brokenelevator>>
 
 -> 밖으로 나가본다
+	<<PlayAudio WhenChoose>>
 	어쩔 수 없지….
 	여기서부턴 계단으로 내려가자.
 	지원: 하아….
@@ -1256,9 +1299,11 @@ title: escapegame_brokenelevator
 	어느 계단으로 가지...?
 
 	-> 복도 끝 비상계단	
+		<<PlayAudio WhenChoose>>
 		<<jump escapegame_checkpoint3>>
 
 	-> 정문과 가까운 중앙계단
+		<<PlayAudio WhenChoose>>
 		//계단이미지3 배경
 		정문이랑 가까우니까, 중간에 들키더라도 빨리 건물 밖으로 도망치면 될 거야!
 		….
@@ -1312,6 +1357,7 @@ title: escapegame_checkpoint3
 	…!
 	창문이랑 소화전이 보인다.
 	-> 창문으로 나가자
+		<<PlayAudio WhenChoose>>
 		1층이니까, 창문으로 나가도 괜찮을 것 같아.
 		…. 
 		지원: 니가 먼저 나가서…. 나 좀 잡아줄래?
@@ -1327,6 +1373,7 @@ title: escapegame_checkpoint3
 		….
 		지원이가 아무런 반응이 없다.
 		지수: 지원…아…?
+		<<PlayAudio Run>>
 		….
 		//조직원들이 달려오는 소리
 		//비상문이 닫히는 소리
@@ -1335,6 +1382,7 @@ title: escapegame_checkpoint3
 		<<jump escapegame_checkpoint3>>
 
 	-> 소화전을 울리자
+		<<PlayAudio WhenChoose>>
 		화재 경보를 울려서, 그 틈에 빠져나가자.
 		….
 		….
@@ -1360,6 +1408,7 @@ title: escapegame_checkpoint3
 
 -> 내가 가지고 있는 물건을 살펴보자
 	-> 지원이의 핸드폰을 이용하자
+		<<PlayAudio WhenChoose>>
 		지원이의 핸드폰…. 이걸 써볼까?
 		핸드폰 알람으로 유인하는거야.
 		….
@@ -1392,9 +1441,11 @@ title: escapegame_checkpoint3
 		나와 지원이는 정문을 향해 최대한 숨을 죽이고 빠르게 걸어갔다.
 		//[3장 선택지 게임 clear]
 		//블랙화면으로 페이드아웃
+		<<StopAudio ChooseMinigame>>
 		<<jump escapegame_success>>
 					
 	-> 직원 복장으로 변장하자
+		<<PlayAudio WhenChoose>>
 		직원 복장….
 		일단 지원이를 변장시켜서 내보내자. 
 		지원이가 탈출해서 신고할 동안 나는 숨어있으면 될 것 같아. 
