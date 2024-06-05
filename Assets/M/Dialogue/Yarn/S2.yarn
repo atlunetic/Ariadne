@@ -1315,19 +1315,19 @@ title: event_gunwoo_q5a
 	<<Act 건우 Geonwoo4 0.322 0.227 black>>
 	건우: 어…?
 	
-	<<if $ActAs == "Myself">>
-		<<jump event_gunwoo_q5_jisu1>>
-	<<elseif $ActAs == "Jiwon">>
+	<<if ActedAs() == true>>
 		<<jump event_gunwoo_q5_jiwon1>>
+	<<else>>
+		<<jump event_gunwoo_q5_jisu1>>
 	<<endif>>
 	//처음 초코톡에서 지수라 밝힌 경우 <<jump event_gunwoo_q5_jiwon1>>
 -> 지원이가 마약성 진통제를 찾아봤다.
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
-	<<if $ActAs == "Myself">>
-		<<jump event_gunwoo_q5_jisu2>>
-	<<elseif $ActAs == "Jiwon">>
+	<<if ActedAs() == true>>
 		<<jump event_gunwoo_q5_jiwon2>>
+	<<else>>
+		<<jump event_gunwoo_q5_jisu2>>
 	<<endif>>
 
 
@@ -1369,10 +1369,10 @@ title: event_gunwoo_q5b
 -> 지원이가 마약성 진통제를 찾아봤다.
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
-	<<if $ActAs == "Myself">>
-		<<jump event_gunwoo_q5_jisu1>>
-	<<elseif $ActAs == "Jiwon">>
+	<<if ActedAs() == true>>
 		<<jump event_gunwoo_q5_jiwon1>>
+	<<else>>
+		<<jump event_gunwoo_q5_jisu1>>
 	<<endif>>
 -> 지원이가 마약상을 찾아 다녔다.
 	//설득점수 +1
@@ -1382,11 +1382,11 @@ title: event_gunwoo_q5b
 
 	<<Act 건우 Geonwoo4 0.322 0.227 black>>
 	건우: 어…?
-	
-	<<if $ActAs == "Myself">>
-		<<jump event_gunwoo_q5_jisu2>>
-	<<elseif $ActAs == "Jiwon">>
+
+	<<if ActedAs() == true>>
 		<<jump event_gunwoo_q5_jiwon2>>
+	<<else>>
+		<<jump event_gunwoo_q5_jisu2>>
 	<<endif>>
 
 ===
@@ -2097,6 +2097,8 @@ title: obj_staffroomdoor
 
 <<if visited("obj_staffroomdoor") == false>>
 
+<<set $persuade = GetScore()>>
+
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지원이가 여기서 대체 뭘 했을까….
 	CCTV라도 볼 수 있으면 좋을텐데.
@@ -2576,7 +2578,7 @@ title: event_staffroom_gunwoo2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-
+<<set $persuade = GetScore()>>
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 어떡하지….
 일단 숨어야겠다…!

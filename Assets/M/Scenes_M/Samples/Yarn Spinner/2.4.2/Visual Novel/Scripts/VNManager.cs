@@ -175,8 +175,22 @@ namespace Yarn.Unity.Example {
             }
         }
 
-	
-		//M Code End
+		
+		[YarnFunction("GetScore")]
+        public static int GetScore()
+        {
+            int Score = GameManager.instance.GeonWooScore;
+            return Score;
+        }
+
+		[YarnFunction("ActedAs")]
+		public static bool ActAs()
+		{
+			return GameManager.instance.FinishedDialogues.Contains("AfterGeonwooChatAsJiwon");
+		}
+
+
+        //M Code End
 
         ///<summary> Draw(spriteName,positionX,positionY) generic function
         ///for sprite drawing</summary>
