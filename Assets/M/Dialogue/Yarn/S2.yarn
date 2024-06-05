@@ -447,18 +447,6 @@ title: ClothesUsed
 	직원 복장 옷을 입었다.
 <<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
-===
-
-title: CombineSuccess
-
----
-<<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 CoJisoo1 1.17 0.322 black>>
-
-... 좋아.
-이걸 써야겠다.
-<<Hide 지수>>
-<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -488,6 +476,7 @@ title: UsedWaterCup
 	<<UpdateAct 지수 CoJisoo2>>
 	….
 	//(♫Sound: 휘릭!하는 소리)
+	<<PlayAudio GlassChange>>
 	….
 	<<UpdateAct 지수 CoJisoo1>>
 	됐다.
@@ -756,6 +745,7 @@ title: event_gunwoo_tutorial
 ---
 
 //텍스트 볼드체
+<<PlayAudio Minigame 1.0 loop>>
 <b>* 건우와 대화해보자! *</b>
 <b>* 건우와의 대화를 통해 도움을 요청해봅시다. *</b>
 <b>* 어쩌면 건우가 도움을 줄 수도…. *</b>
@@ -1779,11 +1769,12 @@ title: event_gunwoo_fail
 <<wait 1.0>>
 
 <<UpdateAct 지수 Jisoo1>>
-지수: (예의상 웃는 표정) …. 믿을게요.
+지수: …. 믿을게요.
 
 <<UpdateAct 지수 Jisoo2>>
 건우가 자리를 떠났다.
 ….
+<<StopAudio Minigame>>
 <<Hide 지수>>
 <<Hide 건우>>
 
@@ -2008,6 +1999,7 @@ title: StaffLocker
 <<SetCanvasTo VisualNovelPrefab true>>
 
 //♫Sound: 사물함 문 덜커덩 거리는 소리
+<<PlayAudio StaffonlyLocker>>
 
 
 ….
@@ -2027,6 +2019,7 @@ title: WrongItemUsed
 <<SetCanvasTo VisualNovelPrefab true>>
 흠...
 이걸로는 안될 것 같아.
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -2042,6 +2035,7 @@ title: obj_staffonly_lockeropen
 ….
 <<Fade black 0.0 1.0 1.0>>
 //♫Sound: 열쇠 잘그락 소리
+<<PlayAudio KeytoLocker>>
 <<FadeIn>>
 ...됐다!!
 <<wait 1.0>>
@@ -2285,6 +2279,7 @@ title: game_openthedoor_intro
 ….
 <<wait 1.0>>
 <<Hide 지수>>
+<<PlayAudio Minigame>>
 * 미니게임: 헤어핀으로 문을 따자! *
 * 헤어핀을 이용해 Staff Room의 문을 열어봅시다. *
 
@@ -2345,7 +2340,7 @@ title: game_openthedoor_success
 문이 열렸다.
 누가 보기 전에 빨리 들어가자.
 ….
-
+<<StopAudio Minigame>>
 <<jump club_staffroom_inside>>
 <<SetCanvasTo VisualNovelPrefab S2_4_1_StaffRoom>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -2516,11 +2511,17 @@ title: obj_radio
 <<wait 1.0>>
 
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
+<<PlayAudio Radio1>>
 <i>공지할게… … …다.
+<<PlayAudio Radio2>>
 <i>요즘 ………를 빼가려고 하는 …들이 많아졌다.
+<<PlayAudio Radio3>>
 <i>어제도 ……가 ……해서 가둬두는 일이 생겼고….
+<<PlayAudio Radio4>>
 <i>……보안을 강화할 필……가 있으니….
+<<PlayAudio Radio5>>
 <i>이 ……를 듣고 꼭 …………
+<<PlayAudio Radio6>>
 <i>기억해야 ………….</i>
 <<Hide Radio>>
 <<wait 1.0>>
@@ -2543,6 +2544,8 @@ title: obj_radio
 <<wait 1.0>>
 //무전기 지지직 사운드
 //모스부호 사운드 시작
+<<PlayAudio Radio1>>
+<<PlayAudio Morsecode>>
 ….
 ….
 ….
@@ -2579,7 +2582,7 @@ title: event_staffroom
 <<SetCanvasTo VisualNovelPrefab true>>
 //무전 핸드폰 전송 후 바로 연결
 //문 밖에서 발소리가 가까워지는 사운드
-
+<<PlayAudio StaffOpenDoor>>
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 ….
 어….
@@ -2602,6 +2605,7 @@ title: event_staffroom_gunwoo1
 <<SetCanvasTo VisualNovelPrefab true>>
 누구지…?
 //문 열리는 사운드
+<<PlayAudio StaffComeIn>>
 문이 열리고, 클럽 직원C가 들어왔다.
 눈이 마주쳤다.
 
@@ -2770,6 +2774,7 @@ title: event_staffroom_gunwoo2_choose
 	???: 내가 옷을 락카 안에 뒀던가?
 	
 	//가까워지는 발소리 사운드
+	<<PlayAudio FootstepsGetcloser>>
 	발소리가 가까워졌다.
 	….
 	….
@@ -2779,13 +2784,16 @@ title: event_staffroom_gunwoo2_choose
 	제발 열지마라….
 	….
 	//무전기 지지직 소리
+	<<PlayAudio Radio6>>
 	???: 아….
 	???: 가야겠네.
 	
 	//멀어지는 발소리 사운드
+	<<PlayAudio FootstepsFaraway>>
 	….
 	….
 	//문 닫히는 사운드
+	<<PlayAudio StaffCloseDoor>>
 	갔나…?
 	….
 	<<wait 1.0>>
@@ -3406,6 +3414,7 @@ title: game_clock_success
 
 //시계에서 빛이 새어 나온다. 빛이 화면을 뒤덮는다.
 //지수가 현기증을 느껴 정신을 잃는다. 화면이 잠깐 흐려졌다 돌아온다.
+<<PlayAudio Clock11>>
 <<Fade white 0.0 1.0 1.0>>
 <<wait 1.0>>
 
@@ -3519,6 +3528,7 @@ title: club_stair
 <<Hide 지수>>
 
 //사운드
+<<PlayAudio TouchShoulder>>
 //누군가 건든 것처럼 화면이 한번 흔들림
 //지수, 건우 이미지 노출X 
 
@@ -3784,9 +3794,8 @@ title: obj_car_outside
 		문을 열어볼까…?
 		문 손잡이를 잡아 당겼다.
 		….
-		
+		<<PlayAudio CarAlarm>>
 		//경보음&경보가 울림을 알 수 있을 법한 연출
-		//....녜...???????????
 		//사운드 우선 추가
 		어….
 		큰일이다.
@@ -3814,6 +3823,7 @@ title: obj_car_outside
 		….
 		….
 		//♫Sound: 자동차 문 열리는 소리
+		<<PlayAudio CarDoorOpen>>
 
 		운전석 문을 열었다.
 		얼른 안으로 들어가보자.
@@ -3936,6 +3946,7 @@ XX 오피스텔로 가보자.
 혹시 모르니까….
 네비게이션에 묻은 손자국을 닦을까?
 //슥슥 하는 효과음
+<<PlayAudio Wipe>>
 <<wait 1.0>>
 
 ….
