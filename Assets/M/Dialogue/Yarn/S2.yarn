@@ -2344,13 +2344,7 @@ title: cctvOptions
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
 	….
-	아리아드네에게 CCTV 사진을 찍어 보냈다.
-	<<wait 1.0>>
-	….
-	….
-	….
-	<<PlayAudio PhoneAlarm>>
-	<<ChocotalkAlarm Controllers>>
+	<<StartPhoneChat PhoneController 20>>
 	//핸드폰 알람음+빨간색 동그라미 (초코톡 알림)
 	<<Hide 지수>>
 	<<SetCanvasTo VisualNovelPrefab false>>
@@ -2379,6 +2373,8 @@ title: chocotalk_cctv
 ….
 
 //핸드폰, 지수이미지 종료
+
+<<UI_off MenuUI>>
 
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -2444,9 +2440,6 @@ title: obj_radio
 아리아드네에게 보내볼까….
 ….
 ….
-아리아드네에게 녹음 파일을 보냈다.
-….
-….
 <<wait 1.0>>
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
 <i>그럼 …… …하도록 하자. 이만.</i>
@@ -2454,22 +2447,20 @@ title: obj_radio
 ….
 무전이 끊겼다.
 //모스부호 사운드 및 상호작용 종료
-<<PlayAudio PhoneAlarm>>
-<<ChocotalkAlarm Controllers>>
+<<StartPhoneChat PhoneController 21>>
 //핸드폰 알람음+빨간색 동그라미 (초코톡 알림)
 //지수이미지 노출X
-<<wait 1.0>>
-<<jump event_staffroom>>
-
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: event_staffroom
 
 ---
 
+<<UI_off MenuUI>>
 
 <<SetCanvasTo VisualNovelPrefab true>>
-//무전기(obj_radio)이후 아무데나 한 번 마우스로 클릭하고 나면
+//무전 핸드폰 전송 후 바로 연결
 //문 밖에서 발소리가 가까워지는 사운드
 
 <<Act 지수 Jisoo4 1.17 0.322 black>>
@@ -3744,9 +3735,8 @@ XX 오피스텔로 가보자.
 
 <<ChangeSceneTo VisualNovelPrefab S2_10_Stairs>>
 <<wait 1.0>>
-<<PlayAudio PhoneAlarm>>
-<<ChocotalkAlarm Controllers>>
-<<SetCanvasTo  VisualNovelPrefab false>>
+<<StartPhoneChat PhoneController 22>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -3761,6 +3751,9 @@ title: stairchocotalk1
 궁금하네. 물어보자.
 
 //초코톡 건우와의 대화 진행
+<<StartPhoneChat PhoneControllers 23>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 

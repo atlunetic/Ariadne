@@ -15010,6 +15010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82825f283148fa149881a8119fa40410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "\uBD88\uB7EC\uC624\uAE30": 0
   NowScene: 
   NumOfScreenShots: 1
   ChattingLog: 
@@ -16904,7 +16905,7 @@ PrefabInstance:
       objectReference: {fileID: 7545569452688597077, guid: b26f8dfb85448cf4b8b358cc4be0a481, type: 3}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: startAutomatically
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: yarnScripts.Array.size
