@@ -635,7 +635,7 @@ title: Weedhof
 
 ---
 
-<<Scene NoBG>>
+<<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 <<Draw Suljiproad_Poster 0.75 0.75>>
 ….
@@ -654,7 +654,7 @@ title: Drugsnacks
 ---
 
 // 마약떡볶이&마약김밥
-<<Scene NoBG>>
+<<SetCanvasTo VisualNovelPrefab true>>
 
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 어릴 때 나도 여기 자주 왔었지.
@@ -823,7 +823,7 @@ title: WalletO
 ...
 일단은 영수증에 나온 편의점을 찾아가야 할 것 같아.
 
-<<DeleteItem  Inventory Wallet>>
+<<DeleteItem Inventory Wallet>>
 <<Hide  지수>>
 <<New711 Controllers>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -838,6 +838,8 @@ title: SevenEleven
 //이후 영수증에 적혀 있던 편의점을 클릭하면 옆의 클럽이 활성화됨.
 
 //편의점 클릭 시
+
+<<SetCanvasTo VisualNovelPrefab true>>
 
 어...
 지원이 지갑에 있던 영수증...
@@ -877,6 +879,7 @@ title: CheckAlert
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 ...
 더 살펴볼까?
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -953,6 +956,7 @@ title: memory_Laptop
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 ...
 ...
 
@@ -960,6 +964,7 @@ title: memory_Laptop
 
 ...
 
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: Drawer_News
@@ -1007,14 +1012,14 @@ title: JW_Meds
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Draw Meds(E)_0 0.75 0.75>>
+<<Draw Meds(E) 0.75 0.75>>
 
 뭐야. 처음 보는 약통인데?
 ….
 지원이가 아픈 데가 있었나…? 건강해 보였는데.
 ….
 
-<<Hide Meds(E)_0>>
+<<Hide Meds(E)>>
 
 <<UpdateAct 지수 Jisoo2>>
 
@@ -1044,6 +1049,8 @@ title: memory_Meds
 
 //화장실에서 토하고 있는 사람의 실루엣
 //밖에서 그걸 목격한 사람의 실루엣
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
