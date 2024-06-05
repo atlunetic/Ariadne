@@ -1,4 +1,11 @@
 ﻿
+title: RandomN
+
+---
+<<declare $rand = 0 as number>>
+로딩중입니다.
+
+===
 
 title: S1_Nightmare
 tags:
@@ -197,7 +204,6 @@ title: Jiwon_Room_Default
 
 ---
 
-<<declare $rand = 0 as number>>
 <<set $rand = random_range(1, 3)>>
 
 <<if $rand < 1 >>
