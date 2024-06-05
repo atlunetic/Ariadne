@@ -620,7 +620,6 @@ title: BarStreetDefault
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Scene NoBG>>
 <<set $rand = random_range(1, 3)>>
-
 <<if $rand < 2 >>
     사람들이 시끄럽게 떠들고 있다.
 <<else>>
@@ -932,6 +931,7 @@ title: Laptop
 조심스럽게 노트북을 열었다.
 
 //사운드 추가
+<<PlayAudio LaptopVideo>>
 
 * 감기약 먹방에 대해 들어보신 적 있나요? *
 * 약물 과다복용 시 발생할 수 있는 부작용들이 있는데요. *
@@ -947,7 +947,7 @@ title: Laptop
 <<Act 지수 Jisoo5 1.17 0.322 black>>
 ….
 위험한 생각 하고 있는 거 아니야…?
-
+<<StopAudio LaptopVideo>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
