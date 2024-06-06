@@ -528,7 +528,7 @@ title: Newspaper
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
-
+<<Draw Park_News 0.75 0.75>>
 *(제목) 유명 의원 A, 마약류 처방으로 경찰 입건*
 
 <<wait 1.0>>
@@ -538,6 +538,7 @@ title: Newspaper
 *해당 의원에서 처방한 약물인 ‘펜디메트라진’의 경우…*
 *과도하게 사용할 경우 정신병을 유발할 수 있다.*
 *금단현상으로는 우울증과 무기력증이 있다.*
+<<Hide Park_News>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -826,6 +827,8 @@ title: WalletO
 <<SetCanvasTo VisualNovelPrefab true>>
 ...
 지갑 안에 뭐가 있는지라도 볼까?
+
+<<UI_off MenuUI>>
 
 <<Draw receipt 0.75 0.75>>
 
