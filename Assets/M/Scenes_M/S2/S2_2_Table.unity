@@ -2358,7 +2358,6 @@ GameObject:
   - component: {fileID: 1876588577}
   - component: {fileID: 1876588576}
   - component: {fileID: 1876588575}
-  - component: {fileID: 1876588574}
   m_Layer: 0
   m_Name: ClubTable_NPCE
   m_TagString: Untagged
@@ -2381,19 +2380,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1446200440}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1876588574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876588572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogueTitle: 
 --- !u!61 &1876588575
 BoxCollider2D:
   m_ObjectHideFlags: 0
