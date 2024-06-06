@@ -80,14 +80,15 @@ public class ActionPanelButtons : MonoBehaviour
 
     public void ToggleDraggable()
     {
-        draggableObject.SetDraggable(true);
-        Debug.Log("Draggable enabled by Combine script.");
+            draggableObject.SetDraggable(true);
+            Debug.Log("Draggable enabled by script.");
 
-        AlertPanel.SetActive(true);
-        Invoke("CloseAlertPanel", 1.5f);
+            AlertPanel.SetActive(true);
+            Invoke("CloseAlertPanel", 1.5f);
 
-        // After performing functionality, hide action panel
-        HideActionPanel();
+            // After performing functionality, hide action panel
+            HideActionPanel();
+        
 
     }
 

@@ -253,13 +253,12 @@ title: Letter
 
 
 <<Draw LetterContent 0.75 0.75>>
-<<Hide LetterContent>>
+
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 뭐야.
 어제 내가 잔소리 좀 했다고 화났나?
 아니면 설거지 좀 하라고 한 거 무시해서?
 어떡하지….
-
 
 -> 뭐 자기가 알아서 하겠지.
     <<UpdateAct 지수 Jisoo2>>
@@ -267,6 +266,7 @@ title: Letter
     <<jump TowardsEnding1_1>>
 -> 미안하다고 사과하자.
     <<UpdateAct 지수 Jisoo1>>
+    <<Hide LetterContent>>
 	<<jump JisooPhone>>
 
 ===
@@ -281,6 +281,7 @@ title: TowardsEnding1_1
     -> 뭐 자기가 알아서 하겠지.
         <<jump TowardsEnding1_2>>
     -> 미안하다고 사과하자.
+        <<Hide LetterContent>>
         <<SetActiveFalse VisualNovelPrefab Letter>>
         <<FinishedObj VisualNovelPrefab Letter>>
 	    <<jump JisooPhone>>
@@ -301,9 +302,11 @@ title: TowardsEnding1_2
 
 <<if $rand > 2 >> 
     -> 뭐 자기가 알아서 하겠지.
+        <<Hide LetterContent>>
         <<Hide 지수>>
         <<jump Ending1>>
     -> 미안하다고 사과하자.
+        <<Hide LetterContent>>
         <<SetActiveFalse VisualNovelPrefab Letter>>
         <<FinishedObj VisualNovelPrefab Letter>>
         <<jump JisooPhone>>
@@ -312,7 +315,9 @@ title: TowardsEnding1_2
         <<jump Ending1>>
     -> 미안하다고 사과하자.
         <<Hide LetterContent>>
-	    <<jump JisooPhone>>
+        <<SetActiveFalse VisualNovelPrefab Letter>>
+        <<FinishedObj VisualNovelPrefab Letter>>
+        <<jump JisooPhone>>
 <<endif>>
 
 ===
@@ -755,6 +760,7 @@ title: HospitalWaitingRoom
                 어쩔 수 없지. 돌아가자.
                     // 씬 변경: 지도
                     <<HideAll>>
+                    <<Scene NoBG>>
                     <<SetCanvasTo VisualNovelPrefab false>>
             -> 아 맞다. 그랬었지.
                 지수 “아…. 그랬죠. 참.”
@@ -764,6 +770,7 @@ title: HospitalWaitingRoom
                 병원을 나섰다.
                 //씬 변경: 지도
                 <<HideAll>>
+                <<Scene NoBG>>
                 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -843,7 +850,7 @@ title: WalletO
 일단은 영수증에 나온 편의점을 찾아가야 할 것 같아.
 
 <<DeleteItem Inventory Wallet>>
-<<Hide  지수>>
+<<Hide 지수>>
 <<New711 Controllers>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -934,6 +941,8 @@ title: Diary1
 
 <<Hide Diary>>
 <<ActiveD MenuUI>>
+<<SetActiveFalse VisualNovelPrefab Books_Diary>>
+<<FinishedObj VisualNovelPrefab Books_Diary>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 

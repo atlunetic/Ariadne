@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEditorInternal.Profiling.Memory.Experimental;
 
-public class Slot : MonoBehaviour, IDropHandler
+public class Slot : MonoBehaviour ,IDropHandler
 {
     public item Item;
     public Image itemIcon;
@@ -28,32 +28,39 @@ public class Slot : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        GameObject dropped = eventData.pointerDrag;
-        Draggable draggableItem = dropped.GetComponent<Draggable>();
+
+            GameObject dropped = eventData.pointerDrag;
+            Draggable draggableItem = dropped.GetComponent<Draggable>();
+        //draggableItem.parentAfterDrag = transform;
+
+
+        if (draggableItem.currentSlot.Item.itemName == "Cup" && Item.itemName == "WaterBottle")
+            {
+                SceneItem WaterCup = SceneItem.Find("WaterCup");
+                Inventory.instance.items.Remove(Item);
+                Inventory.instance.items.Remove(draggableItem.currentSlot.Item);
+                Inventory.instance.Additem(WaterCup.GetItem());
+
+
+            }
+
+            else if (draggableItem.currentSlot.Item.itemName == "WaterBottle" && Item.itemName == "Cup")
+            {
+                SceneItem WaterCup = SceneItem.Find("WaterCup");
+                Inventory.instance.items.Remove(Item);
+                Inventory.instance.items.Remove(draggableItem.currentSlot.Item);
+                Inventory.instance.Additem(WaterCup.GetItem());
+            }
+
+            else
+            {
+                WrongCombineAlertPanel.SetActive(true);
+                Invoke("CloseWrongAlertPanel", 1.5f);
+            }
         
-        if (draggableItem.currentSlot.Item.itemName == "Cup" && Item.itemName == "WaterBottle") 
-        {
-            SceneItem WaterCup = SceneItem.Find("WaterCup");
-            Inventory.instance.items.Remove(Item);
-            Inventory.instance.items.Remove(draggableItem.currentSlot.Item);
-            Inventory.instance.Additem(WaterCup.GetItem());
-
-
-        }
-
-        else if (draggableItem.currentSlot.Item.itemName == "WaterBottle" && Item.itemName == "Cup")
-        {
-            SceneItem WaterCup = SceneItem.Find("WaterCup");
-            Inventory.instance.items.Remove(Item);
-            Inventory.instance.items.Remove(draggableItem.currentSlot.Item);
-            Inventory.instance.Additem(WaterCup.GetItem());
-        }
-
-        else
-        {
-            WrongCombineAlertPanel.SetActive(true);
-            Invoke("CloseWrongAlertPanel", 1.5f);
-        }
+        
+        
+        
     }
 
     public void CloseWrongAlertPanel()
