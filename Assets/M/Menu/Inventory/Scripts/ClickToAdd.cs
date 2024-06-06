@@ -12,7 +12,7 @@ public class ClickToAdd : MonoBehaviour
 
     private void OnMouseDown()
     {
-        //if (Menu.instance.BlockClick) return;
+        if (Menu.instance.BlockClick) { Debug.Log("ClickToAdd BlockClick"); return; }
 
         if (Inventory.instance != null && sceneItem != null)
         {

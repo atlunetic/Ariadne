@@ -1775,7 +1775,7 @@ title: obj_customer_f
 말을 걸어볼까? 
 
 -> 말을 걸어보자
-	<<Act 클럽고객F NPC_clubcustomer_F 0.322 0.227 black>>
+	<<Act 클럽고객F NPC_clubcustomer_F 0.2 0.5 black>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	클럽 고객F: ….
 	<<wait 1.0>>
