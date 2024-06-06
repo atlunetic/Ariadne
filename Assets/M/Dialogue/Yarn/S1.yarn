@@ -11,6 +11,7 @@ title: S1_Nightmare
 tags:
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 <<PlayAudio NightmareBGM 1.0 loop>>
 
 <<Scene Maze>>
@@ -152,7 +153,7 @@ title: Jisoo_Room
 <<wait 1.0>>
 <<PlayAudio DrinkingSound>>
 
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+//<<Act 지수 Jisoo1 1.17 0.322 black>>
 <<wait 1.0>>
 그나저나 처방 받은 걸 다 먹었네. 큰일이다.
 병원을 가긴 해야하는데.
@@ -183,14 +184,14 @@ title: Realized
 -> 문을 두드린다
     <<PlayAudio KnockingSound>>
     지수: “지원아. 뭐해?”
-    <<UpdateAct 지수 Jisoo4>>
+    //<<UpdateAct 지수 Jisoo4>>
     아무런 반응이 없다.
     밖에 나갔나?
-    <<UpdateAct 지수 Jisoo1>>
+    //<<UpdateAct 지수 Jisoo1>>
     -> 문을 열어본다.
         잠깐 들어가도 괜찮겠지.
         ….
-        <<Hide 지수>>
+        //<<Hide 지수>>
         <<PlayAudio DoorOpeningSound>>
         <<Scene NoBG>>
         <<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
