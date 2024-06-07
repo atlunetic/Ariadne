@@ -68,4 +68,14 @@ public class SceneInfo : MonoBehaviour
         memoryImg.SetActive(false);
         Menu.instance.UI_off();
     }
+
+    [YarnCommand("BGoff")]
+    public void BGoff(){
+        GameObject.Find("Main Camera").GetComponent<AudioSource>().Stop();
+    }
+
+    [YarnCommand("BGon")]
+    public void BGon(){
+        GameObject.Find("Main Camera").GetComponent<AudioSource>().Play();
+    }
 }
