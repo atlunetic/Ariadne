@@ -416,8 +416,7 @@ title: FoundJiwonPhone
 어... 연락이 온 것 같은데.
 확인해볼까?
 
-
-
+<<UI_on MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom>>
 

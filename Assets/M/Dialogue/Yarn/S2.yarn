@@ -3364,7 +3364,8 @@ title: club_11_viproom
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
-<<StartBackgroundLoop Infront_VIProom>>
+<<FadeIn>>
+<<StartBackgroundLoop VIProomBG>>
 //배경 11시 이후 viproom 이미지
 //배경 클릭 시: #주변 공기가 달라진 것 같아. #눈 앞이 일렁인다. 랜덤 노출
 주변 공기가 달라진 것 같아.
