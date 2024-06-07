@@ -31,7 +31,7 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         foreach(item i in items)
-            Additem(i);
+            onChangeItem.Invoke();
     }
     #endregion
  

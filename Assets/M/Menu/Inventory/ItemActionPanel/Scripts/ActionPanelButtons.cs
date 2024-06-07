@@ -27,17 +27,17 @@ public class ActionPanelButtons : MonoBehaviour
         Debug.Log(connectedItem.itemName + " is currently being used");
 
 
-        if(connectedItem.itemName == "WaterCup" && currentscene.name == "S2_2_Table")
+        if (connectedItem.itemName == "WaterCup" && currentscene.name == "S2_2_Table")
         {
             runner.StartDialogue("UsedWaterCup");
         }
 
-        else if(connectedItem.itemName == "Clothes")
+        else if (connectedItem.itemName == "Clothes")
         {
             runner.StartDialogue("ClothesUsed");
         }
 
-        else if(currentscene.name == "S2_7_Stairs")
+        else if (currentscene.name == "S2_7_Stairs")
         {
             if (connectedItem.itemName == "DrugJelly")
             {
@@ -52,20 +52,28 @@ public class ActionPanelButtons : MonoBehaviour
 
         //else if(connectedItem.itemName == "DrugJelly")
 
-        else if(connectedItem.itemName == "Wallet")
+        else if (connectedItem.itemName == "Wallet")
         {
-            if(GameManager.instance.S1Ended() == true) {
-                    runner.StartDialogue("WalletO");
-                    Inventory.instance.items.Remove(connectedItem);
-                    currentSlot.RemoveSlot();
-                }
-                else {runner.StartDialogue("WalletX"); }
+            if (GameManager.instance.S1Ended() == true)
+            {
+                runner.StartDialogue("WalletO");
+                Inventory.instance.items.Remove(connectedItem);
+                currentSlot.RemoveSlot();
+            }
+            else { runner.StartDialogue("WalletX"); }
+
+        }
+
+        else if (connectedItem.itemName == "Hairpin" && currentscene.name == "S2_4_0_StaffRoomEntrance")
+        {
+            runner.StartDialogue("game_openthedoor_intro");
+            Inventory.instance.items.Remove(connectedItem);
 
         }
 
         else if (connectedItem.itemName == "Key" && currentscene.name == "S2_3_1_StaffOnlyLocker")
         {
-            
+
         }
         else
         {

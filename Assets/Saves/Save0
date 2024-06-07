@@ -1,33 +1,58 @@
 {
-  "IsLoad": false,
-  "NowScene": "S1_2_JiwonRoom",
+  "IsLoad": true,
+  "NowScene": "S2_4_0_StaffRoomEntrance",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
   "StaffroomOpen": false,
-  "ChattingLog": [],
+  "ChattingLog": [
+    12
+  ],
   "PhotoList": [
-    "Laptop9"
+    "Meds5",
+    "Laptop10",
+    "Letter6",
+    "ToiletPaper0"
   ],
   "items": [
     {
       "ItemType": 0,
-      "itemName": "Wallet"
+      "itemName": "Cup"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "DrugJelly"
     }
   ],
   "FindedObjects": [
-    "Letter",
     "DrawerR_Wallet",
-    "Books_Diary"
+    "Drawer_Hairpin",
+    "Cup",
+    "ClubTable_Geonwoo",
+    "Toilet_costomerF"
   ],
   "FindedClues": [
-    "Laptop"
+    "Meds",
+    "Laptop",
+    "Letter",
+    "ToiletPaper"
   ],
   "FinishedDialogues": [
-    "DropperRecruit",
+    "Chatlist",
+    "Chocotalk1st",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsHerself",
+    "Camera",
+    "Gallery",
     "DGram1st",
-    "Camera"
+    "Map_1",
+    "Park",
+    "Hospital",
+    "Where",
+    "New711",
+    "SevenEleven",
+    "Club_S1End"
   ],
   "GottenPage": [],
-  "visited": 0
+  "visited": 7
 }

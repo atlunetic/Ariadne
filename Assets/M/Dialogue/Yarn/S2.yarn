@@ -71,6 +71,7 @@ title: meet_gunwoo
 	시야가 흐려져 간다.
 	<<wait 2.0>>
 	….
+	<<FadeIn>>
 	<<wait 2.0>>
 	//엔딩 3. ??? : 무슨 일이 일어난 걸까.
 	<<DrawFadeIn Ending3>>
@@ -2287,7 +2288,6 @@ title: game_openthedoor_success
 <<StopAudio Minigame>>
 <<jump club_staffroom_inside>>
 <<SetCanvasTo VisualNovelPrefab S2_4_1_StaffRoom>>
-<<jump club_staffroom_inside>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
