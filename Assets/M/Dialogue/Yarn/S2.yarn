@@ -3259,6 +3259,7 @@ title: event_customergh_end
 사람들이 자꾸 직원인줄 알고 말을 거니까….
 <<Hide 지수>>
 <<ChangeSceneTo VisualNovelPrefab S2_6_CounterBar>>
+<<jump club_re_bar>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -3291,14 +3292,15 @@ title: obj_clock2
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 가만보니 저 시계, 아까부터 계속 멈춰 있네.
 ….
-
+//<<Draw  ClockSmall_0 0.75 0.75>>
 ….
 가까이 가서 구경이나 할까.
 
 //시계가 확대 팝업 이미지
-<<Draw  Clock1_0 0.75 0.75>>
+
 //지수이미지 노출X
 <<Hide 지수>>
+//<<Hide <<Draw  ClockSmall_0>>
 
 //미니게임 시작(시계 11시로 맞추기)
 
@@ -3316,7 +3318,7 @@ title: game_clock_success
 
 ….
 아까 클럽 고객G에게 연락온 건 분명 ‘drgg24’….
-분명 11시에 만나자고 했지.
+분명 11시 반에 만나자고 했지.
 ….
 <<SetActiveFalse VisualNovelPrefab Clock>>
 
@@ -3324,7 +3326,7 @@ title: game_clock_success
 //지수가 현기증을 느껴 정신을 잃는다. 화면이 잠깐 흐려졌다 돌아온다.
 <<PlayAudio Clock11>>
 <<Fade white 0.0 1.0 1.0>>
-<<wait 1.0>>
+<<wait 1.5>>
 
 <<FadeIn>>
 
@@ -3352,6 +3354,7 @@ title: game_clock_success
 <<Hide 지수>>
 
 <<ChangeSceneTo  VisualNovelPrefab S2_6_ReVip>>
+<<jump club_11_viproom>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 

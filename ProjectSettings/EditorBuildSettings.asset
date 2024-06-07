@@ -51,11 +51,17 @@ EditorBuildSettings:
     path: Assets/M/Scenes_M/S2/S2_4_1_StaffRoom.unity
     guid: 67e9726e52dba0a4e88bddf3f71e0602
   - enabled: 1
+    path: Assets/Su/lockpick.unity
+    guid: afc78d8c9bdbae7429200b8b9331d1d9
+  - enabled: 1
     path: Assets/M/Scenes_M/S2/S2_5_VipRoomEntrance.unity
     guid: 8fed5e43fd5540c48b75002987bdd718
   - enabled: 1
     path: Assets/M/Scenes_M/S2/S2_6_CounterBar.unity
     guid: 832438e86589fd0498276ab73929b3aa
+  - enabled: 1
+    path: Assets/Su/clockpuzzle.unity
+    guid: 55911496a69d76047a94d634b5a21e0d
   - enabled: 1
     path: Assets/M/Scenes_M/S2/S2_6_ReVip.unity
     guid: 6dfb522cbba0834478804687eb0aed10
