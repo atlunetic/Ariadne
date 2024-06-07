@@ -944,16 +944,15 @@ title: Diary1
 일단 챙겨보자.
 
 <<Hide Diary>>
-<<ActiveD MenuUI>>
 <<SetActiveFalse VisualNovelPrefab Books_Diary>>
 <<FinishedObj VisualNovelPrefab Books_Diary>>
+<<ActiveD MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
 
-
-title: Laptop
+title: LaptopStory
 
 ---
 
@@ -981,7 +980,6 @@ title: Laptop
 ….
 위험한 생각 하고 있는 거 아니야…?
 <<Hide 지수>>
-<<StopAudio LaptopVideo>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

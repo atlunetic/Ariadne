@@ -285,8 +285,8 @@ title: obj_customers
 	<<Act 지수 Jisoo1 1.17 0.322 black>>
 	두 사람이 대화하고 있다.
 
-	<<Act 클럽고객D NPC_Clubcustomer_D 0.75 0.75 black>>
-	<<Act 클럽고객E NPC_Clubcustomer_E 0.75 0.75 black>>
+	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.227 black>>
+	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 black>>
 
 
 	클럽고객D: 이렇게 만난 것도 인연인데 한 잔 사드리고 싶어서요.
@@ -311,6 +311,7 @@ title: obj_customers
 	….
 	….
 	어떡하지. 도와줄까?
+	<<Hide  Clubtable_Glass>>
 	<<wait 1.0>>
 	-> 모르는 척 하자.
 		<<UpdateAct 지수 Jisoo2>>
@@ -603,6 +604,7 @@ title: obj_menu
 //지수 이미지는 노출 X
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<OpenUp  ClubTable_menu>>
 메뉴판이다.
 
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -636,6 +638,7 @@ title: menu_philopon
 <<RevealDiary DiaryManager Page7>>
 <<SetActiveFalse VisualNovelPrefab Philopon>>
 <<FinishedObj VisualNovelPrefab Philopon>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 <<if visited("DiaryTutorial")==false>>
     <<jump DiaryTutorial>>
@@ -643,7 +646,6 @@ title: menu_philopon
     <<SetCanvasTo VisualNovelPrefab false>>
 <<endif>>
 
-<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -652,7 +654,7 @@ title: menu_othertext
 ---
 
 //메뉴판 이미지의 크라톰, 필로폰을 제외한 다른 텍스트 클릭 시
-
+<<SetCanvasTo VisualNovelPrefab true>>
 <<set $rand = random_range(1, 3)>>
 
 <<if $rand < 2 >>
@@ -2900,7 +2902,7 @@ title: obj_customerg
 ….
 클럽 고객G: 어이 거기!
 
-<<Act 클럽고객G NPC_clubcustomer_G 0.322 0.227 black>>
+<<Act 클럽고객G NPC_clubcustomer_G_0 0.322 0.227 black>>
 
 ….
 <<wait 1.0>>
@@ -3176,7 +3178,7 @@ title: obj_customerh
 ….
 
 //클럽고객H 왼쪽, 지수 오른쪽 배치
-<<Act 클럽고객H NPC_clubcustomer_H 0.322 0.227 black>>
+<<Act 클럽고객H NPC_clubcustomer_H_0 0.322 0.227 black>>
 클럽 고객H: 지원씨! 어제 그렇게 나가셔서 걱정했어요
 클럽 고객H: 지수씨랑은 얘기 잘 하셨어요?
 클럽 고객H: 저도 항상 걱정했거든요….
@@ -3752,10 +3754,12 @@ title: obj_navigation
 
 ….
 //네비게이션 검색 목록 이미지
+<<Draw NavList 0.75 0.75>>
 
 -> 클럽 A
 	….
 	이 클럽의 주소인 것 같다.
+	<<Hide NavList>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 -> XX 오피스텔
 	….
@@ -3763,6 +3767,7 @@ title: obj_navigation
 	….
 	수상한데?
 	주소를 기억해둬야 할 것 같아.
+	<<Hide NavList>>
 	<<declare $nav = 0 as number>>
 	<<set $nav = 1>>
 	<<if visited("memory_BrokenGlasses")==true>>
@@ -3772,6 +3777,7 @@ title: obj_navigation
 -> 마약 떡볶이&마약 김밥
 	….
 	여기를 갔었나보네.
+	<<Hide NavList>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
