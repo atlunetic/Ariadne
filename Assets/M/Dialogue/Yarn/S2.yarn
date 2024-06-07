@@ -2066,13 +2066,12 @@ title: obj_staffroomdoor
 	….
 	직원에게 물어볼까?
 	-> CCTV를 보고 싶다고 말하자
-		<<Act 클럽직원C StaffRoom_staff_C_0 0.322 0.227 black>>
+		<<Act 클럽직원C StaffRoom_staff_C_0 0.322 0.527 black>>
 		<<UpdateAct 지수 Jisoo1>>
 		지수: 저기 혹시, CCTV 좀 확인할 수 있을까요?
 		<<if $persuade >= 7>>
 			<<jump obj_staffroomdoor_1>>	
-		<<else>>
-			<<HideAll>> 
+		<<else>> 
 			<<jump obj_staffroomdoor_2>>
 		<<endif>>
 	-> 조금 있다 다시 오자
@@ -2134,8 +2133,6 @@ title: obj_staffroomdoor_2
 지금은 들어갈 수 없을 것 같아.
 조금 있다 다시 와볼까….
 <<Hide 지수>>
-<<SetActiveFalse VisualNovelPrefab StaffRoom_staff_C>>
-<<FinishedObj VisualNovelPrefab StaffRoom_staff_C>>
 <<SetCanvasTo VisualNovelPrefab	false>>
 
 
@@ -2144,6 +2141,9 @@ title: obj_staffroomdoor_2
 title: club_staffroom_nostaff
 
 ---
+
+<<SetActiveFalse VisualNovelPrefab StaffRoom_staff_C>>
+<<FinishedObj VisualNovelPrefab StaffRoom_staff_C>>
 
 <<SetCanvasTo VisualNovelPrefab	true>>
 //직원과의 대화 이후, 다른 장소로 이동했다 Staff Room 앞으로 돌아올 경우
@@ -2280,6 +2280,7 @@ title: game_openthedoor_success
 <<StopAudio Minigame>>
 <<jump club_staffroom_inside>>
 <<SetCanvasTo VisualNovelPrefab S2_4_1_StaffRoom>>
+<<jump club_staffroom_inside>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2373,7 +2374,7 @@ title: cctvOptions
 	<<jump cctvOptions>>
 -> 주차장
 	<<Hide CCTV_first>>
-	<<Draw CCTV_parking_jisoo 0.75 0.75>>
+	<<Draw CCTV_parkinglot_jisoo 0.75 0.75>>
 	…어.
 	실루엣이 지원이 같은데.
 	<<wait 1.0>>
@@ -2385,7 +2386,7 @@ title: cctvOptions
 	….
 	아리아드네는 뭘 알고 있지 않을까?
 	도움을 요청해봐야겠다.
-	<<Hide CCTV_parking_jisoo>>
+	<<Hide CCTV_parkinglot_jisoo>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	….
 	….
@@ -2910,7 +2911,7 @@ title: obj_customerg
 ….
 클럽 고객G: 어이 거기!
 
-<<Act 클럽고객G NPC_clubcustomer_G_0 0.322 0.227 black>>
+<<Act 클럽고객G NPC_clubcustomer_G_0 0.322 0.527 black>>
 
 ….
 <<wait 1.0>>
@@ -2996,6 +2997,8 @@ title: IgnoreE
 
 클럽 고객G는 씩씩거리며 자리를 비웠다.
 <<Hide 클럽고객G>>
+<<SetActiveFalse VisualNovelPrefab VIProom_customerG>>
+<<FinishedObj VisualNovelPrefab VIProom_customerG>>
 <<wait 1.0>>
 ….
 휴대폰을 놓고 갔네.
@@ -3152,27 +3155,33 @@ title: obj_customerg_end
 
 ---
 
-	//클럽 고객G의 가족사진 위로 메시지 팝업 뜸
-	<<Draw  ClubcustomerG_Message 0.75 0.75>>
-	어…?
-	저게 무슨 얘기지.
-	….
-	11시에 클럽에서 만난다고?
-	….
-	<<Hide ClubcustomerG_Message>>
-	<<Hide ClubcustomerG_Phone>>
-	클럽 고객G가 급하게 휴대폰을 감췄다.
-	클럽 고객G: 어어~. 아무튼.
-	클럽 고객G: 바쁜 사람을 너무 오래 붙잡고 있었네.
-	클럽 고객G: 어서 할 일 하러 가봐~.
-	클럽 고객G가 자리를 떴다.
-	<<Act 지수 CoJisoo3 1.17 0.322 black>>
-	….
-	….
-	아무래도 수상해.
-	마약 거래를 하려는 걸까?
+//클럽 고객G의 가족사진 위로 메시지 팝업 뜸
+<<Draw  ClubcustomerG_Message 0.75 0.75>>
+어…?
+저게 무슨 얘기지.
+….
+11시에 클럽에서 만난다고?
+….
+<<Hide ClubcustomerG_Message>>
+<<Hide ClubcustomerG_Phone>>
+클럽 고객G가 급하게 휴대폰을 감췄다.
+클럽 고객G: 어어~. 아무튼.
+클럽 고객G: 바쁜 사람을 너무 오래 붙잡고 있었네.
+클럽 고객G: 어서 할 일 하러 가봐~.
+클럽 고객G가 자리를 떴다.
+<<Act 지수 CoJisoo3 1.17 0.322 black>>
+….
+….
+아무래도 수상해.
+마약 거래를 하려는 걸까?
+
+<<if visited("obj_customerh") == true && visited("obj_customerg_end")==true>>
+	<<jump event_customergh_end>>
+<<else>>
 	<<Hide 지수>>
-	<<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
 	
 
 ===
@@ -3186,7 +3195,7 @@ title: obj_customerh
 ….
 
 //클럽고객H 왼쪽, 지수 오른쪽 배치
-<<Act 클럽고객H NPC_clubcustomer_H_0 0.322 0.227 black>>
+<<Act 클럽고객H NPC_clubcustomer_H_0 0.322 0.427 black>>
 클럽 고객H: 지원씨! 어제 그렇게 나가셔서 걱정했어요
 클럽 고객H: 지수씨랑은 얘기 잘 하셨어요?
 클럽 고객H: 저도 항상 걱정했거든요….
@@ -3222,7 +3231,13 @@ title: obj_customerh
 ….
 ….
 이상한 사람이다.
-<<Hide 지수>>
+
+<<if visited("obj_customerh") == true && visited("obj_customerg_end")==true>>
+	<<jump event_customergh_end>>
+<<else>>
+	<<Hide 지수>>
+<<endif>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -3244,6 +3259,7 @@ title: event_customergh_end
 사람들이 자꾸 직원인줄 알고 말을 거니까….
 <<Hide 지수>>
 <<ChangeSceneTo VisualNovelPrefab S2_6_CounterBar>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
