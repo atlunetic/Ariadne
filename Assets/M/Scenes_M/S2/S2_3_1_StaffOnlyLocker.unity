@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RequiredItemName: Key
-  CorrectItemDialogue: 'obj_staffonly_lockeropen '
+  CorrectItemDialogue: obj_staffonly_lockeropen
   NoItemDialogue: StaffLocker
   WrongItemDialogue: WrongItemUsed
 --- !u!114 &190446670

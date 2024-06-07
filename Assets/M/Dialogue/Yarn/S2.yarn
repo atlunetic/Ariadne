@@ -141,6 +141,7 @@ title: club_bar
 <<SetCanvasTo VisualNovelPrefab true>>
 지원이가 여기서 대체 뭘 했을까….
 ….
+<<ActiveM MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -636,7 +637,7 @@ title: menu_philopon
 * 일기장에 ‘필로폰’이 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page7>>
-<<SetActiveFalse VisualNovelPrefab Philopon>>
+<<SetActiveFalse VisualNovelPrefab menu_philopon>>
 <<FinishedObj VisualNovelPrefab Philopon>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -682,6 +683,7 @@ title: event_gunwoo_begin1
 	…. 
 	어제 지원이랑 클럽에서 마주쳤다고 했지.
 	그러면…. 뭐라도 알고 있을 것 같은데.
+	<<HideAll>>
 <<else>>
 	<<jump event_gunwoo_begin2>>
 <<endif>>
@@ -695,7 +697,7 @@ title: event_gunwoo_begin2
 ---
 
 //건우 두번째 클릭 시
-<<UpdateAct 지수 Jisoo2>>
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 뭐라도 아는 게 있는지 물어보자.
 지수: 건우 오빠.
 <<wait 1.0>>
@@ -721,11 +723,12 @@ title: event_gunwoo_tutorial
 
 ---
 
-//텍스트 볼드체
+//텍스트 볼드체 (취소: 유니티상에서 너무 굵음)
+<<BGoff SceneManager>>
 <<PlayAudio Minigame 1.0 loop>>
-<b>* 건우와 대화해보자! *</b>
-<b>* 건우와의 대화를 통해 도움을 요청해봅시다. *</b>
-<b>* 어쩌면 건우가 도움을 줄 수도…. *</b>
+* 건우와 대화해보자! *
+* 건우와의 대화를 통해 도움을 요청해봅시다. *
+* 어쩌면 건우가 도움을 줄 수도…. *
 
 <<declare $persuade = 0 as number>>
 <<set $persuade = 0>>
@@ -755,7 +758,7 @@ title: event_gunwoo_q1a
 <<wait 1.0>>
 
 //선택지 랜덤 출력
---> 정말 기억이 안나는 거예요?
+-> 정말 기억이 안나는 거예요?
 	//설득점수 +1
 	<<set $persuade += 1>>
 	<<UpdateAct 지수 Jisoo4>>
@@ -800,11 +803,11 @@ title: event_gunwoo_q1b
 
 ---
 
-<<UpdateAct 지수 Jisoo2>>
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 오빠. 어제 지원이랑 마주쳤다고 했잖아요.
 지수: 지원이 상태가 어땠어요?
 
-<<UpdateAct 건우 Geonwoo3>>
+<<Act 건우 Geonwoo3 0.322 0.227 black>>
 건우: …글쎄?
 건우: 잠깐 인사만 해서. 기억이 안나네.
 ….
@@ -1649,6 +1652,8 @@ title: event_gunwoo_success
 ….
 <<Hide 지수>>
 <<Hide 건우>>
+<<StopAudio Minigame>>
+<<BGon SceneManager>>
 <<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
 <<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
 
@@ -1675,6 +1680,8 @@ title: event_gunwoo_3_6
 
 <<Hide 지수>>
 <<Hide 건우>>
+<<StopAudio Minigame>>
+<<BGon SceneManager>>
 <<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
 <<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
 
@@ -1704,7 +1711,7 @@ title: event_gunwoo_fail
 <<StopAudio Minigame>>
 <<Hide 지수>>
 <<Hide 건우>>
-
+<<BGon SceneManager>>
 <<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
 <<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
 
@@ -1747,7 +1754,7 @@ title: memory_StudentID
 건우: 애들이 이런 거 옮긴다고 상상이나 하겠어?
 
 
-<<StopMemory  SceneManager>>
+<<StopMemory SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -1876,6 +1883,7 @@ title: obj_drugjelly
 		우선 자리를 피해야겠다.
 		<<SetActiveFalse VisualNovelPrefab Toilet_costomerF>>
 		<<FinishedObj VisualNovelPrefab Toilet_costomerF>>
+		<<SetCanvasTo VisualNovelPrefab false>>
 		<<HideAll>>
 		
 		
@@ -1899,7 +1907,7 @@ title: obj_staffonly
 	<<SetCanvasTo VisualNovelPrefab false>>
 -> 살펴보자
 	혹시 모르니 살펴보자.
-	<<ChangeSceneTo S2_3_1_StaffOnlyLocker>>
+	<<ChangeSceneTo VisualNovelPrefab S2_3_1_StaffOnlyLocker>>
 	청소용품만 있을 줄 알았는데.
 	직원용 사물함이 있다.
 	<<SetCanvasTo VisualNovelPrefab false>>
@@ -1980,7 +1988,7 @@ title: obj_toiletpaper
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
-<<Draw Toilet_rollpaper_big(1) 0.75 0.75>>
+<<Draw Toilet_rollpaper_big 0.75 0.75>>
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 휴지에 구멍이 뚫려있다.
 피 같은 게 묻어있는데…?
@@ -1995,7 +2003,7 @@ title: obj_toiletpaper
 <<UpdateAct 지수 Jisoo2>>
 ….
 혹시 모르니까…. 건들지 말자.
-<<Hide Toilet_rollpaper_big(1)>>
+<<Hide Toilet_rollpaper_big>>
 
 <<Hide 지수>>
 
