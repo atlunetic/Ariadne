@@ -354,6 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: obj_radio
 --- !u!1 &351266804
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: obj_cctv2
 --- !u!1 &1091718649
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: obj_viplist
 --- !u!1 &1315318903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: obj_locker
 --- !u!1 &1514151991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,6 +1412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: obj_key
 --- !u!1 &1783955685
 GameObject:
   m_ObjectHideFlags: 0

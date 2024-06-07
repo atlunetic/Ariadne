@@ -278,7 +278,6 @@ GameObject:
   - component: {fileID: 696875072}
   - component: {fileID: 696875071}
   - component: {fileID: 696875073}
-  - component: {fileID: 696875074}
   - component: {fileID: 696875075}
   - component: {fileID: 696875076}
   m_Layer: 0
@@ -400,19 +399,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.74656487, y: 0.9074364}
   m_EdgeRadius: 0
---- !u!114 &696875074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696875070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogueTitle: obj_emptyglass
 --- !u!114 &696875075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,9 +425,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 696875070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 293ee0a3658a8584d92d1598dec7bf76, type: 3}
+  m_Script: {fileID: 11500000, guid: be1bff052c6c9744894aeb0899f54320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueTitle: obj_emptyglass
   sceneItem: {fileID: 696875075}
 --- !u!1001 &928378175
 PrefabInstance:

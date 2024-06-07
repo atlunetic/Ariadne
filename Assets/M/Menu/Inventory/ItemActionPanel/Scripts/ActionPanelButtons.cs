@@ -62,6 +62,11 @@ public class ActionPanelButtons : MonoBehaviour
                 else {runner.StartDialogue("WalletX"); }
 
         }
+
+        else if (connectedItem.itemName == "Key" && currentscene.name == "S2_3_1_StaffOnlyLocker")
+        {
+            
+        }
         else
         {
 

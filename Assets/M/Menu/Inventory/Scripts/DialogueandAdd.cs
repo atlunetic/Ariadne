@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+using Yarn.Unity;
 
-public class ClickToAdd : MonoBehaviour
+public class DialogueandAdd : MonoBehaviour
 {
-    public SceneItem sceneItem; // Reference to the SceneItem script attached to the item GameObject
-    //public Inventory inventory; // Reference to the InventoryObject
+    public string DialogueTitle;
+    public SceneItem sceneItem;
 
     private void OnMouseDown()
     {
-        if (Menu.instance.BlockClick) { Debug.Log("ClickToAdd BlockClick"); return; }
+
+        if (Menu.instance.BlockClick) { Debug.Log("StartDialogue BlockClick"); return; }
+        //DialogueParent.SetActive(true);
+        var runner = FindObjectOfType<DialogueRunner>();
+        runner.StartDialogue(DialogueTitle);
 
         if (Inventory.instance != null && sceneItem != null)
         {
@@ -31,5 +33,8 @@ public class ClickToAdd : MonoBehaviour
         {
             Debug.Log("cannot add");
         }
+
     }
+
+    
 }
