@@ -2287,7 +2287,7 @@ title: game_openthedoor_success
 ….
 <<StopAudio Minigame>>
 <<jump club_staffroom_inside>>
-<<SetCanvasTo VisualNovelPrefab S2_4_1_StaffRoom>>
+<<ChangeSceneTo VisualNovelPrefab S2_4_1_StaffRoom>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
