@@ -8,21 +8,21 @@ using UnityEditorInternal.Profiling.Memory.Experimental;
 public class Slot : MonoBehaviour ,IDropHandler
 {
     public item Item;
-    public Image itemIcon;
+    public GameObject itemIcon;
     public GameObject WrongCombineAlertPanel;
 
 
     public void UpdateSlotUI()
     {
-        itemIcon.sprite = Resources.Load<Sprite>("ItemImage/" + Item.itemName + "_0");
-        itemIcon.gameObject.SetActive(true);
+        itemIcon.GetComponent<Image>().sprite = Resources.Load<Sprite>("ItemImage/" + Item.itemName);
+        itemIcon.SetActive(true);
         GetComponent<Button>().interactable = true;
     }
 
     public void RemoveSlot()
     {
         Item = null;
-        itemIcon.gameObject.SetActive(false);
+        itemIcon.SetActive(false);
         GetComponent<Button>().interactable = false;
     }
 

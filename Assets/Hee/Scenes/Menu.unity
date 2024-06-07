@@ -10466,7 +10466,7 @@ PrefabInstance:
     - target: {fileID: 815907413561439030, guid: 893c726b4d5978247b82f88e5bf55e91, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1348558015, guid: 2a3f74268b2cf4e48a889fb8650c0a9e, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 967592187569850974, guid: 893c726b4d5978247b82f88e5bf55e91, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -11103,6 +11103,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5693725247922977116, guid: 893c726b4d5978247b82f88e5bf55e91, type: 3}
+      propertyPath: itemIcon
+      value: 
+      objectReference: {fileID: 1839486089}
     - target: {fileID: 5693725247922977116, guid: 893c726b4d5978247b82f88e5bf55e91, type: 3}
       propertyPath: inventory
       value: 
@@ -23143,6 +23147,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836938900}
   m_CullTransparentMesh: 1
+--- !u!1 &1839486089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2261136839193801567, guid: 893c726b4d5978247b82f88e5bf55e91, type: 3}
+  m_PrefabInstance: {fileID: 987142233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1840030284
 GameObject:
   m_ObjectHideFlags: 0

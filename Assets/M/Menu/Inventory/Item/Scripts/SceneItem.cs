@@ -12,7 +12,7 @@ public class SceneItem : MonoBehaviour
         newItem.itemName = _item.itemName;
         newItem.ItemType = _item.ItemType;
 
-        image.sprite = Resources.Load<Sprite>("ItemImage/" + _item.itemName + "_0");
+        image.sprite = Resources.Load<Sprite>("ItemImage/" + _item.itemName);
     }
 
     public item GetItem()

@@ -98,9 +98,9 @@ title: S1_path4
         여기서 쓰러지면 안되는데...
         <<PlayAudio CardiacArrest>>
         <<Fade white 0.0 1.0 2.0>>
-        <<Scene Ending0>>
+        <<DrawFadeIn Ending0>>
         <<ChangeSceneTo VisualNovelPrefab S0>>
-        <<Scene NoBG>>
+        <<Hide Ending0>>
         <<SetCanvasTo VisualNovelPrefab false>>
 
         
@@ -464,9 +464,9 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 
 
 엔딩 2. 정당화의 방식
-<<Scene Ending2>>
+<<DrawFadeIn Ending2>>
 <<ChangeSceneTo VisualNovelPrefab S0>>
-<<Scene NOBG>>
+<<Hide Ending2>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 

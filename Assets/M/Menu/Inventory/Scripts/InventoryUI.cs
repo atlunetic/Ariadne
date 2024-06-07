@@ -22,15 +22,11 @@ public class InventoryUI : MonoBehaviour
 
    void RedrawSlotUI()
     {
-        for(int i =0;i<slots.Length;i++)
-        {
-            slots[i].RemoveSlot();
-        }
-
         int numItems = Mathf.Min(inven.items.Count, slots.Length);
         for (int i =0; i < numItems;i++)
         {
             slots[i].Item = inven.items[i];
+            Debug.Log(slots[i].Item.itemName);
             slots[i].UpdateSlotUI();
         }
     }

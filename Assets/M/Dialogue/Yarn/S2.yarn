@@ -73,9 +73,9 @@ title: meet_gunwoo
 	….
 	<<wait 2.0>>
 	//엔딩 3. ??? : 무슨 일이 일어난 걸까.
-	<<Scene Ending3>>
+	<<DrawFadeIn Ending3>>
 	<<ChangeSceneTo VisualNovelPrefab S0>>
-	<<Scene NOBG>>
+	<<Hide Ending3>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 -> 나라고 밝히자.
 	<<UpdateAct 지수 Jisoo1>>
@@ -2261,9 +2261,9 @@ title: game_openthedoor_gameover
 ….
 
 //엔딩 3. ??? : 무슨 일이 일어난 걸까. 
-<<Scene Ending3>>
+<<DrawFadeIn Ending3>>
 <<ChangeSceneTo VisualNovelPrefab S0>>
-<<Scene NOBG>>
+<<Hide Ending3>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -3372,7 +3372,6 @@ title: club_11_viproom
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 <<FadeIn>>
-<<StartBackgroundLoop VIProomBG>>
 //배경 11시 이후 viproom 이미지
 //배경 클릭 시: #주변 공기가 달라진 것 같아. #눈 앞이 일렁인다. 랜덤 노출
 주변 공기가 달라진 것 같아.
@@ -3561,7 +3560,7 @@ title: club_stair_middlecar
 CCTV에 찍힌 그 인형이야.
 
 //건우, 지수가 대화하는 계단 배경으로 변경
-<<ChangeSceneTo S2_7_Stairs>>
+<<ChangeSceneTo VisualNovelPrefab S2_7_Stairs>>
 
 //건우 왼쪽, 지수 오른쪽
 
@@ -3729,11 +3728,10 @@ title: obj_car_outside
 		누군가 내 팔을 붙잡았다.
 		시야가 흐려져 간다.
 		….
-		<<Fade black 0.0 1.0 1.0>>
 		//엔딩 3. 막다른 길: 조직원에게 붙잡힌 엔딩 (확인용, 추후 주석 처리)
-		<<Scene Ending3>>
+		<<DrawFadeIn Ending3>>
 		<<ChangeSceneTo VisualNovelPrefab S0>>
-		<<Scene NOBG>>
+		<<Hide Ending3>>
 		<<SetCanvasTo VisualNovelPrefab false>>
 
 	-> 창문
