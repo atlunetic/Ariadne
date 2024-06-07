@@ -35,6 +35,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
 
     public bool BlockClick = false;
 
+    [YarnCommand("UI_on")]
     public void UI_on(){
         BlockClick = true;
         UIMode.SetActive(true);

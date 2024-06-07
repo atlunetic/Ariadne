@@ -22,7 +22,10 @@ public class SaveAndLoad : MonoBehaviour
         }
 
         GameManager.instance.items = Inventory.instance.items;
-        string json = JsonConvert.SerializeObject(GameManager.instance, Formatting.Indented);
+
+        SaveGameManager save = new SaveGameManager();
+        save = GameManager.instance.Convert();
+        string json = JsonConvert.SerializeObject(save, Formatting.Indented);
 
         string Totalpath = FolderPath+"Save";
         int i=0;
@@ -38,7 +41,8 @@ public class SaveAndLoad : MonoBehaviour
 
         int num = GameManager.instance.NumOfScreenShots;
 
-        GameManager.instance = JsonConvert.DeserializeObject<GameManager>(json);
+        SaveGameManager save = JsonConvert.DeserializeObject<SaveGameManager>(json);
+        GameManager.instance.reConvert(save);
         GameManager.instance.IsLoad = true;
         GameManager.instance.NumOfScreenShots = num > GameManager.instance.NumOfScreenShots ? num : GameManager.instance.NumOfScreenShots;
 

@@ -1,0 +1,33 @@
+{
+  "IsLoad": false,
+  "NowScene": "S1_2_JiwonRoom",
+  "NumOfScreenShots": 1,
+  "GeonWooScore": 0,
+  "SaengSoo": 0,
+  "StaffroomOpen": false,
+  "ChattingLog": [],
+  "PhotoList": [
+    "Laptop9"
+  ],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Wallet"
+    }
+  ],
+  "FindedObjects": [
+    "Letter",
+    "DrawerR_Wallet",
+    "Books_Diary"
+  ],
+  "FindedClues": [
+    "Laptop"
+  ],
+  "FinishedDialogues": [
+    "DropperRecruit",
+    "DGram1st",
+    "Camera"
+  ],
+  "GottenPage": [],
+  "visited": 0
+}
