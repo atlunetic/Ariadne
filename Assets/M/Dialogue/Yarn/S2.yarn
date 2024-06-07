@@ -227,6 +227,7 @@ title: obj_minirefrigerator
 <<SetCanvasTo VisualNovelPrefab true>>
 <<if visited("obj_minirefrigerator") == false>>
 	//클릭할 경우
+	<<Draw Suljango_Popup 0.75 0.75>>
 	미니 술장고다.
 	….
 	//술장고 이미지 종료
@@ -236,7 +237,7 @@ title: obj_minirefrigerator
 	챙겨갈까?
 	-> 한 개만 챙겨가자.
 		그래…. 하나만 챙기자.
-		<<Hide 지수>>
+		<<HideAll>>
 		* 생수가 든 페트병을 습득했다. *
 		<<AddToInventory VisualNovelPrefab WaterBottle>>
 		<<declare $WaterBottle = 0 as number>>
@@ -246,7 +247,7 @@ title: obj_minirefrigerator
 		<<SetCanvasTo VisualNovelPrefab false>>
 	-> 두 개 다 챙겨가자.
 		혹시 모르니 두 개 챙겨두자.
-		<<Hide 지수>>
+		<<HideAll>>
 		* 생수가 든 페트병을 습득했다. *
 		<<AddToInventory VisualNovelPrefab WaterBottle>>
 		<<AddToInventory VisualNovelPrefab WaterBottle>>
