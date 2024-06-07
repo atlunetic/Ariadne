@@ -984,6 +984,7 @@ title: LaptopStory
 ….
 위험한 생각 하고 있는 거 아니야…?
 <<Hide 지수>>
+<<StopAudio LaptopVideo>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
