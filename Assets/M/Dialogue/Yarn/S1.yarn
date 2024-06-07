@@ -97,9 +97,11 @@ title: S1_path4
         갑자기 눈 앞이 흐려진다.
         여기서 쓰러지면 안되는데...
         <<PlayAudio CardiacArrest>>
-        엔딩 0: 악몽 속에 잠들다: 혼수상태에서 깨어나지 못함
         <<Fade white 0.0 1.0 2.0>>
+        <<Scene Ending0>>
         <<ChangeSceneTo VisualNovelPrefab S0>>
+        <<Scene NoBG>>
+        <<SetCanvasTo VisualNovelPrefab false>>
 
         
 
@@ -462,7 +464,10 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 
 
 엔딩 2. 정당화의 방식
+<<Scene Ending2>>
 <<ChangeSceneTo VisualNovelPrefab S0>>
+<<Scene NOBG>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 
