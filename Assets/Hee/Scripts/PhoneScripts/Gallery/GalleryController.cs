@@ -46,6 +46,7 @@ public class GalleryController : MonoBehaviour
     public void PrintToGallery(string screenshotname){  // String으로 바꾸기
         
         string totalPath = string.Copy(Path) + screenshotname; // 파일 지정
+        if(File.Exists(totalPath)==false) return;
         byte[] PNGbuffer = File.ReadAllBytes(totalPath);
 
         Sprite sprite = MakeSprite(PNGbuffer);

@@ -141,7 +141,9 @@ public class CallYarn : MonoBehaviour
             if(GameManager.instance.NowScene.StartsWith("S2")) InS2();
             else if(GameManager.instance.NowScene.StartsWith("S3")) InS3();
             print(GameManager.instance.NowScene);
+            
             SceneManager.LoadScene(GameManager.instance.NowScene);
+            SaveAndLoad.instance.Invoke("EndLoading", 0.5f);
         }
 
         // 불러온거 적용하기는 여기서 해야겠다

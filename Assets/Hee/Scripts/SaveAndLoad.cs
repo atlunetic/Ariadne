@@ -8,8 +8,13 @@ using Yarn.Unity;
 
 public class SaveAndLoad : MonoBehaviour
 {
+
+    public static SaveAndLoad instance;
+    public GameObject tempCam;
+    public GameObject nowLoading;
     private string FolderPath;
     void Awake(){
+        if(instance == null) instance=this;
     #if UNITY_EDITOR
         FolderPath = $"{Application.dataPath}/Saves/";
     #else
@@ -46,6 +51,8 @@ public class SaveAndLoad : MonoBehaviour
         GameManager.instance.IsLoad = true;
         GameManager.instance.NumOfScreenShots = num > GameManager.instance.NumOfScreenShots ? num : GameManager.instance.NumOfScreenShots;
 
+        tempCam.SetActive(true);
+        nowLoading.SetActive(true);
         SceneManager.LoadScene("Menu");
 
         var runner = FindObjectOfType<DialogueRunner>();
@@ -56,5 +63,10 @@ public class SaveAndLoad : MonoBehaviour
 
     public void LoadSave0(){
         Load("Save0");
+    }
+
+    public void EndLoading(){
+        tempCam.SetActive(false);
+        nowLoading.SetActive(false);
     }
 }
