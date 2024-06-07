@@ -14,7 +14,7 @@ public class Slot : MonoBehaviour ,IDropHandler
 
     public void UpdateSlotUI()
     {
-        itemIcon.sprite = Item.itemImage;
+        itemIcon.sprite = Resources.Load<Sprite>("ItemImage/" + Item.itemName + "_0");
         itemIcon.gameObject.SetActive(true);
         GetComponent<Button>().interactable = true;
     }
