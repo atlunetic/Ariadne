@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     void Awake(){
         if(instance == null){
-            NowScene = "n";
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
