@@ -56,6 +56,7 @@ public class CallYarn : MonoBehaviour
 
         if(GameManager.instance.IsLoad) Menu.instance.ActivePI();
         if(GameManager.instance.FindedObjects.Contains("Books_Diary")) Menu.instance.ActiveD();
+        if(GameManager.instance.FinishedDialogues.Contains("ActiveM")) Menu.instance.ActiveM();
 
         Callbybutton(gallerybutton, "Gallery");  // 갤러리 켰을 때
 
@@ -80,7 +81,12 @@ public class CallYarn : MonoBehaviour
                         openchatDbutton.onClick.RemoveListener(drgg24);};
         openchatDbutton.onClick.AddListener(drgg24);
 
-        Callbybutton(ariadnebutton, "Chatlist");
+        Callbybutton(ariadnebutton, "Chatlist");  // 아리아드네 채팅창 켰을 때
+        UnityAction ari = null;
+        ari = () => {ariadnebutton.transform.GetChild(2).gameObject.SetActive(false);
+                        ariadnebutton.onClick.RemoveListener(ari);};
+        if(FinishedDialogues.Contains("Chatlist")) ari.Invoke();
+        else ariadnebutton.onClick.AddListener(ari);
 
         Callbybutton(work8282chatbutton,"DropperRecruit");  // work8282 채팅창 켰을 때
         UnityAction work8282 = null;
@@ -129,7 +135,7 @@ public class CallYarn : MonoBehaviour
 
         MapController.instance.Officetelbutton.onClick.AddListener(()=>callYarn("Officetel"));  // 3장 진입전 오피스텔 눌렀을 때
 
-        MapController.instance.Hospitalbutton.onClick.AddListener(()=>callYarn("Hospital"));  // 병원 눌렀을 때: Persistent!!
+        MapController.instance.Hospitalbutton.onClick.AddListener(()=>callYarn("Hospital"));  // 병원 눌렀을 때
 
         if(GameManager.instance.NowScene != string.Empty) {
             if(GameManager.instance.NowScene.StartsWith("S2")) InS2();

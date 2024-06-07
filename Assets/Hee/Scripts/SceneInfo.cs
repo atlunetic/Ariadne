@@ -42,15 +42,16 @@ public class SceneInfo : MonoBehaviour
     IEnumerator PlayMemory(string cluename){
         var runner = FindObjectOfType<DialogueRunner>();
 
-        foreach(GameObject BG in MemoriesBG){
-            BG.SetActive(true);
+        for(int i=0; i<3; i++){
+            MemoriesBG[i].SetActive(true);
             yield return new WaitForSeconds(0.6f);
         }
-        
+        GalleryController.instance.Glitch.SetActive(true);
+        MemoriesBG[3].SetActive(true);
+
         foreach(GameObject BG in MemoriesBG){
             BG.SetActive(false);
         }
-        MemoriesBG[3].SetActive(true);
 
         foreach(GameObject memoryimg in GalleryController.instance.MemoryImages)
             if(memoryimg.name == cluename+"Img"){
@@ -66,6 +67,8 @@ public class SceneInfo : MonoBehaviour
     public void StopMemory(){  // 얀에서 부를 함수
         MemoriesBG[3].SetActive(false);
         memoryImg.SetActive(false);
+        GalleryController.instance.Glitch.SetActive(false);
+
         Menu.instance.UI_off();
     }
 

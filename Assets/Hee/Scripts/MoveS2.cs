@@ -13,6 +13,7 @@ public class MoveS2 : MonoBehaviour
 
     public void Moveto(){
         SceneManager.LoadScene("S2_"+gameObject.name);
+        Menu.instance.UI_off();
     }
 
 }

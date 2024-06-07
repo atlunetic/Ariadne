@@ -70,7 +70,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
 
     public void ActiveMoveS2(){
         if(GameManager.instance.FindedObjects.Contains("ClubTable_Geonwoo")){
-            if(GameManager.instance.FindedObjects.Contains("Staffroom_staff_C"))
+            if(GameManager.instance.FindedObjects.Contains("StaffRoom_staff_C"))
                 CallYarn.instance.Callbybutton(MoveStaffroom.GetComponent<Button>(), "club_staffroom_nostaff");
             MoveStaffroom.SetActive(true);
         }
@@ -89,6 +89,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     [YarnCommand("ActiveM")]
     public void ActiveM(){
         MoveS2Button.SetActive(true);
+        GameManager.instance.FinishedDialogues.Add("ActiveM");
     }
 
     [YarnCommand("ActivePI")]

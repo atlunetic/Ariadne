@@ -11,6 +11,7 @@ public class GalleryController : MonoBehaviour
     public GameObject GalleryContent;
     public Transform PictureTab;
     public GameObject[] MemoryImages;
+    public GameObject Glitch;
 
     [SerializeField]
     private GameObject emptyImage;
