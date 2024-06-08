@@ -74,9 +74,12 @@ public class YarnMFunctions : MonoBehaviour
 
 
     [YarnCommand("PersuadeScore")]
-    public void PersuadeScore(int Score)
+    public void PersuadeScore()
     {
-        GameManager.instance.GeonWooScore = Score;
-        Debug.Log("Geonwoo score saved as " + GameManager.instance.GeonWooScore);
+        InMemoryVariableStorage variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+
+        float score;
+        variableStorage.TryGetValue("$persuade", out score);
+        GameManager.instance.GeonWooScore = (int)score;
     }
 }
