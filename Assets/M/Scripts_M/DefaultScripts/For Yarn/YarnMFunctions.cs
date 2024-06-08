@@ -72,6 +72,7 @@ public class YarnMFunctions : MonoBehaviour
         GameManager.instance.FinishedDialogues.Add(DialogueTitle);
     }
 
+
     [YarnCommand("PersuadeScore")]
     public void PersuadeScore(int Score)
     {
