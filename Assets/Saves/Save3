@@ -1,0 +1,89 @@
+{
+  "IsLoad": true,
+  "NowScene": "S2_4_0_StaffRoomEntrance",
+  "NumOfScreenShots": 1,
+  "GeonWooScore": 0,
+  "SaengSoo": 0,
+  "ChattingLog": [
+    0,
+    13,
+    14,
+    2,
+    3,
+    4,
+    15,
+    5,
+    6,
+    16
+  ],
+  "PhotoList": [
+    "Letter0",
+    "Laptop0",
+    "Meds0"
+  ],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Hairpin"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Cup"
+    }
+  ],
+  "FindedObjects": [
+    "Letter",
+    "Books_Diary",
+    "DrawerR_Wallet",
+    "Drawer_Hairpin",
+    "3Drug",
+    "ClubTable_NPCD",
+    "menu_philopon",
+    "Cup",
+    "ClubTable_Geonwoo"
+  ],
+  "FindedClues": [
+    "Letter",
+    "Laptop",
+    "Meds"
+  ],
+  "FinishedDialogues": [
+    "jisoo'stalk",
+    "Chatlist",
+    "Chocotalk1st",
+    "DGram1st",
+    "DropperRecruit",
+    "IceiceChat",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsJiwon",
+    "ChooseChatName2",
+    "AfterDropperChat",
+    "HaesolDropperCaution",
+    "OpenChat",
+    "DrugDeal",
+    "DestroySearch",
+    "DrugDeal1",
+    "DrugDeal2",
+    "DrugDeal3",
+    "DrugDeal4",
+    "DrugDeal5",
+    "DrugDeal6",
+    "Gallery",
+    "Camera",
+    "Map_1",
+    "Officetel",
+    "Park",
+    "Barstreet",
+    "Hospital",
+    "Where",
+    "New711",
+    "SevenEleven",
+    "Club_S1End",
+    "ActiveM"
+  ],
+  "GottenPage": [
+    "Page4",
+    "Page7"
+  ],
+  "visited": 7
+}
