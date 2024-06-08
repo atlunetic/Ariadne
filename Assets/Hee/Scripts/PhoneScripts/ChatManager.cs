@@ -164,8 +164,11 @@ public class ChatManager : MonoBehaviour
         c.image = image;
         ChattingList[ChattingList.Count-1].chatList.Add(c);
     }
-
     void Start(){
+        Invoke("LateStart", 1f);
+    }
+
+    void LateStart(){
        
         ChattingList.Add(new Chatting(false, "건우 오빠", "AfterGeonwooChatAsJiwon"));  // 0
         AddChatToLast(true,"오빠");

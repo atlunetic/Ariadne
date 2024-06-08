@@ -57,6 +57,12 @@ public class GameManager : MonoBehaviour
                visited == 7;
     }
 
+    public bool StaffroomEnded(){
+        return FindedClues.Contains("VIPlist") && FindedObjects.Contains("InStaffroom_VIPlist") &&
+        FindedClues.Contains("InStaffroom_cctv") && FindedObjects.Contains("InStaffroom_Key") &&
+        FindedObjects.Contains("InStaffroom_Radio");
+    }
+
     public SaveGameManager Convert(){
         SaveGameManager saveGameManager = new SaveGameManager();
         saveGameManager.IsLoad = instance.IsLoad;

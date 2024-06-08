@@ -25,6 +25,7 @@ public class Inventory : MonoBehaviour
             return;
         }
         instance = this;
+        print("inventoryLog");
         items = GameManager.instance.items;
     }
 

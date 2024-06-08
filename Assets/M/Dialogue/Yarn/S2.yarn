@@ -2294,6 +2294,7 @@ title: game_openthedoor_success
 ….
 <<StopAudio Minigame>>
 <<jump club_staffroom_inside>>
+<<deActiveM MenuUI>> 
 <<ChangeSceneTo VisualNovelPrefab S2_4_1_StaffRoom>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -2438,6 +2439,7 @@ title: chocotalk_cctv
 <<UI_off MenuUI>>
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<IfDone_getout MenuUI>>
 
 
 ===
@@ -2586,6 +2588,7 @@ title: event_staffroom_gunwoo1
 <<Hide 지수>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
+<<IfDone_getout MenuUI>>
 
 ===
 
@@ -2734,6 +2737,7 @@ title: event_staffroom_gunwoo2_choose
 	문을 열어보니 아무도 없다.
 	다행이야….
 	<<SetCanvasTo VisualNovelPrefab false>>
+	<<IfDone_getout MenuUI>>
 
 
 ===
@@ -2767,6 +2771,8 @@ title: obj_key
 <<FinishedObj VisualNovelPrefab InStaffroom_Key>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
+<<IfDone_getout MenuUI>>
+
 
 ===
 
@@ -2800,6 +2806,7 @@ title: obj_viplist
 	….
 	<<Hide 지수>>
 	<<SetCanvasTo VisualNovelPrefab false>>
+	<<IfDone_getout MenuUI>>
 
 
 ===
@@ -2817,6 +2824,9 @@ title: memory_VIPlist
 ???: 이런 것도 있어요?
 <<StopMemory  SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<IfDone_getout MenuUI>>
+
+
 ===
 
 title: obj_locker
@@ -2831,6 +2841,20 @@ title: obj_locker
 나도 들어갈 수 있겠는데?
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
+
+
+===
+
+title: letsgetout
+
+---
+<<SetCanvasTo VisualNovelPrefab true>>
+<<Act 지수 Jisoo1 1.17 0.322 black>>
+여긴 더 볼 게 없는 것 같아. 나가자.
+<<Hide 지수>>
+<<ActiveM MenuUI>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 

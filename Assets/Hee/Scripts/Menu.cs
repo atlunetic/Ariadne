@@ -101,4 +101,15 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     public void ActiveD(){
         DiaryButton.SetActive(true);
     }
+    [YarnCommand("deActiveM")]
+    public void deActiveM(){
+        MoveS2Button.SetActive(false);
+        GameManager.instance.FinishedDialogues.Remove("ActiveM");
+    }
+    [YarnCommand("IfDone_getout")]
+    public void IfDone_getout(){
+        if(!GameManager.instance.StaffroomEnded()) return;
+        CallYarn.instance.callYarn("letsgetout");
+        GameManager.instance.FindedObjects.Add("obj_staffroomdoor");        
+    }
 }

@@ -21,7 +21,7 @@ public class SceneInfo : MonoBehaviour
         foreach(GameObject obj in Objectlist)
 	        obj.SetActive(!GameManager.instance.FindedObjects.Contains(obj.name));
         foreach(GameObject obj in Diarylist)
-	        obj.SetActive(GameManager.instance.FinishedDialogues.Contains("Books_Diary"));
+	        obj.SetActive(GameManager.instance.FindedObjects.Contains("Books_Diary"));
         GameManager.instance.NowScene = scene.name;
     }
 

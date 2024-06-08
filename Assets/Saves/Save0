@@ -5,16 +5,72 @@
   "GeonWooScore": 0,
   "SaengSoo": 0,
   "StaffroomOpen": false,
-  "ChattingLog": [],
-  "PhotoList": [
+  "ChattingLog": [
+    0,
+    13,
+    14,
+    2,
+    3,
+    4,
+    15,
+    5,
+    6,
+    16
   ],
-  "items": [],
-  "FindedObjects": [],
+  "PhotoList": [
+    "Letter0",
+    "Laptop0",
+    "Meds0"
+  ],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Wallet"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Hairpin"
+    }
+  ],
+  "FindedObjects": [
+    "Letter",
+    "Books_Diary",
+    "DrawerR_Wallet",
+    "Drawer_Hairpin"
+  ],
   "FindedClues": [
+    "Letter",
+    "Laptop",
+    "Meds"
   ],
   "FinishedDialogues": [
-    "Camera"
+    "jisoo'stalk",
+    "Chatlist",
+    "Chocotalk1st",
+    "DGram1st",
+    "DropperRecruit",
+    "IceiceChat",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsJiwon",
+    "ChooseChatName2",
+    "AfterDropperChat",
+    "HaesolDropperCaution",
+    "OpenChat",
+    "DrugDeal",
+    "DestroySearch",
+    "DrugDeal1",
+    "DrugDeal2",
+    "DrugDeal3",
+    "DrugDeal4",
+    "DrugDeal5",
+    "DrugDeal6",
+    "Gallery",
+    "Camera",
+    "Map_1",
+    "Officetel",
+    "Park",
+    "Barstreet"
   ],
   "GottenPage": [],
-  "visited": 0
+  "visited": 3
 }
