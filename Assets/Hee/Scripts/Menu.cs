@@ -53,7 +53,6 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
         MoveS2_.SetActive(false);
     }
 
-
     void Start(){
         PhoneButton.GetComponent<Button>().onClick.AddListener(where);
     }

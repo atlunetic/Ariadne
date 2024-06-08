@@ -181,7 +181,7 @@ namespace Yarn.Unity.Example {
         public static int GetScore()
         {
 			int Score = GameManager.instance.GeonWooScore;
-			//int Score = 3;
+			print(Score);
             return Score;
         }
 
