@@ -429,15 +429,16 @@ title: PhoneBoothEnd2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<Scene DrugDealBG>>
 이미지 속 장소를 찾아왔다.
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+//<<Act 지수 Jisoo2 1.17 0.322 black>>
 D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다.
-<<UpdateAct 지수 Jisoo4>>
+//<<UpdateAct 지수 Jisoo4>>
 와…. 진짜 마약인가?
-<<UpdateAct 지수 Jisoo2>>
+//<<UpdateAct 지수 Jisoo2>>
 <<wait 0.5>>
 ….
-<<Hide 지수>>
+//<<Hide 지수>>
 손을 뻗는 순간….
 
 <<wait 0.5>>
