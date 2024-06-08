@@ -72,16 +72,16 @@ public class SaveAndLoad : MonoBehaviour
         string Totalpath = FolderPath+"Save"+i.ToString();
         if(!File.Exists(Totalpath)) {
             SaveFile[i].transform.GetChild(2).GetComponent<Button>().enabled = false;
-            SaveFile[i].transform.GetChild(1).GetComponent<Button>().onClick.AddListener(()=>Save(i));
-            return;
+        }else{
+            string json = File.ReadAllText(Totalpath);
+            SaveGameManager save = JsonConvert.DeserializeObject<SaveGameManager>(json);
+        
+            SaveFile[i].transform.GetChild(2).GetComponent<Button>().enabled = true;
+            SaveFile[i].transform.GetChild(0).GetComponent<TMP_Text>().text = Location(save.NowScene);
+            SaveFile[i].transform.GetChild(2).GetComponent<Button>().onClick.AddListener(()=>Load(i));
         }
 
-        string json = File.ReadAllText(Totalpath);
-        SaveGameManager save = JsonConvert.DeserializeObject<SaveGameManager>(json);
-        
-        SaveFile[i].transform.GetChild(2).GetComponent<Button>().enabled = true;
-        SaveFile[i].transform.GetChild(0).GetComponent<TMP_Text>().text = Location(save.NowScene);
-        SaveFile[i].transform.GetChild(2).GetComponent<Button>().onClick.AddListener(()=>Load(i));
+        SaveFile[i].transform.GetChild(1).GetComponent<Button>().onClick.AddListener(()=>Save(i));
     }
 
     string Location(string scene){
