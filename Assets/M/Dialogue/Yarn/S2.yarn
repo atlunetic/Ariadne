@@ -374,7 +374,7 @@ title: E_NoClothes
 지수: 혼자 오셨어요?
 클럽 고객E: 아…. 네.
 클럽 고객E: ….
-클럽 고객E가 불편한 듯 자리를 떴다.
+클럽 고객E가 불편한 듯 눈을 피했다.
 ….
 ….
 <<UpdateAct 지수 Jisoo4>>
@@ -1838,7 +1838,7 @@ title: obj_drugjelly
 그 순간 바닥으로 무언가 떨어졌다.
 
 <<Draw Toilet_drugjelly 0.75 0.75>>
-<<wait 1.0>>
+<<wait 2.0>>
 <<Hide Toilet_drugjelly>>
 
 <<UpdateAct 지수 Jisoo4>>
@@ -1862,13 +1862,13 @@ title: obj_drugjelly
 	클럽 고객F: 저기 안보여?
 	클럽 고객F가 어딘가를 가리켰다.
 	<<wait 1.0>>	
-	클럽 고객F: “나비가 걸어다니고 있잖아.”
+	클럽 고객F: 나비가 걸어다니고 있잖아.
 	<<wait 1.0>>
 	<<UpdateAct 지수 Jisoo4>>
 	….
 	그 곳에는 아무것도 없었다.
 	<<wait 1.0>>
-	클럽 고객F: “얼른 따라가야 되는데….”
+	클럽 고객F: 얼른 따라가야 되는데….
 	<<wait 1.0>>
 	….
 	<<UpdateAct 지수 Jisoo3>>
@@ -2084,7 +2084,7 @@ title: obj_staffroomdoor
 	….
 	직원에게 물어볼까?
 	-> CCTV를 보고 싶다고 말하자
-		<<Act 클럽직원C StaffRoom_staff_C_0 0.422 0.627 black>>
+		//<<Act 클럽직원C StaffRoom_staff_C_0 0.422 0.627 black>>
 		<<UpdateAct 지수 Jisoo1>>
 		지수: 저기 혹시, CCTV 좀 확인할 수 있을까요?
 		<<if $persuade >= 7>>
@@ -2235,7 +2235,7 @@ title: game_retry
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-조직원: …뭐하는 거예요?
+직원: …뭐하는 거예요?
 지수: 아….
 지수: 땅에 뭐가 떨어져서요.
 …들킬 뻔했네.
@@ -2319,8 +2319,8 @@ title: obj_cocatree
 * 일기장에 '코카인'이 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page8>>
-<<SetActiveFalse VisualNovelPrefab StaffRoom_Tree>>
-<<FinishedObj VisualNovelPrefab StaffRoom_Tree>>
+<<SetActiveFalse VisualNovelPrefab Staffroom_Tree>>
+<<FinishedObj VisualNovelPrefab Staffroom_Tree>>
 
 <<if visited("DiaryTutorial")==false>>
     <<jump DiaryTutorial>>
