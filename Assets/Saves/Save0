@@ -1,10 +1,9 @@
 {
   "IsLoad": true,
-  "NowScene": "S1_2_JiwonRoom",
+  "NowScene": "S2_2_Table",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
-  "StaffroomOpen": false,
   "ChattingLog": [
     0,
     13,
@@ -25,18 +24,22 @@
   "items": [
     {
       "ItemType": 0,
-      "itemName": "Wallet"
+      "itemName": "Hairpin"
     },
     {
       "ItemType": 0,
-      "itemName": "Hairpin"
+      "itemName": "Cup"
     }
   ],
   "FindedObjects": [
     "Letter",
     "Books_Diary",
     "DrawerR_Wallet",
-    "Drawer_Hairpin"
+    "Drawer_Hairpin",
+    "3Drug",
+    "ClubTable_NPCD",
+    "menu_philopon",
+    "Cup"
   ],
   "FindedClues": [
     "Letter",
@@ -69,8 +72,17 @@
     "Map_1",
     "Officetel",
     "Park",
-    "Barstreet"
+    "Barstreet",
+    "Hospital",
+    "Where",
+    "New711",
+    "SevenEleven",
+    "Club_S1End",
+    "ActiveM"
   ],
-  "GottenPage": [],
-  "visited": 3
+  "GottenPage": [
+    "Page4",
+    "Page7"
+  ],
+  "visited": 7
 }

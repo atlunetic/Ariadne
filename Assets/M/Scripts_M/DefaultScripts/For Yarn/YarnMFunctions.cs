@@ -78,13 +78,4 @@ public class YarnMFunctions : MonoBehaviour
     {
         GameManager.instance.GeonWooScore = Score;
     }
-
-
-
-    [YarnCommand("DoorOpened")]
-    public void DoorOpened(bool open)
-    {
-        GameManager.instance.StaffroomOpen = open;
-    }
-
 }

@@ -8,7 +8,6 @@ public class SaveGameManager{
     public int NumOfScreenShots = 1;  // 불러오기 시 더 큰 수로 적용
     public int GeonWooScore = 0;
     public int SaengSoo = 0;
-    public bool StaffroomOpen = false;
     public List<int> ChattingLog = new List<int>();
     public List<string> PhotoList = new List<string>();
     public List<item> items = new List<item>();  // 저장할때 Inventory 에서 받아오기
@@ -53,7 +52,7 @@ public class GameManager : MonoBehaviour
         return FindedClues.Contains("Laptop") && FindedClues.Contains("Meds") && FindedClues.Contains("Letter") &&
                FindedObjects.Contains("Drawer_Hairpin") && FindedObjects.Contains("DrawerR_Wallet") &&
                (FinishedDialogues.Contains("AfterGeonwooChatAsJiwon") || FinishedDialogues.Contains("AfterGeonwooChatAsHerself")) &&
-               FinishedDialogues.Contains("Chatlist") && FinishedDialogues.Contains("Books_Diary") &&
+               FinishedDialogues.Contains("Chatlist") && FindedObjects.Contains("Books_Diary") &&
                visited == 7;
     }
 
@@ -70,7 +69,6 @@ public class GameManager : MonoBehaviour
         saveGameManager.NumOfScreenShots = instance.NumOfScreenShots;
         saveGameManager.GeonWooScore = instance.GeonWooScore;
         saveGameManager.SaengSoo = instance.SaengSoo;
-        saveGameManager.StaffroomOpen = instance.StaffroomOpen;
         saveGameManager.ChattingLog = instance.ChattingLog;
         saveGameManager.PhotoList = instance.PhotoList;
         saveGameManager.items = instance.items;
@@ -90,7 +88,6 @@ public class GameManager : MonoBehaviour
         instance.NumOfScreenShots = saveGameManager.NumOfScreenShots;
         instance.GeonWooScore = saveGameManager.GeonWooScore;
         instance.SaengSoo = saveGameManager.SaengSoo;
-        instance.StaffroomOpen = saveGameManager.StaffroomOpen;
         instance.ChattingLog = saveGameManager.ChattingLog;
         instance.PhotoList = saveGameManager.PhotoList;
         instance.items = saveGameManager.items;
