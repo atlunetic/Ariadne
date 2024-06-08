@@ -836,7 +836,7 @@ title: event_gunwoo_q1b
 	<<else>>
 		<<jump event_gunwoo_q2b>>
 	<<endif>>
---> 정말 기억이 안나는 거예요?
+-> 정말 기억이 안나는 거예요?
 	//설득점수 +1
 	<<set $persuade = $persuade + 1>>
 	<<UpdateAct 지수 Jisoo4>>
