@@ -5447,9 +5447,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4095407691540616704, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 460897318}
-    - targetCorrespondingSourceObject: {fileID: 4095407691540616704, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 460897321}
   m_SourcePrefab: {fileID: 100100000, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
 --- !u!224 &460897314 stripped
@@ -5457,22 +5454,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1726174567949598130, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
   m_PrefabInstance: {fileID: 460897313}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &460897318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453730393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0e975710f4f1b34f8ce401df8be1da1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newItem:
-    ItemType: 0
-    itemName: WaterBottle
-  image: {fileID: 0}
 --- !u!114 &460897321
 MonoBehaviour:
   m_ObjectHideFlags: 0

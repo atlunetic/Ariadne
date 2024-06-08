@@ -28,6 +28,10 @@
     {
       "ItemType": 0,
       "itemName": "DrugJelly"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Clothes"
     }
   ],
   "FindedObjects": [
@@ -42,7 +46,8 @@
     "ClubTable_Geonwoo",
     "StaffRoom_staff_C",
     "InStaffroom_Key",
-    "Toilet_costomerF"
+    "Toilet_costomerF",
+    "Locker"
   ],
   "FindedClues": [
     "Meds",
@@ -65,8 +70,7 @@
     "New711",
     "SevenEleven",
     "Club_S1End",
-    "ActiveM",
-    "obj_staffroomdoor"
+    "ActiveM"
   ],
   "GottenPage": [
     "Page4",

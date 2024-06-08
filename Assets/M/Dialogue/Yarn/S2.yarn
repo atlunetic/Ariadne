@@ -288,7 +288,7 @@ title: obj_customers
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<if visited("obj_customers") == true>>
+<<if CheckDialogue("obj_customers") == true>>
 	<<jump checkClothes>>
 <<else>>
 	<<Act 지수 Jisoo1 1.17 0.322 black>>
@@ -342,6 +342,7 @@ title: obj_customers
 		<<Hide 클럽고객D>>
 		<<SetActiveFalse VisualNovelPrefab ClubTable_NPCD>>
 		<<FinishedObj VisualNovelPrefab ClubTable_NPCD>>
+		<<FinishedDialogue VisualNovelPrefab obj_customers>>
 		<<UpdateAct 지수 Jisoo2>>
 		….
 		이 틈에 E를 도울 수 있는 방법이 없을까?
@@ -1630,7 +1631,7 @@ title: event_gunwoo_end
 <<UpdateAct 지수 Jisoo2>>
 지수: 오빠는 클럽 직원들이랑 친하니까….
 지수: CCTV라도 볼 수 있게 도와주면 안돼요?
-<<PersuadeScore VisualNovelPrefab>>
+<<PersuadeScore VisualNovelPrefab $persuade>>
 <<if $persuade >= 7>>
 	<<jump event_gunwoo_success>>
 <<elseif $persuade >= 3>>
@@ -1957,6 +1958,16 @@ title: WrongItemUsed
 <<SetCanvasTo VisualNovelPrefab true>>
 흠...
 이걸로는 안될 것 같아.
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: KeyUse
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+이걸 사용해볼까?
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -2916,8 +2927,8 @@ title: club_viproom_changeuniform
 ….
 들어가보자.
 
-<<jump club_viproom>>
 <<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
+<<jump club_viproom>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -2955,7 +2966,7 @@ title: obj_customerg
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
-
+<<FinishedDialogue VisualNovelPrefab obj_customerg>>
 <<Act 지수 CoJisoo1 1.17 0.322 black>>
 술냄새가 진동한다…. 
 얼른 지나갈까?
@@ -3020,9 +3031,9 @@ title: WaterToE
 클럽 고객G: 내가 말이야~. 예전에 어떤 일 했는지 알아?
 
 ….
-클럽 고객G: 어마어마한 사람이었다~ 이거야.
-클럽 고객G: 다들 사장님, 사장님하고 말이야….
-클럽 고객G: 부인도 자식도 다들 얼마나 다정하고 좋은 사람인지….
+클럽고객G: 어마어마한 사람이었다~ 이거야.
+클럽고객G: 다들 사장님, 사장님하고 말이야….
+클럽고객G: 부인도 자식도 다들 얼마나 다정하고 좋은 사람인지….
 ….
 ….
 계속 들어줘야 할까?
@@ -3044,11 +3055,12 @@ title: IgnoreE
 지수: 바에 있는 술장고에서 가져가시겠어요?
 
 ….
-클럽 고객G: 뭐? 손님을 오라가라 해?
-클럽 고객G: 에잇…!
+클럽고객G: 뭐? 손님을 오라가라 해?
+클럽고객G: 에잇…!
 
 클럽 고객G는 씩씩거리며 자리를 비웠다.
 <<Hide 클럽고객G>>
+<<wait  1.0>>
 <<SetActiveFalse VisualNovelPrefab VIProom_customerG>>
 <<FinishedObj VisualNovelPrefab VIProom_customerG>>
 <<wait 1.0>>
@@ -3066,17 +3078,17 @@ title: IgnoreE
 
 ….
 ….
-클럽 고객G: 어어~ 왜 남의 휴대폰을 함부로 보고 그래!
+클럽고객G: 어어~ 왜 남의 휴대폰을 함부로 보고 그래!
 
 클럽 고객G가 언성을 높이며 휴대폰을 가져갔다.
 ….
 ….
-클럽 고객G는 휴대폰을 확인하기 시작했다.
+클럽고객G는 휴대폰을 확인하기 시작했다.
 ….
 ….
 
-클럽 고객G: 아~. 간만에 술 마시러 왔는데.
-클럽 고객G: 부인이 내가 보고 싶은가봐~.
+클럽고객G: 아~. 간만에 술 마시러 왔는데.
+클럽고객G: 부인이 내가 보고 싶은가봐~.
 
 클럽 고객G는 머쓱한 듯 말을 돌렸다.
 ….
@@ -3086,15 +3098,15 @@ title: IgnoreE
 //클럽 고객G의 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
 <<Hide 지수>>
 <<Draw ClubcustomerG_Phone 0.75 0.75>>
-클럽 고객G는 가족사진을 보여줬다.
+클럽고객G는 가족사진을 보여줬다.
 
-클럽 고객G: 우리 딸이 말이야.
-클럽 고객G: 공부도 잘 하고, 모범생이야.
-클럽 고객G: 부인은 또 얼마나 착한지~.
+클럽고객G: 우리 딸이 말이야.
+클럽고객G: 공부도 잘 하고, 모범생이야.
+클럽고객G: 부인은 또 얼마나 착한지~.
 
-클럽 고객G: ….
-클럽 고객G: 사업이 망하지만 않았어도….
-클럽 고객G: 내가 이렇게 되지는 않았을텐데….
+클럽고객G: ….
+클럽고객G: 사업이 망하지만 않았어도….
+클럽고객G: 내가 이렇게 되지는 않았을텐데….
 <<jump obj_customerg_end>>
 
 ===
@@ -3108,9 +3120,9 @@ title: obj_customerg_choose
 	<<UpdateAct 지수 CoJisoo1>>
 	지수: 아, 그러셨구나.
 	지수: 그러면 클럽에 다니게 된 계기가 있으신가요?
-	클럽 고객G는 눈을 반짝였다.
-	클럽 고객G: 아 내가 말이지~.
-	클럽 고객G: 예전에 어마어마한 분이랑 술자리를 가졌는데~.
+	클럽고객G는 눈을 반짝였다.
+	클럽고객G: 아 내가 말이지~.
+	클럽고객G: 예전에 어마어마한 분이랑 술자리를 가졌는데~.
 	//직원지수2
 	<<UpdateAct 지수 CoJisoo2>>
 	….
@@ -3121,9 +3133,9 @@ title: obj_customerg_choose
 		<<UpdateAct 지수 CoJisoo1>>
 		지수: 아, 그러셨구나.
 		지수: 그러면 예전엔 어떤 일을 하셨어요?
-		클럽 고객G는 눈을 반짝였다.
-		클럽 고객G: 아 내가 예전에 말이야~.
-		클럽 고객G: 엄청 잘나가는 회사 사장이었다 이말이야.
+		클럽고객G는 눈을 반짝였다.
+		클럽고객G: 아 내가 예전에 말이야~.
+		클럽고객G: 엄청 잘나가는 회사 사장이었다 이말이야.
 		<<UpdateAct 지수 CoJisoo2>>
 		….
 		….
@@ -3140,9 +3152,9 @@ title: obj_customerg_choose
 	<<UpdateAct 지수 CoJisoo1>>
 	지수: 아, 그러셨구나.
 	지수: 그러면 예전엔 어떤 일을 하셨어요?
-	클럽 고객G는 눈을 반짝였다.
-	클럽 고객G: 아 내가 예전에 말이야~.
-	클럽 고객G: 엄청 잘나가는 회사 사장이었다 이말이야.
+	클럽고객G는 눈을 반짝였다.
+	클럽고객G: 아 내가 예전에 말이야~.
+	클럽고객G: 엄청 잘나가는 회사 사장이었다 이말이야.
 	
 	<<UpdateAct 지수 CoJisoo2>>
 	….
@@ -3153,9 +3165,9 @@ title: obj_customerg_choose
 		<<UpdateAct 지수 CoJisoo1>>
 		지수: 아, 그러셨구나.
 		지수: 그러면 클럽에 다니게 된 계기가 있으신가요?
-		클럽 고객G는 눈을 반짝였다.
-		클럽 고객G: 아 내가 말이지~.
-		클럽 고객G: 예전에 어마어마한 분이랑 술자리를 가졌는데~.
+		클럽고객G는 눈을 반짝였다.
+		클럽고객G: 아 내가 말이지~.
+		클럽고객G: 예전에 어마어마한 분이랑 술자리를 가졌는데~.
 		<<UpdateAct 지수 CoJisoo2>>
 		….
 		….
@@ -3191,13 +3203,13 @@ title: chocotalk_ariadne_customerg
 	//클럽 고객G 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
 	<<Hide 지수>>
 	<<Draw ClubcustomerG_Phone 0.75 0.75>>
-	클럽 고객G는 가족사진을 보여줬다.
-	클럽 고객G: 우리 딸이 말이야.
-	클럽 고객G: 공부도 잘 하고, 모범생이야.
-	클럽 고객G: 부인은 또 얼마나 착한지~.
-	클럽 고객G: ….
-	클럽 고객G: 사업이 망하지만 않았어도….
-	클럽 고객G: 내가 이렇게 되지는 않았을텐데….
+	클럽고객G는 가족사진을 보여줬다.
+	클럽고객G: 우리 딸이 말이야.
+	클럽고객G: 공부도 잘 하고, 모범생이야.
+	클럽고객G: 부인은 또 얼마나 착한지~.
+	클럽고객G: ….
+	클럽고객G: 사업이 망하지만 않았어도….
+	클럽고객G: 내가 이렇게 되지는 않았을텐데….
 	<<jump obj_customerg_end>>
 
 
@@ -3227,7 +3239,7 @@ title: obj_customerg_end
 아무래도 수상해.
 마약 거래를 하려는 걸까?
 
-<<if visited("obj_customerh") == true && visited("obj_customerg_end")==true>>
+<<if CheckDialogue("obj_customerh") == true>>
 	<<jump event_customergh_end>>
 <<else>>
 	<<Hide 지수>>
@@ -3242,6 +3254,7 @@ title: obj_customerh
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab obj_customerh>>
 //클릭할 경우
 어…. 눈이 마주쳤다. 
 ….
@@ -3279,12 +3292,16 @@ title: obj_customerh
 클럽 고객H: ….
 클럽 고객H: 이만 가볼게요! 지수 씨도 얼른 들어가세요.
 
+<<Hide 클럽고객H>>
+
+<<SetActiveFalse VisualNovelPrefab VIProom_customerH>>
+
 <<UpdateAct 지수 CoJisoo2>>
 ….
 ….
 이상한 사람이다.
 
-<<if visited("obj_customerh") == true && visited("obj_customerg_end")==true>>
+<<if CheckDialogue("obj_customerh") == true>>
 	<<jump event_customergh_end>>
 <<else>>
 	<<Hide 지수>>
@@ -3606,6 +3623,7 @@ CCTV에 찍힌 그 인형이야.
 
 //건우, 지수가 대화하는 계단 배경으로 변경
 <<ChangeSceneTo VisualNovelPrefab S2_7_Stairs>>
+<<Scene NoBG>>
 
 //건우 왼쪽, 지수 오른쪽
 
@@ -3617,6 +3635,8 @@ CCTV에 찍힌 그 인형이야.
 지수: 차 안이라도 살펴볼 수 있으면 좋을텐데….
 지수: ….
 //차 문 열리고 닫히는 사운드 재생
+<<PlayAudio CarDoorOpen>>
+
 
 <<UpdateAct 지수 Jisoo4>>
 지수: 어…. 누가 나오는데요?
@@ -3665,6 +3685,7 @@ title: inventory_drugjelly
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 //인벤토리에서 젤리 봉지 사용시
+<<UI_off MenuUI>>
 <<Act 건우 Geonwoo2 0.322 0.227 black>>
 건우: ….
 건우: 이거 어디서 났어?
@@ -3781,7 +3802,6 @@ title: obj_car_outside
 		<<Hide Ending3>>
 		<<Scene NoBG>>
 		<<SetCanvasTo VisualNovelPrefab false>>
-
 	-> 창문
 		잠금 장치에 손이 닿는다.
 		….
@@ -3838,12 +3858,12 @@ title: obj_navigation
 
 ….
 //네비게이션 검색 목록 이미지
-<<Draw NavList 0.75 0.75>>
+<<Draw NaviList 0.75 0.75>>
 
 -> 클럽 A
 	….
 	이 클럽의 주소인 것 같다.
-	<<Hide NavList>>
+	<<Hide NaviList>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 -> XX 오피스텔
 	….
@@ -3851,7 +3871,7 @@ title: obj_navigation
 	….
 	수상한데?
 	주소를 기억해둬야 할 것 같아.
-	<<Hide NavList>>
+	<<Hide NaviList>>
 	<<declare $nav = 0 as number>>
 	<<set $nav = 1>>
 	<<if visited("memory_BrokenGlasses")==true>>
@@ -3861,7 +3881,7 @@ title: obj_navigation
 -> 마약 떡볶이&마약 김밥
 	….
 	여기를 갔었나보네.
-	<<Hide NavList>>
+	<<Hide NaviList>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -3886,11 +3906,11 @@ title: memory_BrokenGlasses
 <<SetCanvasTo VisualNovelPrefab true>>
 건우: 현장에 이게 있었어.
 건우: 몰래 챙겨왔는데….
-???(지수): ….
+???: ….
 건우: 너한테 주는 게 맞는 것 같아서.
 건우: ….
 건우: 미안하다.
-???(지수): ….
+???: ….
 <<StopMemory  SceneManager>>
 <<if $nav == 1>>
 	<<jump event_movetostairs>>
@@ -3939,7 +3959,7 @@ title: stairchocotalk1
 궁금하네. 물어보자.
 
 //초코톡 건우와의 대화 진행
-<<StartPhoneChat PhoneControllers 23>>
+<<StartPhoneChat PhoneController 23>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 

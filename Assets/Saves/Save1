@@ -20,6 +20,10 @@
     {
       "ItemType": 0,
       "itemName": "Cup"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Clothes"
     }
   ],
   "FindedObjects": [
@@ -54,7 +58,8 @@
     "New711",
     "SevenEleven",
     "Club_S1End",
-    "ActiveM"
+    "ActiveM",
+    "obj_customers"
   ],
   "GottenPage": [
     "Page4",

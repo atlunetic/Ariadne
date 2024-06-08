@@ -414,7 +414,6 @@ MonoBehaviour:
   newItem:
     ItemType: 0
     itemName: Cup
-    itemImage: {fileID: -1715611059, guid: a197e803b6519d24cab2dad235ab6b49, type: 3}
   image: {fileID: 696875071}
 --- !u!114 &696875076
 MonoBehaviour:
@@ -1023,7 +1022,6 @@ MonoBehaviour:
   newItem:
     ItemType: 0
     itemName: WaterBottle
-    itemImage: {fileID: 21300000, guid: 759b0b6b98dab824e848ec691c1a4667, type: 3}
   image: {fileID: 0}
 --- !u!1 &2109643662
 GameObject:

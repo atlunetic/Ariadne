@@ -1,9 +1,9 @@
 {
   "IsLoad": true,
-  "NowScene": "S2_4_0_StaffRoomEntrance",
+  "NowScene": "S2_6_ReVip",
   "NumOfScreenShots": 1,
-  "GeonWooScore": 0,
-  "SaengSoo": 0,
+  "GeonWooScore": 11,
+  "SaengSoo": 1,
   "ChattingLog": [
     12
   ],
@@ -15,11 +15,23 @@
   "items": [
     {
       "ItemType": 0,
+      "itemName": "Hairpin"
+    },
+    {
+      "ItemType": 0,
       "itemName": "Cup"
     },
     {
       "ItemType": 0,
+      "itemName": "Key"
+    },
+    {
+      "ItemType": 0,
       "itemName": "DrugJelly"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Clothes"
     }
   ],
   "FindedObjects": [
@@ -32,8 +44,10 @@
     "ClubTable_NPCD",
     "menu_philopon",
     "ClubTable_Geonwoo",
+    "StaffRoom_staff_C",
+    "InStaffroom_Key",
     "Toilet_costomerF",
-    "StaffRoom_staff_C"
+    "Locker"
   ],
   "FindedClues": [
     "Meds",
@@ -57,7 +71,8 @@
     "SevenEleven",
     "Club_S1End",
     "ActiveM",
-    "obj_staffroomdoor"
+    "club_viproom_entry",
+    "yay"
   ],
   "GottenPage": [
     "Page4",
