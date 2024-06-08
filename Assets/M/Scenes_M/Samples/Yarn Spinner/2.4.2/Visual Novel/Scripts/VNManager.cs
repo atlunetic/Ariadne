@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using JetBrains.Annotations;
 
 namespace Yarn.Unity.Example {
 	/// <summary>
@@ -179,7 +180,8 @@ namespace Yarn.Unity.Example {
 		[YarnFunction("GetScore")]
         public static int GetScore()
         {
-            int Score = GameManager.instance.GeonWooScore;
+			int Score = GameManager.instance.GeonWooScore;
+			//int Score = 3;
             return Score;
         }
 
@@ -187,6 +189,21 @@ namespace Yarn.Unity.Example {
 		public static bool ActAs()
 		{
 			return GameManager.instance.FinishedDialogues.Contains("AfterGeonwooChatAsJiwon");
+		}
+
+        [YarnFunction("CheckDialogue")]
+
+        public static bool DialogueChecked(string DialogueTitle)
+        {
+            bool Check = GameManager.instance.FinishedDialogues.Contains(DialogueTitle);
+            return Check;
+        }
+
+		[YarnFunction("StaffRoomCheck")]
+		public static bool StaffRoomCheck()
+		{
+			bool Check = GameManager.instance.StaffroomOpen;
+			return Check;
 		}
 
 
