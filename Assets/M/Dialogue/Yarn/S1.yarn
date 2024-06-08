@@ -770,9 +770,9 @@ title: HospitalWaitingRoom
                     <<Scene NoBG>>
                     <<SetCanvasTo VisualNovelPrefab false>>
             -> 아 맞다. 그랬었지.
-                지수 “아…. 그랬죠. 참.”
-                지수 “알겠습니다.” 
-                의사 선생님 “네. 다음에 뵙죠.”
+                지수: “아…. 그랬죠. 참.”
+                지수: “알겠습니다.” 
+                의사 선생님: “네. 다음에 뵙죠.”
 
                 병원을 나섰다.
                 //씬 변경: 지도
