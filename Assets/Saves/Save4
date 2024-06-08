@@ -1,0 +1,51 @@
+{
+  "IsLoad": false,
+  "NowScene": "S1_Park",
+  "NumOfScreenShots": 1,
+  "GeonWooScore": 0,
+  "SaengSoo": 0,
+  "ChattingLog": [
+    12
+  ],
+  "PhotoList": [
+    "Meds1",
+    "Letter1",
+    "Laptop1"
+  ],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Hairpin"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Wallet"
+    }
+  ],
+  "FindedObjects": [
+    "Books_Diary",
+    "Drawer_Hairpin",
+    "DrawerR_Wallet",
+    "3Drug"
+  ],
+  "FindedClues": [
+    "Meds",
+    "Letter",
+    "Laptop"
+  ],
+  "FinishedDialogues": [
+    "jisoo'stalk",
+    "Chatlist",
+    "DGram1st",
+    "Chocotalk1st",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsHerself",
+    "Camera",
+    "Map_1",
+    "Park"
+  ],
+  "GottenPage": [
+    "Page4"
+  ],
+  "visited": 1
+}

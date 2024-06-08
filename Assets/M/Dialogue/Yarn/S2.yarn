@@ -74,9 +74,12 @@ title: meet_gunwoo
 	<<FadeIn>>
 	<<wait 2.0>>
 	//엔딩 3. ??? : 무슨 일이 일어난 걸까.
-	<<DrawFadeIn Ending3>>
+	<<FadeIn>>
+	<<DrawFadeIn Ending3 0.75 0.75>>
 	<<ChangeSceneTo VisualNovelPrefab S0>>
+	<<wait  3.0>>
 	<<Hide Ending3>>
+	<<Scene NoBG>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 -> 나라고 밝히자.
 	<<UpdateAct 지수 Jisoo1>>
@@ -2274,10 +2277,12 @@ title: game_openthedoor_gameover
 ….
 <<FadeIn>>
 //엔딩 3. ??? : 무슨 일이 일어난 걸까. 
-<<DrawFadeIn Ending3>>
+<<FadeIn>>
+<<DrawFadeIn Ending3 0.75 0.75>>
 <<ChangeSceneTo VisualNovelPrefab S0>>
+<<wait  3.0>>
 <<Hide Ending3>>
-<<SetCanvasTo VisualNovelPrefab false>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -3765,9 +3770,12 @@ title: obj_car_outside
 		시야가 흐려져 간다.
 		….
 		//엔딩 3. 막다른 길: 조직원에게 붙잡힌 엔딩 (확인용, 추후 주석 처리)
-		<<DrawFadeIn Ending3>>
+		<<FadeIn>>
+		<<DrawFadeIn Ending3 0.75 0.75>>
 		<<ChangeSceneTo VisualNovelPrefab S0>>
+		<<wait  3.0>>
 		<<Hide Ending3>>
+		<<Scene NoBG>>
 		<<SetCanvasTo VisualNovelPrefab false>>
 
 	-> 창문
