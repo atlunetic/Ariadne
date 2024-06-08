@@ -1,4 +1,4 @@
-title: StartClub
+﻿title: StartClub
 
 ---
 
@@ -2272,7 +2272,7 @@ title: game_openthedoor_gameover
 시야가 흐려져 간다.
 <<wait 1.0>>
 ….
-
+<<FadeIn>>
 //엔딩 3. ??? : 무슨 일이 일어난 걸까. 
 <<DrawFadeIn Ending3>>
 <<ChangeSceneTo VisualNovelPrefab S0>>
