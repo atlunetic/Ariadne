@@ -7,6 +7,7 @@ public class UIOnAndOff : MonoBehaviour
     public GameObject obj;
 
     void OnMouseDown(){
+        if(Menu.instance.BlockClick) return;
         on_obj();
     }
 
