@@ -1,26 +1,16 @@
 {
   "IsLoad": true,
   "NowScene": "S2_2_Table",
-  "NumOfScreenShots": 2,
+  "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
   "ChattingLog": [
-    0,
-    13,
-    14,
-    2,
-    3,
-    4,
-    15,
-    5,
-    6,
-    16
+    12
   ],
   "PhotoList": [
-    "Letter0",
-    "Laptop0",
-    "Meds0",
-    "ScreenShot_1"
+    "Meds2",
+    "Laptop2",
+    "Letter2"
   ],
   "items": [
     {
@@ -30,10 +20,6 @@
     {
       "ItemType": 0,
       "itemName": "Cup"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "DrugJelly"
     }
   ],
   "FindedObjects": [
@@ -42,41 +28,25 @@
     "DrawerR_Wallet",
     "Drawer_Hairpin",
     "3Drug",
+    "Cup",
     "ClubTable_NPCD",
     "menu_philopon",
-    "Cup",
-    "Toilet_costomerF"
+    "ClubTable_Geonwoo"
   ],
   "FindedClues": [
-    "Letter",
+    "Meds",
     "Laptop",
-    "Meds"
+    "Letter"
   ],
   "FinishedDialogues": [
     "jisoo'stalk",
     "Chatlist",
-    "Chocotalk1st",
     "DGram1st",
-    "DropperRecruit",
-    "IceiceChat",
+    "Chocotalk1st",
     "ChooseChatName1",
-    "AfterGeonwooChatAsJiwon",
-    "ChooseChatName2",
-    "AfterDropperChat",
-    "HaesolDropperCaution",
-    "OpenChat",
-    "DrugDeal",
-    "DestroySearch",
-    "DrugDeal1",
-    "DrugDeal2",
-    "DrugDeal3",
-    "DrugDeal4",
-    "DrugDeal5",
-    "DrugDeal6",
-    "Gallery",
+    "AfterGeonwooChatAsHerself",
     "Camera",
     "Map_1",
-    "Officetel",
     "Park",
     "Barstreet",
     "Hospital",

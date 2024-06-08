@@ -2081,7 +2081,8 @@ title: obj_staffroomdoor
 
 <<if CheckDialogue("obj_staffroomdoor") == false>>
 	<<FinishedDialogue VisualNovelPrefab obj_staffroomdoor>>
-	<<set $persuade = GetScore()>>
+	//<<set $persuade = GetScore()>>
+	<<set $persuade = 11>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지원이가 여기서 대체 뭘 했을까….
 	CCTV라도 볼 수 있으면 좋을텐데.
@@ -2206,6 +2207,8 @@ title: game_openthedoor_intro
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
+<<UI_off MenuUI>>
+
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 아 맞다…. 헤어핀이 있었네.
 
@@ -2278,8 +2281,8 @@ title: game_openthedoor_gameover
 ….
 <<FadeIn>>
 //엔딩 3. ??? : 무슨 일이 일어난 걸까. 
-<<FadeIn>>
 <<DrawFadeIn Ending3 0.75 0.75>>
+<<wait 1.0>>
 <<ChangeSceneTo VisualNovelPrefab S0>>
 <<wait  3.0>>
 <<Hide Ending3>>
@@ -3968,6 +3971,9 @@ title: TestGetScore
 
 ---
 
+Current Score {$persuade}
+int score {int($persuade)}
+<<PersuadeScore VisualNovelPrefab int($persuade)>>
 I am testing {GetScore()}
 
 ===

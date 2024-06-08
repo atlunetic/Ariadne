@@ -1,6 +1,6 @@
 {
-  "IsLoad": false,
-  "NowScene": "S1_Park",
+  "IsLoad": true,
+  "NowScene": "S2_3_1_StaffOnlyLocker",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
@@ -8,9 +8,9 @@
     12
   ],
   "PhotoList": [
-    "Meds1",
-    "Letter1",
-    "Laptop1"
+    "Meds2",
+    "Laptop2",
+    "Letter2"
   ],
   "items": [
     {
@@ -19,19 +19,35 @@
     },
     {
       "ItemType": 0,
-      "itemName": "Wallet"
+      "itemName": "Cup"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Key"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "DrugJelly"
     }
   ],
   "FindedObjects": [
+    "Letter",
     "Books_Diary",
-    "Drawer_Hairpin",
     "DrawerR_Wallet",
-    "3Drug"
+    "Drawer_Hairpin",
+    "3Drug",
+    "Cup",
+    "ClubTable_NPCD",
+    "menu_philopon",
+    "ClubTable_Geonwoo",
+    "StaffRoom_staff_C",
+    "InStaffroom_Key",
+    "Toilet_costomerF"
   ],
   "FindedClues": [
     "Meds",
-    "Letter",
-    "Laptop"
+    "Laptop",
+    "Letter"
   ],
   "FinishedDialogues": [
     "jisoo'stalk",
@@ -42,10 +58,19 @@
     "AfterGeonwooChatAsHerself",
     "Camera",
     "Map_1",
-    "Park"
+    "Park",
+    "Barstreet",
+    "Hospital",
+    "Where",
+    "New711",
+    "SevenEleven",
+    "Club_S1End",
+    "ActiveM",
+    "obj_staffroomdoor"
   ],
   "GottenPage": [
-    "Page4"
+    "Page4",
+    "Page7"
   ],
-  "visited": 1
+  "visited": 7
 }

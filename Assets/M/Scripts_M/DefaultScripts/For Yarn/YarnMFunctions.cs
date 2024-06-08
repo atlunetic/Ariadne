@@ -77,5 +77,6 @@ public class YarnMFunctions : MonoBehaviour
     public void PersuadeScore(int Score)
     {
         GameManager.instance.GeonWooScore = Score;
+        Debug.Log("Geonwoo score saved as " + GameManager.instance.GeonWooScore);
     }
 }
