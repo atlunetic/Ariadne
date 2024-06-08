@@ -1627,6 +1627,7 @@ title: event_gunwoo_end
 <<UpdateAct 지수 Jisoo2>>
 지수: 오빠는 클럽 직원들이랑 친하니까….
 지수: CCTV라도 볼 수 있게 도와주면 안돼요?
+<<PersuadeScore VisualNovelPrefab $persuade>>
 <<if $persuade >= 7>>
 	<<jump event_gunwoo_success>>
 <<elseif $persuade >= 3>>
