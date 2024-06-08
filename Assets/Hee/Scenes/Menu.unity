@@ -8679,7 +8679,7 @@ MonoBehaviour:
   lineText: {fileID: 799741362}
   showCharacterNameInLineView: 1
   characterNameText: {fileID: 391520307}
-  characterNameContainer: {fileID: 0}
+  characterNameContainer: {fileID: 812430518}
   useTypewriterEffect: 1
   onCharacterTyped:
     m_PersistentCalls:
@@ -16771,7 +16771,7 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1685370297}
   text: {fileID: 1285689039}
-  showCharacterName: 0
+  showCharacterName: 1
   palette: {fileID: 0}
 --- !u!222 &1285689041
 CanvasRenderer:
@@ -23298,7 +23298,7 @@ PrefabInstance:
       objectReference: {fileID: 7545569452688597077, guid: b26f8dfb85448cf4b8b358cc4be0a481, type: 3}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: startAutomatically
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: yarnScripts.Array.size
@@ -23557,6 +23557,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6798407037274427283, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      propertyPath: characterNameText
+      value: 
+      objectReference: {fileID: 391520307}
+    - target: {fileID: 6798407037274427283, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: skipActionKeyCode
       value: 32
       objectReference: {fileID: 0}
@@ -23564,6 +23568,10 @@ PrefabInstance:
       propertyPath: useTypewriterEffect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6798407037274427283, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      propertyPath: characterNameContainer
+      value: 
+      objectReference: {fileID: 812430518}
     - target: {fileID: 6885618662069859611, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: showCharacterName
       value: 0
@@ -25868,7 +25876,7 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1556339097}
   text: {fileID: 1840030286}
-  showCharacterName: 0
+  showCharacterName: 1
   palette: {fileID: 0}
 --- !u!222 &1840030288
 CanvasRenderer:
@@ -27670,8 +27678,8 @@ MonoBehaviour:
   showUnavailableOptions: 0
   lastLineText: {fileID: 832834900}
   lastLineContainer: {fileID: 832834898}
-  lastLineCharacterNameText: {fileID: 0}
-  lastLineCharacterNameContainer: {fileID: 0}
+  lastLineCharacterNameText: {fileID: 391520307}
+  lastLineCharacterNameContainer: {fileID: 812430518}
 --- !u!1 &1952300210
 GameObject:
   m_ObjectHideFlags: 0
