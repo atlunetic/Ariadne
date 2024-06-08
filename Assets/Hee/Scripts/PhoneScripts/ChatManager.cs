@@ -19,6 +19,7 @@ public class ChatManager : MonoBehaviour
         profileImage.Add("건우 오빠", profileSprite[0]);
         profileImage.Add("의사 선생님", profileSprite[1]);
         profileImage.Add("해솔", profileSprite[2]);
+        profileImage.Add("지수", profileSprite[3]);
     }
     public struct chat{
         public bool JisooSaying;  // 지수의 대사이면 true
@@ -311,8 +312,10 @@ public class ChatManager : MonoBehaviour
         ChattingList.Add(new Chatting(true, "아리아드네", "chocotalk_ariadne_customerg"));  // 24
         AddChatToLast(false, "일이 잘 안풀려?");
         AddChatToLast(false, "클럽 고객G는 가족 얘기에 약하대.");
-        
-        // 이하 재넘버링 필요
+
+        ChattingList.Add(new Chatting(false, "지수", null));  // 25
+        AddChatToLast(false, "야, 미안. 앞으로 잘할게");
+        AddChatToLast(false, "배고프다~ 같이 맛있는 거 먹자.");
 
         foreach(int i in GameManager.instance.ChattingLog)
             PrintChat(i);

@@ -25,6 +25,7 @@ public class ChocoTalkController : MonoBehaviour
     public Button[] Buttons;
     public TMP_Text TXT;
     public GameObject D;
+    public GameObject jisoo;
     void Awake()
     {
         if (instance == null)
@@ -35,6 +36,7 @@ public class ChocoTalkController : MonoBehaviour
         CreateChatRoom("건우 오빠");
         CreateChatRoom("의사 선생님");
         CreateChatRoom("해솔");
+        ChatMap.Add("지수", jisoo);
         ChatMap.Add("D", D);
     }
 

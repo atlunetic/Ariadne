@@ -1398,7 +1398,6 @@ MonoBehaviour:
   newItem:
     ItemType: 0
     itemName: Key
-    itemImage: {fileID: -1531323709, guid: bfd07370b87bed7448186446a5f73ab6, type: 3}
   image: {fileID: 0}
 --- !u!114 &1514151996
 MonoBehaviour:
@@ -1579,6 +1578,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: Cluelist.Array.data[0]
       value: 
       objectReference: {fileID: 1315318903}
@@ -1598,6 +1601,18 @@ PrefabInstance:
       propertyPath: MemoriesBG.Array.data[3]
       value: 
       objectReference: {fileID: 1428441918}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[0]
+      value: 
+      objectReference: {fileID: 1037844913}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[1]
+      value: 
+      objectReference: {fileID: 1514151991}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[2]
+      value: 
+      objectReference: {fileID: 1453516167}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

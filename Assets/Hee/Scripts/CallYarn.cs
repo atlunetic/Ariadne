@@ -27,6 +27,7 @@ public class CallYarn : MonoBehaviour
     public Button drgg24chatbutton;
     public Button IDSearchbutton;
     public Button Mapbutton;
+    public Button jisoobutton;
 
     void Start()
     {
@@ -56,7 +57,7 @@ public class CallYarn : MonoBehaviour
 
         if(GameManager.instance.IsLoad) Menu.instance.ActivePI();
         if(GameManager.instance.FindedObjects.Contains("Books_Diary")) Menu.instance.ActiveD();
-        if(GameManager.instance.FinishedDialogues.Contains("ActiveM")) Menu.instance.ActiveM();
+        if(FinishedDialogues.Contains("ActiveM")) Menu.instance.ActiveM();
 
         Callbybutton(gallerybutton, "Gallery");  // 갤러리 켰을 때
 
@@ -67,14 +68,22 @@ public class CallYarn : MonoBehaviour
         if(FinishedDialogues.Contains("Camera")) camera.Invoke();
         else camerabutton.onClick.AddListener(camera);
 
-        ChatManager.instance.PrintChat(19);
-        ChatManager.instance.PrintChat(18);
+        ChatManager.instance.PrintChat(19);  // 이미 와있는 채팅들
+        ChatManager.instance.PrintChat(18);   
+        ChatManager.instance.PrintChat(25);
 
         Callbybutton(chocotalkbutton,"Chocotalk1st");  // 초코톡 켰을 때
         Callbybutton(openchatDbutton,"OpenChat");  // 오픈채팅 D 채팅창 켰을 때
 
         Callbybutton(ChocoTalkController.instance.chatbuttons["건우 오빠"], "ChooseChatName1");  // 건우 채팅창 켰을 때
         Callbybutton(Haesolchatbutton, "ChooseChatName2");  // 해솔 채팅창 켰을 때
+
+        UnityAction jisoo = null;
+        jisoo = () => {jisoobutton.transform.GetChild(2).gameObject.SetActive(false);
+                       GameManager.instance.FinishedDialogues.Add("jisoo'stalk");
+                       jisoobutton.onClick.RemoveListener(jisoo);};
+        if(FinishedDialogues.Contains("jisoo'stalk")) jisoo.Invoke();
+        else jisoobutton.onClick.AddListener(jisoo);
 
         UnityAction drgg24 = null;  // D 채팅창 켰을 때
         drgg24 = () => {Callbybutton(IDSearchbutton, "DrugDeal");
