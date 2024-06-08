@@ -1661,6 +1661,7 @@ title: event_gunwoo_success
 <<BGon SceneManager>>
 <<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
 <<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -1689,6 +1690,7 @@ title: event_gunwoo_3_6
 <<BGon SceneManager>>
 <<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
 <<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -1719,6 +1721,7 @@ title: event_gunwoo_fail
 <<BGon SceneManager>>
 <<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
 <<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -1741,6 +1744,7 @@ title: obj_studentid
 
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: memory_StudentID
@@ -2038,17 +2042,24 @@ TV: ….
 
 ===
 
+
 title: club_staffroom_front
 
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //배경 클릭 시: #이 근처엔 사람이 별로 없네. #조명이 약해서 눈이 덜 아파. 랜덤 노출
-<<set $rand = random_range(1,3)>>
-<<if $rand > 2>>
-	이 근처엔 사람이 별로 없네.
+<<if visited("obj_staffroomdoor_2") == false>>
+	<<set $rand = random_range(1,3)>>
+	<<if $rand > 2>>
+		이 근처엔 사람이 별로 없네.
+	<<else>>
+		조명이 약해서 눈이 덜 아파.
+	<<endif>>
 <<else>>
-	조명이 약해서 눈이 덜 아파.
+	<<SetActiveFalse VisualNovelPrefab StaffRoom_staff_C>>
+	<<FinishedObj VisualNovelPrefab StaffRoom_staff_C>>
+	<<jump club_staffroom_nostaff>>
 <<endif>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -2062,16 +2073,14 @@ title: obj_staffroomdoor
 <<SetCanvasTo VisualNovelPrefab true>>
 
 <<if visited("obj_staffroomdoor") == false>>
-
-<<set $persuade = GetScore()>>
-
+	<<set $persuade = GetScore()>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지원이가 여기서 대체 뭘 했을까….
 	CCTV라도 볼 수 있으면 좋을텐데.
 	….
 	직원에게 물어볼까?
 	-> CCTV를 보고 싶다고 말하자
-		<<Act 클럽직원C StaffRoom_staff_C_0 0.322 0.527 black>>
+		<<Act 클럽직원C StaffRoom_staff_C_0 0.422 0.627 black>>
 		<<UpdateAct 지수 Jisoo1>>
 		지수: 저기 혹시, CCTV 좀 확인할 수 있을까요?
 		<<if $persuade >= 7>>
@@ -2147,9 +2156,6 @@ title: club_staffroom_nostaff
 
 ---
 
-<<SetActiveFalse VisualNovelPrefab StaffRoom_staff_C>>
-<<FinishedObj VisualNovelPrefab StaffRoom_staff_C>>
-
 <<SetCanvasTo VisualNovelPrefab	true>>
 //직원과의 대화 이후, 다른 장소로 이동했다 Staff Room 앞으로 돌아올 경우
 
@@ -2158,7 +2164,7 @@ title: club_staffroom_nostaff
 
 <<UpdateAct 지수 Jisoo2>>
 ….	
-
+<<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab	false>>
 
 
