@@ -1,0 +1,51 @@
+{
+  "IsLoad": true,
+  "NowScene": "S1_2_JiwonRoom",
+  "NumOfScreenShots": 1,
+  "GeonWooScore": 0,
+  "SaengSoo": 0,
+  "ChattingLog": [
+    12
+  ],
+  "PhotoList": [
+    "Meds3",
+    "Letter3",
+    "Laptop3"
+  ],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Hairpin"
+    }
+  ],
+  "FindedObjects": [
+    "Books_Diary",
+    "DrawerR_Wallet",
+    "Drawer_Hairpin"
+  ],
+  "FindedClues": [
+    "Meds",
+    "Letter",
+    "Laptop"
+  ],
+  "FinishedDialogues": [
+    "jisoo'stalk",
+    "Chatlist",
+    "Camera",
+    "Map_1",
+    "Park",
+    "Barstreet",
+    "Hospital",
+    "Chocotalk1st",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsHerself",
+    "DGram1st",
+    "DropperRecruit",
+    "IceiceChat",
+    "Officetel",
+    "Where",
+    "New711"
+  ],
+  "GottenPage": [],
+  "visited": 7
+}

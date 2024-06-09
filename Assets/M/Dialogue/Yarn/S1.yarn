@@ -94,13 +94,16 @@ title: S1_path4
 -> 왼쪽으로 가보자.
     <<jump LeftPath>>
 -> 돌아가자.
+    <<Fade white 0.0 1.0 2.0>>
     갑자기 눈 앞이 흐려진다.
     여기서 쓰러지면 안되는데...
+    <<FadeIn>>
+    <<DrawFadeIn Ending0 0.75 0.75>>
     <<PlayAudio CardiacArrest>>
-    <<Fade white 0.0 1.0 2.0>>
-    <<DrawFadeIn Ending0>>
     <<ChangeSceneTo VisualNovelPrefab S0>>
+    <<wait  3.0>>
     <<Hide Ending0>>
+    <<Scene NoBG>>
     <<SetCanvasTo VisualNovelPrefab false>>
 
         
@@ -337,8 +340,13 @@ title: Ending1
 정확히 한 달 후에 경찰에서 연락이 왔다. 
 동생이….
 
-
+<<FadeIn>>
+<<DrawFadeIn Ending1 0.75 0.75>>
 <<ChangeSceneTo VisualNovelPrefab S0>>
+<<wait  3.0>>
+<<Hide Ending1>>
+<<Scene NoBG>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -463,13 +471,14 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 범죄를 정당화하려고 했어.
 …. 변함이 없구나?
 
-
-엔딩 2. 정당화의 방식
-<<DrawFadeIn Ending2>>
+//엔딩 2. 정당화의 방식
+<<FadeIn>>
+<<DrawFadeIn Ending2 0.75 0.75>>
 <<ChangeSceneTo VisualNovelPrefab S0>>
+<<wait  3.0>>
 <<Hide Ending2>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
-
 
 
 ===
@@ -732,7 +741,7 @@ title: HospitalWaitingRoom
 
 <<Scene H_DrRoom>>
 
-<<Act 의사선생님 NPC_Doctor 0.322 0.227 black>>
+<<Act 의사 NPC_Doctor 0.322 0.227 black>>
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 의사: 좀 어떠셨어요.
 
@@ -982,7 +991,6 @@ title: LaptopStory
 ….
 위험한 생각 하고 있는 거 아니야…?
 <<Hide 지수>>
-<<StopAudio LaptopVideo>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
