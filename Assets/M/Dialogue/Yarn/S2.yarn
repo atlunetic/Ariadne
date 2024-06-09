@@ -2708,10 +2708,10 @@ title: obj_key
 //서랍 클릭 시
 여기도 열어볼까..?
 ...
+<<Draw Key 0.75 0.75>>
 어... 열쇠다.
 <<wait 0.5>>
 어디 쓰는 열쇠지?
-<<Draw Key 0.75 0.75>>
 
 ...
 어디든 쓸모가 있지 않을까?
@@ -3402,20 +3402,16 @@ title: club_stair
 ...
 뒷문이 열려있다.
 슬쩍 내다볼까?
-
+<<HideAll>>
 //문틈 사이로 보는 듯한 주차장 배경
 <<Scene Stair_parklot>>
 
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
-<<Hide Jisoo1>>
 ...
 다 비슷하게 생겼네.
 <<wait 0.5>>
 저 중에 지원이가 탔던 차가 있는 것 같은데..?
 <<wait 1.0>>
-
-<<Hide 지수>>
 
 //사운드
 <<PlayAudio TouchShoulder>>
@@ -3426,10 +3422,6 @@ title: club_stair
 ..!
 깜짝 놀라 바라보니...
 건우 오빠가 서 있었다.
-
-//건우, 지수 이미지
-<<Act 지수 Jisoo1 1.17 0.322 black>>
-<<Act 건우 Geonwoo1 0.322 0.227 black>>
 
 건우: 여기서 뭐해?
 지수: 아... 오빠.
@@ -3443,7 +3435,6 @@ title: club_stair
 지수: 대체 어디로 갔는지...
 지수: ...
 <<wait 1.0>>
-<<HideAll>>
 
 <<set $rand = random_range(1,4)>>
 <<if $rand < 2>>
@@ -3819,7 +3810,7 @@ title: memory_BrokenGlasses
 건우: ...
 건우: 미안하다.
 ???: ...
-<<StopMemory  SceneManager>>
+<<StopMemory SceneManager>>
 <<if $nav == 1>>
 	<<jump event_movetostairs>>
 <<endif>>

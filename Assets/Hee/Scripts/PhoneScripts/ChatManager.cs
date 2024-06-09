@@ -307,10 +307,10 @@ public class ChatManager : MonoBehaviour
         ChattingList.Add(new Chatting(false, "건우 오빠", "stairchocotalk2"));  // 23
         AddChatToLast(true, "그런데 젤리는 어떻게 했어요?");
         AddChatToLast(false, "...");
-        AddChatToLast(true, "마침 나도 곰젤리가 있어서.");
-        AddChatToLast(true, "마약젤리 준다고 하면서 그거 줬어");
-        AddChatToLast(true, "이미 약에 취한건지...");
-        AddChatToLast(true, "구분을 못하던데?");
+        AddChatToLast(false, "마침 나도 곰젤리가 있어서.");
+        AddChatToLast(false, "마약젤리 준다고 하면서 그거 줬어");
+        AddChatToLast(false, "이미 약에 취한건지...");
+        AddChatToLast(false, "구분을 못하던데?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", "chocotalk_ariadne_customerg"));  // 24
         AddChatToLast(false, "일이 잘 안풀려?");
