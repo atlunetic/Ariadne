@@ -1,16 +1,16 @@
 {
   "IsLoad": true,
-  "NowScene": "S2_9_Car",
+  "NowScene": "S2_2_Table",
   "NumOfScreenShots": 1,
-  "GeonWooScore": 11,
-  "SaengSoo": 1,
+  "GeonWooScore": 0,
+  "SaengSoo": 0,
   "ChattingLog": [
     12
   ],
   "PhotoList": [
-    "Meds2",
-    "Laptop2",
-    "Letter2"
+    "Meds3",
+    "Letter3",
+    "Laptop3"
   ],
   "items": [
     {
@@ -19,61 +19,47 @@
     },
     {
       "ItemType": 0,
-      "itemName": "Cup"
+      "itemName": "WaterBottle"
     },
     {
       "ItemType": 0,
-      "itemName": "Key"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "Clothes"
+      "itemName": "WaterCup"
     }
   ],
   "FindedObjects": [
-    "Letter",
     "Books_Diary",
     "DrawerR_Wallet",
     "Drawer_Hairpin",
-    "3Drug",
     "Cup",
-    "ClubTable_NPCD",
-    "menu_philopon",
-    "ClubTable_Geonwoo",
-    "StaffRoom_staff_C",
-    "InStaffroom_Key",
-    "Toilet_costomerF",
-    "Locker"
+    "Suljango",
+    "ClubTable_Geonwoo"
   ],
   "FindedClues": [
     "Meds",
-    "Laptop",
-    "Letter"
+    "Letter",
+    "Laptop"
   ],
   "FinishedDialogues": [
     "jisoo'stalk",
     "Chatlist",
-    "DGram1st",
-    "Chocotalk1st",
-    "ChooseChatName1",
-    "AfterGeonwooChatAsHerself",
     "Camera",
     "Map_1",
     "Park",
     "Barstreet",
     "Hospital",
+    "Chocotalk1st",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsHerself",
+    "DGram1st",
+    "DropperRecruit",
+    "IceiceChat",
+    "Officetel",
     "Where",
     "New711",
     "SevenEleven",
     "Club_S1End",
-    "ActiveM",
-    "club_viproom_entry",
-    "yay"
+    "ActiveM"
   ],
-  "GottenPage": [
-    "Page4",
-    "Page7",
-    "Page1"
-  ],
+  "GottenPage": [],
   "visited": 7
 }

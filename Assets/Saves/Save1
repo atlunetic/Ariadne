@@ -1,69 +1,18 @@
 {
-  "IsLoad": true,
-  "NowScene": "S2_2_Table",
+  "IsLoad": false,
+  "NowScene": "S1_2_JiwonRoom",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
-  "ChattingLog": [
-    12
-  ],
-  "PhotoList": [
-    "Meds2",
-    "Laptop2",
-    "Letter2"
-  ],
-  "items": [
-    {
-      "ItemType": 0,
-      "itemName": "Hairpin"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "Cup"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "Clothes"
-    }
-  ],
-  "FindedObjects": [
-    "Letter",
-    "Books_Diary",
-    "DrawerR_Wallet",
-    "Drawer_Hairpin",
-    "3Drug",
-    "Cup",
-    "ClubTable_NPCD",
-    "menu_philopon",
-    "ClubTable_Geonwoo"
-  ],
-  "FindedClues": [
-    "Meds",
-    "Laptop",
-    "Letter"
-  ],
+  "ChattingLog": [],
+  "PhotoList": [],
+  "items": [],
+  "FindedObjects": [],
+  "FindedClues": [],
   "FinishedDialogues": [
-    "jisoo'stalk",
-    "Chatlist",
-    "DGram1st",
-    "Chocotalk1st",
-    "ChooseChatName1",
-    "AfterGeonwooChatAsHerself",
-    "Camera",
-    "Map_1",
-    "Park",
-    "Barstreet",
-    "Hospital",
-    "Where",
-    "New711",
-    "SevenEleven",
-    "Club_S1End",
-    "ActiveM",
-    "obj_customers"
+    "ChocotalkAlarm",
+    "DgramAlarm"
   ],
-  "GottenPage": [
-    "Page4",
-    "Page7"
-  ],
-  "visited": 7
+  "GottenPage": [],
+  "visited": 0
 }

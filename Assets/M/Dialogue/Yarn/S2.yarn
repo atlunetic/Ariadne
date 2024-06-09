@@ -1827,7 +1827,6 @@ title: obj_customer_f
 -> 무시하자
 	<<wait 1.0>>
 	그냥 냅두자….
-	<<HideAll>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -2313,13 +2312,14 @@ title: game_openthedoor_success
 ….
 <<wait 2.0>>
 
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<UpdateAct 지수 Jisoo1>>
 문이 열렸다.
 누가 보기 전에 빨리 들어가자.
 ….
 <<StopAudio Minigame>>
 <<jump club_staffroom_inside>>
-<<deActiveM MenuUI>> 
+<<deActiveM MenuUI>>
+<<Hide 지수>>
 <<ChangeSceneTo VisualNovelPrefab S2_4_1_StaffRoom>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
