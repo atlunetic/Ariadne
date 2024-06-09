@@ -117,7 +117,7 @@ title: Minotaur
 //(Chapter 1) 앞으로 가보자. 선택시
 <<PlayAudio MonsterSound2>>
 
-저게 말로만 듣던 미노타우르스….
+저게 말로만 듣던 미노타우르스...
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
 검을 쥔 손에 힘이 들어가지 않아.
 
@@ -148,8 +148,8 @@ title: Jisoo_Room
 <<Scene JisooRoomBG>>
 흐릿한 시야 사이로 익숙한 풍경이 보인다.
 
-…악몽을 꿨나? 머리가 지끈거린다.
-이 놈의 지긋지긋한 두통….
+...악몽을 꿨나? 머리가 지끈거린다.
+이 놈의 지긋지긋한 두통...
 
 <<Draw Prescription 0.75 0.75>>
 약이라도 먹어야겠다.
@@ -166,9 +166,9 @@ title: Jisoo_Room
 <<Hide Prescription>>
 
 <<StopAudioAll>>
-….
+...
 (기지개를 켰다.)
-….
+
 
 이제 정신 차리고 일어나야지.
 
@@ -188,14 +188,13 @@ title: Realized
 <<Scene JiwonRoomDoor>>
 -> 문을 두드린다
     <<PlayAudio KnockingSound>>
-    지수: “지원아. 뭐해?”
+    지수: 지원아. 뭐해?
     //<<UpdateAct 지수 Jisoo4>>
     아무런 반응이 없다.
     밖에 나갔나?
     //<<UpdateAct 지수 Jisoo1>>
     -> 문을 열어본다.
         잠깐 들어가도 괜찮겠지.
-        ….
         //<<Hide 지수>>
         <<PlayAudio DoorOpeningSound>>
         <<Scene NoBG>>
@@ -264,11 +263,11 @@ title: Letter
 뭐야.
 어제 내가 잔소리 좀 했다고 화났나?
 아니면 설거지 좀 하라고 한 거 무시해서?
-어떡하지….
+어떡하지...
 
 -> 뭐 자기가 알아서 하겠지.
     <<UpdateAct 지수 Jisoo2>>
-    그래도…. 걱정되니까 연락해볼까?
+    그래도... 걱정되니까 연락해볼까?
     <<jump TowardsEnding1_1>>
 -> 미안하다고 사과하자.
     <<UpdateAct 지수 Jisoo1>>
@@ -338,7 +337,7 @@ title: Ending1
 
 동생은 그 후로 소식이 없었다. 
 정확히 한 달 후에 경찰에서 연락이 왔다. 
-동생이….
+동생이...
 
 <<FadeIn>>
 <<DrawFadeIn Ending1 0.75 0.75>>
@@ -366,12 +365,11 @@ title: JisooPhone
 <<wait 0.5>>
 <<UpdateAct 지수 Jisoo4>>
 어? 설마 휴대폰도 두고 갔나?
-…. 
 
 
 <<PlayAudio PhoneOff>>
 <<wait 0.5>>
-앗…. 내 휴대폰 전원이 꺼졌다.
+앗... 내 휴대폰 전원이 꺼졌다.
 <<UpdateAct 지수 Jisoo2>>
 배터리가 다 됐나.
 다시 충전하려면 한참 걸릴텐데.
@@ -397,15 +395,13 @@ title: FoundJiwonPhone
 
 <<UpdateAct 지수 Jisoo2>>
 
-….
-맨날 휴대폰 끼고 사는 애가….
+맨날 휴대폰 끼고 사는 애가...
 휴대폰 두고 간 걸 모를 수가 있나?
-….
 
 
-휴….
-대체 어디 간거야~.
-….
+휴...
+대체 어디 간거야..
+...
 
 
 혹시 모르니 지원이의 휴대폰을 확인해보자.
@@ -416,7 +412,7 @@ title: FoundJiwonPhone
 
 잠금도 안 걸어뒀네?
 평소 같으면 내가 휴대폰 볼까봐 기겁해서 달려 올텐데.
-…걱정되네.
+...걱정되네.
 
 <<ActivePI MenuUI>>
 <<PlayAudio PhoneAlarm>>
@@ -442,34 +438,31 @@ title: PhoneBoothEnd2
 //<<Act 지수 Jisoo2 1.17 0.322 black>>
 D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다.
 //<<UpdateAct 지수 Jisoo4>>
-와…. 진짜 마약인가?
+와... 진짜 마약인가?
 //<<UpdateAct 지수 Jisoo2>>
 <<wait 0.5>>
-….
 //<<Hide 지수>>
-손을 뻗는 순간….
+손을 뻗는 순간...
 
 <<wait 0.5>>
 
 누군가 말을 걸어왔다.
 
-
-….
+...
 
 경찰이었다. 
 
 <<Fade black 0.0 1.0 2.0>>
-….
 
 <<wait 0.5>>
 
 
-아….
+아...
 그래 이건 범죄잖아.
-나는…. 대체 뭘 원했던 걸까?
-지원이를 찾기 위해서라고 해놓고….
+나는... 대체 뭘 원했던 걸까?
+지원이를 찾기 위해서라고 해놓고...
 범죄를 정당화하려고 했어.
-…. 변함이 없구나?
+...변함이 없구나?
 
 //엔딩 2. 정당화의 방식
 <<FadeIn>>
@@ -492,7 +485,7 @@ title: Map_1
 <<SetCanvasTo VisualNovelPrefab true>>
 
 지도 애플리케이션이다.
-지원이는 어디 있으려나….
+지원이는 어디 있으려나...
 
 // 지원의 방을 다 살펴본 뒤, 클럽을 제외한 장소들이 동시에 활성화 됨.
 
@@ -508,13 +501,13 @@ title: Park
 
 <<SetCanvasTo VisualNovelPrefab true>>
 동네 공원이다.
-지원이랑 가끔 산책하러 갔었지….
+지원이랑 가끔 산책하러 갔었지...
 동네 공원으로 가볼까?
     -> 가보자
         <<GoPark MapController>>
         <<SetCanvasTo VisualNovelPrefab false>>
     -> 가지말자
-        다른 곳으로 가자….
+        다른 곳으로 가자...
         <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -550,7 +543,7 @@ title: Newspaper
 
 * 다이어트약 처방으로 유명한 의원A. *
 * 마약류 식욕 억제제를 과다 처방하여 마약류관리법 위반 혐의로 조사를 받고 있다. *
-* 해당 의원에서 처방한 약물인 ‘펜디메트라진’의 경우… *
+* 해당 의원에서 처방한 약물인 ‘펜디메트라진’의 경우.. *
 * 과도하게 사용할 경우 정신병을 유발할 수 있다. *
 * 금단현상으로는 우울증과 무기력증이 있다. *
 <<Hide Park_News>>
@@ -577,12 +570,12 @@ title: ParkStudents
 <<Hide 지수>>
 
 
-학생 A: “나 있잖아. 최근에 다이어트약 먹기 시작했거든.”
-학생 B: “아 진짜? 효과 있어?”
-학생 A: “확실히 식욕은 줄었는데….”
-학생 A: “기운도 없고 우울해서 힘들어.”
-학생 B: “다이어트약 먹으면 다 그렇다던데?”
-학생 A: “그런가….”
+학생 A: 나 있잖아. 최근에 다이어트약 먹기 시작했거든.
+학생 B: 아 진짜? 효과 있어?
+학생 A: 확실히 식욕은 줄었는데...
+학생 A: 기운도 없고 우울해서 힘들어.
+학생 B: 다이어트약 먹으면 다 그렇다던데?
+학생 A: 그런가...
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -599,9 +592,9 @@ title: VendingMachine
 
 음료수 자판기다.
 예전에 지원이랑 산책하다가 음료수를 뽑아 먹었지.
-아무 생각 없이 캔을 땄는데 콜라가 터져나와서….
+아무 생각 없이 캔을 땄는데 콜라가 터져나와서...
 지원이가 뒤집어 썼었는데.
-그때도 화 한 번 안 내고 웃어넘기던 애가….
+그때도 화 한 번 안 내고 웃어넘기던 애가...
 <<UpdateAct 지수 Jisoo2>>
 밥은 먹었으려나.
 <<Hide 지수>>
@@ -615,7 +608,7 @@ title: MDMA
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
-….
+...
 비타민인가?
 * 일기장에 ‘MDMA’가 추가되었습니다. *
 
@@ -675,9 +668,7 @@ title: Weedhof
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 <<Draw Suljiproad_Poster 0.75 0.75>>
-….
 홍보 문구가 너무 마약에 치우쳐 있는 것 같아.
-….
 사람들이 저런 걸 보고 마약에 호기심을 갖게 되는 거 아닐까?
 
 <<HideAll>>
@@ -695,10 +686,10 @@ title: Drugsnacks
 
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 어릴 때 나도 여기 자주 왔었지.
-지금은 웨이팅 필수 맛집이 돼버렸네….
+지금은 웨이팅 필수 맛집이 돼버렸네...
 
 <<UpdateAct 지수 Jisoo2>>
-그런데….
+그런데...
 중독적이라는 걸 굳이 마약이라는 단어로 표현해야 하나?
 
 <<HideAll>>
@@ -734,8 +725,7 @@ title: HospitalWaitingRoom
 <<SetCanvasTo VisualNovelPrefab true>>
 병원에 사람이 많다.
 언제쯤 들어갈 수 있으려나.
-…
-…
+...
 <<PlayAudio HospitalAlert>>
 안내음 '김지수님, 1번 진료실로 들어오세요.'
 
@@ -756,16 +746,16 @@ title: HospitalWaitingRoom
         지수: 저... 집중이 잘 안돼서요.
         지수: 혹시 약을 더 처방해주실 수 있나요?
         의사: 그건 어렵습니다.
-        의사: 처방드린 약에는….
+        의사: 처방드린 약에는...
         의사: 마약류 관리법에 따라 관리되고 있는 ‘메틸페니데이트’ 성분이 들어있습니다.
-        의사: ADHD 치료를 위해 제한적으로 사용되고 있습니다만….
+        의사: ADHD 치료를 위해 제한적으로 사용되고 있습니다만...
         의사: 프로포폴과 졸피뎀보다 더 높은 등급으로 관리되고 있어요.
         의사: 그만큼 중독의 위험이 높습니다.
         의사: 이미 최대 허용 용량을 처방해드렸으니, 경과를 조금 더 지켜봅시다.
         의사선생님은 단호한 말투로 말했다.
-        맞다…. 처음 처방 받을 때도 말씀하셨던 것 같은데.
+        맞다... 처음 처방 받을 때도 말씀하셨던 것 같은데.
         자꾸 까먹는다니까.
-            -> 그래도 더 처방받고 싶은데…
+            -> 그래도 더 처방받고 싶은데...
                 지수: 그래도 매번 병원 오기 좀 번거로운데.
                 지수: 좀 더 처방해주시면 안되나요?
                 의사: 안됩니다. 다음에 뵙죠.
@@ -776,7 +766,7 @@ title: HospitalWaitingRoom
                     <<Scene NoBG>>
                     <<SetCanvasTo VisualNovelPrefab false>>
             -> 아 맞다. 그랬었지.
-                지수: 아…. 그랬죠. 참.
+                지수: 아... 그랬죠. 참.
                 지수: 알겠습니다.
                 의사: 네. 다음에 뵙죠.
 
@@ -815,7 +805,6 @@ title: Where
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 ...
 대체 어디 있는 거지?
-...
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -837,7 +826,6 @@ title: WalletO
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-...
 지갑 안에 뭐가 있는지라도 볼까?
 
 <<UI_off MenuUI>>
@@ -845,22 +833,18 @@ title: WalletO
 <<Draw receipt 0.75 0.75>>
 
 ...
-...
 어?
 편의점 영수증이다.
 
 <<wait 0.5>>
 
-….
 00월 00일... 어제 날짜네?
-...
-그럼 어제 이 근처에 있었나….
+그럼 어제 이 근처에 있었나...
 
 
 <<Hide receipt>>
 
 <<Act 지수 Jisoo2 1.17 0.322 black>>
-...
 ...
 일단은 영수증에 나온 편의점을 찾아가야 할 것 같아.
 
@@ -884,8 +868,6 @@ title: SevenEleven
 
 어...
 지원이 지갑에 있던 영수증...
-...
-...
 분명 이 편의점 영수증이었는데.
 
 //pause
@@ -902,9 +884,7 @@ title: Club_S1End
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-...
 지원이가 갔던 클럽이 여긴가?
-...
 여기로 가보자.
 
 <<GoClub MapController>>
@@ -970,7 +950,6 @@ title: LaptopStory
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Draw Laptop(E) 0.75 0.75>>
 노트북을 살펴볼까?
-...
 조심스럽게 노트북을 열었다.
 
 //사운드 추가
@@ -983,13 +962,12 @@ title: LaptopStory
 
 <<Hide Laptop(E)>>
 <<Act 지수 Jisoo4 1.17 0.322 black>>
-도대체….
-…..
-얘는 이런게 있다는 걸 어떻게 알았대…?
+도대체...
+얘는 이런게 있다는 걸 어떻게 알았대...?
 
 <<UpdateAct 지수 Jisoo5>>
-….
-위험한 생각 하고 있는 거 아니야…?
+감기약 먹방이라니...
+위험한 생각 하고 있는 거 아니야...?
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -1000,7 +978,6 @@ title: memory_Laptop
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-...
 ...
 
 ???: 너 지금 뭐 보고 있어?
@@ -1016,8 +993,8 @@ title: Drawer_News
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Draw Jiwonroom_News 0.75 0.75>>
-….
-흉흉한 세상이네….
+...
+흉흉한 세상이네...
 
 <<Hide Jiwonroom_News>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -1035,8 +1012,6 @@ title: JW_Wallet
 지갑도 놓고 나갔네?
 <<Hide Wallet(E)_0>>
 <<Act 지수 Jisoo2 1.17 0.322 black>>
-...
-...
 혹시 모르니 챙겨두자.
 
 <<Hide 지수>>
@@ -1058,9 +1033,8 @@ title: JW_Meds
 <<Draw Meds(E) 0.75 0.75>>
 
 뭐야. 처음 보는 약통인데?
-….
-지원이가 아픈 데가 있었나…? 건강해 보였는데.
-….
+지원이가 아픈 데가 있었나...? 건강해 보였는데.
+...
 
 <<Hide Meds(E)>>
 
@@ -1081,14 +1055,15 @@ title: memory_Meds
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //(토하는 지수 연출)
-지수:헉…. 헉….
-지수:….
+??:헉... 헉...
+??:...
 //(토하는 사운드)
-지수:우웩….
-지수:….
-지수:….
+??:우웩...
+??:...
 
-지원:...!
+<<wait 0.5>>
+
+???:...!
 
 //화장실에서 토하고 있는 사람의 실루엣
 //밖에서 그걸 목격한 사람의 실루엣
