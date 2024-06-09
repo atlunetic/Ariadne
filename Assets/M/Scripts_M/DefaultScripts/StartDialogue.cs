@@ -11,7 +11,7 @@ public class StartDialogue: MonoBehaviour
     private void OnMouseDown()
     {
 
-        if (Menu.instance.BlockClick) return;
+        if (Menu.instance.BlockClick) { return; } 
         //DialogueParent.SetActive(true);
         var runner = FindObjectOfType<DialogueRunner>();
         runner.StartDialogue(DialogueTitle);

@@ -37,8 +37,8 @@ public class YarnMFunctions : MonoBehaviour
     public void SetDialogueCanvas(bool command)
     {
         DialogueCanvas.SetActive(command);
-        if (command == true) { Menu.instance.UI_on(); }
-        else {  Menu.instance.UI_off(); }
+        if (command == true) { Menu.instance.BlockClick = true; }
+        else {  Menu.instance.BlockClick = false; }
         
        
     }
@@ -72,18 +72,14 @@ public class YarnMFunctions : MonoBehaviour
         GameManager.instance.FinishedDialogues.Add(DialogueTitle);
     }
 
+
     [YarnCommand("PersuadeScore")]
-    public void PersuadeScore(int Score)
+    public void PersuadeScore()
     {
-        GameManager.instance.GeonWooScore = Score;
+        InMemoryVariableStorage variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+
+        float score;
+        variableStorage.TryGetValue("$persuade", out score);
+        GameManager.instance.GeonWooScore = (int)score;
     }
-
-
-
-    [YarnCommand("DoorOpened")]
-    public void DoorOpened(bool open)
-    {
-        GameManager.instance.StaffroomOpen = open;
-    }
-
 }

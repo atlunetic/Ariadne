@@ -26,9 +26,9 @@ public class MapController : MonoBehaviour
 
     [YarnCommand("GoHome")]
     public void GoHome(){
-        CurrPoint.transform.position = new Vector2(-254,156);
+        CurrPoint.anchoredPosition = new Vector2(-254,156);
         Menu.instance.UI_off();
-        DisableButton(Parkbutton);
+        DisableButton(Homebutton);
         SceneManager.LoadScene("S1_2_JiwonRoom");
     }
 

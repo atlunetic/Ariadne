@@ -1,9 +1,17 @@
 ﻿
+title: RandomN
+
+---
+<<declare $rand = 0 as number>>
+로딩중입니다.
+
+===
 
 title: S1_Nightmare
 tags:
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 <<PlayAudio NightmareBGM 1.0 loop>>
 
 <<Scene Maze>>
@@ -19,12 +27,12 @@ title: S1_path1
 
 ---
 
+-> 오른쪽으로 가보자.
+    <<Scene DeadEnd>>
+    막다른 길이다. 돌아가자.
+    <<jump S1_path1>>
 -> 앞으로 가보자.
     <<jump LeftPath>>
--> 오른쪽으로 가보자.
-        <<Scene DeadEnd>>
-        막다른 길이다. 돌아가자.
-        <<jump S1_path1>>
 
 
 ===
@@ -73,8 +81,8 @@ title: S1_path3
 -> 왼쪽으로 가보자.
     <<jump LeftPath>>
 -> 돌아가자.
-        정말 괴물이 있으면 어떡하지?
-        <<jump S1_path4>>
+    정말 괴물이 있으면 어떡하지?
+    <<jump S1_path4>>
 
 
 ===
@@ -86,12 +94,17 @@ title: S1_path4
 -> 왼쪽으로 가보자.
     <<jump LeftPath>>
 -> 돌아가자.
-        갑자기 눈 앞이 흐려진다.
-        여기서 쓰러지면 안되는데...
-        <<PlayAudio CardiacArrest>>
-        엔딩 0: 악몽 속에 잠들다: 혼수상태에서 깨어나지 못함
-        <<Fade white 0.0 1.0 2.0>>
-        <<ChangeSceneTo VisualNovelPrefab S0>>
+    <<Fade white 0.0 1.0 2.0>>
+    갑자기 눈 앞이 흐려진다.
+    여기서 쓰러지면 안되는데...
+    <<FadeIn>>
+    <<DrawFadeIn Ending0 0.75 0.75>>
+    <<PlayAudio CardiacArrest>>
+    <<ChangeSceneTo VisualNovelPrefab S0>>
+    <<wait  3.0>>
+    <<Hide Ending0>>
+    <<Scene NoBG>>
+    <<SetCanvasTo VisualNovelPrefab false>>
 
         
 
@@ -114,9 +127,11 @@ title: Minotaur
 녀석이 서서히 내게 다가온다.
 <<DrawFadeIn Hand 0.75 0.75 2>>
 이대로 잡아먹히는걸까.
-<<wait  1.0>>
-<<Hide Hand>>
+<<wait 1.0>>
+
 <<Fade black 0.0 1.0 2.0>>
+<<wait 2.5>>
+<<Hide Hand>>
 
 <<wait 1.0>>
 <<StopAudioAll>>
@@ -143,6 +158,7 @@ title: Jisoo_Room
 <<wait 1.0>>
 <<PlayAudio DrinkingSound>>
 
+//<<Act 지수 Jisoo1 1.17 0.322 black>>
 <<wait 1.0>>
 그나저나 처방 받은 걸 다 먹었네. 큰일이다.
 병원을 가긴 해야하는데.
@@ -164,7 +180,7 @@ title: Realized
 
 ---
 
-<<PlayAudio JiwonRoomTheme 1.0 loop>>
+
 
 지원이는 뭐 하고 있으려나.
 오랜만에 맛있는 거 시켜먹자고 해야지.
@@ -173,12 +189,16 @@ title: Realized
 -> 문을 두드린다
     <<PlayAudio KnockingSound>>
     지수: “지원아. 뭐해?”
+    //<<UpdateAct 지수 Jisoo4>>
     아무런 반응이 없다.
     밖에 나갔나?
+    //<<UpdateAct 지수 Jisoo1>>
     -> 문을 열어본다.
         잠깐 들어가도 괜찮겠지.
         ….
+        //<<Hide 지수>>
         <<PlayAudio DoorOpeningSound>>
+        <<Scene NoBG>>
         <<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
         <<HideAll>>
         <<jump Jiwon_Room>>
@@ -190,7 +210,6 @@ title: Jiwon_Room_Default
 
 ---
 
-<<declare $rand = 0 as number>>
 <<set $rand = random_range(1, 3)>>
 
 <<if $rand < 1 >>
@@ -205,7 +224,6 @@ title: Jiwon_Room_Default
 title: Jiwon_Room
 
 ---
-
 
 매일 집에만 있더니. 꼭 찾을 때 없어.
 아무튼 얘는 깔끔하게 해놓고 사네.
@@ -225,7 +243,7 @@ title: memory_Letter
 ‘내 인생 내가 알아서 살 테니까 훈수 두지마.’ 
 ‘이번이 진짜 마지막이야. 반성하면 연락해.’
 ‘오지랖 좀 그만 부려.’
-
+<<StopMemory  SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -238,19 +256,23 @@ title: Letter
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Scene NoBG>>
-<<Act 지수 Jisoo1 1.17 0.322 black>>
 
+
+<<Draw LetterContent 0.75 0.75>>
+
+<<Act 지수 Jisoo4 1.17 0.322 black>>
 뭐야.
 어제 내가 잔소리 좀 했다고 화났나?
 아니면 설거지 좀 하라고 한 거 무시해서?
 어떡하지….
 
-
 -> 뭐 자기가 알아서 하겠지.
+    <<UpdateAct 지수 Jisoo2>>
     그래도…. 걱정되니까 연락해볼까?
     <<jump TowardsEnding1_1>>
 -> 미안하다고 사과하자.
-    <<SetActiveFalse VisualNovelPrefab Letter>>
+    <<UpdateAct 지수 Jisoo1>>
+    <<Hide LetterContent>>
 	<<jump JisooPhone>>
 
 ===
@@ -263,12 +285,20 @@ title: TowardsEnding1_1
 
 <<if $rand > 2 >> 
     -> 뭐 자기가 알아서 하겠지.
+        <<jump TowardsEnding1_2>>
+    -> 미안하다고 사과하자.
+        <<Hide LetterContent>>
+        <<SetActiveFalse VisualNovelPrefab Letter>>
+        <<FinishedObj VisualNovelPrefab Letter>>
+	    <<jump JisooPhone>>
 <<else>>
-    -> 무슨 일 생기면 어떡하지.
+    -> 뭐 자기가 알아서 하겠지.
+        <<jump TowardsEnding1_2>>
+    -> 미안하다고 사과하자.
+        <<Hide LetterContent>>
+	    <<jump JisooPhone>>
 <<endif>> 
-<<jump TowardsEnding1_2>>
--> 미안하다고 사과하자.
-	<<jump JisooPhone>>
+
 
 ===
 
@@ -278,14 +308,23 @@ title: TowardsEnding1_2
 
 <<if $rand > 2 >> 
     -> 뭐 자기가 알아서 하겠지.
+        <<Hide LetterContent>>
+        <<Hide 지수>>
+        <<jump Ending1>>
+    -> 미안하다고 사과하자.
+        <<Hide LetterContent>>
+        <<SetActiveFalse VisualNovelPrefab Letter>>
+        <<FinishedObj VisualNovelPrefab Letter>>
+        <<jump JisooPhone>>
 <<else>>
     -> 무슨 일 생기면 어떡하지.
+        <<jump Ending1>>
+    -> 미안하다고 사과하자.
+        <<Hide LetterContent>>
+        <<SetActiveFalse VisualNovelPrefab Letter>>
+        <<FinishedObj VisualNovelPrefab Letter>>
+        <<jump JisooPhone>>
 <<endif>>
-    <<jump Ending1>>
--> 미안하다고 사과하자.
-    <<SetActiveFalse VisualNovelPrefab Letter>>
-    <<FinishedObj VisualNovelPrefab Letter>>
-	<<jump JisooPhone>>
 
 ===
 
@@ -301,8 +340,13 @@ title: Ending1
 정확히 한 달 후에 경찰에서 연락이 왔다. 
 동생이….
 
-
+<<FadeIn>>
+<<DrawFadeIn Ending1 0.75 0.75>>
 <<ChangeSceneTo VisualNovelPrefab S0>>
+<<wait  3.0>>
+<<Hide Ending1>>
+<<Scene NoBG>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -317,9 +361,10 @@ title: JisooPhone
 ‘배고프다~ 같이 맛있는 거 먹자.’
 (전송)
 
-//###지수는 없는건가요(지수 앞에서 이미 생성된 상태)
+
 <<PlayAudio PhoneAlarm>>
 <<wait 0.5>>
+<<UpdateAct 지수 Jisoo4>>
 어? 설마 휴대폰도 두고 갔나?
 …. 
 
@@ -327,6 +372,7 @@ title: JisooPhone
 <<PlayAudio PhoneOff>>
 <<wait 0.5>>
 앗…. 내 휴대폰 전원이 꺼졌다.
+<<UpdateAct 지수 Jisoo2>>
 배터리가 다 됐나.
 다시 충전하려면 한참 걸릴텐데.
 어쩔 수 없지. 일단은 지원이의 휴대폰을 찾아보자.
@@ -366,6 +412,7 @@ title: FoundJiwonPhone
 <<Hide 지수>>
 
 <<ActivePhone PhoneController>>
+<<SetActiveFalse VisualNovelPrefab Jiwon_Phone>>
 
 잠금도 안 걸어뒀네?
 평소 같으면 내가 휴대폰 볼까봐 기겁해서 달려 올텐데.
@@ -379,10 +426,8 @@ title: FoundJiwonPhone
 어... 연락이 온 것 같은데.
 확인해볼까?
 
-
-
+<<UI_on MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
-<<SetActiveFalse VisualNovelPrefab JiwonPhone>>
 <<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom>>
 
 ===
@@ -392,13 +437,16 @@ title: PhoneBoothEnd2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<Scene DrugDealBG>>
 이미지 속 장소를 찾아왔다.
+//<<Act 지수 Jisoo2 1.17 0.322 black>>
 D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다.
+//<<UpdateAct 지수 Jisoo4>>
 와…. 진짜 마약인가?
-
+//<<UpdateAct 지수 Jisoo2>>
 <<wait 0.5>>
 ….
-
+//<<Hide 지수>>
 손을 뻗는 순간….
 
 <<wait 0.5>>
@@ -423,10 +471,14 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 범죄를 정당화하려고 했어.
 …. 변함이 없구나?
 
-
-엔딩 2. 정당화의 방식
+//엔딩 2. 정당화의 방식
+<<FadeIn>>
+<<DrawFadeIn Ending2 0.75 0.75>>
 <<ChangeSceneTo VisualNovelPrefab S0>>
-
+<<wait  3.0>>
+<<Hide Ending2>>
+<<Scene NoBG>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -458,10 +510,10 @@ title: Park
 동네 공원이다.
 지원이랑 가끔 산책하러 갔었지….
 동네 공원으로 가볼까?
-    -> 예
+    -> 가보자
         <<GoPark MapController>>
         <<SetCanvasTo VisualNovelPrefab false>>
-    -> 아니오
+    -> 가지말자
         다른 곳으로 가자….
         <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -491,16 +543,17 @@ title: Newspaper
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
-
-*(제목) 유명 의원 A, 마약류 처방으로 경찰 입건*
+<<Draw Park_News 0.75 0.75>>
+* (제목) 유명 의원 A, 마약류 처방으로 경찰 입건 *
 
 <<wait 1.0>>
 
 * 다이어트약 처방으로 유명한 의원A. *
 * 마약류 식욕 억제제를 과다 처방하여 마약류관리법 위반 혐의로 조사를 받고 있다. *
-*해당 의원에서 처방한 약물인 ‘펜디메트라진’의 경우…*
-*과도하게 사용할 경우 정신병을 유발할 수 있다.*
-*금단현상으로는 우울증과 무기력증이 있다.*
+* 해당 의원에서 처방한 약물인 ‘펜디메트라진’의 경우… *
+* 과도하게 사용할 경우 정신병을 유발할 수 있다. *
+* 금단현상으로는 우울증과 무기력증이 있다. *
+<<Hide Park_News>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -542,15 +595,16 @@ title: VendingMachine
 //자판기 클릭 시
 
 <<SetCanvasTo VisualNovelPrefab true>>
-
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 
 음료수 자판기다.
 예전에 지원이랑 산책하다가 음료수를 뽑아 먹었지.
 아무 생각 없이 캔을 땄는데 콜라가 터져나와서….
 지원이가 뒤집어 썼었는데.
 그때도 화 한 번 안 내고 웃어넘기던 애가….
+<<UpdateAct 지수 Jisoo2>>
 밥은 먹었으려나.
-
+<<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -588,10 +642,10 @@ title: Barstreet
 예전에 자주 갔던 곳인데.
 지원이도 한 번 데려가긴 했었지.
 술집 거리로 가볼까?
-    -> 예
+    -> 가보자
         <<GoBarStreet MapController>>
         <<SetCanvasTo VisualNovelPrefab false>>
-    -> 아니오
+    -> 가지말자
         다른 곳으로 가자...
         <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -604,7 +658,6 @@ title: BarStreetDefault
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Scene NoBG>>
 <<set $rand = random_range(1, 3)>>
-
 <<if $rand < 2 >>
     사람들이 시끄럽게 떠들고 있다.
 <<else>>
@@ -619,7 +672,7 @@ title: Weedhof
 
 ---
 
-<<Scene NoBG>>
+<<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 <<Draw Suljiproad_Poster 0.75 0.75>>
 ….
@@ -638,7 +691,7 @@ title: Drugsnacks
 ---
 
 // 마약떡볶이&마약김밥
-<<Scene NoBG>>
+<<SetCanvasTo VisualNovelPrefab true>>
 
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 어릴 때 나도 여기 자주 왔었지.
@@ -663,10 +716,11 @@ title: Hospital
 약이 다 떨어졌는데.
 지원이를 찾기도 전에 아파서 쓰러지면 안되니까.
 생각난 김에 병원이라도 빨리 갔다 올까?
-    -> 예
+    -> 가보자
         <<GoHospital MapController>>
+        <<jump HospitalWaitingRoom>>
         <<SetCanvasTo VisualNovelPrefab false>>
-    -> 아니오
+    -> 가지말자
         괜찮으려나?
         <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -678,59 +732,58 @@ title: HospitalWaitingRoom
 
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 Jisoo1 1.17 0.322 black>>
 병원에 사람이 많다.
 언제쯤 들어갈 수 있으려나.
 …
 …
-
 <<PlayAudio HospitalAlert>>
-안내음 '김지수님, 1번 진료실로 들어오세요."
+안내음 '김지수님, 1번 진료실로 들어오세요.'
 
 <<Scene H_DrRoom>>
 
-<<Act 의사선생님 NPC_Doctor 0.322 0.227 black>>
+<<Act 의사 NPC_Doctor 0.322 0.227 black>>
+<<Act 지수 Jisoo1 1.17 0.322 black>>
+의사: 좀 어떠셨어요.
 
-의사선생님: “좀 어떠셨어요.”
-
-지수: “여전하네요. 약이 다 떨어져가서 왔어요.”
-의사 선생님: “일에 집중하시는 데 어려움은 없으셨나요?”
+지수: 여전하네요. 약이 다 떨어져가서 왔어요.
+의사: 일에 집중하시는 데 어려움은 없으셨나요?
 
 <<UpdateAct 지수 Jisoo2>>
 지수: ...
 지수: 병원에 매번 오기도 귀찮은데.
 지수: 약을 더 처방해달라고 할까?
     -> 약을 더 처방해달라고 하자
-        지수: “저... 집중이 잘 안돼서요.”
-        지수: “혹시 약을 더 처방해주실 수 있나요?”
-        의사 선생님: “그건 어렵습니다.”
-        의사 선생님 “처방드린 약에는….”
-        의사 선생님 “마약류 관리법에 따라 관리되고 있는 ‘메틸페니데이트’ 성분이 들어있습니다.”
-        의사 선생님 “ADHD 치료를 위해 제한적으로 사용되고 있습니다만….”
-        의사 선생님 “프로포폴과 졸피뎀보다 더 높은 등급으로 관리되고 있어요.”
-        의사 선생님 “그만큼 중독의 위험이 높습니다.”
-        의사 선생님 “이미 최대 허용 용량을 처방해드렸으니, 경과를 조금 더 지켜봅시다.”
-
-        의사 선생님은 단호한 말투로 말했다.
+        지수: 저... 집중이 잘 안돼서요.
+        지수: 혹시 약을 더 처방해주실 수 있나요?
+        의사: 그건 어렵습니다.
+        의사: 처방드린 약에는….
+        의사: 마약류 관리법에 따라 관리되고 있는 ‘메틸페니데이트’ 성분이 들어있습니다.
+        의사: ADHD 치료를 위해 제한적으로 사용되고 있습니다만….
+        의사: 프로포폴과 졸피뎀보다 더 높은 등급으로 관리되고 있어요.
+        의사: 그만큼 중독의 위험이 높습니다.
+        의사: 이미 최대 허용 용량을 처방해드렸으니, 경과를 조금 더 지켜봅시다.
+        의사선생님은 단호한 말투로 말했다.
         맞다…. 처음 처방 받을 때도 말씀하셨던 것 같은데.
         자꾸 까먹는다니까.
             -> 그래도 더 처방받고 싶은데…
-                지수: “그래도 매번 병원 오기 좀 번거로운데.”
-                지수: “좀 더 처방해주시면 안되나요?”
-                의사 선생님: “안됩니다. 다음에 뵙죠.”
-                의사 선생님은 할 말이 끝났다는 듯 컴퓨터로 시선을 옮겼다.
+                지수: 그래도 매번 병원 오기 좀 번거로운데.
+                지수: 좀 더 처방해주시면 안되나요?
+                의사: 안됩니다. 다음에 뵙죠.
+                의사선생님은 할 말이 끝났다는 듯 컴퓨터로 시선을 옮겼다.
                 어쩔 수 없지. 돌아가자.
                     // 씬 변경: 지도
                     <<HideAll>>
+                    <<Scene NoBG>>
                     <<SetCanvasTo VisualNovelPrefab false>>
             -> 아 맞다. 그랬었지.
-                지수 “아…. 그랬죠. 참.”
-                지수 “알겠습니다.” 
-                의사 선생님 “네. 다음에 뵙죠.”
+                지수: 아…. 그랬죠. 참.
+                지수: 알겠습니다.
+                의사: 네. 다음에 뵙죠.
 
                 병원을 나섰다.
                 //씬 변경: 지도
                 <<HideAll>>
+                <<Scene NoBG>>
                 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -759,9 +812,11 @@ title: Where
 //모든 장소를 둘러보았을 경우
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 ...
 대체 어디 있는 거지?
 ...
+<<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -785,6 +840,8 @@ title: WalletO
 ...
 지갑 안에 뭐가 있는지라도 볼까?
 
+<<UI_off MenuUI>>
+
 <<Draw receipt 0.75 0.75>>
 
 ...
@@ -807,8 +864,8 @@ title: WalletO
 ...
 일단은 영수증에 나온 편의점을 찾아가야 할 것 같아.
 
-<<DeleteItem  Inventory Wallet>>
-<<Hide  지수>>
+<<DeleteItem Inventory Wallet>>
+<<Hide 지수>>
 <<New711 Controllers>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -822,6 +879,8 @@ title: SevenEleven
 //이후 영수증에 적혀 있던 편의점을 클릭하면 옆의 클럽이 활성화됨.
 
 //편의점 클릭 시
+
+<<SetCanvasTo VisualNovelPrefab true>>
 
 어...
 지원이 지갑에 있던 영수증...
@@ -846,7 +905,7 @@ title: Club_S1End
 ...
 지원이가 갔던 클럽이 여긴가?
 ...
-들어가보자.
+여기로 가보자.
 
 <<GoClub MapController>>
 <<jump StartClub>>
@@ -861,6 +920,7 @@ title: CheckAlert
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 ...
 더 살펴볼까?
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -888,21 +948,22 @@ title: Diary1
 군데군데 비어 있네.
 ...
 
-*일기장을 습득했습니다.*
+* 일기장을 습득했습니다. *
 
 ...
 일기장? 어디 쓰는거지...?
 일단 챙겨보자.
 
 <<Hide Diary>>
+<<SetActiveFalse VisualNovelPrefab Books_Diary>>
+<<FinishedObj VisualNovelPrefab Books_Diary>>
 <<ActiveD MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
 
-
-title: Laptop
+title: LaptopStory
 
 ---
 
@@ -913,6 +974,7 @@ title: Laptop
 조심스럽게 노트북을 열었다.
 
 //사운드 추가
+<<PlayAudio LaptopVideo>>
 
 * 감기약 먹방에 대해 들어보신 적 있나요? *
 * 약물 과다복용 시 발생할 수 있는 부작용들이 있는데요. *
@@ -925,10 +987,10 @@ title: Laptop
 …..
 얘는 이런게 있다는 걸 어떻게 알았대…?
 
-<<Act 지수 Jisoo5 1.17 0.322 black>>
+<<UpdateAct 지수 Jisoo5>>
 ….
 위험한 생각 하고 있는 거 아니야…?
-
+<<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -937,13 +999,15 @@ title: memory_Laptop
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 ...
 ...
 
 ???: 너 지금 뭐 보고 있어?
 
 ...
-
+<<StopMemory  SceneManager>>
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: Drawer_News
@@ -969,7 +1033,7 @@ title: JW_Wallet
 <<Draw Wallet(E)_0 0.75 0.75>>
 어...
 지갑도 놓고 나갔네?
-
+<<Hide Wallet(E)_0>>
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 ...
 ...
@@ -979,7 +1043,7 @@ title: JW_Wallet
 
 * '지원의 지갑'을 습득했다. *
 
-<<Hide Wallet(E)>>
+
 <<SetActiveFalse VisualNovelPrefab DrawerR_Wallet>>
 <<FinishedObj VisualNovelPrefab DrawerR_Wallet>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -991,16 +1055,16 @@ title: JW_Meds
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Draw Meds(E)_0 0.75 0.75>>
+<<Draw Meds(E) 0.75 0.75>>
 
 뭐야. 처음 보는 약통인데?
 ….
 지원이가 아픈 데가 있었나…? 건강해 보였는데.
 ….
 
-<<Hide Meds(E)_0>>
+<<Hide Meds(E)>>
 
-<<UpdateAct 지수 Jisoo2>>
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 
 나한테 말도 안하고. 대체 무슨 일이 있는 거야.
 
@@ -1028,6 +1092,8 @@ title: memory_Meds
 
 //화장실에서 토하고 있는 사람의 실루엣
 //밖에서 그걸 목격한 사람의 실루엣
+<<StopMemory  SceneManager>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 

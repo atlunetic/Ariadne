@@ -20,12 +20,14 @@ public class CallYarn : MonoBehaviour
     public Button chocotalkbutton;
     public Button openchatDbutton;
     public Button dgrambutton;
+    public Button ariadnebutton;
     public Button Haesolchatbutton;
     public Button work8282chatbutton;
     public Button Iceicechatbutton;
     public Button drgg24chatbutton;
     public Button IDSearchbutton;
     public Button Mapbutton;
+    public Button jisoobutton;
 
     void Start()
     {
@@ -54,6 +56,8 @@ public class CallYarn : MonoBehaviour
         Haesolchatbutton = ChocoTalkController.instance.chatbuttons["해솔"];
 
         if(GameManager.instance.IsLoad) Menu.instance.ActivePI();
+        if(GameManager.instance.FindedObjects.Contains("Books_Diary")) Menu.instance.ActiveD();
+        if(FinishedDialogues.Contains("ActiveM")) Menu.instance.ActiveM();
 
         Callbybutton(gallerybutton, "Gallery");  // 갤러리 켰을 때
 
@@ -64,16 +68,39 @@ public class CallYarn : MonoBehaviour
         if(FinishedDialogues.Contains("Camera")) camera.Invoke();
         else camerabutton.onClick.AddListener(camera);
 
+        ChatManager.instance.PrintChat(19);  // 이미 와있는 채팅들
+        ChatManager.instance.PrintChat(18);   
+        ChatManager.instance.PrintChat(25);
+
         Callbybutton(chocotalkbutton,"Chocotalk1st");  // 초코톡 켰을 때
         Callbybutton(openchatDbutton,"OpenChat");  // 오픈채팅 D 채팅창 켰을 때
 
         Callbybutton(ChocoTalkController.instance.chatbuttons["건우 오빠"], "ChooseChatName1");  // 건우 채팅창 켰을 때
         Callbybutton(Haesolchatbutton, "ChooseChatName2");  // 해솔 채팅창 켰을 때
 
+        UnityAction jisoo = null;  // 지수 채팅창 켰을 때
+        jisoo = () => {jisoobutton.transform.GetChild(2).gameObject.SetActive(false);
+                       GameManager.instance.FinishedDialogues.Add("jisoo'stalk");
+                       jisoobutton.onClick.RemoveListener(jisoo);};
+        if(FinishedDialogues.Contains("jisoo'stalk")) jisoo.Invoke();
+        else {
+            jisoobutton.onClick.AddListener(jisoo);
+            GameManager.instance.FinishedDialogues.Add("ChocotalkAlarm");
+        }
+
+        if(GameManager.instance.FinishedDialogues.Contains("ChocotalkAlarm")) ChocotalkAlarm();
+
         UnityAction drgg24 = null;  // D 채팅창 켰을 때
         drgg24 = () => {Callbybutton(IDSearchbutton, "DrugDeal");
                         openchatDbutton.onClick.RemoveListener(drgg24);};
         openchatDbutton.onClick.AddListener(drgg24);
+
+        Callbybutton(ariadnebutton, "Chatlist");  // 아리아드네 채팅창 켰을 때
+        UnityAction ari = null;
+        ari = () => {ariadnebutton.transform.GetChild(2).gameObject.SetActive(false);
+                        ariadnebutton.onClick.RemoveListener(ari);};
+        if(FinishedDialogues.Contains("Chatlist")) ari.Invoke();
+        else ariadnebutton.onClick.AddListener(ari);
 
         Callbybutton(work8282chatbutton,"DropperRecruit");  // work8282 채팅창 켰을 때
         UnityAction work8282 = null;
@@ -96,19 +123,9 @@ public class CallYarn : MonoBehaviour
 
         Callbybutton(Mapbutton,"Map_1");  // Map 켰을 때
 
-        Callbybutton(MapController.instance.Parkbutton,"Park");  // 공원 눌렀을 때
-        UnityAction park = null;
-        park = () => {MapController.instance.Parkbutton.onClick.AddListener(MapController.instance.GoPark);
-                      MapController.instance.Parkbutton.onClick.RemoveListener(park);};
-        MapController.instance.Parkbutton.onClick.AddListener(park);
-        if(FinishedDialogues.Contains("Park")) Iceice.Invoke();
+        MapController.instance.Parkbutton.onClick.AddListener(()=>callYarn("Park"));
 
-        Callbybutton(MapController.instance.BarStreetbutton,"BarStreet");  // 술집거리 눌렀을 때
-        UnityAction barstreet = null;
-        barstreet = () => {MapController.instance.BarStreetbutton.onClick.AddListener(MapController.instance.GoBarStreet);
-                      MapController.instance.BarStreetbutton.onClick.RemoveListener(barstreet);};
-        MapController.instance.BarStreetbutton.onClick.AddListener(barstreet);
-        if(FinishedDialogues.Contains("BarStreet")) Iceice.Invoke();
+        MapController.instance.BarStreetbutton.onClick.AddListener(()=>callYarn("Barstreet"));
 
         if(FinishedDialogues.Contains("DestroySearch")) DestroySearch();
 
@@ -118,17 +135,22 @@ public class CallYarn : MonoBehaviour
 
         if(FinishedDialogues.Contains("New711")) New711();
 
-        // 이상 저장 구현됨
+        MapController.instance.Homebutton.onClick.AddListener(MapController.instance.GoHome);
 
         MapController.instance.Officetelbutton.onClick.AddListener(()=>callYarn("Officetel"));  // 3장 진입전 오피스텔 눌렀을 때
 
-        MapController.instance.Hospitalbutton.onClick.AddListener(()=>callYarn("Hospital"));  // 병원 눌렀을 때: Persistent!!
+        MapController.instance.Hospitalbutton.onClick.AddListener(()=>callYarn("Hospital"));  // 병원 눌렀을 때
 
-        if(GameManager.instance.NowScene is not null) {
+        if(GameManager.instance.NowScene != string.Empty) {
             if(GameManager.instance.NowScene.StartsWith("S2")) InS2();
             else if(GameManager.instance.NowScene.StartsWith("S3")) InS3();
+            print(GameManager.instance.NowScene);
+            
             SceneManager.LoadScene(GameManager.instance.NowScene);
+            SaveAndLoad.instance.Invoke("EndLoading", 0.5f);
         }
+
+        // 불러온거 적용하기는 여기서 해야겠다
 
     }
 

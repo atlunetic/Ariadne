@@ -42,6 +42,10 @@ public class PhoneController : MonoBehaviour
             TabStack.Pop().SetActive(false);
         }
     }
+
+    public void OpenSaveLoad(){
+        SaveAndLoad.instance.SavePanel.SetActive(true);
+    }
     
     public void ActiveChocoTalk(){
         ActiveTab(ChocoTalk);

@@ -8,11 +8,12 @@ public class OpenActionPanel : MonoBehaviour
 {
 
     public GameObject ActionPanel;
+    public Slot CurrentSlot;
 
 
     public void Open()
     {
-        if (ActionPanel != null)
+        if (ActionPanel != null && CurrentSlot.Item.itemName != "")
         {
             ActionPanel.SetActive(true);
         }

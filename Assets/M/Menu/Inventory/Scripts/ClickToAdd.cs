@@ -12,7 +12,7 @@ public class ClickToAdd : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (Menu.instance.BlockClick) return;
+        if (Menu.instance.BlockClick) { return; }
 
         if (Inventory.instance != null && sceneItem != null)
         {
@@ -22,7 +22,14 @@ public class ClickToAdd : MonoBehaviour
             // Add the item to the inventory
             Inventory.instance.Additem(newItem);
 
+            Debug.Log(sceneItem + "added to inventory");
 
+
+        }
+
+        else
+        {
+            Debug.Log("cannot add");
         }
     }
 }
