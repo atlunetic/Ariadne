@@ -14,7 +14,7 @@ title: ClubPhoto
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<wait 0.5>>
-웬 클럽…? 관심도 없다더니.
+웬 클럽..? 관심도 없다더니.
 클럽에서 많이도 찍었네.
 
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -56,7 +56,7 @@ title: Camera
 <<SetCanvasTo VisualNovelPrefab true>>
 평범한 카메라 어플이다.
 
-카메라로 증거가 될만한 걸 찍어두면 좋을 것 같네….
+카메라로 증거가 될만한 걸 찍어두면 좋을 것 같네...
 네모칸 안에 잘 맞춰서 찍어야겠지.
 그래야 나중에 알아보기 쉬울 테니까.
 * 카메라를 통해 증거를 수집해보세요! *
@@ -303,7 +303,7 @@ title: Chatlist
 <<wait 0.5>>
 뭐야. 무슨 소리야?
 내 이름은 왜 보내둔 거지? 무서워.
-일단 무시할까….
+일단 무시할까...
 들어온 김에 다른 채팅들도 살펴봐야겠다.
 
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -320,17 +320,14 @@ title: DrugDeal
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<wait 0.5>>
-….
-….
+...
 drgg24라도 쳐볼까.
-….
-….
+<<wait 1.0>>
 <<Searchdrgg24 Controllers>>
 
-뭐야…. 설마 해서 쳐봤는데.
+뭐야... 설마 해서 쳐봤는데.
 D gram 아이디였여?
-….
-…
+...
 왜 초코톡을 냅두고 굳이 D gram 아이디를 주지?
 아무래도 수상해.
 
@@ -349,7 +346,7 @@ title: DrugDeal1
 <<wait 0.5>>
 
 //보낸 메시지 ‘안녕하세요’
-….
+...
 <<StartPhoneChat PhoneController 4>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -381,7 +378,7 @@ title: DrugDeal3
 //D ‘술 필요하신 거 맞죠?’
 
 이렇게 거래 해도 되는 거야?
-그래도…. 증거를 얻을 수 있을지 모르니까.
+그래도... 증거를 얻을 수 있을지 모르니까.
 일단은 맞다고 해보자.
 <<StartPhoneChat PhoneController 5>>
 
@@ -498,8 +495,8 @@ title: DropperRecruit
 
 드랍퍼? 그게 뭐 하는 거지.
 저번 달에 알바 잘려서 새로 구해야 하는데.
-….
-월세도 내야하고…. 일단 신청해볼까?
+...
+월세도 내야하고... 일단 신청해볼까?
 이상하면 안 하면 되니까.
 -> 그래, 신청해보자
     음... 일단은 지원이부터 찾고 나서 연락해보자.
