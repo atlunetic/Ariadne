@@ -179,12 +179,12 @@ title: obj_clock1
 <<SetCanvasTo VisualNovelPrefab true>>
 
 //클릭할 경우
-<<Draw ClockSmall_0 0.75 0.75>>
+<<Draw CounterbarClockBig 0.75 0.75>>
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 클럽에 웬 벽시계…?
 엄청 안어울리네.
 
-<<Hide ClockSmall_0>>
+<<Hide CounterbarClockBig>>
 
 <<UpdateAct 지수 Jisoo2>>
 ….
@@ -2236,7 +2236,12 @@ title: game_openthedoor_intro
 <<PlayAudio Minigame 1.0 loop>>
 * 미니게임: 헤어핀으로 문을 따자! *
 * 헤어핀을 이용해 Staff Room의 문을 열어봅시다. *
+* 문따기를 시도하는 방법 *
+* 헤어핀은 마우스를 따라옵니다. *
+* 마우스를 여기저기 움직이며 적당한 각도에 마우스를 둔 후, 마우스 클릭을 통해 문따기를 시도할 수 있습니다 *
+* 미세한 각도 조정을 통해 문따기를 성공해보세요! *
 * 제한 시간 내에 문을 열지 못하면 문따기에 실패합니다. *
+* 기회는 3번까지 주어집니다. *
 
 //미니게임 씬으로 이동
 <<ChangeSceneTo VisualNovelPrefab lockpick>>
@@ -3224,7 +3229,7 @@ title: obj_customerg_end
 어…?
 저게 무슨 얘기지.
 ….
-11시에 클럽에서 만난다고?
+11시 반에 클럽에서 만난다고?
 ….
 <<Hide ClubcustomerG_Message>>
 <<Hide ClubcustomerG_Phone>>
@@ -3767,7 +3772,7 @@ title: obj_car_outside
 -> 조수석
 	안이 잘 보이지 않는다….
 	<<jump obj_car_outside>>
--> 뒷자석
+-> 뒷좌석
 	안이 잘 보이지 않는다….
 	<<jump obj_car_outside>>
 -> 운전석
