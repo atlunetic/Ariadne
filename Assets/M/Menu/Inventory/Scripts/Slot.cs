@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 
 public class Slot : MonoBehaviour ,IDropHandler
 {
