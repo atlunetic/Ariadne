@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using Newtonsoft.Json;
 using System.IO;
+using System;
 using Yarn.Unity;
 
 public class SaveAndLoad : MonoBehaviour
@@ -39,6 +40,7 @@ public class SaveAndLoad : MonoBehaviour
         GameManager.instance.items = Inventory.instance.items;
 
         SaveGameManager save = GameManager.instance.Convert();
+        save.savetime = DateTime.Now.ToString(("yyyy/MM/dd HH:mm:ss tt"));
         string json = JsonConvert.SerializeObject(save, Formatting.Indented);
 
         string Totalpath = FolderPath+"Save"+i.ToString();
@@ -80,6 +82,7 @@ public class SaveAndLoad : MonoBehaviour
         
             SaveFile[i].transform.GetChild(2).GetComponent<Button>().enabled = true;
             SaveFile[i].transform.GetChild(0).GetComponent<TMP_Text>().text = Location(save.NowScene);
+            SaveFile[i].transform.GetChild(3).GetComponent<TMP_Text>().text = save.savetime;
             SaveFile[i].transform.GetChild(2).GetComponent<Button>().onClick.AddListener(()=>Load(i));
         }
 

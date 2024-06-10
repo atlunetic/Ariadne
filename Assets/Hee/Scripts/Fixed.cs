@@ -7,10 +7,10 @@ public class Fixed : MonoBehaviour
 {
 
     /* 해상도 설정하는 함수 */
-     void Start()    {        
+     void Start(){        
         var camera = GetComponent<Camera>();
         var r = camera.rect;
-        print(Screen.width+" "+Screen.height);
+        
         var scaleheight = ((float)Screen.width / Screen.height) / (16f / 9f);        
         var scalewidth = 1f / scaleheight;    
         if (scaleheight < 1f)        
