@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
         else{
             DestroyImmediate(gameObject);
         }
+        ChattingLog.Add(19);
+        ChattingLog.Add(18);
+        ChattingLog.Add(25);
     }
     // RandomN 불러오기 시 실행
     public bool IsLoad = false;  // 불러오기 시 true
