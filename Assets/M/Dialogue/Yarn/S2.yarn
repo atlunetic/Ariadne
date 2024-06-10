@@ -70,10 +70,9 @@ title: meet_gunwoo
 	<<FadeIn>>
 	<<DrawFadeIn Ending3 0.75 0.75>>
 	<<wait  4.0>>
-	<<ChangeSceneTo VisualNovelPrefab S0>>
 	<<Hide Ending3>>
 	<<Scene NoBG>>
-	<<SetCanvasTo VisualNovelPrefab false>>
+	<<BackToMainScene GameManager>>
 -> 나라고 밝히자.
 	<<UpdateAct 지수 Jisoo1>>
 	지수: 저 지수예요.
@@ -2244,10 +2243,9 @@ title: game_openthedoor_gameover
 <<FadeIn>>
 <<DrawFadeIn Ending3 0.75 0.75>>
 <<wait  4.0>>
-<<ChangeSceneTo VisualNovelPrefab S0>>
 <<Hide Ending3>>
 <<Scene NoBG>>
-<<SetCanvasTo VisualNovelPrefab false>>
+<<BackToMainScene GameManager>>
 
 
 ===
@@ -3702,10 +3700,9 @@ title: obj_car_outside
 		<<FadeIn>>
 		<<DrawFadeIn Ending3 0.75 0.75>>
 		<<wait  4.0>>
-		<<ChangeSceneTo VisualNovelPrefab S0>>
 		<<Hide Ending3>>
 		<<Scene NoBG>>
-		<<SetCanvasTo VisualNovelPrefab false>>
+		<<BackToMainScene GameManager>>
 	-> 창문
 		잠금 장치에 손이 닿는다.
 		...
