@@ -45,10 +45,11 @@ public class CameraController : MonoBehaviour
     }
 
     public void TakeScreenShot(){
-        GameObject.Find("Main Camera").GetComponent<TakePicture>().ScreenShot(CameraRect.GetComponent<RectTransform>());
+        GetComponent<AudioSource>().Play();
+        GameObject cam =GameObject.Find("Main Camera");
+        cam.GetComponent<TakePicture>().ScreenShot(CameraRect.GetComponent<RectTransform>());
         CameraRect.SetActive(false);
         Cursor.visible = true;
-        // 로딩 띄우기?
     }
 
     public void SaveImmediate(string cluename, byte[] PNGbuffer){  // <TakePicture> 에서 호출, 증거사진일때

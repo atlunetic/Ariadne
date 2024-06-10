@@ -975,7 +975,7 @@ title: memory_Laptop
 ???: 너 지금 뭐 보고 있어?
 
 ...
-<<StopMemory  SceneManager>>
+<<StopMemory SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 

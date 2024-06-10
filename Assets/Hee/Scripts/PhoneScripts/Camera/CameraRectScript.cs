@@ -13,11 +13,10 @@ public class CameraRectScript : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
         rect = rectTransform.rect;
     }
-
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetMouseButtonDown(0)) CameraController.instance.TakeScreenShot();
         Vector2 anchoredPosition;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             rectTransform.parent as RectTransform, 
@@ -25,10 +24,10 @@ public class CameraRectScript : MonoBehaviour
             null,
             out anchoredPosition
         );
-        print(anchoredPosition);
+
         anchoredPosition.x = Mathf.Clamp(anchoredPosition.x, 0, 1920 - rect.width);
         anchoredPosition.y = Mathf.Clamp(anchoredPosition.y, 0, 1080 - rect.height);
-        print(anchoredPosition);
+
         rectTransform.anchoredPosition = anchoredPosition;
     }
 }
