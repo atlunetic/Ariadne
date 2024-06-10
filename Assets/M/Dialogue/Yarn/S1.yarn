@@ -325,7 +325,7 @@ title: Ending1
 
 <<Fade Black 0.0 1.0 2.0>>
 <<wait 3.0>>
-<<ChangeSceneTo VisualNovelPrefab S5>>
+<<ChangeSceneTo VisualNovelPrefab S1>>
 <<Scene BlackBG>>
 
 동생은 그 후로 소식이 없었다. 
@@ -449,7 +449,8 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 <<Fade black 0.0 1.0 2.0>>
 
 <<wait 0.5>>
-
+<<ChangeSceneTo VisualNovelPrefab S1>>
+<<Scene BlackBG>>
 
 아...
 그래 이건 범죄잖아.
@@ -461,8 +462,8 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 //엔딩 2. 정당화의 방식
 <<FadeIn>>
 <<DrawFadeIn Ending2 0.75 0.75>>
+<<wait  4.0>>
 <<ChangeSceneTo VisualNovelPrefab S0>>
-<<wait  3.0>>
 <<Hide Ending2>>
 <<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>

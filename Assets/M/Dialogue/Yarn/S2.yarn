@@ -58,6 +58,8 @@ title: meet_gunwoo
 	건우: 그것보다 지원이 너 지금 여기 있으면 안돼.
 	건우: 빨리 다른 곳으로...
 	<<Fade black 0.0 1.0 2.0>>
+	<<ChangeSceneTo VisualNovelPrefab S1>>
+	<<Scene BlackBG>>
 	어...
 	갑작스레 느껴지는 통증에 머리가 울렸다.
 	<<wait 2.0>>
@@ -66,12 +68,9 @@ title: meet_gunwoo
 	<<wait 2.0>>
 	...
 	<<FadeIn>>
-	<<wait 2.0>>
-	//엔딩 3. ??? : 무슨 일이 일어난 걸까.
-	<<FadeIn>>
 	<<DrawFadeIn Ending3 0.75 0.75>>
+	<<wait  4.0>>
 	<<ChangeSceneTo VisualNovelPrefab S0>>
-	<<wait  3.0>>
 	<<Hide Ending3>>
 	<<Scene NoBG>>
 	<<SetCanvasTo VisualNovelPrefab false>>
@@ -2224,6 +2223,8 @@ title: game_openthedoor_gameover
 
 <<Fade black 0.0 1.0 2.0>>
 <<StopAudio Minigame>>
+<<ChangeSceneTo VisualNovelPrefab S1>>
+<<Scene BlackBG>>
 ???: 거기 누구야!
 어...
 직원에게 들켰다.
@@ -2240,10 +2241,10 @@ title: game_openthedoor_gameover
 ...
 <<FadeIn>>
 //엔딩 3. ??? : 무슨 일이 일어난 걸까. 
+<<FadeIn>>
 <<DrawFadeIn Ending3 0.75 0.75>>
-<<wait 1.0>>
+<<wait  4.0>>
 <<ChangeSceneTo VisualNovelPrefab S0>>
-<<wait  3.0>>
 <<Hide Ending3>>
 <<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -3688,18 +3689,20 @@ title: obj_car_outside
 		...
 		누군가 급하게 계단을 올라오는 소리가 들린다.
 		//화면이 흔들리고, 화면이 흐려지는 연출
+		<<Fade black 0.0 1.0 2.0>>
+		<<ChangeSceneTo VisualNovelPrefab S1>>
+		<<Scene BlackBG>>
 		어...
 		갑작스레 느껴지는 통증에 머리가 울렸다.
-		<<wait 1.0>>
-		...	
+		<<wait 2.0>>
 		누군가 내 팔을 붙잡았다.
 		시야가 흐려져 간다.
+		<<wait 2.0>>
 		...
-		//엔딩 3. 막다른 길: 조직원에게 붙잡힌 엔딩 (확인용, 추후 주석 처리)
 		<<FadeIn>>
 		<<DrawFadeIn Ending3 0.75 0.75>>
+		<<wait  4.0>>
 		<<ChangeSceneTo VisualNovelPrefab S0>>
-		<<wait  3.0>>
 		<<Hide Ending3>>
 		<<Scene NoBG>>
 		<<SetCanvasTo VisualNovelPrefab false>>
