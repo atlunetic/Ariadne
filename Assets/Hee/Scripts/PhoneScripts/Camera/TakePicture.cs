@@ -12,11 +12,13 @@ public class TakePicture : MonoBehaviour  // 모든 Main Camera에 부착
     SceneInfo sceneInfo;
 
     void Start(){
-        sceneInfo = GameObject.Find("SceneManager").GetComponent<SceneInfo>();
+        sceneInfo = GameObject.Find("SceneManager").GetComponent<SceneInfo>(); 
     }
 
     public void ScreenShot(RectTransform rectTransform){
         rect = rectTransform.rect;
+        rect.width = rect.width/(1920/(float)Screen.width);
+        rect.height = rect.width;
         screenTex = new Texture2D((int)rect.width, (int)rect.height, TextureFormat.RGB24, false);
         rect.x = rectTransform.position.x;
         rect.y = rectTransform.position.y;
@@ -27,6 +29,7 @@ public class TakePicture : MonoBehaviour  // 모든 Main Camera에 부착
         if (_willTakeScreenShot)
         {
             _willTakeScreenShot = false;
+            print(rect);
             screenTex.ReadPixels(rect, 0, 0);
 
             string clue = sceneInfo.FindClue(rect);

@@ -20,37 +20,66 @@ public class ActionPanelButtons : MonoBehaviour
 
     public void UseItem()
     {
+        var runner = FindObjectOfType<DialogueRunner>();
         Scene currentscene = SceneManager.GetSceneAt(0);//Scene With story checked
         item connectedItem = currentSlot.Item;
         Inventory.instance.UseItem(connectedItem.itemName);
         Debug.Log(connectedItem.itemName + " is currently being used");
 
-        /*
-        if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended == false)
+
+        if (connectedItem.itemName == "WaterCup" && currentscene.name == "S2_2_Table")
         {
-            GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
-            dialogueCanvas.SetActive(true);
-            var runner = FindObjectOfType<DialogueRunner>();
-            runner.StartDialogue("WalletX");
+            runner.StartDialogue("UsedWaterCup");
         }
-        if(connectedItem.itemName == "Wallet" && GameManager.instance.S1Ended == true)
+
+        else if (connectedItem.itemName == "Clothes")
         {
-            GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
-            dialogueCanvas.SetActive(true);
-            var runner = FindObjectOfType<DialogueRunner>();
-            runner.StartDialogue("WalletO");
+            runner.StartDialogue("ClothesUsed");
+        }
+
+        else if (currentscene.name == "S2_7_Stairs")
+        {
+            if (connectedItem.itemName == "DrugJelly")
+            {
+                runner.StartDialogue("inventory_drugjelly");
+            }
+
+            else
+            {
+                runner.StartDialogue("inventory_notjelly");
+            }
+        }
+
+        //else if(connectedItem.itemName == "DrugJelly")
+
+        else if (connectedItem.itemName == "Wallet")
+        {
+            if (GameManager.instance.S1Ended() == true)
+            {
+                runner.StartDialogue("WalletO");
+                Inventory.instance.items.Remove(connectedItem);
+                currentSlot.RemoveSlot();
+            }
+            else { runner.StartDialogue("WalletX"); }
+
+        }
+
+        else if (connectedItem.itemName == "Hairpin" && currentscene.name == "S2_4_0_StaffRoomEntrance")
+        {
+            runner.StartDialogue("game_openthedoor_intro");
             Inventory.instance.items.Remove(connectedItem);
-            currentSlot.RemoveSlot();
+
+        }
+
+        else if (connectedItem.itemName == "Key" && currentscene.name == "S2_3_1_StaffOnlyLocker")
+        {
+            //runner.StartDialogue("KeyUse");
         }
         else
         {
-            GameObject dialogueCanvas = GameObject.Find("Dialogue Canvas");
-            dialogueCanvas.SetActive(true);
-            var runner = FindObjectOfType<DialogueRunner>();
+
             runner.StartDialogue("WrongItem");
         }
-
-        */
             //connectedItem.Use();
             //Inventory.instance.items.Remove(connectedItem);
             //currentSlot.RemoveSlot();
@@ -64,14 +93,15 @@ public class ActionPanelButtons : MonoBehaviour
 
     public void ToggleDraggable()
     {
-        draggableObject.SetDraggable(true);
-        Debug.Log("Draggable enabled by Combine script.");
+            draggableObject.SetDraggable(true);
+            Debug.Log("Draggable enabled by script.");
 
-        AlertPanel.SetActive(true);
-        Invoke("CloseAlertPanel", 1.5f);
+            AlertPanel.SetActive(true);
+            Invoke("CloseAlertPanel", 1.5f);
 
-        // After performing functionality, hide action panel
-        HideActionPanel();
+            // After performing functionality, hide action panel
+            HideActionPanel();
+        
 
     }
 

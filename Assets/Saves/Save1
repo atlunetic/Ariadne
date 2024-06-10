@@ -1,0 +1,21 @@
+{
+  "IsLoad": false,
+  "NowScene": "S1_2_JiwonRoom",
+  "NumOfScreenShots": 1,
+  "GeonWooScore": 0,
+  "SaengSoo": 0,
+  "ChattingLog": [],
+  "PhotoList": [],
+  "items": [],
+  "FindedObjects": [
+    "Letter"
+  ],
+  "FindedClues": [],
+  "FinishedDialogues": [
+    "ChocotalkAlarm",
+    "DgramAlarm",
+    "Camera"
+  ],
+  "GottenPage": [],
+  "visited": 0
+}

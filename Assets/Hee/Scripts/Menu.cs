@@ -15,7 +15,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
             DontDestroyOnLoad(gameObject);
         }
         else{
-            Destroy(gameObject);
+            DestroyImmediate(gameObject);
         }
     }
 
@@ -23,25 +23,35 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     public GameObject PhoneButton;
     public GameObject InventoryButton;
     public GameObject DiaryButton;
+    public GameObject MoveS2Button;
     public GameObject UIButtons;
 
     public GameObject Phone;
     public GameObject Inventory;
     public GameObject Diary;
+    public GameObject MoveS2_;
+    public GameObject MoveStaffroom;
+    public GameObject MoveViproom;
 
+    public bool BlockClick = false;
+
+    [YarnCommand("UI_on")]
     public void UI_on(){
+        BlockClick = true;
         UIMode.SetActive(true);
         UIButtons.SetActive(false);
     }
     
+    [YarnCommand("UI_off")]
     public void UI_off(){
+        BlockClick = false;
         UIMode.SetActive(false);
         UIButtons.SetActive(true);
         Phone.SetActive(false);
         Inventory.SetActive(false);
         Diary.SetActive(false);
+        MoveS2_.SetActive(false);
     }
-
 
     void Start(){
         PhoneButton.GetComponent<Button>().onClick.AddListener(where);
@@ -57,6 +67,30 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
         }
     }
 
+    public void ActiveMoveS2(){
+        if(GameManager.instance.FindedObjects.Contains("ClubTable_Geonwoo")){
+            if(GameManager.instance.FindedObjects.Contains("StaffRoom_staff_C"))
+                CallYarn.instance.Callbybutton(MoveStaffroom.GetComponent<Button>(), "club_staffroom_nostaff");
+            MoveStaffroom.SetActive(true);
+        }
+        if(GameManager.instance.FindedObjects.Contains("Locker") && GameManager.instance.FindedObjects.Contains("Toilet_costomerF")) {
+            CallYarn.instance.Callbybutton(MoveViproom.GetComponent<Button>(), "yay");
+            MoveViproom.GetComponent<Button>().onClick.AddListener(()=>{MoveS2Button.SetActive(false);});
+            MoveViproom.SetActive(true);
+            if(!GameManager.instance.FinishedDialogues.Contains("club_viproom_entry"))
+                CallYarn.instance.callYarn("club_viproom_entry");
+        }
+        
+        UI_on();
+        MoveS2_.SetActive(true);
+    }
+
+    [YarnCommand("ActiveM")]
+    public void ActiveM(){
+        MoveS2Button.SetActive(true);
+        GameManager.instance.FinishedDialogues.Add("ActiveM");
+    }
+
     [YarnCommand("ActivePI")]
     public void ActivePI(){
         PhoneButton.SetActive(true);
@@ -65,5 +99,16 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     [YarnCommand("ActiveD")]
     public void ActiveD(){
         DiaryButton.SetActive(true);
+    }
+    [YarnCommand("deActiveM")]
+    public void deActiveM(){
+        MoveS2Button.SetActive(false);
+        GameManager.instance.FinishedDialogues.Remove("ActiveM");
+    }
+    [YarnCommand("IfDone_getout")]
+    public void IfDone_getout(){
+        if(!GameManager.instance.StaffroomEnded()) return;
+        CallYarn.instance.callYarn("letsgetout");
+        GameManager.instance.FindedObjects.Add("obj_staffroomdoor");        
     }
 }

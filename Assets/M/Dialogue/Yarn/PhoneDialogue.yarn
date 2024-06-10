@@ -13,7 +13,8 @@ title: ClubPhoto
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-웬 클럽…? 관심도 없다더니.
+<<wait 0.5>>
+웬 클럽..? 관심도 없다더니.
 클럽에서 많이도 찍었네.
 
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -26,6 +27,7 @@ title: JellyPhoto
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 젤리인가? 맛있어보인다.
 얘가 이런 간식을 좋아했던가?
 
@@ -38,6 +40,7 @@ title: OfficetelPhoto
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 음...
 여긴 어디지?
 
@@ -52,6 +55,14 @@ title: Camera
 
 <<SetCanvasTo VisualNovelPrefab true>>
 평범한 카메라 어플이다.
+
+카메라로 증거가 될만한 걸 찍어두면 좋을 것 같네...
+네모칸 안에 잘 맞춰서 찍어야겠지.
+그래야 나중에 알아보기 쉬울 테니까.
+* 카메라를 통해 증거를 수집해보세요! *
+* 찍은 사진은 갤러리에 저장할 수 있습니다. *
+* 중요한 증거들은 나중에 큰 도움이 될지도... *
+
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -93,15 +104,14 @@ title: ChooseChatName1
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 
 나라고 밝혀야 하나?
 ...
     -> 지원이인척 말을 걸자.
-        <<set $ActAs to "Jiwon">>
         <<StartPhoneChat PhoneController 0>>
         <<SetCanvasTo VisualNovelPrefab false>>
     -> 나라고 밝히자.
-        <<set $ActAs to "Myself">>
         <<StartPhoneChat PhoneController 12>>
         <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -112,6 +122,7 @@ title: ChooseChatName2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 
 나라고 밝혀야 하나?
 ...
@@ -129,6 +140,8 @@ title: AfterGeonwooChatAsJiwon
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
+
 무슨 소리지...?
 지원이가 클럽을...?
 그나저나 건우 오빠는 아직도 클럽 열심히 다니나보네...
@@ -142,6 +155,8 @@ title: AfterHaesolChat
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
+
 ...
 지원이가 클럽에?
 그런데 관심도 없는 애가 무슨 바람이 불어서...
@@ -156,6 +171,8 @@ title: HaesolSuspicious
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
+
 ...
 얘는 이걸 어떻게 알았지?
 어느 순간부터 지원이랑 맨날 붙어다니더니...
@@ -172,6 +189,8 @@ title: HaesolAftertruth
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
+
 ...
 ...
 <<StartPhoneChat PhoneController 11>>
@@ -185,6 +204,8 @@ title: Haesol2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
+
 ...
 <<StartPhoneChat PhoneController 9>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -197,6 +218,8 @@ title: AfterGeonwooChatAsHerself
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
+
 지원이가 클럽을...?
 ...
 그나저나 건우 오빠는 아직도 클럽 열심히 다니나보네...
@@ -210,6 +233,8 @@ title: AfterDropperChat
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
+
 ...
 드랍퍼에 대해 물어볼까?
 <<StartPhoneChat PhoneController 14>>
@@ -222,6 +247,8 @@ title: HaesolDropperCaution
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
+
 뭐...?
 마약 운반책?
 왜 지원이한테 그런 걸 권유하는거야...?
@@ -237,6 +264,7 @@ title: OpenChat
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<wait 0.5>>
+
 뭐야...?
 엄청 수상해보이네.
 한정판 술이라도 사는거야?
@@ -253,9 +281,9 @@ title: DGram1st
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 이건 무슨 어플이지?
 처음 보는데.
-...
 ...
 D gram?
 맨날 뉴스에 나오는 어플 아닌가..?
@@ -274,7 +302,7 @@ title: Chatlist
 <<wait 0.5>>
 뭐야. 무슨 소리야?
 내 이름은 왜 보내둔 거지? 무서워.
-일단 무시할까….
+일단 무시할까...
 들어온 김에 다른 채팅들도 살펴봐야겠다.
 
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -290,17 +318,15 @@ title: DrugDeal
 
 
 <<SetCanvasTo VisualNovelPrefab true>>
-….
-….
+<<wait 0.5>>
+...
 drgg24라도 쳐볼까.
-….
-….
-<<Seachdrgg24 Controllers>>
+<<wait 1.0>>
+<<Searchdrgg24 Controllers>>
 
-뭐야…. 설마 해서 쳐봤는데.
+뭐야... 설마 해서 쳐봤는데.
 D gram 아이디였여?
-….
-…
+...
 왜 초코톡을 냅두고 굳이 D gram 아이디를 주지?
 아무래도 수상해.
 
@@ -316,9 +342,10 @@ title: DrugDeal1
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 
 //보낸 메시지 ‘안녕하세요’
-….
+...
 <<StartPhoneChat PhoneController 4>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -331,6 +358,7 @@ title: DrugDeal2
 //보낸 메시지 ‘오픈 카톡으로 연락 드렸던 사람인데요.’
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 
 이러면 자연스럽겠지?
 
@@ -345,10 +373,11 @@ title: DrugDeal3
 
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 //D ‘술 필요하신 거 맞죠?’
 
 이렇게 거래 해도 되는 거야?
-그래도…. 증거를 얻을 수 있을지 모르니까.
+그래도... 증거를 얻을 수 있을지 모르니까.
 일단은 맞다고 해보자.
 <<StartPhoneChat PhoneController 5>>
 
@@ -359,6 +388,9 @@ title: DrugDeal3
 title: DrugDeal4
 
 ---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 
 뭔가 좀 이상한데. 코카인은 마약 아니야?
 ...
@@ -374,7 +406,7 @@ title: DrugDeal4
     ...
     저 사람은 친구 추가가 안 돼 있었는데...?
     설마 친구 목록이랑 대화 내역을 지웠나?
-    <<stop>>
+    <<SetCanvasTo VisualNovelPrefab false>>
 -> 계속 말을 걸어볼까?
     지원이가 이 사람이랑 연락하고 나서 관련된 걸 다 지웠을 수도 있잖아.
     계속 대화하다 보면 뭐라도 알아낼 수 있지 않을까?
@@ -386,6 +418,9 @@ title: DrugDeal4
 title: DrugDeal5
 
 ---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 
 어...진짜 거래할 수 있는 건가?
 좀 무서운데. 이거 범죄잖아.
@@ -412,6 +447,8 @@ title: DrugDeal5
 title: DrugDeal6
 
 ---
+<<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 
 메시지를 무시했다.
 
@@ -422,6 +459,9 @@ title: DrugDeal6
 title: DrugDeal7
 
 ---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 
 D가 보낸 메시지에 심장이 빨리 뛰기 시작한다.
 진짜로 마약을 보게 되면 어떡하지?
@@ -436,9 +476,12 @@ title: DrugDeal8
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
 ...
 조금 긴장한 채, 나갈 준비를 했다.
 ...
+<<jump PhoneBoothEnd2>>
 
 ===
 
@@ -446,21 +489,30 @@ title: DropperRecruit
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
+<<wait 0.5>>
+
 드랍퍼? 그게 뭐 하는 거지.
 저번 달에 알바 잘려서 새로 구해야 하는데.
-….
-월세도 내야하고…. 일단 신청해볼까?
+...
+월세도 내야하고... 일단 신청해볼까?
 이상하면 안 하면 되니까.
+-> 그래, 신청해보자
+    음... 일단은 지원이부터 찾고 나서 연락해보자.
+-> 아니야.. 신청하지말자
+    그래. 무슨 일인지 모르니까 신청하지 말자.
+    분명히 위험하거나 불법적인 일이겠지.
 
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: IceiceChat
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 <<wait 0.5>>
 물건..? 지원이한테 왜 이런 연락이 와 있지?
-
+<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 
@@ -468,12 +520,15 @@ title: AriadneAlarm
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 //지수방 2 진입 시 바로 재생
 
 //알림 사운드
 <<DgramAlarm Controllers>>
-<<wait 2.0>>
+<<wait 1.0>>
 알림을 확인해보자.
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 

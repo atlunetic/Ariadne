@@ -16,11 +16,16 @@ public class FadeIn : MonoBehaviour
         else image.canvasRenderer.SetAlpha(0.0f);
     }
     void OnEnable() {
+        
         if(image == null) StartCoroutine("GroupFadeIn");
-        else image.CrossFadeAlpha(1.0f, 0.6f, false);
+        else {
+            image.canvasRenderer.SetAlpha(0.0f);
+            image.CrossFadeAlpha(1.0f, 0.6f, false);
+        }
     }
     IEnumerator GroupFadeIn()
     {
+        imageGroup.alpha = 0f;
         while (imageGroup.alpha < 1)
         {
             imageGroup.alpha += Time.deltaTime / 0.8f;

@@ -12,6 +12,8 @@ public class ClickToAdd : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (Menu.instance.BlockClick) { return; }
+
         if (Inventory.instance != null && sceneItem != null)
         {
             // Get the item from the SceneItem script
@@ -20,9 +22,14 @@ public class ClickToAdd : MonoBehaviour
             // Add the item to the inventory
             Inventory.instance.Additem(newItem);
 
+            Debug.Log(sceneItem + "added to inventory");
 
 
-            //GameManager.instance.FindedObjects.Add(obj.name);
+        }
+
+        else
+        {
+            Debug.Log("cannot add");
         }
     }
 }

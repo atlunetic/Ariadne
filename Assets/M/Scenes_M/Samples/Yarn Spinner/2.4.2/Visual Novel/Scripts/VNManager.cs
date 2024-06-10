@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using JetBrains.Annotations;
 
 namespace Yarn.Unity.Example {
 	/// <summary>
@@ -74,6 +75,7 @@ namespace Yarn.Unity.Example {
 			//M Function Command
 
 			runner.AddCommandHandler<string, string,string, float>("DrawFadeIn", FadeInSprite);
+			runner.AddCommandHandler<string, string>("UpdateAct", UpdateActorSprite);
 
 
 			// adds all Resources to internal lists / one big pile... it
@@ -142,9 +144,74 @@ namespace Yarn.Unity.Example {
 			actors.Add( actorName, new VNActor( newActor, actorColor) );
 		}
 
-		///<summary> Draw(spriteName,positionX,positionY) generic function
-		///for sprite drawing</summary>
-		public void SetSpriteYarn(string spriteName, string positionX = "", string positionY = "") {
+
+		//M Code
+        public void UpdateActorSprite(string actorName, string newSpriteName)
+        {
+            // Check if the actor exists
+            if (actors.ContainsKey(actorName))
+            {
+                var existingActor = actors[actorName];
+
+                // Update the sprite
+                SetSprite(existingActor.actorImage, newSpriteName);
+            }
+            else
+            {
+                Debug.LogErrorFormat(this, "Actor [{0}] does not exist", actorName);
+            }
+        }
+
+        private void SetSprite(Image image, string spriteName)
+        {
+            //Sprite newSprite = Resources.Load<Sprite>(spriteName);
+            Sprite newSprite = FetchAsset<Sprite>(spriteName);
+            if (newSprite != null)
+            {
+                image.sprite = newSprite;
+            }
+            else
+            {
+                Debug.LogErrorFormat(this, "Sprite [{0}] not found", spriteName);
+            }
+        }
+
+		
+		[YarnFunction("GetScore")]
+        public static int GetScore()
+        {
+			int Score = GameManager.instance.GeonWooScore;
+			print(Score);
+            return Score;
+        }
+
+		[YarnFunction("ActedAs")]
+		public static bool ActAs()
+		{
+			return GameManager.instance.FinishedDialogues.Contains("AfterGeonwooChatAsJiwon");
+		}
+
+        [YarnFunction("CheckDialogue")]
+
+        public static bool DialogueChecked(string DialogueTitle)
+        {
+            bool Check = GameManager.instance.FinishedDialogues.Contains(DialogueTitle);
+            return Check;
+        }
+
+		[YarnFunction("StaffRoomCheck")]
+		public static bool StaffRoomCheck()
+		{
+			bool Check = GameManager.instance.StaffroomOpen;
+			return Check;
+		}
+
+
+        //M Code End
+
+        ///<summary> Draw(spriteName,positionX,positionY) generic function
+        ///for sprite drawing</summary>
+        public void SetSpriteYarn(string spriteName, string positionX = "", string positionY = "") {
 			SetSpriteUnity( spriteName, positionX, positionY );
 		}
 
@@ -427,7 +494,7 @@ namespace Yarn.Unity.Example {
 
         #region Utility
 
-        /*
+        
         public override void RunLine(LocalizedLine dialogueLine, System.Action onDialogueLineFinished)
         {
             var actorName = dialogueLine.CharacterName;
@@ -442,7 +509,7 @@ namespace Yarn.Unity.Example {
 
             onDialogueLineFinished();
         }
-		*/
+		
 
         public void HighlightSprite (Image sprite) {
 			StopCoroutine( "HighlightSpriteCoroutine" ); // use StartCoroutine(string) overload so that we can Stop and Start the coroutine (it doesn't work otherwise?)

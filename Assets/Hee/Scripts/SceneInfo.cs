@@ -7,13 +7,12 @@ using Yarn.Unity;
 public class SceneInfo : MonoBehaviour
 {
     public GameObject[] Objectlist;  // 상호작용 후 다음에 다시 씬에 들어왔을 때 비활성화 되어야 하는 오브젝트들
+    public GameObject[] Diarylist;
     public GameObject[] Cluelist;  // 카메라로 찍어야 하는 증거 오브젝트들
     public GameObject[] MemoriesBG;  // 기억 돌아올때 연출 배경
-    public GameObject[] MemoriesImage;  // 기억 돌아올때 팝업이미지
     void Awake(){
         SceneManager.sceneLoaded += SceneManage;
     } 
-
     void OnDestroy() {
         SceneManager.sceneLoaded -= SceneManage;
     }
@@ -21,6 +20,8 @@ public class SceneInfo : MonoBehaviour
     void SceneManage(Scene scene, LoadSceneMode mode){
         foreach(GameObject obj in Objectlist)
 	        obj.SetActive(!GameManager.instance.FindedObjects.Contains(obj.name));
+        foreach(GameObject obj in Diarylist)
+	        obj.SetActive(GameManager.instance.FindedObjects.Contains("Books_Diary"));
         GameManager.instance.NowScene = scene.name;
     }
 
@@ -44,26 +45,43 @@ public class SceneInfo : MonoBehaviour
     IEnumerator PlayMemory(string cluename){
         var runner = FindObjectOfType<DialogueRunner>();
 
-        foreach(GameObject BG in MemoriesBG){
-            BG.SetActive(true);
-            yield return new WaitForSeconds(0.7f);
+        for(int i=0; i<3; i++){
+            MemoriesBG[i].SetActive(true);
+            yield return new WaitForSeconds(0.6f);
         }
-        
+        GalleryController.instance.Glitch.SetActive(true);
+        MemoriesBG[3].SetActive(true);
+
         foreach(GameObject BG in MemoriesBG){
             BG.SetActive(false);
         }
-        MemoriesBG[3].SetActive(true);
 
-        foreach(GameObject memoryImg in MemoriesImage)
-            if(memoryImg.name == cluename+"Img")
-                memoryImg.SetActive(true);
+        foreach(GameObject memoryimg in GalleryController.instance.MemoryImages)
+            if(memoryimg.name == cluename+"Img"){
+                Debug.Log(memoryimg.name);
+                memoryimg.SetActive(true);
+                memoryImg = memoryimg;
+            }
 
-        //runner.StartDialogue(cluename);
+        runner.StartDialogue("memory_"+cluename);
     }
 
+    [YarnCommand("StopMemory")]
     public void StopMemory(){  // 얀에서 부를 함수
         MemoriesBG[3].SetActive(false);
         memoryImg.SetActive(false);
+        GalleryController.instance.Glitch.SetActive(false);
+
         Menu.instance.UI_off();
+    }
+
+    [YarnCommand("BGoff")]
+    public void BGoff(){
+        GameObject.Find("Main Camera").GetComponent<AudioSource>().Stop();
+    }
+
+    [YarnCommand("BGon")]
+    public void BGon(){
+        GameObject.Find("Main Camera").GetComponent<AudioSource>().Play();
     }
 }

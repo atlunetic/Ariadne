@@ -24,17 +24,12 @@ public class MapController : MonoBehaviour
 
     public Button CurrLocationbutton;
 
-    void Start()
-    {
-        
-    }
-
     [YarnCommand("GoHome")]
     public void GoHome(){
-        // 씬 바꾸기
-        CurrPoint.transform.position = new Vector2(-254,156);
+        CurrPoint.anchoredPosition = new Vector2(-254,156);
         Menu.instance.UI_off();
-        DisableButton(Parkbutton);
+        DisableButton(Homebutton);
+        SceneManager.LoadScene("S1_2_JiwonRoom");
     }
 
     [YarnCommand("GoPark")]
@@ -69,20 +64,17 @@ public class MapController : MonoBehaviour
         // 씬 바꾸기
         CurrPoint.anchoredPosition = new Vector2(715,204);
         Menu.instance.UI_off();
-        DisableButton(Officetelbutton);
+        CallYarn.instance.InS3();
     }
 
     [YarnCommand("GoClub")]
     public void GoClub(){  // 2장으로 넘어가기
-        // 씬 바꾸기
+        SceneManager.LoadScene("S2_1_ClubCounter_Bar");
         CurrPoint.anchoredPosition = new Vector2(108,-61);
         Menu.instance.UI_off();
-        Homebutton.onClick.RemoveAllListeners();
-        Parkbutton.onClick.RemoveAllListeners();
-        Clubbutton.onClick.RemoveAllListeners();
-        Officetelbutton.onClick.RemoveAllListeners();
-        BarStreetbutton.onClick.RemoveAllListeners();
+        CallYarn.instance.InS2();
     }
+    
 
     public void DisableButton(Button Next){
         CurrLocationbutton.enabled = true;

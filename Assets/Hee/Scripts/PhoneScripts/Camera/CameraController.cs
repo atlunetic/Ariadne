@@ -39,6 +39,7 @@ public class CameraController : MonoBehaviour
 
     public void ActiveCamera(){
         CameraRect.SetActive(true);
+        Cursor.visible = false;
         Phone.SetActive(false);
         Menu.instance.UIMode.SetActive(false);
     }
@@ -46,6 +47,7 @@ public class CameraController : MonoBehaviour
     public void TakeScreenShot(){
         GameObject.Find("Main Camera").GetComponent<TakePicture>().ScreenShot(CameraRect.GetComponent<RectTransform>());
         CameraRect.SetActive(false);
+        Cursor.visible = true;
         // 로딩 띄우기?
     }
 

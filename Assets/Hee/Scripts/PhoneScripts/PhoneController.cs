@@ -21,11 +21,12 @@ public class PhoneController : MonoBehaviour
         }
     }
     
+    [YarnCommand("ActivePhone")]
     public void ActivePhone(){
         Phone.SetActive(true);
         Menu.instance.UI_on();
     }
-    
+
     public void ActiveTab(GameObject tab){
         if(tab.activeSelf) return;
         TabStack.Push(tab);
@@ -40,6 +41,10 @@ public class PhoneController : MonoBehaviour
         while(TabStack.Count!=0){
             TabStack.Pop().SetActive(false);
         }
+    }
+
+    public void OpenSaveLoad(){
+        SaveAndLoad.instance.SavePanel.SetActive(true);
     }
     
     public void ActiveChocoTalk(){

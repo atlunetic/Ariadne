@@ -10,6 +10,8 @@ public class GalleryController : MonoBehaviour
     private string Path;
     public GameObject GalleryContent;
     public Transform PictureTab;
+    public GameObject[] MemoryImages;
+    public GameObject Glitch;
 
     [SerializeField]
     private GameObject emptyImage;
@@ -21,7 +23,8 @@ public class GalleryController : MonoBehaviour
     private GameObject[] originPictures;
     
     private Dictionary<string,GameObject> Pictures = new Dictionary<string, GameObject>();
-    private List<GameObject> Clues = new List<GameObject>();
+    private List<GameObject> Clues = new List<GameObject>();  // 증거 이미지 아이콘
+
 
     void Awake(){
         if(instance==null){
@@ -36,10 +39,14 @@ public class GalleryController : MonoBehaviour
         Pictures.Add("ClubPhoto2", originPictures[2]);
         Pictures.Add("JellyPhoto", originPictures[3]);
         Pictures.Add("OfficetelPhoto", originPictures[4]);
+
+        foreach(string photo in GameManager.instance.PhotoList)
+            PrintToGallery(photo);
     }
     public void PrintToGallery(string screenshotname){  // String으로 바꾸기
         
         string totalPath = string.Copy(Path) + screenshotname; // 파일 지정
+        if(File.Exists(totalPath)==false) return;
         byte[] PNGbuffer = File.ReadAllBytes(totalPath);
 
         Sprite sprite = MakeSprite(PNGbuffer);

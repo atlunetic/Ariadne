@@ -19,6 +19,7 @@ public class ChatManager : MonoBehaviour
         profileImage.Add("건우 오빠", profileSprite[0]);
         profileImage.Add("의사 선생님", profileSprite[1]);
         profileImage.Add("해솔", profileSprite[2]);
+        profileImage.Add("지수", profileSprite[3]);
     }
     public struct chat{
         public bool JisooSaying;  // 지수의 대사이면 true
@@ -90,6 +91,7 @@ public class ChatManager : MonoBehaviour
         }
         if(chatting.NextDialogue!=null){
             var runner = FindObjectOfType<DialogueRunner>();
+            GameManager.instance.FinishedDialogues.Add(chatting.NextDialogue);
             runner.StartDialogue(chatting.NextDialogue);
         }
     }
@@ -134,15 +136,17 @@ public class ChatManager : MonoBehaviour
         else if(c.JisooSaying){
             ChatBox = Instantiate(ChatBox_Me, Chatroom.content.transform);
             ChatBox.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = c.text;
+            LayoutRebuilder.ForceRebuildLayoutImmediate(ChatBox.GetComponent<RectTransform>());
         }
         else{
             ChatBox = Instantiate(ChatBox_Opponent, Chatroom.content.transform);
             ChatBox.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = c.text;
             ChatBox.GetComponent<AudioSource>().Play();
+            LayoutRebuilder.ForceRebuildLayoutImmediate(ChatBox.GetComponent<RectTransform>());
         }
 
         // 말풍선의 content size fitter 동작 보장 -> 불필요, 삭제
-        // LayoutRebuilder.ForceRebuildLayoutImmediate(ChatBox.GetComponent<RectTransform>());
+        
 
         // 채팅방의 content size fitter 동작 보장
         LayoutRebuilder.ForceRebuildLayoutImmediate(Chatroom.content);
@@ -160,8 +164,11 @@ public class ChatManager : MonoBehaviour
         c.image = image;
         ChattingList[ChattingList.Count-1].chatList.Add(c);
     }
-
     void Start(){
+        Invoke("LateStart", 1f);
+    }
+
+    void LateStart(){
        
         ChattingList.Add(new Chatting(false, "건우 오빠", "AfterGeonwooChatAsJiwon"));  // 0
         AddChatToLast(true,"오빠");
@@ -215,7 +222,7 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "그런 데 관심도 없다더니.");
         AddChatToLast(true, "아...");
 
-        ChattingList.Add(new Chatting(false, "해솔", "HaelsolSuspicious"));  // 10
+        ChattingList.Add(new Chatting(false, "해솔", "HaesolSuspicious"));  // 10
         AddChatToLast(false, "근데 너 혹시 지수야?");
         AddChatToLast(false, "말투가 지원이가 아닌데...");
 
@@ -273,13 +280,47 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "처벌 대상이란 말입니다.");
         AddChatToLast(true, "그럼 한 번에 이만큼은 처방하지 않는다는 말씀이시죠?");
         AddChatToLast(false, "네. 그렇습니다.");
-        PrintChat(ChattingList.Count-1);
 
-        ChattingList.Add(new Chatting(true, "아리아드네", "Chatlist"));  // 19
+        ChattingList.Add(new Chatting(true, "아리아드네", "null"));  // 19
         AddChatToLast(false, "지수.");
         AddChatToLast(false, "중요한 걸 잊어버리지 않았어?");
-        
-        // 이하 재넘버링 필요
 
+        ChattingList.Add(new Chatting(true, "아리아드네", "chocotalk_cctv"));  // 20
+        AddimageToLast(true, "ToAriadne");
+        AddChatToLast(true, "혹시 이 CCTV 화면... 알아볼 수 있어요?");
+        AddChatToLast(true, "실루엣이 너무 지원이 같은 사람이 있는데...");
+        AddChatToLast(true, "화질이 너무 안 좋아서 구분이 안 돼요.");
+        AddimageToLast(false, "FromAriadne");
+        AddChatToLast(false, "이 정도면 알아볼 수 있어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", "event_staffroom"));  // 21
+        //AddimageToLast(true, "ToAriadne2");
+        AddChatToLast(true, "혹시 이게 뭔지 알아요?");
+        AddChatToLast(false, "잘 모르겠네...");
+        AddChatToLast(false, "이건 네가 알아봐야 할 것 같아.");
+
+        ChattingList.Add(new Chatting(false, "건우 오빠", "stairchocotalk1"));  // 22
+        AddChatToLast(false, "뭐라도 알아냈어?");
+        AddChatToLast(true, "오피스텔 주소를 얻었어요.");
+        AddChatToLast(true, "제일 수상해 보여서... 여기를 조사해보려구요.");
+
+        ChattingList.Add(new Chatting(false, "건우 오빠", "stairchocotalk2"));  // 23
+        AddChatToLast(true, "그런데 젤리는 어떻게 했어요?");
+        AddChatToLast(false, "...");
+        AddChatToLast(false, "마침 나도 곰젤리가 있어서.");
+        AddChatToLast(false, "마약젤리 준다고 하면서 그거 줬어");
+        AddChatToLast(false, "이미 약에 취한건지...");
+        AddChatToLast(false, "구분을 못하던데?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", "chocotalk_ariadne_customerg"));  // 24
+        AddChatToLast(false, "일이 잘 안풀려?");
+        AddChatToLast(false, "클럽 고객G는 가족 얘기에 약하대.");
+
+        ChattingList.Add(new Chatting(false, "지수", null));  // 25
+        AddChatToLast(false, "야, 미안. 앞으로 잘할게");
+        AddChatToLast(false, "배고프다~ 같이 맛있는 거 먹자.");
+
+        foreach(int i in GameManager.instance.ChattingLog)
+            PrintChat(i);
     }
 }

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using Yarn.Unity;
 
 public class Inventory : MonoBehaviour
 {
@@ -23,9 +25,17 @@ public class Inventory : MonoBehaviour
             return;
         }
         instance = this;
+        print("inventoryLog");
+        items = GameManager.instance.items;
+    }
+
+    void Start()
+    {
+        foreach(item i in items)
+            onChangeItem.Invoke();
     }
     #endregion
-
+ 
 
     public bool Additem(item _item)
     {
@@ -58,6 +68,14 @@ public class Inventory : MonoBehaviour
     public void ClearUsingItem()
     {
         usingitem = null;
+    }
+
+    [YarnCommand("DeleteItem")]
+    public void DeleteItem(string ItemName)
+    {
+        if (usingitem != null) { ClearUsingItem();}
+        item FinishedItem = items.Find(i => i.itemName == ItemName);
+        items.Remove(FinishedItem);
     }
 }
 

@@ -10,10 +10,9 @@ public class SceneItem : MonoBehaviour
     public void SetItem(item _item)
     {
         newItem.itemName = _item.itemName;
-        newItem.itemImage = _item.itemImage;
         newItem.ItemType = _item.ItemType;
 
-        image.sprite = _item.itemImage;
+        image.sprite = Resources.Load<Sprite>("ItemImage/" + _item.itemName);
     }
 
     public item GetItem()

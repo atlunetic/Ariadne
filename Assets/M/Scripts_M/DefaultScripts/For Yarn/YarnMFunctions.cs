@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Yarn.Unity;
@@ -30,11 +31,16 @@ public class YarnMFunctions : MonoBehaviour
 
 
     public GameObject DialogueCanvas;
+    
 
     [YarnCommand("SetCanvasTo")]
     public void SetDialogueCanvas(bool command)
     {
         DialogueCanvas.SetActive(command);
+        if (command == true) { Menu.instance.BlockClick = true; }
+        else {  Menu.instance.BlockClick = false; }
+        
+       
     }
 
     [YarnCommand("AddToInventory")]
@@ -54,4 +60,26 @@ public class YarnMFunctions : MonoBehaviour
         }
     }
 
+    [YarnCommand("FinishedObj")]
+    public void FinishedObjects(string ObjectName)
+    {
+        GameManager.instance.FindedObjects.Add(ObjectName);
+    }
+
+    [YarnCommand("FinishedDialogue")]
+    public void FinishedDialogue(string DialogueTitle)
+    {
+        GameManager.instance.FinishedDialogues.Add(DialogueTitle);
+    }
+
+
+    [YarnCommand("PersuadeScore")]
+    public void PersuadeScore()
+    {
+        InMemoryVariableStorage variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+
+        float score;
+        variableStorage.TryGetValue("$persuade", out score);
+        GameManager.instance.GeonWooScore = (int)score;
+    }
 }

@@ -53,6 +53,9 @@ public class DgramController : MonoBehaviour
     public void ActiveDChatRoom(string name)  // 채팅방 켜기
     {
         PhoneController.instance.ActiveTab(ChatMap[name]);
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(ChatMap[name].GetComponent<ScrollRect>().content);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(ChatMap[name].GetComponent<ScrollRect>().content);
     }
 
     public ScrollRect getScrollrectof(string name)
