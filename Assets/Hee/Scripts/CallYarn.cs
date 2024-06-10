@@ -68,10 +68,6 @@ public class CallYarn : MonoBehaviour
         if(FinishedDialogues.Contains("Camera")) camera.Invoke();
         else camerabutton.onClick.AddListener(camera);
 
-        ChatManager.instance.PrintChat(19);  // 이미 와있는 채팅들
-        ChatManager.instance.PrintChat(18);   
-        ChatManager.instance.PrintChat(25);
-
         Callbybutton(chocotalkbutton,"Chocotalk1st");  // 초코톡 켰을 때
         Callbybutton(openchatDbutton,"OpenChat");  // 오픈채팅 D 채팅창 켰을 때
 
