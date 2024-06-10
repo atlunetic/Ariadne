@@ -114,6 +114,7 @@ public class SaveAndLoad : MonoBehaviour
         nowLoading.SetActive(false);
     }
 
+    [YarnCommand("BackToMainScene")]
     public void BackToMainScene(){
         SavePanel.SetActive(false);
         DestroyImmediate(GameObject.Find("MenuUI"));
