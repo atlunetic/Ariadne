@@ -90,10 +90,9 @@ title: S1_path4
     <<FadeIn>>
     <<DrawFadeIn Ending0 0.75 0.75>>   
     <<wait  4.0>>
-    <<ChangeSceneTo VisualNovelPrefab S0>>
     <<Hide Ending0>>
     <<Scene NoBG>>
-    <<SetCanvasTo VisualNovelPrefab false>>
+    <<BackToMainScene GameManager>>
 
         
 
@@ -335,10 +334,9 @@ title: Ending1
 <<FadeIn>>
 <<DrawFadeIn Ending1 0.75 0.75>>
 <<wait  4.0>>
-<<ChangeSceneTo VisualNovelPrefab S0>>
 <<Hide Ending1>>
 <<Scene NoBG>>
-<<SetCanvasTo VisualNovelPrefab false>>
+<<BackToMainScene GameManager>>
 
 
 ===
@@ -463,10 +461,9 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 <<FadeIn>>
 <<DrawFadeIn Ending2 0.75 0.75>>
 <<wait  4.0>>
-<<ChangeSceneTo VisualNovelPrefab S0>>
 <<Hide Ending2>>
 <<Scene NoBG>>
-<<SetCanvasTo VisualNovelPrefab false>>
+<<BackToMainScene GameManager>>
 
 
 ===
