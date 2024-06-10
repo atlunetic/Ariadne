@@ -7,11 +7,14 @@
   "ChattingLog": [],
   "PhotoList": [],
   "items": [],
-  "FindedObjects": [],
+  "FindedObjects": [
+    "Letter"
+  ],
   "FindedClues": [],
   "FinishedDialogues": [
     "ChocotalkAlarm",
-    "DgramAlarm"
+    "DgramAlarm",
+    "Camera"
   ],
   "GottenPage": [],
   "visited": 0
