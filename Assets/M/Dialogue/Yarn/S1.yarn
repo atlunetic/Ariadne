@@ -68,19 +68,6 @@ title: S1_path2
 -> 왼쪽으로 가보자.
     <<jump Minotaur>>
 -> 돌아가자.
-    돌아가는 길을 모르겠어.
-    <<jump S1_path3>>
-
-
-===
-
-title: S1_path3
-
----
-
--> 왼쪽으로 가보자.
-    <<jump LeftPath>>
--> 돌아가자.
     정말 괴물이 있으면 어떡하지?
     <<jump S1_path4>>
 
@@ -94,15 +81,17 @@ title: S1_path4
 -> 왼쪽으로 가보자.
     <<jump LeftPath>>
 -> 돌아가자.
+    <<StopAudioAll>>
+    <<PlayAudio CardiacArrest>> 
     <<Fade white 0.0 1.0 2.0>>
+    <<Scene WhiteBG>>
     갑자기 눈 앞이 흐려진다.
     여기서 쓰러지면 안되는데...
     <<FadeIn>>
-    <<DrawFadeIn Ending0 0.75 0.75>>
-    <<PlayAudio CardiacArrest>>
-    <<ChangeSceneTo VisualNovelPrefab S0>>
-    <<wait  3.0>>
+    <<DrawFadeIn Ending0 0.75 0.75>>   
+    <<wait  4.0>>
     <<Hide Ending0>>
+    <<ChangeSceneTo VisualNovelPrefab S0>>
     <<Scene NoBG>>
     <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -284,6 +273,7 @@ title: TowardsEnding1_1
 
 <<if $rand > 2 >> 
     -> 뭐 자기가 알아서 하겠지.
+        무슨 일 생기면 어떡하지..
         <<jump TowardsEnding1_2>>
     -> 미안하다고 사과하자.
         <<Hide LetterContent>>
@@ -334,6 +324,8 @@ title: Ending1
 ---
 
 <<Fade Black 0.0 1.0 2.0>>
+<<wait 3.0>>
+<<ChangeSceneTo VisualNovelPrefab S1>>
 
 동생은 그 후로 소식이 없었다. 
 정확히 한 달 후에 경찰에서 연락이 왔다. 
@@ -341,11 +333,12 @@ title: Ending1
 
 <<FadeIn>>
 <<DrawFadeIn Ending1 0.75 0.75>>
-<<ChangeSceneTo VisualNovelPrefab S0>>
-<<wait  3.0>>
+<<wait  4.0>>
 <<Hide Ending1>>
+<<ChangeSceneTo VisualNovelPrefab S0>>
 <<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 
