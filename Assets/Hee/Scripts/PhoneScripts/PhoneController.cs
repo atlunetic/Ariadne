@@ -26,7 +26,7 @@ public class PhoneController : MonoBehaviour
         Phone.SetActive(true);
         Menu.instance.UI_on();
     }
-    
+
     public void ActiveTab(GameObject tab){
         if(tab.activeSelf) return;
         TabStack.Push(tab);
