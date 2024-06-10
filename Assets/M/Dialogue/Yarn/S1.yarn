@@ -427,7 +427,6 @@ title: PhoneBoothEnd2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<DeActivePhone PhoneController>>
 <<Scene DrugDealBG>>
 이미지 속 장소를 찾아왔다.
 //<<Act 지수 Jisoo2 1.17 0.322 black>>
