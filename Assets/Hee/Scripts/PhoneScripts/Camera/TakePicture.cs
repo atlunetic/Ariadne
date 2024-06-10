@@ -29,7 +29,6 @@ public class TakePicture : MonoBehaviour  // 모든 Main Camera에 부착
         if (_willTakeScreenShot)
         {
             _willTakeScreenShot = false;
-            print(rect);
             screenTex.ReadPixels(rect, 0, 0);
 
             string clue = sceneInfo.FindClue(rect);

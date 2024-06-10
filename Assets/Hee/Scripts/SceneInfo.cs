@@ -10,6 +10,7 @@ public class SceneInfo : MonoBehaviour
     public GameObject[] Diarylist;
     public GameObject[] Cluelist;  // 카메라로 찍어야 하는 증거 오브젝트들
     public GameObject[] MemoriesBG;  // 기억 돌아올때 연출 배경
+
     void Awake(){
         SceneManager.sceneLoaded += SceneManage;
     } 
@@ -45,6 +46,7 @@ public class SceneInfo : MonoBehaviour
     IEnumerator PlayMemory(string cluename){
         var runner = FindObjectOfType<DialogueRunner>();
 
+        BGoff();
         for(int i=0; i<3; i++){
             MemoriesBG[i].SetActive(true);
             yield return new WaitForSeconds(0.6f);
@@ -73,6 +75,7 @@ public class SceneInfo : MonoBehaviour
         GalleryController.instance.Glitch.SetActive(false);
 
         Menu.instance.UI_off();
+        BGon();
     }
 
     [YarnCommand("BGoff")]
