@@ -21,6 +21,6 @@ public class CameraRectScript : MonoBehaviour
         float posx = Mathf.Clamp(mousepos.x, 0, 1920 - rect.width);
         float posy = Mathf.Clamp(mousepos.y, 0, 1080 - rect.height);
         
-        rectTransform.position = new Vector3(posx,posy,mousepos.z);
+        rectTransform.anchoredPosition = new Vector3(posx,posy,mousepos.z);
     }
 }
