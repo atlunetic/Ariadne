@@ -90,8 +90,8 @@ title: S1_path4
     <<FadeIn>>
     <<DrawFadeIn Ending0 0.75 0.75>>   
     <<wait  4.0>>
-    <<Hide Ending0>>
     <<ChangeSceneTo VisualNovelPrefab S0>>
+    <<Hide Ending0>>
     <<Scene NoBG>>
     <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -325,7 +325,8 @@ title: Ending1
 
 <<Fade Black 0.0 1.0 2.0>>
 <<wait 3.0>>
-<<ChangeSceneTo VisualNovelPrefab S1>>
+<<ChangeSceneTo VisualNovelPrefab S5>>
+<<Scene BlackBG>>
 
 동생은 그 후로 소식이 없었다. 
 정확히 한 달 후에 경찰에서 연락이 왔다. 
@@ -334,8 +335,8 @@ title: Ending1
 <<FadeIn>>
 <<DrawFadeIn Ending1 0.75 0.75>>
 <<wait  4.0>>
-<<Hide Ending1>>
 <<ChangeSceneTo VisualNovelPrefab S0>>
+<<Hide Ending1>>
 <<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
