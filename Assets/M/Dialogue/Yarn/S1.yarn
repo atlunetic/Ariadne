@@ -427,6 +427,7 @@ title: PhoneBoothEnd2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<DeActivePhone PhoneController>>
 <<Scene DrugDealBG>>
 이미지 속 장소를 찾아왔다.
 //<<Act 지수 Jisoo2 1.17 0.322 black>>
@@ -448,7 +449,7 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 
 <<Fade black 0.0 1.0 2.0>>
 
-<<wait 0.5>>
+<<wait 2.0>>
 <<ChangeSceneTo VisualNovelPrefab S1>>
 <<Scene BlackBG>>
 
