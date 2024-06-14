@@ -32,7 +32,7 @@ public class ActionPanelButtons : MonoBehaviour
             runner.StartDialogue("UsedWaterCup");
         }
 
-        else if (connectedItem.itemName == "Clothes")
+        else if (connectedItem.itemName == "Clothes" && currentscene.name.StartsWith("S2"))
         {
             runner.StartDialogue("ClothesUsed");
         }
@@ -49,8 +49,6 @@ public class ActionPanelButtons : MonoBehaviour
                 runner.StartDialogue("inventory_notjelly");
             }
         }
-
-        //else if(connectedItem.itemName == "DrugJelly")
 
         else if (connectedItem.itemName == "Wallet")
         {
@@ -75,16 +73,30 @@ public class ActionPanelButtons : MonoBehaviour
         {
             //runner.StartDialogue("KeyUse");
         }
+        else if (currentscene.name == "S3_1_OfficetelEntrance")
+        {
+            if (connectedItem.itemName == "Clothes")
+            {
+                runner.StartDialogue("IfEmployeeSuit");
+                Inventory.instance.items.Remove(connectedItem); currentSlot.RemoveSlot();
+            }
+            else
+            {
+                runner.StartDialogue("IfnotEmployeeSuit");
+            }
+        }
         else
         {
 
             runner.StartDialogue("WrongItem");
-        }
+        } 
             //connectedItem.Use();
             //Inventory.instance.items.Remove(connectedItem);
             //currentSlot.RemoveSlot();
 
             // After performing functionality, hide action panel
+
+        
         HideActionPanel();
 
     }

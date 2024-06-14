@@ -108,6 +108,7 @@ title: VendingMachine3
 <<SetCanvasTo VisualNovelPrefab false>>
 //(손전등이 없을 경우)
 
+<<declare $flashlight = false as bool>>
 <<set $flashlight = false>>
 
 <<if $flashlight == false>>
@@ -151,6 +152,9 @@ title: DrugCookie
 //(마약 쿠키 클릭 시)
 * 마약사전에 ‘마약 쿠키’가 추가되었습니다. *
 //(이후 마약사전 클릭 시 ‘마약 쿠키’ 관련 정보 확인 가능)
+<<RevealDiary DiaryManager Page3>>
+<<SetActiveFalse VisualNovelPrefab VendingMachine3>>
+<<FinishedObj VisualNovelPrefab VendingMachine3>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -192,6 +196,8 @@ title: Flashlight
 
 
 <<SetCanvasTo VisualNovelPrefab false>>
+<<SetActiveFalse VisualNovelPrefab Flashlight>>
+<<FinishedObj VisualNovelPrefab Flashlight>>
 
 ===
 
@@ -206,6 +212,10 @@ title: SynthWeed
 ….
 명함 같은 걸 뿌려뒀네.
 <<Hide 지수>>
+
+<<RevealDiary DiaryManager Page9>>
+<<SetActiveFalse VisualNovelPrefab SynthWeed>>
+<<FinishedObj VisualNovelPrefab SynthWeed>>
 
 * 일기장에 ‘합성 대마’가 추가되었습니다. *
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -276,7 +286,7 @@ title: OfficetelDoor
 
 ===
 
-title: Scribble1234
+title: Scribble1342
 
 ---
 
@@ -467,10 +477,8 @@ title: OfficetelDoorwcard
 	조직원:(무표정) ….
 	…맞췄나?
 	….
-
 	조직원:(무표정) 신입인가.
 	조직원:(무표정) 누굴 닮았는데…. 
-
 	//지수4
 	<<UpdateAct 지수 Jisoo4>>
 	….
@@ -480,8 +488,9 @@ title: OfficetelDoorwcard
 	….
 	확실히… 위험한 일에 엮인 것 같아.
 	빨리 움직여야겠다.
-
 	<<HideAll>>
+	<<ChangeSceneTo VisualNovelPrefab S3_2_Officetel1stFloor>>
+	<<jump Officetel1stfloor>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 
 
