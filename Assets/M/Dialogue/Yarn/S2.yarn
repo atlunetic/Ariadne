@@ -570,7 +570,7 @@ title: obj_lsdsticker
 //지수 이미지 종료
 <<Hide 지수>>
 
-* 일기장에 ‘LSD 스티커’가 추가되었습니다. *
+* 일기장에 'LSD 스티커'가 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page6>>
 
@@ -606,7 +606,7 @@ title: menu_kratom
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-//메뉴판 이미지의 ‘크라톰’ 클릭 시
+//메뉴판 이미지의 '크라톰' 클릭 시
 크라톰? 어디서 본 것 같은데... 
 설마 저기에 진짜 크라톰이 들어가 있나..?
 
@@ -620,10 +620,10 @@ title: menu_philopon
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
-//메뉴판 이미지의 ‘필로폰’ 텍스트 클릭 시
+//메뉴판 이미지의 '필로폰' 텍스트 클릭 시
 ...
 술 이름이 왜 이래?
-* 일기장에 ‘필로폰’이 추가되었습니다. *
+* 일기장에 '필로폰'이 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page7>>
 <<SetActiveFalse VisualNovelPrefab menu_philopon>>
@@ -2739,7 +2739,7 @@ title: obj_viplist
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
-‘VIP 고객 명단’이라고 적힌 파일이다.
+'VIP 고객 명단'이라고 적힌 파일이다.
 살펴볼까?
 
 -> 살펴보자
@@ -2994,10 +2994,10 @@ title: IgnoreE
 메시지가 온다.
 
 //텍스트로 진행
-<i>우리 여보 ‘수진이 아빠. 애들 봐서라도 이제 정신 좀 차리면 안될까?’
-<i>우리 여보 ‘애들도 알 거 아는 나이야. 자기 약에 빠져 사는 걸 모르겠어?’
-<i>우리 여보 ‘나도 옆에서 계속 마음 졸이는 거 그만하고 싶어.’
-<i>우리 여보 ‘약 안 끊을 거면 우리 이혼하자.’
+<i>우리 여보 '수진이 아빠. 애들 봐서라도 이제 정신 좀 차리면 안될까?'
+<i>우리 여보 '애들도 알 거 아는 나이야. 자기 약에 빠져 사는 걸 모르겠어?'
+<i>우리 여보 '나도 옆에서 계속 마음 졸이는 거 그만하고 싶어.'
+<i>우리 여보 '약 안 끊을 거면 우리 이혼하자.'
 <<wait 1.0>>
 
 ...
@@ -3299,7 +3299,7 @@ title: game_clock_success
 
 
 ...
-아까 클럽 고객G에게 연락온 건 분명 ‘drgg24’...
+아까 클럽 고객G에게 연락온 건 분명 'drgg24'...
 분명 11시 반에 만나자고 했지.
 ...
 <<SetActiveFalse VisualNovelPrefab Clock>>
@@ -3598,7 +3598,7 @@ title: inventory_drugjelly
 지수: 안 먹었는데 왜요?
 건우: ... 이거 마약젤리 같은데.
 
-* 마약사전에 ‘마약 젤리’가 추가되었습니다. *
+* 일기장에 '마약 젤리'가 추가되었습니다. *
 <<RevealDiary DiaryManager Page1>>
 
 지수:  네..?
@@ -3801,7 +3801,7 @@ title: memory_BrokenGlasses
 
 ---
 
-//증거 촬영 시 돌아오는 기억: 건우가 지수에게 지원의 유품인 ‘깨진 안경’을 건넸을 때의 기억이 돌아옴.
+//증거 촬영 시 돌아오는 기억: 건우가 지수에게 지원의 유품인 '깨진 안경'을 건넸을 때의 기억이 돌아옴.
 <<SetCanvasTo VisualNovelPrefab true>>
 건우: 현장에 이게 있었어.
 건우: 몰래 챙겨왔는데...
@@ -3822,7 +3822,7 @@ title: event_movetostairs
 
 ---
 
-//‘네비게이션:오피스텔 주소’ + ‘깨진 안경: 최종 추리 증거’를 습득한 이후
+//'네비게이션:오피스텔 주소' + '깨진 안경: 최종 추리 증거'를 습득한 이후
 
 <<SetCanvasTo VisualNovelPrefab true>>
 일단...
