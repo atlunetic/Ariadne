@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SaveGameManager{
+    public string savetime;
     public bool IsLoad = false;  // 불러오기 시 true
     public string NowScene;
     public int NumOfScreenShots = 1;  // 불러오기 시 더 큰 수로 적용
@@ -15,6 +16,7 @@ public class SaveGameManager{
     public HashSet<string> FindedClues = new HashSet<string>();
     public HashSet<string> FinishedDialogues = new HashSet<string>();
     public HashSet<string> GottenPage = new HashSet<string>();
+    public HashSet<string> RecommendedFriends = new HashSet<string>();
 
     public int visited;
 
@@ -48,6 +50,8 @@ public class GameManager : MonoBehaviour
     public HashSet<string> FindedClues = new HashSet<string>();
     public HashSet<string> FinishedDialogues = new HashSet<string>();
     public HashSet<string> GottenPage = new HashSet<string>();
+    public HashSet<string> RecommendedFriends = new HashSet<string>();
+
 
     public int visited;
 
@@ -79,6 +83,7 @@ public class GameManager : MonoBehaviour
         saveGameManager.FindedObjects = instance.FindedObjects;
         saveGameManager.FinishedDialogues = instance.FinishedDialogues;
         saveGameManager.GottenPage = instance.GottenPage;
+        saveGameManager.RecommendedFriends = instance.RecommendedFriends;
         saveGameManager.visited = instance.visited;
 
         return saveGameManager;
@@ -99,5 +104,6 @@ public class GameManager : MonoBehaviour
         instance.FinishedDialogues = saveGameManager.FinishedDialogues;
         instance.GottenPage = saveGameManager.GottenPage;
         instance.visited = saveGameManager.visited;
+        instance.RecommendedFriends = saveGameManager.RecommendedFriends;
     }
 }

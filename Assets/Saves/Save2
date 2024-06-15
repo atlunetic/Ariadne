@@ -1,51 +1,35 @@
 {
+  "savetime": "2024-06-15 19:56:16 오후",
   "IsLoad": true,
   "NowScene": "S1_2_JiwonRoom",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
   "ChattingLog": [
-    12
+    12,
+    26,
+    27,
+    29
   ],
-  "PhotoList": [
-    "Meds3",
-    "Letter3",
-    "Laptop3"
-  ],
-  "items": [
-    {
-      "ItemType": 0,
-      "itemName": "Hairpin"
-    }
-  ],
+  "PhotoList": [],
+  "items": [],
   "FindedObjects": [
-    "Books_Diary",
-    "DrawerR_Wallet",
-    "Drawer_Hairpin"
-  ],
-  "FindedClues": [
-    "Meds",
     "Letter",
-    "Laptop"
+    "Books_Diary"
   ],
+  "FindedClues": [],
   "FinishedDialogues": [
-    "jisoo'stalk",
-    "Chatlist",
+    "ChocotalkAlarm",
+    "DgramAlarm",
     "Camera",
-    "Map_1",
-    "Park",
-    "Barstreet",
-    "Hospital",
-    "Chocotalk1st",
+    "jisoo'stalk",
     "ChooseChatName1",
-    "AfterGeonwooChatAsHerself",
-    "DGram1st",
-    "DropperRecruit",
-    "IceiceChat",
-    "Officetel",
-    "Where",
-    "New711"
+    "AfterGeonwooChatAsHerself"
   ],
   "GottenPage": [],
-  "visited": 7
+  "RecommendedFriends": [
+    "마약퇴치운동본부",
+    "NeverEverDrug"
+  ],
+  "visited": 0
 }

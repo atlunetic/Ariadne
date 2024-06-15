@@ -26,6 +26,7 @@ public class ChocoTalkController : MonoBehaviour
     public TMP_Text TXT;
     public GameObject D;
     public GameObject jisoo;
+    public GameObject[] RecommendedFriends;
     void Awake()
     {
         if (instance == null)
@@ -38,6 +39,9 @@ public class ChocoTalkController : MonoBehaviour
         CreateChatRoom("해솔");
         ChatMap.Add("지수", jisoo);
         ChatMap.Add("D", D);
+        ChatMap.Add("마약퇴치운동본부", RecommendedFriends[0]);
+        ChatMap.Add("NeverEverDrug", RecommendedFriends[1]);
+        ChatMap.Add("Team ARIADNE", RecommendedFriends[2]);
     }
 
     public void CreateChatRoom(string name){  // 채팅방 생성
