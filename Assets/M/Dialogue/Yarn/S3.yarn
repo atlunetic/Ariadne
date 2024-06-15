@@ -6,9 +6,8 @@ title: OfficetelBG
 ---
 //배경 클릭 시: #평범한 오피스텔이다. #주변에 뭐가 많네. => 랜덤 노출
 <<SetCanvasTo VisualNovelPrefab true>>
-<<set $r = random()>>
 
-<<if $r >= 0.5>>
+<<if $rand >= 2>>
     평범한 오피스텔이다.
 <<else>>
     주변에 뭐가 많네. 
@@ -21,18 +20,24 @@ title: Officetel3
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 // 지수2
-<<Act 지수 Jisoo2 1.17 0.322 black>>
-….
-이 오피스텔에 지원이가 있을까?
-그런데 어떻게 들어가지.
-지원이가 정확히 어디 있는지도 모르는데….
-….
-….
 
-// 지수4
-<<UpdateAct 지수 Jisoo4>>
-주위를 둘러볼까?
-<<Hide 지수>>
+//추후 수정
+<<if visited("Officetel3") == false>>
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
+	….
+	이 오피스텔에 지원이가 있을까?
+	그런데 어떻게 들어가지.
+	지원이가 정확히 어디 있는지도 모르는데….
+	….
+	….
+
+	// 지수4
+	<<UpdateAct 지수 Jisoo4>>
+	주위를 둘러볼까?
+	<<Hide 지수>>
+<<else>>
+	<<jump OfficetelBG>>
+<<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -68,6 +73,7 @@ title: Poppy
 ….
 금방 오신다고 하네.
 <<Hide 지수>>
+<<AddToInventory VisualNovelPrefab Clothes>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -105,17 +111,23 @@ title: VendingMachine3
 <<UpdateAct 지수 Jisoo2>>
 어두워서 잘 안보인다.
 <<Hide 지수>>
-<<SetCanvasTo VisualNovelPrefab false>>
-//(손전등이 없을 경우)
 
-<<declare $flashlight = false as bool>>
-<<set $flashlight = false>>
 
-<<if $flashlight == false>>
-    <<stop>>
-<<else>>
+<<if visited("Flashlight") == true>>
     <<jump FlashVM>>
 <<endif>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+//(손전등이 없을 경우)
+// <<declare $flashlight = false as bool>>
+// <<set $flashlight = false>>
+
+// <<if $flashlight == false>>
+//     <<stop>>
+// <<else>>
+//     <<jump FlashVM>>
+// <<endif>>
 
 ===
 
@@ -129,7 +141,6 @@ title: FlashVM
 이걸로 자판기 밑을 살펴볼까?
 ….
 ….
-
 //지수4
 <<UpdateAct 지수 Jisoo4>>
 어….
@@ -140,6 +151,7 @@ title: FlashVM
 ….
 ….
 <<Hide 지수>>
+<<jump DrugCookie>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -166,6 +178,7 @@ title: PhoneBooth
 <<SetCanvasTo VisualNovelPrefab true>>
 
 //공중전화 내부 확대한 배경 이미지
+<<ChangeSceneTo VisualNovelPrefab S3_1_2_PhoneBooth>>
 
 //지수4
 <<Act 지수 Jisoo4 1.17 0.322 black>>
@@ -193,7 +206,7 @@ title: Flashlight
 * ‘손전등’을 습득했다. *
 
 //인벤토리에 추가
-
+<<AddToInventory VisualNovelPrefab Flashlight>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 <<SetActiveFalse VisualNovelPrefab Flashlight>>
@@ -229,6 +242,7 @@ title: GeonwooCard
 <<SetCanvasTo VisualNovelPrefab true>>
 //건우의 명함 - 가짜 증거
 
+<<Draw Phonebooth_namecard_BIG 0.75 0.75>>
 //명함 팝업 이미지
 //지수4
 <<Act 지수 Jisoo4 1.17 0.322 black>>
@@ -237,6 +251,7 @@ title: GeonwooCard
 번호도 익숙한데.
 ….
 ….
+<<Hide Phonebooth_namecard_BIG>>
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -273,6 +288,7 @@ title: OfficetelDoor
 <<SetCanvasTo VisualNovelPrefab true>>
 //오브젝트 4. 오피스텔 출입문
 
+<<ChangeSceneTo VisualNovelPrefab S3_1_1_Door>>
 //출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
 
 //지수2
@@ -425,6 +441,7 @@ title: IfEmployeeSuit
 좋아. 들어가보자.
 <<Hide 지수>>
 * ‘오피스텔 출입 카드키’를 습득했다. *
+<<AddToInventory VisualNovelPrefab OfficetelCardkey>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -463,7 +480,6 @@ title: OfficetelDoorwcard
 ….
 엄청 무섭게 쳐다보네….
 뭐였더라.
-
 //지수5
 <<UpdateAct 지수 Jisoo5>>
 -> 지수: 라이터…! 
@@ -490,10 +506,10 @@ title: OfficetelDoorwcard
 	빨리 움직여야겠다.
 	<<HideAll>>
 	<<ChangeSceneTo VisualNovelPrefab S3_2_Officetel1stFloor>>
-	<<jump Officetel1stfloor>>
+	//<<jump Officetel1stfloor>>
+	//0616 강제 진행- 추후 수정 필요
+	<<jump Officetel15thfloor>>
 	<<SetCanvasTo VisualNovelPrefab false>>
-
-
 ===
 
 title: Ending4
@@ -536,9 +552,8 @@ title: Offictel1stfloorBG
 
 //(배경 클릭 시: #바닥이 엄청 깨끗하다. #여긴 아무도 없네…. => 랜덤 노출)
 
-<<set $r = random()>>
 
-<<if $r >= 0.5>>
+<<if $rand >= 2>>
 바닥이 엄청 깨끗하다.
 <<else>>
 여긴 아무도 없네...
@@ -610,6 +625,7 @@ title: Officetel15thfloor
 <<SetCanvasTo VisualNovelPrefab true>>
 
 //장소 3. 오피스텔 꼭대기, 15층
+<<Draw Door1503 0.75 0.75>>
 //(♫Sound: 엘리베이터 도착음)
 //(♫Sound: 아래층에서 소란스러운 소리가 들려옴+이후 문 닫히는 소리)
 <<PlayAudio ElevatorArrive>>
@@ -636,8 +652,12 @@ title: Officetel15thfloor
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 안에는 아무도 없는 것 같다.
 들어가보자.
-
 <<Hide 지수>>
+
+<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
+<<wait  0.5>>
+<<Hide Door1503>>
+<<jump OfficetelInside1503>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -650,9 +670,7 @@ title: OfficetelInside1503BG
 //장소 3-1. 오피스텔 꼭대기, 1503호 내부
 //(배경 클릭 시: #책상 위에 뭐가 많네…. #방금 전까지 누군가 있었던 것 같아.=> 랜덤 노출)
 
-<<set $r = random()>>
-
-<<if $r >= 0.5>>
+<<if $rand >= 2>>
 책상 위에 뭐가 많네...
 <<else>>
 방금 전까지 누군가 있었던 것 같아.
@@ -684,6 +702,9 @@ title: OfficetelInside1503
 단서가 될만한 게 있을까?
 //지수이미지 종료
 <<Hide 지수>>
+<<wait  1.0>>
+//강제 진행
+<<jump GangEvent>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -711,7 +732,6 @@ title: GangEvent
 <<UpdateAct 지수 Jisoo2>>
 빨리 숨어야겠다…!
 어디에 숨지?
-
 -> 소파 뒤
 	//지수이미지 종료
 	<<Hide 지수>>
@@ -719,16 +739,13 @@ title: GangEvent
 	….
 	//조직원 왼쪽에서 등장
 	<<Act 조직원 NPC_1503jopok 0.322 0.227 black>>
-
 	조직원: 흐흐흠~
 	조직원: 아, 여깄다.
 	//조직원 이미지 종료
 	<<Hide 조직원>>
-
 	수상한 사람이 책상 위에 놓인 비닐을 챙겼다.
 	….
 	….
-
 	//(♫Sound: 수상한 사람이 멀어지는 소리)
 	<<PlayAudio FarawayGang>>
 	….
@@ -793,7 +810,8 @@ title: DrugDrink
 //지수2
 <<UpdateAct 지수 Jisoo2>>
 ….
-<Hide 지수>>
+<<Hide 지수>>
+<<RevealDiary DiaryManager Page2>>
 * 일기장에 ‘마약 음료’가 추가되었습니다. *
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -805,6 +823,7 @@ title: PhotoOf3
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //주요 오브젝트 2. 지원, 지수, 건우가 함께 찍힌 사진 - 최종 추리 증거
+<<Draw PhotoOf3 0.75 0.75>>
 
 //지수4
 <<Act 지수 Jisoo4 1.17 0.322 black>>
@@ -817,6 +836,7 @@ title: PhotoOf3
 셋이 저러고 있었던 적이 있나?
 기억이 안나는데….
 <<Hide 지수>>
+<<Hide PhotoOf3>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -839,8 +859,7 @@ title: memory_Photo
 
 ===
 
-title: Card1403
-
+title: R1403Cardkey
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
@@ -860,6 +879,8 @@ title: Card1403
 <<Hide 지수>>
 * ‘1403호 카드키’를 습득했다. *
 
+<<AddToInventory VisualNovelPrefab R1403Cardkey>>
+
 // 인벤토리에 습득
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -877,6 +898,7 @@ title: Crack
 <<Hide 지수>>
 
 * 마약사전에 ‘크랙’이 추가되었습니다. *
+<<RevealDiary DiaryManager Page5>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -897,7 +919,10 @@ title: InteractionFinto14
 ….
 ….
 //(이후 14층으로 장면전환)
+<<ChangeSceneTo VisualNovelPrefab S3_4_Officetel14th>>
 <<Hide 지수>>
+<<wait  1.0>>
+<<jump Officetel14BG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -910,9 +935,7 @@ title: Officetel14BG
 //장소 4. 오피스텔 꼭대기 아래층, 14층
 //(배경 클릭 시: #계단을 타고 소란스러운 소리가 들려온다. #주변을 감상할 시간이 없어. => 랜덤 노출)
 
-<<set $r = random()>>
-
-<<if $r >= 0.5>>
+<<if $rand >= 2>>
 계단을 타고 소란스러운 소리가 들려온다.
 <<else>>
 주변을 감상할 시간이 없어.
@@ -932,7 +955,6 @@ title: Officetel14
 ….
 이 안에 지원이가 있나?
 카드키를 찍어보자.
-
 //(♫Sound: 카드키 찍는 소리)
 <<PlayAudio UseCard>>
 ….
@@ -941,6 +963,9 @@ title: Officetel14
 <<UpdateAct 지수 Jisoo1>>
 문이 열렸다!
 <<Hide 지수>>
+//<<Draw Inside1403 0.75 0.75>>
+<<ChangeSceneTo VisualNovelPrefab S3_5_Inside1403>>
+<<jump JiwonIn1403>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -959,7 +984,6 @@ title: JiwonIn1403
 //지원0
 <<Act 지원 Jiwon0 0.322 0.227 black>>
 지원: 어…. 지수?
-
 //지수3
 <<UpdateAct 지수 Jisoo3>>
 지원이가 의자에 묶여있다.
@@ -1007,7 +1031,8 @@ title: JiwonIn1403
 지수: 지원아…. 괜찮아?
 지원: 응…. 여기 무서워. 빨리 나가자.
 //지수, 지원이미지 종료
-<<HideAll>>
+<<Hide 지수>>
+<<Hide 지원>>
 
 지원이를 일으켜 세워 부축했다.
 ….
@@ -1023,6 +1048,7 @@ title: OutofOfficetel
 
 //지수, 지원이미지 노출 x
 //(14층 배경)
+<<Scene Door1403>>
 …!
 저쪽에 수상한 사람들이 있다.
 누굴 찾는 것 같은데….
@@ -1065,11 +1091,15 @@ title: escapegame_checkpoint1
 -> 엘리베이터 쪽으로 가자
 	<<PlayAudio WhenChoose>>
 	<<jump escapegame_elevator>>
-
 -> 계단으로 가자
 	<<PlayAudio WhenChoose>>
 	//블랙화면으로 페이드 아웃
+	<<Fade Black 0.0 1.0 1.0>>
+	<<wait  1.0>>
 	//계단 이미지1 페이드인
+	<<Scene Stair1>>
+	<<wait 1.0>>
+	<<FadeIn>>
 	비상계단 문을 여니 누군가 무전기로 연락하는 소리가 들렸다.
 	조직원: 아 네 걱정 마십쇼. 잘 처리하겠습니다.
 	….
@@ -1079,10 +1109,10 @@ title: escapegame_checkpoint1
 	….
 	…. 
 	<<PlayAudio LoudDoor>>
+	<<Fade Black 0.0 1.0 1.0>>
 	…헉!
 	조직원: 거기 누구야!
 	…어떡하면 좋지?
-
 	//전부 블랙화면 그대로 진행
 	-> 엘리베이터까지 빠르게 뛰어가자
 		<<PlayAudio WhenChoose>>
@@ -1121,11 +1151,16 @@ title: escapegame_elevator
 ---
 
 //복도이미지1 배경
+<<Scene Lobby14F>>
+<<wait  1.0>>
+<<FadeIn>>
 근처에서 누군가의 발소리가 들린다. 어떻게 할까?
 
 -> 옆에 보이는 캐비넷에 몸을 숨기자
 	<<PlayAudio WhenChoose>>
 	//블랙화면으로 페이드아웃
+	<<Fade Black 0.0 1.0 1.0>>
+	<<wait  1.0>>
 	//사운드: 발소리가 들리다가 멀어짐
 	<<PlayAudio CloseFarFootsteps>>
 	마침 둘이 들어갈 수 있을 크기라서 다행이지….
@@ -1141,6 +1176,7 @@ title: escapegame_elevator
 	조직원: 너 뭐야!!!
 	-> 같은 조직원인 척 하자
 		<<PlayAudio WhenChoose>>
+		<<Fade Black 0.0 1.0 1.0>>
 		//블랙화면으로 페이드 아웃
 		….
 		하필이면 상부 직원에게 걸렸다.
@@ -1150,6 +1186,7 @@ title: escapegame_elevator
 	-> 무시하고 뛰어가자
 		<<PlayAudio WhenChoose>>
 		//블랙화면으로 페이드 아웃
+		<<Fade Black 0.0 1.0 1.0>>
 		….
 		겨우 엘리베이터를 탔다.
 		<<jump escapegame_checkpoint2>>
@@ -1157,6 +1194,7 @@ title: escapegame_elevator
 	<<PlayAudio WhenChoose>>
 	//블랙화면으로 페이드아웃
 	//복도 이미지1
+	<<Scene Lobby14F>>
 	….
 	문이 안열린다….
 	-> 같은 조직원인 척 하자
@@ -1166,6 +1204,7 @@ title: escapegame_elevator
 		….
 		무사히 엘리베이터를 탔다.
 		//엘리베이터 이미지
+		<<Scene Elevator>>
 	-> 엘리베이터까지 빠르게 뛰어가자
 		<<PlayAudio WhenChoose>>
 		<<PlayAudio Run>>
@@ -1185,6 +1224,9 @@ title: escapegame_checkpoint2
 ---
 
 //엘리베이터 이미지 배경 페이드인
+<<Scene Elevator>>
+<<wait  1.0>>
+<<Scene Elevator>>
 엘리베이터에 타자마자 1층을 눌렀다.
 닫힘 버튼을 눌렀다.
 …휴. 위험했어.
@@ -1206,6 +1248,7 @@ title: escapegame_stopelevator
 ---
 
 //엘리베이터 이미지 배경
+<<Scene Elevator>>
 -> 비상버튼을 눌러보자
 	<<PlayAudio WhenChoose>>
 	-꾸욱
@@ -1213,11 +1256,11 @@ title: escapegame_stopelevator
 	….
 	아무런 반응이 없다.
 	<<jump escapegame_stopelevator>>
-
 -> 문을 힘으로 열어보자
 	<<PlayAudio WhenChoose>>
 	….
 	//살짝 열린 엘리베이터 문 배경
+	<<Scene ElevatorGap>>
 	어? 문이 살짝 밀려서 틈이 생겼다.
 	사람 한명은 지나갈 수 있을 것 같은데?
 	….
@@ -1225,13 +1268,16 @@ title: escapegame_stopelevator
 	지원: ….
 	…됐다. 이제 올라가볼까?
 	//블랙화면으로 페이드 아웃
+	<<Fade Black 0.0 1.0 1.0>>
+	<<wait  1.0>>
 	…!
 	갑자기 조직원들이 나타나서 지원이를 끌고 갔다.
 	….
 	//[지원이가 다시 끌려감]
 	//블랙화면으로 페이드아웃
+	<<Fade Black 0.0 1.0 1.0>>
+	<<wait  1.0>>
 	<<jump escapegame_checkpoint2>>
-
 -> 열림 버튼을 눌러보자
 	<<PlayAudio WhenChoose>>
 	//덜커덩!! 하는 소리
@@ -1249,7 +1295,6 @@ title: escapegame_stopelevator
 	엘리베이터 버튼도 안 눌리고 문도 안 닫히네….
 	….
 	<<wait 2.0>>
-
 	엘리베이터가 고장난 것 같다. 어떡하지?
 	<<jump escapegame_brokenelevator>>
 
@@ -1266,6 +1311,7 @@ title: escapegame_brokenelevator
 	….
 	…!
 	//엘리베이터 이미지 배경
+	<<Scene Elevator>>
 	//엘베 문 닫히는 소리
 	//엘베 움직이는 소리
 	다행히 엘리베이터가 다시 움직였다.
@@ -1274,6 +1320,8 @@ title: escapegame_brokenelevator
 	이제 1층이다…!
 	….
 	//블랙화면으로 페이드아웃
+	<<Fade Black 0.0 1.0 1.0>>
+	<<wait  1.0>>
 	//엘베 문 열리는 소리
 	….
 	문이 열리자, 수많은 조직원들이 밖에서 기다리고 있었다.
@@ -1281,14 +1329,12 @@ title: escapegame_brokenelevator
 	//[발각]
 	//블랙화면으로 페이드아웃
 	<<jump escapegame_checkpoint2>>
-
 -> 2층 버튼을 눌러보자
 	<<PlayAudio WhenChoose>>
 	계속해서 2층 버튼을 눌러도 반응이 없다.
 	….
 	여기서 시간을 지체하면 안될 것 같아.
 	<<jump escapegame_brokenelevator>>
-
 -> 밖으로 나가본다
 	<<PlayAudio WhenChoose>>
 	어쩔 수 없지….
@@ -1298,6 +1344,7 @@ title: escapegame_brokenelevator
 	조금만 더 힘내자….
 	….
 	//복도이미지2 배경
+	<<Scene Lobby3F>>
 	주위를 둘러보니, 계단이 두 개가 있다.
 	
 	복도 끝 비상계단….
@@ -1306,14 +1353,13 @@ title: escapegame_brokenelevator
 	정문과 가까운 중앙계단…. 
 	빠르게 건물을 나갈 수 있지만, 건물 중앙에 있어서 들킬 위험은 더 클 것 같아.
 	어느 계단으로 가지...?
-
 	-> 복도 끝 비상계단	
 		<<PlayAudio WhenChoose>>
 		<<jump escapegame_checkpoint3>>
-
 	-> 정문과 가까운 중앙계단
 		<<PlayAudio WhenChoose>>
 		//계단이미지3 배경
+		<<Scene Stair3>>
 		정문이랑 가까우니까, 중간에 들키더라도 빨리 건물 밖으로 도망치면 될 거야!
 		….
 		예상과 달리 중앙계단 근처엔 인기척이 없었다.
@@ -1324,6 +1370,8 @@ title: escapegame_brokenelevator
 		그 때, 근처에서 발소리가 들렸다.
 		지원이를 부축하며 열심히 발걸음을 옮겼다.
 		//블랙화면으로 페이드아웃
+		<<Fade Black 0.0 1.0 1.0>>
+		<<wait  1.0>>
 		….
 		지수: 지원아, 조금만 더 힘내…!
 		지원: ….
@@ -1345,12 +1393,15 @@ title: escapegame_checkpoint3
 1층에는 이미 조직원들이 대기하고 있을 거야.
 비상계단으로 가자…!
 //계단 이미지2 배경
+<<Scene Stair2>>
 ….
 다행히 3층에는 아무도 없었다.
 ….
 비상계단을 통해 1층으로 내려왔다.
 바깥상황을 파악하기 위해, 문에 귀를 가져다 댔다.
 //블랙화면으로 페이드 아웃
+<<Fade Black 0.0 1.0 1.0>>
+<<wait  1.0>>
 
 ?: 우리 암구호는 어떻게 알고 들어온거지?
 ??: 그러니까 둘 다 처리하자고 했잖아.
@@ -1358,6 +1409,9 @@ title: escapegame_checkpoint3
 ?: 누가 모르냐. 나가려면 여기밖에 없는데, 이쪽으로 오겠지.
 ?: 오면 처리해버리자.
 //계단이미지2 배경 페이드인
+<<Scene Stair2>>
+<<wait 0.5>>
+<<FadeIn>>
 ….
 이미 조직원이 1층에 깔려있는 것 같은데…. 어떡하지?
 -> 주변에 뭐가 있는지 살펴보자
@@ -1376,6 +1430,8 @@ title: escapegame_checkpoint3
 		지수: 알겠어.
 		….
 		//블랙화면으로 페이드아웃
+		<<Fade Black 0.0 1.0 1.0>>
+		<<wait  1.0>>
 		지수: 지원아. 얼른 나와.
 		밖으로 나와서 지원이를 불렀다.
 		….
@@ -1389,7 +1445,6 @@ title: escapegame_checkpoint3
 		//[지원이가 다시 끌려감]
 		//블랙화면으로 페이드아웃
 		<<jump escapegame_checkpoint3>>
-
 	-> 소화전을 울리자
 		<<PlayAudio WhenChoose>>
 		화재 경보를 울려서, 그 틈에 빠져나가자.
@@ -1402,10 +1457,11 @@ title: escapegame_checkpoint3
 		…지금이다.
 		//블랙화면으로 페이드아웃
 		….
+		<<Fade Black 0.0 1.0 1.0>>
+		<<wait  1.0>>
 		문 손잡이를 잡은 순간, 누군가의 목소리가 들렸다.
 		???: 오작동 아니야? 우린 여기 있을 테니까 니가 가서 소화전 확인해봐.
 		???: 비상계단 쪽에 있을걸.
-
 		…!
 		어떡하지….
 		….
@@ -1414,7 +1470,6 @@ title: escapegame_checkpoint3
 		//[발각]
 		//블랙화면으로 페이드아웃
 		<<jump escapegame_checkpoint3>>
-
 -> 내가 가지고 있는 물건을 살펴보자
 	-> 지원이의 핸드폰을 이용하자
 		<<PlayAudio WhenChoose>>
@@ -1428,6 +1483,8 @@ title: escapegame_checkpoint3
 		지원: 조심해….
 		//블랙화면으로 페이드아웃
 		….
+		<<Fade Black 0.0 1.0 1.0>>
+		<<wait  1.0>>
 		2층 중앙계단 근처로 향했다. 
 		다행히 아무도 없는 것 같다.
 		….
@@ -1446,13 +1503,17 @@ title: escapegame_checkpoint3
 		문을 열고 주위를 둘러봤다. 
 		//블랙화면 페이드 아웃
 		//1층 배경 페이드인
+		<<Scene OpistalEntrance>>
+		<<wait  1.0>>
+		<<FadeIn>>
 		다행히 1층에는 아무도 없었다.
 		나와 지원이는 정문을 향해 최대한 숨을 죽이고 빠르게 걸어갔다.
 		//[3장 선택지 게임 clear]
 		//블랙화면으로 페이드아웃
+		<<Fade Black 0.0 1.0 1.0>>
+		<<wait  1.0>>
 		<<StopAudio ChooseMinigame>>
-		<<jump escapegame_success>>
-					
+		<<jump escapegame_success>>			
 	-> 직원 복장으로 변장하자
 		<<PlayAudio WhenChoose>>
 		직원 복장….
@@ -1467,6 +1528,8 @@ title: escapegame_checkpoint3
 		지원: ….
 		지원: 알았어.
 		//블랙화면으로 페이드 아웃
+		<<Fade Black 0.0 1.0 1.0>>
+		<<wait  1.0>>
 		지원이가 직원 복장으로 갈아입었다.
 		지원이는 호흡을 크게 내쉰 뒤 밖으로 나갔다.
 		….
@@ -1488,7 +1551,7 @@ title: escapegame_success
 
 //오피스텔 1층 배경 페이드인
 //지수, 지원이미지 노출 x
-
+<<FadeIn>>
 …휴우.
 겨우 문 앞까지 왔네.
 ….
@@ -1503,26 +1566,31 @@ title:BacktoOfficetel1stFloor
 ---
 
 //지수2
+<<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 지원아….
 지수: 너 무슨 일이 있었던 거야?
+<<Act 지원 Jiwon3 0.322 0.227 black>>
 //지원3
 지원: ….
 지원: 그게….
 
 //(♫Sound: 조직원들의 바쁜 발소리가 가까워진다)
 //지수5
+<<UpdateAct 지수 Jisoo5>>
 …!
 //지수3
+<<UpdateAct 지수 Jisoo3>>
 지수: 빨리 나가자, 지원아.
 //지수, 지원이미지 종료
-
+<<HideAll>>
 지원이를 데리고 걸음을 옮겼다.
 한 걸음만 더 가면 출입문이야.
 ….
 ….
 …!
 지원이가 중심을 잃고 넘어졌다.
-
+<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지원 Jiwon2 0.322 0.227 black>>
 //지수4
 지수: …! 얼른 내 손 잡아.
 //지원2
@@ -1530,25 +1598,31 @@ title:BacktoOfficetel1stFloor
 지원: 지수야, 미안해.
 지원: 그냥 가.
 //지수3
+<<UpdateAct 지수 Jisoo3>>
 지수: 아니야…. 일어나.
 //지수, 지원이미지 종료
+<<HideAll>>
 
 다급하게 지원이를 일으켜 세웠다.
 그 때, 반대편 복도에서 수상한 사람들이 나타났다.
 
 //지수3
+<<Act 지수 Jisoo3 1.17 0.322 black>>
 지수: 지원아, 나한테 기대.
 지수: 내가 부축해줄게. 빨리.
-
+<<Act 지원 Jiwon1 0.322 0.227 black>>
 //지원1
 지원: ….
 지원: 미안해.
 //지수, 지원이미지 종료
-
+<<HideAll>>
 //(화면이 흔들리는 연출)
 //화면이 어두워졌다가 콘크리트 바닥 배경으로
+<<Fade Black 0.0 1.0 1.0>>
 //(♫Sound: 세게 밀치는 소리)
 //(♫Sound: 바닥에 쿵 떨어지는 소리)
+<<wait  2.0>>
+<<FadeIn>>
 //지수 이미지 노출 x, 1인칭 시점
 …!
 지원이가 나를 밀쳤다.
@@ -1574,5 +1648,13 @@ title:BacktoOfficetel1stFloor
 ….
 //(암전, 사이렌 소리 사라짐)
 <<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: OfficetelCardkeyForce
+
+---
+
+이걸 사용해볼까?
 
 ===

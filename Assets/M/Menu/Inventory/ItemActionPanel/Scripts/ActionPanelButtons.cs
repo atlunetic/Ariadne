@@ -56,7 +56,7 @@ public class ActionPanelButtons : MonoBehaviour
             {
                 runner.StartDialogue("WalletO");
                 Inventory.instance.items.Remove(connectedItem);
-                currentSlot.RemoveSlot();
+                //currentSlot.RemoveSlot();
             }
             else { runner.StartDialogue("WalletX"); }
 
@@ -78,12 +78,19 @@ public class ActionPanelButtons : MonoBehaviour
             if (connectedItem.itemName == "Clothes")
             {
                 runner.StartDialogue("IfEmployeeSuit");
-                Inventory.instance.items.Remove(connectedItem); currentSlot.RemoveSlot();
+                Inventory.instance.items.Remove(connectedItem);//currentSlot.RemoveSlot();
+            }
+            else if (connectedItem.itemName == "OfficetelCardkey")
+            {
+                runner.StartDialogue("OfficetelCardkeyForce");
             }
             else
             {
                 runner.StartDialogue("IfnotEmployeeSuit");
             }
+        }
+        else if (currentscene.name.StartsWith("S3"))
+        {
         }
         else
         {
