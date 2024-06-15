@@ -3,6 +3,7 @@
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio BarStreet 0.4>>
 <<Scene ClubEntrance>>
 
 <<Act 지수 Jisoo4 1.17 0.322 black>>
@@ -12,7 +13,7 @@
 왠지 모르게 익숙한 분위기다.
 <<wait 1.0>>
 그런데 클럽엔 관심도 없다던 애가 여긴 왜 왔었대?
-아무튼, 들어가보자.
+아무튼, 들어가볼까..
 
 <<jump meet_gunwoo>>
 
@@ -57,6 +58,7 @@ title: meet_gunwoo
 	건우: 너 어떻게 나왔어?
 	건우: 그것보다 지원이 너 지금 여기 있으면 안돼.
 	건우: 빨리 다른 곳으로...
+	<<StopAudioAll>>
 	<<Fade black 0.0 1.0 2.0>>
 	<<ChangeSceneTo VisualNovelPrefab S1>>
 	<<Scene BlackBG>>
@@ -108,7 +110,8 @@ title: meet_gunwoo
 	<<UpdateAct 지수 Jisoo2>>
 	일단 안으로 들어가보자.
 	<<Hide 지수>>
-	<<Scene NoBG>>
+	<<StopAudioAll>>
+	<<ChangeSceneTo VisualNovelPrefab S2_1_ClubCounter_Bar>>
 	<<jump club_bar>>
 ===
 
@@ -135,6 +138,7 @@ title: club_bar
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<Scene NoBG>>
 지원이가 여기서 대체 뭘 했을까...
 ...
 <<ActiveM MenuUI>>
@@ -177,7 +181,7 @@ title: obj_clock1
 
 <<UpdateAct 지수 Jisoo2>>
 ...
-<<wait 2.0>>
+<<wait 1.0>>
 손을 뻗으면 닿을 것 같다.
 
 <<Hide 지수>>
@@ -569,7 +573,7 @@ title: obj_lsdsticker
 우표인가? 귀엽게 생겼네.
 //지수 이미지 종료
 <<Hide 지수>>
-
+<<PlayAudio WhenChoose 0.3>>
 * 일기장에 'LSD 스티커'가 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page6>>
@@ -623,6 +627,7 @@ title: menu_philopon
 //메뉴판 이미지의 '필로폰' 텍스트 클릭 시
 ...
 술 이름이 왜 이래?
+<<PlayAudio WhenChoose 0.3>>
 * 일기장에 '필로폰'이 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page7>>
@@ -712,7 +717,7 @@ title: event_gunwoo_tutorial
 
 //텍스트 볼드체 (취소: 유니티상에서 너무 굵음)
 <<BGoff SceneManager>>
-<<PlayAudio Minigame 1.0 loop>>
+<<PlayAudio Minigame 0.6 loop>>
 * 건우와 대화해보자! *
 * 건우와의 대화를 통해 도움을 요청해봅시다. *
 * 어쩌면 건우가 도움을 줄 수도... *
@@ -1212,6 +1217,8 @@ title: event_gunwoo_q5a
 <<UpdateAct 지수 Jisoo3>>
 지수: 사실...
 지수: 지원이가 마약에 관심을 갖고 있는 것 같아요.
+<<PlayAudio ChooseMinigame 0.6>>
+<<StopAudio Minigame>>
 
 <<UpdateAct 건우 Geonwoo3>>
 건우: 어...
@@ -1268,6 +1275,8 @@ title: event_gunwoo_q5b
 <<UpdateAct 지수 Jisoo3>>
 지수: 사실...
 지수: 지원이가 마약에 관심을 갖고 있는 것 같아요.
+<<PlayAudio ChooseMinigame 0.6>>
+<<StopAudio Minigame>>
 
 <<UpdateAct 건우 Geonwoo3>>
 건우: 어...
@@ -1617,7 +1626,7 @@ title: event_gunwoo_success
 ...
 <<Hide 지수>>
 <<Hide 건우>>
-<<StopAudio Minigame>>
+<<StopAudioAll>>
 <<BGon SceneManager>>
 <<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
 <<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
@@ -1626,36 +1635,6 @@ title: event_gunwoo_success
 ===
 
 title: event_gunwoo_3_6
-
----
-
-
-<<UpdateAct 건우 Geonwoo2>>
-건우: ...
-건우: 알겠으니까...
-건우: 나 이제 가봐도 되냐? 바쁘다고...
-
-지수: 아... 알겠어요.
-
-<<UpdateAct 지수 Jisoo1>>
-지수: ... 믿을게요.
-
-<<UpdateAct 지수 Jisoo2>>
-건우 오빠가 자리를 떠났다.
-...
-
-<<Hide 지수>>
-<<Hide 건우>>
-<<StopAudio Minigame>>
-<<BGon SceneManager>>
-<<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
-<<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
-<<SetCanvasTo VisualNovelPrefab false>>
-
-===
-
-
-title: event_gunwoo_fail
 
 ---
 
@@ -1678,11 +1657,30 @@ title: event_gunwoo_fail
 <<StopAudio Minigame>>
 <<Hide 지수>>
 <<Hide 건우>>
+<<StopAudioAll>>
 <<BGon SceneManager>>
 <<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
 <<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
+===
+
+
+title: event_gunwoo_fail
+
+---
+
+<<UpdateAct 건우 Geonwoo2>>
+건우: ...
+<<wait 0.5>>
+건우 오빠가 대답이 없네….
+다시 설득해볼까…?
+
+<<Hide 지수>>
+<<Hide 건우>>
+<<StopAudioAll>>
+<<BGon SceneManager>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -1884,10 +1882,9 @@ title: StaffLocker
 //♫Sound: 사물함 문 덜커덩 거리는 소리
 <<PlayAudio StaffonlyLocker>>
 
-
-잠겨있네.
-...
 열어볼까?
+...
+잠겨있네.
 어떻게 열 수 있으려나...
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -2034,8 +2031,8 @@ title: obj_staffroomdoor
 
 <<if CheckDialogue("obj_staffroomdoor") == false>>
 	<<FinishedDialogue VisualNovelPrefab obj_staffroomdoor>>
-	//<<set $persuade = GetScore()>>
-	<<set $persuade = 11>>
+	<<set $persuade = GetScore()>>
+	//<<set $persuade = 11>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지원이가 여기서 대체 뭘 했을까...
 	CCTV라도 볼 수 있으면 좋을텐데.
@@ -2175,8 +2172,10 @@ title: game_openthedoor_intro
 이걸로 문을 따 볼까?
 <<wait 1.0>>
 <<Hide 지수>>
-<<PlayAudio Minigame 1.0 loop>>
-* 미니게임: 헤어핀으로 문을 따자! *
+//미니게임 씬으로 이동
+<<ChangeSceneTo VisualNovelPrefab lockpick>>
+<<PlayAudio Minigame 0.6 loop>>
+* 헤어핀으로 문을 따자! *
 * 헤어핀을 이용해 Staff Room의 문을 열어봅시다. *
 * 문따기를 시도하는 방법 *
 * 헤어핀은 마우스를 따라옵니다. *
@@ -2185,8 +2184,7 @@ title: game_openthedoor_intro
 * 제한 시간 내에 문을 열지 못하면 문따기에 실패합니다. *
 * 기회는 3번까지 주어집니다. *
 
-//미니게임 씬으로 이동
-<<ChangeSceneTo VisualNovelPrefab lockpick>>
+
 
 
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -2265,10 +2263,10 @@ title: game_openthedoor_success
 누가 보기 전에 빨리 들어가자.
 ...
 <<StopAudio Minigame>>
+<<ChangeSceneTo VisualNovelPrefab S2_4_1_StaffRoom>>
 <<jump club_staffroom_inside>>
 <<deActiveM MenuUI>>
 <<Hide 지수>>
-<<ChangeSceneTo VisualNovelPrefab S2_4_1_StaffRoom>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2284,6 +2282,7 @@ title: obj_cocatree
 ...
 나무를 심어뒀네.
 <<Hide 지수>>
+<<PlayAudio WhenChoose 0.3>>
 * 일기장에 '코카인'이 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page8>>
@@ -2304,6 +2303,7 @@ title: club_staffroom_inside
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<ChangeSceneTo VisualNovelPrefab S2_4_1_StaffRoom>>
 <<set $rand = random_range(1,3)>>
 <<if $rand<2>>
 	건들면 안될 것 같은 게 많네...
@@ -2324,7 +2324,7 @@ title: obj_cctv2
 //지수이미지노출X
 
 <<SetCanvasTo VisualNovelPrefab true>>
-
+<<PlayAudio WhiteNoise 0.4 loop>>
 <<Draw CCTV_first 0.75 0.75>>
 
 CCTV 화면이다.
@@ -2377,6 +2377,7 @@ title: cctvOptions
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	...
 	<<wait 1.0>>
+	<<StopAudioAll>>
 	<<StartPhoneChat PhoneController 20>>
 	//핸드폰 알람음+빨간색 동그라미 (초코톡 알림)
 	<<Hide 지수>>
@@ -2437,17 +2438,17 @@ title: obj_radio
 <<wait 1.0>>
 
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
-<<PlayAudio Radio1>>
+<<PlayAudio Radio1 0.6>>
 <i>공지할게.. ... ..다.
-<<PlayAudio Radio2>>
+<<PlayAudio Radio2 0.6>>
 <i>요즘 ......를 빼가려고 하는 ..들이 많아졌다.
-<<PlayAudio Radio3>>
+<<PlayAudio Radio3 0.6>>
 <i>어제도 ....가 .....해서 가둬두는 일이 생겼고...
-<<PlayAudio Radio4>>
+<<PlayAudio Radio4 0.6>>
 <i>....보안을 강화할 필...가 있으니..
-<<PlayAudio Radio5>>
+<<PlayAudio Radio5 0.6>>
 <i>이 ...를 듣고 꼭 .....
-<<PlayAudio Radio6>>
+<<PlayAudio Radio6 0.6>>
 <i>기억해야 ....</i>
 <<Hide Radio>>
 <<wait 1.0>>
@@ -2469,7 +2470,9 @@ title: obj_radio
 <<wait 1.0>>
 //무전기 지지직 사운드
 //모스부호 사운드 시작
-<<PlayAudio Radio1>>
+<<PlayAudio Radio1 0.6>>
+<<wait 1.0>>
+<<StopAudio Radio1>>
 <<PlayAudio Morsecode>>
 ...
 ...
@@ -2482,6 +2485,7 @@ title: obj_radio
 ...
 <<wait 1.0>>
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
+<<PlayAudio Radio2>>
 <i>그럼 ... ..하도록 하자. 이만.</i>
 <<wait 1.0>>
 무전이 끊겼다.
@@ -2505,7 +2509,7 @@ title: event_staffroom
 <<SetCanvasTo VisualNovelPrefab true>>
 //무전 핸드폰 전송 후 바로 연결
 //문 밖에서 발소리가 가까워지는 사운드
-<<PlayAudio StaffOpenDoor>>
+<<PlayAudio StaffComeIn 0.6>>
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 ...
 어...
@@ -2528,7 +2532,7 @@ title: event_staffroom_gunwoo1
 <<SetCanvasTo VisualNovelPrefab true>>
 누구지..?
 //문 열리는 사운드
-<<PlayAudio StaffComeIn>>
+<<PlayAudio StaffOpenDoor 0.8>>
 문이 열리고, 클럽 직원C가 들어왔다.
 눈이 마주쳤다.
 
@@ -2791,7 +2795,7 @@ title: obj_locker
 //클릭할 경우
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 어, 그냥 열리네?
-안이 비어있다
+안이 비어있다.
 ...
 나도 들어갈 수 있겠는데?
 <<Hide 지수>>
@@ -3600,7 +3604,7 @@ title: inventory_drugjelly
 건우: 너 이거 먹었냐?
 지수: 안 먹었는데 왜요?
 건우: ... 이거 마약젤리 같은데.
-
+<<PlayAudio WhenChoose 0.3>>
 * 일기장에 '마약 젤리'가 추가되었습니다. *
 <<RevealDiary DiaryManager Page1>>
 

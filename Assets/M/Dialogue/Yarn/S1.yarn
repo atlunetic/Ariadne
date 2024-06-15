@@ -12,7 +12,7 @@ tags:
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio NightmareBGM 1.0 loop>>
+<<PlayAudio NightmareBGM 0.6 loop>>
 
 <<Scene Maze>>
 
@@ -44,7 +44,7 @@ title: LeftPath
 <<Scene Leftpath>>
 왼쪽에 길이 나있다.
 
-<<PlayAudio MonsterSound1>>
+<<PlayAudio MonsterSound1 0.7>>
 
 <<wait 1.0>>
 ...
@@ -82,7 +82,7 @@ title: S1_path4
     <<jump LeftPath>>
 -> 돌아가자.
     <<StopAudioAll>>
-    <<PlayAudio CardiacArrest>> 
+    <<PlayAudio CardiacArrest 0.4>> 
     <<Fade white 0.0 1.0 2.0>>
     <<Scene WhiteBG>>
     갑자기 눈 앞이 흐려진다.
@@ -103,13 +103,13 @@ title: Minotaur
 
 ---
 //(Chapter 1) 앞으로 가보자. 선택시
-<<PlayAudio MonsterSound2>>
+<<PlayAudio MonsterSound2 0.7>>
 
 저게 말로만 듣던 미노타우르스...
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
 검을 쥔 손에 힘이 들어가지 않아.
 
-<<PlayAudio MonsterSound3>>
+<<PlayAudio MonsterSound3 0.7>>
 <<wait 1.0>>
 
 녀석이 서서히 내게 다가온다.
@@ -142,9 +142,9 @@ title: Jisoo_Room
 <<Draw Prescription 0.75 0.75>>
 약이라도 먹어야겠다.
 
-<<PlayAudio OpeningMedsSound>>
+<<PlayAudio OpeningMedsSound 0.7>>
 <<wait 1.0>>
-<<PlayAudio DrinkingSound>>
+<<PlayAudio DrinkingSound 0.7>>
 
 //<<Act 지수 Jisoo1 1.17 0.322 black>>
 <<wait 1.0>>
@@ -155,7 +155,8 @@ title: Jisoo_Room
 
 <<StopAudioAll>>
 ...
-(기지개를 켰다.)
+<<wait 0.5>>
+기지개를 켰다.
 
 
 이제 정신 차리고 일어나야지.
@@ -175,7 +176,7 @@ title: Realized
 
 <<Scene JiwonRoomDoor>>
 -> 문을 두드린다
-    <<PlayAudio KnockingSound>>
+    <<PlayAudio KnockingSound 0.6>>
     지수: 지원아. 뭐해?
     //<<UpdateAct 지수 Jisoo4>>
     아무런 반응이 없다.
@@ -226,12 +227,15 @@ title: memory_Letter
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio MemoryRecall 0.5>>
 '나도 이제 더 이상은 못해먹겠어.'
 '내 인생 내가 알아서 살 테니까 훈수 두지마.' 
 '이번이 진짜 마지막이야. 반성하면 연락해.'
 '오지랖 좀 그만 부려.'
-<<StopMemory  SceneManager>>
+<<StopMemory SceneManager>>
+<<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<jump AfterMemory>>
 
 ===
 
@@ -361,9 +365,9 @@ title: JisooPhone
 
 초코톡을 켰다.
 톡이라도 하나 보내둬야지.
-'야 미안. 앞으로 잘할게.'
-'배고프다~ 같이 맛있는 거 먹자.'
-(전송)
+<i>'야 미안. 앞으로 잘할게.'
+<i>'배고프다~ 같이 맛있는 거 먹자.'
+...
 
 
 <<PlayAudio PhoneAlarm>>
@@ -371,7 +375,7 @@ title: JisooPhone
 <<UpdateAct 지수 Jisoo4>>
 어? 설마 휴대폰도 두고 갔나?
 
-
+<<wait 0.5>>
 <<PlayAudio PhoneOff>>
 <<wait 0.5>>
 앗... 내 휴대폰 전원이 꺼졌다.
@@ -426,13 +430,13 @@ title: FoundJiwonPhone
 
 어... 연락이 온 것 같은데.
 확인해볼까?
-
+<<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom>>
 <<wait 1.0>>
-* 휴대폰 설정을 통해 진행상황을 저장할 수 있습니다. *
+<color=yellow>* 휴대폰 설정을 통해 진행상황을 저장할 수 있습니다. *</color>
+<<wait 2.0>>
 
 <<UI_on MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
-<<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom>>
 
 ===
 
@@ -618,6 +622,7 @@ title: MDMA
 
 ...
 비타민인가?
+<<PlayAudio WhenChoose 0.3>>
 * 일기장에 'MDMA'가 추가되었습니다. *
 
 <<RevealDiary DiaryManager Page4>>
@@ -734,7 +739,7 @@ title: HospitalWaitingRoom
 병원에 사람이 많다.
 언제쯤 들어갈 수 있으려나.
 ...
-<<PlayAudio HospitalAlert>>
+<<PlayAudio HospitalAlert 0.3>>
 안내음 '김지수님, 1번 진료실로 들어오세요.'
 
 <<Scene H_DrRoom>>
@@ -1020,7 +1025,7 @@ title: LaptopStory
 조심스럽게 노트북을 열었다.
 
 //사운드 추가
-<<PlayAudio LaptopVideo>>
+<<PlayAudio LaptopVideo 0.4>>
 
 * 감기약 먹방에 대해 들어보신 적 있나요? *
 * 약물 과다복용 시 발생할 수 있는 부작용들이 있는데요. *
@@ -1028,6 +1033,7 @@ title: LaptopStory
 * 마약 대용으로 생각하고 과다복용 하는 경우가 있다고 합니다. *
 
 <<Hide Laptop(E)>>
+<<StopAudio LaptopVideo>>
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 도대체...
 얘는 이런게 있다는 걸 어떻게 알았대...?
@@ -1045,12 +1051,14 @@ title: memory_Laptop
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio MemoryRecall 0.5>>
 ...
 
 ???: 너 지금 뭐 보고 있어?
 
 ...
 <<StopMemory SceneManager>>
+<<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -1182,6 +1190,7 @@ title: DiaryTutorial
 
 <<SetCanvasTo VisualNovelPrefab true>>
 어...
+<<PlayAudio Wipe 0.3>>
 갑자기 일기장이 움직였다.
 내가 꿈을 꾸나...?
 
@@ -1189,6 +1198,33 @@ title: DiaryTutorial
 * 일기장의 모든 내용을 채워보세요. *
 
 <<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: AfterMemory
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<HideAll>>
+<<Scene FullJiwonRoomBG>>
+<<PlayAudio WhiteNoise 0.4>>
+<<PlayAudio EarSound 0.6>>
+<<Draw black_bg 0.75 0.75>>
+
+아..
+머리가 깨질 것 같아..
+<<wait 0.5>>
+요즘 너무 무리했나..
+
+
+<<StopAudioAll>>
+<<HideAll>>
+<<Scene NoBG>>
+<<UI_on MenuUI>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+
 ===
 
 

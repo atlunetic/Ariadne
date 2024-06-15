@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 72310196}
   - component: {fileID: 72310197}
   - component: {fileID: 72310198}
+  - component: {fileID: 72310199}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -228,10 +229,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cce278bbd1126834b995008f98852fe6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 17b43310c1c42574480889b9aaaab875, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.5
+  m_Pitch: 0.7
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -338,6 +339,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13bcfbf9ed23434fa69ae2ca1a01475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!164 &72310199
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72310192}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 8.39
+  m_DecayHFRatio: 1.39
+  m_ReflectionsLevel: -115
+  m_ReverbLevel: 985
+  m_ReverbDelay: 0.03
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 24
 --- !u!1 &252769829
 GameObject:
   m_ObjectHideFlags: 0
