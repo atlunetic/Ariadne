@@ -48,22 +48,22 @@ title: Poppy
 ..?
 뭔가 익숙한 꽃이다.
 ...
-...
 다큐멘터리에서 본 적 있는데.
 양귀비꽃 아니야?
 
 // 지수3
 <<UpdateAct 지수 Jisoo3>>
 ...
-...
+<<wait 0.5>>
 왜 이 꽃이 여기 있지..?
 경찰에 신고해야겠다.
 ...
 <<PlayAudio PhoneDial>>
 // (♫Sound: 휴대폰 버튼음)
+<<wait 2.0>>
+<<StopAudio PhoneDial>>
 // 지수2
 <<UpdateAct 지수 Jisoo2>>
-...
 ...
 금방 오신다고 하네.
 <<Hide 지수>>
@@ -82,7 +82,6 @@ title: NationalFlower
 ..?
 국화를 심어뒀네...
 ...
-...
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -98,7 +97,7 @@ title: VendingMachine3
 //지수1
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 밑에 뭐라도 있는지 살펴볼까?
-...
+<<wait 1.0>>
 ...
 //지수2
 <<UpdateAct 지수 Jisoo2>>
@@ -126,7 +125,7 @@ title: FlashVM
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 이걸로 자판기 밑을 살펴볼까?
 ...
-...
+<<wait 1.0>>
 
 //지수4
 <<UpdateAct 지수 Jisoo4>>
@@ -135,7 +134,6 @@ title: FlashVM
 
 //지수2
 <<UpdateAct 지수 Jisoo2>>
-...
 ...
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -148,8 +146,8 @@ title: DrugCookie
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //(마약 쿠키 클릭 시)
-* 마약사전에 ‘마약 쿠키’가 추가되었습니다. *
-//(이후 마약사전 클릭 시 ‘마약 쿠키’ 관련 정보 확인 가능)
+* 일기장에 '마약 쿠키'가 추가되었습니다. *
+//(이후 일기장 클릭 시 '마약 쿠키' 관련 정보 확인 가능)
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -164,7 +162,6 @@ title: PhoneBooth
 
 //지수4
 <<Act 지수 Jisoo4 1.17 0.322 black>>
-...
 ...
 요즘도 공중전화가 있네...
 <<Hide 지수>>
@@ -182,10 +179,9 @@ title: Flashlight
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 손전등이 여기 왜 있지?
 ...
-...
 어딘가 쓸 데가 있지 않을까?
 <<Hide 지수>>
-* ‘손전등’을 습득했다. *
+* '손전등'을 습득했다. *
 
 //인벤토리에 추가
 
@@ -206,7 +202,7 @@ title: SynthWeed
 명함 같은 걸 뿌려뒀네.
 <<Hide 지수>>
 
-* 일기장에 ‘합성 대마’가 추가되었습니다. *
+* 일기장에 '합성 대마'가 추가되었습니다. *
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -394,7 +390,7 @@ title: IfEmployeeSuit
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-//(인벤토리에서 ‘직원 복장’을 사용할 경우)
+//(인벤토리에서 '직원 복장'을 사용할 경우)
 ...
 //(♫Sound: 주머니 부스럭거리는 소리)
 <<PlayAudio PocketSearch>>
@@ -413,7 +409,7 @@ title: IfEmployeeSuit
 오피스텔 출입 카드키...
 좋아. 들어가보자.
 <<Hide 지수>>
-* ‘오피스텔 출입 카드키’를 습득했다. *
+* '오피스텔 출입 카드키'를 습득했다. *
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -562,7 +558,7 @@ title: Officetel1503
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-//(휴대폰 갤러리의 기존 폴더 -> 숫자 ‘1503’이 적힌 오피스텔 문 사진 클릭 시)
+//(휴대폰 갤러리의 기존 폴더 -> 숫자 '1503'이 적힌 오피스텔 문 사진 클릭 시)
 //왼쪽에 핸드폰,
 //오른쪽에 지수 이미지 뜸
 ...
@@ -784,7 +780,7 @@ title: DrugDrink
 <<UpdateAct 지수 Jisoo2>>
 ...
 <Hide 지수>>
-* 일기장에 ‘마약 음료’가 추가되었습니다. *
+* 일기장에 '마약 음료'가 추가되었습니다. *
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -848,7 +844,7 @@ title: Card1403
 
 //팝업 이미지없이 인벤토리로 습득
 <<Hide 지수>>
-* ‘1403호 카드키’를 습득했다. *
+* '1403호 카드키'를 습득했다. *
 
 // 인벤토리에 습득
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -866,7 +862,7 @@ title: Crack
 광물같이 생겼다.
 <<Hide 지수>>
 
-* 마약사전에 ‘크랙’이 추가되었습니다. *
+* 일기장에 '크랙'이 추가되었습니다. *
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
