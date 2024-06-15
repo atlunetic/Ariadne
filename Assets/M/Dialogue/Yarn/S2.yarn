@@ -69,7 +69,7 @@ title: meet_gunwoo
 	...
 	<<FadeIn>>
 	<<DrawFadeIn Ending3 0.75 0.75>>
-	<<wait  4.0>>
+	<<wait 4.0>>
 	<<Hide Ending3>>
 	<<Scene NoBG>>
 	<<BackToMainScene GameManager>>
@@ -306,7 +306,7 @@ title: obj_customers
 	약을 탔나?
 	<<wait 1.0>>
 	어떡하지. 도와줄까?
-	<<Hide  Clubtable_Glass>>
+	<<Hide Clubtable_Glass>>
 	<<wait 1.0>>
 	-> 모르는 척 하자.
 		<<UpdateAct 지수 Jisoo2>>
@@ -594,7 +594,7 @@ title: obj_menu
 //지수 이미지는 노출 X
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<OpenUp  ClubTable_menu>>
+<<OpenUp ClubTable_menu>>
 메뉴판이다.
 
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -1995,7 +1995,7 @@ TV: ...
 
 지수: 저게 뭐야..?
 지원: 그러게. 조심해야겠네.
-<<StopMemory  SceneManager>>
+<<StopMemory SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2103,7 +2103,7 @@ title: obj_staffroomdoor_2
 지수: 아... 아니예요. 제가 더 찾아볼게요. 
 
 //클럽 직원C 이미지 종료
-<<Hide  클럽직원C>>
+<<Hide 클럽직원C>>
 <<UpdateAct 지수 Jisoo2>>
 어떡하면 좋지...
 ...
@@ -2242,7 +2242,7 @@ title: game_openthedoor_gameover
 //엔딩 3. ??? : 무슨 일이 일어난 걸까. 
 <<FadeIn>>
 <<DrawFadeIn Ending3 0.75 0.75>>
-<<wait  4.0>>
+<<wait 4.0>>
 <<Hide Ending3>>
 <<Scene NoBG>>
 <<BackToMainScene GameManager>>
@@ -2777,7 +2777,7 @@ title: memory_VIPlist
 건우: 이게 VIP 명단이라는 거야~.
 ???: 우와...
 ???: 이런 것도 있어요?
-<<StopMemory  SceneManager>>
+<<StopMemory SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<IfDone_getout MenuUI>>
 
@@ -2986,7 +2986,7 @@ title: IgnoreE
 
 클럽 고객G는 씩씩거리며 자리를 비웠다.
 <<Hide 클럽고객G>>
-<<wait  1.0>>
+<<wait 1.0>>
 <<SetActiveFalse VisualNovelPrefab VIProom_customerG>>
 <<FinishedObj VisualNovelPrefab VIProom_customerG>>
 <<wait 1.0>>
@@ -3139,7 +3139,7 @@ title: obj_customerg_end
 ---
 
 //클럽 고객G의 가족사진 위로 메시지 팝업 뜸
-<<Draw  ClubcustomerG_Message 0.75 0.75>>
+<<Draw ClubcustomerG_Message 0.75 0.75>>
 어..?
 저게 무슨 얘기지.
 <<wait 1.0>>
@@ -3190,13 +3190,13 @@ title: obj_customerh
 <<Act 지수 CoJIsoo4 1.17 0.322 black>>
 ...
 무슨 소리를 하는 거지?
-<<wait  0.5>>
+<<wait 0.5>>
 지수: 무슨 말씀이세요?
 
 클럽 고객H: ...
 클럽 고객H: ...
 클럽 고객H: 아... 지수 씨구나.
-클럽 고객H: 지원 씨인 줄 알 았어요.
+클럽 고객H: 지원 씨인 줄 알았어요.
 <<wait 0.5>>
 <<UpdateAct 지수 CoJIsoo3>>
 ...
@@ -3276,7 +3276,7 @@ title: obj_clock2
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 가만보니 저 시계, 아까부터 계속 멈춰 있네.
 <<wait 0.5>>
-//<<Draw  ClockSmall_0 0.75 0.75>>
+//<<Draw ClockSmall_0 0.75 0.75>>
 가까이 가서 구경이나 할까.
 
 //시계가 확대 팝업 이미지
@@ -3333,7 +3333,7 @@ title: game_clock_success
 <<Fade black 0.0 1.0 0.5>>
 <<Hide 지수>>
 
-<<ChangeSceneTo  VisualNovelPrefab S2_6_ReVip>>
+<<ChangeSceneTo VisualNovelPrefab S2_6_ReVip>>
 <<jump club_11_viproom>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -3392,7 +3392,7 @@ title: club_stair
 
 ---
 
-<<Scene  Clubstair_bg>>
+<<Scene Clubstair_bg>>
 
 <<DrawFadeIn Jisoo1 1.17 0.322>>
 바깥 공기가 들어온다.
@@ -3525,6 +3525,8 @@ CCTV에 찍힌 그 인형이야.
 
 //건우, 지수가 대화하는 계단 배경으로 변경
 <<ChangeSceneTo VisualNovelPrefab S2_7_Stairs>>
+
+<<wait 1.0>>
 <<Scene NoBG>>
 
 //건우 왼쪽, 지수 오른쪽
@@ -3602,7 +3604,7 @@ title: inventory_drugjelly
 * 일기장에 '마약 젤리'가 추가되었습니다. *
 <<RevealDiary DiaryManager Page1>>
 
-지수:  네..?
+지수: 네..?
 건우: 안 먹었다니 다행이네.
 
 <<UpdateAct 건우 Geonwoo1>>
@@ -3700,7 +3702,7 @@ title: obj_car_outside
 		...
 		<<FadeIn>>
 		<<DrawFadeIn Ending3 0.75 0.75>>
-		<<wait  4.0>>
+		<<wait 4.0>>
 		<<Hide Ending3>>
 		<<Scene NoBG>>
 		<<BackToMainScene GameManager>>
