@@ -32,7 +32,7 @@ public class ActionPanelButtons : MonoBehaviour
             runner.StartDialogue("UsedWaterCup");
         }
 
-        else if (connectedItem.itemName == "Clothes")
+        else if (connectedItem.itemName == "Clothes" && currentscene.name.StartsWith("S2"))
         {
             runner.StartDialogue("ClothesUsed");
         }
@@ -50,15 +50,13 @@ public class ActionPanelButtons : MonoBehaviour
             }
         }
 
-        //else if(connectedItem.itemName == "DrugJelly")
-
         else if (connectedItem.itemName == "Wallet")
         {
             if (GameManager.instance.S1Ended() == true)
             {
                 runner.StartDialogue("WalletO");
                 Inventory.instance.items.Remove(connectedItem);
-                currentSlot.RemoveSlot();
+                //currentSlot.RemoveSlot();
             }
             else { runner.StartDialogue("WalletX"); }
 
@@ -75,16 +73,37 @@ public class ActionPanelButtons : MonoBehaviour
         {
             //runner.StartDialogue("KeyUse");
         }
+        else if (currentscene.name == "S3_1_OfficetelEntrance")
+        {
+            if (connectedItem.itemName == "Clothes")
+            {
+                runner.StartDialogue("IfEmployeeSuit");
+                Inventory.instance.items.Remove(connectedItem);//currentSlot.RemoveSlot();
+            }
+            else if (connectedItem.itemName == "OfficetelCardkey")
+            {
+                runner.StartDialogue("OfficetelCardkeyForce");
+            }
+            else
+            {
+                runner.StartDialogue("IfnotEmployeeSuit");
+            }
+        }
+        else if (currentscene.name.StartsWith("S3"))
+        {
+        }
         else
         {
 
             runner.StartDialogue("WrongItem");
-        }
+        } 
             //connectedItem.Use();
             //Inventory.instance.items.Remove(connectedItem);
             //currentSlot.RemoveSlot();
 
             // After performing functionality, hide action panel
+
+        
         HideActionPanel();
 
     }
