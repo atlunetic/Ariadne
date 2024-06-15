@@ -1,22 +1,35 @@
 {
-  "savetime": "2024 - 06 - 10 20:19:04 오후",
+  "savetime": "2024-06-15 19:56:16 오후",
   "IsLoad": true,
   "NowScene": "S1_2_JiwonRoom",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
-  "ChattingLog": [],
+  "ChattingLog": [
+    12,
+    26,
+    27,
+    29
+  ],
   "PhotoList": [],
   "items": [],
   "FindedObjects": [
-    "Letter"
+    "Letter",
+    "Books_Diary"
   ],
   "FindedClues": [],
   "FinishedDialogues": [
     "ChocotalkAlarm",
     "DgramAlarm",
-    "Camera"
+    "Camera",
+    "jisoo'stalk",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsHerself"
   ],
   "GottenPage": [],
+  "RecommendedFriends": [
+    "마약퇴치운동본부",
+    "NeverEverDrug"
+  ],
   "visited": 0
 }

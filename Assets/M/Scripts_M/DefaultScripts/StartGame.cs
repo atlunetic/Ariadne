@@ -15,6 +15,10 @@ public class StartGame : MonoBehaviour
           SceneManager.LoadScene("S1");
     }
 
+    public void EndGame(){
+        Application.Quit();
+    }
+
     public void OpenLoadOnly(){
 
         SaveAndLoad.instance.SavePanel.SetActive(true);

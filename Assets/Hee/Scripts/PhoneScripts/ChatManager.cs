@@ -20,6 +20,9 @@ public class ChatManager : MonoBehaviour
         profileImage.Add("의사 선생님", profileSprite[1]);
         profileImage.Add("해솔", profileSprite[2]);
         profileImage.Add("지수", profileSprite[3]);
+        profileImage.Add("마약퇴치운동본부", profileSprite[4]);
+        profileImage.Add("NeverEverDrug", profileSprite[5]);
+        profileImage.Add("Team ARIADNE", profileSprite[6]);
     }
     public struct chat{
         public bool JisooSaying;  // 지수의 대사이면 true
@@ -109,6 +112,26 @@ public class ChatManager : MonoBehaviour
             else ChatBox = Instantiate(ChatBox_Opponent, Chatroom.content.transform);
             ChatBox.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = c.text;
         }
+    }
+    public void PlusChat(int i){  
+        chatting = ChattingList[i];
+        SetChat(i);
+        foreach(chat c in chatting.chatList){
+            if(c.image is not null){
+                Instantiate(Resources.Load<GameObject>(c.image), Chatroom.content.transform);
+                continue;
+            }
+            GameObject ChatBox;
+            if(c.JisooSaying) ChatBox = Instantiate(ChatBox_Me, Chatroom.content.transform);
+            else ChatBox = Instantiate(ChatBox_Opponent, Chatroom.content.transform);
+            ChatBox.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = c.text;
+            LayoutRebuilder.ForceRebuildLayoutImmediate(ChatBox.GetComponent<RectTransform>());
+        }
+        LayoutRebuilder.ForceRebuildLayoutImmediate(Chatroom.content);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(Chatroom.content);
+
+        Chatroom.verticalNormalizedPosition = 0f;
+        GameManager.instance.ChattingLog.Add(i);
     }
 
     private void SetChat(int i){
@@ -294,7 +317,7 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "이 정도면 알아볼 수 있어?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", "event_staffroom"));  // 21
-        //AddimageToLast(true, "ToAriadne2");
+        //AddimageToLast(true, "ToAriadne2");  // 소리 이미지
         AddChatToLast(true, "혹시 이게 뭔지 알아요?");
         AddChatToLast(false, "잘 모르겠네...");
         AddChatToLast(false, "이건 네가 알아봐야 할 것 같아.");
@@ -319,6 +342,30 @@ public class ChatManager : MonoBehaviour
         ChattingList.Add(new Chatting(false, "지수", null));  // 25
         AddChatToLast(false, "야, 미안. 앞으로 잘할게");
         AddChatToLast(false, "배고프다~ 같이 맛있는 거 먹자.");
+
+        ChattingList.Add(new Chatting(false, "마약퇴치운동본부", null));  // 26
+        AddChatToLast(true, "24시 마약류 전화상담센터 1342");
+        AddChatToLast(false, "한국마약퇴치운동본부 산하 ‘24시 마약류 전화상담센터’에서는, 당신의 일상(13) 24시간 사이(42) 모든 순간 함께하겠다”는 의미를 담은 대표 전화번호 1342를 운영합니다.\n\n마약류 중독, 치료 관련 안내와 중독심리상담, 오남용 예방 상담, 중독재활센터 연계 안내 등 다양한 상담을 제공하므로 도움이 필요하다면 언제든 전화주세요.\n\n출처: 마약퇴치운동본부");
+
+        ChattingList.Add(new Chatting(false, "마약퇴치운동본부", null));  // 27
+        AddChatToLast(true, "마약류 오남용 예방법");
+        AddChatToLast(false, "<해외직구 시 유의사항>\n\n1. 해외사이트에서 홍보하는 약을 구매하려는 경우\n\n유통경로나 정확한 용법 확인이 어려운 경우 불법의약품일 수 있어 주의를 요합니다.\n\n2. 지인이 해외직구로 구입한 약을 대신 받아달라고 할 경우\n\n지인의 부탁이더라도 의도를 의심해야 하며, 절대로 남의 물건을 대신 전달하거나 받아서는 안됩니다.\n\n3. 지인이 해외 직구로 구매한 약이 마약류로 의심될 경우\n\n경찰청 112, 검찰청 1301, 관세청 125로 신고가 필요합니다. 마약류 중독이 의심될 경우 한국마약퇴치운동본부(1899-0893)의 도움을 받을 수 있습니다.\n\n");
+        AddChatToLast(false, "<약물 처방 시 유의사항>\n\n4. 친구가 약을 대신 처방받아 달라고 할 경우\n\n대리처방은 불법이므로 대신 처방받아주면 안 됩니다. 처방의약품은 본인이 직접 의사와 상담을 통해 약국에서 구매해야 합니다.\n\n5. 병원에서 처방받은 식욕억제제가 남아서 중고장터에 판매하고자 하는 경우\n\n병원에서 처방받은 식욕억제제를 포함한 의약품을 판매, 구매하는 모든 거래 행위는 불법이므로 판매해서는 안 됩니다. 먹고 남은 약은 약국이나 보건소의 ‘폐의약품 수거함’에 버려야 합니다.\n\n6. 지인, 가족에게 식욕억제제를 나눠주고자 하는 경우\n\n병원에서 처방받은 의약품은 가족이라도 나누어 복용하면 안 됩니다.\n\n");
+        AddChatToLast(false, "<누군가 음식물을 건넬 때 유의사항>\n\n7. 누군가 거리에서 친절하게 음료수를 건네주는 경우\n\n수면제나 마약류 등을 음료수, 음식에 넣어 문제가 된 사건이 많습니다. 따라서 본인이 구입하지 않은 음료수, 음식은 먹으면 안 됩니다.\n\n8. 집중력을 높이는 약을 권유받을 경우\n\n본인이 처방받은 약이 아니면 복용하지 않아야 합니다. 만약 그것이 마약류라면, 모르고 복용했다 하더라도 처벌받을 수 있습니다.\n\n9. 동남아 야시장 점원이 녹색 음료를 건네며 ‘Special’하다고 권할 경우\n\n동남아 국가의 대마 합법화로 다양한 대마 제품이 시중에 판매되고 있습니다. 우리나라 국민이 외국에서 모르고 대마초를 먹었을 경우도 불법으로, 처벌받을 수 있습니다. 녹색 단풍잎 모양, 메뉴명에 카나비스, 마리화나, 위드, 그래스, 깐차, 깐총이 등이 적혀 있다면 주문하지 말아야 합니다.\n\n10. 해외여행 중 식당 바닥에 떨어진 1달러 지폐를 발견할 경우\n\n해외에서 바닥에 떨어진 지폐에서 펜타닐, 필로폰 등 마약류 성분이 발견되는 일이 발생하고 있습니다. 현지 경찰들은 바닥에 떨어진 돈을 줍지 말라고 당부하고 있습니다. 따라서 바닥에 떨어진 돈을 줍지 않는 것이 안전합니다.\n\n"
+        +"출처: http://www.drugfree.or.kr/webzine/magazine/21/post-344.html");
+
+        ChattingList.Add(new Chatting(false, "마약퇴치운동본부", null));  // 28
+        AddChatToLast(true, "마약류를 권유받았다면?");
+        AddChatToLast(false, "\n“Just say NO!”\n\n마약류 권유 받았을 때 최선의 대응은, 단호하게 거절 의사를 밝히는 것입니다.\n협박, 회유 등의 일이 발생할 경우 단호하게 거절 의사를 밝힌 뒤 그 자리를 뜨는 것이 좋습니다. 마약류는 처음부터 시작하지 않는 것이 가장 효과적인 예방법입니다. \n\n출처: 마약퇴치운동본부");
+
+        ChattingList.Add(new Chatting(false, "NeverEverDrug", null));  // 29
+        AddChatToLast(true, "중독관리통합지원센터");
+        AddChatToLast(false, "지역사회 중심의 통합적인 중독관리 체계 구축을 통해 중독자 조기발견·상담·치료·재활 및 사회복귀를 지원하는 중독관리통합지원센터입니다.\n\n지역사회 내 알코올 및 기타 중독(마약, 인터넷 게임, 도박)에 문제가 있는 자 및 가족, 주민을 대상으로 하며, 전화상담, 센터방문 등을 통하여 서비스 이용 가능합니다. \n\n관련 전화번호, 홈페이지는 아래 링크에서 확인 가능합니다.\n\nhttps://www.mohw.go.kr/menu.es?mid=a10706040400");
+
+        ChattingList.Add(new Chatting(false, "NeverEverDrug", null));  // 30
+        AddChatToLast(true, "인천 참사랑병원");
+        AddChatToLast(false, "인천 참사랑병원에서는 중독가족 프로그램, 중독재활 및 중독상담 진행 등 마약류 중독 치료를 위한 다양한 프로그램을 마련하고 있습니다.\n\n도움이 필요하다면 아래 링크를 방문해보세요.\n\nhttp://www.clh.co.kr/");
+
 
         foreach(int i in GameManager.instance.ChattingLog)
             PrintChat(i);
