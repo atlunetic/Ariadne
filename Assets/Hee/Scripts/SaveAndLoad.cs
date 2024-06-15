@@ -122,6 +122,7 @@ public class SaveAndLoad : MonoBehaviour
     [YarnCommand("BackToMainScene")]
     public void BackToMainScene(){
         SavePanel.SetActive(false);
+        DestroyImmediate(GameObject.Find("GameManager"));
         DestroyImmediate(GameObject.Find("MenuUI"));
         DestroyImmediate(GameObject.Find("VisualNovelPrefab"));
         SceneManager.LoadScene("Menu");
