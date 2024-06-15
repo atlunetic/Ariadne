@@ -120,8 +120,11 @@ public class CallYarn : MonoBehaviour
         Callbybutton(Mapbutton,"Map_1");  // Map 켰을 때
 
         MapController.instance.Parkbutton.onClick.AddListener(()=>callYarn("Park"));
-
         MapController.instance.BarStreetbutton.onClick.AddListener(()=>callYarn("Barstreet"));
+        MapController.instance.편의점711button.onClick.AddListener(()=>callYarn("ConvenienceStore"));
+        MapController.instance.Bakerybutton.onClick.AddListener(()=>callYarn("Bakery"));
+        MapController.instance.Schoolbutton.onClick.AddListener(()=>callYarn("School"));
+        MapController.instance.AnotherClubbutton.onClick.AddListener(()=>callYarn("AnotherClub"));
 
         if(FinishedDialogues.Contains("DestroySearch")) DestroySearch();
 
@@ -143,8 +146,6 @@ public class CallYarn : MonoBehaviour
             print(GameManager.instance.NowScene);
         }
 
-        // 불러온거 적용하기는 여기서 해야겠다
-
     }
 
     public void InS2(){
@@ -154,6 +155,10 @@ public class CallYarn : MonoBehaviour
         MapController.instance.Officetelbutton.onClick.RemoveAllListeners();
         MapController.instance.BarStreetbutton.onClick.RemoveAllListeners();
         MapController.instance.Hospitalbutton.onClick.RemoveAllListeners();
+        MapController.instance.Bakerybutton.onClick.RemoveAllListeners();
+        MapController.instance.AnotherClubbutton.onClick.RemoveAllListeners();
+        MapController.instance.Schoolbutton.onClick.RemoveAllListeners();
+        MapController.instance.편의점711button.onClick.RemoveAllListeners();
 
         UnityAction wrongplace = () => callYarn("wrongplaceS2");
         MapController.instance.Homebutton.onClick.AddListener(wrongplace);
@@ -161,6 +166,11 @@ public class CallYarn : MonoBehaviour
         MapController.instance.Officetelbutton.onClick.AddListener(wrongplace);
         MapController.instance.BarStreetbutton.onClick.AddListener(wrongplace);
         MapController.instance.Hospitalbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Bakerybutton.onClick.AddListener(wrongplace);
+        MapController.instance.AnotherClubbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Schoolbutton.onClick.AddListener(wrongplace);
+        MapController.instance.편의점711button.onClick.AddListener(wrongplace);
+
         MapController.instance.Clubbutton.enabled = false;
     }
     public void InS3(){
@@ -170,6 +180,11 @@ public class CallYarn : MonoBehaviour
         MapController.instance.Clubbutton.onClick.RemoveAllListeners();
         MapController.instance.BarStreetbutton.onClick.RemoveAllListeners();
         MapController.instance.Hospitalbutton.onClick.RemoveAllListeners();
+        MapController.instance.Bakerybutton.onClick.RemoveAllListeners();
+        MapController.instance.AnotherClubbutton.onClick.RemoveAllListeners();
+        MapController.instance.Schoolbutton.onClick.RemoveAllListeners();
+        MapController.instance.편의점711button.onClick.RemoveAllListeners();
+
 
         UnityAction wrongplace = () => callYarn("wrongplaceS2");
         MapController.instance.Homebutton.onClick.AddListener(wrongplace);
@@ -177,6 +192,11 @@ public class CallYarn : MonoBehaviour
         MapController.instance.Clubbutton.onClick.AddListener(wrongplace);
         MapController.instance.BarStreetbutton.onClick.AddListener(wrongplace);
         MapController.instance.Hospitalbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Bakerybutton.onClick.AddListener(wrongplace);
+        MapController.instance.AnotherClubbutton.onClick.AddListener(wrongplace);
+        MapController.instance.Schoolbutton.onClick.AddListener(wrongplace);
+        MapController.instance.편의점711button.onClick.AddListener(wrongplace);
+
         MapController.instance.Officetelbutton.enabled = false;
     }
 
@@ -219,6 +239,7 @@ public class CallYarn : MonoBehaviour
     [YarnCommand("New711")]
     public void New711(){
         GameManager.instance.FinishedDialogues.Add("New711");
+        MapController.instance.편의점711button.onClick.RemoveAllListeners();
         Callbybutton(MapController.instance.편의점711button,"SevenEleven");
         UnityAction ClubActive = null;
         ClubActive = () => {Callbybutton(MapController.instance.Clubbutton,"Club_S1End");

@@ -21,6 +21,9 @@ public class MapController : MonoBehaviour
     public Button Officetelbutton;
     public Button Clubbutton;
     public Button 편의점711button;
+    public Button Bakerybutton;
+    public Button AnotherClubbutton;
+    public Button Schoolbutton;
 
     public Button CurrLocationbutton;
 

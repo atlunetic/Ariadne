@@ -20374,6 +20374,7 @@ MonoBehaviour:
   MoveS2_: {fileID: 1661472268}
   MoveStaffroom: {fileID: 1216173817}
   MoveViproom: {fileID: 1734686850}
+  MoveTable: {fileID: 0}
   BlockClick: 0
 --- !u!1 &1266879036 stripped
 GameObject:
@@ -37770,6 +37771,9 @@ MonoBehaviour:
   Officetelbutton: {fileID: 1016585416}
   Clubbutton: {fileID: 575705258}
   "\uD3B8\uC758\uC810711button": {fileID: 179173891}
+  Bakerybutton: {fileID: 2091302542}
+  AnotherClubbutton: {fileID: 1894454868}
+  Schoolbutton: {fileID: 1954934838}
   CurrLocationbutton: {fileID: 276803897}
 --- !u!1001 &2111141003
 PrefabInstance:

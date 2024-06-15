@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Yarn.Unity;
@@ -32,6 +33,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     public GameObject MoveS2_;
     public GameObject MoveStaffroom;
     public GameObject MoveViproom;
+    public GameObject MoveTable;
 
     public bool BlockClick = false;
 
@@ -74,11 +76,13 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
             MoveStaffroom.SetActive(true);
         }
         if(GameManager.instance.FindedObjects.Contains("Locker") && GameManager.instance.FindedObjects.Contains("Toilet_costomerF")) {
-            CallYarn.instance.Callbybutton(MoveViproom.GetComponent<Button>(), "yay");
-            MoveViproom.GetComponent<Button>().onClick.AddListener(()=>{MoveS2Button.SetActive(false);});
-            MoveViproom.SetActive(true);
-            if(!GameManager.instance.FinishedDialogues.Contains("club_viproom_entry"))
-                CallYarn.instance.callYarn("club_viproom_entry");
+            UnityAction openVIProom = null;
+            openVIProom = () => { MoveViproom.SetActive(true);
+                CallYarn.instance.Callbybutton(MoveViproom.GetComponent<Button>(), "yay");
+                MoveViproom.GetComponent<Button>().onClick.AddListener(()=>{MoveS2Button.SetActive(false);});
+            };
+            MoveTable.GetComponent<Button>().onClick.AddListener(openVIProom);
+            CallYarn.instance.Callbybutton(MoveTable.GetComponent<Button>(), "club_viproom_entry");
         }
         
         UI_on();
