@@ -803,6 +803,58 @@ title: Officetel
 
 ===
 
+title: Bakery
+
+---
+
+// 그외 장소. 빵집
+
+<<SetCanvasTo VisualNovelPrefab true>>
+빵집이다.
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: ConvenienceStore
+
+---
+
+// 그외 장소. 편의점
+
+<<SetCanvasTo VisualNovelPrefab true>>
+편의점이다.
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: AnotherClub
+
+---
+
+// 그외 장소. 클럽
+
+<<SetCanvasTo VisualNovelPrefab true>>
+클럽이다.
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: School
+
+---
+
+// 그외 장소. 학교
+
+<<SetCanvasTo VisualNovelPrefab true>>
+학교다.
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
 title: Where
 
 ---
