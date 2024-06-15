@@ -381,7 +381,7 @@ title: E_Clothes
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 CoJisoo1 1.17 0.322 black>>
+<<Act 지수 CoJIsoo1 1.17 0.322 black>>
 
 이제 말을 걸어도 괜찮을 것 같아.
 ...
@@ -390,17 +390,17 @@ title: E_Clothes
 지수: 혼자 오셨어요?
 클럽 고객E: 네. 종종 와요.
 
-<<UpdateAct 지수 CoJisoo2>>
+<<UpdateAct 지수 CoJIsoo2>>
 
 일행은 아닌 건가...
 E는 아무 것도 모르는 눈치다.
 
 어떻게 도와줄 수 있을까?
 <<wait 0.5>>
-<<UpdateAct 지수 CoJisoo4>>
+<<UpdateAct 지수 CoJIsoo4>>
 ..!
 술잔을 바꿔치기 해야겠다.
-<<UpdateAct 지수 CoJisoo2>>
+<<UpdateAct 지수 CoJIsoo2>>
 ...
 
 나한테 바꿔치기 할 만한 게 있나?
@@ -429,7 +429,7 @@ title: UsedWaterCup
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 
-<<Act 지수 CoJisoo1 1.17 0.322 black>>
+<<Act 지수 CoJIsoo1 1.17 0.322 black>>
 
 ...좋아.
 이걸 써야겠다.
@@ -438,20 +438,20 @@ title: UsedWaterCup
 우선 클럽 고객 E의 주의를 돌려볼까?
 
 -> 주의를 돌리자.
-	<<UpdateAct 지수 CoJisoo4>>
+	<<UpdateAct 지수 CoJIsoo4>>
 	지수: 와~ 저기 엄청 재밌게 노네요.
 	E의 주의를 돌리기 위해 다른 곳을 가리켰다.
 	...
 	E가 고개를 돌렸다.
-	<<UpdateAct 지수 CoJisoo3>>
+	<<UpdateAct 지수 CoJIsoo3>>
 	지금이야! 술잔을 바꿔치기 하자.
-	<<UpdateAct 지수 CoJisoo2>>
+	<<UpdateAct 지수 CoJIsoo2>>
 	//(♫Sound: 휘릭!하는 소리)
 	<<PlayAudio GlassChange>>
 	<<wait 0.5>>
-	<<UpdateAct 지수 CoJisoo1>>
+	<<UpdateAct 지수 CoJIsoo1>>
 	됐다.
-	<<UpdateAct 지수 CoJisoo2>>
+	<<UpdateAct 지수 CoJIsoo2>>
 	...
 	이렇게 바꿔도, 클럽 고객D가 계속 약을 타려고 한다면
 	위험한 건 여전할 거야. 
@@ -475,7 +475,7 @@ title: letEknow
 바꿔치기한 술잔을 보여줬다. 
 술잔에는 여전히 미세한 가루가 가라앉아 있었다. 
 
-<<UpdateAct 지수 CoJisoo3>>
+<<UpdateAct 지수 CoJIsoo3>>
 지수: 밑에 가라앉은 가루 보이세요?
 클럽 고객E는 술잔을 자세히 바라봤다. 
 
@@ -492,11 +492,11 @@ title: letEknow
 클럽고객E: 다음 번에 밥이라도 사고 싶어서요.
 클럽고객E: 휴대폰 번호 좀 받을 수 있을까요?
 
-<<UpdateAct 지수 CoJisoo4>>
+<<UpdateAct 지수 CoJIsoo4>>
 ...
-<<UpdateAct 지수 CoJisoo2>>
+<<UpdateAct 지수 CoJIsoo2>>
 지원이 휴대폰 밖에 없는데.
-<<UpdateAct 지수 CoJisoo1>>
+<<UpdateAct 지수 CoJIsoo1>>
 일단 받아둘까?
 
 -> 번호를 교환하자. 
@@ -505,11 +505,11 @@ title: letEknow
 	클럽 고객E가 갑자기 놀란 눈으로 나를 바라봤다.
 
 	클럽고객E: 어... 혹시 그 때 메일 주셨던 분 아니예요?
-	<<UpdateAct 지수 CoJisoo4>>
+	<<UpdateAct 지수 CoJIsoo4>>
 	...
 	이건 또 무슨 소리지?
 	지수: 어...
-	<<UpdateAct 지수 CoJisoo2>>
+	<<UpdateAct 지수 CoJIsoo2>>
 	지수: ...
 	클럽고객E: 아... 일단 저는 아까 그 사람이 돌아오기 전에 먼저 가볼게요.
 	클럽고객E: 도와주셔서 감사해요.
@@ -530,19 +530,19 @@ title: DontTellE
 
 ---
 
-<<UpdateAct 지수 CoJisoo2>>
+<<UpdateAct 지수 CoJIsoo2>>
 그래...오지랖 부리지 말자.
 ...
 E는 신나게 춤추고 있는 사람들을 바라봤다.
 
-<<UpdateAct 지수 CoJisoo1>>
+<<UpdateAct 지수 CoJIsoo1>>
 지수:저는 먼저 가볼게요.
 E가 고개를 돌려 눈인사를 했다.
 <<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
 <<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
 
 E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
-<<UpdateAct 지수 CoJisoo2>>
+<<UpdateAct 지수 CoJIsoo2>>
 ...
 
 클럽 고객D가 E를 향해 걸어가는 모습이 보였다.
@@ -2817,6 +2817,7 @@ title: club_viproom_entry
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 2.0>>
 //나머지 장소(카운터&바/테이블/화장실/Staff room 전체) 다 둘러보고 나서, 이동 버튼을 누르면
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 어...
@@ -2896,7 +2897,7 @@ title: obj_customerg
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 <<FinishedDialogue VisualNovelPrefab obj_customerg>>
-<<Act 지수 CoJisoo1 1.17 0.322 black>>
+<<Act 지수 CoJIsoo1 1.17 0.322 black>>
 술냄새가 진동한다... 
 얼른 지나갈까?
 <<wait 1.0>>
@@ -2905,12 +2906,12 @@ title: obj_customerg
 <<Act 클럽고객G NPC_clubcustomer_G_0 0.322 0.527 black>>
 
 ...
-<<UpdateAct 지수 CoJisoo4>>
+<<UpdateAct 지수 CoJIsoo4>>
 나를 부르는 건가?
 
 클럽 고객G: 어어, 그래. 너 말이야.
 
-<<UpdateAct 지수 CoJisoo2>>
+<<UpdateAct 지수 CoJIsoo2>>
 <<wait 0.5>>
 지수: 네, 무슨 일이시죠?
 클럽 고객G: 물 좀 갖다줘.
@@ -2941,11 +2942,11 @@ title: WaterToE
 생각해보니 생수병을 챙겨 뒀었지.
 이걸 주면 될 것 같은데?
 		
-<<UpdateAct 지수 CoJisoo1>>
+<<UpdateAct 지수 CoJIsoo1>>
 지수: 여기 있습니다.
 클럽 고객G: 어어~ 고마워.
 
-<<UpdateAct 지수 CoJisoo2>>
+<<UpdateAct 지수 CoJIsoo2>>
 ...
 이 사람은 지원이의 행방을 알고 있을까?
 클럽 고객G는 휴대폰을 바라보며 실실 웃고 있다.
@@ -2972,7 +2973,7 @@ title: IgnoreE
 
 ---
 
-<<UpdateAct 지수 CoJisoo2>>
+<<UpdateAct 지수 CoJIsoo2>>
 지금 이럴 때가 아니야.
 한 시가 급하니까... 거절하자.
 
@@ -2994,10 +2995,10 @@ title: IgnoreE
 메시지가 온다.
 
 //텍스트로 진행
-<i>우리 여보 '수진이 아빠. 애들 봐서라도 이제 정신 좀 차리면 안될까?'
-<i>우리 여보 '애들도 알 거 아는 나이야. 자기 약에 빠져 사는 걸 모르겠어?'
-<i>우리 여보 '나도 옆에서 계속 마음 졸이는 거 그만하고 싶어.'
-<i>우리 여보 '약 안 끊을 거면 우리 이혼하자.'
+<i>'수진이 아빠. 애들 봐서라도 이제 정신 좀 차리면 안될까?'
+<i>'애들도 알 거 아는 나이야. 자기 약에 빠져 사는 걸 모르겠어?'
+<i>'나도 옆에서 계속 마음 졸이는 거 그만하고 싶어.'
+<i>'약 안 끊을 거면 우리 이혼하자.'
 <<wait 1.0>>
 
 ...
@@ -3037,64 +3038,64 @@ title: obj_customerg_choose
 
 -> 클럽에 오게 된 계기를 물어보자
 	//직원지수1
-	<<UpdateAct 지수 CoJisoo1>>
+	<<UpdateAct 지수 CoJIsoo1>>
 	지수: 아, 그러셨구나.
 	지수: 그러면 클럽에 다니게 된 계기가 있으신가요?
 	클럽고객G는 눈을 반짝였다.
 	클럽고객G: 아 내가 말이지~.
 	클럽고객G: 예전에 어마어마한 분이랑 술자리를 가졌는데~.
 	//직원지수2
-	<<UpdateAct 지수 CoJisoo2>>
+	<<UpdateAct 지수 CoJIsoo2>>
 	<<wait 1.0>>
 	이후로도 클럽 고객G의 말은 끊이지 않았다.
 	알아낼 수 있는 게 없는 걸까...
 	<<wait 0.5>>
 	-> 과거에 어떤 일을 했는지 물어보자
-		<<UpdateAct 지수 CoJisoo1>>
+		<<UpdateAct 지수 CoJIsoo1>>
 		지수: 아, 그러셨구나.
 		지수: 그러면 예전엔 어떤 일을 하셨어요?
 		클럽고객G는 눈을 반짝였다.
 		클럽고객G: 아 내가 예전에 말이야~.
 		클럽고객G: 엄청 잘나가는 회사 사장이었다 이말이야.
-		<<UpdateAct 지수 CoJisoo2>>
+		<<UpdateAct 지수 CoJIsoo2>>
 		<<wait 1.0>>
 		이후로도 클럽 고객G의 말은 끊이지 않았다.
 		알아낼 수 있는 게 없는 걸까...
 		<<wait 0.5>>
 		//휴대폰 진동과 함께 알림이 온다.
 		<<PlayAudio PhoneAlarm>>
-		<<UpdateAct 지수 CoJisoo2>>
+		<<UpdateAct 지수 CoJIsoo2>>
 		어... 아리아드네다.
 		확인해볼까?
 		<<StartPhoneChat PhoneController 24>>
 
 -> 과거에 어떤 일을 했는지 물어보자
-	<<UpdateAct 지수 CoJisoo1>>
+	<<UpdateAct 지수 CoJIsoo1>>
 	지수: 아, 그러셨구나.
 	지수: 그러면 예전엔 어떤 일을 하셨어요?
 	클럽고객G는 눈을 반짝였다.
 	클럽고객G: 아 내가 예전에 말이야~.
 	클럽고객G: 엄청 잘나가는 회사 사장이었다 이말이야.	
-	<<UpdateAct 지수 CoJisoo2>>
+	<<UpdateAct 지수 CoJIsoo2>>
 	<<wait 1.0>>
 	이후로도 클럽 고객G의 말은 끊이지 않았다.
 	알아낼 수 있는 게 없는 걸까...
 	<<wait 0.5>>
 	-> 클럽에 오게 된 계기를 물어보자
-		<<UpdateAct 지수 CoJisoo1>>
+		<<UpdateAct 지수 CoJIsoo1>>
 		지수: 아, 그러셨구나.
 		지수: 그러면 클럽에 다니게 된 계기가 있으신가요?
 		클럽고객G는 눈을 반짝였다.
 		클럽고객G: 아 내가 말이지~.
 		클럽고객G: 예전에 어마어마한 분이랑 술자리를 가졌는데~.
-		<<UpdateAct 지수 CoJisoo2>>
+		<<UpdateAct 지수 CoJIsoo2>>
 		<<wait 1.0>>
 		이후로도 클럽 고객G의 말은 끊이지 않았다.
 		알아낼 수 있는 게 없는 걸까...
 		<<wait 0.5>>
 		//휴대폰 진동과 함께 알림이 온다.
 		<<PlayAudio PhoneAlarm>>
-		<<UpdateAct 지수 CoJisoo2>>
+		<<UpdateAct 지수 CoJIsoo2>>
 		어... 아리아드네다.
 		확인해볼까?
 		<<SetCanvasTo VisualNovelPrefab false>>
@@ -3111,7 +3112,7 @@ title: chocotalk_ariadne_customerg
 -> 가족에 대해 물어보자
 	그래...
 	가족에 대해 물어보자.
-	<<UpdateAct 지수 CoJisoo1>>
+	<<UpdateAct 지수 CoJIsoo1>>
 	지수: 아까 가족분들이 다정하다고 하셨는데...
 	지수: 가족분들이랑은 요즘 어떠세요?
 	<<wait 1.0>>
@@ -3151,7 +3152,7 @@ title: obj_customerg_end
 클럽 고객G: 바쁜 사람을 너무 오래 붙잡고 있었네.
 클럽 고객G: 어서 할 일 하러 가봐~.
 클럽 고객G가 자리를 떴다.
-<<Act 지수 CoJisoo3 1.17 0.322 black>>
+<<Act 지수 CoJIsoo3 1.17 0.322 black>>
 <<wait 1.0>>
 아무래도 수상해.
 마약 거래를 하려는 걸까?
@@ -3186,7 +3187,7 @@ title: obj_customerh
 클럽 고객H: 그런데 왜 직원 옷을 입고 있어요?
 클럽 고객H: 못 알아볼 뻔 했어요.
 
-<<Act 지수 CoJisoo4 1.17 0.322 black>>
+<<Act 지수 CoJIsoo4 1.17 0.322 black>>
 ...
 무슨 소리를 하는 거지?
 <<wait  0.5>>
@@ -3197,7 +3198,7 @@ title: obj_customerh
 클럽 고객H: 아... 지수 씨구나.
 클럽 고객H: 지원 씨인 줄 알 았어요.
 <<wait 0.5>>
-<<UpdateAct 지수 CoJisoo3>>
+<<UpdateAct 지수 CoJIsoo3>>
 ...
 분명 초면인데...
 저 사람은 나를 어떻게 알지?
@@ -3212,7 +3213,7 @@ title: obj_customerh
 
 <<SetActiveFalse VisualNovelPrefab VIProom_customerH>>
 
-<<UpdateAct 지수 CoJisoo2>>
+<<UpdateAct 지수 CoJIsoo2>>
 ...
 이상한 사람이다.
 
@@ -3232,7 +3233,7 @@ title: event_customergh_end
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 //클럽 고객G,H와 상호작용 종료 후
-<<UpdateAct 지수 CoJisoo3>>
+<<UpdateAct 지수 CoJIsoo3>>
 ...
 혼란스럽다.
 일단은 입구 근처로 돌아가볼까?
@@ -3282,7 +3283,7 @@ title: obj_clock2
 
 //지수이미지 노출X
 <<Hide 지수>>
-//<<Hide <<Draw  ClockSmall_0>>
+//<<Hide <<Draw ClockSmall_0>>
 
 //미니게임 시작(시계 11시로 맞추기)
 
