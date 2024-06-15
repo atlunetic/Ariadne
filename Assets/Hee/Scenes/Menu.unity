@@ -20374,7 +20374,7 @@ MonoBehaviour:
   MoveS2_: {fileID: 1661472268}
   MoveStaffroom: {fileID: 1216173817}
   MoveViproom: {fileID: 1734686850}
-  MoveTable: {fileID: 0}
+  MoveTable: {fileID: 503082046}
   BlockClick: 0
 --- !u!1 &1266879036 stripped
 GameObject:
