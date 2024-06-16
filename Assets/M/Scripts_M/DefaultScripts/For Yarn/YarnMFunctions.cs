@@ -25,7 +25,7 @@ public class YarnMFunctions : MonoBehaviour
     public void SetActiveObject(string ObjectName)
     {
         GameObject Object = GameObject.Find(ObjectName);
-        Object.SetActive(false);
+        if(Object is not null) Object.SetActive(false);
         Debug.Log(Object + "Set Active False by Yarn");
     }
 

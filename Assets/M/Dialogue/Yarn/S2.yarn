@@ -2986,7 +2986,6 @@ title: IgnoreE
 <<Hide 클럽고객G>>
 <<wait 1.0>>
 <<SetActiveFalse VisualNovelPrefab VIProom_customerG>>
-
 <<wait 1.0>>
 휴대폰을 놓고 갔네.
 ...
@@ -3073,6 +3072,7 @@ title: chocotalk_ariadne_customerg
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<UI_off MenuUI>>
 //초코톡에서 아리아드네의 톡 확인 후
 ...
 -> 가족에 대해 물어보자
@@ -3118,7 +3118,8 @@ title: obj_customerg_end
 클럽 고객G: 바쁜 사람을 너무 오래 붙잡고 있었네.
 클럽 고객G: 어서 할 일 하러 가봐~.
 클럽 고객G가 자리를 떴다.
-<<SetActiveFalse VisualNovelPrefab VIProom_customerH>>
+<<Hide 클럽고객G>>
+<<SetActiveFalse VisualNovelPrefab VIProom_customerG>>
 <<FinishedObj VisualNovelPrefab VIProom_customerG>>
 <<Act 지수 CoJIsoo3 1.17 0.322 black>>
 <<wait 1.0>>
@@ -3501,7 +3502,7 @@ CCTV에 찍힌 그 인형이야.
 
 <<Act 지수 Jisoo3 1.17 0.322 black>>
 <<Act 건우 Geonwoo2 0.322 0.227 black>>
-지수: 제일 오른쪽에 있는 차요.
+지수: 가운데에 있는 차요.
 <<UpdateAct 지수 Jisoo2>>
 지수: ...
 지수: 차 안이라도 살펴볼 수 있으면 좋을텐데...
