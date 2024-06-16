@@ -318,7 +318,7 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "이 정도면 알아볼 수 있어?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", "event_staffroom"));  // 21
-        //AddimageToLast(true, "ToAriadne2");  // 소리 이미지
+        AddimageToLast(true, "ToAriadne2");  // 소리 이미지
         AddChatToLast(true, "혹시 이게 뭔지 알아요?");
         AddChatToLast(false, "잘 모르겠네...");
         AddChatToLast(false, "이건 네가 알아봐야 할 것 같아.");
