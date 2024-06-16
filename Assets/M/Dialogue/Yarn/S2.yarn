@@ -2047,9 +2047,6 @@ title: obj_staffroomdoor
 		<<else>> 
 			<<jump obj_staffroomdoor_2>>
 		<<endif>>
-	-> 조금 있다 다시 오자
-		<<HideAll>>
-		<<SetCanvasTo VisualNovelPrefab false>>
 <<else>>
 	<<FinishedDialogue VisualNovelPrefab obj_staffroomdoor>>
 	<<jump club_staffroomdoor_nostaff>>
@@ -2766,6 +2763,7 @@ title: obj_viplist
 	...
 	<<Hide 지수>>
 	<<SetCanvasTo VisualNovelPrefab false>>
+	<<FinishedObj VisualNovelPrefab InStaffroom_Key>>
 	<<IfDone_getout MenuUI>>
 
 
