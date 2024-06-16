@@ -180,8 +180,9 @@ namespace Yarn.Unity.Example {
 		[YarnFunction("GetScore")]
         public static int GetScore()
         {
+			InMemoryVariableStorage variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
 			int Score = GameManager.instance.GeonWooScore;
-			print(Score);
+			variableStorage.SetValue("persuade", Score);
             return Score;
         }
 

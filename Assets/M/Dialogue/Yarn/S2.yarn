@@ -2033,7 +2033,6 @@ title: obj_staffroomdoor
 <<if CheckDialogue("obj_staffroomdoor") == false>>
 	<<FinishedDialogue VisualNovelPrefab obj_staffroomdoor>>
 	<<set $persuade = GetScore()>>
-	//<<set $persuade = 11>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	지원이가 여기서 대체 뭘 했을까...
 	CCTV라도 볼 수 있으면 좋을텐데.
