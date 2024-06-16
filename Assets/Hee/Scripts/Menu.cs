@@ -79,7 +79,8 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
             UnityAction openVIProom = null;
             openVIProom = () => { MoveViproom.SetActive(true);
                 CallYarn.instance.Callbybutton(MoveViproom.GetComponent<Button>(), "yay");
-                MoveViproom.GetComponent<Button>().onClick.AddListener(()=>{MoveS2Button.SetActive(false);});
+                MoveViproom.GetComponent<Button>().onClick.AddListener(()=>{MoveS2Button.SetActive(false);
+                                                                            MoveS2_.SetActive(false);});
             };
             MoveTable.GetComponent<Button>().onClick.AddListener(openVIProom);
             CallYarn.instance.Callbybutton(MoveTable.GetComponent<Button>(), "club_viproom_entry");
@@ -112,9 +113,12 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     [YarnCommand("IfDone_getout")]
     public void IfDone_getout(){
         if(!GameManager.instance.StaffroomEnded()) return;
-        print("통과");
-        MoveStaffroom.SetActive(false);
+        GameManager.instance.FindedObjects.Add("obj_staffroomdoor");
+        StartCoroutine("fordelaystart");       
+    }
+
+    IEnumerator fordelaystart(){
+        yield return new WaitForSeconds(1f);
         CallYarn.instance.callYarn("letsgetout");
-        GameManager.instance.FindedObjects.Add("obj_staffroomdoor");        
     }
 }

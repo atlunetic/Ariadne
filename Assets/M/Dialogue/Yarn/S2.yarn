@@ -2512,7 +2512,7 @@ title: event_staffroom
 ...
 어...
 발소리가 들린다.
-
+<<set $persuade = GetScore()>>
 <<if $persuade >= 7>>
 	<<jump event_staffroom_gunwoo1>>
 <<else>>
