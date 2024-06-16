@@ -182,7 +182,7 @@ namespace Yarn.Unity.Example {
         {
 			InMemoryVariableStorage variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
 			int Score = GameManager.instance.GeonWooScore;
-			variableStorage.SetValue("persuade", Score);
+			variableStorage.SetValue("$persuade", Score);
             return Score;
         }
 
