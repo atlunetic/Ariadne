@@ -60,6 +60,7 @@ title: meet_gunwoo
 	건우: 빨리 다른 곳으로...
 	<<StopAudioAll>>
 	<<Fade black 0.0 1.0 2.0>>
+	<<HideAll>>
 	<<ChangeSceneTo VisualNovelPrefab S1>>
 	<<Scene BlackBG>>
 	어...
