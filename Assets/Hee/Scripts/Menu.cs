@@ -112,6 +112,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     [YarnCommand("IfDone_getout")]
     public void IfDone_getout(){
         if(!GameManager.instance.StaffroomEnded()) return;
+        print("통과");
         MoveStaffroom.SetActive(false);
         CallYarn.instance.callYarn("letsgetout");
         GameManager.instance.FindedObjects.Add("obj_staffroomdoor");        

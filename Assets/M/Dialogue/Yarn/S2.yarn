@@ -2763,7 +2763,7 @@ title: obj_viplist
 	...
 	<<Hide 지수>>
 	<<SetCanvasTo VisualNovelPrefab false>>
-	<<FinishedObj VisualNovelPrefab InStaffroom_Key>>
+	<<FinishedObj VisualNovelPrefab InStaffroom_VIPlist>>
 	<<IfDone_getout MenuUI>>
 
 
