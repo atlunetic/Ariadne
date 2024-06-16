@@ -307,6 +307,7 @@ public class ChatManager : MonoBehaviour
         ChattingList.Add(new Chatting(true, "아리아드네", "null"));  // 19
         AddChatToLast(false, "지수.");
         AddChatToLast(false, "중요한 걸 잊어버리지 않았어?");
+        AddChatToLast(false, "내가 도와줄게.");
 
         ChattingList.Add(new Chatting(true, "아리아드네", "chocotalk_cctv"));  // 20
         AddimageToLast(true, "ToAriadne");

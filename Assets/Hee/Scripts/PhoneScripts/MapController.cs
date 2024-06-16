@@ -72,7 +72,7 @@ public class MapController : MonoBehaviour
 
     [YarnCommand("GoClub")]
     public void GoClub(){  // 2장으로 넘어가기
-        SceneManager.LoadScene("S2_1_ClubCounter_Bar");
+        SceneManager.LoadScene("S1");
         CurrPoint.anchoredPosition = new Vector2(108,-61);
         Menu.instance.UI_off();
         CallYarn.instance.InS2();

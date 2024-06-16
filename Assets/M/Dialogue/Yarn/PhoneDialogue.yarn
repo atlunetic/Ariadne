@@ -56,13 +56,17 @@ title: Camera
 <<SetCanvasTo VisualNovelPrefab true>>
 평범한 카메라 어플이다.
 
+<color=yellow>* 카메라를 통해 증거를 수집해보세요! *</color>
+<color=yellow>* 찍은 사진은 갤러리에 저장할 수 있습니다. *</color>
+<color=yellow>* 중요한 증거들은 나중에 큰 도움이 될지도... *</color>
+
 카메라로 증거가 될만한 걸 찍어두면 좋을 것 같네...
 네모칸 안에 잘 맞춰서 찍어야겠지.
 그래야 나중에 알아보기 쉬울 테니까.
-* 카메라를 통해 증거를 수집해보세요! *
-* 찍은 사진은 갤러리에 저장할 수 있습니다. *
-* 중요한 증거들은 나중에 큰 도움이 될지도... *
 
+...
+아까 본 편지라도 찍어둘까?
+혹시라도 지원이를 찾을 증거가 될지 모르니까.
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -285,7 +289,7 @@ title: DGram1st
 이건 무슨 어플이지?
 처음 보는데.
 ...
-D gram?
+Dgram?
 맨날 뉴스에 나오는 어플 아닌가..?
 
 
@@ -325,9 +329,9 @@ drgg24라도 쳐볼까.
 <<Searchdrgg24 Controllers>>
 
 뭐야... 설마 해서 쳐봤는데.
-D gram 아이디였여?
+Dgram 아이디였여?
 ...
-왜 초코톡을 냅두고 굳이 D gram 아이디를 주지?
+왜 초코톡을 냅두고 굳이 Dgram 아이디를 주지?
 아무래도 수상해.
 
 -> 말을 걸어보자.
