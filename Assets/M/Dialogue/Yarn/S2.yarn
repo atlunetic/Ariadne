@@ -222,41 +222,35 @@ title: obj_minirefrigerator
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<if visited("obj_minirefrigerator") == false>>
-	//클릭할 경우
-	<<Draw Suljango_Popup 0.75 0.75>>
-	미니 술장고다.
-	...
-	//술장고 이미지 종료
+//클릭할 경우
+<<Draw Suljango_Popup 0.75 0.75>>
+미니 술장고다.
+...
+//술장고 이미지 종료
 
-	<<Act 지수 Jisoo1 1.17 0.322 black>>
-	생수 1인 2병 무료 제공?
-	챙겨갈까?
-	-> 한 개만 챙겨가자.
-		그래... 하나만 챙기자.
-		<<HideAll>>
-		* 생수가 든 페트병을 습득했다. *
-		<<AddToInventory VisualNovelPrefab WaterBottle>>
-		<<declare $WaterBottle = 0 as number>>
-		<<set $WaterBottle = 1>>
-		<<SetActiveFalse VisualNovelPrefab Suljango>>
-		<<FinishedObj VisualNovelPrefab Suljango>>
-		<<SetCanvasTo VisualNovelPrefab false>>
-	-> 두 개 다 챙겨가자.
-		혹시 모르니 두 개 챙겨두자.
-		<<HideAll>>
-		* 생수가 든 페트병을 습득했다. *
-		<<AddToInventory VisualNovelPrefab WaterBottle>>
-		<<AddToInventory VisualNovelPrefab WaterBottle>>
-		<<set $WaterBottle = 2>>
-		<<SetActiveFalse VisualNovelPrefab Suljango>>
-		<<FinishedObj VisualNovelPrefab Suljango>>
-		<<SetCanvasTo VisualNovelPrefab false>>
-<<else>>
-	미니 술장고다.
+<<Act 지수 Jisoo1 1.17 0.322 black>>
+생수 1인 2병 무료 제공?
+챙겨갈까?
+-> 한 개만 챙겨가자.
+	그래... 하나만 챙기자.
+	<<HideAll>>
+	* 생수가 든 페트병을 습득했다. *
+	<<AddToInventory VisualNovelPrefab WaterBottle>>
+	<<declare $WaterBottle = 0 as number>>
+	<<set $WaterBottle = 1>>
+	<<SetActiveFalse VisualNovelPrefab Suljango>>
+	<<FinishedObj VisualNovelPrefab Suljango>>
 	<<SetCanvasTo VisualNovelPrefab false>>
-
-<<endif>>
+-> 두 개 다 챙겨가자.
+	혹시 모르니 두 개 챙겨두자.
+	<<HideAll>>
+	* 생수가 든 페트병을 습득했다. *
+	<<AddToInventory VisualNovelPrefab WaterBottle>>
+	<<AddToInventory VisualNovelPrefab WaterBottle>>
+	<<set $WaterBottle = 2>>
+	<<SetActiveFalse VisualNovelPrefab Suljango>>
+	<<FinishedObj VisualNovelPrefab Suljango>>
+	<<SetCanvasTo VisualNovelPrefab false>>
 <<setWaterbottle VisualNovelPrefab>>
 
 ===
@@ -2992,7 +2986,7 @@ title: IgnoreE
 <<Hide 클럽고객G>>
 <<wait 1.0>>
 <<SetActiveFalse VisualNovelPrefab VIProom_customerG>>
-<<FinishedObj VisualNovelPrefab VIProom_customerG>>
+
 <<wait 1.0>>
 휴대폰을 놓고 갔네.
 ...
@@ -3039,39 +3033,6 @@ title: IgnoreE
 title: obj_customerg_choose
 
 ---
-
--> 클럽에 오게 된 계기를 물어보자
-	//직원지수1
-	<<UpdateAct 지수 CoJIsoo1>>
-	지수: 아, 그러셨구나.
-	지수: 그러면 클럽에 다니게 된 계기가 있으신가요?
-	클럽고객G는 눈을 반짝였다.
-	클럽고객G: 아 내가 말이지~.
-	클럽고객G: 예전에 어마어마한 분이랑 술자리를 가졌는데~.
-	//직원지수2
-	<<UpdateAct 지수 CoJIsoo2>>
-	<<wait 1.0>>
-	이후로도 클럽 고객G의 말은 끊이지 않았다.
-	알아낼 수 있는 게 없는 걸까...
-	<<wait 0.5>>
-	-> 과거에 어떤 일을 했는지 물어보자
-		<<UpdateAct 지수 CoJIsoo1>>
-		지수: 아, 그러셨구나.
-		지수: 그러면 예전엔 어떤 일을 하셨어요?
-		클럽고객G는 눈을 반짝였다.
-		클럽고객G: 아 내가 예전에 말이야~.
-		클럽고객G: 엄청 잘나가는 회사 사장이었다 이말이야.
-		<<UpdateAct 지수 CoJIsoo2>>
-		<<wait 1.0>>
-		이후로도 클럽 고객G의 말은 끊이지 않았다.
-		알아낼 수 있는 게 없는 걸까...
-		<<wait 0.5>>
-		//휴대폰 진동과 함께 알림이 온다.
-		<<PlayAudio PhoneAlarm>>
-		<<UpdateAct 지수 CoJIsoo2>>
-		어... 아리아드네다.
-		확인해볼까?
-		<<StartPhoneChat PhoneController 24>>
 
 -> 과거에 어떤 일을 했는지 물어보자
 	<<UpdateAct 지수 CoJIsoo1>>
@@ -3157,12 +3118,14 @@ title: obj_customerg_end
 클럽 고객G: 바쁜 사람을 너무 오래 붙잡고 있었네.
 클럽 고객G: 어서 할 일 하러 가봐~.
 클럽 고객G가 자리를 떴다.
+<<SetActiveFalse VisualNovelPrefab VIProom_customerH>>
+<<FinishedObj VisualNovelPrefab VIProom_customerG>>
 <<Act 지수 CoJIsoo3 1.17 0.322 black>>
 <<wait 1.0>>
 아무래도 수상해.
 마약 거래를 하려는 걸까?
 11시 반이라고 했지...
-
+<<FinishedDialogue VisualNovelPrefab obj_customerg_end>>
 <<if CheckDialogue("obj_customerh") == true>>
 	<<jump event_customergh_end>>
 <<else>>
@@ -3222,7 +3185,7 @@ title: obj_customerh
 ...
 이상한 사람이다.
 
-<<if CheckDialogue("obj_customerh") == true>>
+<<if CheckDialogue("obj_customerg_end") == true>>
 	<<jump event_customergh_end>>
 <<else>>
 	<<Hide 지수>>
