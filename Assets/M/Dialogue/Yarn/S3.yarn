@@ -160,8 +160,8 @@ title: DrugCookie
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //(마약 쿠키 클릭 시)
-* 마약사전에 ‘마약 쿠키’가 추가되었습니다. *
-//(이후 마약사전 클릭 시 ‘마약 쿠키’ 관련 정보 확인 가능)
+* 일기장에 ‘마약 쿠키’가 추가되었습니다. *
+//(이후 일기장 클릭 시 ‘마약 쿠키’ 관련 정보 확인 가능)
 <<RevealDiary DiaryManager Page3>>
 <<SetActiveFalse VisualNovelPrefab VendingMachine3>>
 <<FinishedObj VisualNovelPrefab VendingMachine3>>
@@ -893,7 +893,7 @@ title: Crack
 광물같이 생겼다.
 <<Hide 지수>>
 
-* 마약사전에 ‘크랙’이 추가되었습니다. *
+* 일기장에 ‘크랙’이 추가되었습니다. *
 <<RevealDiary DiaryManager Page5>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -1017,7 +1017,7 @@ title: JiwonIn1403
 <<PlayAudio FalldownJiwon>>
 ..!
 //지원2
-<<UpdateAct 지원 Jiwon2>>
+<<UpdateAct 지원 JIwon2>>
 지원이가 바닥에 주저앉았다.
 ...
 ...
@@ -1565,7 +1565,7 @@ title:BacktoOfficetel1stFloor
 <<Act 지수 Jisoo2 1.17 0.322 black>>
 지수: 지원아….
 지수: 너 무슨 일이 있었던 거야?
-<<Act 지원 Jiwon3 0.322 0.227 black>>
+<<Act 지원 JIwon3 0.322 0.227 black>>
 //지원3
 지원: ...
 지원: 그게...
@@ -1586,7 +1586,7 @@ title:BacktoOfficetel1stFloor
 ..!
 지원이가 중심을 잃고 넘어졌다.
 <<Act 지수 Jisoo4 1.17 0.322 black>>
-<<Act 지원 Jiwon2 0.322 0.227 black>>
+<<Act 지원 JIwon2 0.322 0.227 black>>
 //지수4
 지수: ..! 얼른 내 손 잡아.
 //지원2
@@ -1606,7 +1606,7 @@ title:BacktoOfficetel1stFloor
 <<Act 지수 Jisoo3 1.17 0.322 black>>
 지수: 지원아, 나한테 기대.
 지수: 내가 부축해줄게. 빨리.
-<<Act 지원 Jiwon1 0.322 0.227 black>>
+<<Act 지원 JIwon1 0.322 0.227 black>>
 //지원1
 지원: ...
 지원: 미안해.
