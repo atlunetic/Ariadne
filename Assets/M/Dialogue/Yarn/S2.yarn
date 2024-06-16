@@ -3882,6 +3882,7 @@ title: stairchocotalk2
 일단 XX 오피스텔로 가보자.
 
 <<SetCanvasTo VisualNovelPrefab false>>
+<<ChangeSceneTo VisualNovelPrefab S3_1_OfficetelEntrance>>
 ===
 
 title: wrongplaceS2
