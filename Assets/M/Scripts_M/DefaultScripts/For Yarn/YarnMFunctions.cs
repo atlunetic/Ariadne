@@ -82,4 +82,18 @@ public class YarnMFunctions : MonoBehaviour
         variableStorage.TryGetValue("$persuade", out score);
         GameManager.instance.GeonWooScore = (int)score;
     }
+
+    [YarnCommand("getWaterbottle")]
+    public void getWaterbottle(){
+        InMemoryVariableStorage variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+        variableStorage.SetValue("$WaterBottle", GameManager.instance.SaengSoo);
+    }
+    [YarnCommand("setWaterbottle")]
+    public void setWaterbottle(){
+        InMemoryVariableStorage variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+
+        float bottles;
+        variableStorage.TryGetValue("$WaterBottle", out bottles);
+        GameManager.instance.SaengSoo = (int)bottles;
+    }
 }

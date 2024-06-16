@@ -257,6 +257,7 @@ title: obj_minirefrigerator
 	<<SetCanvasTo VisualNovelPrefab false>>
 
 <<endif>>
+<<setWaterbottle VisualNovelPrefab>>
 
 ===
 
@@ -2924,7 +2925,7 @@ title: obj_customerg
 아 맞다. 지금 직원 옷을 입고 있었지.
 직원인 줄 아는 것 같은데...
 어떡하지?
-
+<<getWaterbottle VisualNovelPrefab>>
 <<if $WaterBottle == 2>>
 	-> 챙겨뒀던 생수병을 주자
 		<<jump WaterToE>>
@@ -3101,6 +3102,7 @@ title: obj_customerg_choose
 		<<UpdateAct 지수 CoJIsoo2>>
 		어... 아리아드네다.
 		확인해볼까?
+		<<StartPhoneChat PhoneController 24>>
 		<<SetCanvasTo VisualNovelPrefab false>>
 
 
