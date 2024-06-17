@@ -2151,7 +2151,7 @@ title: game_openthedoor_intro
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
-<<DeleteItem inventory Hairpin>>
+<<DeleteItem Inventory Hairpin>>
 
 <<UI_off MenuUI>>
 
