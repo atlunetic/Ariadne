@@ -632,7 +632,7 @@ title: MDMA
 ...
 비타민인가?
 <<PlayAudio WhenChoose 0.3>>
-* 일기장에 'MDMA'가 추가되었습니다. *
+<color=yellow>* 일기장에 'MDMA'가 추가되었습니다. *</color>
 
 <<RevealDiary DiaryManager Page4>>
 <<SetActiveFalse VisualNovelPrefab 3Drug>>
@@ -1013,7 +1013,7 @@ title: Diary1
 군데군데 비어 있네.
 ...
 
-* 일기장을 습득했습니다. *
+<color=yellow>* 일기장을 습득했습니다. *</color>
 
 ...
 일기장? 어디 쓰는거지...?
@@ -1112,7 +1112,7 @@ title: JW_Wallet
 
 <<Hide 지수>>
 
-* '지원의 지갑'을 습득했다. *
+<color=yellow>* '지원의 지갑'을 습득했다. *</color>
 
 
 <<SetActiveFalse VisualNovelPrefab DrawerR_Wallet>>
@@ -1185,7 +1185,7 @@ title:JW_Hairpin
 
 <<Hide Hairpin(E)_0>>
 <<Hide DBG>>
-* '헤어핀'을 습득했다. *
+<color=yellow>* '헤어핀'을 습득했다. *</color>
 
 <<SetActiveFalse VisualNovelPrefab Drawer_Hairpin>>
 <<FinishedObj VisualNovelPrefab Drawer_Hairpin>>
@@ -1219,8 +1219,8 @@ title: DiaryTutorial
 갑자기 일기장이 움직였다.
 내가 꿈을 꾸나...?
 
-* 마약 습득 시 일기장이 채워집니다. *
-* 일기장의 모든 내용을 채워보세요. *
+<color=yellow>* 마약 습득 시 일기장이 채워집니다. *</color>
+<color=yellow>* 일기장의 모든 내용을 채워보세요. *</color>
 
 <<FinishedDialogue VisualNovelPrefab DiaryTutorial>>
 <<SetCanvasTo VisualNovelPrefab false>>
