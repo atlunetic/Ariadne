@@ -998,6 +998,7 @@ title: JiwonIn1403
 
 ---
 
+<<RemoveUI MenuUI>>
 <<SetCanvasTo VisualNovelPrefab true>>
 //장소 4-1. 1403호, 지원이 갇혀있는 방
 //아래 텍스트 자동 진행
