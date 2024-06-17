@@ -124,7 +124,7 @@ title: FlashVM
 <<SetCanvasTo VisualNovelPrefab true>>
 //지수1
 <<Act 지수 Jisoo1 1.17 0.322 black>>
-이걸로 자판기 밑을 살펴볼까?
+손전등으로 자판기 밑을 살펴볼까?
 ….
 ….
 //지수4
@@ -136,8 +136,8 @@ title: FlashVM
 <<UpdateAct 지수 Jisoo2>>
 ...
 <<Hide 지수>>
-<<jump DrugCookie>>
 <<DeleteItem Inventory Flashlight>>
+<<jump DrugCookie>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
