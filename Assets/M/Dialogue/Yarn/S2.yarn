@@ -286,10 +286,8 @@ title: obj_customers
 	<<Act 지수 Jisoo1 1.17 0.322 white>>
 	두 사람이 대화하고 있다.
 
-	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.227 white>>
+	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.407 white>>
 	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
-
-
 	클럽고객D: 이렇게 만난 것도 인연인데 한 잔 사드리고 싶어서요.
 	클럽고객D가 E에게 술잔을 내민다.
 
@@ -300,7 +298,7 @@ title: obj_customers
 	클럽 고객E가 술잔을 받았다.
 	<<HideAll>>
 	<<DrawFadeIn DBG 0.75 0.75 0.2>>
-	<<Draw Clubtable_Glass 0.75 0.75>>
+	<<Draw Clubtable_Glass 0.725 0.75>>
 
 	...
 	//<<UpdateAct 지수 Jisoo3>>
@@ -313,19 +311,14 @@ title: obj_customers
 	<<Hide Clubtable_Glass>>
 	<<Hide DBG>>
 	<<wait 1.0>>
-	<<Act 지수 Jisoo2 1.17 0.322 white>>
-	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.227 white>>
-	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
 	-> 모르는 척 하자.
-		//<<UpdateAct 지수 Jisoo2>>
 		...
 		그래. 괜히 나섰다가 욕 먹는 것보단 낫지.
-		<<Hide 지수>>
-		<<Hide 클럽고객D>>
-		<<Hide 클럽고객E>>
 		<<SetCanvasTo VisualNovelPrefab false>>
-	-> 가서 도와주자
-		//<<UpdateAct 지수 Jisoo2>>
+	-> 가서 도와주자.
+		<<Act 지수 Jisoo2 1.17 0.322 white>>
+		<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.407 white>>
+		<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
 		...
 		진짜로 약을 탄거면...
 		<<UpdateAct 지수 Jisoo3>>
@@ -2067,8 +2060,8 @@ title: obj_staffroomdoor_1
 <<HideAll>>
 
 직원이 스태프룸 문을 열어줬다.
-<<SetActiveFalse VisualNovelPrefab StaffRoom_staff_C>>
-<<FinishedObj VisualNovelPrefab StaffRoom_staff_C>>
+<<SetActiveFalse VisualNovelPrefab Staffroom_Door>>
+<<FinishedObj VisualNovelPrefab Staffroom_Door>>
 <<deActiveM MenuUI>>
 <<ChangeSceneTo VisualNovelPrefab S2_4_1_StaffRoom>>
 <<jump club_staffroom_inside>>

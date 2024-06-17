@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Clubtable_Glass 1_0
+      name: Clubtable_Glass
       rect:
         serializedVersion: 2
         x: 731
@@ -118,7 +118,7 @@ TextureImporter:
         width: 490
         height: 559
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Clubtable_Glass 1_0: -2013715620
+      Clubtable_Glass: -2013715620
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
