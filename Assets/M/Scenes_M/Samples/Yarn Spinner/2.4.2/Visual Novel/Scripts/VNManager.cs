@@ -111,15 +111,26 @@ namespace Yarn.Unity.Example {
 			// keywords (e.g. "left", "right")
 			var newActor = SetSpriteUnity( spriteName, positionX, positionY );
 
-			// define text label BG color
-            var actorColor = Color.black;
-			if (colorHex != string.Empty && ColorUtility.TryParseHtmlString( colorHex, out actorColor ) ==false ) {
-				Debug.LogErrorFormat(this, "VN Manager can't parse [{0}] as an HTML color (e.g. [#FFFFFF] or certain keywords like [white])", colorHex);
-			}
+            // define text label BG color
+            var actorColor = new Color(0f, 0f, 0f, 245f / 255f); // RGB: (1, 1, 1) (흰색), Alpha: 245 / 255
 
-			// if the actor is using a sprite already, then clone any
-			// persisting data, and destroy it (just to be safe)
-			if ( actors.ContainsKey(actorName)) {
+            if (!string.IsNullOrEmpty(colorHex))
+            {
+                if (ColorUtility.TryParseHtmlString(colorHex, out Color parsedColor))
+                {
+                    actorColor = new Color(parsedColor.r, parsedColor.g, parsedColor.b, 245f / 255f); // Use parsed RGB values and set alpha to 245 / 255
+                }
+                else
+                {
+                    Debug.LogErrorFormat(this, "VN Manager can't parse [{0}] as an HTML color (e.g. [#FFFFFF] or certain keywords like [white])", colorHex);
+                }
+            }
+
+
+
+            // if the actor is using a sprite already, then clone any
+            // persisting data, and destroy it (just to be safe)
+            if ( actors.ContainsKey(actorName)) {
 				// if any missing position params, assume the actor
 				// position should stay the same
 				var newPos = newActor.rectTransform.anchoredPosition;
