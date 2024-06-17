@@ -424,7 +424,7 @@ title: ClothesUsed
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<if visited("club_viproom_entry")==true>>
+<<if CheckDialogue("club_viproom_entry")==true>>
 	<<jump club_viproom_changeuniform>>
 <<else>>
 	직원 복장 옷을 입었다.
@@ -2849,6 +2849,7 @@ VIP 룸? 한 번 가볼까?
 근데 한번 들어가면 다시 나오기는 어려울 것 같아.
 
 <<Hide 지수>>
+<<FinishedDialogue VisualNovelPrefab club_viproom_entry>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -3385,8 +3386,7 @@ title: obj_viproomdoor
 title: club_stair
 
 ---
-
-<<Scene Clubstair_bg>>
+<<ChangeSceneTo VisualNovelPrefab S2_7_Stairs>>
 
 <<DrawFadeIn Jisoo1 1.17 0.322>>
 바깥 공기가 들어온다.
@@ -3429,83 +3429,14 @@ title: club_stair
 지수: 대체 어디로 갔는지...
 지수: ...
 <<wait 1.0>>
-
-<<set $rand = random_range(1,4)>>
-<<if $rand < 2>>
-	<<jump club_stair_choosethecar1>>
-<<elseif $rand <3>>
-	<<jump club_stair_choosethecar2>>
-<<else>>
-	<<jump club_stair_choosethecar3>>
-<<endif>>
-
-
-
-===
-
-title: club_stair_choosethecar1
-
----
-
 건우: ...
 건우: 그래서 지원이가 저 중에 무슨 차를 탔는데?
-
-//선택지 랜덤하게 뜸
-
--> 왼쪽 차
-	...
-	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar2>>
--> 오른쪽 차
-	...
-	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar3>>
--> 가운데 차
-	<<jump club_stair_middlecar>>
-
-
-===
-
-title: club_stair_choosethecar2
-
----
-
-건우: ...
-건우: 그래서 지원이가 저 중에 무슨 차를 탔는데?
-
-//선택지 랜덤하게 뜸
--> 가운데 차
-	<<jump club_stair_middlecar>>
--> 오른쪽 차
-	...
-	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar1>>
--> 왼쪽 차
-	...
-	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar3>>
-
-===
-
-title: club_stair_choosethecar3
-
----
-
-건우: ...
-건우: 그래서 지원이가 저 중에 무슨 차를 탔는데?
-
-//선택지 랜덤하게 뜸
--> 오른쪽 차
-	...
-	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar1>>
--> 가운데 차
-	<<jump club_stair_middlecar>>
--> 왼쪽 차
-	...
-	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar3>>
-
+<<wait 1.0>>
+지원이가 무슨 차를 탔을까...
+<<ChangeSceneTo VisualNovelPrefab S2_8_ParkingLot>>
+증거를 찾아야 해.
+<<Scene NoBG>>
+<<SetActiveFalse VisualNovelPrefab false>>
 
 ===
 
@@ -3516,6 +3447,8 @@ title: club_stair_middlecar
 ..!
 그래, 저 인형.
 CCTV에 찍힌 그 인형이야.
+
+<<FinishedObj VisualNovelPrefab Doll>>
 
 //건우, 지수가 대화하는 계단 배경으로 변경
 <<ChangeSceneTo VisualNovelPrefab S2_7_Stairs>>
@@ -3625,7 +3558,7 @@ title: inventory_drugjelly
 
 ...
 <<SetCanvasTo VisualNovelPrefab false>>
-<<ChangeSceneTo VisualNovelPrefab S2_8_ParkingLot>>
+<<ChangeSceneTo VisualNovelPrefab S2_8_ParkingLot2>>
 <<jump club_parkinggarage>>
 
 
@@ -3896,5 +3829,13 @@ Current Score {$persuade}
 int score {int($persuade)}
 <<PersuadeScore VisualNovelPrefab int($persuade)>>
 I am testing {GetScore()}
+
+===
+
+title: WrongClothes
+
+---
+
+지금은 입을 때가 아닌 것 같다.
 
 ===
