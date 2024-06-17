@@ -173,12 +173,14 @@ title: obj_clock1
 <<SetCanvasTo VisualNovelPrefab true>>
 
 //클릭할 경우
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw CounterbarClockBig 0.75 0.75>>
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 클럽에 웬 벽시계..?
 엄청 안어울리네.
 
 <<Hide CounterbarClockBig>>
+<<Hide DBG>>
 
 <<UpdateAct 지수 Jisoo2>>
 ...
@@ -223,6 +225,7 @@ title: obj_minirefrigerator
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Suljango_Popup 0.75 0.75>>
 미니 술장고다.
 ...
@@ -295,11 +298,12 @@ title: obj_customers
 
 	클럽고객E: 감사해요.
 	클럽 고객E가 술잔을 받았다.
-
+	<<HideAll>>
+	<<DrawFadeIn DBG 0.75 0.75 0.2>>
 	<<Draw Clubtable_Glass 0.75 0.75>>
 
 	...
-	<<UpdateAct 지수 Jisoo3>>
+	//<<UpdateAct 지수 Jisoo3>>
 	뭔가 수상한데?
 	술잔 바닥에 가루가 가라앉아 있어.
 	...
@@ -307,9 +311,13 @@ title: obj_customers
 	<<wait 1.0>>
 	어떡하지. 도와줄까?
 	<<Hide Clubtable_Glass>>
+	<<Hide DBG>>
 	<<wait 1.0>>
+	<<Act 지수 Jisoo2 1.17 0.322 black>>
+	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.227 black>>
+	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 black>>
 	-> 모르는 척 하자.
-		<<UpdateAct 지수 Jisoo2>>
+		//<<UpdateAct 지수 Jisoo2>>
 		...
 		그래. 괜히 나섰다가 욕 먹는 것보단 낫지.
 		<<Hide 지수>>
@@ -317,7 +325,7 @@ title: obj_customers
 		<<Hide 클럽고객E>>
 		<<SetCanvasTo VisualNovelPrefab false>>
 	-> 가서 도와주자
-		<<UpdateAct 지수 Jisoo2>>
+		//<<UpdateAct 지수 Jisoo2>>
 		...
 		진짜로 약을 탄거면...
 		<<UpdateAct 지수 Jisoo3>>
@@ -416,7 +424,7 @@ title: ClothesUsed
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<if visited("club_viproom_entry")==true>>
+<<if CheckDialogue("club_viproom_entry")==true>>
 	<<jump club_viproom_changeuniform>>
 <<else>>
 	직원 복장 옷을 입었다.
@@ -1785,7 +1793,7 @@ title: obj_drugjelly
 
 조심스레 겉옷을 주워 클럽 고객F에게 덮어줬다.
 그 순간 바닥으로 무언가 떨어졌다.
-
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Toilet_drugjelly 0.75 0.75>>
 <<wait 2.0>>
 <<Hide Toilet_drugjelly>>
@@ -1926,6 +1934,7 @@ title: obj_staffonly_lockeropen
 <<FadeIn>>
 ...됐다!!
 <<wait 1.0>>
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Toilet_staffclothe 0.75 0.75>>
 스태프 복장이 있다.
 <<Act 지수 Jisoo1 1.17 0.322 black>>
@@ -1951,7 +1960,7 @@ title: obj_toiletpaper
 //클릭할 경우
 
 <<SetCanvasTo VisualNovelPrefab true>>
-
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Toilet_rollpaper_big 0.75 0.75>>
 <<Act 지수 Jisoo4 1.17 0.322 black>>
 휴지에 구멍이 뚫려있다.
@@ -1967,6 +1976,7 @@ title: obj_toiletpaper
 ...
 혹시 모르니까... 건들지 말자.
 <<Hide Toilet_rollpaper_big>>
+<<Hide DBG>>
 
 <<Hide 지수>>
 
@@ -2320,6 +2330,7 @@ title: obj_cctv2
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<PlayAudio WhiteNoise 0.4 loop>>
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw CCTV_first 0.75 0.75>>
 
 CCTV 화면이다.
@@ -2341,18 +2352,21 @@ title: cctvOptions
 	<<Draw CCTV_counterbar 0.75 0.75>>
 	중요한 영상은 없는 것 같다...
 	<<Hide CCTV_counterbar>>
+	<<Hide DBG>>
 	<<jump cctvOptions>>
 -> VIP Room
 	<<Hide CCTV_first>>
 	<<Draw CCTV_VIP 0.75 0.75>>
 	중요한 영상은 없는 것 같다...
 	<<Hide CCTV_VIP>>
+	<<Hide DBG>>
 	<<jump cctvOptions>>
 -> 클럽 입구
 	<<Hide CCTV_first>>
 	<<Draw CCTV_entrance 0.75 0.75>>
 	중요한 영상은 없는 것 같다...
 	<<Hide CCTV_entrance>>
+	<<Hide DBG>>
 	<<jump cctvOptions>>
 -> 주차장
 	<<Hide CCTV_first>>
@@ -2369,6 +2383,7 @@ title: cctvOptions
 	아리아드네는 뭘 알고 있지 않을까?
 	도움을 요청해봐야겠다.
 	<<Hide CCTV_parkinglot_jisoo>>
+	<<Hide DBG>>
 	<<Act 지수 Jisoo2 1.17 0.322 black>>
 	...
 	<<wait 1.0>>
@@ -2417,7 +2432,7 @@ title: obj_radio
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Radio 0.75 0.75>>
 직원들끼리 쓰는 무전기인가보다.
 
@@ -2446,6 +2461,7 @@ title: obj_radio
 <<PlayAudio Radio6 0.6>>
 <i>기억해야 ....</i>
 <<Hide Radio>>
+<<Hide DBG>>
 <<wait 1.0>>
 
 <<Act 지수 Jisoo3 1.17 0.322 black>>
@@ -2706,6 +2722,7 @@ title: obj_key
 //서랍 클릭 시
 여기도 열어볼까..?
 ...
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Key 0.75 0.75>>
 어... 열쇠다.
 <<wait 0.5>>
@@ -2716,6 +2733,7 @@ title: obj_key
 일단 가져가자.
 //팝업이미지 종료, 지수노출X
 <<Hide Key>>
+<<Hide DBG>>
 
 * 열쇠를 습득했습니다. *
 
@@ -2742,6 +2760,7 @@ title: obj_viplist
 살펴볼까?
 
 -> 살펴보자
+	<<DrawFadeIn DBG 0.75 0.75 0.2>>
 	<<Draw VIPlist 0.75 0.75>>
 	VIP가 이렇게 많단 말이야..?
 	직업은 어떻게 알았대.
@@ -2752,6 +2771,7 @@ title: obj_viplist
 	뭐야. 지원..이..?
 	...
 	<<Hide VIPlist>>
+	<<Hide DBG>>
 	<<Act 지수 Jisoo4 1.17 0.322 black>>
 	클럽 다니는 걸 오늘 알았는데.
 	<<UpdateAct 지수 Jisoo2>>
@@ -2829,6 +2849,7 @@ VIP 룸? 한 번 가볼까?
 근데 한번 들어가면 다시 나오기는 어려울 것 같아.
 
 <<Hide 지수>>
+<<FinishedDialogue VisualNovelPrefab club_viproom_entry>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -3017,6 +3038,7 @@ title: IgnoreE
 클럽 고객G: 학생, 이거 좀 봐봐.
 //클럽 고객G의 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
 <<Hide 지수>>
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw ClubcustomerG_Phone 0.75 0.75>>
 클럽고객G는 가족사진을 보여줬다.
 
@@ -3089,6 +3111,7 @@ title: chocotalk_ariadne_customerg
 	클럽 고객G: 학생, 이거 좀 봐봐.
 	//클럽 고객G 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
 	<<Hide 지수>>
+	<<DrawFadeIn DBG 0.75 0.75 0.2>>
 	<<Draw ClubcustomerG_Phone 0.75 0.75>>
 	클럽고객G는 가족사진을 보여줬다.
 	클럽고객G: 우리 딸이 말이야.
@@ -3115,6 +3138,7 @@ title: obj_customerg_end
 ...
 <<Hide ClubcustomerG_Message>>
 <<Hide ClubcustomerG_Phone>>
+<<Hide DBG>>
 클럽 고객G가 급하게 휴대폰을 감췄다.
 클럽 고객G: 어어~. 아무튼.
 클럽 고객G: 바쁜 사람을 너무 오래 붙잡고 있었네.
@@ -3362,8 +3386,7 @@ title: obj_viproomdoor
 title: club_stair
 
 ---
-
-<<Scene Clubstair_bg>>
+<<ChangeSceneTo VisualNovelPrefab S2_7_Stairs>>
 
 <<DrawFadeIn Jisoo1 1.17 0.322>>
 바깥 공기가 들어온다.
@@ -3406,83 +3429,14 @@ title: club_stair
 지수: 대체 어디로 갔는지...
 지수: ...
 <<wait 1.0>>
-
-<<set $rand = random_range(1,4)>>
-<<if $rand < 2>>
-	<<jump club_stair_choosethecar1>>
-<<elseif $rand <3>>
-	<<jump club_stair_choosethecar2>>
-<<else>>
-	<<jump club_stair_choosethecar3>>
-<<endif>>
-
-
-
-===
-
-title: club_stair_choosethecar1
-
----
-
 건우: ...
 건우: 그래서 지원이가 저 중에 무슨 차를 탔는데?
-
-//선택지 랜덤하게 뜸
-
--> 왼쪽 차
-	...
-	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar2>>
--> 오른쪽 차
-	...
-	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar3>>
--> 가운데 차
-	<<jump club_stair_middlecar>>
-
-
-===
-
-title: club_stair_choosethecar2
-
----
-
-건우: ...
-건우: 그래서 지원이가 저 중에 무슨 차를 탔는데?
-
-//선택지 랜덤하게 뜸
--> 가운데 차
-	<<jump club_stair_middlecar>>
--> 오른쪽 차
-	...
-	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar1>>
--> 왼쪽 차
-	...
-	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar3>>
-
-===
-
-title: club_stair_choosethecar3
-
----
-
-건우: ...
-건우: 그래서 지원이가 저 중에 무슨 차를 탔는데?
-
-//선택지 랜덤하게 뜸
--> 오른쪽 차
-	...
-	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar1>>
--> 가운데 차
-	<<jump club_stair_middlecar>>
--> 왼쪽 차
-	...
-	저 차가 아닌 것 같아.
-	<<jump club_stair_choosethecar3>>
-
+<<wait 1.0>>
+지원이가 무슨 차를 탔을까...
+<<ChangeSceneTo VisualNovelPrefab S2_8_ParkingLot>>
+증거를 찾아야 해.
+<<Scene NoBG>>
+<<SetActiveFalse VisualNovelPrefab false>>
 
 ===
 
@@ -3493,6 +3447,8 @@ title: club_stair_middlecar
 ..!
 그래, 저 인형.
 CCTV에 찍힌 그 인형이야.
+
+<<FinishedObj VisualNovelPrefab Doll>>
 
 //건우, 지수가 대화하는 계단 배경으로 변경
 <<ChangeSceneTo VisualNovelPrefab S2_7_Stairs>>
@@ -3602,7 +3558,7 @@ title: inventory_drugjelly
 
 ...
 <<SetCanvasTo VisualNovelPrefab false>>
-<<ChangeSceneTo VisualNovelPrefab S2_8_ParkingLot>>
+<<ChangeSceneTo VisualNovelPrefab S2_8_ParkingLot2>>
 <<jump club_parkinggarage>>
 
 
@@ -3732,12 +3688,14 @@ title: obj_navigation
 
 ...
 //네비게이션 검색 목록 이미지
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw NaviList 0.75 0.75>>
 
 -> 클럽 A
 	...
 	이 클럽의 주소인 것 같다.
 	<<Hide NaviList>>
+	<<Hide DBG>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 -> XX 오피스텔
 	...
@@ -3745,6 +3703,7 @@ title: obj_navigation
 	수상한데?
 	주소를 기억해둬야 할 것 같아.
 	<<Hide NaviList>>
+	<<Hide DBG>>
 	<<declare $nav = 0 as number>>
 	<<set $nav = 1>>
 	<<if visited("memory_BrokenGlasses")==true>>
@@ -3755,6 +3714,7 @@ title: obj_navigation
 	...
 	여기를 갔었나보네.
 	<<Hide NaviList>>
+	<<Hide DBG>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -3849,6 +3809,8 @@ title: stairchocotalk2
 
 <<SetCanvasTo VisualNovelPrefab false>>
 <<ChangeSceneTo VisualNovelPrefab S3_1_OfficetelEntrance>>
+<<wait 0.5>>
+<<jump Officetel3>>
 ===
 
 title: wrongplaceS2
@@ -3869,5 +3831,13 @@ Current Score {$persuade}
 int score {int($persuade)}
 <<PersuadeScore VisualNovelPrefab int($persuade)>>
 I am testing {GetScore()}
+
+===
+
+title: WrongClothes
+
+---
+
+지금 입으면 눈에 띌 것 같아...
 
 ===

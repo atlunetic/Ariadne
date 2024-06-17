@@ -76,6 +76,7 @@ public class Inventory : MonoBehaviour
         if (usingitem != null) { ClearUsingItem();}
         item FinishedItem = items.Find(i => i.itemName == ItemName);
         items.Remove(FinishedItem);
+        onChangeItem.Invoke();
     }
 }
 

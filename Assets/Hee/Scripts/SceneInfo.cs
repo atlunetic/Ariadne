@@ -34,6 +34,7 @@ public class SceneInfo : MonoBehaviour
             if((rect.x + rect.width/5)<pos.x && (rect.x + rect.width/5 * 4)>pos.x){
                 if((rect.y + rect.height/5)<pos.y && (rect.y + rect.height/5 * 4)>pos.y){
                     GameManager.instance.FindedClues.Add(obj.name);
+                    print("Find "+obj.name);
                     StartCoroutine(PlayMemory(obj.name));
                     return obj.name;
                 }

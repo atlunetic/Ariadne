@@ -367,6 +367,11 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(true, "인천 참사랑병원");
         AddChatToLast(false, "인천 참사랑병원에서는 중독가족 프로그램, 중독재활 및 중독상담 진행 등 마약류 중독 치료를 위한 다양한 프로그램을 마련하고 있습니다.\n\n도움이 필요하다면 아래 링크를 방문해보세요.\n\nhttp://www.clh.co.kr/");
 
+        ChattingList.Add(new Chatting(true, "아리아드네", "AfterDChat3"));  // 31
+        AddChatToLast(true, "아리아드네");
+        AddChatToLast(true, "혹시 XX 오피스텔 현관 비밀번호 알아?");
+        AddChatToLast(false, "등잔 밑이 어두운 법이지.");
+        AddChatToLast(false, "주머니는 뒤져봤어?");
 
         foreach(int i in GameManager.instance.ChattingLog)
             PrintChat(i);
