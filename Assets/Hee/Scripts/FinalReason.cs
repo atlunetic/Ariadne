@@ -20,8 +20,7 @@ public class FinalReason : MonoBehaviour
     void Start()
     {
         PhoneController.instance.Phone.GetComponent<RectTransform>().transform.localPosition = new Vector3(-200,10,0);
-        PhoneController.instance.Phone.SetActive(true);
-        PhoneController.instance.Gallery.SetActive(true);
+        
         foreach(GameObject img in GalleryController.instance.nonClues)
             img.SetActive(false);
         foreach(GameObject img in GalleryController.instance.Clues){
@@ -31,6 +30,9 @@ public class FinalReason : MonoBehaviour
             pic.transform.GetChild(2).gameObject.SetActive(true);
             pic.transform.GetChild(2).GetComponent<Button>().onClick.AddListener(()=>PickAnswer(img, pic));
         }
+        
+        PhoneController.instance.Phone.SetActive(true);
+        PhoneController.instance.Gallery.SetActive(true);
     }
 
     void PickAnswer(GameObject img, GameObject pic){
