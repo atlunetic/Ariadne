@@ -295,7 +295,7 @@ title: TowardsEnding1_1
         그래도... 걱정되니까 연락해볼까?
         <<jump TowardsEnding1_2>>
     -> 미안하다고 사과하자.
-        <<UpdateAct 지수 Jisoo1>>
+        //<<UpdateAct 지수 Jisoo1>>
         <<Hide LetterContent>>
         <<Hide DBG>>
         <<SetActiveFalse VisualNovelPrefab Letter>>
@@ -315,10 +315,10 @@ title: TowardsEnding1_2
         그래도... 걱정되니까 연락해볼까?
         <<Hide LetterContent>>
         <<Hide DBG>>
-        <<Hide 지수>>
+        //<<Hide 지수>>
         <<jump Ending1>>
     -> 미안하다고 사과하자.
-        <<UpdateAct 지수 Jisoo1>>
+        //<<UpdateAct 지수 Jisoo1>>
         <<Hide LetterContent>>
         <<Hide DBG>>
         <<SetActiveFalse VisualNovelPrefab Letter>>
@@ -329,10 +329,10 @@ title: TowardsEnding1_2
         무슨 일 생기면 어떡하지.
         <<Hide LetterContent>>
         <<Hide DBG>>
-        <<Hide 지수>>
+        //<<Hide 지수>>
         <<jump Ending1>>
     -> 미안하다고 사과하자.
-        <<UpdateAct 지수 Jisoo1>>
+        //<<UpdateAct 지수 Jisoo1>>
         <<Hide LetterContent>>
         <<Hide DBG>>
         <<SetActiveFalse VisualNovelPrefab Letter>>
@@ -688,7 +688,7 @@ title: Weedhof
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 Jisoo2 1.17 0.322 white>>
+//<<Act 지수 Jisoo2 1.17 0.322 white>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Suljiproad_Poster 0.75 0.75>>
 홍보 문구가 너무 마약에 치우쳐 있는 것 같아.
@@ -750,7 +750,7 @@ title: HospitalWaitingRoom
 언제쯤 들어갈 수 있으려나.
 ...
 <<PlayAudio HospitalAlert 0.3>>
-안내음 '김지수님, 1번 진료실로 들어오세요.'
+<i>'김지수님, 1번 진료실로 들어오세요.'
 
 <<Scene H_DrRoom>>
 
