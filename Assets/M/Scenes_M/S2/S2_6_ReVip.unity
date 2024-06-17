@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 1696874416}
   - component: {fileID: 1696874417}
   - component: {fileID: 1696874418}
+  - component: {fileID: 1696874419}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -403,8 +404,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9ec80a41893b1614780f7f3438674294, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
-  m_Pitch: 1
+  m_Volume: 0.3
+  m_Pitch: 0.7
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -534,6 +535,15 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 24
+--- !u!170 &1696874419
+AudioDistortionFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696874411}
+  m_Enabled: 1
+  m_DistortionLevel: 0.5
 --- !u!1 &1836928050
 GameObject:
   m_ObjectHideFlags: 0
