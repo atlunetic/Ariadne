@@ -147,7 +147,7 @@ title: Jisoo_Room
 <<wait 1.0>>
 <<PlayAudio DrinkingSound 0.7>>
 
-//<<Act 지수 Jisoo1 1.17 0.322 black>>
+//<<Act 지수 Jisoo1 1.17 0.322 white>>
 <<wait 1.0>>
 그나저나 처방 받은 걸 다 먹었네. 큰일이다.
 병원을 가긴 해야하는데.
@@ -253,7 +253,7 @@ title: Letter
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw LetterContent 0.75 0.75>>
 
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 뭐야.
 어제 내가 잔소리 좀 했다고 화났나?
 아니면 설거지 좀 하라고 한 거 무시해서?
@@ -405,7 +405,7 @@ title: FoundJiwonPhone
 //휴대폰 오브젝트 선택 시 동생의 휴대폰 획득. 휴대폰 아이콘 생성.
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 여기 있다.
 
 <<wait 1.0>>
@@ -455,7 +455,7 @@ title: PhoneBoothEnd2
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Scene DrugDealBG>>
 이미지 속 장소를 찾아왔다.
-//<<Act 지수 Jisoo2 1.17 0.322 black>>
+//<<Act 지수 Jisoo2 1.17 0.322 white>>
 D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다.
 //<<UpdateAct 지수 Jisoo4>>
 와... 진짜 마약인가?
@@ -583,7 +583,7 @@ title: ParkStudents
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 근처 학교의 학생들인가보다.
 대화가 들려온다.
 
@@ -608,7 +608,7 @@ title: VendingMachine
 //자판기 클릭 시
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 
 음료수 자판기다.
 예전에 지원이랑 산책하다가 음료수를 뽑아 먹었지.
@@ -687,7 +687,7 @@ title: Weedhof
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Suljiproad_Poster 0.75 0.75>>
 홍보 문구가 너무 마약에 치우쳐 있는 것 같아.
@@ -706,7 +706,7 @@ title: Drugsnacks
 // 마약떡볶이&마약김밥
 <<SetCanvasTo VisualNovelPrefab true>>
 
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 어릴 때 나도 여기 자주 왔었지.
 지금은 웨이팅 필수 맛집이 돼버렸네...
 
@@ -876,7 +876,7 @@ title: Where
 //모든 장소를 둘러보았을 경우
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 대체 어디 있는 거지?
 
@@ -927,7 +927,7 @@ title: WalletO
 <<Hide receipt>>
 <<Hide DBG>>
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 일단은 영수증에 나온 편의점을 찾아가야 할 것 같아.
 
@@ -1049,7 +1049,7 @@ title: LaptopStory
 <<Hide Laptop(E)>>
 <<Hide DBG>>
 <<StopAudio LaptopVideo>>
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 도대체...
 얘는 이런게 있다는 걸 어떻게 알았대...?
 
@@ -1104,7 +1104,7 @@ title: JW_Wallet
 지갑도 놓고 나갔네?
 <<Hide Wallet(E)_0>>
 <<Hide DBG>>
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 혹시 모르니 챙겨두자.
 
 <<Hide 지수>>
@@ -1132,7 +1132,7 @@ title: JW_Meds
 
 <<Hide Meds(E)>>
 <<Hide DBG>>
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 
 나한테 말도 안하고. 대체 무슨 일이 있는 거야.
 
