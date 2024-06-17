@@ -97,11 +97,9 @@ public class ActionPanelButtons : MonoBehaviour
                 runner.StartDialogue("IfnotEmployeeSuit");
             }
         }
-        /*
-        else if (currentscene.name.StartsWith("S3"))
+        else if (currentscene.name == "S3_4_Officetel14th" && connectedItem.itemName == "R1403Cardkey")
         {
         }
-        */
         else
         {
 
