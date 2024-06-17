@@ -136,7 +136,10 @@ public class CallYarn : MonoBehaviour
         if(FinishedDialogues.Contains("New711")) New711();
 
         if(FinishedDialogues.Contains("InteractionFin3")) AfterD3();
+
         if(FinishedDialogues.Contains("Officetel1stfloor")) Officetel1503();
+
+        if(FinishedDialogues.Contains("RemoveUI")) Menu.instance.RemoveUI();
 
         MapController.instance.Homebutton.onClick.AddListener(MapController.instance.GoHome);
 

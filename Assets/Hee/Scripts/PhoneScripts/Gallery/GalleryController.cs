@@ -22,9 +22,9 @@ public class GalleryController : MonoBehaviour
     [SerializeField]
     private GameObject[] originPictures;
     
-    private Dictionary<string,GameObject> Pictures = new Dictionary<string, GameObject>();
-    private List<GameObject> Clues = new List<GameObject>();  // 증거 이미지 아이콘
-
+    public Dictionary<string,GameObject> Pictures = new Dictionary<string, GameObject>();
+    public List<GameObject> Clues = new List<GameObject>();  // 증거 이미지 아이콘
+    public List<GameObject> nonClues = new List<GameObject>();
 
     void Awake(){
         if(instance==null){
@@ -54,7 +54,7 @@ public class GalleryController : MonoBehaviour
         // 갤러리에 이미지 생성, 픽쳐 탭에 픽쳐 생성 후 연결
         GameObject pictureSet = Instantiate(emptyPicture,PictureTab);
         pictureSet.transform.GetChild(0).GetComponent<Image>().sprite = sprite;
-        pictureSet.name = screenshotname + "Pic";
+        pictureSet.name = screenshotname;
 
         GameObject imageIcon = Instantiate(emptyImage,GalleryContent.transform);
         imageIcon.GetComponent<Image>().sprite = sprite;
@@ -65,7 +65,7 @@ public class GalleryController : MonoBehaviour
         imageIcon.transform.SetAsFirstSibling();
 
         if(screenshotname.StartsWith("ScreenShot")){
-            // 프리팹으로 삭제버튼 만들어서 추가, 이름으로 찾기
+            nonClues.Add(imageIcon);
         }
         else{
             Clues.Add(imageIcon);

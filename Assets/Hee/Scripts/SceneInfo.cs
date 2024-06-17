@@ -11,6 +11,8 @@ public class SceneInfo : MonoBehaviour
     public GameObject[] Cluelist;  // 카메라로 찍어야 하는 증거 오브젝트들
     public GameObject[] MemoriesBG;  // 기억 돌아올때 연출 배경
 
+    public bool IsS4 = false;
+
     void Awake(){
         SceneManager.sceneLoaded += SceneManage;
     } 
@@ -44,21 +46,22 @@ public class SceneInfo : MonoBehaviour
     }
 
     GameObject memoryImg;
-    IEnumerator PlayMemory(string cluename){
+    public IEnumerator PlayMemory(string cluename){
         var runner = FindObjectOfType<DialogueRunner>();
 
-        BGoff();
-        for(int i=0; i<3; i++){
-            MemoriesBG[i].SetActive(true);
-            yield return new WaitForSeconds(0.6f);
+        if(!IsS4){
+            BGoff();
+            for(int i=0; i<3; i++){
+                MemoriesBG[i].SetActive(true);
+                yield return new WaitForSeconds(0.6f);
+            }
+            MemoriesBG[3].SetActive(true);
+
+            foreach(GameObject BG in MemoriesBG){
+                BG.SetActive(false);
+            }
         }
         GalleryController.instance.Glitch.SetActive(true);
-        MemoriesBG[3].SetActive(true);
-
-        foreach(GameObject BG in MemoriesBG){
-            BG.SetActive(false);
-        }
-
         foreach(GameObject memoryimg in GalleryController.instance.MemoryImages)
             if(memoryimg.name == cluename+"Img"){
                 Debug.Log(memoryimg.name);
@@ -71,10 +74,12 @@ public class SceneInfo : MonoBehaviour
 
     [YarnCommand("StopMemory")]
     public void StopMemory(){  // 얀에서 부를 함수
-        MemoriesBG[3].SetActive(false);
+        
         memoryImg.SetActive(false);
         GalleryController.instance.Glitch.SetActive(false);
 
+        if(IsS4) return;
+        MemoriesBG[3].SetActive(false);
         Menu.instance.UI_off();
         BGon();
     }

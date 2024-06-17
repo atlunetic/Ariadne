@@ -66,7 +66,7 @@ public class SaveAndLoad : MonoBehaviour
         nowLoading.SetActive(true);
         SceneManager.LoadScene("Menu");
         SceneManager.LoadScene(GameManager.instance.NowScene);
-        Invoke("EndLoading", 2f);
+        Invoke("EndLoading", 2.5f);
 
         var runner = FindObjectOfType<DialogueRunner>();
         runner.StartDialogue("RandomN");
@@ -109,8 +109,8 @@ public class SaveAndLoad : MonoBehaviour
             case "S3_2_Officetel1stFloor": return "오피스텔 1층";
             case "S3_3_Officetel1503": return "오피스텔 1503호";
             case "S3_4_Officetel14th": return "오피스텔 14층";
-            case "S3_1_1_Door": return "오피스텔 입구";
-            case "S3_1_2_PhoneBooth": return "오피스텔 입구";
+            case "S3_1_1_Door":
+            case "S3_1_2_PhoneBooth":
             case "S3_1_Officetel Entrance": return "오피스텔 입구";
             case "S4": return "아리아드네";
             default: return "???";
