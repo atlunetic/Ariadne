@@ -2719,7 +2719,7 @@ title: obj_key
 <<Hide DBG>>
 
 <color=yellow>* 열쇠를 습득했습니다. *</color>
-<<Hide 지수>>
+//<<Hide 지수>>
 //인벤토리에 열쇠 아이템이 추가됨.
 <<SetActiveFalse VisualNovelPrefab InStaffroom_Key>>
 <<FinishedObj VisualNovelPrefab InStaffroom_Key>>
