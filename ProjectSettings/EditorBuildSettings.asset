@@ -72,6 +72,9 @@ EditorBuildSettings:
     path: Assets/M/Scenes_M/S2/S2_8_ParkingLot.unity
     guid: 11a860c25ceffbc41b79a6df8ea9d1f6
   - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_8_ParkingLot2.unity
+    guid: b98680fa3074724488ad0284b7e004ad
+  - enabled: 1
     path: Assets/M/Scenes_M/S2/S2_9_Car.unity
     guid: 3614c94e9e23b5148b647eb479a78c77
   - enabled: 1
