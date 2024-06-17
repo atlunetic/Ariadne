@@ -18839,6 +18839,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151346382}
   m_CullTransparentMesh: 1
+--- !u!114 &1160016992 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 266352489929726784, guid: a9b1ac1df88d4ee479c3b56af2fd47ea, type: 3}
+  m_PrefabInstance: {fileID: 703743708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1165966634
 GameObject:
   m_ObjectHideFlags: 0
@@ -24279,6 +24290,7 @@ MonoBehaviour:
   IDSearchbutton: {fileID: 990208977}
   Mapbutton: {fileID: 558963360}
   jisoobutton: {fileID: 589187122}
+  officetelPhoto: {fileID: 1160016992}
 --- !u!1 &1467377946 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 306379639639708006, guid: a95c8f77a7cd42a48a39917efb4b3004, type: 3}
@@ -37966,7 +37978,7 @@ GameObject:
   - component: {fileID: 2121096544}
   - component: {fileID: 2121096543}
   m_Layer: 5
-  m_Name: Photo_of_3Img
+  m_Name: PhotoImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38303,7 +38315,7 @@ GameObject:
   - component: {fileID: 2126810729}
   - component: {fileID: 2126810728}
   m_Layer: 5
-  m_Name: 1234Img
+  m_Name: 1342Img
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

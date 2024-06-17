@@ -28,6 +28,7 @@ public class CallYarn : MonoBehaviour
     public Button IDSearchbutton;
     public Button Mapbutton;
     public Button jisoobutton;
+    public Button officetelPhoto;
 
     void Start()
     {
@@ -133,6 +134,9 @@ public class CallYarn : MonoBehaviour
         if(FinishedDialogues.Contains("ChocotalkAlarm")) ChocotalkAlarm();
 
         if(FinishedDialogues.Contains("New711")) New711();
+
+        if(FinishedDialogues.Contains("InteractionFin3")) AfterD3();
+        if(FinishedDialogues.Contains("Officetel1stfloor")) Officetel1503();
 
         MapController.instance.Homebutton.onClick.AddListener(MapController.instance.GoHome);
 
@@ -247,5 +251,18 @@ public class CallYarn : MonoBehaviour
                             MapController.instance.편의점711button.onClick.RemoveListener(ClubActive);};
         MapController.instance.편의점711button.onClick.AddListener(ClubActive);
         if(GameManager.instance.FinishedDialogues.Contains("SevenEleven")) ClubActive.Invoke();
+    }
+
+    [YarnCommand("AfterD3")]
+    public void AfterD3(){
+        GameManager.instance.FinishedDialogues.Add("InteractionFin3");
+        Callbybutton(ariadnebutton,"AfterD3");
+    }
+
+    [YarnCommand("Officetel1503")]
+    public void Officetel1503(){
+        GameManager.instance.FinishedDialogues.Add("Officetel1stfloor");
+        officetelPhoto.onClick.RemoveAllListeners();
+        Callbybutton(officetelPhoto,"Officetel1503");
     }
 }
