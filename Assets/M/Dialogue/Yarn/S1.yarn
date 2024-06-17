@@ -320,6 +320,7 @@ title: TowardsEnding1_2
     -> 미안하다고 사과하자.
         <<UpdateAct 지수 Jisoo1>>
         <<Hide LetterContent>>
+        <<Hide DBG>>
         <<SetActiveFalse VisualNovelPrefab Letter>>
         <<FinishedObj VisualNovelPrefab Letter>>
         <<jump JisooPhone>>
@@ -753,7 +754,7 @@ title: HospitalWaitingRoom
 
 <<Scene H_DrRoom>>
 
-<<Act 의사 NPC_Doctor 0.322 0.227 white>>
+<<Act 의사 NPC_Doctor 0.322 0.327 white>>
 <<Act 지수 Jisoo1 1.17 0.322 white>>
 의사: 좀 어떠셨어요.
 
@@ -1039,7 +1040,7 @@ title: LaptopStory
 조심스럽게 노트북을 열었다.
 
 //사운드 추가
-<<PlayAudio LaptopVideo 0.4>>
+<<PlayAudio LaptopVideo 0.2>>
 
 * 감기약 먹방에 대해 들어보신 적 있나요? *
 * 약물 과다복용 시 발생할 수 있는 부작용들이 있는데요. *
@@ -1075,6 +1076,7 @@ title: memory_Laptop
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<jump AfterMemory>>
 ===
 
 title: Drawer_News
@@ -1149,6 +1151,7 @@ title: memory_Meds
 
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio MemoryRecall 0.5>>
 //(토하는 지수 연출)
 ??:헉... 헉...
 ??:...
@@ -1165,6 +1168,7 @@ title: memory_Meds
 //밖에서 그걸 목격한 사람의 실루엣
 <<StopMemory  SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<jump AfterMemory>>
 
 ===
 
@@ -1231,7 +1235,7 @@ title: AfterMemory
 <<HideAll>>
 //<<Scene FullJiwonRoomBG>>
 <<PlayAudio WhiteNoise 0.4>>
-<<PlayAudio EarSound 0.6>>
+<<PlayAudio EarSound 0.8>>
 <<Draw black_bg 0.75 0.75>>
 
 아..
