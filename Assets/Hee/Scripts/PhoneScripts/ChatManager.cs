@@ -312,7 +312,7 @@ public class ChatManager : MonoBehaviour
         ChattingList.Add(new Chatting(true, "아리아드네", "chocotalk_cctv"));  // 20
         AddimageToLast(true, "ToAriadne");
         AddChatToLast(true, "혹시 이 CCTV 화면... 알아볼 수 있어요?");
-        AddChatToLast(true, "실루엣이 너무 지원이 같은 사람이 있는데...");
+        AddChatToLast(true, "찾아야하는 사람이 있는데... 실루엣이 너무 비슷해서요.");
         AddChatToLast(true, "화질이 너무 안 좋아서 구분이 안 돼요.");
         AddimageToLast(false, "FromAriadne");
         AddChatToLast(false, "이 정도면 알아볼 수 있어?");
