@@ -6,7 +6,7 @@
 <<PlayAudio BarStreet 0.4>>
 <<Scene ClubEntrance>>
 
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 이런 데가 있구나....
 
 <<UpdateAct 지수 Jisoo2>>
@@ -27,7 +27,7 @@ title: meet_gunwoo
 //<<PlayAudio 클럽내부theme파일이름>>
 
 
-<<Act 건우 Geonwoo0 0.322 0.227 black>>
+<<Act 건우 Geonwoo0 0.322 0.227 white>>
 
 <<UpdateAct 지수 Jisoo4>>
 어...
@@ -154,7 +154,7 @@ title: obj_cctv1
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 CCTV가 있네.
 ...
 CCTV라도 볼 수 있으면 좋을텐데.
@@ -175,7 +175,7 @@ title: obj_clock1
 //클릭할 경우
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw CounterbarClockBig 0.75 0.75>>
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 클럽에 웬 벽시계..?
 엄청 안어울리네.
 
@@ -202,7 +202,7 @@ title: obj_emptyglass
 
 //클릭할 경우
 
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 비어있는 술잔이다.
 혹시 모르니 챙겨둘까?
 ...
@@ -231,7 +231,7 @@ title: obj_minirefrigerator
 ...
 //술장고 이미지 종료
 
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 생수 1인 2병 무료 제공?
 챙겨갈까?
 -> 한 개만 챙겨가자.
@@ -283,11 +283,11 @@ title: obj_customers
 <<if CheckDialogue("obj_customers") == true>>
 	<<jump checkClothes>>
 <<else>>
-	<<Act 지수 Jisoo1 1.17 0.322 black>>
+	<<Act 지수 Jisoo1 1.17 0.322 white>>
 	두 사람이 대화하고 있다.
 
-	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.227 black>>
-	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 black>>
+	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.227 white>>
+	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
 
 
 	클럽고객D: 이렇게 만난 것도 인연인데 한 잔 사드리고 싶어서요.
@@ -313,9 +313,9 @@ title: obj_customers
 	<<Hide Clubtable_Glass>>
 	<<Hide DBG>>
 	<<wait 1.0>>
-	<<Act 지수 Jisoo2 1.17 0.322 black>>
-	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.227 black>>
-	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 black>>
+	<<Act 지수 Jisoo2 1.17 0.322 white>>
+	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.227 white>>
+	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
 	-> 모르는 척 하자.
 		//<<UpdateAct 지수 Jisoo2>>
 		...
@@ -364,7 +364,7 @@ title: E_NoClothes
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 
 지수: 안녕하세요.
 클럽고객E: 아, 안녕하세요.
@@ -390,7 +390,7 @@ title: E_Clothes
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 CoJIsoo1 1.17 0.322 black>>
+<<Act 지수 CoJIsoo1 1.17 0.322 white>>
 
 이제 말을 걸어도 괜찮을 것 같아.
 ...
@@ -439,7 +439,7 @@ title: UsedWaterCup
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 
-<<Act 지수 CoJIsoo1 1.17 0.322 black>>
+<<Act 지수 CoJIsoo1 1.17 0.322 white>>
 
 ...좋아.
 이걸 써야겠다.
@@ -574,7 +574,7 @@ title: obj_lsdsticker
 //클릭할 경우
 
 <<SetCanvasTo VisualNovelPrefab true7>>
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 우표인가? 귀엽게 생겼네.
 //지수 이미지 종료
@@ -675,7 +675,7 @@ title: event_gunwoo_begin1
 <<SetCanvasTo VisualNovelPrefab true>>
 <<if visited("event_gunwoo_begin1") == false>>
 	//건우 클릭시
-	<<Act 지수 Jisoo4 1.17 0.322 black>>
+	<<Act 지수 Jisoo4 1.17 0.322 white>>
 	어... 
 	건우 오빠다.
 	<<wait 1.0>>
@@ -696,13 +696,13 @@ title: event_gunwoo_begin2
 ---
 
 //건우 두번째 클릭 시
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 뭐라도 아는 게 있는지 물어보자.
 지수: 건우 오빠.
 <<wait 1.0>>
 건우 오빠는 놀란 듯 나를 바라봤다.
 //건우4
-<<Act 건우 Geonwoo4 0.322 0.227 black>>
+<<Act 건우 Geonwoo4 0.322 0.227 white>>
 
 건우: 어어... 지수야.
 //건우1
@@ -745,11 +745,11 @@ title: event_gunwoo_q1a
 
 ---
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 지수: 오빠. 어제 지원이랑 마주쳤다고 했잖아요.
 지수: 지원이 상태가 어땠어요?
 
-<<Act 건우 Geonwoo3 0.322 0.227 black>>
+<<Act 건우 Geonwoo3 0.322 0.227 white>>
 건우: ..글쎄?
 건우: 잠깐 인사만 해서. 기억이 안나네.
 <<wait 1.0>>
@@ -798,11 +798,11 @@ title: event_gunwoo_q1b
 
 ---
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 지수: 오빠. 어제 지원이랑 마주쳤다고 했잖아요.
 지수: 지원이 상태가 어땠어요?
 
-<<Act 건우 Geonwoo3 0.322 0.227 black>>
+<<Act 건우 Geonwoo3 0.322 0.227 white>>
 건우: ..글쎄?
 건우: 잠깐 인사만 해서. 기억이 안나네.
 <<wait 1.0>>
@@ -1696,7 +1696,7 @@ title: obj_studentid
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 건우 오빠가 뭘 흘리고 갔네...
 고등학교 학생증..?
 
@@ -1756,8 +1756,8 @@ title: obj_customer_f
 말을 걸어볼까? 
 
 -> 말을 걸어보자
-	<<Act 클럽고객F NPC_clubcustomer_F 0.2 0.5 black>>
-	<<Act 지수 Jisoo2 1.17 0.322 black>>
+	<<Act 클럽고객F NPC_clubcustomer_F 0.2 0.5 white>>
+	<<Act 지수 Jisoo2 1.17 0.322 white>>
 	클럽고객F: ...
 	<<wait 1.0>>
 	클럽 고객F는 무기력한 듯 아무런 반응도 하지 않았다.
@@ -1937,7 +1937,7 @@ title: obj_staffonly_lockeropen
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Toilet_staffclothe 0.75 0.75>>
 스태프 복장이 있다.
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 혹시 모르니 챙겨갈까?
 
 <<HideAll>>
@@ -1962,7 +1962,7 @@ title: obj_toiletpaper
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Toilet_rollpaper_big 0.75 0.75>>
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 휴지에 구멍이 뚫려있다.
 피 같은 게 묻어있는데..?
 
@@ -2040,13 +2040,13 @@ title: obj_staffroomdoor
 <<if CheckDialogue("obj_staffroomdoor") == false>>
 	<<FinishedDialogue VisualNovelPrefab obj_staffroomdoor>>
 	<<set $persuade = GetScore()>>
-	<<Act 지수 Jisoo2 1.17 0.322 black>>
+	<<Act 지수 Jisoo2 1.17 0.322 white>>
 	지원이가 여기서 대체 뭘 했을까...
 	CCTV라도 볼 수 있으면 좋을텐데.
 	...
 	직원에게 물어볼까?
 	-> CCTV를 보고 싶다고 말하자
-		//<<Act 클럽직원C StaffRoom_staff_C_0 0.422 0.627 black>>
+		//<<Act 클럽직원C StaffRoom_staff_C_0 0.422 0.627 white>>
 		<<UpdateAct 지수 Jisoo1>>
 		지수: 저기 혹시, CCTV 좀 확인할 수 있을까요?
 		<<if $persuade >= 7>>
@@ -2124,7 +2124,7 @@ title: club_staffroom_nostaff
 <<SetCanvasTo VisualNovelPrefab	true>>
 //직원과의 대화 이후, 다른 장소로 이동했다 Staff Room 앞으로 돌아올 경우
 
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 어... 직원이 자리를 비웠네.
 
 <<UpdateAct 지수 Jisoo2>>
@@ -2164,7 +2164,7 @@ title: game_openthedoor_intro
 
 <<UI_off MenuUI>>
 
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 아 맞다... 헤어핀이 있었네.
 
 <<UpdateAct 지수 Jisoo2>>
@@ -2259,7 +2259,7 @@ title: game_openthedoor_success
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<PlayAudio HairpinSuccess>>
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 <<wait 2.0>>
 
@@ -2283,7 +2283,7 @@ title: obj_cocatree
 
 //클릭할 경우
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 나무를 심어뒀네.
 <<Hide 지수>>
@@ -2384,7 +2384,7 @@ title: cctvOptions
 	도움을 요청해봐야겠다.
 	<<Hide CCTV_parkinglot_jisoo>>
 	<<Hide DBG>>
-	<<Act 지수 Jisoo2 1.17 0.322 black>>
+	<<Act 지수 Jisoo2 1.17 0.322 white>>
 	...
 	<<wait 1.0>>
 	<<StopAudioAll>>
@@ -2407,7 +2407,7 @@ title: chocotalk_cctv
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
-<<Act 지수 Jisoo3 1.17 0.322 black>>
+<<Act 지수 Jisoo3 1.17 0.322 white>>
 ...
 지원이가 맞는 것 같아.
 
@@ -2464,7 +2464,7 @@ title: obj_radio
 <<Hide DBG>>
 <<wait 1.0>>
 
-<<Act 지수 Jisoo3 1.17 0.322 black>>
+<<Act 지수 Jisoo3 1.17 0.322 white>>
 ...
 대체 무슨 얘기를 하는 거지..?
 잘 안들려...
@@ -2521,7 +2521,7 @@ title: event_staffroom
 //무전 핸드폰 전송 후 바로 연결
 //문 밖에서 발소리가 가까워지는 사운드
 <<PlayAudio StaffComeIn 0.6>>
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 ...
 어...
 발소리가 들린다.
@@ -2608,7 +2608,7 @@ title: event_staffroom_gunwoo2_choose
 		여기 숨는 게 아니었나.
 		<<wait 1.0>>
 		<<FadeIn>>
-		<<Act 지수 Jisoo4 1.17 0.322 black>>
+		<<Act 지수 Jisoo4 1.17 0.322 white>>
 		...
 		순간 무서운 상상을 했네.
 		거기 숨으면 안될 것 같아.
@@ -2626,7 +2626,7 @@ title: event_staffroom_gunwoo2_choose
 		여기 숨는 게 아니었나.
 		<<wait 1.0>>
 		<<FadeIn>>
-		<<Act 지수 Jisoo4 1.17 0.322 black>>
+		<<Act 지수 Jisoo4 1.17 0.322 white>>
 		...
 		순간 무서운 상상을 했네.
 		거기 숨으면 안될 것 같아.
@@ -2648,7 +2648,7 @@ title: event_staffroom_gunwoo2_choose
 		여기 숨는 게 아니었나.
 		<<wait 1.0>>
 		<<FadeIn>>
-		<<Act 지수 Jisoo4 1.17 0.322 black>>
+		<<Act 지수 Jisoo4 1.17 0.322 white>>
 		...
 		순간 무서운 상상을 했네.
 		거기 숨으면 안될 것 같아.
@@ -2666,7 +2666,7 @@ title: event_staffroom_gunwoo2_choose
 		여기 숨는 게 아니었나.
 		<<wait 1.0>>
 		<<FadeIn>>
-		<<Act 지수 Jisoo4 1.17 0.322 black>>
+		<<Act 지수 Jisoo4 1.17 0.322 white>>
 		...
 		순간 무서운 상상을 했네.
 		거기 숨으면 안될 것 같아.
@@ -2772,7 +2772,7 @@ title: obj_viplist
 	...
 	<<Hide VIPlist>>
 	<<Hide DBG>>
-	<<Act 지수 Jisoo4 1.17 0.322 black>>
+	<<Act 지수 Jisoo4 1.17 0.322 white>>
 	클럽 다니는 걸 오늘 알았는데.
 	<<UpdateAct 지수 Jisoo2>>
 	...
@@ -2809,7 +2809,7 @@ title: obj_locker
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 어, 그냥 열리네?
 안이 비어있다.
 ...
@@ -2824,7 +2824,7 @@ title: letsgetout
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 여긴 더 볼 게 없는 것 같아. 나가자.
 <<Hide 지수>>
 <<ActiveM MenuUI>>
@@ -2839,7 +2839,7 @@ title: club_viproom_entry
 <<SetCanvasTo VisualNovelPrefab true>>
 <<wait 2.0>>
 //나머지 장소(카운터&바/테이블/화장실/Staff room 전체) 다 둘러보고 나서, 이동 버튼을 누르면
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 어...
 직원이 어딘가로 들어간다.
 저긴 어디지?
@@ -2918,13 +2918,13 @@ title: obj_customerg
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 <<FinishedDialogue VisualNovelPrefab obj_customerg>>
-<<Act 지수 CoJIsoo1 1.17 0.322 black>>
+<<Act 지수 CoJIsoo1 1.17 0.322 white>>
 술냄새가 진동한다... 
 얼른 지나갈까?
 <<wait 1.0>>
 클럽 고객G: 어이 거기!
 
-<<Act 클럽고객G NPC_clubcustomer_G_0 0.322 0.527 black>>
+<<Act 클럽고객G NPC_clubcustomer_G_0 0.322 0.527 white>>
 
 ...
 <<UpdateAct 지수 CoJIsoo4>>
@@ -3147,7 +3147,7 @@ title: obj_customerg_end
 <<Hide 클럽고객G>>
 <<SetActiveFalse VisualNovelPrefab VIProom_customerG>>
 <<FinishedObj VisualNovelPrefab VIProom_customerG>>
-<<Act 지수 CoJIsoo3 1.17 0.322 black>>
+<<Act 지수 CoJIsoo3 1.17 0.322 white>>
 <<wait 1.0>>
 아무래도 수상해.
 마약 거래를 하려는 걸까?
@@ -3174,7 +3174,7 @@ title: obj_customerh
 ...
 
 //클럽고객H 왼쪽, 지수 오른쪽 배치
-<<Act 클럽고객H NPC_clubcustomer_H_0 0.322 0.427 black>>
+<<Act 클럽고객H NPC_clubcustomer_H_0 0.322 0.427 white>>
 클럽 고객H: 지원씨! 어제 그렇게 나가셔서 걱정했어요
 클럽 고객H: 지수씨랑은 얘기 잘 하셨어요?
 클럽 고객H: 저도 항상 걱정했거든요...
@@ -3182,7 +3182,7 @@ title: obj_customerh
 클럽 고객H: 그런데 왜 직원 옷을 입고 있어요?
 클럽 고객H: 못 알아볼 뻔 했어요.
 
-<<Act 지수 CoJIsoo4 1.17 0.322 black>>
+<<Act 지수 CoJIsoo4 1.17 0.322 white>>
 ...
 무슨 소리를 하는 거지?
 <<wait 0.5>>
@@ -3268,7 +3268,7 @@ title: obj_clock2
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 가만보니 저 시계, 아까부터 계속 멈춰 있네.
 <<wait 0.5>>
 //<<Draw ClockSmall_0 0.75 0.75>>
@@ -3311,7 +3311,7 @@ title: game_clock_success
 ..아. 머리 아파.
 <<wait 1.0>>
 
-<<Act 지수 EJisoo3 1.17 0.322 black>>
+<<Act 지수 EJisoo3 1.17 0.322 white>>
 내가 꿈을 꾸나?
 시계에서 빛이 뿜어져 나온 것 같았는데.
 ...
@@ -3352,7 +3352,7 @@ title: obj_viproomdoor
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
-<<Act 지수 EJisoo3 1.17 0.322 black>>
+<<Act 지수 EJisoo3 1.17 0.322 white>>
 ...
 문이 잠겨있다.
 안에서 소리가 들리는데?
@@ -3458,8 +3458,8 @@ CCTV에 찍힌 그 인형이야.
 
 //건우 왼쪽, 지수 오른쪽
 
-<<Act 지수 Jisoo3 1.17 0.322 black>>
-<<Act 건우 Geonwoo2 0.322 0.227 black>>
+<<Act 지수 Jisoo3 1.17 0.322 white>>
+<<Act 건우 Geonwoo2 0.322 0.227 white>>
 지수: 가운데에 있는 차요.
 <<UpdateAct 지수 Jisoo2>>
 지수: ...
@@ -3501,7 +3501,7 @@ title: inventory_notjelly
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 //인벤토리에서 젤리 봉지가 아니라 다른 아이템 사용시
-<<Act 건우 Geonwoo1 0.322 0.227 black>>
+<<Act 건우 Geonwoo1 0.322 0.227 white>>
 건우: ...
 건우: 다른 거 없냐?
 
@@ -3517,11 +3517,11 @@ title: inventory_drugjelly
 <<SetCanvasTo VisualNovelPrefab true>>
 //인벤토리에서 젤리 봉지 사용시
 <<UI_off MenuUI>>
-<<Act 건우 Geonwoo2 0.322 0.227 black>>
+<<Act 건우 Geonwoo2 0.322 0.227 white>>
 건우: ...
 건우: 이거 어디서 났어?
 
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 지수: 아... 아까 화장실에서 주웠어요.
 건우: ...
 건우: 너 이거 먹었냐?

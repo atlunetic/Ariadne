@@ -21,7 +21,7 @@ title: Officetel3
 <<SetCanvasTo VisualNovelPrefab true>>
 // 지수2
 
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ….
 이 오피스텔에 지원이가 있을까?
 그런데 어떻게 들어가지.
@@ -46,7 +46,7 @@ title: Poppy
 
 <<SetCanvasTo VisualNovelPrefab true>>
 // 지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 ..?
 뭔가 익숙한 꽃이다.
 ...
@@ -87,7 +87,7 @@ title: NationalFlower
 
 <<SetCanvasTo VisualNovelPrefab true>>
 // 지수2
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ..?
 국화를 심어뒀네...
 ...
@@ -104,7 +104,7 @@ title: VendingMachine3
 <<SetCanvasTo VisualNovelPrefab true>>
 자판기다.
 //지수1
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 밑에 뭐라도 있는지 살펴볼까?
 <<wait 1.0>>
 ...
@@ -123,7 +123,7 @@ title: FlashVM
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //지수1
-<<Act 지수 Jisoo1 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 손전등으로 자판기 밑을 살펴볼까?
 ….
 ….
@@ -167,7 +167,7 @@ title: PhoneBooth
 <<ChangeSceneTo VisualNovelPrefab S3_1_2_PhoneBooth>>
 
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 ...
 요즘도 공중전화가 있네...
 <<Hide 지수>>
@@ -182,7 +182,7 @@ title: Flashlight
 <<SetCanvasTo VisualNovelPrefab true>>
 
 //지수2
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 손전등이 여기 왜 있지?
 ...
 어딘가 쓸 데가 있지 않을까?
@@ -205,7 +205,7 @@ title: SynthWeed
 <<SetCanvasTo VisualNovelPrefab true>>
 
 //지수2
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 명함 같은 걸 뿌려뒀네.
 <<Hide 지수>>
@@ -229,7 +229,7 @@ title: GeonwooCard
 <<Draw Phonebooth_namecard_BIG 0.75 0.75>>
 //명함 팝업 이미지
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 ..?
 이건우..?
 번호도 익숙한데.
@@ -257,11 +257,11 @@ title: memory_GeonwooCard
 //(건우의 명함 이미지 확대)
 
 //건우1
-<<Act 건우 Geonwoo1 0.322 0.227 black>>
+<<Act 건우 Geonwoo1 0.322 0.227 white>>
 건우: 명함도 뽑았고!
 건우: 이제 돈 빡세게 벌어야지.
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 지수: 왜? 뭐 사려고?
 건우: ..그런 게 있다.
 건우: 너는 알면 안돼, 임마.
@@ -287,7 +287,7 @@ title: OfficetelDoor
 //출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
 
 //지수2
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 ...
 카드키가 있거나 비밀번호를 알아야 할 것 같다.
@@ -305,7 +305,7 @@ title: Scribble1342
 //4-1. 출입문 비번 위쪽 낙서 (1324) - 가짜 증거
 
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 ...
 비밀번호인가?
 눌러보자.
@@ -336,7 +336,7 @@ title: memory_1342
 //증거 촬영 시 돌아오는 기억: 바뀌고 어두워지는 배경, 팝업이미지X, 왼쪽에 지원, 오른쪽에 지수, 지원 (둘 모두 이미지 까맣게)
 //(지원과 지수의 오피스텔 앞 대화)
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 지수: 뭐야? 여기 누가 비밀번호 적어뒀어.
 지원: 왠지... 
 지원: 오피스텔에 수상한 사람 돌아다닌다는 안내문도 붙었잖아.
@@ -364,7 +364,7 @@ title: InteractionFin3
 <<SetCanvasTo VisualNovelPrefab true>>
 //(모든 오브젝트와 상호작용 한 뒤)
 //지수2
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 ...
 뭔가 눈에 띄는 게 없네.
@@ -400,7 +400,7 @@ title: AfterDChat3
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 ...
 주머니?
 
@@ -434,7 +434,7 @@ title: IfEmployeeSuit
 //(♫Sound: 주머니 부스럭거리는 소리)
 <<PlayAudio PocketSearch>>
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 
 어...
 안주머니에 뭐가 있다.
@@ -470,12 +470,12 @@ title: OfficetelDoorwcard
 
 //조직원 왼쪽, 지수 오른쪽 배치
 
-<<Act 조직원 NPC_1503jopok 0.322 0.227 black>>
+<<Act 조직원 NPC_1503jopok 0.322 0.227 white>>
 
 조직원: 내가 제일 좋아하는 건?
 
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 어..?
 누구지.
 ...
@@ -576,7 +576,7 @@ title: Officetel1stfloor
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //지수2
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 ...
 
@@ -602,7 +602,7 @@ title: Officetel1503
 ...
 ...
 //지수3
-<<Act 지수 Jisoo3 1.17 0.322 black>>
+<<Act 지수 Jisoo3 1.17 0.322 white>>
 설마 이 오피스텔 사진인가..?
 문이 똑같이 생겼는데...
 
@@ -642,7 +642,7 @@ title: Officetel15thfloor
 <<PlayAudio ElevatorDoorOpen>>
 <<PlayAudio Crowded>>
 //지수2
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 아래층이 시끄럽네.
 무슨 일이 있나?
@@ -659,7 +659,7 @@ title: Officetel15thfloor
 ...
 
 //지수2
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 안에는 아무도 없는 것 같다.
 들어가보자.
 <<Hide 지수>>
@@ -695,7 +695,7 @@ title: OfficetelInside1503
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 ...
 ...
 설마 마약 만드는 곳인가?
@@ -730,7 +730,7 @@ title: GangEvent
 //(♫Sound: 갑자기 누군가 가까워지는 소리가 복도에서 울림)
 <<PlayAudio CloserGang>>
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 어...
 누가 이쪽으로 온다.
 ...
@@ -744,7 +744,7 @@ title: GangEvent
 	...
 	...
 	//조직원 왼쪽에서 등장
-	<<Act 조직원 NPC_1503jopok 0.322 0.227 black>>
+	<<Act 조직원 NPC_1503jopok 0.322 0.227 white>>
 	조직원: 흐흐흠~
 	조직원: 아, 여깄다.
 	//조직원 이미지 종료
@@ -757,7 +757,7 @@ title: GangEvent
 	...
 	...
 	//지수 이미지 등장, 지수1
-	<<Act 지수 Jisoo1 1.17 0.322 black>>
+	<<Act 지수 Jisoo1 1.17 0.322 white>>
 	갔다.
 	다시 둘러볼까?
 	//지수 이미지 종료
@@ -782,9 +782,9 @@ title: Ending4_2
 //(갑자기 화면 흔들리는 효과)
 조직원: 너 뭐야.
 //조직원 왼쪽, 지수 오른쪽 배치
-<<Act 조직원 NPC_1503jopok 0.322 0.227 black>>
+<<Act 조직원 NPC_1503jopok 0.322 0.227 white>>
 //지수5
-<<Act 지수 Jisoo5 1.17 0.322 black>>
+<<Act 지수 Jisoo5 1.17 0.322 white>>
 어...
 큰일이다.
 //(♫Sound: 휴대폰 다이얼 버튼음)
@@ -812,7 +812,7 @@ title: DrugDrink
 <<SetCanvasTo VisualNovelPrefab true>>
 //주요 오브젝트 1. 마약 음료병 => 논의 후 수정
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 뭘 마시다 남겨뒀네.
 //지수2
 <<UpdateAct 지수 Jisoo2>>
@@ -837,7 +837,7 @@ title: PhotoOf3
 	<<Draw PhotoOf3 0.75 0.75>>
 
 	//지수4
-	<<Act 지수 Jisoo4 1.17 0.322 black>>
+	<<Act 지수 Jisoo4 1.17 0.322 white>>
 	...
 	..뭐지?
 	왜 이런 사진이 여기 있는 거야...
@@ -884,7 +884,7 @@ title: R1403Cardkey
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 ...
 카드키?
 ...
@@ -917,7 +917,7 @@ title: Crack
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //지수2
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 광물같이 생겼다.
 <<Hide 지수>>
@@ -936,7 +936,7 @@ title: InteractionFinto14
 //모든 오브젝트&이벤트 확인 이후 14층으로 자동이동
 
 //지수2
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 여긴 다 둘러본 것 같아.
 14층으로 가보자.
 ...
@@ -976,7 +976,7 @@ title: Officetel14
 <<SetCanvasTo VisualNovelPrefab true>>
 //(인벤토리의 카드키를 사용할 경우)
 //지수2
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 이 안에 지원이가 있나?
 카드키를 찍어보자.
@@ -1003,11 +1003,11 @@ title: JiwonIn1403
 //장소 4-1. 1403호, 지원이 갇혀있는 방
 //아래 텍스트 자동 진행
 //지수5
-<<Act 지수 Jisoo5 1.17 0.322 black>>
+<<Act 지수 Jisoo5 1.17 0.322 white>>
 ..!
 지수: 지원아..!
 //지원0
-<<Act 지원 Jiwon0 0.322 0.227 black>>
+<<Act 지원 Jiwon0 0.322 0.227 white>>
 지원: 어…. 지수?
 //지수3
 <<UpdateAct 지수 Jisoo3>>
@@ -1591,10 +1591,10 @@ title:BacktoOfficetel1stFloor
 ---
 
 //지수2
-<<Act 지수 Jisoo2 1.17 0.322 black>>
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 지수: 지원아….
 지수: 너 무슨 일이 있었던 거야?
-<<Act 지원 JIwon3 0.322 0.227 black>>
+<<Act 지원 JIwon3 0.322 0.227 white>>
 //지원3
 지원: ...
 지원: 그게...
@@ -1614,8 +1614,8 @@ title:BacktoOfficetel1stFloor
 ...
 ..!
 지원이가 중심을 잃고 넘어졌다.
-<<Act 지수 Jisoo4 1.17 0.322 black>>
-<<Act 지원 JIwon2 0.322 0.227 black>>
+<<Act 지수 Jisoo4 1.17 0.322 white>>
+<<Act 지원 JIwon2 0.322 0.227 white>>
 //지수4
 지수: ..! 얼른 내 손 잡아.
 //지원2
@@ -1632,10 +1632,10 @@ title:BacktoOfficetel1stFloor
 그 때, 반대편 복도에서 수상한 사람들이 나타났다.
 
 //지수3
-<<Act 지수 Jisoo3 1.17 0.322 black>>
+<<Act 지수 Jisoo3 1.17 0.322 white>>
 지수: 지원아, 나한테 기대.
 지수: 내가 부축해줄게. 빨리.
-<<Act 지원 JIwon1 0.322 0.227 black>>
+<<Act 지원 JIwon1 0.322 0.227 white>>
 //지원1
 지원: ...
 지원: 미안해.
