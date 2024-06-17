@@ -122,4 +122,10 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
         yield return new WaitForSeconds(1f);
         CallYarn.instance.callYarn("letsgetout");
     }
+
+    [YarnCommand("RemoveUI")]
+    public void RemoveUI(){
+        GameManager.instance.FinishedDialogues.Add("RemoveUI");
+        UIButtons.SetActive(false);
+    }
 }
