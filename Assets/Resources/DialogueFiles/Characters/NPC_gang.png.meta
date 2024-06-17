@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5a51922f1f2cf9449a99ea4621e556a2
+guid: c7d43496fdd44f44a85b7c727a28b8a7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,22 +97,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NPC_Clubcustomer_D_0
+      name: NPC_gang_0
       rect:
         serializedVersion: 2
-        x: 68
-        y: 40
-        width: 318
-        height: 1008
+        x: 0
+        y: 713
+        width: 43
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e7e4927b973c024c8fb6341f9908db3
-      internalID: -759395243
+      spriteID: dc3e2e1cd2f825349841a2f6b266a567
+      internalID: -311966222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_gang_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 727
+        width: 81
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5fb55fd8db7ded47a526ecb57616cb5
+      internalID: -448434988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_gang
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 63
+        width: 400
+        height: 914
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f3794e528b05b4c9e72bbe52d672ee
+      internalID: 495114512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_gang_3
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 697
+        width: 87
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081574019f1dc0a44ab674cf66ea27d2
+      internalID: 611678699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_gang_4
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 158
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079fba3107b638745a27a001e12dca79
+      internalID: 1129069247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_gang_5
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 138
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9075c86f693be8d41a68bc80baac494e
+      internalID: 570235461
       vertices: []
       indices: 
       edges: []
@@ -128,7 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NPC_Clubcustomer_D_0: -759395243
+      NPC_gang: 495114512
+      NPC_gang_0: -311966222
+      NPC_gang_1: -448434988
+      NPC_gang_3: 611678699
+      NPC_gang_4: 1129069247
+      NPC_gang_5: 570235461
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

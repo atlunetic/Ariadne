@@ -430,6 +430,7 @@ title: IfEmployeeSuit
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //(인벤토리에서 '직원 복장'을 사용할 경우)
+<<UI_off MenuUI>>
 ...
 //(♫Sound: 주머니 부스럭거리는 소리)
 <<PlayAudio PocketSearch>>
@@ -514,9 +515,7 @@ title: OfficetelDoorwcard
 	빨리 움직여야겠다.
 	<<HideAll>>
 	<<ChangeSceneTo VisualNovelPrefab S3_2_Officetel1stFloor>>
-	//<<jump Officetel1stfloor>>
-	//0616 강제 진행- 추후 수정 필요
-	<<jump Officetel15thfloor>>
+	<<jump Officetel1stfloor>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
