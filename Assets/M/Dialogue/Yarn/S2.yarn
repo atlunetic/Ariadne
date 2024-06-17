@@ -208,7 +208,7 @@ title: obj_emptyglass
 ...
 
 <<Hide 지수>>
-* 비어있는 술잔을 획득했다. *
+<color=yellow>* 비어있는 술잔을 획득했다. *</color>
 
 //인벤토리에 빈 술잔 아이템 추가 (구현 완료)
 
@@ -237,7 +237,7 @@ title: obj_minirefrigerator
 -> 한 개만 챙겨가자.
 	그래... 하나만 챙기자.
 	<<HideAll>>
-	* 생수가 든 페트병을 습득했다. *
+	<color=yellow>* 생수가 든 페트병을 습득했다. *</color>
 	<<AddToInventory VisualNovelPrefab WaterBottle>>
 	<<declare $WaterBottle = 0 as number>>
 	<<set $WaterBottle = 1>>
@@ -247,7 +247,7 @@ title: obj_minirefrigerator
 -> 두 개 다 챙겨가자.
 	혹시 모르니 두 개 챙겨두자.
 	<<HideAll>>
-	* 생수가 든 페트병을 습득했다. *
+	<color=yellow>* 생수가 든 페트병을 습득했다. *</color>
 	<<AddToInventory VisualNovelPrefab WaterBottle>>
 	<<AddToInventory VisualNovelPrefab WaterBottle>>
 	<<set $WaterBottle = 2>>
@@ -286,10 +286,8 @@ title: obj_customers
 	<<Act 지수 Jisoo1 1.17 0.322 white>>
 	두 사람이 대화하고 있다.
 
-	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.227 white>>
+	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.407 white>>
 	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
-
-
 	클럽고객D: 이렇게 만난 것도 인연인데 한 잔 사드리고 싶어서요.
 	클럽고객D가 E에게 술잔을 내민다.
 
@@ -300,7 +298,7 @@ title: obj_customers
 	클럽 고객E가 술잔을 받았다.
 	<<HideAll>>
 	<<DrawFadeIn DBG 0.75 0.75 0.2>>
-	<<Draw Clubtable_Glass 0.75 0.75>>
+	<<Draw Clubtable_Glass 0.725 0.75>>
 
 	...
 	//<<UpdateAct 지수 Jisoo3>>
@@ -313,19 +311,14 @@ title: obj_customers
 	<<Hide Clubtable_Glass>>
 	<<Hide DBG>>
 	<<wait 1.0>>
-	<<Act 지수 Jisoo2 1.17 0.322 white>>
-	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.227 white>>
-	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
 	-> 모르는 척 하자.
-		//<<UpdateAct 지수 Jisoo2>>
 		...
 		그래. 괜히 나섰다가 욕 먹는 것보단 낫지.
-		<<Hide 지수>>
-		<<Hide 클럽고객D>>
-		<<Hide 클럽고객E>>
 		<<SetCanvasTo VisualNovelPrefab false>>
-	-> 가서 도와주자
-		//<<UpdateAct 지수 Jisoo2>>
+	-> 가서 도와주자.
+		<<Act 지수 Jisoo2 1.17 0.322 white>>
+		<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.407 white>>
+		<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
 		...
 		진짜로 약을 탄거면...
 		<<UpdateAct 지수 Jisoo3>>
@@ -579,19 +572,15 @@ title: obj_lsdsticker
 우표인가? 귀엽게 생겼네.
 //지수 이미지 종료
 <<Hide 지수>>
-<<PlayAudio WhenChoose 0.3>>
-* 일기장에 'LSD 스티커'가 추가되었습니다. *
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 'LSD 스티커'가 추가되었습니다. *</color>
 
 <<RevealDiary DiaryManager Page6>>
 
 <<SetActiveFalse VisualNovelPrefab Clubtable_Drug>>
 <<FinishedObj VisualNovelPrefab Clubtable_Drug>>
 
-<<if visited("DiaryTutorial")==false>>
-    <<jump DiaryTutorial>>
-<<else>>
-    <<SetCanvasTo VisualNovelPrefab false>>
-<<endif>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -633,19 +622,16 @@ title: menu_philopon
 //메뉴판 이미지의 '필로폰' 텍스트 클릭 시
 ...
 술 이름이 왜 이래?
-<<PlayAudio WhenChoose 0.3>>
-* 일기장에 '필로폰'이 추가되었습니다. *
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 '필로폰'이 추가되었습니다. *</color>
 
 <<RevealDiary DiaryManager Page7>>
 <<SetActiveFalse VisualNovelPrefab menu_philopon>>
 <<FinishedObj VisualNovelPrefab menu_philopon>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
-<<if visited("DiaryTutorial")==false>>
-    <<jump DiaryTutorial>>
-<<else>>
-    <<SetCanvasTo VisualNovelPrefab false>>
-<<endif>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -673,7 +659,7 @@ title: event_gunwoo_begin1
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<if visited("event_gunwoo_begin1") == false>>
+<<if CheckDialogue("event_gunwoo_begin1") == false>>
 	//건우 클릭시
 	<<Act 지수 Jisoo4 1.17 0.322 white>>
 	어... 
@@ -682,6 +668,7 @@ title: event_gunwoo_begin1
 	<<UpdateAct 지수 Jisoo2>>
 	어제 지원이랑 클럽에서 마주쳤다고 했지.
 	그러면... 뭐라도 알고 있을 것 같은데.
+	<<FinishedDialogue VisualNovelPrefab event_gunwoo_begin1>>
 	<<HideAll>>
 <<else>>
 	<<jump event_gunwoo_begin2>>
@@ -724,9 +711,9 @@ title: event_gunwoo_tutorial
 //텍스트 볼드체 (취소: 유니티상에서 너무 굵음)
 <<BGoff SceneManager>>
 <<PlayAudio Minigame 0.6 loop>>
-* 건우와 대화해보자! *
-* 건우와의 대화를 통해 도움을 요청해봅시다. *
-* 어쩌면 건우가 도움을 줄 수도... *
+<color=yellow>* 건우와 대화해보자! *</color>
+<color=yellow>* 건우와의 대화를 통해 도움을 요청해봅시다. *</color>
+<color=yellow>* 어쩌면 건우가 도움을 줄 수도... *</color>
 
 <<declare $persuade = 5 as number>>
 <<set $persuade = 5>>
@@ -1796,7 +1783,6 @@ title: obj_drugjelly
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Toilet_drugjelly 0.75 0.75>>
 <<wait 2.0>>
-<<Hide Toilet_drugjelly>>
 
 <<UpdateAct 지수 Jisoo4>>
 젤리인가?
@@ -1806,7 +1792,9 @@ title: obj_drugjelly
 ...
 
 -> 주워보자
-	* 젤리가 든 봉지를 습득했다. *
+	<<Hide Toilet_drugjelly>>
+	<<Hide DBG>>
+	<color=yellow>* 젤리가 든 봉지를 습득했다. *</color>
 	...
 	//인벤토리에 「젤리 봉지」 아이템이 추가됨.
 	<<AddToInventory VisualNovelPrefab DrugJelly>>
@@ -1942,7 +1930,7 @@ title: obj_staffonly_lockeropen
 
 <<HideAll>>
 
-* 스태프 복장을 습득했다. *
+<color=yellow>* 스태프 복장을 습득했다. *</color>
 //인벤토리에 「스태프 복장」 아이템이 추가됨.
 <<SetActiveFalse VisualNovelPrefab Locker>>
 <<FinishedObj VisualNovelPrefab Locker>>
@@ -2072,8 +2060,8 @@ title: obj_staffroomdoor_1
 <<HideAll>>
 
 직원이 스태프룸 문을 열어줬다.
-<<SetActiveFalse VisualNovelPrefab StaffRoom_staff_C>>
-<<FinishedObj VisualNovelPrefab StaffRoom_staff_C>>
+<<SetActiveFalse VisualNovelPrefab Staffroom_Door>>
+<<FinishedObj VisualNovelPrefab Staffroom_Door>>
 <<deActiveM MenuUI>>
 <<ChangeSceneTo VisualNovelPrefab S2_4_1_StaffRoom>>
 <<jump club_staffroom_inside>>
@@ -2130,6 +2118,7 @@ title: club_staffroom_nostaff
 <<UpdateAct 지수 Jisoo2>>
 ...	
 <<Hide 지수>>
+<<jump club_staffroomdoor_nostaff>>
 <<SetCanvasTo VisualNovelPrefab	false>>
 
 
@@ -2162,6 +2151,8 @@ title: game_openthedoor_intro
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
+<<DeleteItem Inventory Hairpin>>
+
 <<UI_off MenuUI>>
 
 <<Act 지수 Jisoo4 1.17 0.322 white>>
@@ -2178,20 +2169,19 @@ title: game_openthedoor_intro
 <<wait 1.0>>
 <<Hide 지수>>
 //미니게임 씬으로 이동
-<<ChangeSceneTo VisualNovelPrefab lockpick>>
+<<Scene keyhole_outer(bg)>>
 <<PlayAudio Minigame 0.6 loop>>
-* 헤어핀으로 문을 따자! *
-* 헤어핀을 이용해 Staff Room의 문을 열어봅시다. *
-* 문따기를 시도하는 방법 *
-* 헤어핀은 마우스를 따라옵니다. *
-* 마우스를 여기저기 움직이며 적당한 각도에 마우스를 둔 후, 마우스 클릭을 통해 문따기를 시도할 수 있습니다 *
-* 미세한 각도 조정을 통해 문따기를 성공해보세요! *
-* 제한 시간 내에 문을 열지 못하면 문따기에 실패합니다. *
-* 기회는 3번까지 주어집니다. *
-
-
-
-
+<color=yellow>* 헤어핀으로 문을 따자! *</color>
+<color=yellow>* 헤어핀을 이용해 Staff Room의 문을 열어봅시다. *</color>
+<color=yellow>* 문따기를 시도하는 방법 *</color>
+<color=yellow>* 헤어핀은 마우스를 따라옵니다. *</color>
+<color=yellow>* 마우스를 여기저기 움직이며 적당한 각도에 마우스를 둔 후, 마우스 클릭을 통해 문따기를 시도할 수 있습니다 *</color>
+<color=yellow>* 미세한 각도 조정을 통해 문따기를 성공해보세요! *</color>
+<color=yellow>* 제한 시간 내에 문을 열지 못하면 문따기에 실패합니다. *</color>
+<color=yellow>* 기회는 3번까지 주어집니다. *</color>
+<<ChangeSceneTo VisualNovelPrefab lockpick>>
+<<wait 1.0>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2269,10 +2259,10 @@ title: game_openthedoor_success
 ...
 <<StopAudio Minigame>>
 <<ChangeSceneTo VisualNovelPrefab S2_4_1_StaffRoom>>
-<<jump club_staffroom_inside>>
 <<deActiveM MenuUI>>
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<jump club_staffroom_inside>>
 
 
 ===
@@ -2287,19 +2277,12 @@ title: obj_cocatree
 ...
 나무를 심어뒀네.
 <<Hide 지수>>
-<<PlayAudio WhenChoose 0.3>>
-* 일기장에 '코카인'이 추가되었습니다. *
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 '코카인'이 추가되었습니다. *</color>
 
 <<RevealDiary DiaryManager Page8>>
 <<SetActiveFalse VisualNovelPrefab Staffroom_Tree>>
 <<FinishedObj VisualNovelPrefab Staffroom_Tree>>
-
-<<if visited("DiaryTutorial")==false>>
-    <<jump DiaryTutorial>>
-<<else>>
-    <<SetCanvasTo VisualNovelPrefab false>>
-<<endif>>
-
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -2725,6 +2708,7 @@ title: obj_key
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Key 0.75 0.75>>
 어... 열쇠다.
+<<AddToInventory VisualNovelPrefab Key>>
 <<wait 0.5>>
 어디 쓰는 열쇠지?
 
@@ -2735,12 +2719,9 @@ title: obj_key
 <<Hide Key>>
 <<Hide DBG>>
 
-* 열쇠를 습득했습니다. *
-
+<color=yellow>* 열쇠를 습득했습니다. *</color>
+//<<Hide 지수>>
 //인벤토리에 열쇠 아이템이 추가됨.
-
-<<AddToInventory VisualNovelPrefab Key>>
-
 <<SetActiveFalse VisualNovelPrefab InStaffroom_Key>>
 <<FinishedObj VisualNovelPrefab InStaffroom_Key>>
 
@@ -3527,8 +3508,8 @@ title: inventory_drugjelly
 건우: 너 이거 먹었냐?
 지수: 안 먹었는데 왜요?
 건우: ... 이거 마약젤리 같은데.
-<<PlayAudio WhenChoose 0.3>>
-* 일기장에 '마약 젤리'가 추가되었습니다. *
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 '마약 젤리'가 추가되었습니다. *</color>
 <<RevealDiary DiaryManager Page1>>
 
 지수: 네..?
@@ -3704,9 +3685,8 @@ title: obj_navigation
 	주소를 기억해둬야 할 것 같아.
 	<<Hide NaviList>>
 	<<Hide DBG>>
-	<<declare $nav = 0 as number>>
-	<<set $nav = 1>>
-	<<if visited("memory_BrokenGlasses")==true>>
+	<<FinishedDialogue VisualNovelPrefab obj_navigation>>
+	<<if CheckDialogue("memory_BrokenGlasses")==true>>
 		<<jump event_movetostairs>>
 	<<endif>>
 	<<SetCanvasTo VisualNovelPrefab false>>
@@ -3726,7 +3706,7 @@ title: obj_brokenglasses
 //클릭할 경우
 안경..?
 깨져있네...
-
+<<FinishedDialogue VisualNovelPrefab obj_brokenglasses>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -3745,10 +3725,10 @@ title: memory_BrokenGlasses
 건우: 미안하다.
 ???: ...
 <<StopMemory SceneManager>>
-<<if $nav == 1>>
+<<FinishedDialogue VisualNovelPrefab memory_BrokenGlasses>>
+<<if CheckDialogue("obj_navigation") == true>>
 	<<jump event_movetostairs>>
 <<endif>>
-
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -3768,12 +3748,9 @@ XX 오피스텔로 가보자.
 //슥슥 하는 효과음
 <<PlayAudio Wipe>>
 <<wait 1.0>>
-
 ...
 ..됐다.
 ...
-
-
 <<ChangeSceneTo VisualNovelPrefab S2_10_Stairs>>
 <<wait 1.0>>
 <<StartPhoneChat PhoneController 22>>
@@ -3838,6 +3815,8 @@ title: WrongClothes
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 지금 입으면 눈에 띌 것 같아...
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===

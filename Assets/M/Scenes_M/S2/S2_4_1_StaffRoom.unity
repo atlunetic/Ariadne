@@ -1374,6 +1374,7 @@ GameObject:
   - component: {fileID: 1514151992}
   - component: {fileID: 1514151996}
   - component: {fileID: 1514151995}
+  - component: {fileID: 1514151997}
   m_Layer: 0
   m_Name: InStaffroom_Key
   m_TagString: Untagged
@@ -1410,7 +1411,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.51903105, y: -3.1334085}
@@ -1522,6 +1523,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueTitle: obj_key
+--- !u!114 &1514151997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514151991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293ee0a3658a8584d92d1598dec7bf76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneItem: {fileID: 1514151995}
 --- !u!1 &1783955685
 GameObject:
   m_ObjectHideFlags: 0

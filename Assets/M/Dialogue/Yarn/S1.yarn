@@ -253,18 +253,18 @@ title: Letter
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw LetterContent 0.75 0.75>>
 
-<<Act 지수 Jisoo4 1.17 0.322 white>>
+//<<Act 지수 Jisoo4 1.17 0.322 white>>
 뭐야.
 어제 내가 잔소리 좀 했다고 화났나?
 아니면 설거지 좀 하라고 한 거 무시해서?
 어떡하지...
 
 -> 뭐 자기가 알아서 하겠지.
-    <<UpdateAct 지수 Jisoo2>>
+    //<<UpdateAct 지수 Jisoo2>>
     그래도... 걱정되니까 연락해볼까?
     <<jump TowardsEnding1_1>>
 -> 미안하다고 사과하자.
-    <<UpdateAct 지수 Jisoo1>>
+    //<<UpdateAct 지수 Jisoo1>>
     <<Hide LetterContent>>
     <<Hide DBG>>
     <<SetActiveFalse VisualNovelPrefab Letter>>
@@ -284,7 +284,7 @@ title: TowardsEnding1_1
         무슨 일 생기면 어떡하지..
         <<jump TowardsEnding1_2>>
     -> 미안하다고 사과하자.
-        <<UpdateAct 지수 Jisoo1>>
+        //<<UpdateAct 지수 Jisoo1>>
         <<Hide LetterContent>>
         <<Hide DBG>>
         <<SetActiveFalse VisualNovelPrefab Letter>>
@@ -295,7 +295,7 @@ title: TowardsEnding1_1
         그래도... 걱정되니까 연락해볼까?
         <<jump TowardsEnding1_2>>
     -> 미안하다고 사과하자.
-        <<UpdateAct 지수 Jisoo1>>
+        //<<UpdateAct 지수 Jisoo1>>
         <<Hide LetterContent>>
         <<Hide DBG>>
         <<SetActiveFalse VisualNovelPrefab Letter>>
@@ -315,11 +315,12 @@ title: TowardsEnding1_2
         그래도... 걱정되니까 연락해볼까?
         <<Hide LetterContent>>
         <<Hide DBG>>
-        <<Hide 지수>>
+        //<<Hide 지수>>
         <<jump Ending1>>
     -> 미안하다고 사과하자.
-        <<UpdateAct 지수 Jisoo1>>
+        //<<UpdateAct 지수 Jisoo1>>
         <<Hide LetterContent>>
+        <<Hide DBG>>
         <<SetActiveFalse VisualNovelPrefab Letter>>
         <<FinishedObj VisualNovelPrefab Letter>>
         <<jump JisooPhone>>
@@ -328,10 +329,10 @@ title: TowardsEnding1_2
         무슨 일 생기면 어떡하지.
         <<Hide LetterContent>>
         <<Hide DBG>>
-        <<Hide 지수>>
+        //<<Hide 지수>>
         <<jump Ending1>>
     -> 미안하다고 사과하자.
-        <<UpdateAct 지수 Jisoo1>>
+        //<<UpdateAct 지수 Jisoo1>>
         <<Hide LetterContent>>
         <<Hide DBG>>
         <<SetActiveFalse VisualNovelPrefab Letter>>
@@ -556,7 +557,7 @@ title: Newspaper
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
-<<Draw Park_News 0.75 0.75>>
+<<Draw Park_News 0.75 0.9>>
 * (제목) 유명 의원 A, 마약류 처방으로 경찰 입건 *
 
 <<wait 1.0>>
@@ -630,14 +631,14 @@ title: MDMA
 
 ...
 비타민인가?
-<<PlayAudio WhenChoose 0.3>>
-* 일기장에 'MDMA'가 추가되었습니다. *
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 'MDMA'가 추가되었습니다. *</color>
 
 <<RevealDiary DiaryManager Page4>>
 <<SetActiveFalse VisualNovelPrefab 3Drug>>
 <<FinishedObj VisualNovelPrefab 3Drug>>
 
-<<if visited("DiaryTutorial")==false>>
+<<if CheckDialogue("DiaryTutorial")==false>>
     <<jump DiaryTutorial>>
 <<else>>
     <<SetCanvasTo VisualNovelPrefab false>>
@@ -687,7 +688,7 @@ title: Weedhof
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<Act 지수 Jisoo2 1.17 0.322 white>>
+//<<Act 지수 Jisoo2 1.17 0.322 white>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Suljiproad_Poster 0.75 0.75>>
 홍보 문구가 너무 마약에 치우쳐 있는 것 같아.
@@ -749,12 +750,12 @@ title: HospitalWaitingRoom
 언제쯤 들어갈 수 있으려나.
 ...
 <<PlayAudio HospitalAlert 0.3>>
-안내음 '김지수님, 1번 진료실로 들어오세요.'
+<i>'김지수님, 1번 진료실로 들어오세요.'
 
 <<Scene H_DrRoom>>
 
-<<Act 의사 NPC_Doctor 0.322 0.227>>
-<<Act 지수 Jisoo1 1.17 0.322>>
+<<Act 의사 NPC_Doctor 0.322 0.327 white>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 의사: 좀 어떠셨어요.
 
 지수: 여전하네요. 약이 다 떨어져가서 왔어요.
@@ -1012,7 +1013,7 @@ title: Diary1
 군데군데 비어 있네.
 ...
 
-* 일기장을 습득했습니다. *
+<color=yellow>* 일기장을 습득했습니다. *</color>
 
 ...
 일기장? 어디 쓰는거지...?
@@ -1039,7 +1040,7 @@ title: LaptopStory
 조심스럽게 노트북을 열었다.
 
 //사운드 추가
-<<PlayAudio LaptopVideo 0.4>>
+<<PlayAudio LaptopVideo 0.2>>
 
 * 감기약 먹방에 대해 들어보신 적 있나요? *
 * 약물 과다복용 시 발생할 수 있는 부작용들이 있는데요. *
@@ -1075,6 +1076,7 @@ title: memory_Laptop
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<jump AfterMemory>>
 ===
 
 title: Drawer_News
@@ -1088,6 +1090,7 @@ title: Drawer_News
 흉흉한 세상이네...
 
 <<Hide Jiwonroom_News>>
+<<Hide DBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -1109,7 +1112,7 @@ title: JW_Wallet
 
 <<Hide 지수>>
 
-* '지원의 지갑'을 습득했다. *
+<color=yellow>* '지원의 지갑'을 습득했다. *</color>
 
 
 <<SetActiveFalse VisualNovelPrefab DrawerR_Wallet>>
@@ -1148,6 +1151,7 @@ title: memory_Meds
 
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio MemoryRecall 0.5>>
 //(토하는 지수 연출)
 ??:헉... 헉...
 ??:...
@@ -1164,6 +1168,7 @@ title: memory_Meds
 //밖에서 그걸 목격한 사람의 실루엣
 <<StopMemory  SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<jump AfterMemory>>
 
 ===
 
@@ -1180,7 +1185,7 @@ title:JW_Hairpin
 
 <<Hide Hairpin(E)_0>>
 <<Hide DBG>>
-* '헤어핀'을 습득했다. *
+<color=yellow>* '헤어핀'을 습득했다. *</color>
 
 <<SetActiveFalse VisualNovelPrefab Drawer_Hairpin>>
 <<FinishedObj VisualNovelPrefab Drawer_Hairpin>>
@@ -1214,9 +1219,10 @@ title: DiaryTutorial
 갑자기 일기장이 움직였다.
 내가 꿈을 꾸나...?
 
-* 마약 습득 시 일기장이 채워집니다. *
-* 일기장의 모든 내용을 채워보세요. *
+<color=yellow>* 마약 습득 시 일기장이 채워집니다. *</color>
+<color=yellow>* 일기장의 모든 내용을 채워보세요. *</color>
 
+<<FinishedDialogue VisualNovelPrefab DiaryTutorial>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1227,9 +1233,9 @@ title: AfterMemory
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<HideAll>>
-<<Scene FullJiwonRoomBG>>
+//<<Scene FullJiwonRoomBG>>
 <<PlayAudio WhiteNoise 0.4>>
-<<PlayAudio EarSound 0.6>>
+<<PlayAudio EarSound 0.8>>
 <<Draw black_bg 0.75 0.75>>
 
 아..

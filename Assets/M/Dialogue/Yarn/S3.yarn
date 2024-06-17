@@ -148,7 +148,8 @@ title: DrugCookie
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //(마약 쿠키 클릭 시)
-* 일기장에 ‘마약 쿠키’가 추가되었습니다. *
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 ‘마약 쿠키’가 추가되었습니다. *</color>
 //(이후 일기장 클릭 시 ‘마약 쿠키’ 관련 정보 확인 가능)
 <<RevealDiary DiaryManager Page3>>
 <<SetActiveFalse VisualNovelPrefab VendingMachine3>>
@@ -167,6 +168,7 @@ title: PhoneBooth
 <<ChangeSceneTo VisualNovelPrefab S3_1_2_PhoneBooth>>
 
 //지수4
+<<wait 1.0>>
 <<Act 지수 Jisoo4 1.17 0.322 white>>
 ...
 요즘도 공중전화가 있네...
@@ -187,7 +189,7 @@ title: Flashlight
 ...
 어딘가 쓸 데가 있지 않을까?
 <<Hide 지수>>
-* '손전등'을 습득했다. *
+<color=yellow>* '손전등'을 습득했다. *</color>
 
 //인벤토리에 추가
 <<AddToInventory VisualNovelPrefab Flashlight>>
@@ -213,8 +215,8 @@ title: SynthWeed
 <<RevealDiary DiaryManager Page9>>
 <<SetActiveFalse VisualNovelPrefab SynthWeed>>
 <<FinishedObj VisualNovelPrefab SynthWeed>>
-
-* 일기장에 ‘합성 대마’가 추가되었습니다. *
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 ‘합성 대마’가 추가되었습니다. *</color>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -287,6 +289,7 @@ title: OfficetelDoor
 //출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
 
 //지수2
+<<wait 1.0>>
 <<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 ...
@@ -449,7 +452,7 @@ title: IfEmployeeSuit
 오피스텔 출입 카드키...
 좋아. 들어가보자.
 <<Hide 지수>>
-* ‘오피스텔 출입 카드키’를 습득했다. *
+<color=yellow>* ‘오피스텔 출입 카드키’를 습득했다. *</color>
 <<AddToInventory VisualNovelPrefab OfficetelCardkey>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -471,7 +474,7 @@ title: OfficetelDoorwcard
 
 //조직원 왼쪽, 지수 오른쪽 배치
 
-<<Act 조직원 NPC_gang 0.322 0.227 white>>
+<<Act 조직원 NPC_gang 0.322 0.35 white>>
 
 조직원: 내가 제일 좋아하는 건?
 
@@ -491,19 +494,19 @@ title: OfficetelDoorwcard
 뭐였더라.
 //지수5
 <<UpdateAct 지수 Jisoo5>>
--> 지수: 라이터..! 
+-> 라이터..! 
 	<<jump Ending4>>
 -> 칵테일..!
 	<<jump Ending4>>
 -> 코카인..!
 	<<jump Ending4>>
 -> 실타래…!
-	조직원:(무표정) ….
-	조직원:(무표정) ….
+	조직원: ….
+	조직원: ….
 	…맞췄나?
 	….
-	조직원:(무표정) 신입인가.
-	조직원:(무표정) 누굴 닮았는데…. 
+	조직원: 신입인가.
+	조직원: 누굴 닮았는데…. 
 	//지수4
 	<<UpdateAct 지수 Jisoo4>>
 	...
@@ -524,8 +527,8 @@ title: Ending4
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-조직원:(무표정) ...
-조직원:(무표정) ...
+조직원: ...
+조직원: ...
 ..맞췄나?
 ...
 //(갑자기 화면이 흐려지는 연출)
@@ -574,6 +577,7 @@ title: Officetel1stfloor
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio Chap3ThemeP2 1.0 loop>>
 //지수2
 <<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
@@ -742,8 +746,6 @@ title: GangEvent
 	<<Hide 지수>>
 	...
 	...
-	//조직원 왼쪽에서 등장
-	<<Act 조직원 NPC_gang 0.322 0.227 white>>
 	조직원: 흐흐흠~
 	조직원: 아, 여깄다.
 	//조직원 이미지 종료
@@ -794,6 +796,7 @@ title: Ending4_2
 //화면 어두워짐, 엔딩일러 팝업
 <<HideAll>>
 <<Fade black 0.0 1.0 2.0>>
+<<StopAudioAll>>
 
 ...
 ...
@@ -818,7 +821,8 @@ title: DrugDrink
 ….
 <<Hide 지수>>
 <<RevealDiary DiaryManager Page2>>
-* 일기장에 ‘마약 음료’가 추가되었습니다. *
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 ‘마약 음료’가 추가되었습니다. *</color>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -831,6 +835,7 @@ title: PhotoOf3
 	<<jump GangEvent>>
 <<else>>
 	<<SetCanvasTo VisualNovelPrefab true>>
+	<<FinishedDialogue VisualNovelPrefab PhotoOf3>>
 	//주요 오브젝트 2. 지원, 지수, 건우가 함께 찍힌 사진 - 최종 추리 증거
 	<<DrawFadeIn DBG 0.75 0.75 0.2>>
 	<<Draw PhotoOf3 0.75 0.75>>
@@ -861,6 +866,7 @@ title: memory_Photo
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab R1403Cardkey>>
 //(텍스트 위치 변경하였음)
 //- 증거 촬영 시 돌아오는 기억: 배경 바뀌고 어두워짐, 팝업이미지
 //클럽에 있는 지수, 건우를 찾아온 지원. 그 셋을 지켜보고 있는 시점의 사진.
@@ -896,14 +902,14 @@ title: R1403Cardkey
 
 //팝업 이미지없이 인벤토리로 습득
 <<Hide 지수>>
-* ‘1403호 카드키’를 습득했다. *
+<color=yellow>* ‘1403호 카드키’를 습득했다. *</color>
 
 <<AddToInventory VisualNovelPrefab R1403Cardkey>>
 
 // 인벤토리에 습득
 <<SetCanvasTo VisualNovelPrefab false>>
 
-
+<<FinishedDialogue VisualNovelPrefab R1403Cardkey>>
 <<if CheckDialogue("memory_Photo") == true && CheckDialogue("PhotoOf3") == true>>
 	<<jump InteractionFinto14>>
 <<endif>>
@@ -920,8 +926,8 @@ title: Crack
 ...
 광물같이 생겼다.
 <<Hide 지수>>
-
-* 일기장에 ‘크랙’이 추가되었습니다. *
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 ‘크랙’이 추가되었습니다. *</color>
 <<RevealDiary DiaryManager Page5>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -1007,7 +1013,7 @@ title: JiwonIn1403
 ..!
 지수: 지원아..!
 //지원0
-<<Act 지원 Jiwon0 0.322 0.227 white>>
+<<Act 지원 Jiwon0 0.322 0.527 white>>
 지원: 어…. 지수?
 //지수3
 <<UpdateAct 지수 Jisoo3>>
@@ -1091,11 +1097,12 @@ title: escapegame_intro
 ---
 
 //14층 배경
+<<StopAudio Chap3ThemeP2>>
 <<PlayAudio ChooseMinigame 1.0 loop>>
-* 오피스텔을 탈출하자! *
-* 당신의 선택이 중요합니다. *
-* 조직원에게 들키지 않도록 조심합시다. *
-* 들키게 될 경우, 체크포인트로 돌아옵니다. *
+<color=yellow>* 오피스텔을 탈출하자! *</color>
+<color=yellow>* 당신의 선택이 중요합니다. *</color>
+<color=yellow>* 조직원에게 들키지 않도록 조심합시다. *</color>
+<color=yellow>* 들키게 될 경우, 체크포인트로 돌아옵니다. *</color>
 
 <<jump escapegame_checkpoint1>>
 
@@ -1108,7 +1115,7 @@ title: escapegame_checkpoint1
 
 
 //14층 배경
-* 체크포인트 *
+<color=yellow>* 체크포인트 *</color>
 
 빨리 여기서 나가야 될 것 같아.
 어디로 가지?
