@@ -2,7 +2,10 @@
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 //암전됐던 화면이 서서히 전환되며 까만 배경으로 바뀜
+<<Scene BlackBG>>
+<<FadeIn 3.0>>
 //아리아드네와의 대화~최종추리이벤트 동안은 1인칭 시점. 지수 캐릭터를 화면에 띄우지 않음
 //병원 심박수 측정기st의 사운드
 
@@ -13,23 +16,25 @@
 <<wait 2.0>>
 
 //신비로운 사운드
+<<PlayAudio Ariadne>>
+
 아리아드네: 일어났어?
 ….
 누군가 머릿속에서 말을 거는 것 같아.
 ….
-<<wait 2.0>>
+<<wait 1.0>>
 
 아리아드네: 앞을 봐.
-<<wait 2.0>>
+<<wait 1.0>>
 
 ….
 눈앞에 빛이 아른거린다.
 내가 꿈을 꾸나…?
 ….
-<<wait 2.0>>
+<<wait 1.0>>
 
 아리아드네: 이제는 진실을 마주할 때야.
-<<wait 2.0>>
+<<wait 1.0>>
 
 ….
 ….
@@ -45,31 +50,19 @@
 그러고보니….
 뭔가 떠올렸던 것 같은데….
 ….
-<<wait 2.0>>
+<<wait 1.0>>
 
 지수: 넌 누구야?
 아리아드네: ….
 아리아드네: 무슨 일들이 있었는지 기억해내.
-<<wait 2.0>>
+<<wait 1.0>>
 
 //최종추리이벤트 시작
 
+//<color=yellow>* 비어있는 술잔을 획득했다. *</color>
 
-===
-
-title: lastevent_imagedrop
-
----
-
-//이미지 드랍했을 때
-//♫Sound: 이미지 드랍음
-아리아드네: 확실해?
--> 응. 확실해.
-	//이미지 드랍
-
--> 아니. 다시 생각해볼래.
-	//이미지 드랍 취소
-
+<<Final BlackBG>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -78,27 +71,33 @@ title: realmemory_1
 ---
 
 //지수4
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 지수: 오빠, 왜 동생 학생증을 들고 다녀요?
 
 //건우1
+<<Act 건우 Geonwoo1 0.322 0.227 white>>
 건우: 아….
 건우: 학생인 척 하는 게 일할 때 편하거든.
 건우: 사람들이 미성년자는 의심을 잘 안 해.
 건우: 애들이 이런 거 옮긴다고 상상이나 하겠어?
 
 //지수1
+<<UpdateAct 지수 Jisoo1>>
 지수: 아…. 왠지.
 지수: 드랍퍼로 미성년자 우대한다길래.
 지수: 왜 그런가 했더니 그것 때문이었구나.
 지수: 근데 오빠 액면가에 그게 먹혀요?
 
 //건우1
+<<UpdateAct 건우 Geonwoo1>>
 건우: 뭐래? 어이없네.
 건우: 니가 시킨 거나 가져가라.
 건우: 자, 여기. 
 //건우가 건네는 마약 확대
 
+<<HideAll>>
 
+<<Break BlackBG>>
 ===
 
 title: realmemory_2
@@ -107,6 +106,7 @@ title: realmemory_2
 
 //기존 팝업 이미지-> 블랙부분 지운 이미지
 //토하는 지수
+<<Act 지수 Jisoo7 1.17 0.322 white>>
 지수: 헉…. 헉….
 지수: ….
 지수: 우웩….
@@ -114,12 +114,15 @@ title: realmemory_2
 지수: ….
 <<wait 2.0>>
 
+<<Act 지원 JIwon4 0.322 0.227 white>>
 지원: ….
 지원: 요즘 상태가 왜 저러지?
 지원: 설마….
 지원: 진짜로 마약하는 건가….
 
+<<HideAll>>
 
+<<Break BlackBG>>
 ===
 
 title: realmemory_3
@@ -129,26 +132,29 @@ title: realmemory_3
 //클럽 안 이미지
 
 //지원4
+<<Act 지원 JIwon4 0.322 0.227 white>>
 지원: 둘이 대체 뭘 하고 다니는 거야.
 
 //지수2
+<<Act 지수 Jisoo2 1.0 0.322 white>>
 지수: ….
 
 //건우2
+<<Act 건우 Geonwoo2F 1.3 0.222 white>>
 건우: ….
 지원: 제발 정신 좀 차려.
 지원: 내가 도와줄게…. 응?
 지수: ….
+<<UpdateAct 지수 Jisoo6>>
 지수: 뭐래.
-<<wait 2.0>>
+<<wait 0.5>>
 
 //지수6
 지수: 니가 뭘 도와줄 수 있는데?
 
-//건우2
 건우: ….
 건우: 지원아…. 나중에 얘기하자.
-건우: 얘들아 이 분좀 내쫓아야겠다.
+건우: 얘들아 이분 좀 내쫓아야겠다.
 
 //직원은 그냥 텍스트로만
 직원1: 알겠습니다.
@@ -156,16 +162,19 @@ title: realmemory_3
 <<wait 2.0>>
 
 //지원4
+<<UpdateAct 지원 Jiwon4>>
 지원: 잠시만. 건우 오빠.
 
-//건우2
 건우: ….
 지원: 지수야…!
 
 //지수2
+<<UpdateAct 지수 Jisoo2>>
 지수: ….
 
+<<HideAll>>
 
+<<Break BlackBG>>
 ===
 
 title: realmemory_4
@@ -173,14 +182,17 @@ title: realmemory_4
 ---
 
 //지원4
+<<Act 지원 JIwon4 0.322 0.227 white>>
 지원: 나도 이제 더 이상은 못해먹겠어.
 지원: 그냥 신고할걸….
 
 //지수3
+<<Act 지수 Jisoo3 1.17 0.322 white>>
 지수: 어이없네. 내가 언제 도와달래?
 지수: 내 인생 내가 알아서 살 테니까 훈수 두지마.
 
 //지원4
+<<UpdateAct 지원 JIwon4>>
 지원: ….
 지원1
 지원: ….
@@ -190,6 +202,7 @@ title: realmemory_4
 지원: 됐다. 
 
 //지수6
+<<UpdateAct 지수 Jisoo6>>
 지수: 야. 오지랖 좀 그만 부려.
 지수: 내 몸 망가지지 니 몸 망가지냐?
 
@@ -200,7 +213,8 @@ title: realmemory_4
 지원: …안그럼 부모님께 말씀드릴 거야.
 //문 쾅 닫히는 사운드
 
-
+<<HideAll>>
+<<Break BlackBG>>
 ===
 
 title: realmemory_5
@@ -208,12 +222,14 @@ title: realmemory_5
 ---
 
 //건우2
+<<Act 건우 Geonwoo2 0.322 0.227 white>>
 건우: ….
 건우: 지원이가 너 찾아다니다가….
 건우: 형들한테 붙잡혔대.
 건우: 내가 미리 알았으면 어떻게든 막았을텐데….
 
 //지수2
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 지수: ….
 지수: ….
 건우: 공범 만들려고 마약 투여했는데.
@@ -234,28 +250,34 @@ title: realmemory_5
 <<wait 2.0>>
 
 //건우4
+<<UpdateAct 건우 Geonwoo4>>
 건우: 어…!
 건우: 지수야…!
 건우: 야…. 여기 구급차좀 불러주세요!
 건우: 사람이 쓰러졌어요!
 
+<<HideAll>>
+
+<<Break BlackBG>>
 
 ===
 
-title: ending_true
+title: realmemory_6
 
 ---
+
 
 아리아드네:….
 아리아드네:이제 아프지마.
 <<wait 2.0>>
-
-//여기부터는 모두 지수7
-//화면 암전 및 전환. 병실 이미지
+//여기부터는 모두 지수8
+//화면 암전 및 전환. 병실 이미지 (희원)
 ….
+//<<DrawFadeIn 병실이미지 3.0>>
 ….
 여긴 어디지?
 병원인가…?
+//지수8
 ….
 주위를 둘러보니 아무도 없다.
 <<wait 2.0>>
@@ -443,9 +465,11 @@ title: ending_true
 제발 연락하게 해줘.
 ….
 ….
-
+<<Fade White 0.0 1.0 2.0>>
 //화면 전환. 어두워졌다 밝아진다거나
 //밝아진 후 어두운 화면에서 텍스트로만 진행
+//<<FadeIn 2.0>>
+//<<Scene WhiteBG>>
 그렇게 한 달이 지났을까.
 퇴원 수속을 밟았다.
 퇴원하고 나서 가장 먼저….
@@ -466,7 +490,12 @@ title: ending_true
 마약류의 위험에 대해 알리고, 마약류 범죄를 예방하는 활동에 참여하고 있다.
 ….
 ….
-//엔딩 일러스트 등장
+<<DrawFadeIn Ending8 2.0>>
+<<wait 3.0>>
+<<Fade White 0.0 1.0 2.0>>
+<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+<<SetCanvasTo VisualNovelPrefab false>>
+//엔딩 일러스트 등장 Ending8
 //엔딩 이름(수정)
 
 
@@ -481,7 +510,7 @@ title: ending_normal
 아리아드네:제발 잊지 마.
 <<wait 2.0>>
 
-//화면 암전 및 전환. 병실 이미지
+//화면 암전 및 전환. 병실 이미지 white
 ….
 ….
 여긴 어디지?
@@ -673,8 +702,14 @@ title: ending_normal
 ….
 ….
 다음 번엔 어떻게 해야 안 걸릴까?
-//엔딩 일러스트 등장
+//엔딩 일러스트 등장 Ending7
 //엔딩 이름(수정)
+
+<<DrawFadeIn Ending7 2.0>>
+<<wait 3.0>>
+<<Fade White 0.0 1.0 2.0>>
+<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -683,6 +718,7 @@ title: ending_merrybad
 
 ---
 
+//Fade black
 //미로 배경 이미지
 길을 잃었다.
 미로 속 가장 깊은 곳에 괴물이 있다고 했는데….
@@ -770,6 +806,11 @@ title: ending_merrybad
 //지수의 침대 위에 있는 지원의 휴대폰이 확대
 //마지막으로 아리아드네에게서 채팅이 옴. 아리아드네 ‘제발 깨어나….’
 
+<<DrawFadeIn Ending6 2.0>>
+<<wait 3.0>>
+<<Fade White 0.0 1.0 2.0>>
+<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -806,5 +847,26 @@ title: ending_bad
 //동시에 심박수 삐-사운드
 //어두운 배경에 엔딩 일러스트 등장
 
+<<DrawFadeIn Ending5 2.0>>
+<<wait 3.0>>
+<<Fade White 0.0 1.0 2.0>>
+<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+
+===
+
+title: endingtest
+
+---
+
+테스트
+<<DrawFadeIn BlackBG 3.0>>
+Blackbg test
+<<DrawFadeIn Ending7 2.0>>
+<<wait 3.0>>
+<<Fade White 0.0 1.0 2.0>>
+//<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
