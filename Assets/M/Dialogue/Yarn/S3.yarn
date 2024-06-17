@@ -266,6 +266,7 @@ title: memory_GeonwooCard
 건우: ..그런 게 있다.
 건우: 너는 알면 안돼, 임마.
 <<HideAll>>
+<<StopMemory SceneManager>>
 
 <<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
 <<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
@@ -346,6 +347,7 @@ title: memory_1342
 지수: ...
 
 <<Hide 지수>>
+<<StopMemory SceneManager>>
 <<FinishedDialogue VisualNovelPrefab memory_1342>>
 <<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 	<<jump InteractionFin3>>
@@ -374,6 +376,7 @@ title: InteractionFin3
 아리아드네는 뭔가 알고 있을까..?
 
 <<Hide 지수>>
+<<AfterD3 Controllers>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -386,6 +389,7 @@ title: AfterD3
 //(플레이어가 D gram 접속 후 아리아드네와의 채팅창에 들어가면)
 ...
 아리아드네에게 도움을 요청해보자.
+<<StartPhoneChat PhoneController 31>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -403,6 +407,7 @@ title: AfterDChat3
 ...
 
 <<Hide 지수>>
+<<UI_off MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -581,6 +586,7 @@ title: Officetel1stfloor
 //(플레이어가 알아서 찾도록 함)
 //지수이미지 종료
 <<Hide 지수>>
+<<Officetel1503 Controllers>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -616,6 +622,7 @@ title: Officetel1503
 //일단 15층으로 가보자.
 
 //(자동으로 다음 장소로 넘어감)
+<<UI_off MenuUI>>
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -865,7 +872,7 @@ title: memory_Photo
 ???: 제발 정신 좀 차려.
 ???: 내가 도와줄게... 응?
 <<SetCanvasTo VisualNovelPrefab false>>
-
+<<StopMemory SceneManager>>
 <<if CheckDialogue("R1403Cardkey") == true && CheckDialogue("PhotoOf3") == true>>
 	<<jump InteractionFinto14>>
 <<endif>>
