@@ -100,10 +100,10 @@ TextureImporter:
       name: NPC_Clubcustomer_D_0
       rect:
         serializedVersion: 2
-        x: 185
-        y: 10
-        width: 484
-        height: 1485
+        x: 68
+        y: 40
+        width: 318
+        height: 1008
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cef7c8b95296ec418f00048814469bb
-      internalID: -926006892
+      spriteID: 1e7e4927b973c024c8fb6341f9908db3
+      internalID: -759395243
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NPC_Clubcustomer_D_0: -926006892
+      NPC_Clubcustomer_D_0: -759395243
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
