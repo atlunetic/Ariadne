@@ -175,19 +175,18 @@ title: obj_clock1
 //클릭할 경우
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw CounterbarClockBig 0.75 0.75>>
-<<Act 지수 Jisoo4 1.17 0.322 white>>
+//<<Act 지수 Jisoo4 1.17 0.322 white>>
 클럽에 웬 벽시계..?
 엄청 안어울리네.
 
 <<Hide CounterbarClockBig>>
 <<Hide DBG>>
 
-<<UpdateAct 지수 Jisoo2>>
+//<<UpdateAct 지수 Jisoo2>>
 ...
-<<wait 1.0>>
 손을 뻗으면 닿을 것 같다.
 
-<<Hide 지수>>
+//<<Hide 지수>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -566,7 +565,7 @@ title: obj_lsdsticker
 
 //클릭할 경우
 
-<<SetCanvasTo VisualNovelPrefab true7>>
+<<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 우표인가? 귀엽게 생겼네.
@@ -1156,7 +1155,7 @@ title: event_gunwoo_q4b
 	<<UpdateAct 지수 Jisoo4>>
 	지수: ...
 	<<UpdateAct 지수 Jisoo1>>
-	지수: 하..하나도 없을텐데.
+	지수: 하나도 없을텐데.
 	<<UpdateAct 건우 Geonwoo3>>
 	건우: ...
 	<<UpdateAct 건우 Geonwoo2>>
@@ -1780,15 +1779,17 @@ title: obj_drugjelly
 
 조심스레 겉옷을 주워 클럽 고객F에게 덮어줬다.
 그 순간 바닥으로 무언가 떨어졌다.
+<<Hide 지수>>
+<<Hide 클럽고객F>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Toilet_drugjelly 0.75 0.75>>
-<<wait 2.0>>
+<<wait 1.0>>
 
-<<UpdateAct 지수 Jisoo4>>
+//<<UpdateAct 지수 Jisoo4>>
 젤리인가?
 어디서 본 것 같이 생겼네.
 
-<<UpdateAct 지수 Jisoo2>>
+//<<UpdateAct 지수 Jisoo2>>
 ...
 
 -> 주워보자
@@ -1800,6 +1801,8 @@ title: obj_drugjelly
 	<<AddToInventory VisualNovelPrefab DrugJelly>>
 	일어나면 돌려줘야지.
 	우선 다시 깨워보자.
+	<<Act 클럽고객F NPC_clubcustomer_F 0.2 0.5 white>>
+	<<Act 지수 Jisoo2 1.17 0.322 white>>
 	지수: 저기요.
 	클럽 고객F가 조금씩 움찔거렸다.
 	클럽 고객F는 정신을 차리지 못한 듯 눈을 꿈뻑이다 겨우 나를 바라봤다.
@@ -2011,7 +2014,6 @@ title: club_staffroom_front
 <<else>>
 	<<SetActiveFalse VisualNovelPrefab StaffRoom_staff_C>>
 	<<FinishedObj VisualNovelPrefab StaffRoom_staff_C>>
-	<<jump club_staffroom_nostaff>>
 <<endif>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -2082,8 +2084,8 @@ title: obj_staffroomdoor_2
 <<wait 1.0>>
 
 지수: 제가 뭘 잃어버려서요...
-직원: 아... 그래도 내부 방침상 보여드릴 수 없어요.
-직원: 그러면 제가 확인해드릴게요.
+클럽 직원C: 아... 그래도 내부 방침상 보여드릴 수 없어요.
+클럽 직원C: 그러면 제가 확인해드릴게요.
 
 직원: 언제쯤 뭘 잃어버리셨나요?
 <<wait 1.0>>
@@ -3019,6 +3021,7 @@ title: IgnoreE
 클럽 고객G: 학생, 이거 좀 봐봐.
 //클럽 고객G의 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
 <<Hide 지수>>
+<<Hide 클럽고객G>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw ClubcustomerG_Phone 0.75 0.75>>
 클럽고객G는 가족사진을 보여줬다.
@@ -3120,6 +3123,7 @@ title: obj_customerg_end
 <<Hide ClubcustomerG_Message>>
 <<Hide ClubcustomerG_Phone>>
 <<Hide DBG>>
+<<Act 클럽고객G NPC_clubcustomer_G_0 0.322 0.527 white>>
 클럽 고객G가 급하게 휴대폰을 감췄다.
 클럽 고객G: 어어~. 아무튼.
 클럽 고객G: 바쁜 사람을 너무 오래 붙잡고 있었네.
@@ -3417,7 +3421,7 @@ title: club_stair
 <<ChangeSceneTo VisualNovelPrefab S2_8_ParkingLot>>
 증거를 찾아야 해.
 <<Scene NoBG>>
-<<SetActiveFalse VisualNovelPrefab false>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -3425,6 +3429,7 @@ title: club_stair_middlecar
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 ..!
 그래, 저 인형.
 CCTV에 찍힌 그 인형이야.
