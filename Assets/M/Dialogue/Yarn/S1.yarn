@@ -139,6 +139,7 @@ title: Jisoo_Room
 ...악몽을 꿨나? 머리가 지끈거린다.
 이 놈의 지긋지긋한 두통...
 
+<<Draw DBG 0.75 0.75>>
 <<Draw Prescription 0.75 0.75>>
 약이라도 먹어야겠다.
 
@@ -152,6 +153,7 @@ title: Jisoo_Room
 병원을 가긴 해야하는데.
 
 <<Hide Prescription>>
+<<Hide DBG>>
 
 <<StopAudioAll>>
 ...
