@@ -587,11 +587,7 @@ title: obj_lsdsticker
 <<SetActiveFalse VisualNovelPrefab Clubtable_Drug>>
 <<FinishedObj VisualNovelPrefab Clubtable_Drug>>
 
-<<if visited("DiaryTutorial")==false>>
-    <<jump DiaryTutorial>>
-<<else>>
-    <<SetCanvasTo VisualNovelPrefab false>>
-<<endif>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -641,11 +637,8 @@ title: menu_philopon
 <<FinishedObj VisualNovelPrefab menu_philopon>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
-<<if visited("DiaryTutorial")==false>>
-    <<jump DiaryTutorial>>
-<<else>>
-    <<SetCanvasTo VisualNovelPrefab false>>
-<<endif>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -673,7 +666,7 @@ title: event_gunwoo_begin1
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<if visited("event_gunwoo_begin1") == false>>
+<<if CheckDialogue("event_gunwoo_begin1") == false>>
 	//건우 클릭시
 	<<Act 지수 Jisoo4 1.17 0.322 white>>
 	어... 
@@ -682,6 +675,7 @@ title: event_gunwoo_begin1
 	<<UpdateAct 지수 Jisoo2>>
 	어제 지원이랑 클럽에서 마주쳤다고 했지.
 	그러면... 뭐라도 알고 있을 것 같은데.
+	<<FinishedDialogue VisualNovelPrefab event_gunwoo_begin1>>
 	<<HideAll>>
 <<else>>
 	<<jump event_gunwoo_begin2>>
@@ -1796,7 +1790,6 @@ title: obj_drugjelly
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Toilet_drugjelly 0.75 0.75>>
 <<wait 2.0>>
-<<Hide Toilet_drugjelly>>
 
 <<UpdateAct 지수 Jisoo4>>
 젤리인가?
@@ -1806,6 +1799,8 @@ title: obj_drugjelly
 ...
 
 -> 주워보자
+	<<Hide Toilet_drugjelly>>
+	<<Hide DBG>>
 	* 젤리가 든 봉지를 습득했다. *
 	...
 	//인벤토리에 「젤리 봉지」 아이템이 추가됨.
@@ -2130,6 +2125,7 @@ title: club_staffroom_nostaff
 <<UpdateAct 지수 Jisoo2>>
 ...	
 <<Hide 지수>>
+<<jump club_staffroomdoor_nostaff>>
 <<SetCanvasTo VisualNovelPrefab	false>>
 
 
@@ -2178,7 +2174,7 @@ title: game_openthedoor_intro
 <<wait 1.0>>
 <<Hide 지수>>
 //미니게임 씬으로 이동
-<<ChangeSceneTo VisualNovelPrefab lockpick>>
+<<Scene keyhole_outer(bg)>>
 <<PlayAudio Minigame 0.6 loop>>
 * 헤어핀으로 문을 따자! *
 * 헤어핀을 이용해 Staff Room의 문을 열어봅시다. *
@@ -2188,10 +2184,8 @@ title: game_openthedoor_intro
 * 미세한 각도 조정을 통해 문따기를 성공해보세요! *
 * 제한 시간 내에 문을 열지 못하면 문따기에 실패합니다. *
 * 기회는 3번까지 주어집니다. *
-
-
-
-
+<<ChangeSceneTo VisualNovelPrefab lockpick>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2293,13 +2287,6 @@ title: obj_cocatree
 <<RevealDiary DiaryManager Page8>>
 <<SetActiveFalse VisualNovelPrefab Staffroom_Tree>>
 <<FinishedObj VisualNovelPrefab Staffroom_Tree>>
-
-<<if visited("DiaryTutorial")==false>>
-    <<jump DiaryTutorial>>
-<<else>>
-    <<SetCanvasTo VisualNovelPrefab false>>
-<<endif>>
-
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -2725,6 +2712,7 @@ title: obj_key
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Key 0.75 0.75>>
 어... 열쇠다.
+<<AddToInventory VisualNovelPrefab Key>>
 <<wait 0.5>>
 어디 쓰는 열쇠지?
 
@@ -2738,9 +2726,6 @@ title: obj_key
 * 열쇠를 습득했습니다. *
 
 //인벤토리에 열쇠 아이템이 추가됨.
-
-<<AddToInventory VisualNovelPrefab Key>>
-
 <<SetActiveFalse VisualNovelPrefab InStaffroom_Key>>
 <<FinishedObj VisualNovelPrefab InStaffroom_Key>>
 

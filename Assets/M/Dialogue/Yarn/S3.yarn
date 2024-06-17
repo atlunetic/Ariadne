@@ -473,7 +473,7 @@ title: OfficetelDoorwcard
 
 //조직원 왼쪽, 지수 오른쪽 배치
 
-<<Act 조직원 NPC_gang 0.322 0.227 white>>
+<<Act 조직원 NPC_gang 0.322 0.35 white>>
 
 조직원: 내가 제일 좋아하는 건?
 
@@ -744,8 +744,6 @@ title: GangEvent
 	<<Hide 지수>>
 	...
 	...
-	//조직원 왼쪽에서 등장
-	<<Act 조직원 NPC_gang 0.322 0.227 white>>
 	조직원: 흐흐흠~
 	조직원: 아, 여깄다.
 	//조직원 이미지 종료
@@ -1010,7 +1008,7 @@ title: JiwonIn1403
 ..!
 지수: 지원아..!
 //지원0
-<<Act 지원 Jiwon0 0.322 0.227 white>>
+<<Act 지원 Jiwon0 0.322 0.527 white>>
 지원: 어…. 지수?
 //지수3
 <<UpdateAct 지수 Jisoo3>>
