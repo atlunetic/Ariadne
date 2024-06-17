@@ -32,13 +32,17 @@ public class Slot : MonoBehaviour ,IDropHandler
             Draggable draggableItem = dropped.GetComponent<Draggable>();
         //draggableItem.parentAfterDrag = transform;
 
+        if (draggableItem != null && draggableItem.isDraggable)
+        {
+            Debug.Log("Item dropped for combining.");
 
-        if (draggableItem.currentSlot.Item.itemName == "Cup" && Item.itemName == "WaterBottle")
+            if (draggableItem.currentSlot.Item.itemName == "Cup" && Item.itemName == "WaterBottle")
             {
                 SceneItem WaterCup = SceneItem.Find("WaterCup");
-                Inventory.instance.items.Remove(Item);
-                Inventory.instance.items.Remove(draggableItem.currentSlot.Item);
+                Inventory.instance.DeleteItem("Cup");
+                Inventory.instance.DeleteItem("WaterBottle");
                 Inventory.instance.Additem(WaterCup.GetItem());
+                Inventory.instance.onChangeItem.Invoke();
 
 
             }
@@ -46,9 +50,12 @@ public class Slot : MonoBehaviour ,IDropHandler
             else if (draggableItem.currentSlot.Item.itemName == "WaterBottle" && Item.itemName == "Cup")
             {
                 SceneItem WaterCup = SceneItem.Find("WaterCup");
-                Inventory.instance.items.Remove(Item);
-                Inventory.instance.items.Remove(draggableItem.currentSlot.Item);
+                //Inventory.instance.items.Remove(Item);
+                //Inventory.instance.items.Remove(draggableItem.currentSlot.Item);
+                Inventory.instance.DeleteItem("Cup");
+                Inventory.instance.DeleteItem("WaterBottle");
                 Inventory.instance.Additem(WaterCup.GetItem());
+                Inventory.instance.onChangeItem.Invoke();
             }
 
             else
@@ -56,6 +63,8 @@ public class Slot : MonoBehaviour ,IDropHandler
                 WrongCombineAlertPanel.SetActive(true);
                 Invoke("CloseWrongAlertPanel", 1.5f);
             }
+
+        }
         
         
         

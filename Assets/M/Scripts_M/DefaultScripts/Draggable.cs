@@ -14,7 +14,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     [HideInInspector] public Transform parentAfterDrag; // Save the original parent of the object (to set to the original parent after drag)
 
     // to set the drag to be only possible when trying to combine
-    private bool isDraggable = false;
+    public bool isDraggable = false;
 
     public void SetDraggable(bool command)
     {

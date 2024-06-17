@@ -6243,6 +6243,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4095407691540616704, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 460897321}
+    - targetCorrespondingSourceObject: {fileID: 4095407691540616704, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 460897322}
   m_SourcePrefab: {fileID: 100100000, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
 --- !u!224 &460897314 stripped
 RectTransform:
@@ -6265,6 +6268,19 @@ MonoBehaviour:
     ItemType: 0
     itemName: WaterCup
   image: {fileID: 0}
+--- !u!114 &460897322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453730393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueTitle: OfficetelBG
 --- !u!1 &485708990
 GameObject:
   m_ObjectHideFlags: 0

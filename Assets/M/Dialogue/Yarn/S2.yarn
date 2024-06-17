@@ -293,7 +293,7 @@ title: obj_customers
 	<<UpdateAct 지수 Jisoo2>>
 	...
 
-	클럽 고객E: 감사해요.
+	클럽고객E: 감사해요.
 	클럽 고객E가 술잔을 받았다.
 
 	<<Draw Clubtable_Glass 0.75 0.75>>
@@ -313,6 +313,8 @@ title: obj_customers
 		...
 		그래. 괜히 나섰다가 욕 먹는 것보단 낫지.
 		<<Hide 지수>>
+		<<Hide 클럽고객D>>
+		<<Hide 클럽고객E>>
 		<<SetCanvasTo VisualNovelPrefab false>>
 	-> 가서 도와주자
 		<<UpdateAct 지수 Jisoo2>>
@@ -321,7 +323,7 @@ title: obj_customers
 		<<UpdateAct 지수 Jisoo3>>
 		무슨 일을 당할지 몰라.
 		<<wait 1.0>>
-		클럽 고객D: 저는 잠깐 화장실 좀 다녀올게요.
+		클럽고객D: 저는 잠깐 화장실 좀 다녀올게요.
 		마침 클럽 고객D가 자리를 뜬다.
 		<<Hide 클럽고객D>>
 		<<SetActiveFalse VisualNovelPrefab ClubTable_NPCD>>
@@ -331,10 +333,9 @@ title: obj_customers
 		...
 		이 틈에 E를 도울 수 있는 방법이 없을까?
 		우선 말을 걸어보자.
-		-> E에게 말을 걸어보자
-			<<Hide 지수>>
-			<<Hide 클럽고객E>>
-			<<SetCanvasTo VisualNovelPrefab false>>
+		<<Hide 지수>>
+		<<Hide 클럽고객E>>
+		<<SetCanvasTo VisualNovelPrefab false>>
 <<endif>>
 ===
 
@@ -342,7 +343,7 @@ title: checkClothes
 
 ---
 
-<<if visited("ClothesUsed")==true>>
+<<if CheckDialogue("ClothesUsed")==true>>
 	<<jump E_Clothes>>
 <<else>>
 	<<jump E_NoClothes>>
@@ -358,7 +359,7 @@ title: E_NoClothes
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 
 지수: 안녕하세요.
-클럽 고객E: 아, 안녕하세요.
+클럽고객E: 아, 안녕하세요.
 지수: 혼자 오셨어요?
 클럽고객E: 아... 네.
 클럽고객E: ...
@@ -386,9 +387,9 @@ title: E_Clothes
 이제 말을 걸어도 괜찮을 것 같아.
 ...
 지수: 안녕하세요.
-클럽 고객E: 아, 안녕하세요.
+클럽고객E: 아, 안녕하세요.
 지수: 혼자 오셨어요?
-클럽 고객E: 네. 종종 와요.
+클럽고객E: 네. 종종 와요.
 
 <<UpdateAct 지수 CoJIsoo2>>
 
@@ -420,6 +421,7 @@ title: ClothesUsed
 <<else>>
 	직원 복장 옷을 입었다.
 <<endif>>
+<<FinishedDialogue VisualNovelPrefab ClothesUsed>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

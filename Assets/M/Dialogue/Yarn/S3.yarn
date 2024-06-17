@@ -21,23 +21,19 @@ title: Officetel3
 <<SetCanvasTo VisualNovelPrefab true>>
 // 지수2
 
-//추후 수정
-<<if visited("Officetel3") == false>>
-	<<Act 지수 Jisoo2 1.17 0.322 black>>
-	….
-	이 오피스텔에 지원이가 있을까?
-	그런데 어떻게 들어가지.
-	지원이가 정확히 어디 있는지도 모르는데….
-	….
-	….
+<<Act 지수 Jisoo2 1.17 0.322 black>>
+….
+이 오피스텔에 지원이가 있을까?
+그런데 어떻게 들어가지.
+지원이가 정확히 어디 있는지도 모르는데….
+….
+….
 
-	// 지수4
-	<<UpdateAct 지수 Jisoo4>>
-	주위를 둘러볼까?
-	<<Hide 지수>>
-<<else>>
-	<<jump OfficetelBG>>
-<<endif>>
+// 지수4
+<<UpdateAct 지수 Jisoo4>>
+주위를 둘러볼까?
+<<Hide 지수>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -73,7 +69,13 @@ title: Poppy
 ...
 금방 오신다고 하네.
 <<Hide 지수>>
-<<AddToInventory VisualNovelPrefab Clothes>>
+<<FinishedObj VisualNovelPrefab Poppy>>
+<<FinishedDialogue VisualNovelPrefab Poppy>>
+
+<<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
+	<<jump InteractionFin3>>
+<<endif>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -111,22 +113,7 @@ title: VendingMachine3
 어두워서 잘 안보인다.
 <<Hide 지수>>
 
-
-<<if visited("Flashlight") == true>>
-    <<jump FlashVM>>
-<<endif>>
-
 <<SetCanvasTo VisualNovelPrefab false>>
-
-//(손전등이 없을 경우)
-// <<declare $flashlight = false as bool>>
-// <<set $flashlight = false>>
-
-// <<if $flashlight == false>>
-//     <<stop>>
-// <<else>>
-//     <<jump FlashVM>>
-// <<endif>>
 
 ===
 
@@ -150,6 +137,7 @@ title: FlashVM
 ...
 <<Hide 지수>>
 <<jump DrugCookie>>
+<<DeleteItem Inventory Flashlight>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -249,6 +237,11 @@ title: GeonwooCard
 ….
 <<Hide Phonebooth_namecard_BIG>>
 <<Hide 지수>>
+<<FinishedObj VisualNovelPrefab GeonwooCard>>
+<<FinishedDialogue VisualNovelPrefab GeonwooCard>>
+<<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
+	<<jump InteractionFin3>>
+<<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -273,6 +266,10 @@ title: memory_GeonwooCard
 건우: 너는 알면 안돼, 임마.
 <<HideAll>>
 
+<<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
+<<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
+	<<jump InteractionFin3>>
+<<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -320,11 +317,16 @@ title: Scribble1342
 ...
 아니네...
 <<Hide 지수>>
+<<FinishedDialogue VisualNovelPrefab Scribble1342>>
+<<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
+	<<jump InteractionFin3>>
+<<endif>>
+<<FinishedObj VisualNovelPrefab Scribble1342>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
-title: memory_1234
+title: memory_1342
 
 ---
 
@@ -343,6 +345,10 @@ title: memory_1234
 지수: ...
 
 <<Hide 지수>>
+<<FinishedDialogue VisualNovelPrefab memory_1342>>
+<<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
+	<<jump InteractionFin3>>
+<<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -698,9 +704,6 @@ title: OfficetelInside1503
 단서가 될만한 게 있을까?
 //지수이미지 종료
 <<Hide 지수>>
-<<wait  1.0>>
-//강제 진행
-<<jump GangEvent>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -712,7 +715,6 @@ title: GangEvent
 <<SetCanvasTo VisualNovelPrefab true>>
 //조직원이 들어오는 이벤트 
 //(오브젝트 관계없이 2번의 상호작용(마우스 클릭으로 텍스트 확인) 이후 발생)
-
 ...
 ...
 ...
@@ -834,6 +836,9 @@ title: PhotoOf3
 <<Hide 지수>>
 <<Hide PhotoOf3>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<if CheckDialogue("R1403Cardkey") == true && CheckDialogue("memory_Photo") == true>>
+	<<jump InteractionFinto14>>
+<<endif>>
 
 ===
 
@@ -852,6 +857,10 @@ title: memory_Photo
 ???: 제발 정신 좀 차려.
 ???: 내가 도와줄게... 응?
 <<SetCanvasTo VisualNovelPrefab false>>
+
+<<if CheckDialogue("R1403Cardkey") == true && CheckDialogue("PhotoOf3") == true>>
+	<<jump InteractionFinto14>>
+<<endif>>
 
 ===
 
@@ -879,6 +888,11 @@ title: R1403Cardkey
 
 // 인벤토리에 습득
 <<SetCanvasTo VisualNovelPrefab false>>
+
+
+<<if CheckDialogue("memory_Photo") == true && CheckDialogue("PhotoOf3") == true>>
+	<<jump InteractionFinto14>>
+<<endif>>
 
 ===
 
@@ -914,9 +928,9 @@ title: InteractionFinto14
 혹시 모르니 계단으로 걸어갈까...
 ...
 ...
+<<Hide 지수>>
 //(이후 14층으로 장면전환)
 <<ChangeSceneTo VisualNovelPrefab S3_4_Officetel14th>>
-<<Hide 지수>>
 <<wait  1.0>>
 <<jump Officetel14BG>>
 <<SetCanvasTo VisualNovelPrefab false>>
