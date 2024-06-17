@@ -67,7 +67,7 @@ public class ActionPanelButtons : MonoBehaviour
             else { runner.StartDialogue("WalletX"); }
 
         }
-
+        /*
         else if (connectedItem.itemName == "Hairpin" && currentscene.name == "S2_4_0_StaffRoomEntrance")
         {
             runner.StartDialogue("game_openthedoor_intro");
@@ -79,6 +79,8 @@ public class ActionPanelButtons : MonoBehaviour
         {
             //runner.StartDialogue("KeyUse");
         }
+
+        */
         else if (currentscene.name == "S3_1_OfficetelEntrance")
         {
             if (connectedItem.itemName == "Clothes")
