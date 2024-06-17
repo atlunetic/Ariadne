@@ -3704,9 +3704,8 @@ title: obj_navigation
 	주소를 기억해둬야 할 것 같아.
 	<<Hide NaviList>>
 	<<Hide DBG>>
-	<<declare $nav = 0 as number>>
-	<<set $nav = 1>>
-	<<if visited("memory_BrokenGlasses")==true>>
+	<<FinishedDialogue VisualNovelPrefab obj_navigation>>
+	<<if CheckDialogue("memory_BrokenGlasses")==true>>
 		<<jump event_movetostairs>>
 	<<endif>>
 	<<SetCanvasTo VisualNovelPrefab false>>
@@ -3726,7 +3725,7 @@ title: obj_brokenglasses
 //클릭할 경우
 안경..?
 깨져있네...
-
+<<FinishedDialogue VisualNovelPrefab obj_brokenglasses>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -3745,10 +3744,10 @@ title: memory_BrokenGlasses
 건우: 미안하다.
 ???: ...
 <<StopMemory SceneManager>>
-<<if $nav == 1>>
+<<FinishedDialogue VisualNovelPrefab memory_BrokenGlasses>>
+<<if CheckDialogue("obj_navigation") == true>>
 	<<jump event_movetostairs>>
 <<endif>>
-
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -3768,12 +3767,9 @@ XX 오피스텔로 가보자.
 //슥슥 하는 효과음
 <<PlayAudio Wipe>>
 <<wait 1.0>>
-
 ...
 ..됐다.
 ...
-
-
 <<ChangeSceneTo VisualNovelPrefab S2_10_Stairs>>
 <<wait 1.0>>
 <<StartPhoneChat PhoneController 22>>
@@ -3838,6 +3834,8 @@ title: WrongClothes
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 지금 입으면 눈에 띌 것 같아...
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===

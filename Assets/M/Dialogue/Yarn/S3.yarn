@@ -167,6 +167,7 @@ title: PhoneBooth
 <<ChangeSceneTo VisualNovelPrefab S3_1_2_PhoneBooth>>
 
 //지수4
+<<wait 1.0>>
 <<Act 지수 Jisoo4 1.17 0.322 white>>
 ...
 요즘도 공중전화가 있네...
@@ -287,6 +288,7 @@ title: OfficetelDoor
 //출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
 
 //지수2
+<<wait 1.0>>
 <<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 ...
@@ -831,6 +833,7 @@ title: PhotoOf3
 	<<jump GangEvent>>
 <<else>>
 	<<SetCanvasTo VisualNovelPrefab true>>
+	<<FinishedDialogue VisualNovelPrefab PhotoOf3>>
 	//주요 오브젝트 2. 지원, 지수, 건우가 함께 찍힌 사진 - 최종 추리 증거
 	<<DrawFadeIn DBG 0.75 0.75 0.2>>
 	<<Draw PhotoOf3 0.75 0.75>>
@@ -861,6 +864,7 @@ title: memory_Photo
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab R1403Cardkey>>
 //(텍스트 위치 변경하였음)
 //- 증거 촬영 시 돌아오는 기억: 배경 바뀌고 어두워짐, 팝업이미지
 //클럽에 있는 지수, 건우를 찾아온 지원. 그 셋을 지켜보고 있는 시점의 사진.
@@ -903,7 +907,7 @@ title: R1403Cardkey
 // 인벤토리에 습득
 <<SetCanvasTo VisualNovelPrefab false>>
 
-
+<<FinishedDialogue VisualNovelPrefab R1403Cardkey>>
 <<if CheckDialogue("memory_Photo") == true && CheckDialogue("PhotoOf3") == true>>
 	<<jump InteractionFinto14>>
 <<endif>>
