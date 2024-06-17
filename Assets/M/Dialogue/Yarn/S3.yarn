@@ -1058,7 +1058,7 @@ title: JiwonIn1403
 <<PlayAudio FalldownJiwon>>
 ..!
 //지원2
-<<UpdateAct 지원 Jiwon2>>
+<<UpdateAct 지원 JIwon2>>
 지원이가 바닥에 주저앉았다.
 ...
 ...
@@ -1260,9 +1260,9 @@ title: escapegame_elevator
 title: escapegame_checkpoint2
 
 ---
-
-//엘리베이터 이미지 배경 페이드인
 <<Scene Elevator>>
+<<FadeIn>>
+//엘리베이터 이미지 배경 페이드인
 <<wait  1.0>>
 <<Scene Elevator>>
 엘리베이터에 타자마자 1층을 눌렀다.
