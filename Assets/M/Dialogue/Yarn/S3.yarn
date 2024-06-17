@@ -148,7 +148,7 @@ title: DrugCookie
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //(마약 쿠키 클릭 시)
-* 일기장에 ‘마약 쿠키’가 추가되었습니다. *
+<color=yellow>* 일기장에 ‘마약 쿠키’가 추가되었습니다. *</color>
 //(이후 일기장 클릭 시 ‘마약 쿠키’ 관련 정보 확인 가능)
 <<RevealDiary DiaryManager Page3>>
 <<SetActiveFalse VisualNovelPrefab VendingMachine3>>
@@ -188,7 +188,7 @@ title: Flashlight
 ...
 어딘가 쓸 데가 있지 않을까?
 <<Hide 지수>>
-* '손전등'을 습득했다. *
+<color=yellow>* '손전등'을 습득했다. *</color>
 
 //인벤토리에 추가
 <<AddToInventory VisualNovelPrefab Flashlight>>
@@ -215,7 +215,7 @@ title: SynthWeed
 <<SetActiveFalse VisualNovelPrefab SynthWeed>>
 <<FinishedObj VisualNovelPrefab SynthWeed>>
 
-* 일기장에 ‘합성 대마’가 추가되었습니다. *
+<color=yellow>* 일기장에 ‘합성 대마’가 추가되었습니다. *</color>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -451,7 +451,7 @@ title: IfEmployeeSuit
 오피스텔 출입 카드키...
 좋아. 들어가보자.
 <<Hide 지수>>
-* ‘오피스텔 출입 카드키’를 습득했다. *
+<color=yellow>* ‘오피스텔 출입 카드키’를 습득했다. *</color>
 <<AddToInventory VisualNovelPrefab OfficetelCardkey>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -818,7 +818,7 @@ title: DrugDrink
 ….
 <<Hide 지수>>
 <<RevealDiary DiaryManager Page2>>
-* 일기장에 ‘마약 음료’가 추가되었습니다. *
+<color=yellow>* 일기장에 ‘마약 음료’가 추가되었습니다. *</color>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -898,7 +898,7 @@ title: R1403Cardkey
 
 //팝업 이미지없이 인벤토리로 습득
 <<Hide 지수>>
-* ‘1403호 카드키’를 습득했다. *
+<color=yellow>* ‘1403호 카드키’를 습득했다. *</color>
 
 <<AddToInventory VisualNovelPrefab R1403Cardkey>>
 
@@ -923,7 +923,7 @@ title: Crack
 광물같이 생겼다.
 <<Hide 지수>>
 
-* 일기장에 ‘크랙’이 추가되었습니다. *
+<color=yellow>* 일기장에 ‘크랙’이 추가되었습니다. *</color>
 <<RevealDiary DiaryManager Page5>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -1093,10 +1093,10 @@ title: escapegame_intro
 
 //14층 배경
 <<PlayAudio ChooseMinigame 1.0 loop>>
-* 오피스텔을 탈출하자! *
-* 당신의 선택이 중요합니다. *
-* 조직원에게 들키지 않도록 조심합시다. *
-* 들키게 될 경우, 체크포인트로 돌아옵니다. *
+<color=yellow>* 오피스텔을 탈출하자! *</color>
+<color=yellow>* 당신의 선택이 중요합니다. *</color>
+<color=yellow>* 조직원에게 들키지 않도록 조심합시다. *</color>
+<color=yellow>* 들키게 될 경우, 체크포인트로 돌아옵니다. *</color>
 
 <<jump escapegame_checkpoint1>>
 
@@ -1109,7 +1109,7 @@ title: escapegame_checkpoint1
 
 
 //14층 배경
-* 체크포인트 *
+<color=yellow>* 체크포인트 *</color>
 
 빨리 여기서 나가야 될 것 같아.
 어디로 가지?
