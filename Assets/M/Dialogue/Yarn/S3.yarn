@@ -749,7 +749,7 @@ title: GangEvent
 	조직원: 흐흐흠~
 	조직원: 아, 여깄다.
 	//조직원 이미지 종료
-	<<Hide 조직원>>
+	//<<Hide 조직원>>
 	수상한 사람이 책상 위에 놓인 비닐을 챙겼다.
 	….
 	….
@@ -802,6 +802,12 @@ title: Ending4_2
 ...
 수상한 사람들에 의해 어딘가로 끌려갔다.
 ..도망갈 수 없을 것 같아.
+<<FadeIn>>
+<<DrawFadeIn Ending3 0.75 0.75>>
+<<wait 4.0>>
+<<Hide Ending3>>
+<<Scene NoBG>>
+<<BackToMainScene GameManager>>
 //엔딩 4. 조직원에게 감금되다.
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -1051,7 +1057,7 @@ title: JiwonIn1403
 <<PlayAudio FalldownJiwon>>
 ..!
 //지원2
-<<UpdateAct 지원 JIwon2>>
+<<UpdateAct 지원 Jiwon2>>
 지원이가 바닥에 주저앉았다.
 ...
 ...
