@@ -556,7 +556,7 @@ title: Newspaper
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
-<<Draw Park_News 0.75 0.75>>
+<<Draw Park_News 0.75 0.9>>
 * (제목) 유명 의원 A, 마약류 처방으로 경찰 입건 *
 
 <<wait 1.0>>
@@ -637,7 +637,7 @@ title: MDMA
 <<SetActiveFalse VisualNovelPrefab 3Drug>>
 <<FinishedObj VisualNovelPrefab 3Drug>>
 
-<<if visited("DiaryTutorial")==false>>
+<<if CheckDialogue("DiaryTutorial")==false>>
     <<jump DiaryTutorial>>
 <<else>>
     <<SetCanvasTo VisualNovelPrefab false>>
@@ -753,8 +753,8 @@ title: HospitalWaitingRoom
 
 <<Scene H_DrRoom>>
 
-<<Act 의사 NPC_Doctor 0.322 0.227>>
-<<Act 지수 Jisoo1 1.17 0.322>>
+<<Act 의사 NPC_Doctor 0.322 0.227 white>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
 의사: 좀 어떠셨어요.
 
 지수: 여전하네요. 약이 다 떨어져가서 왔어요.
@@ -1088,6 +1088,7 @@ title: Drawer_News
 흉흉한 세상이네...
 
 <<Hide Jiwonroom_News>>
+<<Hide DBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -1217,6 +1218,7 @@ title: DiaryTutorial
 * 마약 습득 시 일기장이 채워집니다. *
 * 일기장의 모든 내용을 채워보세요. *
 
+<<FinishedDialogue VisualNovelPrefab DiaryTutorial>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1227,7 +1229,7 @@ title: AfterMemory
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<HideAll>>
-<<Scene FullJiwonRoomBG>>
+//<<Scene FullJiwonRoomBG>>
 <<PlayAudio WhiteNoise 0.4>>
 <<PlayAudio EarSound 0.6>>
 <<Draw black_bg 0.75 0.75>>

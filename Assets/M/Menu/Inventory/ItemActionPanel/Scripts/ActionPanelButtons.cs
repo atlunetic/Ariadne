@@ -103,7 +103,7 @@ public class ActionPanelButtons : MonoBehaviour
         else
         {
 
-            runner.StartDialogue("WrongItem");
+            //runner.StartDialogue("WrongItem");
         } 
             //connectedItem.Use();
             //Inventory.instance.items.Remove(connectedItem);

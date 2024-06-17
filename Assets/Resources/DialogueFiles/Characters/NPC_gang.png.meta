@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 60
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,48 +97,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NPC_gang_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 713
-        width: 43
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc3e2e1cd2f825349841a2f6b266a567
-      internalID: -311966222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NPC_gang_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 727
-        width: 81
-        height: 58
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5fb55fd8db7ded47a526ecb57616cb5
-      internalID: -448434988
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: NPC_gang
       rect:
         serializedVersion: 2
@@ -155,27 +113,6 @@ TextureImporter:
       bones: []
       spriteID: c7f3794e528b05b4c9e72bbe52d672ee
       internalID: 495114512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NPC_gang_3
-      rect:
-        serializedVersion: 2
-        x: 456
-        y: 697
-        width: 87
-        height: 103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 081574019f1dc0a44ab674cf66ea27d2
-      internalID: 611678699
       vertices: []
       indices: 
       edges: []
