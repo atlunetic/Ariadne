@@ -225,7 +225,7 @@ title: GeonwooCard
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //건우의 명함 - 가짜 증거
-
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Phonebooth_namecard_BIG 0.75 0.75>>
 //명함 팝업 이미지
 //지수4
@@ -236,6 +236,7 @@ title: GeonwooCard
 ….
 ….
 <<Hide Phonebooth_namecard_BIG>>
+<<Hide DBG>>
 <<Hide 지수>>
 <<FinishedObj VisualNovelPrefab GeonwooCard>>
 <<FinishedDialogue VisualNovelPrefab GeonwooCard>>
@@ -754,6 +755,7 @@ title: GangEvent
 	다시 둘러볼까?
 	//지수 이미지 종료
 	<<Hide 지수>>
+	<<FinishedDialogue VisualNovelPrefab GangEvent>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 -> 문 뒤
 	<<jump Ending4_2>>
@@ -819,25 +821,31 @@ title: PhotoOf3
 
 ---
 
-<<SetCanvasTo VisualNovelPrefab true>>
-//주요 오브젝트 2. 지원, 지수, 건우가 함께 찍힌 사진 - 최종 추리 증거
-<<Draw PhotoOf3 0.75 0.75>>
+<<if CheckDialogue("GangEvent") == false>>
+	<<jump GangEvent>>
+<<else>>
+	<<SetCanvasTo VisualNovelPrefab true>>
+	//주요 오브젝트 2. 지원, 지수, 건우가 함께 찍힌 사진 - 최종 추리 증거
+	<<DrawFadeIn DBG 0.75 0.75 0.2>>
+	<<Draw PhotoOf3 0.75 0.75>>
 
-//지수4
-<<Act 지수 Jisoo4 1.17 0.322 black>>
-...
-..뭐지?
-왜 이런 사진이 여기 있는 거야...
-//지수5
-<<UpdateAct 지수 Jisoo5>>
-...
-셋이 저러고 있었던 적이 있나?
-기억이 안나는데...
-<<Hide 지수>>
-<<Hide PhotoOf3>>
-<<SetCanvasTo VisualNovelPrefab false>>
-<<if CheckDialogue("R1403Cardkey") == true && CheckDialogue("memory_Photo") == true>>
-	<<jump InteractionFinto14>>
+	//지수4
+	<<Act 지수 Jisoo4 1.17 0.322 black>>
+	...
+	..뭐지?
+	왜 이런 사진이 여기 있는 거야...
+	//지수5
+	<<UpdateAct 지수 Jisoo5>>
+	...
+	셋이 저러고 있었던 적이 있나?
+	기억이 안나는데...
+	<<Hide 지수>>
+	<<Hide PhotoOf3>>
+	<<Hide DBG>>
+	<<SetCanvasTo VisualNovelPrefab false>>
+	<<if CheckDialogue("R1403Cardkey") == true && CheckDialogue("memory_Photo") == true>>
+		<<jump InteractionFinto14>>
+	<<endif>>
 <<endif>>
 
 ===
