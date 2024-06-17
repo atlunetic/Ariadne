@@ -22,12 +22,12 @@ title: Officetel3
 // 지수2
 
 <<Act 지수 Jisoo2 1.17 0.322 white>>
-….
+...
 이 오피스텔에 지원이가 있을까?
 그런데 어떻게 들어가지.
-지원이가 정확히 어디 있는지도 모르는데….
-….
-….
+지원이가 정확히 어디 있는지도 모르는데...
+...
+...
 
 // 지수4
 <<UpdateAct 지수 Jisoo4>>
@@ -125,8 +125,8 @@ title: FlashVM
 //지수1
 <<Act 지수 Jisoo1 1.17 0.322 white>>
 손전등으로 자판기 밑을 살펴볼까?
-….
-….
+...
+...
 //지수4
 <<UpdateAct 지수 Jisoo4>>
 어...
@@ -235,8 +235,8 @@ title: GeonwooCard
 ..?
 이건우..?
 번호도 익숙한데.
-….
-….
+...
+...
 <<Hide Phonebooth_namecard_BIG>>
 <<Hide DBG>>
 <<Hide 지수>>
@@ -500,13 +500,13 @@ title: OfficetelDoorwcard
 	<<jump Ending4>>
 -> 코카인..!
 	<<jump Ending4>>
--> 실타래…!
-	조직원: ….
-	조직원: ….
-	…맞췄나?
-	….
+-> 실타래..!
+	조직원: ...
+	조직원: ...
+	..맞췄나?
+	...
 	조직원: 신입인가.
-	조직원: 누굴 닮았는데…. 
+	조직원: 누굴 닮았는데... 
 	//지수4
 	<<UpdateAct 지수 Jisoo4>>
 	...
@@ -751,8 +751,8 @@ title: GangEvent
 	//조직원 이미지 종료
 	//<<Hide 조직원>>
 	수상한 사람이 책상 위에 놓인 비닐을 챙겼다.
-	….
-	….
+	...
+	...
 	//(♫Sound: 수상한 사람이 멀어지는 소리)
 	<<PlayAudio FarawayGang>>
 	...
@@ -824,7 +824,7 @@ title: DrugDrink
 뭘 마시다 남겨뒀네.
 //지수2
 <<UpdateAct 지수 Jisoo2>>
-….
+...
 <<Hide 지수>>
 <<RevealDiary DiaryManager Page2>>
 <<PlayAudio WhenChoose 0.5>>
@@ -1020,7 +1020,7 @@ title: JiwonIn1403
 지수: 지원아..!
 //지원0
 <<Act 지원 Jiwon0 0.322 0.527 white>>
-지원: 어…. 지수?
+지원: 어... 지수?
 //지수3
 <<UpdateAct 지수 Jisoo3>>
 지원이가 의자에 묶여있다.
@@ -1086,7 +1086,7 @@ title: OutofOfficetel
 //지수, 지원이미지 노출 x
 //(14층 배경)
 <<Scene Door1403>>
-…!
+..!
 저쪽에 수상한 사람들이 있다.
 누굴 찾는 것 같은데...
 설마 우리를 찾나?
@@ -1148,9 +1148,9 @@ title: escapegame_checkpoint1
 	... 
 	<<PlayAudio LoudDoor>>
 	<<Fade Black 0.0 1.0 1.0>>
-	…헉!
+	..헉!
 	조직원: 거기 누구야!
-	…어떡하면 좋지?
+	..어떡하면 좋지?
 	//전부 블랙화면 그대로 진행
 	-> 엘리베이터까지 빠르게 뛰어가자
 		<<PlayAudio WhenChoose>>
@@ -1225,7 +1225,7 @@ title: escapegame_elevator
 		<<PlayAudio WhenChoose>>
 		//블랙화면으로 페이드 아웃
 		<<Fade Black 0.0 1.0 1.0>>
-		….
+		...
 		겨우 엘리베이터를 탔다.
 		<<jump escapegame_checkpoint2>>
 -> 옆에 있는 1401호에 들어가보자
@@ -1233,8 +1233,8 @@ title: escapegame_elevator
 	//블랙화면으로 페이드아웃
 	//복도 이미지1
 	<<Scene Lobby14F>>
-	….
-	문이 안열린다….
+	...
+	문이 안열린다...
 	-> 같은 조직원인 척 하자
 		<<PlayAudio WhenChoose>>
 		...
@@ -1308,7 +1308,7 @@ title: escapegame_stopelevator
 	//블랙화면으로 페이드 아웃
 	<<Fade Black 0.0 1.0 1.0>>
 	<<wait  1.0>>
-	…!
+	..!
 	갑자기 조직원들이 나타나서 지원이를 끌고 갔다.
 	...
 	//[지원이가 다시 끌려감]
@@ -1410,9 +1410,9 @@ title: escapegame_brokenelevator
 		//블랙화면으로 페이드아웃
 		<<Fade Black 0.0 1.0 1.0>>
 		<<wait  1.0>>
-		….
-		지수: 지원아, 조금만 더 힘내…!
-		지원: ….
+		...
+		지수: 지원아, 조금만 더 힘내..!
+		지원: ...
 		지원이의 발걸음이 점점 더 느려졌다.
 		...
 		누군가 뒤에서 내 옷을 잡아당겼다.
@@ -1432,7 +1432,7 @@ title: escapegame_checkpoint3
 비상계단으로 가자..!
 //계단 이미지2 배경
 <<Scene Stair2>>
-….
+...
 다행히 3층에는 아무도 없었다.
 ...
 비상계단을 통해 1층으로 내려왔다.
@@ -1450,8 +1450,8 @@ title: escapegame_checkpoint3
 <<Scene Stair2>>
 <<wait 0.5>>
 <<FadeIn>>
-….
-이미 조직원이 1층에 깔려있는 것 같은데…. 어떡하지?
+...
+이미 조직원이 1층에 깔려있는 것 같은데... 어떡하지?
 -> 주변에 뭐가 있는지 살펴보자
 	어디 보자, 주변에 쓸만한 게...
 	...
@@ -1494,15 +1494,15 @@ title: escapegame_checkpoint3
 		??: 일단 약을 챙겨야..!
 		..지금이다.
 		//블랙화면으로 페이드아웃
-		….
+		...
 		<<Fade Black 0.0 1.0 1.0>>
 		<<wait  1.0>>
 		문 손잡이를 잡은 순간, 누군가의 목소리가 들렸다.
 		???: 오작동 아니야? 우린 여기 있을 테니까 니가 가서 소화전 확인해봐.
 		???: 비상계단 쪽에 있을걸.
-		…!
-		어떡하지….
-		….
+		..!
+		어떡하지...
+		...
 		당황해서 망설이는 사이, 문이 열렸다.
 		...
 		//[발각]
@@ -1520,7 +1520,7 @@ title: escapegame_checkpoint3
 		...
 		지원: 조심해...
 		//블랙화면으로 페이드아웃
-		….
+		...
 		<<Fade Black 0.0 1.0 1.0>>
 		<<wait  1.0>>
 		2층 중앙계단 근처로 향했다. 
@@ -1590,7 +1590,7 @@ title: escapegame_success
 //오피스텔 1층 배경 페이드인
 //지수, 지원이미지 노출 x
 <<FadeIn>>
-…휴우.
+..휴우.
 겨우 문 앞까지 왔네.
 ...
 지원이 상태가 더 안좋아졌어.
@@ -1605,7 +1605,7 @@ title:BacktoOfficetel1stFloor
 
 //지수2
 <<Act 지수 Jisoo2 1.17 0.322 white>>
-지수: 지원아….
+지수: 지원아...
 지수: 너 무슨 일이 있었던 거야?
 <<Act 지원 JIwon3 0.322 0.227 white>>
 //지원3
@@ -1615,7 +1615,7 @@ title:BacktoOfficetel1stFloor
 //(♫Sound: 조직원들의 바쁜 발소리가 가까워진다)
 //지수5
 <<UpdateAct 지수 Jisoo5>>
-…!
+..!
 //지수3
 <<UpdateAct 지수 Jisoo3>>
 지수: 빨리 나가자, 지원아.
@@ -1637,7 +1637,7 @@ title:BacktoOfficetel1stFloor
 지원: 그냥 가.
 //지수3
 <<UpdateAct 지수 Jisoo3>>
-지수: 아니야…. 일어나.
+지수: 아니야... 일어나.
 //지수, 지원이미지 종료
 <<HideAll>>
 
