@@ -208,7 +208,7 @@ title: obj_emptyglass
 ...
 
 <<Hide 지수>>
-* 비어있는 술잔을 획득했다. *
+<color=yellow>* 비어있는 술잔을 획득했다. *</color>
 
 //인벤토리에 빈 술잔 아이템 추가 (구현 완료)
 
@@ -237,7 +237,7 @@ title: obj_minirefrigerator
 -> 한 개만 챙겨가자.
 	그래... 하나만 챙기자.
 	<<HideAll>>
-	* 생수가 든 페트병을 습득했다. *
+	<color=yellow>* 생수가 든 페트병을 습득했다. *</color>
 	<<AddToInventory VisualNovelPrefab WaterBottle>>
 	<<declare $WaterBottle = 0 as number>>
 	<<set $WaterBottle = 1>>
@@ -247,7 +247,7 @@ title: obj_minirefrigerator
 -> 두 개 다 챙겨가자.
 	혹시 모르니 두 개 챙겨두자.
 	<<HideAll>>
-	* 생수가 든 페트병을 습득했다. *
+	<color=yellow>* 생수가 든 페트병을 습득했다. *</color>
 	<<AddToInventory VisualNovelPrefab WaterBottle>>
 	<<AddToInventory VisualNovelPrefab WaterBottle>>
 	<<set $WaterBottle = 2>>
@@ -572,8 +572,8 @@ title: obj_lsdsticker
 우표인가? 귀엽게 생겼네.
 //지수 이미지 종료
 <<Hide 지수>>
-<<PlayAudio WhenChoose 0.3>>
-* 일기장에 'LSD 스티커'가 추가되었습니다. *
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 'LSD 스티커'가 추가되었습니다. *</color>
 
 <<RevealDiary DiaryManager Page6>>
 
@@ -622,8 +622,8 @@ title: menu_philopon
 //메뉴판 이미지의 '필로폰' 텍스트 클릭 시
 ...
 술 이름이 왜 이래?
-<<PlayAudio WhenChoose 0.3>>
-* 일기장에 '필로폰'이 추가되었습니다. *
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 '필로폰'이 추가되었습니다. *</color>
 
 <<RevealDiary DiaryManager Page7>>
 <<SetActiveFalse VisualNovelPrefab menu_philopon>>
@@ -711,9 +711,9 @@ title: event_gunwoo_tutorial
 //텍스트 볼드체 (취소: 유니티상에서 너무 굵음)
 <<BGoff SceneManager>>
 <<PlayAudio Minigame 0.6 loop>>
-* 건우와 대화해보자! *
-* 건우와의 대화를 통해 도움을 요청해봅시다. *
-* 어쩌면 건우가 도움을 줄 수도... *
+<color=yellow>* 건우와 대화해보자! *</color>
+<color=yellow>* 건우와의 대화를 통해 도움을 요청해봅시다. *</color>
+<color=yellow>* 어쩌면 건우가 도움을 줄 수도... *</color>
 
 <<declare $persuade = 5 as number>>
 <<set $persuade = 5>>
@@ -1794,7 +1794,7 @@ title: obj_drugjelly
 -> 주워보자
 	<<Hide Toilet_drugjelly>>
 	<<Hide DBG>>
-	* 젤리가 든 봉지를 습득했다. *
+	<color=yellow>* 젤리가 든 봉지를 습득했다. *</color>
 	...
 	//인벤토리에 「젤리 봉지」 아이템이 추가됨.
 	<<AddToInventory VisualNovelPrefab DrugJelly>>
@@ -1930,7 +1930,7 @@ title: obj_staffonly_lockeropen
 
 <<HideAll>>
 
-* 스태프 복장을 습득했다. *
+<color=yellow>* 스태프 복장을 습득했다. *</color>
 //인벤토리에 「스태프 복장」 아이템이 추가됨.
 <<SetActiveFalse VisualNovelPrefab Locker>>
 <<FinishedObj VisualNovelPrefab Locker>>
@@ -2151,6 +2151,7 @@ title: game_openthedoor_intro
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
+<<DeleteItem inventory Hairpin>>
 
 <<UI_off MenuUI>>
 
@@ -2170,14 +2171,14 @@ title: game_openthedoor_intro
 //미니게임 씬으로 이동
 <<Scene keyhole_outer(bg)>>
 <<PlayAudio Minigame 0.6 loop>>
-* 헤어핀으로 문을 따자! *
-* 헤어핀을 이용해 Staff Room의 문을 열어봅시다. *
-* 문따기를 시도하는 방법 *
-* 헤어핀은 마우스를 따라옵니다. *
-* 마우스를 여기저기 움직이며 적당한 각도에 마우스를 둔 후, 마우스 클릭을 통해 문따기를 시도할 수 있습니다 *
-* 미세한 각도 조정을 통해 문따기를 성공해보세요! *
-* 제한 시간 내에 문을 열지 못하면 문따기에 실패합니다. *
-* 기회는 3번까지 주어집니다. *
+<color=yellow>* 헤어핀으로 문을 따자! *</color>
+<color=yellow>* 헤어핀을 이용해 Staff Room의 문을 열어봅시다. *</color>
+<color=yellow>* 문따기를 시도하는 방법 *</color>
+<color=yellow>* 헤어핀은 마우스를 따라옵니다. *</color>
+<color=yellow>* 마우스를 여기저기 움직이며 적당한 각도에 마우스를 둔 후, 마우스 클릭을 통해 문따기를 시도할 수 있습니다 *</color>
+<color=yellow>* 미세한 각도 조정을 통해 문따기를 성공해보세요! *</color>
+<color=yellow>* 제한 시간 내에 문을 열지 못하면 문따기에 실패합니다. *</color>
+<color=yellow>* 기회는 3번까지 주어집니다. *</color>
 <<ChangeSceneTo VisualNovelPrefab lockpick>>
 <<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -2257,10 +2258,10 @@ title: game_openthedoor_success
 ...
 <<StopAudio Minigame>>
 <<ChangeSceneTo VisualNovelPrefab S2_4_1_StaffRoom>>
-<<jump club_staffroom_inside>>
 <<deActiveM MenuUI>>
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<jump club_staffroom_inside>>
 
 
 ===
@@ -2275,8 +2276,8 @@ title: obj_cocatree
 ...
 나무를 심어뒀네.
 <<Hide 지수>>
-<<PlayAudio WhenChoose 0.3>>
-* 일기장에 '코카인'이 추가되었습니다. *
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 '코카인'이 추가되었습니다. *</color>
 
 <<RevealDiary DiaryManager Page8>>
 <<SetActiveFalse VisualNovelPrefab Staffroom_Tree>>
@@ -2717,8 +2718,8 @@ title: obj_key
 <<Hide Key>>
 <<Hide DBG>>
 
-* 열쇠를 습득했습니다. *
-
+<color=yellow>* 열쇠를 습득했습니다. *</color>
+<<Hide 지수>>
 //인벤토리에 열쇠 아이템이 추가됨.
 <<SetActiveFalse VisualNovelPrefab InStaffroom_Key>>
 <<FinishedObj VisualNovelPrefab InStaffroom_Key>>
@@ -3506,8 +3507,8 @@ title: inventory_drugjelly
 건우: 너 이거 먹었냐?
 지수: 안 먹었는데 왜요?
 건우: ... 이거 마약젤리 같은데.
-<<PlayAudio WhenChoose 0.3>>
-* 일기장에 '마약 젤리'가 추가되었습니다. *
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 '마약 젤리'가 추가되었습니다. *</color>
 <<RevealDiary DiaryManager Page1>>
 
 지수: 네..?
