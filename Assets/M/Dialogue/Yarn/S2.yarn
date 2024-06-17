@@ -2180,6 +2180,7 @@ title: game_openthedoor_intro
 <color=yellow>* 제한 시간 내에 문을 열지 못하면 문따기에 실패합니다. *</color>
 <color=yellow>* 기회는 3번까지 주어집니다. *</color>
 <<ChangeSceneTo VisualNovelPrefab lockpick>>
+<<wait 1.0>>
 <<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
