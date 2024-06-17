@@ -3809,6 +3809,8 @@ title: stairchocotalk2
 
 <<SetCanvasTo VisualNovelPrefab false>>
 <<ChangeSceneTo VisualNovelPrefab S3_1_OfficetelEntrance>>
+<<wait 0.5>>
+<<jump Officetel3>>
 ===
 
 title: wrongplaceS2

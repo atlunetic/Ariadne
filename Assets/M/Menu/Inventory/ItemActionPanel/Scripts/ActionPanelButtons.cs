@@ -90,6 +90,8 @@ public class ActionPanelButtons : MonoBehaviour
             {
                 runner.StartDialogue("OfficetelCardkeyForce");
             }
+
+            else if (connectedItem.itemName == "Flashlight") { }
             else
             {
                 runner.StartDialogue("IfnotEmployeeSuit");
