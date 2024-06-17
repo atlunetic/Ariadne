@@ -631,7 +631,7 @@ title: MDMA
 
 ...
 비타민인가?
-<<PlayAudio WhenChoose 0.3>>
+<<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 'MDMA'가 추가되었습니다. *</color>
 
 <<RevealDiary DiaryManager Page4>>

@@ -572,7 +572,7 @@ title: obj_lsdsticker
 우표인가? 귀엽게 생겼네.
 //지수 이미지 종료
 <<Hide 지수>>
-<<PlayAudio WhenChoose 0.3>>
+<<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 'LSD 스티커'가 추가되었습니다. *</color>
 
 <<RevealDiary DiaryManager Page6>>
@@ -622,7 +622,7 @@ title: menu_philopon
 //메뉴판 이미지의 '필로폰' 텍스트 클릭 시
 ...
 술 이름이 왜 이래?
-<<PlayAudio WhenChoose 0.3>>
+<<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 '필로폰'이 추가되었습니다. *</color>
 
 <<RevealDiary DiaryManager Page7>>
@@ -2151,6 +2151,8 @@ title: game_openthedoor_intro
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
+<<DeleteItem inventory Hairpin>>
+
 <<UI_off MenuUI>>
 
 <<Act 지수 Jisoo4 1.17 0.322 white>>
@@ -2274,7 +2276,7 @@ title: obj_cocatree
 ...
 나무를 심어뒀네.
 <<Hide 지수>>
-<<PlayAudio WhenChoose 0.3>>
+<<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 '코카인'이 추가되었습니다. *</color>
 
 <<RevealDiary DiaryManager Page8>>
@@ -3505,7 +3507,7 @@ title: inventory_drugjelly
 건우: 너 이거 먹었냐?
 지수: 안 먹었는데 왜요?
 건우: ... 이거 마약젤리 같은데.
-<<PlayAudio WhenChoose 0.3>>
+<<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 '마약 젤리'가 추가되었습니다. *</color>
 <<RevealDiary DiaryManager Page1>>
 

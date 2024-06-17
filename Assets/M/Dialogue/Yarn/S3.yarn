@@ -148,6 +148,7 @@ title: DrugCookie
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //(마약 쿠키 클릭 시)
+<<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 ‘마약 쿠키’가 추가되었습니다. *</color>
 //(이후 일기장 클릭 시 ‘마약 쿠키’ 관련 정보 확인 가능)
 <<RevealDiary DiaryManager Page3>>
@@ -214,7 +215,7 @@ title: SynthWeed
 <<RevealDiary DiaryManager Page9>>
 <<SetActiveFalse VisualNovelPrefab SynthWeed>>
 <<FinishedObj VisualNovelPrefab SynthWeed>>
-
+<<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 ‘합성 대마’가 추가되었습니다. *</color>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -818,6 +819,7 @@ title: DrugDrink
 ….
 <<Hide 지수>>
 <<RevealDiary DiaryManager Page2>>
+<<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 ‘마약 음료’가 추가되었습니다. *</color>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -922,7 +924,7 @@ title: Crack
 ...
 광물같이 생겼다.
 <<Hide 지수>>
-
+<<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 ‘크랙’이 추가되었습니다. *</color>
 <<RevealDiary DiaryManager Page5>>
 <<SetCanvasTo VisualNovelPrefab false>>
