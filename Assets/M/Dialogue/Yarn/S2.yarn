@@ -2151,6 +2151,7 @@ title: game_openthedoor_intro
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
+
 <<UI_off MenuUI>>
 
 <<Act 지수 Jisoo4 1.17 0.322 white>>
