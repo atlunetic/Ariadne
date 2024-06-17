@@ -75,7 +75,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
                 CallYarn.instance.Callbybutton(MoveStaffroom.GetComponent<Button>(), "club_staffroom_nostaff");
             MoveStaffroom.SetActive(true);
         }
-        if(GameManager.instance.FindedObjects.Contains("Locker") && GameManager.instance.FindedObjects.Contains("Toilet_costomerF")) {
+        if(GameManager.instance.FindedObjects.Contains("Locker") && GameManager.instance.FindedObjects.Contains("Toilet_costomerF") && GameManager.instance.FindedClues.Contains("StudentID") && GameManager.instance.FindedClues.Contains("ToiletPaper")) {
             UnityAction openVIProom = null;
             openVIProom = () => { MoveViproom.SetActive(true);
                 CallYarn.instance.Callbybutton(MoveViproom.GetComponent<Button>(), "yay");
