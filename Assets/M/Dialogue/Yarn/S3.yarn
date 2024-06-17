@@ -494,19 +494,19 @@ title: OfficetelDoorwcard
 뭐였더라.
 //지수5
 <<UpdateAct 지수 Jisoo5>>
--> 지수: 라이터..! 
+-> 라이터..! 
 	<<jump Ending4>>
 -> 칵테일..!
 	<<jump Ending4>>
 -> 코카인..!
 	<<jump Ending4>>
 -> 실타래…!
-	조직원:(무표정) ….
-	조직원:(무표정) ….
+	조직원: ….
+	조직원: ….
 	…맞췄나?
 	….
-	조직원:(무표정) 신입인가.
-	조직원:(무표정) 누굴 닮았는데…. 
+	조직원: 신입인가.
+	조직원: 누굴 닮았는데…. 
 	//지수4
 	<<UpdateAct 지수 Jisoo4>>
 	...
@@ -527,8 +527,8 @@ title: Ending4
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-조직원:(무표정) ...
-조직원:(무표정) ...
+조직원: ...
+조직원: ...
 ..맞췄나?
 ...
 //(갑자기 화면이 흐려지는 연출)
@@ -577,6 +577,7 @@ title: Officetel1stfloor
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio Chap3ThemeP2 1.0 loop>>
 //지수2
 <<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
@@ -795,6 +796,7 @@ title: Ending4_2
 //화면 어두워짐, 엔딩일러 팝업
 <<HideAll>>
 <<Fade black 0.0 1.0 2.0>>
+<<StopAudioAll>>
 
 ...
 ...
@@ -1094,6 +1096,7 @@ title: escapegame_intro
 ---
 
 //14층 배경
+<<StopAudio Chap3ThemeP2>>
 <<PlayAudio ChooseMinigame 1.0 loop>>
 <color=yellow>* 오피스텔을 탈출하자! *</color>
 <color=yellow>* 당신의 선택이 중요합니다. *</color>
