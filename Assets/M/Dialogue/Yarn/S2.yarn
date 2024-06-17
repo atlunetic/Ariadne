@@ -2256,10 +2256,10 @@ title: game_openthedoor_success
 ...
 <<StopAudio Minigame>>
 <<ChangeSceneTo VisualNovelPrefab S2_4_1_StaffRoom>>
-<<jump club_staffroom_inside>>
 <<deActiveM MenuUI>>
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<jump club_staffroom_inside>>
 
 
 ===
@@ -2717,7 +2717,7 @@ title: obj_key
 <<Hide DBG>>
 
 * 열쇠를 습득했습니다. *
-
+<<Hide 지수>>
 //인벤토리에 열쇠 아이템이 추가됨.
 <<SetActiveFalse VisualNovelPrefab InStaffroom_Key>>
 <<FinishedObj VisualNovelPrefab InStaffroom_Key>>
