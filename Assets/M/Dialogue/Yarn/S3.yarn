@@ -46,7 +46,9 @@ title: Poppy
 
 <<SetCanvasTo VisualNovelPrefab true>>
 // 지수4
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Act 지수 Jisoo4 1.17 0.322 white>>
+<<Draw PoppyPopup 0.75 0.75>>
 ..?
 뭔가 익숙한 꽃이다.
 ...
@@ -69,6 +71,8 @@ title: Poppy
 ...
 금방 오신다고 하네.
 <<Hide 지수>>
+<<Hide PoppyPopup>>
+<<Hide DBG>>
 <<FinishedObj VisualNovelPrefab Poppy>>
 <<FinishedDialogue VisualNovelPrefab Poppy>>
 
@@ -1703,6 +1707,8 @@ title:BacktoOfficetel1stFloor
 //(암전, 사이렌 소리 사라짐)
 <<Fade Black 0.0 1.0 1.0>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<ChangeSceneTo VisualNovelPrefab S4>>
+<<jump lastevent_intro>>
 
 ===
 
