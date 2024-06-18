@@ -104,14 +104,14 @@ public class SaveAndLoad : MonoBehaviour
             case "S2_5_VipRoomEntrance": return "VIP Room";
             case "S2_6_CounterBar": return "이상한 카운터 & 바";
             case "S2_6_ReVip": return "이상한 VIP Room 앞";
-            case "S2_8_ParkingLot": return "클럽 뒷문 주차장";
+            case "S2_8_ParkingLot2": return "클럽 뒷문 주차장";
             case "S2_9_Car": return "조직원의 차 내부";
             case "S3_2_Officetel1stFloor": return "오피스텔 1층";
             case "S3_3_Officetel1503": return "오피스텔 1503호";
             case "S3_4_Officetel14th": return "오피스텔 14층";
             case "S3_1_1_Door":
             case "S3_1_2_PhoneBooth":
-            case "S3_1_Officetel Entrance": return "오피스텔 입구";
+            case "S3_1_OfficetelEntrance": return "오피스텔 입구";
             case "S4": return "아리아드네";
             default: return "???";
         }
