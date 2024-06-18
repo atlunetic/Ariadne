@@ -96,7 +96,6 @@ title: NationalFlower
 ...
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
-<<AddToInventory VisualNovelPrefab Clothes>>
 
 ===
 
