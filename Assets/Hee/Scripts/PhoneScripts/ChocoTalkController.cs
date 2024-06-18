@@ -26,6 +26,8 @@ public class ChocoTalkController : MonoBehaviour
     public TMP_Text TXT;
     public GameObject D;
     public GameObject jisoo;
+    public GameObject trend1;
+    public GameObject trend2;
     public GameObject[] RecommendedFriends;
     void Awake()
     {
@@ -112,5 +114,12 @@ public class ChocoTalkController : MonoBehaviour
         for(int i = 0; i < Buttons.Length; i++){
             if(i != x) Buttons[i].interactable = true;
         } 
+    }
+
+    public void ativeTrend1(){
+        PhoneController.instance.ActiveTab(trend1);
+    }
+    public void ativeTrend2(){
+        PhoneController.instance.ActiveTab(trend2);
     }
 }
