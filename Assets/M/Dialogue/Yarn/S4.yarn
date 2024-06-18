@@ -155,6 +155,7 @@ title: realmemory_3
 <<UpdateAct 지수 Jisoo6>>
 지수: 니가 뭘 도와줄 수 있는데?
 
+<<UpdateAct 건우 Geonwoo2>>
 건우: ...
 건우: 지원아... 나중에 얘기하자.
 건우: 얘들아 이분 좀 내쫓아야겠다.
@@ -167,7 +168,7 @@ title: realmemory_3
 //지원4
 <<UpdateAct 지원 Jiwon4>>
 지원: 잠시만. 건우 오빠.
-
+<<UpdateAct 건우 Geonwoo2>>
 건우: ...
 지원: 지수야..!
 
@@ -235,11 +236,11 @@ title: realmemory_5
 //지수2
 <<Act 지수 Jisoo2 1.17 0.322 white>>
 지수: ...
-지수: ...
+<<wait 1.0>>
 건우: 공범 만들려고 마약 투여했는데.
 건우: 치사량을 훨씬 넘겼나봐.
 지수: ...
-지수: ...
+<<wait 1.0>>
 건우: 현장에 이게 있었어.
 건우: 몰래 챙겨왔는데...
 <<wait 2.0>>
@@ -249,7 +250,6 @@ title: realmemory_5
 건우: 너한테 주는 게 맞는 것 같아서.
 건우: ...
 건우: 미안하다.
-지수: ...
 지수: ...
 <<wait 2.0>>
 
@@ -271,8 +271,8 @@ title: realmemory_6
 ---
 
 
-<color=purple>아리아드네</color>: <color=purple>..
-<color=purple>아리아드네</color>: <color=purple>제 아프지마.
+<color=purple>아리아드네</color>: <color=purple>...</color>
+<color=purple>아리아드네</color>: <color=purple>이제 아프지마.</color>
 <<wait 2.0>>
 //여기부터는 모두 지수8
 //화면 암전 및 전환. 병실 이미지 (희원)
@@ -287,8 +287,8 @@ title: realmemory_6
 <<wait 2.0>>
 
 ...
-//문 열리는 사운드
-...
+//문열리는 사운드
+<<PlayAudio HospitalDoorOpen>>
 <<wait 2.0>>
 
 어...
@@ -303,13 +303,14 @@ title: realmemory_6
 ...
 머리가 지끈거려.
 ...
-...
 
-//문 열리는 사운드
-//문 닫히는 사운드
+//문열리는 사운드
+<<PlayAudio HospitalDoorOpen>>
+//문닫히는 사운드
+<<PlayAudio HospitalDoorClose>>
+
 사람들이 많이 들어왔다...
-...
-...
+<<wait 1.0>>
 머리가 아파.
 
 의사: 상태가...
@@ -321,8 +322,8 @@ title: realmemory_6
 이명이 들려서 그런가...
 뭐라고 하는지 잘 안들리네...
 ...
-//문 열리는 사운드
-...
+//문열리는 사운드
+<<PlayAudio HospitalDoorOpen>>
 ..누가 또 들어왔나.
 
 엄마: 지수야..!
@@ -339,11 +340,9 @@ title: realmemory_6
 
 엄마가 눈물을 흘렸다.
 ...
-...
 멍하다.
 <<wait 2.0>>
 
-...
 뭔가...
 기억 날 듯 말 듯 한데...
 <<wait 2.0>>
@@ -370,6 +369,7 @@ title: realmemory_6
 
 ...
 //사운드: 이명 같은 소리가 갑자기 커졌다 끊김
+<<PlayAudio EarSound>>
 어지러워.
 ...
 ...
@@ -402,7 +402,8 @@ title: realmemory_6
 귓가엔 끊임없이 이명이 들려왔다.
 ...
 
-//문 열리는 사운드
+//문열리는 사운드
+<<PlayAudio HospitalDoorOpen>>
 ...
 아빠: 허어... 헉...
 아빠: 지수야...
@@ -526,7 +527,8 @@ title: ending_normal
 ...
 ...
 
-//문 열리는 사운드
+//문열리는 사운드
+<<PlayAudio HospitalDoorOpen>>
 <<wait 2.0>>
 
 어...
@@ -544,8 +546,10 @@ title: ending_normal
 ...
 ...
 
-//문 열리는 사운드
-//문 닫히는 사운드
+//문열리는 사운드
+<<PlayAudio HospitalDoorOpen>>
+//문닫히는 사운드
+<<PlayAudio HospitalDoorClose>>
 사람들이 많이 들어왔다...
 ...
 ...
@@ -562,7 +566,8 @@ title: ending_normal
 ...
 ...
 
-//문 열리는 사운드
+//문열리는 사운드
+<<PlayAudio HospitalDoorOpen>>
 ..누가 또 들어왔나.
 
 엄마: 지수야..!
@@ -644,7 +649,8 @@ title: ending_normal
 ...
 ...
 
-//문 열리는 사운드
+//문열리는 사운드
+<<PlayAudio HospitalDoorOpen>>
 아빠: 허어... 헉...
 아빠: 지수야...
 
@@ -763,7 +769,8 @@ title: ending_merrybad
 ...
 ...
 //문을 두드리는 사운드
-//문 열리는 사운드
+//문열리는 사운드
+<<PlayAudio HospitalDoorOpen>>
 
 //효과지원5
 지원: 지수야!
@@ -791,7 +798,8 @@ title: ending_merrybad
 지원: 정신차리고 얼른 나와. 나 먼저 먹는다.
 //지원 이미지 종료
 
-//문 닫히는 사운드
+//문닫히는 사운드
+<<PlayAudio HospitalDoorClose>>
 //효과지수3
 ...
 ...
@@ -802,7 +810,8 @@ title: ending_merrybad
 라면이나 먹으러 갈까?
 ...
 //지수 이미지 종료
-//문 열리는 사운드
+//문열리는 사운드
+<<PlayAudio HospitalDoorOpen>>
 //곧이어 문 닫히는 사운드
 //이후 심박수 측정기 사운드가 뒤섞이다 멈춤
 
