@@ -384,6 +384,7 @@ title: InteractionFin3
 
 <<Hide 지수>>
 <<AfterD3 Controllers>>
+<<FinishedDialogue VisualNovelPrefab InteractionFin3>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1712,10 +1713,10 @@ title:BacktoOfficetel1stFloor
 
 ===
 
-title: OfficetelCardkeyForce
+title: WrongClothesAgain
 
 ---
-
-이걸 사용해볼까?
-
+<<SetCanvasTo VisualNovelPrefab true>>
+지금 입으면 눈에 띌 것 같아...
+<<SetCanvasTo VisualNovelPrefab false>>
 ===

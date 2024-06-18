@@ -43,6 +43,8 @@ public class ActionPanelButtons : MonoBehaviour
             
         }
 
+        else if (connectedItem.itemName == "Clothes") { runner.StartDialogue("WrongClothesAgain"); }
+
         else if (currentscene.name == "S2_7_Stairs")
         {
             if (connectedItem.itemName == "DrugJelly")
@@ -81,23 +83,23 @@ public class ActionPanelButtons : MonoBehaviour
         }
 
         */
-        else if (currentscene.name == "S3_1_OfficetelEntrance")
+        else if (currentscene.name.StartsWith("S3_1"))
         {
-            if (connectedItem.itemName == "Clothes")
+            if (GameManager.instance.FinishedDialogues.Contains("InteractionFin3"))
             {
-                runner.StartDialogue("IfEmployeeSuit");
-                Inventory.instance.items.Remove(connectedItem);//currentSlot.RemoveSlot();
-            }
-            else if (connectedItem.itemName == "OfficetelCardkey")
-            {
-                runner.StartDialogue("OfficetelCardkeyForce");
+                if (connectedItem.itemName == "Clothes")
+                {
+                    runner.StartDialogue("IfEmployeeSuit");
+                    Inventory.instance.items.Remove(connectedItem);//currentSlot.RemoveSlot();
+                }
+                else
+                {
+                    runner.StartDialogue("IfnotEmployeeSuit");
+                }
             }
 
             else if (connectedItem.itemName == "Flashlight") { }
-            else
-            {
-                runner.StartDialogue("IfnotEmployeeSuit");
-            }
+
         }
         else if (currentscene.name == "S3_4_Officetel14th" && connectedItem.itemName == "R1403Cardkey")
         {
