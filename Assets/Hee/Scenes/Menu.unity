@@ -9163,8 +9163,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD574\uC678 \uC5EC\uD589 \uC911 \u2018\uC824\uB9AC\u2019 \uC900\uB2E4\uBA74
-    \uAC70\uC808\uD558\uC138\uC694\u2026\u2018\uB300..."
+  m_text: "\uD574\uC678 \uC5EC\uD589 \uC2DC \uC5EC\uB7EC \uD615\uD0DC\uC758 \uB300\uB9C8
+    \uC81C\uD488\uC5D0 \uAC01\uBCC4\uD55C \uC8FC\uC758 \uD544\uC694\uD574\u2026\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
   m_sharedMaterial: {fileID: 1497702040961675257, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
@@ -34570,8 +34570,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97.07603, y: -37}
-  m_SizeDelta: {x: 276.15, y: 122.31}
+  m_AnchoredPosition: {x: 97.07603, y: -49.078}
+  m_SizeDelta: {x: 276.15, y: 98.155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1890268129
 MonoBehaviour:
@@ -34593,11 +34593,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC77C\uBCF8\uC758 \u2018XXX \uCD95\uC81C'\uC5D0\uC11C 40\uB300 \uB0A8\uC131\uC774
-    \uB098\uB220\uC900 '\uC824\uB9AC'\uB97C \uBA39\uC740 5\uBA85\uC774 \uBCD1\uC6D0\uC5D0
-    \uC774\uC1A1\uB418\uC5C8\uB2E4.\r\n\r\n\uC824\uB9AC\uB97C \uB098\uB220\uC900
-    40\uB300 \uB0A8\uC131\uC740 \uACBD\uCC30\uC5D0 \"\uC824\uB9AC\uB97C \uBA39\uC73C\uBA74
-    \uAE30\uBD84\uC774 \uB098.."
+  m_text: "\uBC29\uD559\uC744 \uB9DE\uC774\uD558\uC5EC \uD574\uC678\uC5EC\uD589\uC744
+    \uD558\uB294 \uAD6D\uBBFC\uC774 \uB298\uC5B4\uB09C \uAC00\uC6B4\uB370, \uAD00\uC138\uCCAD\uC5D0\uC11C\uB294
+    \uB2E4\uC591\uD55C \uD615\uD0DC\uC758 \uB300\uB9C8 \uC81C\uD488\uC5D0 \uB300\uD55C
+    \uAC01\uBCC4\uD55C \uC8FC\uC758\uB97C \uB2F9\uBD80.."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
   m_sharedMaterial: {fileID: 1497702040961675257, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
