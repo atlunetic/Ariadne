@@ -1604,7 +1604,7 @@ title: escapegame_success
 
 //오피스텔 1층 배경 페이드인
 //지수, 지원이미지 노출 x
-<<scene Opistal_1F_bg>>
+<<Scene Opistal_1F_bg>>
 <<FadeIn>>
 ..휴우.
 겨우 문 앞까지 왔네.
