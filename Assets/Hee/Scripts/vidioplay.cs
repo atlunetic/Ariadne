@@ -22,12 +22,12 @@ public class vidioplay : MonoBehaviour
         runner = FindObjectOfType<DialogueRunner>();
 
         ariadne1.SetActive(true);
-        ariadne1.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {ariadne2.SetActive(true);
-                                                                                      ariadne1.SetActive(false);};
+        ariadne1.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {ariadne2.SetActive(true);};                                                                                      
     }
 
     [YarnCommand("Final")]
     public void Fianl(){
+        ariadne1.SetActive(false);
         ariadne2.SetActive(false);
         FinalreasonController.SetActive(true);
         FinalreasonCanvas.SetActive(true);
