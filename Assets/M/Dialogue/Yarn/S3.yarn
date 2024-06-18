@@ -1711,7 +1711,7 @@ title:BacktoOfficetel1stFloor
 <<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<ChangeSceneTo VisualNovelPrefab S4>>
-<<jump lastevent_intro>>
+//<<jump lastevent_intro>>
 
 ===
 
