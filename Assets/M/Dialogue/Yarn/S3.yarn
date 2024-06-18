@@ -141,10 +141,8 @@ title: FlashVM
 //<<UpdateAct 지수 Jisoo2>>
 ...
 <<DeleteItem Inventory Flashlight>>
+<<Hide BlackBG>>
 <<jump DrugCookie>>
-<<Hide BlackBG>>
-<<Hide BlackBG>>
-<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
