@@ -35,11 +35,11 @@ public class ActionPanelButtons : MonoBehaviour
         else if (connectedItem.itemName == "Clothes" && currentscene.name.StartsWith("S2"))
         {
 
-            if (currentscene.name.StartsWith("S2_6")| currentscene.name.StartsWith("S2_7")| currentscene.name.StartsWith("S2_8")| currentscene.name.StartsWith("S2_9")| currentscene.name.StartsWith("S2_10"))
+            if (GameManager.instance.FinishedDialogues.Contains("obj_customers"))
             {
-                runner.StartDialogue("WrongClothes");
+                runner.StartDialogue("ClothesUsed");
             }
-            else { runner.StartDialogue("ClothesUsed"); }
+            else { runner.StartDialogue("WrongClothes"); }
             
         }
 
