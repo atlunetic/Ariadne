@@ -2174,6 +2174,7 @@ title: game_openthedoor_intro
 <<Hide 지수>>
 //미니게임 씬으로 이동
 <<Scene keyhole_outer(bg)>>
+<<ChangeSceneTo VisualNovelPrefab S1>>
 <<PlayAudio Minigame 0.6 loop>>
 <color=yellow>* 헤어핀으로 문을 따자! *</color>
 <color=yellow>* 헤어핀을 이용해 Staff Room의 문을 열어봅시다. *</color>
