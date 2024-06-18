@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 using UnityEngine.UI;
 using Yarn.Unity;
 
@@ -9,9 +10,14 @@ public class FinalReason : MonoBehaviour
     public static FinalReason instance;
     public SceneInfo scenemanager;
     public GameObject confirmB;
+    public GameObject perfectImg;
+    public GameObject perfectVid;
     public GameObject[] polaroid;  // 폴라로이드 안 이미지
     public string[] Answer = new string[5];
     public bool[] IsFilled = new bool[]{false, false, false, false, false};  // 폴라로이드 안 이미지
+
+    public Queue<int> rightanswer = new Queue<int>();
+    public string ending;
 
     void Awake(){
         instance = this;
@@ -30,9 +36,10 @@ public class FinalReason : MonoBehaviour
             pic.transform.GetChild(2).gameObject.SetActive(true);
             pic.transform.GetChild(2).GetComponent<Button>().onClick.AddListener(()=>PickAnswer(img, pic));
         }
-        
+
         PhoneController.instance.Phone.SetActive(true);
         PhoneController.instance.Gallery.SetActive(true);
+        perfectVid.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {vidioplay.instance.breakmemory();};
     }
 
     void PickAnswer(GameObject img, GameObject pic){
@@ -50,21 +57,36 @@ public class FinalReason : MonoBehaviour
     }
 
     public void CheckAnswer(){
+        confirmB.SetActive(false);
+        PhoneController.instance.Phone.SetActive(false);
         int score = 0;
-        if(Answer[0]=="StudentID") score++;
-        if(Answer[1]=="Meds") score++;
-        if(Answer[2]=="Photo") score++;
-        if(Answer[3]=="Letter") score++;
-        if(Answer[4]=="BrokenGlasses") score++;
+        if(Answer[0]=="StudentID") {score++; rightanswer.Enqueue(1);}
+        if(Answer[1]=="Meds") {score++; rightanswer.Enqueue(2);}
+        if(Answer[2]=="Photo") {score++; rightanswer.Enqueue(3);}
+        if(Answer[3]=="Letter") {score++; rightanswer.Enqueue(4);}
+        if(Answer[4]=="BrokenGlasses") {score++; rightanswer.Enqueue(5);}
 
         switch(score) {
-            case 0: print("사망엔딩"); break;
+            case 0: ending = "realmemory_6"; break;
             case 1: 
-            case 2: print("루프엔딩"); break;
+            case 2: ending = "realmemory_6"; break;
             case 3:
-            case 4: print("두통엔딩"); break;
-            case 5: print("진엔딩"); break;
+            case 4: ending = "realmemory_6"; break;
+            case 5: ending = "realmemory_6"; StartCoroutine("perfect"); return;
             default: print("error"); break;
         }
+
+        vidioplay.instance.breakmemory();
+    }
+
+    IEnumerator perfect(){
+        perfectImg.GetComponent<Image>().canvasRenderer.SetAlpha(0.0f);
+        perfectImg.SetActive(true);
+        perfectImg.GetComponent<Image>().CrossFadeAlpha(1.0f,2.0f,false);
+        yield return new WaitForSeconds(2f);
+        perfectVid.SetActive(true);
+        vidioplay.instance.FinalreasonCanvas.SetActive(false);
+        perfectImg.SetActive(false);
+
     }
 }
