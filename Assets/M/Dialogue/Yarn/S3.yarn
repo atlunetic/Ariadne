@@ -47,16 +47,16 @@ title: Poppy
 <<SetCanvasTo VisualNovelPrefab true>>
 // 지수4
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
-<<Act 지수 Jisoo4 1.17 0.322 white>>
+//<<Act 지수 Jisoo4 1.17 0.322 white>>
 <<Draw PoppyPopup 0.75 0.75>>
 ..?
 뭔가 익숙한 꽃이다.
 ...
 다큐멘터리에서 본 적 있는데.
 양귀비꽃 아니야?
-
+<<Hide PoppyPopup>>
 // 지수3
-<<UpdateAct 지수 Jisoo3>>
+<<Act 지수 Jisoo3 1.17 0.322 white>>
 ...
 <<wait 0.5>>
 왜 이 꽃이 여기 있지..?
@@ -65,13 +65,12 @@ title: Poppy
 <<PlayAudio PhoneDial>>
 // (♫Sound: 휴대폰 버튼음)
 <<wait 2.0>>
-<<StopAudio PhoneDial>>
 // 지수2
 <<UpdateAct 지수 Jisoo2>>
 ...
+<<StopAudio PhoneDial>>
 금방 오신다고 하네.
 <<Hide 지수>>
-<<Hide PoppyPopup>>
 <<Hide DBG>>
 <<FinishedObj VisualNovelPrefab Poppy>>
 <<FinishedDialogue VisualNovelPrefab Poppy>>
@@ -110,13 +109,14 @@ title: VendingMachine3
 //지수1
 <<Act 지수 Jisoo1 1.17 0.322 white>>
 밑에 뭐라도 있는지 살펴볼까?
+<<Hide 지수>>
+<<Draw BlackBG 0.75 0.75>>
 <<wait 1.0>>
 ...
 //지수2
-<<UpdateAct 지수 Jisoo2>>
+//<<UpdateAct 지수 Jisoo2>>
 어두워서 잘 안보인다.
-<<Hide 지수>>
-
+<<Hide BlackBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -130,18 +130,19 @@ title: FlashVM
 <<Act 지수 Jisoo1 1.17 0.322 white>>
 손전등으로 자판기 밑을 살펴볼까?
 ...
-...
-//지수4
-<<UpdateAct 지수 Jisoo4>>
+<<wait 0.5>>
+<<Hide 지수>>
+<<Draw BlackBG 0.75 0.75>>
+<<wait 1.0>>
 어...
 무슨 쿠키 봉지가 있네.
 
 //지수2
-<<UpdateAct 지수 Jisoo2>>
+//<<UpdateAct 지수 Jisoo2>>
 ...
-<<Hide 지수>>
 <<DeleteItem Inventory Flashlight>>
 <<jump DrugCookie>>
+<<Hide BlackBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -235,7 +236,7 @@ title: GeonwooCard
 <<Draw Phonebooth_namecard_BIG 0.75 0.75>>
 //명함 팝업 이미지
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 white>>
+//<<Act 지수 Jisoo4 1.17 0.322 white>>
 ..?
 이건우..?
 번호도 익숙한데.
@@ -243,7 +244,7 @@ title: GeonwooCard
 ...
 <<Hide Phonebooth_namecard_BIG>>
 <<Hide DBG>>
-<<Hide 지수>>
+//<<Hide 지수>>
 <<FinishedObj VisualNovelPrefab GeonwooCard>>
 <<FinishedDialogue VisualNovelPrefab GeonwooCard>>
 <<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
@@ -294,12 +295,12 @@ title: OfficetelDoor
 
 //지수2
 <<wait 1.0>>
-<<Act 지수 Jisoo2 1.17 0.322 white>>
+//<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
 ...
 카드키가 있거나 비밀번호를 알아야 할 것 같다.
 ...
-<<Hide 지수>>
+//<<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
