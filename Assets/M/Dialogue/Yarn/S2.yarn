@@ -1234,7 +1234,7 @@ title: event_gunwoo_q5a
 		<<jump event_gunwoo_q5_jisu1>>
 	<<endif>>
 	//처음 초코톡에서 지수라 밝힌 경우 <<jump event_gunwoo_q5_jiwon1>>
--> 지원이가 마약성 진통제를 찾아봤다.
+-> 지원이가 마약류로 취급되는 약을 처방받았다.
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<if ActedAs() == true>>
@@ -1280,7 +1280,7 @@ title: event_gunwoo_q5b
 
 //선택지 랜덤 출력
 
--> 지원이가 마약성 진통제를 찾아봤다.
+-> 지원이가 마약류로 취급되는 약을 처방받았다.
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<if ActedAs() == true>>
@@ -1399,7 +1399,7 @@ title: event_gunwoo_q5_jisu2
 
 <<UpdateAct 지수 Jisoo3>>
 지수: ...
-지수: 마약성 진통제에 대해 물어보는 내용이었어요.
+지수: 마약류로 취급되는 약을 처방받은 것 같아요.
 <<jump event_gunwoo_q5_2>>
 
 
@@ -1433,7 +1433,7 @@ title: event_gunwoo_q5_jiwon2
 
 <<UpdateAct 지수 Jisoo3>>
 지수: ...
-지수: 마약성 진통제에 대해 물어보는 내용이었어요.
+지수: 마약류로 취급되는 약을 처방받은 것 같아요.
 <<jump event_gunwoo_q5_2>>
 
 
