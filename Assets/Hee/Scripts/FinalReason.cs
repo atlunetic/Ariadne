@@ -46,6 +46,7 @@ public class FinalReason : MonoBehaviour
         for(int i = 0; i < 5; i++){
             if(IsFilled[i]) continue;
             polaroid[i].GetComponent<Image>().sprite = img.GetComponent<Image>().sprite;
+            polaroid[i].transform.GetChild(0).GetComponent<Button>().enabled = true;
             Answer[i] = pic.name;
             img.SetActive(false);
             pic.SetActive(false);

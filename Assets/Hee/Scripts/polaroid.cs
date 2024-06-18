@@ -10,7 +10,9 @@ public class polaroid : MonoBehaviour
     void Start()
     {
         num = int.Parse(name);
+        
         transform.GetChild(0).GetComponent<Button>().onClick.AddListener(unpick);
+        transform.GetChild(0).GetComponent<Button>().enabled = false;
     }
 
     void unpick(){
