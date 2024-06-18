@@ -2496,7 +2496,7 @@ title: obj_radio
 
 <<SetActiveFalse VisualNovelPrefab InStaffroom_Radio>>
 <<FinishedObj VisualNovelPrefab InStaffroom_Radio>>
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: event_staffroom
