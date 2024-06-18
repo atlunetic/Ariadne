@@ -644,6 +644,7 @@ title: Officetel1503
 //(자동으로 다음 장소로 넘어감)
 <<UI_off MenuUI>>
 <<Hide 지수>>
+<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
