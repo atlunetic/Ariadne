@@ -104,7 +104,7 @@ title: Minotaur
 ---
 //(Chapter 1) 앞으로 가보자. 선택시
 <<PlayAudio MonsterSound2 0.7>>
-
+<<Scene Ceiling>>
 저게 말로만 듣던 미노타우르스...
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
 검을 쥔 손에 힘이 들어가지 않아.
@@ -237,7 +237,6 @@ title: memory_Letter
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
-<<jump AfterMemory>>
 
 ===
 
@@ -1225,32 +1224,6 @@ title: DiaryTutorial
 
 <<FinishedDialogue VisualNovelPrefab DiaryTutorial>>
 <<SetCanvasTo VisualNovelPrefab false>>
-
-===
-
-title: AfterMemory
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-<<HideAll>>
-//<<Scene FullJiwonRoomBG>>
-<<PlayAudio WhiteNoise 0.4>>
-<<PlayAudio EarSound 0.8>>
-<<Draw black_bg 0.75 0.75>>
-
-아..
-머리가 깨질 것 같아..
-<<wait 0.5>>
-요즘 너무 무리했나..
-
-
-<<StopAudioAll>>
-<<HideAll>>
-<<Scene NoBG>>
-<<UI_on MenuUI>>
-<<SetCanvasTo VisualNovelPrefab false>>
-
 
 ===
 

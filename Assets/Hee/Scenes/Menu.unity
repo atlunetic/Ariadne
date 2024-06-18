@@ -5294,8 +5294,9 @@ GameObject:
   - component: {fileID: 399115707}
   - component: {fileID: 399115706}
   - component: {fileID: 399115705}
+  - component: {fileID: 399115708}
   m_Layer: 5
-  m_Name: 27
+  m_Name: 33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5403,6 +5404,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399115703}
   m_CullTransparentMesh: 1
+--- !u!114 &399115708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399115703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a6439d71659a64e94699de0e55a6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &401628765
 GameObject:
   m_ObjectHideFlags: 0
@@ -9111,7 +9124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97.076965, y: 64.99994}
+  m_AnchoredPosition: {x: 97.076965, y: 60}
   m_SizeDelta: {x: 276.15, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &658193971
@@ -9134,8 +9147,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD574\uC678 \uC5EC\uD589 \uC911 \u2018\uC824\uB9AC\u2019 \uC900\uB2E4\uBA74
-    \uAC70\uC808\uD558\uC138\uC694\u2026\u2018\uB300..."
+  m_text: "\uD574\uC678 \uC5EC\uD589 \uC2DC \uC5EC\uB7EC \uD615\uD0DC\uC758 \uB300\uB9C8
+    \uC81C\uD488\uC5D0 \uAC01\uBCC4\uD55C \uC8FC\uC758 \uD544\uC694\uD574\u2026\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
   m_sharedMaterial: {fileID: 1497702040961675257, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
@@ -10719,8 +10732,9 @@ GameObject:
   - component: {fileID: 735094316}
   - component: {fileID: 735094315}
   - component: {fileID: 735094314}
+  - component: {fileID: 735094317}
   m_Layer: 5
-  m_Name: 26
+  m_Name: 32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10828,6 +10842,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735094312}
   m_CullTransparentMesh: 1
+--- !u!114 &735094317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735094312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a6439d71659a64e94699de0e55a6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738321990
 GameObject:
   m_ObjectHideFlags: 0
@@ -12231,8 +12257,9 @@ GameObject:
   - component: {fileID: 796562278}
   - component: {fileID: 796562277}
   - component: {fileID: 796562276}
+  - component: {fileID: 796562279}
   m_Layer: 5
-  m_Name: 28
+  m_Name: 34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12340,6 +12367,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796562274}
   m_CullTransparentMesh: 1
+--- !u!114 &796562279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796562274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a6439d71659a64e94699de0e55a6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &797798384
 GameObject:
   m_ObjectHideFlags: 0
@@ -17840,8 +17879,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u201C\uB9C8\uC57D\uB958\uB3C4 \uB098\uB214?\u201D\u2026\uC904\uC904 \uC0C8\uB294
-    \uC758\uB8CC\uC6A9 \uB9C8\uC57D"
+  m_text: "\"\uB0B4\uAC00 \uB9C8\uC57D\uC744 \uC6B4\uBC18\uD588\uB2E4\uACE0..?\"
+    \uAE08\uC804\uC801 \uC5B4\uB824\uC6C0\uC744 \uACAA\uB294 \uCCAD\uB144\uB4E4\uC744
+    \uACA8\uB0E5\uD55C \uC704\uD5D8\uD55C \uC544\uB974\uBC14\uC774\uD2B8"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
   m_sharedMaterial: {fileID: 1497702040961675257, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
@@ -22650,7 +22690,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uAC8C\uC784 \uCD9C\uC2DC \uC18C\uAC10 \uD55C\uB9C8\uB514"
+  m_text: "Ariadne \uD300 \uC18C\uAC1C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
   m_sharedMaterial: {fileID: 1497702040961675257, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
@@ -26575,7 +26615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBA54\uC77C"
+  m_text: "Ariadne \uD300 \uC5F0\uB77D\uB9DD"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
   m_sharedMaterial: {fileID: 1497702040961675257, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
@@ -32463,7 +32503,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC778\uC2A4\uD0C0\uADF8\uB7A8"
+  m_text: " \u2018Exit from NO EXIT\u2019 \uCD9C\uC2DC \uC18C\uAC10"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
   m_sharedMaterial: {fileID: 1497702040961675257, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
@@ -34550,8 +34590,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97.07603, y: -37}
-  m_SizeDelta: {x: 276.15, y: 122.31}
+  m_AnchoredPosition: {x: 97.07603, y: -49.078}
+  m_SizeDelta: {x: 276.15, y: 98.155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1890268129
 MonoBehaviour:
@@ -34573,11 +34613,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC77C\uBCF8\uC758 \u2018XXX \uCD95\uC81C'\uC5D0\uC11C 40\uB300 \uB0A8\uC131\uC774
-    \uB098\uB220\uC900 '\uC824\uB9AC'\uB97C \uBA39\uC740 5\uBA85\uC774 \uBCD1\uC6D0\uC5D0
-    \uC774\uC1A1\uB418\uC5C8\uB2E4.\r\n\r\n\uC824\uB9AC\uB97C \uB098\uB220\uC900
-    40\uB300 \uB0A8\uC131\uC740 \uACBD\uCC30\uC5D0 \"\uC824\uB9AC\uB97C \uBA39\uC73C\uBA74
-    \uAE30\uBD84\uC774 \uB098.."
+  m_text: "\uBC29\uD559\uC744 \uB9DE\uC774\uD558\uC5EC \uD574\uC678\uC5EC\uD589\uC744
+    \uD558\uB294 \uAD6D\uBBFC\uC774 \uB298\uC5B4\uB09C \uAC00\uC6B4\uB370, \uAD00\uC138\uCCAD\uC5D0\uC11C\uB294
+    \uB2E4\uC591\uD55C \uD615\uD0DC\uC758 \uB300\uB9C8 \uC81C\uD488\uC5D0 \uB300\uD55C
+    \uAC01\uBCC4\uD55C \uC8FC\uC758\uB97C \uB2F9\uBD80\uD588\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
   m_sharedMaterial: {fileID: 1497702040961675257, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
@@ -38444,8 +38483,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97.07603, y: -34}
-  m_SizeDelta: {x: 276.15, y: 122.61}
+  m_AnchoredPosition: {x: 97.07603, y: -58}
+  m_SizeDelta: {x: 276.15, y: 77.4152}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2135395703
 MonoBehaviour:
@@ -38467,12 +38506,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD658\uC790\uC5D0\uAC8C \uCC98\uBC29\uB41C \uB9C8\uC57D\uC131 \uC9C4\uD1B5\uC81C\uAC00
-    \uC911\uACE0\uAC70\uB798\uB418\uACE0 \uC788\uC73C\uBA70, \uD658\uC790\uB4E4\uC774
-    \uBCF5\uC6A9\uD558\uC9C0 \uC54A\uACE0 \uB0A8\uAE34 \uB9C8\uC57D\uC131 \uC9C4\uD1B5\uC81C\uB97C
-    \uC218\uAC70\xB7\uD3D0\uAE30\uD560 \uC778\uD504\uB77C\uB294 \uBBF8\uBE44\uD55C
-    \uC2E4\uC815\uC774\uB2E4. \uBCF5\uD569\uBD80\uC704\uD1B5\uC99D\uC99D\uD6C4\uAD70(CRPS)
-    \uD658\uC6B0\uD68C\uC5D0 \uB530\uB974\uBA74.."
+  m_text: "\uCD5C\uADFC \uBE44\uB300\uBA74 \uB9C8\uC57D\uAC70\uB798\uAC00 \uD65C\uAC1C\uCE58\uBA74\uC11C,
+    \uB300\uD559\uC0DD\uACFC \uC0AC\uD68C\uCD08\uB144\uC0DD\uC744 \uB9C8\uC57D \uC6B4\uBC18\uCC45\uC5D0
+    \uAC00\uB2F4\uC2DC\uD0A4\uB294 \uC0AC\uB840\uAC00 \uC99D\uAC00\uD588\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
   m_sharedMaterial: {fileID: 1497702040961675257, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
