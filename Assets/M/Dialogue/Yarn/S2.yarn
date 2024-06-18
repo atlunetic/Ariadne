@@ -1938,10 +1938,12 @@ title: obj_staffonly_lockeropen
 
 <color=yellow>* 스태프 복장을 습득했다. *</color>
 //인벤토리에 「스태프 복장」 아이템이 추가됨.
+<<AddToInventoryC VisualNovelPrefab>>
 <<SetActiveFalse VisualNovelPrefab Locker>>
 <<FinishedObj VisualNovelPrefab Locker>>
-<<AddToInventory VisualNovelPrefab Clothes>>
+//<<AddToInventory VisualNovelPrefab Clothes>>
 
+<<DeleteItem Inventory Key>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2342,6 +2344,7 @@ title: cctvOptions
 	중요한 영상은 없는 것 같다...
 	<<Hide CCTV_counterbar>>
 	<<Hide DBG>>
+	<<Draw CCTV_first 0.75 0.75>>
 	<<jump cctvOptions>>
 -> VIP Room
 	<<Hide CCTV_first>>
@@ -2349,6 +2352,7 @@ title: cctvOptions
 	중요한 영상은 없는 것 같다...
 	<<Hide CCTV_VIP>>
 	<<Hide DBG>>
+	<<Draw CCTV_first 0.75 0.75>>
 	<<jump cctvOptions>>
 -> 클럽 입구
 	<<Hide CCTV_first>>
@@ -2356,6 +2360,7 @@ title: cctvOptions
 	중요한 영상은 없는 것 같다...
 	<<Hide CCTV_entrance>>
 	<<Hide DBG>>
+	<<Draw CCTV_first 0.75 0.75>>
 	<<jump cctvOptions>>
 -> 주차장
 	<<Hide CCTV_first>>
@@ -2724,7 +2729,7 @@ title: obj_key
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Key 0.75 0.75>>
 어... 열쇠다.
-<<AddToInventory VisualNovelPrefab Key>>
+//<<AddToInventory VisualNovelPrefab Key>>
 <<wait 0.5>>
 어디 쓰는 열쇠지?
 
@@ -2877,8 +2882,8 @@ title: club_viproom_changeuniform
 <<wait 0.5>>
 들어가보자.
 
-<<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
-<<jump club_viproom>>
+//<<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
+//<<jump club_viproom>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -3201,12 +3206,12 @@ title: obj_customerh
 
 //클럽고객H 왼쪽, 지수 오른쪽 배치
 <<Act 클럽고객H NPC_clubcustomer_H_0 0.322 0.427 white>>
-클럽 고객H: 지원씨! 어제 그렇게 나가셔서 걱정했어요
-클럽 고객H: 지수씨랑은 얘기 잘 하셨어요?
-클럽 고객H: 저도 항상 걱정했거든요...
-클럽 고객H: ...
-클럽 고객H: 그런데 왜 직원 옷을 입고 있어요?
-클럽 고객H: 못 알아볼 뻔 했어요.
+클럽고객H: 지원씨! 어제 그렇게 나가셔서 걱정했어요
+클럽고객H: 지수씨랑은 얘기 잘 하셨어요?
+클럽고객H: 저도 항상 걱정했거든요...
+클럽고객H: ...
+클럽고객H: 그런데 왜 직원 옷을 입고 있어요?
+클럽고객H: 못 알아볼 뻔 했어요.
 
 <<Act 지수 CoJIsoo4 1.17 0.322 white>>
 ...
@@ -3214,10 +3219,10 @@ title: obj_customerh
 <<wait 0.5>>
 지수: 무슨 말씀이세요?
 
-클럽 고객H: ...
-클럽 고객H: ...
-클럽 고객H: 아... 지수 씨구나.
-클럽 고객H: 지원 씨인 줄 알았어요.
+클럽고객H: ...
+클럽고객H: ...
+클럽고객H: 아... 지수 씨구나.
+클럽고객H: 지원 씨인 줄 알았어요.
 <<wait 0.5>>
 <<UpdateAct 지수 CoJIsoo3>>
 ...
@@ -3225,10 +3230,10 @@ title: obj_customerh
 저 사람은 나를 어떻게 알지?
 ...
 
-클럽 고객H: 아 그게... 어제 여기서 지수씨 동생분이랑 마주쳤거든요.
-클럽 고객H: ...
+클럽고객H: 아 그게... 어제 여기서 지수씨 동생분이랑 마주쳤거든요.
+클럽고객H: ...
 <<wait 0.5>>
-클럽 고객H: 이만 가볼게요! 지수 씨도 얼른 들어가세요.
+클럽고객H: 이만 가볼게요! 지수 씨도 얼른 들어가세요.
 
 <<Hide 클럽고객H>>
 

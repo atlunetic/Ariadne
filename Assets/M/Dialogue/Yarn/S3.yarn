@@ -96,6 +96,7 @@ title: NationalFlower
 ...
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
+//<<AddToInventory VisualNovelPrefab Clothes>>
 
 ===
 
@@ -262,13 +263,16 @@ title: memory_GeonwooCard
 //(건우가 돈을 벌려고 심부름센터 명함을 뿌리고 다녔던 기억)
 //(건우의 명함 이미지 확대)
 
+//건우1
+//<<Act 건우 Geonwoo1 0.322 0.227 white>>
 건우: 명함도 뽑았고!
 건우: 이제 돈 빡세게 벌어야지.
-
+//지수4
+//<<Act 지수 Jisoo4 1.17 0.322 white>>
 지수: 왜? 뭐 사려고?
 건우: ..그런 게 있다.
 건우: 너는 알면 안돼, 임마.
-<<HideAll>>
+//<<HideAll>>
 <<StopMemory SceneManager>>
 
 <<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
@@ -287,6 +291,27 @@ title: OfficetelDoor
 //오브젝트 4. 오피스텔 출입문
 
 <<ChangeSceneTo VisualNovelPrefab S3_1_1_Door>>
+//출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
+
+//지수2
+<<wait 1.0>>
+//<<Act 지수 Jisoo2 1.17 0.322 white>>
+...
+...
+카드키가 있거나 비밀번호를 알아야 할 것 같다.
+...
+//<<Hide 지수>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: OfficetelDoor2
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+//오브젝트 4. 오피스텔 출입문
+
 //출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
 
 //지수2
@@ -380,6 +405,7 @@ title: InteractionFin3
 
 <<Hide 지수>>
 <<AfterD3 Controllers>>
+<<FinishedDialogue VisualNovelPrefab InteractionFin3>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -452,7 +478,8 @@ title: IfEmployeeSuit
 좋아. 들어가보자.
 <<Hide 지수>>
 <color=yellow>* ‘오피스텔 출입 카드키’를 습득했다. *</color>
-<<AddToInventory VisualNovelPrefab OfficetelCardkey>>
+<<AddToInventoryCardkey VisualNovelPrefab OfficetelCardkey>>
+<<FinishedDialogue VisualNovelPrefab IfEmployeeSuit>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1684,10 +1711,10 @@ title:BacktoOfficetel1stFloor
 
 ===
 
-title: OfficetelCardkeyForce
+title: WrongClothesAgain
 
 ---
-
-이걸 사용해볼까?
-
+<<SetCanvasTo VisualNovelPrefab true>>
+지금 입으면 눈에 띌 것 같아...
+<<SetCanvasTo VisualNovelPrefab false>>
 ===

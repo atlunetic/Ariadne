@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour
     public delegate void OnChangeItem();
     public OnChangeItem onChangeItem;
 
+    private int clickCount = 0;
 
     #region Singleton
     public static Inventory instance;
@@ -35,7 +36,30 @@ public class Inventory : MonoBehaviour
             onChangeItem.Invoke();
     }
     #endregion
- 
+    //Check Item Usage
+
+    private void Update()
+    {
+        if (usingitem != null)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                clickCount++;
+
+                if (clickCount >= 2)
+                {
+                    Debug.Log("First Click Ended");
+                    string nomore = usingitem.itemName;
+                    ClearUsingItem();
+                    Debug.Log(nomore + " is no longer being used");
+                    clickCount = 0;
+
+                }
+            }
+        }
+    }
+
+
 
     public bool Additem(item _item)
     {

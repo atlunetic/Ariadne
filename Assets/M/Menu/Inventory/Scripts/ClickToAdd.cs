@@ -1,9 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class ClickToAdd : MonoBehaviour
 {
@@ -22,7 +19,7 @@ public class ClickToAdd : MonoBehaviour
             // Add the item to the inventory
             Inventory.instance.Additem(newItem);
 
-            Debug.Log(sceneItem + "added to inventory");
+            Debug.Log(sceneItem + " added to inventory");
 
 
         }

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Yarn.Unity;
@@ -45,6 +44,23 @@ public class YarnMFunctions : MonoBehaviour
 
     [YarnCommand("AddToInventory")]
     public void AddItemForY(string ItemName)
+    {
+
+        SceneItem ItemToAdd = SceneItem.Find(ItemName);
+        if (ItemToAdd != null)
+        {
+            Debug.Log(ItemToAdd.newItem.itemName + " found.");
+            item newItem = ItemToAdd.GetItem();
+            Inventory.instance.Additem(newItem);
+        }
+        else
+        {
+            Debug.LogWarning("Item not found: " + ItemName);
+        }
+    }
+
+    [YarnCommand("AddToInventory2")]
+    public void AddItemForY2(string ItemName)
     {
 
         SceneItem ItemToAdd = SceneItem.Find(ItemName);

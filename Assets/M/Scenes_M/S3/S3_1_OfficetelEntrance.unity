@@ -615,8 +615,8 @@ GameObject:
   m_Component:
   - component: {fileID: 957128068}
   - component: {fileID: 957128066}
-  - component: {fileID: 957128069}
   - component: {fileID: 957128070}
+  - component: {fileID: 957128071}
   m_Layer: 0
   m_Name: OfficetelDoor
   m_TagString: Untagged
@@ -684,22 +684,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &957128069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957128065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de0d9bedf1ad9584da95696f4c223bd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RequiredItemName: OfficetelCardkey
-  CorrectItemDialogue: OfficetelDoorwcard
-  NoItemDialogue: OfficetelDoor
-  WrongItemDialogue: WrongItem
 --- !u!114 &957128070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,6 +700,19 @@ MonoBehaviour:
     ItemType: 0
     itemName: OfficetelCardkey
   image: {fileID: 0}
+--- !u!114 &957128071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957128065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueTitle: OfficetelDoor
 --- !u!1001 &1232321613
 PrefabInstance:
   m_ObjectHideFlags: 0

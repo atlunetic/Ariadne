@@ -386,7 +386,6 @@ GameObject:
   - component: {fileID: 3444472762635579097}
   - component: {fileID: 3174429545721704916}
   - component: {fileID: 2015874446702802592}
-  - component: {fileID: 3600721414626046838}
   m_Layer: 6
   m_Name: COMBINE
   m_TagString: ActionButtons
@@ -495,31 +494,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3174429545721704916}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3600721414626046838}
-        m_TargetAssemblyTypeName: Combine, Assembly-CSharp
-        m_MethodName: ToggleDraggable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &3600721414626046838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4157441749214789891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10363ed87065b774f8398638721ed2ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+      m_Calls: []
 --- !u!1 &4672715752364574837
 GameObject:
   m_ObjectHideFlags: 0

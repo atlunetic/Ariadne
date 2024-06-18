@@ -6182,7 +6182,7 @@ PrefabInstance:
       addedObject: {fileID: 460897321}
     - targetCorrespondingSourceObject: {fileID: 4095407691540616704, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 460897322}
+      addedObject: {fileID: 460897324}
   m_SourcePrefab: {fileID: 100100000, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
 --- !u!224 &460897314 stripped
 RectTransform:
@@ -6205,7 +6205,7 @@ MonoBehaviour:
     ItemType: 0
     itemName: WaterCup
   image: {fileID: 0}
---- !u!114 &460897322
+--- !u!114 &460897324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6214,10 +6214,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 453730393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
+  m_Script: {fileID: 11500000, guid: b0e975710f4f1b34f8ce401df8be1da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueTitle: OfficetelBG
+  newItem:
+    ItemType: 0
+    itemName: OfficetelCardkey
+  image: {fileID: 0}
 --- !u!1 &485708990
 GameObject:
   m_ObjectHideFlags: 0
@@ -11097,7 +11100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -300}
+  m_AnchoredPosition: {x: 0, y: -350}
   m_SizeDelta: {x: 1027.01, y: 231}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747211484
@@ -30866,6 +30869,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1086358475575568, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1699657726}
+    - targetCorrespondingSourceObject: {fileID: 1086358475575568, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1699657727}
+    - targetCorrespondingSourceObject: {fileID: 1086358475575568, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1699657728}
+    - targetCorrespondingSourceObject: {fileID: 1086358475575568, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1699657733}
+    - targetCorrespondingSourceObject: {fileID: 1086358475575568, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1699657734}
     - targetCorrespondingSourceObject: {fileID: 1635097231764242, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1699657719}
@@ -30932,6 +30947,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueCanvas: {fileID: 1431457303}
+--- !u!114 &1699657727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699657714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3b91a6baccc9346b047920aaa9f893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneItem: {fileID: 1699657728}
+--- !u!114 &1699657728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699657714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e975710f4f1b34f8ce401df8be1da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newItem:
+    ItemType: 0
+    itemName: Clothes
+  image: {fileID: 0}
+--- !u!114 &1699657733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699657714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e975710f4f1b34f8ce401df8be1da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newItem:
+    ItemType: 0
+    itemName: OfficetelCardkey
+  image: {fileID: 0}
+--- !u!114 &1699657734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699657714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4fc990cfc3a3e4aa252fe34b0742fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneItem: {fileID: 1699657733}
 --- !u!1 &1712973357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5281395886503812520, guid: a95c8f77a7cd42a48a39917efb4b3004, type: 3}
@@ -36018,7 +36091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -300}
+  m_AnchoredPosition: {x: 0, y: -350}
   m_SizeDelta: {x: 1027, y: 231}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1944675730
