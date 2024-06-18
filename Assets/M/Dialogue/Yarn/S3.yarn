@@ -872,7 +872,7 @@ title: memory_Photo
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<FinishedDialogue VisualNovelPrefab R1403Cardkey>>
+<<FinishedDialogue VisualNovelPrefab memory_Photo>>
 //(텍스트 위치 변경하였음)
 //- 증거 촬영 시 돌아오는 기억: 배경 바뀌고 어두워짐, 팝업이미지
 //클럽에 있는 지수, 건우를 찾아온 지원. 그 셋을 지켜보고 있는 시점의 사진.
