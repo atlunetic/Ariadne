@@ -639,12 +639,13 @@ title: Officetel1503
 
 //지수2
 <<UpdateAct 지수 Jisoo2>>
-일단 15층으로 가보자.
+일단 1503호로 가보자.
 
 //(자동으로 다음 장소로 넘어감)
 <<UI_off MenuUI>>
 <<Hide 지수>>
 <<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
+<<jump Officetel15thfloor>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -907,7 +908,8 @@ title: R1403Cardkey
 <<Hide 지수>>
 <color=yellow>* ‘1403호 카드키’를 습득했다. *</color>
 
-<<AddToInventory VisualNovelPrefab R1403Cardkey>>
+//<<AddToInventory VisualNovelPrefab R1403Cardkey>>
+<<SetActiveFalse VisualNovelPrefab R1403Cardkey>>
 
 // 인벤토리에 습득
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -1604,7 +1606,7 @@ title: escapegame_success
 
 //오피스텔 1층 배경 페이드인
 //지수, 지원이미지 노출 x
-<<scene Opistal_1F_bg>>
+<<Scene Opistal_1F_bg>>
 <<FadeIn>>
 ..휴우.
 겨우 문 앞까지 왔네.
