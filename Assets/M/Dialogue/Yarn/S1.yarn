@@ -218,7 +218,10 @@ title: Jiwon_Room
 매일 집에만 있더니. 꼭 찾을 때 없어.
 아무튼 얘는 깔끔하게 해놓고 사네.
 주위를 둘러볼까?
+...
+<<wait 1.0>>
 
+침대에 저건 뭐지..?
 
 <<SetCanvasTo VisualNovelPrefab false>>
 

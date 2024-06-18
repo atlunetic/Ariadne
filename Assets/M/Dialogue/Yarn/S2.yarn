@@ -2914,7 +2914,7 @@ title: obj_customerg
 술냄새가 진동한다... 
 얼른 지나갈까?
 <<wait 1.0>>
-클럽 고객G: 어이 거기!
+클럽고객G: 어이 거기!
 
 <<Act 클럽고객G NPC_clubcustomer_G_0 0.322 0.527 white>>
 
@@ -2922,12 +2922,12 @@ title: obj_customerg
 <<UpdateAct 지수 CoJIsoo4>>
 나를 부르는 건가?
 
-클럽 고객G: 어어, 그래. 너 말이야.
+클럽고객G: 어어, 그래. 너 말이야.
 
 <<UpdateAct 지수 CoJIsoo2>>
 <<wait 0.5>>
 지수: 네, 무슨 일이시죠?
-클럽 고객G: 물 좀 갖다줘.
+클럽고객G: 물 좀 갖다줘.
 <<wait 1.0>>
 
 
@@ -2957,17 +2957,17 @@ title: WaterToE
 		
 <<UpdateAct 지수 CoJIsoo1>>
 지수: 여기 있습니다.
-클럽 고객G: 어어~ 고마워.
+클럽고객G: 어어~ 고마워.
 
 <<UpdateAct 지수 CoJIsoo2>>
 ...
 이 사람은 지원이의 행방을 알고 있을까?
-클럽 고객G는 휴대폰을 바라보며 실실 웃고 있다.
+클럽고객G는 휴대폰을 바라보며 실실 웃고 있다.
 ...
 그냥 다른 곳을 둘러보자.
 
-클럽 고객G: 어어, 학생. 어디가.
-클럽 고객G: 내가 말이야~. 예전에 어떤 일 했는지 알아?
+클럽고객G: 어어, 학생. 어디가.
+클럽고객G: 내가 말이야~. 예전에 어떤 일 했는지 알아?
 
 <<wait 1.0>>
 클럽고객G: 어마어마한 사람이었다~ 이거야.
@@ -2997,7 +2997,7 @@ title: IgnoreE
 클럽고객G: 뭐? 손님을 오라가라 해?
 클럽고객G: 에잇..!
 
-클럽 고객G는 씩씩거리며 자리를 비웠다.
+클럽고객G는 씩씩거리며 자리를 비웠다.
 <<Hide 클럽고객G>>
 <<wait 1.0>>
 <<SetActiveFalse VisualNovelPrefab VIProom_customerG>>
@@ -3016,7 +3016,7 @@ title: IgnoreE
 ...
 클럽고객G: 어어~ 왜 남의 휴대폰을 함부로 보고 그래!
 
-클럽 고객G가 언성을 높이며 휴대폰을 가져갔다.
+클럽고객G가 언성을 높이며 휴대폰을 가져갔다.
 <<wait 1.0>>
 클럽고객G는 휴대폰을 확인하기 시작했다.
 ...
@@ -3024,11 +3024,11 @@ title: IgnoreE
 클럽고객G: 아~. 간만에 술 마시러 왔는데.
 클럽고객G: 부인이 내가 보고 싶은가봐~.
 
-클럽 고객G는 머쓱한 듯 말을 돌렸다.
+클럽고객G는 머쓱한 듯 말을 돌렸다.
 <<wait 1.0>>
 
-클럽 고객G: 학생, 이거 좀 봐봐.
-//클럽 고객G의 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
+클럽고객G: 학생, 이거 좀 봐봐.
+//클럽고객G의 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
 <<Hide 지수>>
 <<Hide 클럽고객G>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
@@ -3067,7 +3067,7 @@ title: obj_customerg_choose
 		클럽고객G: 예전에 어마어마한 분이랑 술자리를 가졌는데~.
 		<<UpdateAct 지수 CoJIsoo2>>
 		<<wait 1.0>>
-		이후로도 클럽 고객G의 말은 끊이지 않았다.
+		이후로도 클럽고객G의 말은 끊이지 않았다.
 		알아낼 수 있는 게 없는 걸까...
 		<<wait 0.5>>
 		<<jump obj_customerg_choose_ariadne>>
@@ -3087,7 +3087,7 @@ title: obj_customerg_choose
 		클럽고객G: 엄청 잘나가는 회사 사장이었다 이말이야.	
 		<<UpdateAct 지수 CoJIsoo2>>
 		<<wait 1.0>>
-		이후로도 클럽 고객G의 말은 끊이지 않았다.
+		이후로도 클럽고객G의 말은 끊이지 않았다.
 		알아낼 수 있는 게 없는 걸까...
 		<<wait 0.5>>
 		<<jump obj_customerg_choose_ariadne>>
@@ -3103,6 +3103,7 @@ title: obj_customerg_choose_ariadne
 <<UpdateAct 지수 CoJIsoo2>>
 어... 아리아드네다.
 확인해볼까?
+<<Hide 클럽고객G>>
 <<StartPhoneChat PhoneController 24>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -3123,11 +3124,12 @@ title: chocotalk_ariadne_customerg
 	지수: 아까 가족분들이 다정하다고 하셨는데...
 	지수: 가족분들이랑은 요즘 어떠세요?
 	<<wait 1.0>>
-	클럽 고객G가 침울한 표정을 지었다.
+	<<Act 클럽고객G NPC_clubcustomer_G_0 0.322 0.527 white>>
+	클럽고객G가 침울한 표정을 지었다.
 	이내 아무렇지 않은 듯 웃으며 휴대폰을 내밀었다.
-	클럽 고객G: 학생, 이거 좀 봐봐.
-	//클럽 고객G 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
-	<<Hide 지수>>
+	클럽고객G: 학생, 이거 좀 봐봐.
+	//클럽고객G 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
+	<<HideAll>>
 	<<DrawFadeIn DBG 0.75 0.75 0.2>>
 	<<Draw ClubcustomerG_Phone 0.75 0.75>>
 	클럽고객G는 가족사진을 보여줬다.
@@ -3146,7 +3148,7 @@ title: obj_customerg_end
 
 ---
 
-//클럽 고객G의 가족사진 위로 메시지 팝업 뜸
+//클럽고객G의 가족사진 위로 메시지 팝업 뜸
 <<Draw ClubcustomerG_Message 0.75 0.75>>
 어..?
 저게 무슨 얘기지.
@@ -3157,11 +3159,11 @@ title: obj_customerg_end
 <<Hide ClubcustomerG_Phone>>
 <<Hide DBG>>
 <<Act 클럽고객G NPC_clubcustomer_G_0 0.322 0.527 white>>
-클럽 고객G가 급하게 휴대폰을 감췄다.
-클럽 고객G: 어어~. 아무튼.
-클럽 고객G: 바쁜 사람을 너무 오래 붙잡고 있었네.
-클럽 고객G: 어서 할 일 하러 가봐~.
-클럽 고객G가 자리를 떴다.
+클럽고객G가 급하게 휴대폰을 감췄다.
+클럽고객G: 어어~. 아무튼.
+클럽고객G: 바쁜 사람을 너무 오래 붙잡고 있었네.
+클럽고객G: 어서 할 일 하러 가봐~.
+클럽고객G가 자리를 떴다.
 <<Hide 클럽고객G>>
 <<SetActiveFalse VisualNovelPrefab VIProom_customerG>>
 <<FinishedObj VisualNovelPrefab VIProom_customerG>>
@@ -3245,7 +3247,7 @@ title: event_customergh_end
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
-//클럽 고객G,H와 상호작용 종료 후
+//클럽고객G,H와 상호작용 종료 후
 <<UpdateAct 지수 CoJIsoo3>>
 ...
 혼란스럽다.
@@ -3313,7 +3315,7 @@ title: game_clock_success
 
 
 ...
-아까 클럽 고객G에게 연락온 건 분명 'drgg24'...
+아까 클럽고객G에게 연락온 건 분명 'drgg24'...
 분명 11시 반에 만나자고 했지.
 ...
 <<SetActiveFalse VisualNovelPrefab Clock>>
