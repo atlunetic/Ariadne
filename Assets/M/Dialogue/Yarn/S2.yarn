@@ -2496,7 +2496,18 @@ title: obj_radio
 
 <<SetActiveFalse VisualNovelPrefab InStaffroom_Radio>>
 <<FinishedObj VisualNovelPrefab InStaffroom_Radio>>
+//<<SetCanvasTo VisualNovelPrefab false>>
+===
+
+title: obj_radio_end
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+...
+뭔지 전혀 모르겠네..
 <<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: event_staffroom
