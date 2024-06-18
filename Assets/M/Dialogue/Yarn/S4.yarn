@@ -10,7 +10,6 @@
 //병원 심박수 측정기st의 사운드
 
 ...
-...
 머리가 깨질 것 같아.
 여기는 어디지..?
 <<wait 2.0>>
@@ -18,34 +17,31 @@
 //신비로운 사운드
 <<PlayAudio Ariadne>>
 
-아리아드네: 일어났어?
+<color=purple>아리아드네</color>: <color=purple>일어났어?</color>
 ...
 누군가 머릿속에서 말을 거는 것 같아.
 ...
 <<wait 1.0>>
 
-아리아드네: 앞을 봐.
+<color=purple>아리아드네</color>: <color=purple>앞을 봐.</color>
 <<wait 1.0>>
 
 ...
 눈앞에 빛이 아른거린다.
 내가 꿈을 꾸나..?
-...
 <<wait 1.0>>
 
-아리아드네: 이제는 진실을 마주할 때야.
+<color=purple>아리아드네</color>: <color=purple>이제는 진실을 마주할 때야.</color>
 <<wait 1.0>>
 
-...
 ...
 대체 무슨 소리지?
 
-아리아드네: 지수야.
-아리아드네: 카메라로 사진을 찍을 때...
-아리아드네: 기억이 흘러들어오지 않았어?
+<color=purple>아리아드네</color>: <color=purple>지수야.</color>
+<color=purple>아리아드네</color>: <color=purple>카메라로 사진을 찍을 때...</color>
+<color=purple>아리아드네</color>: <color=purple>기억이 흘러들어오지 않았어?</color>
 
-...
-...
+<<wait 1.0>>
 ...
 그러고보니...
 뭔가 떠올렸던 것 같은데...
@@ -53,13 +49,17 @@
 <<wait 1.0>>
 
 지수: 넌 누구야?
-아리아드네: ...
-아리아드네: 무슨 일들이 있었는지 기억해내.
+<color=purple>아리아드네</color>: <color=purple>...</color>
+<color=purple>아리아드네</color>: <color=purple>무슨 일들이 있었는지 기억해내.</color>
 <<wait 1.0>>
 
 //최종추리이벤트 시작
 
-//<color=yellow>* 비어있는 술잔을 획득했다. *</color>
+<color=yellow>* 지수에게 있었던 일을 알아내자 *</color>
+<color=yellow>* 지수에게 무슨 일이 있었던 것인지 알아냅시다 *</color>
+<color=yellow>* 지금까지 찍어뒀던 갤러리의 사진을 순서대로 선택하세요 *</color>
+<color=yellow>* 갤러리를 통해 사진의 기억을 확인해볼 수 있습니다 *</color>
+<color=purple>진실을 기억해내</color>
 
 <<Final BlackBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -109,6 +109,7 @@ title: realmemory_2
 <<Act 지수 Jisoo7 1.17 0.322 white>>
 지수: 헉... 헉...
 지수: ...
+<<PlayAudio Vomit2 0.5>>
 지수: 우웩...
 지수: ...
 지수: ...
@@ -118,7 +119,8 @@ title: realmemory_2
 지원: ...
 지원: 요즘 상태가 왜 저러지?
 지원: 설마...
-지원: 진짜로 마약하는 건가...
+지원: 마약..?
+지원: 아냐.. 아닐거야
 
 <<HideAll>>
 
@@ -150,6 +152,7 @@ title: realmemory_3
 <<wait 0.5>>
 
 //지수6
+<<UpdateAct 지수 Jisoo6>>
 지수: 니가 뭘 도와줄 수 있는데?
 
 건우: ...
@@ -194,7 +197,8 @@ title: realmemory_4
 //지원4
 <<UpdateAct 지원 JIwon4>>
 지원: ...
-지원1
+//지원1
+<<UpdateAct 지원 JIwon1>>
 지원: ...
 지원: 너는 정말 너밖에 생각 안하는구나.
 지원: 나는 너 생각해서...
@@ -267,8 +271,8 @@ title: realmemory_6
 ---
 
 
-아리아드네:...
-아리아드네:이제 아프지마.
+<color=purple>아리아드네</color>: <color=purple>..
+<color=purple>아리아드네</color>: <color=purple>제 아프지마.
 <<wait 2.0>>
 //여기부터는 모두 지수8
 //화면 암전 및 전환. 병실 이미지 (희원)
@@ -505,9 +509,9 @@ title: ending_normal
 
 ---
 
-아리아드네:...
-아리아드네:지원이가 간절히 원했던 게 뭔지...
-아리아드네:제발 잊지 마.
+<color=purple>아리아드네</color>: <color=purple>..
+<color=purple>아리아드네</color>: <color=purple>원이가 간절히 원했던 게 뭔지...
+<color=purple>아리아드네</color>: <color=purple>발 잊지 마.
 <<wait 2.0>>
 
 //화면 암전 및 전환. 병실 이미지 white
