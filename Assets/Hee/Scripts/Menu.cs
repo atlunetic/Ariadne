@@ -79,7 +79,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
             UnityAction openVIProom = null;
             openVIProom = () => { MoveViproom.SetActive(true);
                 CallYarn.instance.Callbybutton(MoveViproom.GetComponent<Button>(), "yay");
-                MoveViproom.GetComponent<Button>().onClick.AddListener(()=>{MoveS2Button.SetActive(false);
+                MoveViproom.GetComponent<Button>().onClick.AddListener(()=>{deActiveM();
                                                                             UI_off();});
             };
             if(GameManager.instance.FinishedDialogues.Contains("club_viproom_entry")) openVIProom.Invoke();
