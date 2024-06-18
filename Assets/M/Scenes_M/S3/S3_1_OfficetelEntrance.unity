@@ -649,8 +649,8 @@ GameObject:
   m_Component:
   - component: {fileID: 957128068}
   - component: {fileID: 957128066}
-  - component: {fileID: 957128069}
   - component: {fileID: 957128070}
+  - component: {fileID: 957128069}
   m_Layer: 0
   m_Name: OfficetelDoor
   m_TagString: Untagged

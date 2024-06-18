@@ -19,7 +19,7 @@ public class ClickToAdd : MonoBehaviour
             // Add the item to the inventory
             Inventory.instance.Additem(newItem);
 
-            Debug.Log(sceneItem + "added to inventory");
+            Debug.Log(sceneItem + " added to inventory");
 
 
         }

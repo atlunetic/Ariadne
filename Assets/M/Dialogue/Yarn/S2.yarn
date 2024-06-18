@@ -1935,10 +1935,12 @@ title: obj_staffonly_lockeropen
 
 <color=yellow>* 스태프 복장을 습득했다. *</color>
 //인벤토리에 「스태프 복장」 아이템이 추가됨.
+<<AddToInventoryC VisualNovelPrefab>>
 <<SetActiveFalse VisualNovelPrefab Locker>>
 <<FinishedObj VisualNovelPrefab Locker>>
-<<AddToInventory VisualNovelPrefab Clothes>>
+//<<AddToInventory VisualNovelPrefab Clothes>>
 
+<<DeleteItem Inventory Key>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2710,7 +2712,7 @@ title: obj_key
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Key 0.75 0.75>>
 어... 열쇠다.
-<<AddToInventory VisualNovelPrefab Key>>
+//<<AddToInventory VisualNovelPrefab Key>>
 <<wait 0.5>>
 어디 쓰는 열쇠지?
 

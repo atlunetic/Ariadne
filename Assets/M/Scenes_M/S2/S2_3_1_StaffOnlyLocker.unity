@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 190446668}
   - component: {fileID: 190446667}
-  - component: {fileID: 190446669}
   - component: {fileID: 190446670}
+  - component: {fileID: 190446669}
   m_Layer: 0
   m_Name: Locker
   m_TagString: Untagged

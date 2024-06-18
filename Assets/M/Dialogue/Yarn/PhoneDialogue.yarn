@@ -114,10 +114,10 @@ title: ChooseChatName1
 ...
     -> 지원이인척 말을 걸자.
         <<StartPhoneChat PhoneController 0>>
-        <<SetCanvasTo VisualNovelPrefab false>>
+        //<<SetCanvasTo VisualNovelPrefab false>>
     -> 나라고 밝히자.
         <<StartPhoneChat PhoneController 12>>
-        <<SetCanvasTo VisualNovelPrefab false>>
+        //<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -132,10 +132,10 @@ title: ChooseChatName2
 ...
     -> 지원이인척 말을 걸자.
         <<StartPhoneChat PhoneController 8>>
-        <<SetCanvasTo VisualNovelPrefab false>>
+        //<<SetCanvasTo VisualNovelPrefab false>>
     -> 나라고 밝히자.
         <<StartPhoneChat PhoneController 13>>
-        <<SetCanvasTo VisualNovelPrefab false>>
+        //<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -167,7 +167,7 @@ title: AfterHaesolChat
 설마...
 ...
 <<StartPhoneChat PhoneController 10>>
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: HaesolSuspicious
@@ -184,7 +184,7 @@ title: HaesolSuspicious
 해솔이한테는 솔직하게 말해도 되지 않을까.
 ...
 <<StartPhoneChat PhoneController 1>>
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -212,7 +212,7 @@ title: Haesol2
 
 ...
 <<StartPhoneChat PhoneController 9>>
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -242,7 +242,7 @@ title: AfterDropperChat
 ...
 드랍퍼에 대해 물어볼까?
 <<StartPhoneChat PhoneController 14>>
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -337,7 +337,7 @@ Dgram 아이디였여?
 -> 말을 걸어보자.
     <<DestroySearch Controllers>>
     <<StartPhoneChat PhoneController 3>>
-    <<SetCanvasTo VisualNovelPrefab false>>
+    //<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -351,7 +351,7 @@ title: DrugDeal1
 //보낸 메시지 ‘안녕하세요’
 ...
 <<StartPhoneChat PhoneController 4>>
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -367,7 +367,7 @@ title: DrugDeal2
 이러면 자연스럽겠지?
 
 <<StartPhoneChat PhoneController 15>>
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -385,7 +385,7 @@ title: DrugDeal3
 일단은 맞다고 해보자.
 <<StartPhoneChat PhoneController 5>>
 
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -415,7 +415,7 @@ title: DrugDeal4
     지원이가 이 사람이랑 연락하고 나서 관련된 걸 다 지웠을 수도 있잖아.
     계속 대화하다 보면 뭐라도 알아낼 수 있지 않을까?
     <<StartPhoneChat PhoneController 6>>
-    <<SetCanvasTo VisualNovelPrefab false>>
+    //<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -434,7 +434,7 @@ title: DrugDeal5
 -> 찝찝해. 이제 답장하지 말자.
     채팅창을 끄자.
     <<StartPhoneChat PhoneController 16>>
-    <<SetCanvasTo VisualNovelPrefab false>>
+    //<<SetCanvasTo VisualNovelPrefab false>>
 -> 궁금한데 계속 답장해보자.
     근데... 조금 궁금하기도 하고.
     혹시 모르잖아.
@@ -444,7 +444,7 @@ title: DrugDeal5
     일단 입금해보자.
     ...
     <<StartPhoneChat PhoneController 7>>
-    <<SetCanvasTo VisualNovelPrefab false>>
+    //<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -472,7 +472,7 @@ D가 보낸 메시지에 심장이 빨리 뛰기 시작한다.
 범죄 아니야?
 
 <<StartPhoneChat PhoneController 17>>
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 

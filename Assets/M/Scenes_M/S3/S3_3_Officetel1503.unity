@@ -540,9 +540,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 890495834}
-  - component: {fileID: 890495833}
   - component: {fileID: 890495832}
   - component: {fileID: 890495831}
+  - component: {fileID: 890495835}
   m_Layer: 0
   m_Name: R1403Cardkey
   m_TagString: Untagged
@@ -611,19 +611,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.36145115, y: 0.6807246}
   m_EdgeRadius: 0
---- !u!114 &890495833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890495830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogueTitle: R1403Cardkey
 --- !u!4 &890495834
 Transform:
   m_ObjectHideFlags: 0
@@ -639,6 +626,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &890495835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890495830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1bff052c6c9744894aeb0899f54320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueTitle: R1403Cardkey
+  sceneItem: {fileID: 890495831}
 --- !u!1 &899558339
 GameObject:
   m_ObjectHideFlags: 0
