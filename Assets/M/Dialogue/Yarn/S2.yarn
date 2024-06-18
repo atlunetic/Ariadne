@@ -2501,7 +2501,18 @@ title: obj_radio
 
 <<SetActiveFalse VisualNovelPrefab InStaffroom_Radio>>
 <<FinishedObj VisualNovelPrefab InStaffroom_Radio>>
+//<<SetCanvasTo VisualNovelPrefab false>>
+===
+
+title: obj_radio_end
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+...
+뭔지 전혀 모르겠네..
 <<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: event_staffroom
@@ -3657,7 +3668,7 @@ title: obj_car_outside
 	-> 창문
 		잠금 장치에 손이 닿는다.
 		...
-		<wait 1.0>>
+		<<wait 1.0>>
 		//♫Sound: 자동차 문 열리는 소리
 		<<PlayAudio CarDoorOpen>>
 		운전석 문을 열었다.
@@ -3811,7 +3822,7 @@ title: stairchocotalk1
 //초코톡 건우와의 대화 진행
 <<StartPhoneChat PhoneController 23>>
 
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 

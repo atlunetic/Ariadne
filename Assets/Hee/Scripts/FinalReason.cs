@@ -67,11 +67,11 @@ public class FinalReason : MonoBehaviour
         if(Answer[4]=="BrokenGlasses") {score++; rightanswer.Enqueue(5);}
 
         switch(score) {
-            case 0: ending = "realmemory_6"; break;
+            case 0: ending = "ending_bad"; break;
             case 1: 
-            case 2: ending = "realmemory_6"; break;
+            case 2: ending = "ending_merrybad"; break;
             case 3:
-            case 4: ending = "realmemory_6"; break;
+            case 4: ending = "ending_normal"; break;
             case 5: ending = "realmemory_6"; StartCoroutine("perfect"); return;
             default: print("error"); break;
         }

@@ -425,7 +425,6 @@ title: IfnotEmployeeSuit
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //(인벤토리에서 다른 아이템을 사용할 경우)
-<<PlayAudio PocketSearch>>
 ..이건 주머니가 없어.
 <<SetCanvasTo VisualNovelPrefab false>>
 
