@@ -27,38 +27,9 @@ public class ActionPanelButtons : MonoBehaviour
         Debug.Log(connectedItem.itemName + " is currently being used");
 
 
-        if (connectedItem.itemName == "WaterCup" && currentscene.name == "S2_2_Table")
-        {
-            runner.StartDialogue("UsedWaterCup");
-        }
 
-        else if (connectedItem.itemName == "Clothes" && currentscene.name.StartsWith("S2"))
-        {
 
-            if (GameManager.instance.FinishedDialogues.Contains("obj_customers"))
-            {
-                runner.StartDialogue("ClothesUsed");
-            }
-            else { runner.StartDialogue("WrongClothes"); }
-            
-        }
-
-        else if (connectedItem.itemName == "Clothes") { runner.StartDialogue("WrongClothesAgain"); }
-
-        else if (currentscene.name == "S2_7_Stairs")
-        {
-            if (connectedItem.itemName == "DrugJelly")
-            {
-                runner.StartDialogue("inventory_drugjelly");
-            }
-
-            else
-            {
-                runner.StartDialogue("inventory_notjelly");
-            }
-        }
-
-        else if (connectedItem.itemName == "Wallet")
+        if (connectedItem.itemName == "Wallet")
         {
             if (GameManager.instance.S1Ended() == true)
             {
@@ -69,53 +40,72 @@ public class ActionPanelButtons : MonoBehaviour
             else { runner.StartDialogue("WalletX"); }
 
         }
-        /*
-        else if (connectedItem.itemName == "Hairpin" && currentscene.name == "S2_4_0_StaffRoomEntrance")
-        {
-            runner.StartDialogue("game_openthedoor_intro");
-            Inventory.instance.items.Remove(connectedItem);
 
-        }
-
-        else if (connectedItem.itemName == "Key" && currentscene.name == "S2_3_1_StaffOnlyLocker")
+        else if (currentscene.name.StartsWith("S2"))
         {
-            //runner.StartDialogue("KeyUse");
-        }
-
-        */
-        else if (currentscene.name.StartsWith("S3_1"))
-        {
-            if (GameManager.instance.FinishedDialogues.Contains("InteractionFin3"))
+            if (connectedItem.itemName == "WaterCup" && currentscene.name == "S2_2_Table")
             {
-                if (connectedItem.itemName == "Clothes")
+                runner.StartDialogue("UsedWaterCup");
+            }
+
+            else if (connectedItem.itemName == "Clothes")
+            {
+
+                if (GameManager.instance.FinishedDialogues.Contains("obj_customers"))
                 {
-                    runner.StartDialogue("IfEmployeeSuit");
-                    Inventory.instance.items.Remove(connectedItem);//currentSlot.RemoveSlot();
+                    runner.StartDialogue("ClothesUsed");
                 }
+                else { runner.StartDialogue("WrongClothes"); }
+
+            }
+
+            else if (currentscene.name == "S2_7_Stairs")
+            {
+                if (connectedItem.itemName == "DrugJelly")
+                {
+                    runner.StartDialogue("inventory_drugjelly");
+                }
+
                 else
                 {
-                    runner.StartDialogue("IfnotEmployeeSuit");
+                    runner.StartDialogue("inventory_notjelly");
                 }
             }
 
-            else if (connectedItem.itemName == "Flashlight") { }
+        }
 
-        }
-        else if (currentscene.name == "S3_4_Officetel14th" && connectedItem.itemName == "R1403Cardkey")
-        {
-        }
-        else
+        else if (currentscene.name.StartsWith("S3"))
         {
 
-            //runner.StartDialogue("WrongItem");
-        } 
-            //connectedItem.Use();
-            //Inventory.instance.items.Remove(connectedItem);
-            //currentSlot.RemoveSlot();
+            if (currentscene.name.StartsWith("S3_1"))
+            {
+                if (GameManager.instance.FinishedDialogues.Contains("InteractionFin3"))
+                {
+                    if (GameManager.instance.FinishedDialogues.Contains("IfEmployeeSuit"))
+                    {
+                        if (connectedItem.itemName == "Clothes") { runner.StartDialogue("WrongClothesAgain"); }
+                    }
+                    else
+                    {
+                        if (connectedItem.itemName == "Clothes") { runner.StartDialogue("IfEmployeeSuit"); }
+                        else { runner.StartDialogue("IfnotEmployeeSuit"); }
+                    }
+                    
+                }
 
-            // After performing functionality, hide action panel
+            }
 
-        
+
+        }
+
+
+
+
+
+
+        // After performing functionality, hide action panel
+
+
         HideActionPanel();
 
     }

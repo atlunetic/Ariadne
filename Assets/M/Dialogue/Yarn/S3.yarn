@@ -457,6 +457,7 @@ title: IfEmployeeSuit
 <<Hide 지수>>
 <color=yellow>* ‘오피스텔 출입 카드키’를 습득했다. *</color>
 <<AddToInventory VisualNovelPrefab OfficetelCardkey>>
+<<FinishedDialogue VisualNovelPrefab IfEmployeeSuit>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
