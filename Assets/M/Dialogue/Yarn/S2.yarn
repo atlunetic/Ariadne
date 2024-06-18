@@ -1211,7 +1211,7 @@ title: event_gunwoo_q5a
 지수: 사실...
 지수: 지원이가 마약에 관심을 갖고 있는 것 같아요.
 <<PlayAudio ChooseMinigame 0.6>>
-<<StopAudio Minigame>>
+
 
 <<UpdateAct 건우 Geonwoo3>>
 건우: 어...
