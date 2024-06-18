@@ -143,6 +143,7 @@ title: FlashVM
 <<DeleteItem Inventory Flashlight>>
 <<jump DrugCookie>>
 <<Hide BlackBG>>
+<<Hide BlackBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
