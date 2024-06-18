@@ -2795,6 +2795,7 @@ title: obj_locker
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 <<Act 지수 Jisoo1 1.17 0.322 white>>
+<<PlayAudio HairpinSuccess 0.4>>
 어, 그냥 열리네?
 안이 비어있다.
 ...
