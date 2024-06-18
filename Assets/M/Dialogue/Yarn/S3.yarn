@@ -143,6 +143,7 @@ title: FlashVM
 <<DeleteItem Inventory Flashlight>>
 <<Hide BlackBG>>
 <<jump DrugCookie>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -477,7 +478,7 @@ title: IfEmployeeSuit
 좋아. 들어가보자.
 <<Hide 지수>>
 <color=yellow>* ‘오피스텔 출입 카드키’를 습득했다. *</color>
-<<AddToInventoryCardkey VisualNovelPrefab OfficetelCardkey>>
+<<AddToInventoryCardkey VisualNovelPrefab>>
 <<FinishedDialogue VisualNovelPrefab IfEmployeeSuit>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -493,6 +494,7 @@ title: OfficetelDoorwcard
 //(♫Sound: 카드키 효과음)
 <<PlayAudio UseCard>>
 <<PlayAudio BuildingDoorOpen>>
+<<DeleteItem Inventory OfficetelCardkey>>
 
 카드키를 가져다 대는 순간.
 누군가 내 어깨를 붙잡았다.
@@ -519,9 +521,9 @@ title: OfficetelDoorwcard
 	<<jump Ending4>>
 -> 에스코트..!
 	<<jump Ending4>>
--> 이스케이프..!
-	<<jump Ending4>>
 -> 에너미..!
+	<<jump Ending4>>
+-> 이스케이프..!
 	조직원: ...
 	조직원: ...
 	..맞췄나?
