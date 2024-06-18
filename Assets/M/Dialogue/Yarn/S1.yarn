@@ -237,7 +237,6 @@ title: memory_Letter
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
-<<jump AfterMemory>>
 
 ===
 
@@ -1225,32 +1224,6 @@ title: DiaryTutorial
 
 <<FinishedDialogue VisualNovelPrefab DiaryTutorial>>
 <<SetCanvasTo VisualNovelPrefab false>>
-
-===
-
-title: AfterMemory
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-<<HideAll>>
-//<<Scene FullJiwonRoomBG>>
-<<PlayAudio WhiteNoise 0.4>>
-<<PlayAudio EarSound 0.8>>
-<<Draw black_bg 0.75 0.75>>
-
-아..
-머리가 깨질 것 같아..
-<<wait 0.5>>
-요즘 너무 무리했나..
-
-
-<<StopAudioAll>>
-<<HideAll>>
-<<Scene NoBG>>
-<<UI_on MenuUI>>
-<<SetCanvasTo VisualNovelPrefab false>>
-
 
 ===
 
