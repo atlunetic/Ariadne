@@ -265,7 +265,7 @@ public class CallYarn : MonoBehaviour
     [YarnCommand("Officetel1503")]
     public void Officetel1503(){
         GameManager.instance.FinishedDialogues.Add("Officetel1stfloor");
-        officetelPhoto.onClick.RemoveAllListeners();
+        GameManager.instance.FinishedDialogues.Add(officetelPhoto.gameObject.name);
         Callbybutton(officetelPhoto,"Officetel1503");
     }
 }

@@ -10,16 +10,9 @@ public class ImageToPicture : MonoBehaviour
     void Start(){
         button = GetComponent<Button>();
         button.onClick.AddListener(Isclicked);
-        button.onClick.AddListener(callYarn);
+        CallYarn.instance.Callbybutton(button, gameObject.name);
     }
     private void Isclicked(){
         GalleryController.instance.ActiveThePicture(gameObject.name);
-    }
-
-    private void callYarn(){
-        var runner = FindObjectOfType<DialogueRunner>();
-        if(runner is not null && runner.NodeExists(gameObject.name))
-            runner.StartDialogue(gameObject.name);
-        button.onClick.RemoveListener(callYarn);
     }
 }
