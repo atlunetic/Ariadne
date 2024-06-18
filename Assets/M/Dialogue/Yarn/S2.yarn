@@ -3047,18 +3047,14 @@ title: obj_customerg_choose
 -> 과거에 어떤 일을 했는지 물어보자
 	<<UpdateAct 지수 CoJIsoo1>>
 	지수: 아, 그러셨구나.
-	지수: 그러면 예전엔 어떤 일을 하셨어요?
+	지수: 예전엔 어떤 일을 하셨어요?
 	클럽고객G는 눈을 반짝였다.
 	클럽고객G: 아 내가 예전에 말이야~.
 	클럽고객G: 엄청 잘나가는 회사 사장이었다 이말이야.	
 	<<UpdateAct 지수 CoJIsoo2>>
-	<<wait 1.0>>
-	이후로도 클럽 고객G의 말은 끊이지 않았다.
-	알아낼 수 있는 게 없는 걸까...
 	<<wait 0.5>>
 	-> 클럽에 오게 된 계기를 물어보자
 		<<UpdateAct 지수 CoJIsoo1>>
-		지수: 아, 그러셨구나.
 		지수: 그러면 클럽에 다니게 된 계기가 있으신가요?
 		클럽고객G는 눈을 반짝였다.
 		클럽고객G: 아 내가 말이지~.
@@ -3068,13 +3064,41 @@ title: obj_customerg_choose
 		이후로도 클럽 고객G의 말은 끊이지 않았다.
 		알아낼 수 있는 게 없는 걸까...
 		<<wait 0.5>>
-		//휴대폰 진동과 함께 알림이 온다.
-		<<PlayAudio PhoneAlarm>>
+		<<jump obj_customerg_choose_ariadne>>
+-> 클럽에 오게 된 계기를 물어보자
+	<<UpdateAct 지수 CoJIsoo1>>
+	지수: 아, 그러셨구나.
+	지수: 클럽에 다니게 된 계기가 있으신가요?
+	클럽고객G는 눈을 반짝였다.
+	클럽고객G: 아 내가 말이지~.
+	클럽고객G: 예전에 어마어마한 분이랑 술자리를 가졌는데~.
+	<<UpdateAct 지수 CoJIsoo2>>
+	-> 과거에 어떤 일을 했는지 물어보자
+		<<UpdateAct 지수 CoJIsoo1>>
+		지수: 그러면 예전엔 어떤 일을 하셨어요?
+		클럽고객G는 눈을 반짝였다.
+		클럽고객G: 아 내가 예전에 말이야~.
+		클럽고객G: 엄청 잘나가는 회사 사장이었다 이말이야.	
 		<<UpdateAct 지수 CoJIsoo2>>
-		어... 아리아드네다.
-		확인해볼까?
-		<<StartPhoneChat PhoneController 24>>
-		<<SetCanvasTo VisualNovelPrefab false>>
+		<<wait 1.0>>
+		이후로도 클럽 고객G의 말은 끊이지 않았다.
+		알아낼 수 있는 게 없는 걸까...
+		<<wait 0.5>>
+		<<jump obj_customerg_choose_ariadne>>
+
+===
+
+title: obj_customerg_choose_ariadne
+
+---
+
+//휴대폰 진동과 함께 알림이 온다.
+<<PlayAudio PhoneAlarm>>
+<<UpdateAct 지수 CoJIsoo2>>
+어... 아리아드네다.
+확인해볼까?
+<<StartPhoneChat PhoneController 24>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
