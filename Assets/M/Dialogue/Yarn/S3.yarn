@@ -96,6 +96,7 @@ title: NationalFlower
 ...
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
+//<<AddToInventory VisualNovelPrefab Clothes>>
 
 ===
 
@@ -263,15 +264,15 @@ title: memory_GeonwooCard
 //(건우의 명함 이미지 확대)
 
 //건우1
-<<Act 건우 Geonwoo1 0.322 0.227 white>>
+//<<Act 건우 Geonwoo1 0.322 0.227 white>>
 건우: 명함도 뽑았고!
 건우: 이제 돈 빡세게 벌어야지.
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 white>>
+//<<Act 지수 Jisoo4 1.17 0.322 white>>
 지수: 왜? 뭐 사려고?
 건우: ..그런 게 있다.
 건우: 너는 알면 안돼, 임마.
-<<HideAll>>
+//<<HideAll>>
 <<StopMemory SceneManager>>
 
 <<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
@@ -477,7 +478,7 @@ title: IfEmployeeSuit
 좋아. 들어가보자.
 <<Hide 지수>>
 <color=yellow>* ‘오피스텔 출입 카드키’를 습득했다. *</color>
-<<AddToInventory VisualNovelPrefab OfficetelCardkey>>
+<<AddToInventoryCardkey VisualNovelPrefab OfficetelCardkey>>
 <<FinishedDialogue VisualNovelPrefab IfEmployeeSuit>>
 <<SetCanvasTo VisualNovelPrefab false>>
 

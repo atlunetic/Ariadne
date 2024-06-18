@@ -2882,8 +2882,8 @@ title: club_viproom_changeuniform
 <<wait 0.5>>
 들어가보자.
 
-<<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
-<<jump club_viproom>>
+//<<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
+//<<jump club_viproom>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 

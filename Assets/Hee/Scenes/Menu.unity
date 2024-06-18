@@ -6180,6 +6180,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4095407691540616704, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 460897321}
+    - targetCorrespondingSourceObject: {fileID: 4095407691540616704, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 460897324}
   m_SourcePrefab: {fileID: 100100000, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
 --- !u!224 &460897314 stripped
 RectTransform:
@@ -6201,6 +6204,22 @@ MonoBehaviour:
   newItem:
     ItemType: 0
     itemName: WaterCup
+  image: {fileID: 0}
+--- !u!114 &460897324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453730393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e975710f4f1b34f8ce401df8be1da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newItem:
+    ItemType: 0
+    itemName: OfficetelCardkey
   image: {fileID: 0}
 --- !u!1 &485708990
 GameObject:
@@ -30856,6 +30875,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1086358475575568, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1699657728}
+    - targetCorrespondingSourceObject: {fileID: 1086358475575568, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1699657733}
+    - targetCorrespondingSourceObject: {fileID: 1086358475575568, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1699657734}
     - targetCorrespondingSourceObject: {fileID: 1635097231764242, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1699657719}
@@ -30951,6 +30976,35 @@ MonoBehaviour:
     ItemType: 0
     itemName: Clothes
   image: {fileID: 0}
+--- !u!114 &1699657733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699657714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e975710f4f1b34f8ce401df8be1da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newItem:
+    ItemType: 0
+    itemName: OfficetelCardkey
+  image: {fileID: 0}
+--- !u!114 &1699657734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699657714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4fc990cfc3a3e4aa252fe34b0742fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneItem: {fileID: 1699657733}
 --- !u!1 &1712973357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5281395886503812520, guid: a95c8f77a7cd42a48a39917efb4b3004, type: 3}

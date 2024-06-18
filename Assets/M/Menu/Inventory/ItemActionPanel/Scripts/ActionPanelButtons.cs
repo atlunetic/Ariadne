@@ -48,10 +48,12 @@ public class ActionPanelButtons : MonoBehaviour
                 runner.StartDialogue("UsedWaterCup");
             }
 
+
             else if (connectedItem.itemName == "Clothes")
             {
+                if (currentscene.name == "S2_7_Stairs") { runner.StartDialogue("inventory_notjelly"); }
 
-                if (GameManager.instance.FinishedDialogues.Contains("obj_customers"))
+                else if (GameManager.instance.FinishedDialogues.Contains("obj_customers"))
                 {
                     runner.StartDialogue("ClothesUsed");
                 }
