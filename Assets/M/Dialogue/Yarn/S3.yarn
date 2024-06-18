@@ -141,8 +141,8 @@ title: FlashVM
 //<<UpdateAct 지수 Jisoo2>>
 ...
 <<DeleteItem Inventory Flashlight>>
-<<jump DrugCookie>>
 <<Hide BlackBG>>
+<<jump DrugCookie>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -494,6 +494,7 @@ title: OfficetelDoorwcard
 //(♫Sound: 카드키 효과음)
 <<PlayAudio UseCard>>
 <<PlayAudio BuildingDoorOpen>>
+<<DeleteItem Inventory OfficetelCardkey>>
 
 카드키를 가져다 대는 순간.
 누군가 내 어깨를 붙잡았다.
@@ -520,9 +521,9 @@ title: OfficetelDoorwcard
 	<<jump Ending4>>
 -> 에스코트..!
 	<<jump Ending4>>
--> 이스케이프..!
-	<<jump Ending4>>
 -> 에너미..!
+	<<jump Ending4>>
+-> 이스케이프..!
 	조직원: ...
 	조직원: ...
 	..맞췄나?
