@@ -691,7 +691,7 @@ title: ending_normal
 1년 6개월의 복역을 마친 날.
 마중나온 부모님은 곧장 나를 치료 센터에 데리고 갔다.
 ...
-...
+<<wait 1.0>>
 다음 번엔 어떻게 해야 안 걸릴까?
 //엔딩 일러스트 등장 Ending7
 //엔딩 이름(수정)
@@ -709,53 +709,74 @@ title: ending_merrybad
 
 ---
 
-//Fade black
-//미로 배경 이미지
-길을 잃었다.
-미로 속 가장 깊은 곳에 괴물이 있다고 했는데...
+<<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio NightmareBGM 0.6 loop>>
+
+<<Scene Maze>>
+
+지수: 길을 잃었다.
+지수: 미로 속 가장 깊은 곳에 괴물이 있다고 했는데...
+
 어... 잠깐. 분명 이랬던 적이 있는데.
 데자부인가?
 
 //다른 길은 모두 막혀있고, 왼쪽에 길이 나있는 것이 드러나는. 1인칭 시점 배경 이미지
+<<Scene Leftpath>>
 왼쪽에 길이 나있다.
 //♫Sound: 괴물 울음소리
+<<PlayAudio MonsterSound1 0.7>>
+<<wait 1.0>>
 불길한 소리가 들린다.
 
-//높은 천장. 지수를 내려다보는 거대한 그림자. 1인칭 시점 배경 이미지
+//높은 천장. 지수를 내려다보는 거대한 그림자. 1인칭 시점 배경 
+<<PlayAudio MonsterSound2 0.7>>
+<<Scene Ceiling>>
 저게 말로만 듣던 미노타우르스...
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
 검을 쥔 손에 힘이 들어가지 않아.
 //♫Sound: 크게 들리는 괴물 울음소리
-
+<<PlayAudio MonsterSound3 0.7>>
+<<wait 1.0>>
 
 //거대한 그림자가 보다 가까이 다가온 1인칭 시점 배경 이미지
 //♫Sound: 더욱 크게 들리는 괴물 울음소리
 녀석이 서서히 내게 다가온다.
+<<DrawFadeIn Hand 0.75 0.75 2>>
 이대로 잡아먹히는걸까.
 
 //손모양 그림자가 지수를 향해 뻗어옴.
 //지수에게 천천히 그림자가 드리운다.
 //서서히 암전. 어두워진다.
+<<wait 1.0>>
 
+<<Fade black 0.0 1.0 2.0>>
+<<wait 2.5>>
+<<Hide Hand>>
+
+<<wait 1.0>>
+<<StopAudioAll>>
 
 //지수의 방 배경 이미지
+<<Scene JisooRoomBG>>
 //효과지수4
+<<Act 지수 EJisoo4 1.17 0.322 white>>
 헉..!
 ...
-...
 //효과지수2
+<<UpdateAct 지수 EJisoo2>>
 꿈을 꿨나?
 <<wait 2.0>>
 
 ...
-...
 //문을 두드리는 사운드
 //문열리는 사운드
-<<PlayAudio HospitalDoorOpen>>
+<<PlayAudio KnockOpenDoor>>
 
 //효과지원5
+<<UpdateAct 지원 JIwon5>>
 지원: 지수야!
 //효과지수4
+<<UpdateAct 지수 EJisoo4>>
 지수: 어... 지원아!
 지수: 괜찮아? 안다쳤어?
 <<wait 2.0>>
@@ -770,6 +791,7 @@ title: ending_merrybad
 //효과지원1
 지원: ...
 //효과지원5
+<<UpdateAct 지원 JIwon5>>
 지원: 얘가 꿈을 꿨나보네.
 지원: 라면 끓여뒀으니까 얼른 나와.
 지원: 너 꼬들꼬들한 면 좋아하잖아. 다 불겠다.
@@ -780,26 +802,31 @@ title: ending_merrybad
 //지원 이미지 종료
 
 //문닫히는 사운드
-<<PlayAudio HospitalDoorClose>>
+<<PlayAudio StaffCloseDoor>>
 //효과지수3
-...
+<<UpdateAct 지수 EJisoo3>>
 ...
 아무리 생각해도 생생한데.
 ...
-...
+<<wait 1.0>>
 악몽을 꿨나보다.
 라면이나 먹으러 갈까?
 ...
 //지수 이미지 종료
 //문열리는 사운드
-<<PlayAudio HospitalDoorOpen>>
 //곧이어 문 닫히는 사운드
+<<PlayAudio DoorOpenandClose>>
+
 //이후 심박수 측정기 사운드가 뒤섞이다 멈춤
+<<PlayAudio MixedNoise>>
 
 //어두워지는 배경, 어두운 배경에 엔딩 일러스트 등장
 //지수의 침대 위에 있는 지원의 휴대폰이 확대
 //마지막으로 아리아드네에게서 채팅이 옴. 아리아드네 ‘제발 깨어나...’
-
+<<wait 2.0>>
+...
+<color=purple>제발 깨어나...</color>
+<<wait 1.0>>
 <<DrawFadeIn Ending6 2.0>>
 <<wait 3.0>>
 <<Fade White 0.0 1.0 2.0>>
@@ -812,33 +839,41 @@ title: ending_bad
 
 ---
 
-//미로임을 파악할 수 있는 배경 이미지
-길을 잃었다.
-미로 속 가장 깊은 곳에 괴물이 있다고 했는데...
-내가 잡을 수 있을까.
+<<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio NightmareBGM 0.6 loop>>
+<<Scene Maze>>
 
+지수: 길을 잃었다.
+지수: 미로 속 가장 깊은 곳에 괴물이 있다고 했는데...
+지수: 내가 잡을 수 있을까.
 
-//다른 길은 모두 막혀있고, 왼쪽에 길이 나있는 것이 드러나는. 1인칭 시점 배경 이미지
+<<Scene Leftpath>>
 왼쪽에 길이 나있다.
-//♫Sound: 괴물 울음소리
+<<PlayAudio MonsterSound1 0.7>>
+<<wait 1.0>>
 불길한 소리가 들린다.
 
-
-//높은 천장. 지수를 내려다보는 거대한 그림자. 1인칭 시점 배경 이미지
+<<PlayAudio MonsterSound2 0.7>>
+<<Scene Ceiling>>
 저게 말로만 듣던 미노타우르스...
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
 검을 쥔 손에 힘이 들어가지 않아.
-//♫Sound: 크게 들리는 괴물 울음소리
 
-//거대한 그림자가 보다 가까이 다가온 1인칭 시점 배경 이미지
-//♫Sound: 더욱 크게 들리는 괴물 울음소리
+
+<<PlayAudio MonsterSound3 0.7>>
+<<wait 1.0>>
+
 녀석이 서서히 내게 다가온다.
+<<DrawFadeIn Hand 0.75 0.75 2>>
 이대로 잡아먹히는걸까.
+<<wait 1.0>>
 
-//손모양 그림자가 지수를 향해 뻗어옴.
-//지수에게 천천히 그림자가 드리운다.
-//서서히 암전. 어두워진다.
+<<Fade black 0.0 1.0 2.0>>
+<<wait 2.5>>
+<<Hide Hand>>
+
 //동시에 심박수 삐-사운드
+<<PlayAudio Dead>>
 //어두운 배경에 엔딩 일러스트 등장
 
 <<DrawFadeIn Ending5 2.0>>
