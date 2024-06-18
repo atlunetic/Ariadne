@@ -304,6 +304,27 @@ title: OfficetelDoor
 
 ===
 
+title: OfficetelDoor2
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+//오브젝트 4. 오피스텔 출입문
+
+//출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
+
+//지수2
+<<wait 1.0>>
+//<<Act 지수 Jisoo2 1.17 0.322 white>>
+...
+...
+카드키가 있거나 비밀번호를 알아야 할 것 같다.
+...
+//<<Hide 지수>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
 title: Scribble1342
 
 ---

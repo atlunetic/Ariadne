@@ -99,13 +99,7 @@ public class ActionPanelButtons : MonoBehaviour
         }
 
 
-
-
-
-
         // After performing functionality, hide action panel
-
-
         HideActionPanel();
 
     }
