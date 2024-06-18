@@ -3805,7 +3805,7 @@ XX 오피스텔로 가보자.
 <<ChangeSceneTo VisualNovelPrefab S2_10_Stairs>>
 <<wait 1.0>>
 <<StartPhoneChat PhoneController 22>>
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -3834,7 +3834,7 @@ title: stairchocotalk2
 그러면 마약 젤리는 어떻게 처분하려나.
 <<wait 0.5>>
 일단 XX 오피스텔로 가보자.
-
+<<UI_off MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<ChangeSceneTo VisualNovelPrefab S3_1_OfficetelEntrance>>
 <<wait 0.5>>
