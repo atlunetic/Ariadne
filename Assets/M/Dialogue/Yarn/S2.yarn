@@ -61,6 +61,7 @@ title: meet_gunwoo
 	<<StopAudioAll>>
 	<<Fade black 0.0 1.0 2.0>>
 	<<HideAll>>
+	<<PlayAudio FallDown 0.8>>
 	<<ChangeSceneTo VisualNovelPrefab S1>>
 	<<Scene BlackBG>>
 	어...
