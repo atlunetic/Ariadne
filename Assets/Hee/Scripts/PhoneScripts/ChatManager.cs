@@ -373,7 +373,20 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "등잔 밑이 어두운 법이지.");
         AddChatToLast(false, "주머니는 뒤져봤어?");
 
-        foreach(int i in GameManager.instance.ChattingLog)
+        ChattingList.Add(new Chatting(false, "Team ARIADNE", null));  // 32
+        AddChatToLast(true, "ARIADNE 팀 소개");
+        AddChatToLast(false, "팀 아리아드네는 이화여자대학교 도전 학기제 수행을 위해 조직된 팀으로, 프로젝트 완료 이후에도 지속적인 활동을 이어가고 있습니다.\n\n아리아드네라는 팀명은 그리스 로마 신화에 등장하는 미노타우르스의 이야기에서 영감을 받았습니다, 테세우스가 미궁에서 빠져나올 수 있게 도움을 준 아리아드네처럼 마약이라는 출구 없는 미로로부터 개인뿐 아니라 우리 사회를 구출하고자 하는 목표를 달성하려는 강한 의지를 담고 싶어 정하게 된 이름입니다.");
+
+        ChattingList.Add(new Chatting(false, "Team ARIADNE", null));  // 33
+        AddChatToLast(true, "'Exit from NO EXIT' 출시 소감");
+        AddChatToLast(false, "게임을 완성하기에 다소 짧은 시간이었던 반년 남짓, 일상을 제쳐두고 공들여 작업했던 ‘Exit from NO EXIT’이 드디어 출시를 앞두고 있습니다.\n\n나의 일이라 생각하지 않았으니 제삼자의 시선에서 “왜 마약을 할까, 그냥 안하면 그만 아닐까”라고 생각하기도 했었고, 제작 초기에 관련 조사를 하면서도 “시작을 하지 않으면 되는 것 아닌가?“라는 생각도 했었습니다. 어쩌면 이 게임을 플레이하고 계신 여러분도 한번쯤은 그런 생각을 해보셨을지도 모릅니다. 전부 틀린 말은 아니지만, 게임을 제작하면서 저희는 마약 문제가 의지와 노력으로 극복할 수 있는 것이 아님을, 무엇보다 사회적 차원의 관심과 논의가 절실하게 필요한 문제임을 깨달았습니다.\n\n그런 깨달음을 가지고 당장 자신의 일이 아니더라도 관심을 가졌으면 하는 마음으로, 한명이라도 더 미로에 들어가지 않았으면 하는 마음으로 게임을 제작하였습니다. 게임을 플레이하시는 분들이 마약 문제에 대해 조금이나마 생각하고 고민을 하셨다면 뿌듯할 것 같습니다.\n\n‘Exit from NO EXIT’은 아리아드네 팀만의 노력으로 만들어진 것은 아닙니다. 자문을 포함한 다양한 분야에서 게임 제작에 도움을 주신 분들께 감사드린다는 말씀을 전합니다.\n\n우리 모두가 마약이란 미로 속에서 헤매지 않길, 그에 이 게임이 도움이 되길 바랍니다.");
+
+        ChattingList.Add(new Chatting(false, "Team ARIADNE", null));  // 34
+        AddChatToLast(true, "ARIADNE 팀 연락망");
+        AddChatToLast(false, "팀 아리아드네 인스타그램\n@team_ariadne.e\n\n팀 아리아드네 이메일\nariadnewithyou@gmail.com");
+
+
+        foreach (int i in GameManager.instance.ChattingLog)
             PrintChat(i);
     }
 }

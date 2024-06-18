@@ -5294,8 +5294,9 @@ GameObject:
   - component: {fileID: 399115707}
   - component: {fileID: 399115706}
   - component: {fileID: 399115705}
+  - component: {fileID: 399115708}
   m_Layer: 5
-  m_Name: 27
+  m_Name: 33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5403,6 +5404,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399115703}
   m_CullTransparentMesh: 1
+--- !u!114 &399115708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399115703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a6439d71659a64e94699de0e55a6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &401628765
 GameObject:
   m_ObjectHideFlags: 0
@@ -10735,8 +10748,9 @@ GameObject:
   - component: {fileID: 735094316}
   - component: {fileID: 735094315}
   - component: {fileID: 735094314}
+  - component: {fileID: 735094317}
   m_Layer: 5
-  m_Name: 26
+  m_Name: 32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10844,6 +10858,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735094312}
   m_CullTransparentMesh: 1
+--- !u!114 &735094317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735094312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a6439d71659a64e94699de0e55a6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738321990
 GameObject:
   m_ObjectHideFlags: 0
@@ -12247,8 +12273,9 @@ GameObject:
   - component: {fileID: 796562278}
   - component: {fileID: 796562277}
   - component: {fileID: 796562276}
+  - component: {fileID: 796562279}
   m_Layer: 5
-  m_Name: 28
+  m_Name: 34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12356,6 +12383,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796562274}
   m_CullTransparentMesh: 1
+--- !u!114 &796562279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796562274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a6439d71659a64e94699de0e55a6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &797798384
 GameObject:
   m_ObjectHideFlags: 0
@@ -22666,7 +22705,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uAC8C\uC784 \uCD9C\uC2DC \uC18C\uAC10 \uD55C\uB9C8\uB514"
+  m_text: "Ariadne \uD300 \uC18C\uAC1C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
   m_sharedMaterial: {fileID: 1497702040961675257, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
@@ -26591,7 +26630,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBA54\uC77C"
+  m_text: "Ariadne \uD300 \uC5F0\uB77D\uB9DD"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
   m_sharedMaterial: {fileID: 1497702040961675257, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
@@ -32444,7 +32483,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC778\uC2A4\uD0C0\uADF8\uB7A8"
+  m_text: " \u2018Exit from NO EXIT\u2019 \uCD9C\uC2DC \uC18C\uAC10"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
   m_sharedMaterial: {fileID: 1497702040961675257, guid: b41865e09d13c6749aca3f3a31d83fcc, type: 2}
