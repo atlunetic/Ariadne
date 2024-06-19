@@ -279,7 +279,7 @@ title: realmemory_6
 <<SetCanvasTo VisualNovelPrefab true>>
 <color=purple>아리아드네</color>: <color=purple>...</color>
 <color=purple>아리아드네</color>: <color=purple>이제 아프지마.</color>
-<<CollectEnding GameManager realmemory_6 Ending8>>
+<<CollectEnding GameManager realmemory_6 Ending8>> 
 <<wait 1.0>>
 //여기부터는 모두 지수8
 //화면 암전 및 전환. 병실 이미지 (희원)
