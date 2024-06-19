@@ -73,6 +73,7 @@ title: realmemory_1
 
 ---
 
+<<SetCanvasTo VisualNovelPrefab true>>
 //지수4
 <<Act 지수 Jisoo4 1.17 0.322 white>>
 지수: 오빠, 왜 동생 학생증을 들고 다녀요?
@@ -106,7 +107,7 @@ title: realmemory_1
 title: realmemory_2
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //기존 팝업 이미지-> 블랙부분 지운 이미지
 //토하는 지수
 <<Act 지수 Jisoo7 1.17 0.322 white>>
@@ -133,7 +134,7 @@ title: realmemory_2
 title: realmemory_3
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //클럽 안 이미지
 
 //지원4
@@ -187,7 +188,7 @@ title: realmemory_3
 title: realmemory_4
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //지원4
 <<Act 지원 JIwon4 0.322 0.227 white>>
 지원: 나도 이제 더 이상은 못해먹겠어.
@@ -229,7 +230,7 @@ title: realmemory_4
 title: realmemory_5
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //건우2
 <<Act 건우 Geonwoo2 0.322 0.227 white>>
 건우: ...
@@ -275,7 +276,7 @@ title: realmemory_6
 
 ---
 
-
+<<SetCanvasTo VisualNovelPrefab true>>
 <color=purple>아리아드네</color>: <color=purple>...</color>
 <color=purple>아리아드네</color>: <color=purple>이제 아프지마.</color>
 <<CollectEnding GameManager realmemory_6 Ending8>>
