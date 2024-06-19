@@ -788,6 +788,8 @@ title: Ending4_2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<CollectEnding GameManager Ending4_2 Ending4>>
+
 <<wait 1.0>>
 ...
 //(갑자기 화면 흔들리는 효과)
