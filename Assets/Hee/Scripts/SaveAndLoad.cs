@@ -68,9 +68,6 @@ public class SaveAndLoad : MonoBehaviour
         SceneManager.LoadScene("Menu");
         SceneManager.LoadScene(GameManager.instance.NowScene);
         Invoke("EndLoading", 2.5f);
-
-        var runner = FindObjectOfType<DialogueRunner>();
-        runner.StartDialogue("RandomN");
     }
 
     void AddSaveFile(int i){
@@ -121,6 +118,8 @@ public class SaveAndLoad : MonoBehaviour
     public void EndLoading(){
         tempCam.SetActive(false);
         nowLoading.SetActive(false);
+        var runner = FindObjectOfType<DialogueRunner>();
+        runner.StartDialogue("RandomN");
     }
 
     [YarnCommand("BackToMainScene")]

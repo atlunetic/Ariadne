@@ -19,6 +19,8 @@ public class GalleryController : MonoBehaviour
     [SerializeField]
     private GameObject emptyPicture;
 
+    public GameObject[] originImages;
+
     [SerializeField]
     private GameObject[] originPictures;
     

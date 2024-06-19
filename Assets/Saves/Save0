@@ -1,28 +1,36 @@
 {
-  "savetime": "2024-06-16 16:40:39 오후",
+  "savetime": "2024-06-19 09:52:14 오전",
   "IsLoad": false,
-  "NowScene": "Menu",
+  "NowScene": "S1_2_JiwonRoom",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
   "ChattingLog": [
     19,
     18,
-    25
+    25,
+    0
   ],
-  "PhotoList": [],
-  "items": [
-    {
-      "ItemType": 0,
-      "itemName": "Key"
-    }
+  "PhotoList": [
+    "Letter6"
   ],
+  "items": [],
   "FindedObjects": [
-    "InStaffroom_Key"
+    "Letter",
+    "Books_Diary"
   ],
-  "FindedClues": [],
+  "FindedClues": [
+    "Letter"
+  ],
   "FinishedDialogues": [
-    "ChocotalkAlarm"
+    "jisoo'stalk",
+    "Chatlist",
+    "DGram1st",
+    "Chocotalk1st",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsJiwon",
+    "Camera",
+    "Gallery"
   ],
   "GottenPage": [],
   "RecommendedFriends": [],
