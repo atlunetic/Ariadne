@@ -7,7 +7,7 @@
 //<<Hide WhiteBG>>
 //<<Scene BlackBG>>
 <<Scene NoBG>>
-<<wait 1.0>>
+<<wait 3.0>>
 <<FadeIn 3.0>>
 //아리아드네와의 대화~최종추리이벤트 동안은 1인칭 시점. 지수 캐릭터를 화면에 띄우지 않음
 //병원 심박수 측정기st의 사운드

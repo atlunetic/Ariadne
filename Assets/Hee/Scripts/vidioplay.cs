@@ -22,11 +22,16 @@ public class vidioplay : MonoBehaviour
         runner = FindAnyObjectByType<DialogueRunner>();
         runner.StartDialogue("lastevent_intro");
         ariadne1.SetActive(true);
-        ariadne1.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {ariadne2.SetActive(true);ariadne1.SetActive(false);};      
+        ariadne1.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {ariadne1.SetActive(false);};
+        Invoke("playloop", 2.0f);
         GameManager.instance.FindedObjects.Remove("InStaffroom_VIPlist");                                                                                
         GameManager.instance.FindedObjects.Remove("obj_navigation");                                                                                
         GameManager.instance.FindedObjects.Remove("GeonwooCard");                                                                                
         GameManager.instance.FindedObjects.Remove("R1403Cardkey");                                                                                
+    }
+
+    void playloop(){
+        ariadne2.SetActive(true);
     }
 
     [YarnCommand("Final")]
