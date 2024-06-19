@@ -930,7 +930,7 @@ title: memory_Photo
 
 정신을 잃을 것 같다.
 <<wait 0.5>>
-조금만 버티자..
+조금만 버티자.. 
 
 <<StopAudioAll>>
 <<HideAll>>

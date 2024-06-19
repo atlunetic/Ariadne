@@ -46,6 +46,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     
     [YarnCommand("UI_off")]
     public void UI_off(){
+        if(GameObject.Find("SceneManager").GetComponent<SceneInfo>().IsS4) return;
         BlockClick = false;
         UIMode.SetActive(false);
         UIButtons.SetActive(true);
