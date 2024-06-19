@@ -277,6 +277,18 @@ title: memory_GeonwooCard
 //<<HideAll>>
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
+<<UI_on MenuUI>>
+<<Scene black_bg>>
+<<PlayAudio EarSound 0.8>>
+<<PlayAudio WhiteNoise 0.6>>
+
+눈 앞이 번쩍거려..
+<<wait 0.5>>
+토할 것 같아...
+
+<<StopAudioAll>>
+<<HideAll>>
+<<UI_off MenuUI>>
 <<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
 <<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 	<<jump InteractionFin3>>
@@ -381,6 +393,18 @@ title: memory_1342
 <<Hide 지수>>
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
+<<UI_on MenuUI>>
+<<Scene black_bg>>
+<<PlayAudio EarSound 0.8>>
+<<PlayAudio WhiteNoise 0.6>>
+
+쓰러질 것 같아...
+<<wait 0.5>>
+쉬어야 하나..?
+
+<<StopAudioAll>>
+<<HideAll>>
+<<UI_off MenuUI>>
 <<FinishedDialogue VisualNovelPrefab memory_1342>>
 <<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 	<<jump InteractionFin3>>
@@ -897,12 +921,24 @@ title: memory_Photo
 건우: ...
 ???: 제발 정신 좀 차려.
 ???: 내가 도와줄게... 응?
-<<SetCanvasTo VisualNovelPrefab false>>
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
+<<UI_on MenuUI>>
+<<Scene black_bg>>
+<<PlayAudio EarSound 0.8>>
+<<PlayAudio WhiteNoise 0.6>>
+
+정신을 잃을 것 같다.
+<<wait 0.5>>
+조금만 버티자..
+
+<<StopAudioAll>>
+<<HideAll>>
+<<UI_off MenuUI>>
 <<if CheckDialogue("R1403Cardkey") == true && CheckDialogue("PhotoOf3") == true>>
 	<<jump InteractionFinto14>>
 <<endif>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
