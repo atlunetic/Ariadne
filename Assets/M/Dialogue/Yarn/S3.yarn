@@ -1647,7 +1647,8 @@ title:BacktoOfficetel1stFloor
 <<UpdateAct 지수 Jisoo3>>
 지수: 빨리 나가자, 지원아.
 //지수, 지원이미지 종료
-<<HideAll>>
+<<Hide 지수>>
+<<Hide 지원>>
 지원이를 데리고 걸음을 옮겼다.
 한 걸음만 더 가면 출입문이야.
 ...
@@ -1668,7 +1669,8 @@ title:BacktoOfficetel1stFloor
 <<Act 지수 Jisoo3 1.17 0.322 white>>
 지수: 아니야... 일어나.
 //지수, 지원이미지 종료
-<<HideAll>>
+<<Hide 지수>>
+<<Hide 지원>>
 
 다급하게 지원이를 일으켜 세웠다.
 그 때, 반대편 복도에서 수상한 사람들이 나타났다.
@@ -1682,7 +1684,8 @@ title:BacktoOfficetel1stFloor
 지원: ...
 지원: 미안해.
 //지수, 지원이미지 종료
-<<HideAll>>
+<<Hide 지수>>
+<<Hide 지원>>
 //(화면이 흔들리는 연출)
 //화면이 어두워졌다가 콘크리트 바닥 배경으로
 <<Fade Black 0.0 1.0 1.0>>
