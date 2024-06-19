@@ -1711,6 +1711,7 @@ title: memory_StudentID
 //증거 촬영 시 돌아오는 기억: 바뀌고 어두워지는 배경, 팝업이미지X, 건우와의 대화 형식, 건우만 왼쪽
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio MemoryRecall 0.5>>
 ???: 오빠, 왜 동생 학생증을 들고 다녀요?
 
 
@@ -1721,6 +1722,7 @@ title: memory_StudentID
 
 
 <<StopMemory SceneManager>>
+<<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -1991,6 +1993,7 @@ title: memory_ToiletPaper
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio MemoryRecall 0.5>>
 //증거 촬영 시 돌아오는 기억: 지원이와 지수가 함께 마약 관련 뉴스를 보는 장면
 
 TV: 최근 해외에서 논란이 되고 있는 영상입니다.
@@ -2002,6 +2005,7 @@ TV: ...
 지수: 저게 뭐야..?
 지원: 그러게. 조심해야겠네.
 <<StopMemory SceneManager>>
+<<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2797,6 +2801,7 @@ title: memory_VIPlist
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio MemoryRecall 0.5>>
 //증거 촬영 시 돌아오는 기억: 건우가 ??에게 VIP 명단을 보여주는 기억
 
 건우: 야, 이거 봐라.
@@ -2805,6 +2810,7 @@ title: memory_VIPlist
 ???: 우와...
 ???: 이런 것도 있어요?
 <<StopMemory SceneManager>>
+<<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<IfDone_getout MenuUI>>
 
@@ -3774,6 +3780,7 @@ title: memory_BrokenGlasses
 
 //증거 촬영 시 돌아오는 기억: 건우가 지수에게 지원의 유품인 '깨진 안경'을 건넸을 때의 기억이 돌아옴.
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio MemoryRecall 0.5>>
 건우: 현장에 이게 있었어.
 건우: 몰래 챙겨왔는데...
 ???: ...
@@ -3782,6 +3789,7 @@ title: memory_BrokenGlasses
 건우: 미안하다.
 ???: ...
 <<StopMemory SceneManager>>
+<<StopAudioAll>>
 <<FinishedDialogue VisualNovelPrefab memory_BrokenGlasses>>
 <<if CheckDialogue("obj_navigation") == true>>
 	<<jump event_movetostairs>>
