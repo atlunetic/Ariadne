@@ -1723,6 +1723,18 @@ title: memory_StudentID
 
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
+<<UI_on MenuUI>>
+<<Scene black_bg>>
+<<PlayAudio EarSound 0.8>>
+<<PlayAudio WhiteNoise 0.6>>
+
+하...
+<<wait 0.5>>
+머리가 깨질 것 같아...
+
+<<StopAudioAll>>
+<<HideAll>>
+<<UI_off MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -2006,6 +2018,17 @@ TV: ...
 지원: 그러게. 조심해야겠네.
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
+<<UI_on MenuUI>>
+<<Scene black_bg>>
+<<PlayAudio EarSound 0.8>>
+<<PlayAudio WhiteNoise 0.6>>
+
+...
+<<wait 0.5>>
+내가 방금 꿈을 꾼 건가..?
+<<StopAudioAll>>
+<<HideAll>>
+<<UI_off MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2811,6 +2834,18 @@ title: memory_VIPlist
 ???: 이런 것도 있어요?
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
+<<UI_on MenuUI>>
+<<Scene black_bg>>
+<<PlayAudio EarSound 0.8>>
+<<PlayAudio WhiteNoise 0.6>>
+
+...
+<<wait 0.5>>
+세상이 빙글빙글 돈다..
+
+<<StopAudioAll>>
+<<HideAll>>
+<<UI_off MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<IfDone_getout MenuUI>>
 
@@ -3790,6 +3825,18 @@ title: memory_BrokenGlasses
 ???: ...
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
+<<UI_on MenuUI>>
+<<Scene black_bg>>
+<<PlayAudio EarSound 0.8>>
+<<PlayAudio WhiteNoise 0.6>>
+
+악몽을 꾼 것 같은 기분이야
+<<wait 0.5>>
+...
+
+<<StopAudioAll>>
+<<HideAll>>
+<<UI_off MenuUI>>
 <<FinishedDialogue VisualNovelPrefab memory_BrokenGlasses>>
 <<if CheckDialogue("obj_navigation") == true>>
 	<<jump event_movetostairs>>
