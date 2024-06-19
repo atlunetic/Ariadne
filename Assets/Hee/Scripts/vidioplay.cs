@@ -22,7 +22,10 @@ public class vidioplay : MonoBehaviour
         runner = FindAnyObjectByType<DialogueRunner>();
         runner.StartDialogue("lastevent_intro");
         ariadne1.SetActive(true);
-        ariadne1.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {ariadne2.SetActive(true);ariadne1.SetActive(false);};                                                                                      
+        ariadne1.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {ariadne2.SetActive(true);ariadne1.SetActive(false);};      
+        GameManager.instance.FindedObjects.Remove("InStaffroom_VIPlist");                                                                                
+        GameManager.instance.FindedObjects.Remove("obj_navigation");                                                                                
+        GameManager.instance.FindedObjects.Remove("memory_Photo");                                                                                
     }
 
     [YarnCommand("Final")]
