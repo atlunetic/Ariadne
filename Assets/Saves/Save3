@@ -1,16 +1,10 @@
 {
-<<<<<<< Updated upstream
   "IsLoad": true,
   "NowScene": "S2_2_Table",
-=======
-  "IsLoad": false,
-  "NowScene": "S1_2_JiwonRoom",
->>>>>>> Stashed changes
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
   "ChattingLog": [
-<<<<<<< Updated upstream
     12
   ],
   "PhotoList": [
@@ -31,15 +25,8 @@
       "ItemType": 0,
       "itemName": "WaterCup"
     }
-=======
-    0,
-    13
->>>>>>> Stashed changes
   ],
-  "PhotoList": [],
-  "items": [],
   "FindedObjects": [
-<<<<<<< Updated upstream
     "Books_Diary",
     "DrawerR_Wallet",
     "Drawer_Hairpin",
@@ -51,13 +38,8 @@
     "Meds",
     "Letter",
     "Laptop"
-=======
-    "Books_Diary"
->>>>>>> Stashed changes
   ],
-  "FindedClues": [],
   "FinishedDialogues": [
-<<<<<<< Updated upstream
     "jisoo'stalk",
     "Chatlist",
     "Camera",
@@ -80,14 +62,4 @@
   ],
   "GottenPage": [],
   "visited": 7
-=======
-    "ChooseChatName1",
-    "Chocotalk1st",
-    "DGram1st",
-    "AfterGeonwooChatAsJiwon",
-    "ChooseChatName2"
-  ],
-  "GottenPage": [],
-  "visited": 0
->>>>>>> Stashed changes
 }
