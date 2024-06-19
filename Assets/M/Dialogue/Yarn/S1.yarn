@@ -1,4 +1,4 @@
-﻿
+
 title: RandomN
 
 ---
@@ -1098,8 +1098,20 @@ title: memory_Laptop
 ...
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
+<<UI_on MenuUI>>
+<<Scene black_bg>>
+<<PlayAudio EarSound 0.8>>
+<<PlayAudio WhiteNoise 0.6>>
+
+...
+<<wait 0.5>>
+..자꾸 헛 것이 보이네.
+
+<<StopAudioAll>>
+<<HideAll>>
+<<UI_off MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
-//<<jump AfterMemory>>
+
 ===
 
 title: Drawer_News
@@ -1191,7 +1203,18 @@ title: memory_Meds
 //밖에서 그걸 목격한 사람의 실루엣
 <<StopMemory  SceneManager>>
 <<StopAudioAll>>
+<<UI_on MenuUI>>
+<<Scene black_bg>>
+<<PlayAudio EarSound 0.8>>
+<<PlayAudio WhiteNoise 0.6>>
 
+...
+<<wait 0.5>>
+내가 지금 피곤한가..?
+
+<<StopAudioAll>>
+<<HideAll>>
+<<UI_off MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

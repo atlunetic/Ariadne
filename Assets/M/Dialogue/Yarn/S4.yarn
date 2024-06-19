@@ -902,7 +902,7 @@ title: ending_bad
 <<Fade black 0.0 1.0 2.0>>
 <<wait 2.5>>
 <<Hide Hand>>
-
+<<StopAudioAll>>
 //동시에 심박수 삐-사운드
 <<PlayAudio Dead 0.7>>
 //어두운 배경에 엔딩 일러스트 등장

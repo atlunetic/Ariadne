@@ -1405,7 +1405,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671291353}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: c274228e03ade914892b763b4b3dc7e4, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: a2af9dbbe94521f479e0a1cb5d5f7afa, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -4253,7 +4253,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805997681}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: f31be9db415fd6b4fab4f912c34c3a35, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 8b3f921afa02aae489125dcc44a20876, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -4392,7 +4392,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 1
