@@ -1081,7 +1081,7 @@ title: memory_Laptop
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
-<<jump AfterMemory>>
+//<<jump AfterMemory>>
 ===
 
 title: Drawer_News
@@ -1173,7 +1173,7 @@ title: memory_Meds
 //밖에서 그걸 목격한 사람의 실루엣
 <<StopMemory  SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
-<<jump AfterMemory>>
+//<<jump AfterMemory>>
 
 ===
 
