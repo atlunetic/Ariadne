@@ -939,7 +939,7 @@ title: WalletO
 <<DeleteItem Inventory Wallet>>
 <<Hide 지수>>
 <<New711 Controllers>>
-<<FinishedDialogues VisualNovelPrefab Where>>
+<<FinishedDialogue VisualNovelPrefab Where>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
