@@ -607,7 +607,7 @@ title: Officetel1stfloor
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio Chap3ThemeP2 1.0 loop>>
+<<PlayAudio Chap3ThemeP2 0.8 loop>>
 //지수2
 <<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
