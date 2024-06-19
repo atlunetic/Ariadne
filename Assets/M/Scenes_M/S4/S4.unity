@@ -1396,7 +1396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!328 &671291354
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -3329,7 +3329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1334766103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3360,6 +3360,17 @@ MonoBehaviour:
   - 
   IsFilled: 0000000000
   ending: 
+  cluenames:
+  - Letter
+  - Meds
+  - Laptop
+  - StudnetID
+  - VIPlist
+  - BrokenGlasses
+  - ToiletPaper
+  - GeonwooCard
+  - 1342
+  - Photo
 --- !u!4 &1334766104
 Transform:
   m_ObjectHideFlags: 0

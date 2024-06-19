@@ -133,6 +133,8 @@ public class SaveAndLoad : MonoBehaviour
             case "S2_5_VipRoomEntrance": return "VIP Room";
             case "S2_6_CounterBar": return "이상한 카운터 & 바";
             case "S2_6_ReVip": return "이상한 VIP Room 앞";
+            case "S2_7_Stairs":
+            case "S2_10_Stairs": return "계단";
             case "S2_8_ParkingLot":
             case "S2_8_ParkingLot2": return "클럽 뒷문 주차장";
             case "S2_9_Car": return "조직원의 차 내부";

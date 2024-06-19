@@ -19,7 +19,7 @@ public class vidioplay : MonoBehaviour
     void Awake(){instance = this;}
     void Start()
     {
-        runner = FindObjectOfType<DialogueRunner>();
+        runner = FindAnyObjectByType<DialogueRunner>();
         runner.StartDialogue("lastevent_intro");
         ariadne1.SetActive(true);
         ariadne1.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {ariadne2.SetActive(true);ariadne1.SetActive(false);};                                                                                      
@@ -54,6 +54,7 @@ public class vidioplay : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         breakglass[12].SetActive(false);
         breakglass[12].GetComponent<Image>().canvasRenderer.SetAlpha(1.0f);
+        
         runner.StartDialogue("realmemory_"+next.ToString());
     }
 
