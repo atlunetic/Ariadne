@@ -73,6 +73,7 @@ title: Poppy
 <<Hide 지수>>
 <<Hide DBG>>
 <<FinishedObj VisualNovelPrefab Poppy>>
+<<SetActiveFalse VisualNovelPrefab Poppy>>
 <<FinishedDialogue VisualNovelPrefab Poppy>>
 
 <<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
