@@ -18,7 +18,7 @@
 <<wait 2.0>>
 
 //신비로운 사운드
-<<PlayAudio Ariadne>>
+<<PlayAudio Ariadne 0.7>>
 
 <color=purple>아리아드네</color>: <color=purple>일어났어?</color>
 ...
@@ -220,7 +220,7 @@ title: realmemory_4
 지원: 그리고 반성하면 연락해.
 지원: ..안그럼 부모님께 말씀드릴 거야.
 //문 쾅 닫히는 사운드
-<<PlayAudio LoudDoorClose>>
+<<PlayAudio LoudDoorClose 0.7>>
 
 <<HideAll>>
 <<Break BlackBG>>
@@ -259,6 +259,7 @@ title: realmemory_5
 
 //건우4
 <<UpdateAct 건우 Geonwoo4>>
+<<PlayAudio FallDown 0.5>>
 건우: 어..!
 건우: 지수야..!
 건우: 야... 여기 구급차좀 불러주세요!
@@ -294,7 +295,7 @@ title: realmemory_6
 <<wait 1.0>>
 ...
 //문열리는 사운드
-<<PlayAudio HospitalDoorOpen>>
+<<PlayAudio HospitalDoorOpen 0.5>>
 <<wait 1.0>>
 
 어...
@@ -311,9 +312,9 @@ title: realmemory_6
 ...
 
 //문열리는 사운드
-<<PlayAudio HospitalDoorOpen>>
+<<PlayAudio HospitalDoorOpen 0.5>>
 //문닫히는 사운드
-<<PlayAudio HospitalDoorClose>>
+<<PlayAudio HospitalDoorClose 0.5>>
 
 사람들이 많이 들어왔다...
 <<wait 1.0>>
@@ -328,7 +329,7 @@ title: realmemory_6
 뭐라고 하는지 잘 안들리네...
 ...
 //문열리는 사운드
-<<PlayAudio HospitalDoorOpen>>
+<<PlayAudio HospitalDoorOpen 0.5>>
 ..누가 또 들어왔나.
 <<Hide Jisoo8>>
 엄마: 지수야..!
@@ -373,7 +374,7 @@ title: realmemory_6
 
 ...
 //사운드: 이명 같은 소리가 갑자기 커졌다 끊김
-<<PlayAudio EarSound>>
+<<PlayAudio EarSound 0.7>>
 어지러워.
 ...
 
@@ -403,7 +404,7 @@ title: realmemory_6
 ...
 
 //문열리는 사운드
-<<PlayAudio HospitalDoorOpen>>
+<<PlayAudio HospitalDoorOpen 0.5>>
 ...
 아빠: 허어... 헉...
 아빠: 지수야...
@@ -530,7 +531,7 @@ title: ending_normal
 <<wait 2.0>>
 ...
 //문열리는 사운드
-<<PlayAudio HospitalDoorOpen>>
+<<PlayAudio HospitalDoorOpen 0.5>>
 <<wait 2.0>>
 
 어...
@@ -547,9 +548,9 @@ title: ending_normal
 ...
 
 //문열리는 사운드
-<<PlayAudio HospitalDoorOpen>>
+<<PlayAudio HospitalDoorOpen 0.5>>
 //문닫히는 사운드
-<<PlayAudio HospitalDoorClose>>
+<<PlayAudio HospitalDoorClose 0.5>>
 
 사람들이 많이 들어왔다...
 <<wait 1.0>>
@@ -565,7 +566,7 @@ title: ending_normal
 뭐라고 하는지 잘 안들리네...
 ...
 //문열리는 사운드
-<<PlayAudio HospitalDoorOpen>>
+<<PlayAudio HospitalDoorOpen 0.5>>
 ..누가 또 들어왔나.
 <<Hide Jisoo8>>
 엄마: 지수야..!
@@ -611,7 +612,7 @@ title: ending_normal
 
 ...
 //사운드: 이명 같은 소리가 갑자기 커졌다 끊김
-<<PlayAudio EarSound>>
+<<PlayAudio EarSound 0.7>>
 어지러워.
 ...
 
@@ -644,7 +645,7 @@ title: ending_normal
 ...
 
 //문열리는 사운드
-<<PlayAudio HospitalDoorOpen>>
+<<PlayAudio HospitalDoorOpen 0.5>>
 아빠: 허어... 헉...
 아빠: 지수야...
 
@@ -789,7 +790,7 @@ title: ending_merrybad
 ...
 //문을 두드리는 사운드
 //문열리는 사운드
-<<PlayAudio KnockOpenDoor>>
+<<PlayAudio KnockOpenDoor 0.5>>
 
 //효과지원5
 <<Act 지원 JIwon5 0.322 0.227 white>>
@@ -823,7 +824,7 @@ title: ending_merrybad
 <<Hide 지원>>
 
 //문닫히는 사운드
-<<PlayAudio StaffCloseDoor>>
+<<PlayAudio StaffCloseDoor 0.5>>
 //효과지수3
 <<UpdateAct 지수 EJisoo3>>
 ...
@@ -837,10 +838,10 @@ title: ending_merrybad
 <<Hide 지수>>
 //문열리는 사운드
 //곧이어 문 닫히는 사운드
-<<PlayAudio DoorOpenandClose>>
+<<PlayAudio DoorOpenandClose 0.5>>
 <<wait 2.0>>
 //이후 심박수 측정기 사운드가 뒤섞이다 멈춤
-<<PlayAudio MixedNoise>>
+<<PlayAudio MixedNoise 0.7>>
 
 //어두워지는 배경, 어두운 배경에 엔딩 일러스트 등장
 <<Fade Black 0.0 1.0 2.0>>
@@ -902,7 +903,7 @@ title: ending_bad
 <<Hide Hand>>
 
 //동시에 심박수 삐-사운드
-<<PlayAudio Dead>>
+<<PlayAudio Dead 0.7>>
 //어두운 배경에 엔딩 일러스트 등장
 
 <<Draw Ending5 0.75 0.75>>
