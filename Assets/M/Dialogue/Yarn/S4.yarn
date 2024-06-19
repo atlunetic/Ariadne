@@ -2,7 +2,7 @@
 
 ---
 
-//<<SetCanvasTo VisualNovelPrefab true>>
+<<SetCanvasTo VisualNovelPrefab true>>
 //암전됐던 화면이 서서히 전환되며 까만 배경으로 바뀜
 //<<Hide WhiteBG>>
 //<<Scene BlackBG>>
