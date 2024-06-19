@@ -240,7 +240,6 @@ title: memory_Letter
 '오지랖 좀 그만 부려.'
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
-<<Draw BlackBG positionX positionY>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
