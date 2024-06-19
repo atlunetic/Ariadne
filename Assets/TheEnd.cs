@@ -40,8 +40,7 @@ public class TheEnd : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         // Load the next scene
-        SceneManager.LoadScene("S0");
-        SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
+        SaveAndLoad.instance.BackToMainScene();
     }
 
     public void DebugForAnimation()

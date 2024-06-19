@@ -43,9 +43,25 @@ public class ActionPanelButtons : MonoBehaviour
 
         else if (currentscene.name.StartsWith("S2"))
         {
-            if (connectedItem.itemName == "WaterCup" && currentscene.name == "S2_2_Table")
+
+             if (currentscene.name == "S2_7_Stairs")
             {
-                runner.StartDialogue("UsedWaterCup");
+                if (connectedItem.itemName == "DrugJelly")
+                {
+                    runner.StartDialogue("inventory_drugjelly");
+                }
+
+                else
+                {
+                    runner.StartDialogue("inventory_notjelly");
+                }
+            }
+            else if (GameManager.instance.FinishedDialogues.Contains("E_Clothes"))
+            {
+                if (connectedItem.itemName == "WaterCup" && currentscene.name == "S2_2_Table")
+                {
+                    runner.StartDialogue("UsedWaterCup");
+                }
             }
 
 
@@ -61,18 +77,7 @@ public class ActionPanelButtons : MonoBehaviour
 
             }
 
-            else if (currentscene.name == "S2_7_Stairs")
-            {
-                if (connectedItem.itemName == "DrugJelly")
-                {
-                    runner.StartDialogue("inventory_drugjelly");
-                }
-
-                else
-                {
-                    runner.StartDialogue("inventory_notjelly");
-                }
-            }
+           
 
         }
 

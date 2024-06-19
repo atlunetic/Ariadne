@@ -939,6 +939,7 @@ title: WalletO
 <<DeleteItem Inventory Wallet>>
 <<Hide 지수>>
 <<New711 Controllers>>
+<<FinishedDialogue VisualNovelPrefab Where>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1230,8 +1231,5 @@ title: DiaryTutorial
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
-
-//<<DrawFadeIn DBG 0.75 0.75 0.2>>
-//<<Hide DBG>>
 
 

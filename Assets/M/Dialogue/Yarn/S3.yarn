@@ -73,6 +73,7 @@ title: Poppy
 <<Hide 지수>>
 <<Hide DBG>>
 <<FinishedObj VisualNovelPrefab Poppy>>
+<<SetActiveFalse VisualNovelPrefab Poppy>>
 <<FinishedDialogue VisualNovelPrefab Poppy>>
 
 <<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
@@ -564,7 +565,7 @@ title: Ending4
 
 //화면 블랙아웃, 엔딩 일러 팝업
 //<<Scene BlackBG>>
-<<Draw Ending3 0.75 0.75>>
+<<Draw Ending4 0.75 0.75>>
 ...
 눈을 떠보니 의자에 손발이 묶인 채로 감금되어 있었다.
 대체 이게 무슨...
@@ -801,19 +802,21 @@ title: Ending4_2
 <<PlayAudio PhonecallGang>>
 조직원이 휴대폰을 꺼내 어딘가로 전화를 걸었다.
 조직원: 쥐새끼가 들어왔다.
+
 //화면 어두워짐, 엔딩일러 팝업
-<<HideAll>>
 <<Fade black 0.0 1.0 2.0>>
+<<HideAll>>
 <<StopAudioAll>>
 ...
 수상한 사람들에 의해 어딘가로 끌려갔다.
 ..도망갈 수 없을 것 같아.
-<<FadeIn>>
-<<DrawFadeIn Ending4 0.75 0.75>>
+<<wait 2.0>>
+<<Draw Ending4 0.75 0.75>>
+<<FadeIn 2.0>>
 <<wait 4.0>>
+<<BackToMainScene GameManager>>
 <<Hide Ending4>>
 <<Scene NoBG>>
-<<BackToMainScene GameManager>>
 //엔딩 4. 조직원에게 감금되다.
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -1645,7 +1648,8 @@ title:BacktoOfficetel1stFloor
 <<UpdateAct 지수 Jisoo3>>
 지수: 빨리 나가자, 지원아.
 //지수, 지원이미지 종료
-<<HideAll>>
+<<Hide 지수>>
+<<Hide 지원>>
 지원이를 데리고 걸음을 옮겼다.
 한 걸음만 더 가면 출입문이야.
 ...
@@ -1666,7 +1670,8 @@ title:BacktoOfficetel1stFloor
 <<Act 지수 Jisoo3 1.17 0.322 white>>
 지수: 아니야... 일어나.
 //지수, 지원이미지 종료
-<<HideAll>>
+<<Hide 지수>>
+<<Hide 지원>>
 
 다급하게 지원이를 일으켜 세웠다.
 그 때, 반대편 복도에서 수상한 사람들이 나타났다.
@@ -1680,7 +1685,8 @@ title:BacktoOfficetel1stFloor
 지원: ...
 지원: 미안해.
 //지수, 지원이미지 종료
-<<HideAll>>
+<<Hide 지수>>
+<<Hide 지원>>
 //(화면이 흔들리는 연출)
 //화면이 어두워졌다가 콘크리트 바닥 배경으로
 <<Fade Black 0.0 1.0 1.0>>
@@ -1714,9 +1720,10 @@ title:BacktoOfficetel1stFloor
 ...
 //(암전, 사이렌 소리 사라짐)
 <<Fade Black 0.0 1.0 1.0>>
+<<wait 2.0>>
+<<Hide WhiteBG>>
 <<StopAudioAll>>
 //<<SetCanvasTo VisualNovelPrefab false>>
-<<wait 1.0>>
 <<ChangeSceneTo VisualNovelPrefab S4>>
 //<<jump lastevent_intro>>
 

@@ -2,7 +2,7 @@
 
 ---
 
-//<<SetCanvasTo VisualNovelPrefab true>>
+<<SetCanvasTo VisualNovelPrefab true>>
 //암전됐던 화면이 서서히 전환되며 까만 배경으로 바뀜
 //<<Hide WhiteBG>>
 //<<Scene BlackBG>>
@@ -277,23 +277,24 @@ title: realmemory_6
 
 <color=purple>아리아드네</color>: <color=purple>...</color>
 <color=purple>아리아드네</color>: <color=purple>이제 아프지마.</color>
-<<wait 2.0>>
+<<wait 1.0>>
 //여기부터는 모두 지수8
 //화면 암전 및 전환. 병실 이미지 (희원)
 ...
-//<<DrawFadeIn 병실이미지 3.0>>
+<<DrawFadeIn Hospital8 0.75 0.75 3.0>>
+<<wait  4.0>>
 ...
+<<DrawFadeIn Jisoo8 1.17 0.322 2.0>>
 여긴 어디지?
 병원인가..?
 //지수8
 ...
 주위를 둘러보니 아무도 없다.
-<<wait 2.0>>
-
+<<wait 1.0>>
 ...
 //문열리는 사운드
 <<PlayAudio HospitalDoorOpen>>
-<<wait 2.0>>
+<<wait 1.0>>
 
 어...
 누가 들어왔다.
@@ -321,35 +322,33 @@ title: realmemory_6
 의사: ...
 간호사1: 방금 깨어나서...
 간호사2: ...
-<<wait 2.0>>
-
+<<wait 1.0>>
 이명이 들려서 그런가...
 뭐라고 하는지 잘 안들리네...
 ...
 //문열리는 사운드
 <<PlayAudio HospitalDoorOpen>>
 ..누가 또 들어왔나.
-
+<<Hide Jisoo8>>
 엄마: 지수야..!
-
 어...
 엄마다.
-<<wait 2.0>>
+<<wait 1.0>>
 <<Act 지수 Jisoo8 1.17 0.322 white>>
 지수: 엄마..?
 엄마: 아이고... 지수야...
 엄마: 엄마가 얼마나...
 엄마: ...
-<<wait 2.0>>
+<<wait 1.0>>
 
 엄마가 눈물을 흘렸다.
 ...
 멍하다.
-<<wait 2.0>>
+<<wait 1.0>>
 
 뭔가...
 기억 날 듯 말 듯 한데...
-<<wait 2.0>>
+<<wait 1.0>>
 
 ...
 지원이는 어디 있지..?
@@ -357,7 +356,7 @@ title: realmemory_6
 지수: 엄마. 지원이는요?
 엄마: ...
 엄마: ...
-<<wait 2.0>>
+<<wait 1.0>>
 
 어...
 엄마는 대답 없이 더 크게 오열했다.
@@ -369,7 +368,7 @@ title: realmemory_6
 간호사1: 정신이 온전히 돌아오지 않은 상태일 수 있어요.
 엄마: 우리 지수...
 엄마: ...
-<<wait 2.0>>
+<<wait 1.0>>
 
 ...
 //사운드: 이명 같은 소리가 갑자기 커졌다 끊김
@@ -392,7 +391,7 @@ title: realmemory_6
 꿈에서도 넌 나를 지켜줬는데.
 <<wait 1.0>>
 지원아...
-<<wait 2.0>>
+<<wait 1.0>>
 
 엄마: ...
 엄마: 지수야.
@@ -424,7 +423,7 @@ title: realmemory_6
 지수: ... 그런데 아빠.
 지수: 건우 오빠는요?
 지수: 지금 어디서 뭐 하고 있어요?
-<<wait 2.0>>
+<<wait 1.0>>
 
 아빠: ...
 아빠: 그놈 감옥갔다.
@@ -435,7 +434,7 @@ title: realmemory_6
 
 지수: ...
 지수: ...
-<<wait 2.0>>
+<<wait 1.0>>
 
 그 후, 아빠는 지원이의 휴대폰을 내게 넘겨줬다.
 유품을 정리하던 중 발견했다고 한다.
@@ -446,7 +445,7 @@ title: realmemory_6
 혹시나 하고 찾아봤지만, 꿈에서 봤던 대화 기록이나 사진은 없었다.
 ...
 일기처럼 써둔 메모가 있네.
-<<wait 2.0>>
+<<wait 1.0>>
 
 <i>‘xx월 xx일. 지수가 마약을 하는 것 같다.’
 <i>‘xx월 xx일. 지수가 xx클럽에 거의 매일 드나드는 것 같다.’
@@ -456,7 +455,7 @@ title: realmemory_6
 <i>‘xx월 xx일. 지수도 건우 오빠도 구할 수 있는 방법이 없을까...’
 <i>‘xx월 xx일. 오늘은 반드시 마약 조직에 대한 증거를 찾아야겠다. 언론에 제보해야지...’
 <i>‘우선 xx클럽으로 가서 마약 거래를 하려고 하는 척 해야겠다.‘
-<<wait 2.0>>
+<<wait 1.0>>
 
 ...
 지원아...
@@ -480,7 +479,7 @@ title: realmemory_6
 <<wait 1.0>>
 마약류 복용에 대한 처벌로 1년 2개월 형을 선고받았다.
 죗값을 치른 후, 정부 기관의 도움으로 치료 센터에 다녔다.
-<<wait 2.0>>
+<<wait 1.0>>
 
 ...
 그간 많은 생각을 했다.
@@ -491,10 +490,12 @@ title: realmemory_6
 또 다른 나, 혹은 지원이가 생기지 않았으면 좋겠다는 신념으로
 마약류의 위험에 대해 알리고, 마약류 범죄를 예방하는 활동에 참여하고 있다.
 ...
-<<DrawFadeIn Ending8 2.0>>
-<<wait 3.0>>
+<<Draw Ending8 0.75 0.75>>
+<<FadeIn 3.0>>
+<<wait 5.0>>
 <<Fade White 0.0 1.0 2.0>>
 <<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+<<wait 2.0>>
 <<SetCanvasTo VisualNovelPrefab false>>
 //엔딩 일러스트 등장 Ending8
 //엔딩 이름(수정)
@@ -509,19 +510,22 @@ title: ending_normal
 <color=purple>아리아드네</color>: <color=purple>...</color>
 <color=purple>아리아드네</color>: <color=purple>지원이가 간절히 원했던 게 뭔지...</color>
 <color=purple>아리아드네</color>: <color=purple>제발 잊지 마.</color>
-<<wait 2.0>>
-
+<<wait 1.0>>
+<<Fade White 0.0 1.0 2.0>>
 //화면 암전 및 전환. 병실 이미지 white
+<<wait 3.0>>
+<<Draw Hospital8 0.75 0.75>>
 ...
-//<<DrawFadeIn 병실이미지 3.0>>
+<<wait  3.0>>
+<<FadeIn  2.0>>
 ...
 여긴 어디지?
 병원인가..?
 //지수8
+<<DrawFadeIn Jisoo8 1.17 0.322 2.0>>
 ...
 주위를 둘러보니 아무도 없다.
 <<wait 2.0>>
-
 ...
 //문열리는 사운드
 <<PlayAudio HospitalDoorOpen>>
@@ -561,7 +565,7 @@ title: ending_normal
 //문열리는 사운드
 <<PlayAudio HospitalDoorOpen>>
 ..누가 또 들어왔나.
-
+<<Hide Jisoo8>>
 엄마: 지수야..!
 
 어...
@@ -674,7 +678,8 @@ title: ending_normal
 ...
 큰일이네.
 <<wait 1.0>>
-//화면 어두워짐. 어두운 배경에서 텍스트로만 진행
+//화면 어두워짐. 어두운 배경에서 텍스트로만 진행]
+<<Fade White 0.0 1.0 3.0>>
 나는 입원 기간 내내 편두통에 시달렸다.
 마침내 퇴원하고 집에 온 날.
 ...
@@ -700,10 +705,15 @@ title: ending_normal
 //엔딩 일러스트 등장 Ending7
 //엔딩 이름(수정)
 
-<<DrawFadeIn Ending7 2.0>>
-<<wait 3.0>>
+<<Draw Ending7 0.75 0.75>>
+<<FadeIn 2.0>>
+<<wait 6.0>>
 <<Fade White 0.0 1.0 2.0>>
-<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+<<Hide Ending7>>
+<<wait 2.0>>
+<<FadeIn>>
+//<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+<<BackToMainScene GameManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -761,8 +771,10 @@ title: ending_merrybad
 <<StopAudioAll>>
 
 //지수의 방 배경 이미지
-<<Scene JisooRoomBG>>
+<<Scene JisooRoom6>>
 //효과지수4
+<<wait 1.0>>
+<<FadeIn>>
 <<Act 지수 EJisoo4 1.17 0.322 white>>
 헉..!
 ...
@@ -777,7 +789,7 @@ title: ending_merrybad
 <<PlayAudio KnockOpenDoor>>
 
 //효과지원5
-<<UpdateAct 지원 JIwon5>>
+<<Act 지원 JIwon5 0.322 0.227 white>>
 지원: 지수야!
 //효과지수4
 <<UpdateAct 지수 EJisoo4>>
@@ -793,6 +805,7 @@ title: ending_merrybad
 <<wait 2.0>>
 
 //효과지원1
+<<UpdateAct 지원 JIwon1>>
 지원: ...
 //효과지원5
 <<UpdateAct 지원 JIwon5>>
@@ -804,6 +817,7 @@ title: ending_merrybad
 지수: 어... 그래.
 지원: 정신차리고 얼른 나와. 나 먼저 먹는다.
 //지원 이미지 종료
+<<Hide 지원>>
 
 //문닫히는 사운드
 <<PlayAudio StaffCloseDoor>>
@@ -817,24 +831,31 @@ title: ending_merrybad
 라면이나 먹으러 갈까?
 ...
 //지수 이미지 종료
+<<Hide 지수>>
 //문열리는 사운드
 //곧이어 문 닫히는 사운드
 <<PlayAudio DoorOpenandClose>>
-
+<<wait 2.0>>
 //이후 심박수 측정기 사운드가 뒤섞이다 멈춤
 <<PlayAudio MixedNoise>>
 
 //어두워지는 배경, 어두운 배경에 엔딩 일러스트 등장
+<<Fade Black 0.0 1.0 2.0>>
 //지수의 침대 위에 있는 지원의 휴대폰이 확대
 //마지막으로 아리아드네에게서 채팅이 옴. 아리아드네 ‘제발 깨어나...’
-<<wait 2.0>>
+<<wait 3.0>>
 ...
 <color=purple>제발 깨어나...</color>
 <<wait 1.0>>
-<<DrawFadeIn Ending6 2.0>>
-<<wait 3.0>>
+<<Draw Ending6 0.75 0.75>>
+<<wait 1.0>>
+<<FadeIn  2.0>>
+<<wait 5.0>>
 <<Fade White 0.0 1.0 2.0>>
-<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+<<wait 3.0>>
+<<Hide Ending6>>
+//<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+<<BackToMainScene GameManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -880,12 +901,17 @@ title: ending_bad
 <<PlayAudio Dead>>
 //어두운 배경에 엔딩 일러스트 등장
 
-<<DrawFadeIn Ending5 2.0>>
+<<Draw Ending5 0.75 0.75>>
+<<wait 1.0>>
+<<FadeIn  2.0>>
+<<wait 5.0>>
+<<Fade Black 0.0 1.0 2.0>>
 <<wait 3.0>>
-<<Fade White 0.0 1.0 2.0>>
-<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+<<wait 2.0>>
+<<HideAll>>
+//<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+<<BackToMainScene GameManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
-
 
 ===
 
