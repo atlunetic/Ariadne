@@ -255,6 +255,7 @@ title: memory_Letter
 
 <<StopAudioAll>>
 <<HideAll>>
+<<UI_off MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
