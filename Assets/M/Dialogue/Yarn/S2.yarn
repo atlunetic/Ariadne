@@ -3121,7 +3121,7 @@ title: obj_customerg_choose_ariadne
 확인해볼까?
 <<Hide 클럽고객G>>
 <<StartPhoneChat PhoneController 24>>
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -3193,9 +3193,10 @@ title: obj_customerg_end
 	<<jump event_customergh_end>>
 <<else>>
 	<<Hide 지수>>
+	<<SetCanvasTo VisualNovelPrefab false>>
 <<endif>>
 
-<<SetCanvasTo VisualNovelPrefab false>>
+
 	
 
 ===
