@@ -1,12 +1,7 @@
 {
-<<<<<<< Updated upstream
   "savetime": "2024-06-19 09:52:14 오전",
   "IsLoad": false,
   "NowScene": "S1_2_JiwonRoom",
-=======
-  "IsLoad": true,
-  "NowScene": "S2_2_Table",
->>>>>>> Stashed changes
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,

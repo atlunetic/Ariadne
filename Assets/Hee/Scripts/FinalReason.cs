@@ -18,7 +18,7 @@ public class FinalReason : MonoBehaviour
 
     public Queue<int> rightanswer = new Queue<int>();
     public string ending;
-    public string[] cluenames = new string[]{"Letter","Meds","Laptop","StudnetID","VIPlist","BrokenGlasses","ToiletPaper","GeonwooCard","1342","Photo"};
+    public string[] cluenames = new string[]{"Letter","Meds","Laptop","StudentID","VIPlist","BrokenGlasses","ToiletPaper","GeonwooCard","1342","Photo"};
 
     void Awake(){
         instance = this;

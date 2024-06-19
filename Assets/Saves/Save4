@@ -1,5 +1,4 @@
 {
-<<<<<<< Updated upstream
   "IsLoad": true,
   "NowScene": "S2_3_1_StaffOnlyLocker",
   "NumOfScreenShots": 1,
@@ -78,22 +77,4 @@
     "Page7"
   ],
   "visited": 7
-=======
-  "IsLoad": false,
-  "NowScene": "S1_2_JiwonRoom",
-  "NumOfScreenShots": 1,
-  "GeonWooScore": 0,
-  "SaengSoo": 0,
-  "ChattingLog": [],
-  "PhotoList": [],
-  "items": [],
-  "FindedObjects": [],
-  "FindedClues": [],
-  "FinishedDialogues": [
-    "Chocotalk1st",
-    "DGram1st"
-  ],
-  "GottenPage": [],
-  "visited": 0
->>>>>>> Stashed changes
 }
