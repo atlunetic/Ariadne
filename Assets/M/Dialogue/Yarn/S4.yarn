@@ -805,7 +805,7 @@ title: ending_merrybad
 <<wait 2.0>>
 
 //효과지원1
-<<UpdateAct 지원 JIwon1>>
+<<UpdateAct 지원 EJiwon1>>
 지원: ...
 //효과지원5
 <<UpdateAct 지원 JIwon5>>
