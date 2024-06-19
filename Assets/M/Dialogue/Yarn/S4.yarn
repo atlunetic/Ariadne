@@ -7,7 +7,7 @@
 //<<Hide WhiteBG>>
 //<<Scene BlackBG>>
 <<Scene NoBG>>
-<<wait 1.0>>
+<<wait 3.0>>
 <<FadeIn 3.0>>
 //아리아드네와의 대화~최종추리이벤트 동안은 1인칭 시점. 지수 캐릭터를 화면에 띄우지 않음
 //병원 심박수 측정기st의 사운드
@@ -266,7 +266,7 @@ title: realmemory_5
 
 <<HideAll>>
 
-<<Break BlackBG>>
+<<Break BlackBG>> 
 
 ===
 
@@ -277,6 +277,7 @@ title: realmemory_6
 
 <color=purple>아리아드네</color>: <color=purple>...</color>
 <color=purple>아리아드네</color>: <color=purple>이제 아프지마.</color>
+<<CollectEnding GameManager realmemory_6 Ending8>>
 <<wait 1.0>>
 //여기부터는 모두 지수8
 //화면 암전 및 전환. 병실 이미지 (희원)
@@ -510,6 +511,7 @@ title: ending_normal
 <color=purple>아리아드네</color>: <color=purple>...</color>
 <color=purple>아리아드네</color>: <color=purple>지원이가 간절히 원했던 게 뭔지...</color>
 <color=purple>아리아드네</color>: <color=purple>제발 잊지 마.</color>
+<<CollectEnding GameManager ending_normal Ending7>>
 <<wait 1.0>>
 <<Fade White 0.0 1.0 2.0>>
 //화면 암전 및 전환. 병실 이미지 white
@@ -725,6 +727,7 @@ title: ending_merrybad
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<PlayAudio NightmareBGM 0.6 loop>>
+<<CollectEnding GameManager ending_merrybad Ending6>>
 
 <<Scene Maze>>
 
@@ -866,6 +869,7 @@ title: ending_bad
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<PlayAudio NightmareBGM 0.6 loop>>
+<<CollectEnding GameManager ending_bad Ending5>>
 <<Scene Maze>>
 
 지수: 길을 잃었다.

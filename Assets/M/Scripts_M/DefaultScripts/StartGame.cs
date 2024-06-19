@@ -39,4 +39,8 @@ public class StartGame : MonoBehaviour
             i.transform.GetChild(2).GetComponent<Button>().onClick.AddListener(a);
         }
     }
+
+    public void openendings(){
+        SaveAndLoad.instance.CollectedEndingsPanel.SetActive(true);
+    }
 }

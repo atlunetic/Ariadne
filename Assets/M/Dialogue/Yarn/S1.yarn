@@ -352,6 +352,7 @@ title: Ending1
 ---
 
 <<Fade Black 0.0 1.0 2.0>>
+<<CollectEnding GameManager Ending1 Ending1>>
 <<wait 3.0>>
 <<ChangeSceneTo VisualNovelPrefab S1>>
 <<Scene BlackBG>>
@@ -458,6 +459,7 @@ title: PhoneBoothEnd2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<CollectEnding GameManager PhoneBoothEnd2 Ending1>>
 <<Scene DrugDealBG>>
 이미지 속 장소를 찾아왔다.
 //<<Act 지수 Jisoo2 1.17 0.322 white>>
@@ -1172,6 +1174,7 @@ title: memory_Meds
 //화장실에서 토하고 있는 사람의 실루엣
 //밖에서 그걸 목격한 사람의 실루엣
 <<StopMemory  SceneManager>>
+<<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 //<<jump AfterMemory>>
 
