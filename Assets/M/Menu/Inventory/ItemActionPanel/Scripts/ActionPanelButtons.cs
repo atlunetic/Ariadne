@@ -49,6 +49,18 @@ public class ActionPanelButtons : MonoBehaviour
                 {
                     runner.StartDialogue("UsedWaterCup");
                 }
+                else if (currentscene.name == "S2_7_Stairs")
+                {
+                    if (connectedItem.itemName == "DrugJelly")
+                    {
+                        runner.StartDialogue("inventory_drugjelly");
+                    }
+
+                    else
+                    {
+                        runner.StartDialogue("inventory_notjelly");
+                    }
+                }
             }
 
 
@@ -64,18 +76,7 @@ public class ActionPanelButtons : MonoBehaviour
 
             }
 
-            else if (currentscene.name == "S2_7_Stairs")
-            {
-                if (connectedItem.itemName == "DrugJelly")
-                {
-                    runner.StartDialogue("inventory_drugjelly");
-                }
-
-                else
-                {
-                    runner.StartDialogue("inventory_notjelly");
-                }
-            }
+           
 
         }
 
