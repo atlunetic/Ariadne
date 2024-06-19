@@ -939,6 +939,7 @@ title: WalletO
 <<DeleteItem Inventory Wallet>>
 <<Hide 지수>>
 <<New711 Controllers>>
+<<FinishedDialogue VisualNovelPrefab Where>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1080,7 +1081,7 @@ title: memory_Laptop
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
-<<jump AfterMemory>>
+//<<jump AfterMemory>>
 ===
 
 title: Drawer_News
@@ -1172,7 +1173,7 @@ title: memory_Meds
 //밖에서 그걸 목격한 사람의 실루엣
 <<StopMemory  SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
-<<jump AfterMemory>>
+//<<jump AfterMemory>>
 
 ===
 
@@ -1230,8 +1231,5 @@ title: DiaryTutorial
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
-
-//<<DrawFadeIn DBG 0.75 0.75 0.2>>
-//<<Hide DBG>>
 
 
