@@ -18,6 +18,10 @@ public class SaveAndLoad : MonoBehaviour
     public GameObject tempCam;
     public GameObject nowLoading;
     public GameObject SavePanel;
+    public GameObject CollectedEndingsPanel;
+    public GameObject CollectedEndings;
+    CollectedEndings endings;
+    public GameObject endingImgPrefab;
     private string FolderPath;
     void Awake(){
         if(instance == null) instance=this;
@@ -31,6 +35,7 @@ public class SaveAndLoad : MonoBehaviour
         SavePanel.GetComponent<Button>().onClick.AddListener(()=>{SavePanel.SetActive(false);});
         for(int i=0;i<5;i++)
             AddSaveFile(i);
+        LoadCollectedEndings();
     }
     public void Save(int i){
         if (Directory.Exists(FolderPath) == false){
@@ -85,6 +90,32 @@ public class SaveAndLoad : MonoBehaviour
         }
 
         SaveFile[i].transform.GetChild(1).GetComponent<Button>().onClick.AddListener(()=>Save(i));
+    }  
+    void LoadCollectedEndings(){
+        if (Directory.Exists(FolderPath) == false){
+            Directory.CreateDirectory(FolderPath);
+        }
+        if(File.Exists(FolderPath+"Endings") == false){
+            CollectedEndingsPanel.transform.GetChild(1).gameObject.SetActive(true);
+            return;
+        }
+        string json = File.ReadAllText(FolderPath+"Endings");
+        endings = JsonConvert.DeserializeObject<CollectedEndings>(json);
+        
+        for(int i=0;i<endings.endingDialogue.Count;i++){
+            Sprite sprite = Resources.Load<Sprite>(endings.endingSprites[i]);
+            GameObject endingImg = Instantiate(endingImgPrefab, CollectedEndings.transform);
+            endingImg.GetComponent<Image>().sprite = sprite;
+            endingImg.GetComponent<Button>().onClick.AddListener(()=>CallYarn.instance.callYarn(endings.endingDialogue[i]));
+        }
+    }
+
+    [YarnCommand("CollectEnding")]
+    public void CollectEnding(string endingDialogue, string spritename){
+        endings.endingDialogue.Add(endingDialogue);
+        endings.endingSprites.Add(spritename);
+        string json = JsonConvert.SerializeObject(endings, Formatting.Indented);
+        File.WriteAllText(FolderPath+"Endings", json);
     }
 
     string Location(string scene){
@@ -136,4 +167,5 @@ public class SaveAndLoad : MonoBehaviour
 
 class CollectedEndings{
     public List<string> endingSprites = new List<string>();
+    public List<string> endingDialogue = new List<string>();
 }
