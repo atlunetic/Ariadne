@@ -3329,7 +3329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1334766103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3345,7 +3345,7 @@ MonoBehaviour:
   scenemanager: {fileID: 1588175133}
   confirmB: {fileID: 420551214}
   perfectImg: {fileID: 1407344091}
-  perfectVid: {fileID: 0}
+  perfectVid: {fileID: 1907796643}
   polaroid:
   - {fileID: 1394918280}
   - {fileID: 893217720}
