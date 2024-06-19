@@ -16,7 +16,7 @@ public class YarnMFunctions : MonoBehaviour
         // If a second scene name is provided, load it additively
         if (!string.IsNullOrEmpty(sceneName2))
         {
-            //SceneManager.LoadScene(sceneName2, LoadSceneMode.Additive);
+            SceneManager.LoadScene(sceneName2, LoadSceneMode.Additive);
         }
     }
 
