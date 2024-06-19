@@ -240,6 +240,16 @@ title: memory_Letter
 '오지랖 좀 그만 부려.'
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
+<<Scene black_bg>>
+<<PlayAudio EarSound 0.8>>
+<<PlayAudio WhiteNoise 0.6>>
+
+아.. 방금 뭐였지?
+<<wait 0.5>>
+..어지러워
+
+<<StopAudioAll>>
+<<HideAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1175,8 +1185,8 @@ title: memory_Meds
 //밖에서 그걸 목격한 사람의 실루엣
 <<StopMemory  SceneManager>>
 <<StopAudioAll>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
-//<<jump AfterMemory>>
 
 ===
 
