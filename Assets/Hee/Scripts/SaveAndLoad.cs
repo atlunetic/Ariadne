@@ -20,7 +20,7 @@ public class SaveAndLoad : MonoBehaviour
     public GameObject SavePanel;
     public GameObject CollectedEndingsPanel;
     public GameObject CollectedEndings;
-    CollectedEndings endings;
+    CollectedEndings endings = new CollectedEndings();
     public GameObject endingImgPrefab;
     private string FolderPath;
     void Awake(){
