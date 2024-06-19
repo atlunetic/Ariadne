@@ -53,6 +53,7 @@ public class SaveAndLoad : MonoBehaviour
     public void Load(int i){
         SavePanel.SetActive(false);
         DestroyImmediate(GameObject.Find("MenuUI"));
+        DestroyImmediate(GameObject.Find("VisualNovelPrefab"));
         string json = File.ReadAllText(FolderPath+"Save"+i.ToString());
 
         int num = GameManager.instance.NumOfScreenShots;
