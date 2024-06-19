@@ -25,7 +25,8 @@ public class vidioplay : MonoBehaviour
         ariadne1.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {ariadne2.SetActive(true);ariadne1.SetActive(false);};      
         GameManager.instance.FindedObjects.Remove("InStaffroom_VIPlist");                                                                                
         GameManager.instance.FindedObjects.Remove("obj_navigation");                                                                                
-        GameManager.instance.FindedObjects.Remove("memory_Photo");                                                                                
+        GameManager.instance.FindedObjects.Remove("GeonwooCard");                                                                                
+        GameManager.instance.FindedObjects.Remove("R1403Cardkey");                                                                                
     }
 
     [YarnCommand("Final")]
