@@ -18,6 +18,7 @@ public class FinalReason : MonoBehaviour
 
     public Queue<int> rightanswer = new Queue<int>();
     public string ending;
+    public string[] cluenames = new string[]{"Letter","Meds","Laptop","StudnetID","VIPlist","BrokenGlasses","ToiletPaper","GeonwooCard","1342","Photo"};
 
     void Awake(){
         instance = this;
@@ -29,10 +30,12 @@ public class FinalReason : MonoBehaviour
         
         foreach(GameObject img in GalleryController.instance.nonClues)
             img.SetActive(false);
+        foreach(GameObject img in GalleryController.instance.originImages)
+            img.SetActive(false);
         foreach(GameObject img in GalleryController.instance.Clues){
             GameObject pic = GalleryController.instance.Pictures[img.name];
             pic.transform.GetChild(1).gameObject.SetActive(true);
-            pic.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(()=>StartCoroutine(scenemanager.PlayMemory(pic.name)));
+            pic.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(()=>StartCoroutine(scenemanager.PlayMemory(getcluename(pic.name))));
             pic.transform.GetChild(2).gameObject.SetActive(true);
             pic.transform.GetChild(2).GetComponent<Button>().onClick.AddListener(()=>PickAnswer(img, pic));
         }
@@ -46,6 +49,7 @@ public class FinalReason : MonoBehaviour
         for(int i = 0; i < 5; i++){
             if(IsFilled[i]) continue;
             polaroid[i].GetComponent<Image>().sprite = img.GetComponent<Image>().sprite;
+            polaroid[i].transform.GetChild(0).GetComponent<Button>().enabled = true;
             Answer[i] = pic.name;
             img.SetActive(false);
             pic.SetActive(false);
@@ -60,11 +64,11 @@ public class FinalReason : MonoBehaviour
         confirmB.SetActive(false);
         PhoneController.instance.Phone.SetActive(false);
         int score = 0;
-        if(Answer[0]=="StudentID") {score++; rightanswer.Enqueue(1);}
-        if(Answer[1]=="Meds") {score++; rightanswer.Enqueue(2);}
-        if(Answer[2]=="Photo") {score++; rightanswer.Enqueue(3);}
-        if(Answer[3]=="Letter") {score++; rightanswer.Enqueue(4);}
-        if(Answer[4]=="BrokenGlasses") {score++; rightanswer.Enqueue(5);}
+        if(getcluename(Answer[0])=="StudentID") {score++; rightanswer.Enqueue(1);}
+        if(getcluename(Answer[1])=="Meds") {score++; rightanswer.Enqueue(2);}
+        if(getcluename(Answer[2])=="Photo") {score++; rightanswer.Enqueue(3);}
+        if(getcluename(Answer[3])=="Letter") {score++; rightanswer.Enqueue(4);}
+        if(getcluename(Answer[4])=="BrokenGlasses") {score++; rightanswer.Enqueue(5);}
 
         switch(score) {
             case 0: ending = "ending_bad"; break;
@@ -88,5 +92,12 @@ public class FinalReason : MonoBehaviour
         vidioplay.instance.FinalreasonCanvas.SetActive(false);
         perfectImg.SetActive(false);
 
+    }
+
+    public string getcluename(string picname){
+        foreach(string cluename in cluenames){
+            if(picname.StartsWith(cluename)) return cluename;
+        }
+        return "";
     }
 }

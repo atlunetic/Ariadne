@@ -2293,6 +2293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63cd5d09e4a9514c880595ce8879dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  origin: {fileID: 21300000, guid: 57e7abe8eff3a5f4ab0d5d4de44432b5, type: 3}
 --- !u!114 &893217723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2819,6 +2820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63cd5d09e4a9514c880595ce8879dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  origin: {fileID: 21300000, guid: 57e7abe8eff3a5f4ab0d5d4de44432b5, type: 3}
 --- !u!114 &1011043463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3010,6 +3012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63cd5d09e4a9514c880595ce8879dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  origin: {fileID: 21300000, guid: 57e7abe8eff3a5f4ab0d5d4de44432b5, type: 3}
 --- !u!114 &1201266956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3196,6 +3199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63cd5d09e4a9514c880595ce8879dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  origin: {fileID: 21300000, guid: 57e7abe8eff3a5f4ab0d5d4de44432b5, type: 3}
 --- !u!114 &1255100893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3325,7 +3329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1334766103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3341,7 +3345,7 @@ MonoBehaviour:
   scenemanager: {fileID: 1588175133}
   confirmB: {fileID: 420551214}
   perfectImg: {fileID: 1407344091}
-  perfectVid: {fileID: 0}
+  perfectVid: {fileID: 1907796643}
   polaroid:
   - {fileID: 1394918280}
   - {fileID: 893217720}
@@ -3423,6 +3427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63cd5d09e4a9514c880595ce8879dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  origin: {fileID: 21300000, guid: 57e7abe8eff3a5f4ab0d5d4de44432b5, type: 3}
 --- !u!114 &1394918283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3665,7 +3670,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6282594414325065380, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: IsS4
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

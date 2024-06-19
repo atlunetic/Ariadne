@@ -53,6 +53,7 @@ public class SaveAndLoad : MonoBehaviour
     public void Load(int i){
         SavePanel.SetActive(false);
         DestroyImmediate(GameObject.Find("MenuUI"));
+        DestroyImmediate(GameObject.Find("VisualNovelPrefab"));
         string json = File.ReadAllText(FolderPath+"Save"+i.ToString());
 
         int num = GameManager.instance.NumOfScreenShots;
@@ -67,9 +68,6 @@ public class SaveAndLoad : MonoBehaviour
         SceneManager.LoadScene("Menu");
         SceneManager.LoadScene(GameManager.instance.NowScene);
         Invoke("EndLoading", 2.5f);
-
-        var runner = FindObjectOfType<DialogueRunner>();
-        runner.StartDialogue("RandomN");
     }
 
     void AddSaveFile(int i){
@@ -120,6 +118,8 @@ public class SaveAndLoad : MonoBehaviour
     public void EndLoading(){
         tempCam.SetActive(false);
         nowLoading.SetActive(false);
+        var runner = FindObjectOfType<DialogueRunner>();
+        runner.StartDialogue("RandomN");
     }
 
     [YarnCommand("BackToMainScene")]
@@ -132,4 +132,8 @@ public class SaveAndLoad : MonoBehaviour
         SceneManager.LoadScene("S0");
     }
 
+}
+
+class CollectedEndings{
+    public List<string> endingSprites = new List<string>();
 }
