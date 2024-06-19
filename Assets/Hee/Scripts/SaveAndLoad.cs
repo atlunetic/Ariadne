@@ -164,6 +164,9 @@ public class SaveAndLoad : MonoBehaviour
         SceneManager.LoadScene("Menu");
         SceneManager.LoadScene("S0");
     }
+    public void closeendings(){
+        CollectedEndingsPanel.SetActive(false);
+    }
 
 }
 
