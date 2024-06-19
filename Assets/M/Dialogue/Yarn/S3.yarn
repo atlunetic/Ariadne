@@ -1716,9 +1716,10 @@ title:BacktoOfficetel1stFloor
 ...
 //(암전, 사이렌 소리 사라짐)
 <<Fade Black 0.0 1.0 1.0>>
+<<wait 2.0>>
+<<Hide WhiteBG>>
 <<StopAudioAll>>
 //<<SetCanvasTo VisualNovelPrefab false>>
-<<wait 1.0>>
 <<ChangeSceneTo VisualNovelPrefab S4>>
 //<<jump lastevent_intro>>
 
