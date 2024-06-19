@@ -30,6 +30,7 @@ title: S1_path1
 -> 오른쪽으로 가보자.
     <<Scene DeadEnd>>
     막다른 길이다. 돌아가자.
+    <<Scene Maze>>
     <<jump S1_path1>>
 -> 앞으로 가보자.
     <<jump LeftPath>>

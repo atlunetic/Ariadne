@@ -554,6 +554,7 @@ title: Ending4
 ..맞췄나?
 ...
 //(갑자기 화면이 흐려지는 연출)
+<<Fade Black 0.0 1.0 2.0>>
 어...
 눈앞이 흐려진다.
 바닥이 가까워지는 것 같아...
@@ -562,11 +563,16 @@ title: Ending4
 <<PlayAudio FalldownJisu>>
 
 //화면 블랙아웃, 엔딩 일러 팝업
-
+//<<Scene BlackBG>>
+<<Draw Ending3 0.75 0.75>>
 ...
 눈을 떠보니 의자에 손발이 묶인 채로 감금되어 있었다.
 대체 이게 무슨...
 //엔딩 3. 막다른 길
+<<FadeIn 2.0>>
+<<wait  3.0>>
+<<BackToMainScene GameManager>>
+<<wait 1.0>>
 <<HideAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -805,7 +811,7 @@ title: Ending4_2
 <<FadeIn>>
 <<DrawFadeIn Ending4 0.75 0.75>>
 <<wait 4.0>>
-<<Hide Ending3>>
+<<Hide Ending4>>
 <<Scene NoBG>>
 <<BackToMainScene GameManager>>
 //엔딩 4. 조직원에게 감금되다.
@@ -1709,7 +1715,8 @@ title:BacktoOfficetel1stFloor
 //(암전, 사이렌 소리 사라짐)
 <<Fade Black 0.0 1.0 1.0>>
 <<StopAudioAll>>
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
+<<wait 1.0>>
 <<ChangeSceneTo VisualNovelPrefab S4>>
 //<<jump lastevent_intro>>
 
