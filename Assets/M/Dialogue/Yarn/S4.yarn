@@ -220,6 +220,7 @@ title: realmemory_4
 지원: 그리고 반성하면 연락해.
 지원: ..안그럼 부모님께 말씀드릴 거야.
 //문 쾅 닫히는 사운드
+<<PlayAudio LoudDoorClose>>
 
 <<HideAll>>
 <<Break BlackBG>>
