@@ -133,3 +133,7 @@ public class SaveAndLoad : MonoBehaviour
     }
 
 }
+
+class CollectedEndings{
+    public List<string> endingSprites = new List<string>();
+}
