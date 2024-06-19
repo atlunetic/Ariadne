@@ -407,6 +407,8 @@ E는 아무 것도 모르는 눈치다.
 
 나한테 바꿔치기 할 만한 게 있나?
 
+<<FinishedDialogue VisualNovelPrefab E_Clothes>>
+
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -432,7 +434,10 @@ title: UsedWaterCup
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 
+<<UI_off MenuUI>>
+
 <<Act 지수 CoJIsoo1 1.17 0.322 white>>
+<<DeleteItem Inventory WaterCup>>
 
 ...좋아.
 이걸 써야겠다.
@@ -2387,7 +2392,7 @@ title: cctvOptions
 	<<Hide 지수>>
 	<<SetActiveFalse VisualNovelPrefab InStaffroom_cctv>>
 	<<FinishedObj VisualNovelPrefab InStaffroom_cctv>>
-	<<SetCanvasTo VisualNovelPrefab false>>
+	//<<SetCanvasTo VisualNovelPrefab false>>
 	
 	
 ===
@@ -2882,8 +2887,8 @@ title: club_viproom_changeuniform
 <<wait 0.5>>
 들어가보자.
 
-//<<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
-//<<jump club_viproom>>
+<<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
+<<jump club_viproom>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 

@@ -43,9 +43,12 @@ public class ActionPanelButtons : MonoBehaviour
 
         else if (currentscene.name.StartsWith("S2"))
         {
-            if (connectedItem.itemName == "WaterCup" && currentscene.name == "S2_2_Table")
+            if (GameManager.instance.FinishedDialogues.Contains("E_Clothes"))
             {
-                runner.StartDialogue("UsedWaterCup");
+                if (connectedItem.itemName == "WaterCup" && currentscene.name == "S2_2_Table")
+                {
+                    runner.StartDialogue("UsedWaterCup");
+                }
             }
 
 
