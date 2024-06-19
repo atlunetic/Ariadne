@@ -260,6 +260,7 @@ title: memory_GeonwooCard
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio MemoryRecall 0.5>>
 //증거 촬영 시 돌아오는 기억: 바뀌고 어두워지는 배경, 팝업이미지x, 건우 왼쪽 지수 오른쪽
 //(건우가 돈을 벌려고 심부름센터 명함을 뿌리고 다녔던 기억)
 //(건우의 명함 이미지 확대)
@@ -275,7 +276,7 @@ title: memory_GeonwooCard
 건우: 너는 알면 안돼, 임마.
 //<<HideAll>>
 <<StopMemory SceneManager>>
-
+<<StopAudioAll>>
 <<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
 <<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 	<<jump InteractionFin3>>
@@ -363,6 +364,7 @@ title: memory_1342
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio MemoryRecall 0.5>>
 //증거 촬영 시 돌아오는 기억: 바뀌고 어두워지는 배경, 팝업이미지X, 왼쪽에 지원, 오른쪽에 지수, 지원 (둘 모두 이미지 까맣게)
 //(지원과 지수의 오피스텔 앞 대화)
 //지수4
@@ -378,6 +380,7 @@ title: memory_1342
 
 <<Hide 지수>>
 <<StopMemory SceneManager>>
+<<StopAudioAll>>
 <<FinishedDialogue VisualNovelPrefab memory_1342>>
 <<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 	<<jump InteractionFin3>>
@@ -883,6 +886,7 @@ title: memory_Photo
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio MemoryRecall 0.5>>
 <<FinishedDialogue VisualNovelPrefab memory_Photo>>
 //(텍스트 위치 변경하였음)
 //- 증거 촬영 시 돌아오는 기억: 배경 바뀌고 어두워짐, 팝업이미지
@@ -895,6 +899,7 @@ title: memory_Photo
 ???: 내가 도와줄게... 응?
 <<SetCanvasTo VisualNovelPrefab false>>
 <<StopMemory SceneManager>>
+<<StopAudioAll>>
 <<if CheckDialogue("R1403Cardkey") == true && CheckDialogue("PhotoOf3") == true>>
 	<<jump InteractionFinto14>>
 <<endif>>
