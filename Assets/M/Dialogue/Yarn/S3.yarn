@@ -289,6 +289,7 @@ title: memory_GeonwooCard
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
 <<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 	<<jump InteractionFin3>>
@@ -405,6 +406,7 @@ title: memory_1342
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<FinishedDialogue VisualNovelPrefab memory_1342>>
 <<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 	<<jump InteractionFin3>>
@@ -935,6 +937,7 @@ title: memory_Photo
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<if CheckDialogue("R1403Cardkey") == true && CheckDialogue("PhotoOf3") == true>>
 	<<jump InteractionFinto14>>
 <<endif>>

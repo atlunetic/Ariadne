@@ -256,6 +256,7 @@ title: memory_Letter
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1110,6 +1111,7 @@ title: memory_Laptop
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1201,7 +1203,7 @@ title: memory_Meds
 
 //화장실에서 토하고 있는 사람의 실루엣
 //밖에서 그걸 목격한 사람의 실루엣
-<<StopMemory  SceneManager>>
+<<StopMemory SceneManager>>
 <<StopAudioAll>>
 <<UI_on MenuUI>>
 <<Scene black_bg>>
@@ -1215,6 +1217,7 @@ title: memory_Meds
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

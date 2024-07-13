@@ -1735,6 +1735,7 @@ title: memory_StudentID
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -2029,6 +2030,7 @@ TV: ...
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2846,6 +2848,7 @@ title: memory_VIPlist
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<IfDone_getout MenuUI>>
 
@@ -3837,6 +3840,7 @@ title: memory_BrokenGlasses
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<FinishedDialogue VisualNovelPrefab memory_BrokenGlasses>>
 <<if CheckDialogue("obj_navigation") == true>>
 	<<jump event_movetostairs>>
