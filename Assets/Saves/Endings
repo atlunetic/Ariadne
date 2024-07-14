@@ -1,0 +1,10 @@
+{
+  "endingSprites": [
+    "Ending2",
+    "Ending0"
+  ],
+  "endingDialogue": [
+    "PhoneBoothEnd2",
+    "Ending0"
+  ]
+}

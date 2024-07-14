@@ -82,23 +82,32 @@ title: S1_path4
 -> 왼쪽으로 가보자.
     <<jump LeftPath>>
 -> 돌아가자.
-    <<StopAudioAll>>
-    <<PlayAudio CardiacArrest 0.4>> 
-    <<Fade white 0.0 1.0 2.0>>
-    <<Scene WhiteBG>>
-    갑자기 눈 앞이 흐려진다.
-    여기서 쓰러지면 안되는데...
-    <<FadeIn>>
-    <<DrawFadeIn Ending0 0.75 0.75>>   
-    <<wait  4.0>>
-    <<Hide Ending0>>
-    <<Scene NoBG>>
-    <<BackToMainScene GameManager>>
-
-        
+    <<jump Ending0>>
 
 ===
 
+title: Ending0
+
+---
+
+<<ChangeSceneTo VisualNovelPrefab S1>>
+<<SetCanvasTo VisualNovelPrefab true>>
+<<StopAudioAll>>
+<<CollectEnding GameManager Ending0 Ending0>>
+<<PlayAudio CardiacArrest 0.4>> 
+<<Fade white 0.0 1.0 2.0>>
+<<Scene WhiteBG>>
+갑자기 눈 앞이 흐려진다.
+여기서 쓰러지면 안되는데...
+<<FadeIn>>
+<<DrawFadeIn Ending0 0.75 0.75>>   
+<<wait  4.0>>
+<<Hide Ending0>>
+<<Scene NoBG>>
+<<BackToMainScene GameManager>>
+
+
+===
 
 title: Minotaur
 
@@ -476,8 +485,9 @@ title: PhoneBoothEnd2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<CollectEnding GameManager PhoneBoothEnd2 Ending1>>
+<<CollectEnding GameManager PhoneBoothEnd2 Ending2>>
 <<Scene DrugDealBG>>
+<<ChangeSceneTo VisualNovelPrefab S1>>
 이미지 속 장소를 찾아왔다.
 //<<Act 지수 Jisoo2 1.17 0.322 white>>
 D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다.
@@ -499,7 +509,6 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 <<Fade black 0.0 1.0 2.0>>
 
 <<wait 2.0>>
-<<ChangeSceneTo VisualNovelPrefab S1>>
 <<Scene BlackBG>>
 
 아...

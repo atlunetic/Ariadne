@@ -95,7 +95,7 @@ public class SaveAndLoad : MonoBehaviour
         if (Directory.Exists(FolderPath) == false){
             Directory.CreateDirectory(FolderPath);
         }
-        if(File.Exists(FolderPath+"Endings") == false){
+        if(File.Exists(FolderPath+"Endings") == false){  // 수집한 엔딩이 없을 때
             CollectedEndingsPanel.transform.GetChild(1).gameObject.SetActive(true);
             return;
         }
@@ -106,15 +106,23 @@ public class SaveAndLoad : MonoBehaviour
             Sprite sprite = Resources.Load<Sprite>(endings.endingSprites[i]);
             GameObject endingImg = Instantiate(endingImgPrefab, CollectedEndings.transform);
             endingImg.GetComponent<Image>().sprite = sprite;
-            endingImg.GetComponent<Button>().onClick.AddListener(()=>CallYarn.instance.callYarn(endings.endingDialogue[i]));
+            endingImg.name = endings.endingDialogue[i];
+            endingImg.GetComponent<Button>().onClick.AddListener(()=>{CallYarn.instance.callYarn(endingImg.name);});
         }
     }
 
     [YarnCommand("CollectEnding")]
     public void CollectEnding(string endingDialogue, string spritename){
+        string json;
+        if(File.Exists(FolderPath+"Endings")){
+            json = File.ReadAllText(FolderPath+"Endings");
+            endings = JsonConvert.DeserializeObject<CollectedEndings>(json);
+            if(endings.endingDialogue.Contains(endingDialogue)) return;
+        }
+
         endings.endingDialogue.Add(endingDialogue);
         endings.endingSprites.Add(spritename);
-        string json = JsonConvert.SerializeObject(endings, Formatting.Indented);
+        json = JsonConvert.SerializeObject(endings, Formatting.Indented);
         File.WriteAllText(FolderPath+"Endings", json);
     }
 
