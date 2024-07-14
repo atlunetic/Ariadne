@@ -51,32 +51,7 @@ title: meet_gunwoo
 <<UpdateAct 지수 Jisoo2>>
 뭐라고 대답할까?
 -> 지원이라고 거짓말 해보자.
-	<<UpdateAct 지수 Jisoo1>>
-	지수: 저 지원이예요.
-	<<UpdateAct 건우 Geonwoo4>>
-	건우: ...
-	건우: 너 어떻게 나왔어?
-	건우: 그것보다 지원이 너 지금 여기 있으면 안돼.
-	건우: 빨리 다른 곳으로...
-	<<StopAudioAll>>
-	<<Fade black 0.0 1.0 2.0>>
-	<<HideAll>>
-	<<PlayAudio FallDown 0.8>>
-	<<ChangeSceneTo VisualNovelPrefab S1>>
-	<<Scene BlackBG>>
-	어...
-	갑작스레 느껴지는 통증에 머리가 울렸다.
-	<<wait 2.0>>
-	누군가 내 팔을 붙잡았다.
-	시야가 흐려져 간다.
-	<<wait 2.0>>
-	...
-	<<FadeIn>>
-	<<DrawFadeIn Ending3 0.75 0.75>>
-	<<wait 4.0>>
-	<<Hide Ending3>>
-	<<Scene NoBG>>
-	<<BackToMainScene GameManager>>
+	<<jump ImJiwon>>
 -> 나라고 밝히자.
 	<<UpdateAct 지수 Jisoo1>>
 	지수: 저 지수예요.
@@ -115,6 +90,55 @@ title: meet_gunwoo
 	<<StopAudioAll>>
 	<<ChangeSceneTo VisualNovelPrefab S2_1_ClubCounter_Bar>>
 	<<jump club_bar>>
+
+===
+
+title: ImJiwon
+
+---
+
+<<CollectEnding GameManager Ending3 Ending3>>
+<<UpdateAct 지수 Jisoo1>>
+지수: 저 지원이예요.
+<<UpdateAct 건우 Geonwoo4>>
+건우: ...
+건우: 너 어떻게 나왔어?
+건우: 그것보다 지원이 너 지금 여기 있으면 안돼.
+건우: 빨리 다른 곳으로...
+<<StopAudioAll>>
+<<Fade black 0.0 1.0 2.0>>
+<<HideAll>>
+<<PlayAudio FallDown 0.8>>
+<<ChangeSceneTo VisualNovelPrefab S1>>
+<<Scene BlackBG>>
+어...
+갑작스레 느껴지는 통증에 머리가 울렸다.
+<<wait 2.0>>
+누군가 내 팔을 붙잡았다.
+시야가 흐려져 간다.
+<<wait 2.0>>
+...
+<<FadeIn>>
+<<DrawFadeIn Ending3 0.75 0.75>>
+<<wait 4.0>>
+<<Hide Ending3>>
+<<Scene NoBG>>
+<<BackToMainScene GameManager>>
+
+===
+
+title: Ending3
+
+---
+
+<<ChangeSceneTo VisualNovelPrefab S1>>
+<<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio BarStreet 0.4>>
+<<Scene ClubEntrance>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
+<<Act 건우 Geonwoo3 0.322 0.227 white>>
+<<jump ImJiwon>>
+
 ===
 
 title: club_bar_BG
