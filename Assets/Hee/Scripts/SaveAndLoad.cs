@@ -71,7 +71,6 @@ public class SaveAndLoad : MonoBehaviour
         tempCam.SetActive(true);
         nowLoading.SetActive(true);
         SceneManager.LoadScene("Menu");
-        SceneManager.LoadScene(GameManager.instance.NowScene);
         Invoke("EndLoading", 2.5f);
     }
 

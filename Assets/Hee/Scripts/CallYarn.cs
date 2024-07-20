@@ -148,9 +148,22 @@ public class CallYarn : MonoBehaviour
         MapController.instance.Hospitalbutton.onClick.AddListener(()=>callYarn("Hospital"));  // 병원 눌렀을 때
 
         if(GameManager.instance.NowScene != string.Empty) {
-            if(GameManager.instance.NowScene.StartsWith("S2")) InS2();
-            else if(GameManager.instance.NowScene.StartsWith("S3")) InS3();
-            print(GameManager.instance.NowScene);
+            if(GameManager.instance.NowScene.StartsWith("S2")) {
+                SceneManager.LoadScene(GameManager.instance.NowScene);
+                InS2();
+            }
+            else if(GameManager.instance.NowScene.StartsWith("S3")){
+                SceneManager.LoadScene(GameManager.instance.NowScene);
+                InS3();
+            } 
+            else{
+                switch(GameManager.instance.NowScene){
+                    case "S1_2_JiwonRoom": MapController.instance.GoHome(); break;
+                    case "S1_Park": MapController.instance.GoPark(); break;
+                    case "S1_Street": MapController.instance.GoBarStreet(); break;
+                    case "S1_Hospital": MapController.instance.GoHospital(); break;
+                }
+            }
         }
 
     }
