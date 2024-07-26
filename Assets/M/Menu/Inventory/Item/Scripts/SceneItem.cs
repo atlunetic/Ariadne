@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SceneItem : MonoBehaviour
 {
+    public static SceneItem instance;
     public item newItem;
     public SpriteRenderer image;
 

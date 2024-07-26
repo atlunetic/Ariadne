@@ -77,11 +77,53 @@ public class YarnMFunctions : MonoBehaviour
     }
 
 
+    //SceneItem WaterBottle 내부에서 생성
+    public SceneItem CreateSceneItem(item newItemData)
+    {
+        // Load the SceneItem prefab from Resources folder
+        GameObject sceneItemPrefab = Resources.Load<GameObject>("WBPlease");
+
+        if (sceneItemPrefab == null)
+        {
+            Debug.LogError("WBPlease not found in Resources.");
+            return null;
+        }
+
+        // Instantiate a new SceneItem GameObject
+        GameObject newSceneItemObject = Instantiate(sceneItemPrefab);
+
+        // Get the SceneItem component from the instantiated GameObject
+        SceneItem newSceneItem = newSceneItemObject.GetComponent<SceneItem>();
+
+        if (newSceneItem == null)
+        {
+            Debug.LogError("WBPlease component not found on the instantiated prefab.");
+            return null;
+        }
+
+        // Set the item data
+        newSceneItem.SetItem(newItemData);
+        //newSceneItem.image.sprite = Resources.Load<Sprite>("ItemImage/WaterBottle");
+
+        // Return the created SceneItem
+        return newSceneItem;
+    }
+
+
     //또 코드 오류로 따로 코드 생성
     [YarnCommand("AddWaterBottle")]
     public void AddWaterBottle()
     {
-        SceneItem ItemToAdd = SceneItem.Find("WaterBottle");
+        //create a WaterBottle sceneitem here and make it an ItemToAdd
+
+        item WaterBottle = new item
+        {
+            ItemType = itemType.Item,
+            itemName = "WaterBottle"
+        };
+
+        SceneItem ItemToAdd = CreateSceneItem(WaterBottle);
+
         if (ItemToAdd != null)
         {
             Debug.Log(ItemToAdd.newItem.itemName + " found.");
@@ -90,7 +132,7 @@ public class YarnMFunctions : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("WaterBottle not found");
+            Debug.LogWarning("WaterBottle not added");
         }
 
     }
