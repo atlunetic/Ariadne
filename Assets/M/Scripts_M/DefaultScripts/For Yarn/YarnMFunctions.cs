@@ -90,7 +90,7 @@ public class YarnMFunctions : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("WaterBottle Item not found");
+            Debug.LogWarning("WaterBottle not found");
         }
 
     }
