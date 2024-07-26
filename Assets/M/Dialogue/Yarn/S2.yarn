@@ -262,7 +262,8 @@ title: obj_minirefrigerator
 	그래... 하나만 챙기자.
 	<<HideAll>>
 	<color=yellow>* 생수가 든 페트병을 습득했다. *</color>
-	<<AddToInventory VisualNovelPrefab WaterBottle>>
+	//<<AddToInventory VisualNovelPrefab WaterBottle>>
+	<<AddWaterBottle VisualNovelPrefab>>
 	<<declare $WaterBottle = 0 as number>>
 	<<set $WaterBottle = 1>>
 	<<SetActiveFalse VisualNovelPrefab Suljango>>
@@ -272,8 +273,10 @@ title: obj_minirefrigerator
 	혹시 모르니 두 개 챙겨두자.
 	<<HideAll>>
 	<color=yellow>* 생수가 든 페트병을 습득했다. *</color>
-	<<AddToInventory VisualNovelPrefab WaterBottle>>
-	<<AddToInventory VisualNovelPrefab WaterBottle>>
+	//<<AddToInventory VisualNovelPrefab WaterBottle>>
+	//<<AddToInventory VisualNovelPrefab WaterBottle>>
+	<<AddWaterBottle VisualNovelPrefab>>
+	<<AddWaterBottle VisualNovelPrefab>>
 	<<set $WaterBottle = 2>>
 	<<SetActiveFalse VisualNovelPrefab Suljango>>
 	<<FinishedObj VisualNovelPrefab Suljango>>
