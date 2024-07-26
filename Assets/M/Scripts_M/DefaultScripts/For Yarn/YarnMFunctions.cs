@@ -76,6 +76,25 @@ public class YarnMFunctions : MonoBehaviour
         }
     }
 
+
+    //또 코드 오류로 따로 코드 생성
+    [YarnCommand("AddWaterBottle")]
+    public void AddWaterBottle()
+    {
+        SceneItem ItemToAdd = SceneItem.Find("WaterBottle");
+        if (ItemToAdd != null)
+        {
+            Debug.Log(ItemToAdd.newItem.itemName + " found.");
+            item newItem = ItemToAdd.GetItem();
+            Inventory.instance.Additem(newItem);
+        }
+        else
+        {
+            Debug.LogWarning("WaterBottle Item not found");
+        }
+
+    }
+
     [YarnCommand("FinishedObj")]
     public void FinishedObjects(string ObjectName)
     {
