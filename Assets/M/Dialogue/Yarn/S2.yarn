@@ -1,4 +1,51 @@
-﻿title: StartClub
+﻿title: StartClubtoTBC
+
+---
+
+//240816 BIC 용 수정본
+
+<<Act 건우 Geonwoo0 0.322 0.227 white>>
+
+<<UpdateAct 지수 Jisoo4>>
+어...
+뭔가 익숙한 얼굴이 보인다.
+<<wait 1.0>>
+
+<<UpdateAct 건우 Geonwoo1>>
+건우: 어!
+
+<<UpdateAct 건우 Geonwoo3>>
+건우: 지...
+<<wait 2.0>>
+
+
+//TBC 연결 파트
+<<Fade black 0.0 1.0 3.0>>
+<<wait 3.0>>
+<<RemoveUI MenuUI>>
+<<Scene NoBG>>
+<<Hide 건우>>
+<<Hide 지수>>
+<<StopAudio BarStreet>>
+<<wait 2.0>>
+<<ChangeSceneTo VisualNovelPrefab S2_11_TBC>>
+<<wait 2.0>>
+<<FadeIn>>
+<<wait 8.0>>
+<<Fade black 0.0 1.0 2.0>>
+<<wait 3.0>>
+<<ChangeSceneTo VisualNovelPrefab S0>>
+<<wait 1.0>>
+<<FadeIn>>
+<<wait 1.0>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+
+
+
+title: StartClub
 
 ---
 
@@ -15,7 +62,10 @@
 그런데 클럽엔 관심도 없다던 애가 여긴 왜 왔었대?
 아무튼, 들어가볼까..
 
-<<jump meet_gunwoo>>
+//TBC용jump(추후 삭제)
+<<jump StartClubtoTBC>>
+//주석 풀기
+//<<jump meet_gunwoo>>
 
 
 ===

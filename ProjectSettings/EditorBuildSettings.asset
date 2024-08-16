@@ -38,49 +38,49 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/M/Scenes_M/S2/S2_1_ClubCounter_Bar.unity
     guid: 746c450ce427b254d897adbe2b9c91a0
-  - enabled: 1
+  - enabled: 0
     path: Assets/M/Scenes_M/S2/S2_2_Table.unity
     guid: 7f37b298b65a57740bdcdf0e7e37ab25
-  - enabled: 1
+  - enabled: 0
     path: Assets/M/Scenes_M/S2/S2_3_0_RestRoom.unity
     guid: df97f03fca11e5a4a9d7e6974efb55e7
-  - enabled: 1
+  - enabled: 0
     path: Assets/M/Scenes_M/S2/S2_3_1_StaffOnlyLocker.unity
     guid: ac82751a67d569441af8d2bd3e2c2759
-  - enabled: 1
+  - enabled: 0
     path: Assets/M/Scenes_M/S2/S2_4_0_StaffRoomEntrance.unity
     guid: d97637de62d8c9848bd9001b2ff021e8
-  - enabled: 1
+  - enabled: 0
     path: Assets/M/Scenes_M/S2/S2_4_1_StaffRoom.unity
     guid: 67e9726e52dba0a4e88bddf3f71e0602
-  - enabled: 1
+  - enabled: 0
     path: Assets/Su/lockpick.unity
     guid: afc78d8c9bdbae7429200b8b9331d1d9
-  - enabled: 1
+  - enabled: 0
     path: Assets/M/Scenes_M/S2/S2_5_VipRoomEntrance.unity
     guid: 8fed5e43fd5540c48b75002987bdd718
-  - enabled: 1
+  - enabled: 0
     path: Assets/M/Scenes_M/S2/S2_6_CounterBar.unity
     guid: 832438e86589fd0498276ab73929b3aa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Su/clockpuzzle.unity
     guid: 55911496a69d76047a94d634b5a21e0d
-  - enabled: 1
+  - enabled: 0
     path: Assets/M/Scenes_M/S2/S2_6_ReVip.unity
     guid: 6dfb522cbba0834478804687eb0aed10
-  - enabled: 1
+  - enabled: 0
     path: Assets/M/Scenes_M/S2/S2_7_Stairs.unity
     guid: 58e96c232b16def479807f76bb24e44f
-  - enabled: 1
+  - enabled: 0
     path: Assets/M/Scenes_M/S2/S2_8_ParkingLot.unity
     guid: 11a860c25ceffbc41b79a6df8ea9d1f6
-  - enabled: 1
+  - enabled: 0
     path: Assets/M/Scenes_M/S2/S2_8_ParkingLot2.unity
     guid: b98680fa3074724488ad0284b7e004ad
-  - enabled: 1
+  - enabled: 0
     path: Assets/M/Scenes_M/S2/S2_9_Car.unity
     guid: 3614c94e9e23b5148b647eb479a78c77
-  - enabled: 1
+  - enabled: 0
     path: Assets/M/Scenes_M/S2/S2_10_Stairs.unity
     guid: fbef66b9859875649b18e967e82b0f04
   - enabled: 1
