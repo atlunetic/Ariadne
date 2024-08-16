@@ -262,7 +262,7 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "근데 왜 지원이걸로 톡하냐?");
         AddChatToLast(false, "아무튼…. 바빠서 나중에 연락할게.");
 
-        ChattingList.Add(new Chatting(false, "해솔", null));  // 13
+        ChattingList.Add(new Chatting(false, "해솔", "JustOffCanvas"));  // 13
         AddChatToLast(true, "해솔아. 나 지수인데.");
         AddChatToLast(true, "혹시 최근에 지원이 만났어?");
         AddChatToLast(false, "연락은 자주 하는데 못본지는 좀 됐지. 왜?");

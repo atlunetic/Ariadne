@@ -537,13 +537,10 @@ title: AriadneAlarm
 ===
 
 
+title: JustOffCanvas
+
+---
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
-
-
-
-
-
-
-
-
+===
