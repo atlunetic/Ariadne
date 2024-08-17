@@ -471,7 +471,7 @@ title: FoundJiwonPhone
 어... 연락이 온 것 같은데.
 확인해볼까?
 <<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom>>
-<<wait 1.0>>
+<<wait 0.5>>
 <color=yellow>* 휴대폰 설정을 통해 진행상황을 저장할 수 있습니다. *</color>
 <<wait 2.0>>
 

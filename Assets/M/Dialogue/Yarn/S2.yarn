@@ -2487,6 +2487,7 @@ title: cctvOptions
 	...
 	아리아드네는 뭘 알고 있지 않을까?
 	도움을 요청해봐야겠다.
+	<<AriadneHintOff PhoneController>>
 	<<Hide CCTV_parkinglot_jisoo>>
 	<<Hide DBG>>
 	<<Act 지수 Jisoo2 1.17 0.322 white>>
@@ -2526,6 +2527,7 @@ title: chocotalk_cctv
 //핸드폰, 지수이미지 종료
 <<UI_off MenuUI>>
 <<Hide 지수>>
+<<AriadneHintOn PhoneController>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<IfDone_getout MenuUI>>
 
@@ -2602,12 +2604,12 @@ title: obj_radio
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
 <<PlayAudio Radio2>>
 <i>그럼 ... ..하도록 하자. 이만.</i>
+<<AriadneHintOff PhoneController>>
 <<wait 1.0>>
 무전이 끊겼다.
 <<Hide 지수>>
 //모스부호 사운드 및 상호작용 종료
 <<StartPhoneChat PhoneController 21>>
-//핸드폰 알람음+빨간색 동그라미 (초코톡 알림)
 //지수이미지 노출X
 
 <<SetActiveFalse VisualNovelPrefab InStaffroom_Radio>>
@@ -2633,6 +2635,7 @@ title: event_staffroom
 <<UI_off MenuUI>>
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<AriadneHintOn PhoneController>>
 //무전 핸드폰 전송 후 바로 연결
 //문 밖에서 발소리가 가까워지는 사운드
 <<PlayAudio StaffComeIn 0.6>>
@@ -3241,6 +3244,7 @@ title: obj_customerg_choose_ariadne
 어... 아리아드네다.
 확인해볼까?
 <<Hide 클럽고객G>>
+<<AriadneHintOff PhoneController>>
 <<StartPhoneChat PhoneController 24>>
 //<<SetCanvasTo VisualNovelPrefab false>>
 
@@ -3251,6 +3255,7 @@ title: chocotalk_ariadne_customerg
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<AriadneHintOn PhoneController>>
 <<UI_off MenuUI>>
 //초코톡에서 아리아드네의 톡 확인 후
 ...

@@ -445,6 +445,7 @@ title: AfterD3
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<AriadneHintOff PhoneController>>
 //(플레이어가 D gram 접속 후 아리아드네와의 채팅창에 들어가면)
 ...
 아리아드네에게 도움을 요청해보자.
@@ -467,6 +468,7 @@ title: AfterDChat3
 
 <<Hide 지수>>
 <<UI_off MenuUI>>
+<<AriadneHintOn PhoneController>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

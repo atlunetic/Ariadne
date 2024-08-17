@@ -62,4 +62,14 @@ public class PhoneController : MonoBehaviour
         ActiveTab(Dgram);
     }
 
+    [YarnCommand("AriadneHintOn")]
+    public void AriadneHintOn(){
+        AriadneHint.instance.On();
+    }
+
+    [YarnCommand("AriadneHintOff")]
+    public void AriadneHintOff(){
+        AriadneHint.instance.Off();
+    }
+
 }
