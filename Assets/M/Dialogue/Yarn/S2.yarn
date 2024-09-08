@@ -63,9 +63,9 @@ title: StartClub
 아무튼, 들어가볼까..
 
 //TBC용jump(추후 삭제)
-<<jump StartClubtoTBC>>
-//주석 풀기
-//<<jump meet_gunwoo>>
+//<<jump StartClubtoTBC>>
+
+<<jump meet_gunwoo>>
 
 
 ===
@@ -2218,6 +2218,8 @@ title: obj_staffroomdoor_2
 지금은 들어갈 수 없을 것 같아.
 조금 있다 다시 와볼까...
 <<Hide 지수>>
+
+<<ChangeSceneTo VisualNovelPrefab S2_1_ClubCounter_Bar>>
 <<SetCanvasTo VisualNovelPrefab	false>>
 
 
@@ -3984,25 +3986,25 @@ title: stairchocotalk2
 <<UI_off MenuUI>>
 
 
-//2장 & TBC 연결 파트
-<<Fade black 0.0 1.0 3.0>>
-<<RemoveUI MenuUI>>
-<<wait 3.0>>
-<<ChangeSceneTo VisualNovelPrefab S2_11_TBC>>
-<<wait 2.0>>
-<<FadeIn>>
-<<wait 8.0>>
-<<Fade black 0.0 1.0 2.0>>
-<<wait 3.0>>
-<<ChangeSceneTo VisualNovelPrefab S0>>
-<<wait 1.0>>
-<<FadeIn>>
-<<wait 1.0>>
+// 2장 & TBC 연결 파트
+// <<Fade black 0.0 1.0 3.0>>
+// <<RemoveUI MenuUI>>
+// <<wait 3.0>>
+// <<ChangeSceneTo VisualNovelPrefab S2_11_TBC>>
+// <<wait 2.0>>
+// <<FadeIn>>
+// <<wait 8.0>>
+// <<Fade black 0.0 1.0 2.0>>
+// <<wait 3.0>>
+// <<ChangeSceneTo VisualNovelPrefab S0>>
+// <<wait 1.0>>
+// <<FadeIn>>
+// <<wait 1.0>>
+// <<SetCanvasTo VisualNovelPrefab false>>
 <<SetCanvasTo VisualNovelPrefab false>>
-//<<SetCanvasTo VisualNovelPrefab false>>
-//<<ChangeSceneTo VisualNovelPrefab S3_1_OfficetelEntrance>>
-//<<wait 0.5>>
-//<<jump Officetel3>>
+<<ChangeSceneTo VisualNovelPrefab S3_1_OfficetelEntrance>>
+<<wait 0.5>>
+<<jump Officetel3>>
 ===
 
 title: wrongplaceS2
