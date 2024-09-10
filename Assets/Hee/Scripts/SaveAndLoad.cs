@@ -167,7 +167,7 @@ public class SaveAndLoad : MonoBehaviour
         SavePanel.SetActive(false);
         DestroyImmediate(GameObject.Find("GameManager"));
         DestroyImmediate(GameObject.Find("MenuUI"));
-        DestroyImmediate(GameObject.Find("VisualNovelPrefab"));
+        Destroy(GameObject.Find("VisualNovelPrefab"));
         SceneManager.LoadScene("Menu");
         SceneManager.LoadScene("S0");
     }

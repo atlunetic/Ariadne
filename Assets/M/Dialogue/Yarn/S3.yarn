@@ -840,6 +840,7 @@ title: Ending4_2
 <<Fade black 0.0 1.0 2.0>>
 <<HideAll>>
 <<StopAudioAll>>
+<<ChangeSceneTo VisualNovelPrefab S1>>
 ...
 수상한 사람들에 의해 어딘가로 끌려갔다.
 ..도망갈 수 없을 것 같아.
@@ -847,11 +848,10 @@ title: Ending4_2
 <<Draw Ending4 0.75 0.75>>
 <<FadeIn 2.0>>
 <<wait 4.0>>
-<<BackToMainScene GameManager>>
 <<Hide Ending4>>
 <<Scene NoBG>>
+<<BackToMainScene GameManager>>
 //엔딩 4. 조직원에게 감금되다.
-<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -1075,7 +1075,7 @@ title: JiwonIn1403
 <<Act 지원 Jiwon0 0.322 0.527 white>>
 지원: 어... 지수?
 //지수3
-<<UpdateAct 지수 Jisoo3>>
+//<<UpdateAct 지수 Jisoo3>>
 지원이가 의자에 묶여있다.
 어서 풀어주자...
 //(♫Sound: 매듭 푸는 소리)
@@ -1088,6 +1088,7 @@ title: JiwonIn1403
 휴... 풀었다.
 매듭이 단단하지 않아서 다행이야.
 
+<<UpdateAct 지수 Jisoo5>>
 지수: 지원아... 괜찮아?
 지수: 대체 무슨 일이 있었던 거야...
 
@@ -1099,7 +1100,7 @@ title: JiwonIn1403
 약에 취한 사람같아.
 설마...
 //지수3
-<<UpdateAct 지수 Jisoo3>>
+<<UpdateAct 지수 Jisoo5>>
 얼른 나가야겠다.
 
 지수: 지원아. 얼른 나가자.
