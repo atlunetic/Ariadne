@@ -17,10 +17,11 @@ public class SaveGameManager{
     public HashSet<string> FinishedDialogues = new HashSet<string>();
     public HashSet<string> GottenPage = new HashSet<string>();
     public HashSet<string> RecommendedFriends = new HashSet<string>();
-
     public int visited;
     public bool IsAriadneHintOn = false;
     public List<string> S1HintList;
+    public List<string> S2HintList;
+    public List<string> StaffroomHintList;
 
 }
 public class GameManager : MonoBehaviour
@@ -53,11 +54,11 @@ public class GameManager : MonoBehaviour
     public HashSet<string> FinishedDialogues = new HashSet<string>();
     public HashSet<string> GottenPage = new HashSet<string>();
     public HashSet<string> RecommendedFriends = new HashSet<string>();
-
-
     public int visited;
     public bool IsAriadneHintOn = false;
     public List<string> S1HintList = new List<string> {"Laptop", "Meds", "Letter", "Drawer_Hairpin", "DrawerR_Wallet", "ChooseChatName1", "Books_Diary", "visitPark", "visitBarStreet", "visitHospital"};
+    public List<string> S2HintList = new List<string> {"ClubTable_Geonwoo", "Toilet_costomerF", "ToiletPaper"};  // ClubTable_Geonwoo -> GoStaffroom, StudentID  -> Locker
+    public List<string> StaffroomHintList = new List<string> {"VIPlist", "InStaffroom_VIPlist", "InStaffroom_cctv", "InStaffroom_Key", "InStaffroom_Radio"};
 
     public bool S1Ended(){
         return FindedClues.Contains("Laptop") && FindedClues.Contains("Meds") && FindedClues.Contains("Letter") &&
@@ -66,11 +67,14 @@ public class GameManager : MonoBehaviour
                FinishedDialogues.Contains("Chatlist") && FindedObjects.Contains("Books_Diary") &&
                visited == 7;
     }
-
     public bool StaffroomEnded(){
         return FindedClues.Contains("VIPlist") && FindedObjects.Contains("InStaffroom_VIPlist") &&
         FindedObjects.Contains("InStaffroom_cctv") && FindedObjects.Contains("InStaffroom_Key") &&
         FindedObjects.Contains("InStaffroom_Radio");
+    }
+    public bool S2Ended(){
+        return FindedObjects.Contains("Locker") && FindedObjects.Contains("Toilet_costomerF") &&
+        FindedClues.Contains("StudentID") && FindedClues.Contains("ToiletPaper");
     }
 
     public SaveGameManager Convert(){
@@ -91,6 +95,8 @@ public class GameManager : MonoBehaviour
         saveGameManager.visited = instance.visited;
         saveGameManager.IsAriadneHintOn = instance.IsAriadneHintOn;
         saveGameManager.S1HintList = instance.S1HintList;
+        saveGameManager.S2HintList = instance.S2HintList;
+        saveGameManager.StaffroomHintList = instance.StaffroomHintList;
 
         return saveGameManager;
     }
@@ -113,5 +119,7 @@ public class GameManager : MonoBehaviour
         instance.RecommendedFriends = saveGameManager.RecommendedFriends;
         instance.IsAriadneHintOn = saveGameManager.IsAriadneHintOn;
         instance.S1HintList = saveGameManager.S1HintList;
+        instance.S2HintList = saveGameManager.S2HintList;
+        instance.StaffroomHintList = saveGameManager.StaffroomHintList;
     }
 }

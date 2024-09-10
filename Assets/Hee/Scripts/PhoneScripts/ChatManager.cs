@@ -90,7 +90,7 @@ public class ChatManager : MonoBehaviour
         
         foreach(chat c in chatting.chatList){   
             GenerateChat(c);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1.2f);
         }
         if(chatting.NextDialogue!=null){
             var runner = FindObjectOfType<DialogueRunner>();
@@ -440,6 +440,62 @@ public class ChatManager : MonoBehaviour
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 48
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
         AddChatToLast(false, "음? 내가 전에 말해준 것들 중에 아직 안 한게 있는 것 같은데?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 49
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "건우가 무언가 알고 있지 않을까?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 50
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "CCTV를 확인하려면 어디로 가야 할까?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 51
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "건우가 뭔가 흘리고 갔어. 촬영해보면 기억이 돌아올지도 몰라.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 52
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "화장실휴지기억");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 53
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "화장실고객한테말걸어서젤리얻기");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 54
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "VIP리스트기억");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 55
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "VIP리스트보기");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 56
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "cctv확인");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 57
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "책상밑상자열어서키얻기");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 58
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "무전기확인");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 59
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "스태프룸나가기");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 60
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "얻은키로화장실직원락카열기");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 61
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "(VIP룸가기전)테이블가기");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 62
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "VIP룸가기");
 
         foreach (int i in GameManager.instance.ChattingLog)
             PrintChat(i);
