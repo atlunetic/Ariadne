@@ -28991,6 +28991,16 @@ MonoBehaviour:
   - visitPark
   - visitBarStreet
   - visitHospital
+  S2HintList:
+  - ClubTable_Geonwoo
+  - Toilet_costomerF
+  - ToiletPaper
+  StaffroomHintList:
+  - VIPlist
+  - InStaffroom_VIPlist
+  - InStaffroom_cctv
+  - InStaffroom_Key
+  - InStaffroom_Radio
 --- !u!1 &1619084800
 GameObject:
   m_ObjectHideFlags: 0
@@ -38014,7 +38024,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7964048649266512893, guid: f5247960c397152408f5bdc47a72ef90, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -40164,7 +40174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5797994563766285694, guid: a2281b018fb7e394cb876caa3fb508ed, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8167399588117542194, guid: a2281b018fb7e394cb876caa3fb508ed, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -42948,7 +42958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &6550993837353297703
 CanvasRenderer:
   m_ObjectHideFlags: 0
