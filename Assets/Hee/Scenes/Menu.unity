@@ -37942,7 +37942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4200575726438597347, guid: f5247960c397152408f5bdc47a72ef90, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 450
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4200575726438597347, guid: f5247960c397152408f5bdc47a72ef90, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38014,7 +38014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7964048649266512893, guid: f5247960c397152408f5bdc47a72ef90, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -40140,7 +40140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 452151873922223859, guid: a2281b018fb7e394cb876caa3fb508ed, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 452151873922223859, guid: a2281b018fb7e394cb876caa3fb508ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -40164,7 +40164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5797994563766285694, guid: a2281b018fb7e394cb876caa3fb508ed, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8167399588117542194, guid: a2281b018fb7e394cb876caa3fb508ed, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -41043,7 +41043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 847, y: 300}
+  m_AnchoredPosition: {x: 847, y: 450}
   m_SizeDelta: {x: 72, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &270433503310072860
@@ -42948,7 +42948,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &6550993837353297703
 CanvasRenderer:
   m_ObjectHideFlags: 0
