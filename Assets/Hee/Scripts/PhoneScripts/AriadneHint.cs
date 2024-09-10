@@ -80,7 +80,7 @@ public class AriadneHint : MonoBehaviour
 
                 if(!GameManager.instance.S2Ended())
                     ChatManager.instance.StartChat(48);
-                if(!GameManager.instance.FinishedDialogues.Contains("club_viproom_entry"))
+                else if(!GameManager.instance.FinishedDialogues.Contains("club_viproom_entry"))
                     ChatManager.instance.StartChat(61);
                 else
                     ChatManager.instance.StartChat(62);
