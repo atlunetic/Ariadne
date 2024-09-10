@@ -443,59 +443,59 @@ public class ChatManager : MonoBehaviour
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 49
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "건우가 무언가 알고 있지 않을까?");
+        AddChatToLast(false, "건우한테 말은 걸어봤어?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 50
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "CCTV를 확인하려면 어디로 가야 할까?");
+        AddChatToLast(false, "Staff Room 안을 둘러보면 어때?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 51
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "건우가 뭔가 흘리고 갔어. 촬영해보면 기억이 돌아올지도 몰라.");
+        AddChatToLast(false, "건우의 학생증을 촬영해보면 어때?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 52
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "화장실휴지기억");
+        AddChatToLast(false, "휴지를 촬영해보면 어때?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 53
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "화장실고객한테말걸어서젤리얻기");
+        AddChatToLast(false, "화장실에 있는 사람에게서 뭔가 얻을 수 있을 것 같은데.");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 54
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "VIP리스트기억");
+        AddChatToLast(false, "VIP 고객 명단을 촬영해보면 어때?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 55
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "VIP리스트보기");
+        AddChatToLast(false, "VIP 고객 명단에 누가 있는지 궁금하지 않아?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 56
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "cctv확인");
+        AddChatToLast(false, "지원이가 클럽에 왔다면 CCTV에 찍혀있을텐데. 확인해봐.");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 57
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "책상밑상자열어서키얻기");
+        AddChatToLast(false, "Staff Room 책상 밑은 확인해봤어?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 58
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "무전기확인");
+        AddChatToLast(false, "클럽 직원들이 무슨 얘기를 하고 있는 것 같은데. 무전기를 확인해봐.");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 59
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "스태프룸나가기");
+        AddChatToLast(false, "Staff Room엔 더 둘러볼 게 없는 것 같은데. 다른 곳으로 가볼래?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 60
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "얻은키로화장실직원락카열기");
+        AddChatToLast(false, "열쇠로 잠겨있던 곳이…. 화장실 Staff Only칸에 있었던가?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 61
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "(VIP룸가기전)테이블가기");
+        AddChatToLast(false, "테이블 근처에 무슨 문이 있던데. 혹시 가봤어?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 62
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "VIP룸가기");
+        AddChatToLast(false, "직원 복장이라도 입고 있으면 의심은 안 받겠지. VIP Room에 들어가볼래?");
 
         foreach (int i in GameManager.instance.ChattingLog)
             PrintChat(i);
