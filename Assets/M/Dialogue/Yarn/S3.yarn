@@ -840,6 +840,7 @@ title: Ending4_2
 <<Fade black 0.0 1.0 2.0>>
 <<HideAll>>
 <<StopAudioAll>>
+<<ChangeSceneTo VisualNovelPrefab S1>>
 ...
 수상한 사람들에 의해 어딘가로 끌려갔다.
 ..도망갈 수 없을 것 같아.
@@ -847,11 +848,10 @@ title: Ending4_2
 <<Draw Ending4 0.75 0.75>>
 <<FadeIn 2.0>>
 <<wait 4.0>>
-<<BackToMainScene GameManager>>
 <<Hide Ending4>>
 <<Scene NoBG>>
+<<BackToMainScene GameManager>>
 //엔딩 4. 조직원에게 감금되다.
-<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
