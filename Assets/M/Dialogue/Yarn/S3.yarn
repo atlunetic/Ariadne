@@ -289,6 +289,7 @@ title: memory_GeonwooCard
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
 <<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 	<<jump InteractionFin3>>
@@ -405,6 +406,7 @@ title: memory_1342
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<FinishedDialogue VisualNovelPrefab memory_1342>>
 <<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 	<<jump InteractionFin3>>
@@ -443,6 +445,7 @@ title: AfterD3
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<AriadneHintOff PhoneController>>
 //(플레이어가 D gram 접속 후 아리아드네와의 채팅창에 들어가면)
 ...
 아리아드네에게 도움을 요청해보자.
@@ -465,6 +468,7 @@ title: AfterDChat3
 
 <<Hide 지수>>
 <<UI_off MenuUI>>
+<<AriadneHintOn PhoneController>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -935,6 +939,7 @@ title: memory_Photo
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<if CheckDialogue("R1403Cardkey") == true && CheckDialogue("PhotoOf3") == true>>
 	<<jump InteractionFinto14>>
 <<endif>>

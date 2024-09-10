@@ -1,4 +1,51 @@
-﻿title: StartClub
+﻿title: StartClubtoTBC
+
+---
+
+//240816 BIC 용 수정본
+
+<<Act 건우 Geonwoo0 0.322 0.227 white>>
+
+<<UpdateAct 지수 Jisoo4>>
+어...
+뭔가 익숙한 얼굴이 보인다.
+<<wait 1.0>>
+
+<<UpdateAct 건우 Geonwoo1>>
+건우: 어!
+
+<<UpdateAct 건우 Geonwoo3>>
+건우: 지...
+<<wait 2.0>>
+
+
+//TBC 연결 파트
+<<Fade black 0.0 1.0 3.0>>
+<<wait 3.0>>
+<<RemoveUI MenuUI>>
+<<Scene NoBG>>
+<<Hide 건우>>
+<<Hide 지수>>
+<<StopAudio BarStreet>>
+<<wait 2.0>>
+<<ChangeSceneTo VisualNovelPrefab S2_11_TBC>>
+<<wait 2.0>>
+<<FadeIn>>
+<<wait 8.0>>
+<<Fade black 0.0 1.0 2.0>>
+<<wait 3.0>>
+<<ChangeSceneTo VisualNovelPrefab S0>>
+<<wait 1.0>>
+<<FadeIn>>
+<<wait 1.0>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+
+
+
+title: StartClub
 
 ---
 
@@ -14,6 +61,9 @@
 <<wait 1.0>>
 그런데 클럽엔 관심도 없다던 애가 여긴 왜 왔었대?
 아무튼, 들어가볼까..
+
+//TBC용jump(추후 삭제)
+//<<jump StartClubtoTBC>>
 
 <<jump meet_gunwoo>>
 
@@ -51,32 +101,7 @@ title: meet_gunwoo
 <<UpdateAct 지수 Jisoo2>>
 뭐라고 대답할까?
 -> 지원이라고 거짓말 해보자.
-	<<UpdateAct 지수 Jisoo1>>
-	지수: 저 지원이예요.
-	<<UpdateAct 건우 Geonwoo4>>
-	건우: ...
-	건우: 너 어떻게 나왔어?
-	건우: 그것보다 지원이 너 지금 여기 있으면 안돼.
-	건우: 빨리 다른 곳으로...
-	<<StopAudioAll>>
-	<<Fade black 0.0 1.0 2.0>>
-	<<HideAll>>
-	<<PlayAudio FallDown 0.8>>
-	<<ChangeSceneTo VisualNovelPrefab S1>>
-	<<Scene BlackBG>>
-	어...
-	갑작스레 느껴지는 통증에 머리가 울렸다.
-	<<wait 2.0>>
-	누군가 내 팔을 붙잡았다.
-	시야가 흐려져 간다.
-	<<wait 2.0>>
-	...
-	<<FadeIn>>
-	<<DrawFadeIn Ending3 0.75 0.75>>
-	<<wait 4.0>>
-	<<Hide Ending3>>
-	<<Scene NoBG>>
-	<<BackToMainScene GameManager>>
+	<<jump ImJiwon>>
 -> 나라고 밝히자.
 	<<UpdateAct 지수 Jisoo1>>
 	지수: 저 지수예요.
@@ -115,6 +140,55 @@ title: meet_gunwoo
 	<<StopAudioAll>>
 	<<ChangeSceneTo VisualNovelPrefab S2_1_ClubCounter_Bar>>
 	<<jump club_bar>>
+
+===
+
+title: ImJiwon
+
+---
+
+<<CollectEnding GameManager Ending3 Ending3>>
+<<UpdateAct 지수 Jisoo1>>
+지수: 저 지원이예요.
+<<UpdateAct 건우 Geonwoo4>>
+건우: ...
+건우: 너 어떻게 나왔어?
+건우: 그것보다 지원이 너 지금 여기 있으면 안돼.
+건우: 빨리 다른 곳으로...
+<<StopAudioAll>>
+<<Fade black 0.0 1.0 2.0>>
+<<HideAll>>
+<<PlayAudio FallDown 0.8>>
+<<ChangeSceneTo VisualNovelPrefab S1>>
+<<Scene BlackBG>>
+어...
+갑작스레 느껴지는 통증에 머리가 울렸다.
+<<wait 2.0>>
+누군가 내 팔을 붙잡았다.
+시야가 흐려져 간다.
+<<wait 2.0>>
+...
+<<FadeIn>>
+<<DrawFadeIn Ending3 0.75 0.75>>
+<<wait 4.0>>
+<<Hide Ending3>>
+<<Scene NoBG>>
+<<BackToMainScene GameManager>>
+
+===
+
+title: Ending3
+
+---
+
+<<ChangeSceneTo VisualNovelPrefab S1>>
+<<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio BarStreet 0.4>>
+<<Scene ClubEntrance>>
+<<Act 지수 Jisoo1 1.17 0.322 white>>
+<<Act 건우 Geonwoo3 0.322 0.227 white>>
+<<jump ImJiwon>>
+
 ===
 
 title: club_bar_BG
@@ -238,7 +312,8 @@ title: obj_minirefrigerator
 	그래... 하나만 챙기자.
 	<<HideAll>>
 	<color=yellow>* 생수가 든 페트병을 습득했다. *</color>
-	<<AddToInventory VisualNovelPrefab WaterBottle>>
+	//<<AddToInventory2 VisualNovelPrefab WaterBottle>>
+	<<AddWaterBottle VisualNovelPrefab>>
 	<<declare $WaterBottle = 0 as number>>
 	<<set $WaterBottle = 1>>
 	<<SetActiveFalse VisualNovelPrefab Suljango>>
@@ -248,8 +323,10 @@ title: obj_minirefrigerator
 	혹시 모르니 두 개 챙겨두자.
 	<<HideAll>>
 	<color=yellow>* 생수가 든 페트병을 습득했다. *</color>
-	<<AddToInventory VisualNovelPrefab WaterBottle>>
-	<<AddToInventory VisualNovelPrefab WaterBottle>>
+	//<<AddToInventory2 VisualNovelPrefab WaterBottle>>
+	//<<AddToInventory2 VisualNovelPrefab WaterBottle>>
+	<<AddWaterBottle VisualNovelPrefab>>
+	<<AddWaterBottle VisualNovelPrefab>>
 	<<set $WaterBottle = 2>>
 	<<SetActiveFalse VisualNovelPrefab Suljango>>
 	<<FinishedObj VisualNovelPrefab Suljango>>
@@ -1735,6 +1812,7 @@ title: memory_StudentID
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -2029,6 +2107,7 @@ TV: ...
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2139,6 +2218,8 @@ title: obj_staffroomdoor_2
 지금은 들어갈 수 없을 것 같아.
 조금 있다 다시 와볼까...
 <<Hide 지수>>
+
+<<ChangeSceneTo VisualNovelPrefab S2_1_ClubCounter_Bar>>
 <<SetCanvasTo VisualNovelPrefab	false>>
 
 
@@ -2408,6 +2489,7 @@ title: cctvOptions
 	...
 	아리아드네는 뭘 알고 있지 않을까?
 	도움을 요청해봐야겠다.
+	<<AriadneHintOff PhoneController>>
 	<<Hide CCTV_parkinglot_jisoo>>
 	<<Hide DBG>>
 	<<Act 지수 Jisoo2 1.17 0.322 white>>
@@ -2447,6 +2529,7 @@ title: chocotalk_cctv
 //핸드폰, 지수이미지 종료
 <<UI_off MenuUI>>
 <<Hide 지수>>
+<<AriadneHintOn PhoneController>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<IfDone_getout MenuUI>>
 
@@ -2523,12 +2606,12 @@ title: obj_radio
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
 <<PlayAudio Radio2>>
 <i>그럼 ... ..하도록 하자. 이만.</i>
+<<AriadneHintOff PhoneController>>
 <<wait 1.0>>
 무전이 끊겼다.
 <<Hide 지수>>
 //모스부호 사운드 및 상호작용 종료
 <<StartPhoneChat PhoneController 21>>
-//핸드폰 알람음+빨간색 동그라미 (초코톡 알림)
 //지수이미지 노출X
 
 <<SetActiveFalse VisualNovelPrefab InStaffroom_Radio>>
@@ -2554,6 +2637,7 @@ title: event_staffroom
 <<UI_off MenuUI>>
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<AriadneHintOn PhoneController>>
 //무전 핸드폰 전송 후 바로 연결
 //문 밖에서 발소리가 가까워지는 사운드
 <<PlayAudio StaffComeIn 0.6>>
@@ -2846,6 +2930,7 @@ title: memory_VIPlist
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<IfDone_getout MenuUI>>
 
@@ -3161,6 +3246,7 @@ title: obj_customerg_choose_ariadne
 어... 아리아드네다.
 확인해볼까?
 <<Hide 클럽고객G>>
+<<AriadneHintOff PhoneController>>
 <<StartPhoneChat PhoneController 24>>
 //<<SetCanvasTo VisualNovelPrefab false>>
 
@@ -3171,6 +3257,7 @@ title: chocotalk_ariadne_customerg
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<AriadneHintOn PhoneController>>
 <<UI_off MenuUI>>
 //초코톡에서 아리아드네의 톡 확인 후
 ...
@@ -3837,6 +3924,7 @@ title: memory_BrokenGlasses
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<FinishedDialogue VisualNovelPrefab memory_BrokenGlasses>>
 <<if CheckDialogue("obj_navigation") == true>>
 	<<jump event_movetostairs>>
@@ -3898,25 +3986,25 @@ title: stairchocotalk2
 <<UI_off MenuUI>>
 
 
-//2장 & TBC 연결 파트
-<<Fade black 0.0 1.0 3.0>>
-<<RemoveUI MenuUI>>
-<<wait 3.0>>
-<<ChangeSceneTo VisualNovelPrefab S2_11_TBC>>
-<<wait 2.0>>
-<<FadeIn>>
-<<wait 8.0>>
-<<Fade black 0.0 1.0 2.0>>
-<<wait 3.0>>
-<<ChangeSceneTo VisualNovelPrefab S0>>
-<<wait 1.0>>
-<<FadeIn>>
-<<wait 1.0>>
+// 2장 & TBC 연결 파트
+// <<Fade black 0.0 1.0 3.0>>
+// <<RemoveUI MenuUI>>
+// <<wait 3.0>>
+// <<ChangeSceneTo VisualNovelPrefab S2_11_TBC>>
+// <<wait 2.0>>
+// <<FadeIn>>
+// <<wait 8.0>>
+// <<Fade black 0.0 1.0 2.0>>
+// <<wait 3.0>>
+// <<ChangeSceneTo VisualNovelPrefab S0>>
+// <<wait 1.0>>
+// <<FadeIn>>
+// <<wait 1.0>>
+// <<SetCanvasTo VisualNovelPrefab false>>
 <<SetCanvasTo VisualNovelPrefab false>>
-//<<SetCanvasTo VisualNovelPrefab false>>
-//<<ChangeSceneTo VisualNovelPrefab S3_1_OfficetelEntrance>>
-//<<wait 0.5>>
-//<<jump Officetel3>>
+<<ChangeSceneTo VisualNovelPrefab S3_1_OfficetelEntrance>>
+<<wait 0.5>>
+<<jump Officetel3>>
 ===
 
 title: wrongplaceS2

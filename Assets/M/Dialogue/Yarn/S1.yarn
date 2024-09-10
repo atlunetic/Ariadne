@@ -82,23 +82,32 @@ title: S1_path4
 -> 왼쪽으로 가보자.
     <<jump LeftPath>>
 -> 돌아가자.
-    <<StopAudioAll>>
-    <<PlayAudio CardiacArrest 0.4>> 
-    <<Fade white 0.0 1.0 2.0>>
-    <<Scene WhiteBG>>
-    갑자기 눈 앞이 흐려진다.
-    여기서 쓰러지면 안되는데...
-    <<FadeIn>>
-    <<DrawFadeIn Ending0 0.75 0.75>>   
-    <<wait  4.0>>
-    <<Hide Ending0>>
-    <<Scene NoBG>>
-    <<BackToMainScene GameManager>>
-
-        
+    <<jump Ending0>>
 
 ===
 
+title: Ending0
+
+---
+
+<<ChangeSceneTo VisualNovelPrefab S1>>
+<<SetCanvasTo VisualNovelPrefab true>>
+<<StopAudioAll>>
+<<CollectEnding GameManager Ending0 Ending0>>
+<<PlayAudio CardiacArrest 0.4>> 
+<<Fade white 0.0 1.0 2.0>>
+<<Scene WhiteBG>>
+갑자기 눈 앞이 흐려진다.
+여기서 쓰러지면 안되는데...
+<<FadeIn>>
+<<DrawFadeIn Ending0 0.75 0.75>>   
+<<wait  4.0>>
+<<Hide Ending0>>
+<<Scene NoBG>>
+<<BackToMainScene GameManager>>
+
+
+===
 
 title: Minotaur
 
@@ -256,6 +265,7 @@ title: memory_Letter
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -461,9 +471,8 @@ title: FoundJiwonPhone
 어... 연락이 온 것 같은데.
 확인해볼까?
 <<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom>>
-<<wait 1.0>>
+<<wait 0.5>>
 <color=yellow>* 휴대폰 설정을 통해 진행상황을 저장할 수 있습니다. *</color>
-<<wait 2.0>>
 
 <<UI_on MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -475,8 +484,9 @@ title: PhoneBoothEnd2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<CollectEnding GameManager PhoneBoothEnd2 Ending1>>
+<<CollectEnding GameManager PhoneBoothEnd2 Ending2>>
 <<Scene DrugDealBG>>
+<<ChangeSceneTo VisualNovelPrefab S1>>
 이미지 속 장소를 찾아왔다.
 //<<Act 지수 Jisoo2 1.17 0.322 white>>
 D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다.
@@ -498,7 +508,6 @@ D가 알려준 공중전화 부스에는 수상한 봉투가 숨겨져 있었다
 <<Fade black 0.0 1.0 2.0>>
 
 <<wait 2.0>>
-<<ChangeSceneTo VisualNovelPrefab S1>>
 <<Scene BlackBG>>
 
 아...
@@ -1110,6 +1119,7 @@ title: memory_Laptop
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1201,7 +1211,7 @@ title: memory_Meds
 
 //화장실에서 토하고 있는 사람의 실루엣
 //밖에서 그걸 목격한 사람의 실루엣
-<<StopMemory  SceneManager>>
+<<StopMemory SceneManager>>
 <<StopAudioAll>>
 <<UI_on MenuUI>>
 <<Scene black_bg>>
@@ -1215,6 +1225,7 @@ title: memory_Meds
 <<StopAudioAll>>
 <<HideAll>>
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

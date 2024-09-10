@@ -262,7 +262,7 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "근데 왜 지원이걸로 톡하냐?");
         AddChatToLast(false, "아무튼…. 바빠서 나중에 연락할게.");
 
-        ChattingList.Add(new Chatting(false, "해솔", null));  // 13
+        ChattingList.Add(new Chatting(false, "해솔", "JustOffCanvas"));  // 13
         AddChatToLast(true, "해솔아. 나 지수인데.");
         AddChatToLast(true, "혹시 최근에 지원이 만났어?");
         AddChatToLast(false, "연락은 자주 하는데 못본지는 좀 됐지. 왜?");
@@ -385,6 +385,61 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(true, "ARIADNE 팀 연락망");
         AddChatToLast(false, "팀 아리아드네 인스타그램\n@team_ariadne.e\n\n팀 아리아드네 이메일\nariadnewithyou@gmail.com");
 
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 35
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "노트북을 촬영해보면 어때?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 36
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "약통을 촬영해보면 어때?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 37
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "편지를 촬영해봐.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 38
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "책상 밑의 서랍장 두 번째 칸을 확인해 봐.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 39
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "약통이 올려진 서랍장을 열어 봐.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 40
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "건우랑은 연락 해봤어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 41
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "책상에 일기장이라도 있지 않을까?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 42
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "바쁠수록 돌아가라. 공원에서 산책이라도 하는 건 어떨까?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 43
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "술집 거리가 요즘 떠오르는 핫플레이스라던데.");
+        
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 44
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "약은 처방 받았어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 45
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "지원이의 지갑 안을 한번 확인해봐.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 46
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "지갑 안의 영수증에 적혀 있는 장소가 분명 편의점이었지.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 47
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "편의점 옆에 있는 클럽으로 가봐.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 48
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "음? 내가 전에 말해준 것들 중에 아직 안 한게 있는 것 같은데?");
 
         foreach (int i in GameManager.instance.ChattingLog)
             PrintChat(i);

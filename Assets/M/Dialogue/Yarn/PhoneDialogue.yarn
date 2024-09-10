@@ -108,6 +108,7 @@ title: ChooseChatName1
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab ChooseChatName1>>
 <<wait 0.5>>
 
 나라고 밝혀야 하나?
@@ -303,11 +304,14 @@ title: Chatlist
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<wait 0.5>>
+<<wait 0.8>>
 뭐야. 무슨 소리야?
 내 이름은 왜 보내둔 거지? 무서워.
 일단 무시할까...
-들어온 김에 다른 채팅들도 살펴봐야겠다.
+
+<<AriadneHintOn PhoneController>>
+<color=yellow>* 게임 진행 중 막히는 부분이 있다면 아리아드네에게 물어보세요! *</color>
+<color=yellow>* BIC 기념 무제한 힌트 제공 이벤트 진행 중 *</color>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -537,13 +541,10 @@ title: AriadneAlarm
 ===
 
 
+title: JustOffCanvas
+
+---
+<<SetCanvasTo VisualNovelPrefab false>>
 
 
-
-
-
-
-
-
-
-
+===

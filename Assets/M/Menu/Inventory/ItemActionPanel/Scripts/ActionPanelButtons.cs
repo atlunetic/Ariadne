@@ -41,6 +41,11 @@ public class ActionPanelButtons : MonoBehaviour
 
         }
 
+        else if (currentscene.name.StartsWith("S1"))
+        {
+            runner.StartDialogue("WrongItem");
+        }
+
         else if (currentscene.name.StartsWith("S2"))
         {
 

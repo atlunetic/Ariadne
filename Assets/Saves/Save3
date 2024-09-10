@@ -1,65 +1,55 @@
 {
+  "savetime": "2024-08-16 16:16:30 오후",
   "IsLoad": true,
-  "NowScene": "S2_2_Table",
+  "NowScene": "S1_2_JiwonRoom",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
   "ChattingLog": [
-    12
+    12,
+    26,
+    27,
+    29
   ],
   "PhotoList": [
-    "Meds3",
-    "Letter3",
-    "Laptop3"
+    "Laptop19",
+    "Meds14",
+    "Letter8"
   ],
   "items": [
     {
       "ItemType": 0,
+      "itemName": "Wallet"
+    },
+    {
+      "ItemType": 0,
       "itemName": "Hairpin"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "WaterBottle"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "WaterCup"
     }
   ],
   "FindedObjects": [
+    "Letter",
     "Books_Diary",
     "DrawerR_Wallet",
-    "Drawer_Hairpin",
-    "Cup",
-    "Suljango",
-    "ClubTable_Geonwoo"
+    "Drawer_Hairpin"
   ],
   "FindedClues": [
+    "Laptop",
     "Meds",
-    "Letter",
-    "Laptop"
+    "Letter"
   ],
   "FinishedDialogues": [
-    "jisoo'stalk",
+    "DGram1st",
     "Chatlist",
     "Camera",
-    "Map_1",
-    "Park",
-    "Barstreet",
-    "Hospital",
-    "Chocotalk1st",
+    "jisoo'stalk",
     "ChooseChatName1",
     "AfterGeonwooChatAsHerself",
-    "DGram1st",
-    "DropperRecruit",
-    "IceiceChat",
-    "Officetel",
-    "Where",
-    "New711",
-    "SevenEleven",
-    "Club_S1End",
-    "ActiveM"
+    "Chocotalk1st"
   ],
   "GottenPage": [],
-  "visited": 7
+  "RecommendedFriends": [
+    "마약퇴치운동본부",
+    "NeverEverDrug"
+  ],
+  "visited": 0
 }

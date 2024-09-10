@@ -19,6 +19,8 @@ public class SaveGameManager{
     public HashSet<string> RecommendedFriends = new HashSet<string>();
 
     public int visited;
+    public bool IsAriadneHintOn = false;
+    public List<string> S1HintList;
 
 }
 public class GameManager : MonoBehaviour
@@ -54,11 +56,13 @@ public class GameManager : MonoBehaviour
 
 
     public int visited;
+    public bool IsAriadneHintOn = false;
+    public List<string> S1HintList = new List<string> {"Laptop", "Meds", "Letter", "Drawer_Hairpin", "DrawerR_Wallet", "ChooseChatName1", "Books_Diary", "visitPark", "visitBarStreet", "visitHospital"};
 
     public bool S1Ended(){
         return FindedClues.Contains("Laptop") && FindedClues.Contains("Meds") && FindedClues.Contains("Letter") &&
                FindedObjects.Contains("Drawer_Hairpin") && FindedObjects.Contains("DrawerR_Wallet") &&
-               (FinishedDialogues.Contains("AfterGeonwooChatAsJiwon") || FinishedDialogues.Contains("AfterGeonwooChatAsHerself")) &&
+               FinishedDialogues.Contains("ChooseChatName1") &&
                FinishedDialogues.Contains("Chatlist") && FindedObjects.Contains("Books_Diary") &&
                visited == 7;
     }
@@ -85,6 +89,8 @@ public class GameManager : MonoBehaviour
         saveGameManager.GottenPage = instance.GottenPage;
         saveGameManager.RecommendedFriends = instance.RecommendedFriends;
         saveGameManager.visited = instance.visited;
+        saveGameManager.IsAriadneHintOn = instance.IsAriadneHintOn;
+        saveGameManager.S1HintList = instance.S1HintList;
 
         return saveGameManager;
     }
@@ -105,5 +111,7 @@ public class GameManager : MonoBehaviour
         instance.GottenPage = saveGameManager.GottenPage;
         instance.visited = saveGameManager.visited;
         instance.RecommendedFriends = saveGameManager.RecommendedFriends;
+        instance.IsAriadneHintOn = saveGameManager.IsAriadneHintOn;
+        instance.S1HintList = saveGameManager.S1HintList;
     }
 }

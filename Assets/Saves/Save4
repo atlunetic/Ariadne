@@ -1,80 +1,53 @@
 {
+  "savetime": "2024-08-16 16:30:01 오후",
   "IsLoad": true,
-  "NowScene": "S2_3_1_StaffOnlyLocker",
+  "NowScene": "S1_2_JiwonRoom",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
   "ChattingLog": [
-    12
+    19,
+    18,
+    25,
+    0
   ],
   "PhotoList": [
-    "Meds2",
-    "Laptop2",
-    "Letter2"
+    "Letter9",
+    "Laptop20",
+    "Meds15"
   ],
   "items": [
     {
       "ItemType": 0,
+      "itemName": "Wallet"
+    },
+    {
+      "ItemType": 0,
       "itemName": "Hairpin"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "Cup"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "Key"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "DrugJelly"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "Clothes"
     }
   ],
   "FindedObjects": [
     "Letter",
-    "Books_Diary",
     "DrawerR_Wallet",
     "Drawer_Hairpin",
-    "3Drug",
-    "Cup",
-    "ClubTable_NPCD",
-    "menu_philopon",
-    "ClubTable_Geonwoo",
-    "StaffRoom_staff_C",
-    "InStaffroom_Key",
-    "Toilet_costomerF",
-    "Locker"
+    "Books_Diary"
   ],
   "FindedClues": [
-    "Meds",
+    "Letter",
     "Laptop",
-    "Letter"
+    "Meds"
   ],
   "FinishedDialogues": [
-    "jisoo'stalk",
-    "Chatlist",
     "DGram1st",
+    "Chatlist",
     "Chocotalk1st",
     "ChooseChatName1",
-    "AfterGeonwooChatAsHerself",
     "Camera",
     "Map_1",
-    "Park",
-    "Barstreet",
-    "Hospital",
-    "Where",
-    "New711",
-    "SevenEleven",
-    "Club_S1End",
-    "ActiveM"
+    "AfterGeonwooChatAsJiwon",
+    "Hospital"
   ],
-  "GottenPage": [
-    "Page4",
-    "Page7"
-  ],
-  "visited": 7
+  "GottenPage": [],
+  "RecommendedFriends": [],
+  "visited": 4
 }
