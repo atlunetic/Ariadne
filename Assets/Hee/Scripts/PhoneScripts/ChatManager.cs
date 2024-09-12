@@ -23,6 +23,7 @@ public class ChatManager : MonoBehaviour
         profileImage.Add("마약퇴치운동본부", profileSprite[4]);
         profileImage.Add("NeverEverDrug", profileSprite[5]);
         profileImage.Add("Team ARIADNE", profileSprite[6]);
+        profileImage.Add("은재", profileSprite[7]);
     }
     public struct chat{
         public bool JisooSaying;  // 지수의 대사이면 true
@@ -443,31 +444,31 @@ public class ChatManager : MonoBehaviour
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 49
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "건우한테 말은 걸어봤어?");
+        AddChatToLast(false, "건우가 무언가 알고 있지 않을까? 찾아서 말을 걸어보자.");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 50
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "Staff Room 안을 둘러보면 어때?");
+        AddChatToLast(false, "CCTV를 확인하려면 어디로 가야 할까?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 51
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "건우의 학생증을 촬영해보면 어때?");
+        AddChatToLast(false, "건우가 뭔가 흘리고 갔어. 촬영해보면 기억이 돌아올지도 몰라.");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 52
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "휴지를 촬영해보면 어때?");
+        AddChatToLast(false, "화장실 휴지가 이상한 위치에 있던데... 혹시 중요한 증거는 아닐까?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 53
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "화장실에 있는 사람에게서 뭔가 얻을 수 있을 것 같은데.");
+        AddChatToLast(false, "화장실에 있는 취객을 도와줘보면 어때? 착한 일을 하면 복이 온다잖아.");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 54
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "VIP 고객 명단을 촬영해보면 어때?");
+        AddChatToLast(false, "VIP 고객 명단을 촬영해놓자. 혹시 나중에 증거로 쓰일지도 모르잖아?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 55
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "VIP 고객 명단에 누가 있는지 궁금하지 않아?");
+        AddChatToLast(false, "책상 왼쪽 구석에 있는 서류뭉치를 확인해봐.");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 56
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
@@ -475,11 +476,11 @@ public class ChatManager : MonoBehaviour
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 57
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "Staff Room 책상 밑은 확인해봤어?");
+        AddChatToLast(false, "책상 밑 박스를 열어볼래?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 58
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "클럽 직원들이 무슨 얘기를 하고 있는 것 같은데. 무전기를 확인해봐.");
+        AddChatToLast(false, "책상 위에 무전기가 있어. 직원들이 무슨 얘기를 하고 있는 것 같은데...");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 59
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
@@ -491,11 +492,11 @@ public class ChatManager : MonoBehaviour
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 61
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "테이블 근처에 무슨 문이 있던데. 혹시 가봤어?");
+        AddChatToLast(false, "저기 어떤 직원이 테이블 쪽으로 가는 것 같아. 한번 따라가보자.");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 62
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "직원 복장이라도 입고 있으면 의심은 안 받겠지. VIP Room에 들어가볼래?");
+        AddChatToLast(false, "VIP 룸에 가보는 건 어때? 뜻밖의 정보를 얻을 수 있을지도 몰라.");
 
         foreach (int i in GameManager.instance.ChattingLog)
             PrintChat(i);

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn.Unity;
 using TMPro;
 
 public class ChocoTalkController : MonoBehaviour
@@ -29,6 +30,7 @@ public class ChocoTalkController : MonoBehaviour
     public GameObject trend1;
     public GameObject trend2;
     public GameObject[] RecommendedFriends;
+    public GameObject ClubCustomerE;
     void Awake()
     {
         if (instance == null)
@@ -44,6 +46,11 @@ public class ChocoTalkController : MonoBehaviour
         ChatMap.Add("마약퇴치운동본부", RecommendedFriends[0]);
         ChatMap.Add("NeverEverDrug", RecommendedFriends[1]);
         ChatMap.Add("Team ARIADNE", RecommendedFriends[2]);
+        CreateChatRoom("은재");
+        if(!GameManager.instance.FinishedDialogues.Contains("letEknow")){
+            chatbuttons["은재"].gameObject.SetActive(false);
+            ClubCustomerE.SetActive(false);
+        }
     }
 
     public void CreateChatRoom(string name){  // 채팅방 생성
@@ -121,5 +128,11 @@ public class ChocoTalkController : MonoBehaviour
     }
     public void ativeTrend2(){
         PhoneController.instance.ActiveTab(trend2);
+    }
+
+    [YarnCommand("OpenHiddenStory")]
+    public void OpenHiddenStory(){
+        chatbuttons["은재"].gameObject.SetActive(true);
+        ClubCustomerE.SetActive(true);
     }
 }
