@@ -659,6 +659,8 @@ title: letEknow
 	//(이후 기본 복장으로 자동 변경)
 	//상호작용 종료 및 히든 스토리 해금 (초코톡에 클럽 고객E의 프로필이 생성됨)
 	<color=yellow>* 직원 복장 옷을 벗었다. *</color>
+	<<FinishedDialogue VisualNovelPrefab letEknow>>
+	<<OpenHiddenStory ChocoTalkController>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
