@@ -67,6 +67,13 @@ public class ActionPanelButtons : MonoBehaviour
                 {
                     runner.StartDialogue("UsedWaterCup");
                 }
+
+                else if (connectedItem.itemName != "WaterCup" && currentscene.name == "S2_2_Table")
+                {
+                    runner.StartDialogue("NotWaterGlass");
+                }
+
+                else { runner.StartDialogue("WrongItem"); }
             }
 
 

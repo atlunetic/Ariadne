@@ -1,22 +1,95 @@
 {
-  "savetime": "2024-06-10 20:21:05 오후",
+  "savetime": "2024-09-12 15:07:23 오후",
   "IsLoad": true,
-  "NowScene": "S1_2_JiwonRoom",
+  "NowScene": "S2_2_Table",
   "NumOfScreenShots": 1,
-  "GeonWooScore": 0,
+  "GeonWooScore": 9,
   "SaengSoo": 0,
-  "ChattingLog": [],
-  "PhotoList": [],
-  "items": [],
-  "FindedObjects": [
-    "Letter"
+  "ChattingLog": [
+    19,
+    18,
+    25,
+    12,
+    21,
+    20
   ],
-  "FindedClues": [],
+  "PhotoList": [
+    "Letter0",
+    "Laptop0",
+    "Meds0",
+    "VIPlist2"
+  ],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Hairpin"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "WaterBottle"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Key"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Clothes"
+    }
+  ],
+  "FindedObjects": [
+    "Letter",
+    "Books_Diary",
+    "DrawerR_Wallet",
+    "Drawer_Hairpin",
+    "Suljango",
+    "Cup",
+    "ClubTable_Geonwoo",
+    "Staffroom_Door",
+    "InStaffroom_Key",
+    "InStaffroom_Radio",
+    "InStaffroom_VIPlist",
+    "InStaffroom_cctv",
+    "obj_staffroomdoor",
+    "ClubTable_NPCD",
+    "ClubTable_NPCE"
+  ],
+  "FindedClues": [
+    "Letter",
+    "Laptop",
+    "Meds",
+    "VIPlist"
+  ],
   "FinishedDialogues": [
-    "ChocotalkAlarm",
-    "DgramAlarm",
-    "Camera"
+    "jisoo'stalk",
+    "Chatlist",
+    "DGram1st",
+    "Chocotalk1st",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsHerself",
+    "Camera",
+    "Map_1",
+    "Park",
+    "Barstreet",
+    "Hospital",
+    "Where",
+    "New711",
+    "SevenEleven",
+    "Club_S1End",
+    "event_staffroom",
+    "event_gunwoo_begin1",
+    "obj_staffroomdoor",
+    "chocotalk_cctv",
+    "letsgetout",
+    "ActiveM",
+    "obj_customers",
+    "E_Clothes"
   ],
   "GottenPage": [],
-  "visited": 0
+  "RecommendedFriends": [],
+  "visited": 7,
+  "IsAriadneHintOn": false,
+  "S1HintList": null,
+  "S2HintList": null,
+  "StaffroomHintList": null
 }
