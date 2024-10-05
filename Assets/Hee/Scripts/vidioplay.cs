@@ -34,8 +34,8 @@ public class vidioplay : MonoBehaviour
         runner.StartDialogue("lastevent_intro");
         GameManager.instance.FinishedDialogues.Add("lastevent_intro");
         ariadne1.SetActive(true);
-        ariadne1.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {ariadne1.SetActive(false);};
-        Invoke("playloop", 2.0f);                                                                             
+        ariadne1.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {ariadne1.SetActive(false);ariadne2.SetActive(true);};
+        //Invoke("playloop", 2.0f);                                                                             
     }
 
     void playloop(){
