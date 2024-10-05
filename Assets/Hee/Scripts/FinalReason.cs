@@ -89,7 +89,7 @@ public class FinalReason : MonoBehaviour
         perfectImg.GetComponent<Image>().CrossFadeAlpha(1.0f,2.0f,false);
         yield return new WaitForSeconds(2f);
         perfectVid.SetActive(true);
-        perfectVid.GetComponent<VideoPlayer>().Play();
+        // perfectVid.GetComponent<VideoPlayer>().Play();
         vidioplay.instance.FinalreasonCanvas.SetActive(false);
         perfectImg.SetActive(false);
 
