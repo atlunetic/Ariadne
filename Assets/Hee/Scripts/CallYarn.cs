@@ -155,7 +155,10 @@ public class CallYarn : MonoBehaviour
             else if(GameManager.instance.NowScene.StartsWith("S3")){
                 SceneManager.LoadScene(GameManager.instance.NowScene);
                 InS3();
-            } 
+            }
+            else if(GameManager.instance.NowScene.StartsWith("S4")){
+                SceneManager.LoadScene(GameManager.instance.NowScene);
+            }
             else{
                 switch(GameManager.instance.NowScene){
                     case "S1_2_JiwonRoom": MapController.instance.GoHome(); break;
@@ -194,7 +197,7 @@ public class CallYarn : MonoBehaviour
         MapController.instance.Clubbutton.enabled = false;
     }
     public void InS3(){
-        MapController.instance.CurrPoint.anchoredPosition = new Vector2(715,204);
+        MapController.instance.CurrPoint.anchoredPosition = new Vector2(176,205);
         MapController.instance.Homebutton.onClick.RemoveAllListeners();
         MapController.instance.Parkbutton.onClick.RemoveAllListeners();
         MapController.instance.Clubbutton.onClick.RemoveAllListeners();

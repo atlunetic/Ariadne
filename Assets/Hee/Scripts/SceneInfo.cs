@@ -11,7 +11,7 @@ public class SceneInfo : MonoBehaviour
     public GameObject[] Cluelist;  // 카메라로 찍어야 하는 증거 오브젝트들
     public GameObject[] MemoriesBG;  // 기억 돌아올때 연출 배경
 
-    public bool IsS4 = false;
+    public bool IsS4 = false;  // 씬 인스펙터 창에서 설정
 
     void Awake(){
         SceneManager.sceneLoaded += SceneManage;
@@ -92,5 +92,11 @@ public class SceneInfo : MonoBehaviour
     [YarnCommand("BGon")]
     public void BGon(){
         GameObject.Find("Main Camera").GetComponent<AudioSource>().Play();
+    }
+
+    [YarnFunction("IsS4")]
+    public static bool returnIsS4(){
+        if(GameManager.instance.NowScene.StartsWith("S4")) return true;
+        else return false;
     }
 }

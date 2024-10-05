@@ -167,10 +167,10 @@ title: realmemory_3
 //직원은 그냥 텍스트로만
 직원1: 알겠습니다.
 직원2: 나가시죠.
-<<wait 2.0>>
+<<wait 1.0>>
 
 //지원4
-<<UpdateAct 지원 Jiwon4>>
+<<UpdateAct 지원 JIwon4>>
 지원: 잠시만. 건우 오빠.
 <<UpdateAct 건우 Geonwoo2>>
 건우: ...

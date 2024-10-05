@@ -159,7 +159,8 @@ public class SaveAndLoad : MonoBehaviour
         tempCam.SetActive(false);
         nowLoading.SetActive(false);
         var runner = FindObjectOfType<DialogueRunner>();
-        runner.StartDialogue("RandomN");
+        if(!runner.IsDialogueRunning)
+            runner.StartDialogue("RandomN");
     }
 
     [YarnCommand("BackToMainScene")]

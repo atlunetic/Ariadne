@@ -46,8 +46,8 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     
     [YarnCommand("UI_off")]
     public void UI_off(){
-        if(GameManager.instance.NowScene.StartsWith("S4")) return;
         BlockClick = false;
+        if(GameManager.instance.NowScene.StartsWith("S4")) return;
         UIMode.SetActive(false);
         UIButtons.SetActive(true);
         Phone.SetActive(false);

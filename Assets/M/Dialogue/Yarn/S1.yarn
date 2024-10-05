@@ -253,19 +253,21 @@ title: memory_Letter
 
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
-<<UI_on MenuUI>>
-<<Scene black_bg>>
-<<PlayAudio EarSound 0.8>>
-<<PlayAudio WhiteNoise 0.6>>
+<<if IsS4() == false>>
+    <<UI_on MenuUI>>
+    <<Scene black_bg>>
+    <<PlayAudio EarSound 0.8>>
+    <<PlayAudio WhiteNoise 0.6>>
 
-아.. 방금 뭐였지?
-<<wait 0.5>>
-..어지러워
+    아.. 방금 뭐였지?
+    <<wait 0.5>>
+    ..어지러워
 
-<<StopAudioAll>>
-<<HideAll>>
-<<UI_off MenuUI>>
-<<Scene NoBG>>
+    <<StopAudioAll>>
+    <<HideAll>>
+    <<UI_off MenuUI>>
+    <<Scene NoBG>>
+<<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1107,19 +1109,22 @@ title: memory_Laptop
 ...
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
-<<UI_on MenuUI>>
-<<Scene black_bg>>
-<<PlayAudio EarSound 0.8>>
-<<PlayAudio WhiteNoise 0.6>>
 
-...
-<<wait 0.5>>
-..자꾸 헛 것이 보이네.
+<<if IsS4() == false>>
+    <<UI_on MenuUI>>
+    <<Scene black_bg>>
+    <<PlayAudio EarSound 0.8>>
+    <<PlayAudio WhiteNoise 0.6>>
 
-<<StopAudioAll>>
-<<HideAll>>
-<<UI_off MenuUI>>
-<<Scene NoBG>>
+    ...
+    <<wait 0.5>>
+    ..자꾸 헛 것이 보이네.
+
+    <<StopAudioAll>>
+    <<HideAll>>
+    <<UI_off MenuUI>>
+    <<Scene NoBG>>
+<<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1213,19 +1218,22 @@ title: memory_Meds
 //밖에서 그걸 목격한 사람의 실루엣
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
-<<UI_on MenuUI>>
-<<Scene black_bg>>
-<<PlayAudio EarSound 0.8>>
-<<PlayAudio WhiteNoise 0.6>>
 
-...
-<<wait 0.5>>
-내가 지금 피곤한가..?
+<<if IsS4() == false>>
+    <<UI_on MenuUI>>
+    <<Scene black_bg>>
+    <<PlayAudio EarSound 0.8>>
+    <<PlayAudio WhiteNoise 0.6>>
 
-<<StopAudioAll>>
-<<HideAll>>
-<<UI_off MenuUI>>
-<<Scene NoBG>>
+    ...
+    <<wait 0.5>>
+    내가 지금 피곤한가..?
+
+    <<StopAudioAll>>
+    <<HideAll>>
+    <<UI_off MenuUI>>
+    <<Scene NoBG>>
+<<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

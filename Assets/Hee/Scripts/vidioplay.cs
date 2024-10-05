@@ -19,15 +19,23 @@ public class vidioplay : MonoBehaviour
     void Awake(){instance = this;}
     void Start()
     {
-        runner = FindAnyObjectByType<DialogueRunner>();
-        runner.StartDialogue("lastevent_intro");
-        ariadne1.SetActive(true);
-        ariadne1.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {ariadne1.SetActive(false);};
-        Invoke("playloop", 2.0f);
         GameManager.instance.FindedObjects.Remove("InStaffroom_VIPlist");                                                                                
         GameManager.instance.FinishedDialogues.Remove("obj_navigation");                                                                                
         GameManager.instance.FinishedDialogues.Remove("GeonwooCard");                                                                                
-        GameManager.instance.FinishedDialogues.Remove("R1403Cardkey");                                                                                
+        GameManager.instance.FinishedDialogues.Remove("R1403Cardkey");
+        runner = FindAnyObjectByType<DialogueRunner>();
+
+        if(GameManager.instance.FinishedDialogues.Contains("lastevent_intro")){
+            ariadne1.SetActive(false);
+            Fianl();
+            return;
+        }
+        
+        runner.StartDialogue("lastevent_intro");
+        GameManager.instance.FinishedDialogues.Add("lastevent_intro");
+        ariadne1.SetActive(true);
+        ariadne1.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {ariadne1.SetActive(false);};
+        Invoke("playloop", 2.0f);                                                                             
     }
 
     void playloop(){
@@ -43,7 +51,10 @@ public class vidioplay : MonoBehaviour
 
     [YarnCommand("Break")]
     public void breakmemory(){
-        if(FinalReason.instance.rightanswer.Count == 0) runner.StartDialogue(FinalReason.instance.ending);
+        if(FinalReason.instance.rightanswer.Count == 0) {
+            StartCoroutine("fordelaystart");
+            return;
+        }
         int i = FinalReason.instance.rightanswer.Dequeue();
         StartCoroutine(breakglasses(i));
     }
@@ -65,6 +76,11 @@ public class vidioplay : MonoBehaviour
         breakglass[12].GetComponent<Image>().canvasRenderer.SetAlpha(1.0f);
         
         runner.StartDialogue("realmemory_"+next.ToString());
+    }
+
+    IEnumerator fordelaystart(){
+        yield return new WaitForSeconds(1f);
+        runner.StartDialogue(FinalReason.instance.ending);
     }
 
 }
