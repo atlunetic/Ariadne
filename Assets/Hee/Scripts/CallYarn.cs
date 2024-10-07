@@ -59,6 +59,7 @@ public class CallYarn : MonoBehaviour
         if(GameManager.instance.IsLoad) Menu.instance.ActivePI();
         if(GameManager.instance.FindedObjects.Contains("Books_Diary")) Menu.instance.ActiveD();
         if(FinishedDialogues.Contains("ActiveM")) Menu.instance.ActiveM();
+        if(FinishedDialogues.Contains("CheckMore")) Menu.instance.CheckMore();
 
         Callbybutton(gallerybutton, "Gallery");  // 갤러리 켰을 때
 

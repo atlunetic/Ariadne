@@ -58,6 +58,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
 
     void Start(){
         PhoneButton.GetComponent<Button>().onClick.AddListener(where);
+        MoveS2Button.GetComponent<Button>().onClick.AddListener(()=>{ActiveMoveS2();});
     }
     public void where(){
         if(!GameManager.instance.S1Ended()) return;
@@ -103,15 +104,33 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
         PhoneButton.SetActive(true);
         InventoryButton.SetActive(true);
     }
+
     [YarnCommand("ActiveD")]
     public void ActiveD(){
         DiaryButton.SetActive(true);
     }
+
+    [YarnCommand("CheckMore")]
+    public void CheckMore(){
+        var runner = FindObjectOfType<DialogueRunner>();
+        MoveS2Button.GetComponent<Button>().onClick.RemoveAllListeners();
+        MoveS2Button.GetComponent<Button>().onClick.AddListener(()=>{runner.StartDialogue("CheckMore");});
+        GameManager.instance.FinishedDialogues.Add("CheckMore");
+    }
+
+    [YarnCommand("CheckEnd")]
+    public void CheckEnd(){
+        MoveS2Button.GetComponent<Button>().onClick.RemoveAllListeners();
+        MoveS2Button.GetComponent<Button>().onClick.AddListener(()=>{ActiveMoveS2();});
+        GameManager.instance.FinishedDialogues.Remove("CheckMore");
+    }
+
     [YarnCommand("deActiveM")]
     public void deActiveM(){
         MoveS2Button.SetActive(false);
         GameManager.instance.FinishedDialogues.Remove("ActiveM");
     }
+
     [YarnCommand("IfDone_getout")]
     public void IfDone_getout(){
         if(!GameManager.instance.StaffroomEnded()) return;

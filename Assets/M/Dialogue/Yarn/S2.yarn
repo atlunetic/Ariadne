@@ -2243,7 +2243,7 @@ title: obj_staffroomdoor_1
 직원이 스태프룸 문을 열어줬다.
 <<SetActiveFalse VisualNovelPrefab Staffroom_Door>>
 <<FinishedObj VisualNovelPrefab Staffroom_Door>>
-<<deActiveM MenuUI>>
+<<CheckMore MenuUI>>
 <<ChangeSceneTo VisualNovelPrefab S2_4_1_StaffRoom>>
 <<jump club_staffroom_inside>>
 
@@ -2443,7 +2443,7 @@ title: game_openthedoor_success
 ...
 <<StopAudio Minigame>>
 <<ChangeSceneTo VisualNovelPrefab S2_4_1_StaffRoom>>
-<<deActiveM MenuUI>>
+<<CheckMore MenuUI>>
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<jump club_staffroom_inside>>
@@ -3026,7 +3026,7 @@ title: letsgetout
 <<Act 지수 Jisoo1 1.17 0.322 white>>
 여긴 더 볼 게 없는 것 같아. 나가자.
 <<Hide 지수>>
-<<ActiveM MenuUI>>
+<<CheckEnd MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
