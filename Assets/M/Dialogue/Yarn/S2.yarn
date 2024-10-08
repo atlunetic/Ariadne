@@ -3019,6 +3019,16 @@ title: obj_locker
 
 ===
 
+title: CheckMore
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+좀 더 둘러봐야 할 것 같아.
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
 title: letsgetout
 
 ---
