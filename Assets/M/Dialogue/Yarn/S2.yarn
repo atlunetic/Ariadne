@@ -2860,6 +2860,9 @@ title: event_staffroom_gunwoo2_choose
 	<<endif>>
 -> 락카 안
 	<<Hide 지수>>
+	<<PlayAudio lockerOpen_h>>
+	<<wait 2.0>>
+	<<PlayAudio lockerClose_h(2)>>
 	락카 안에 숨자마자 누군가 들어왔다
 	<<Fade black 0.0 1.0 0.3>>
 	...
@@ -3072,7 +3075,11 @@ title: yay
 이대로 들어가면 의심받을 것 같아.
 직원 복장을 입을까?
 
-<<jump club_viproom_changeuniform>>
+-> 입자
+   <<jump club_viproom_changeuniform>>
+-> 입지말자
+   그냥 들어갈 순 없을 것 같은데...
+   <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -3080,8 +3087,10 @@ title: club_viproom_changeuniform
 
 ---
 
-입었다.
-
+<<Scene BlackBG>>
+<<PlayAudio ClothesChange_h(2)>>
+화장실로 가서 옷을 갈아입었다.
+<<Scene NoBG>>
 //club_viproom_entry 이후 플레이어가 인벤토리에서 직원복장 사용시
 직원 복장을 입고 있으니까...
 의심 받을 일은 없겠지?
@@ -3091,6 +3100,7 @@ title: club_viproom_changeuniform
 <<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
 <<jump club_viproom>>
 <<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: club_viproom
@@ -3728,11 +3738,12 @@ CCTV에 찍힌 그 인형이야.
 <<wait 1.0>>
 
 ...
-인벤토리를 살펴보자.
+내가 지금 가지고 있는 게...
 //건우, 지수 이미지 종료
 <<HideAll>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
+
 
 
 ===
@@ -3792,7 +3803,7 @@ title: inventory_drugjelly
 ...
 
 <<wait 1.0>>
-
+<<PlayAudio stairdown_h>>
 건우 오빠가 수상한 사람을 데리고 계단을 내려갔다.
 <<wait 1.0>>
 지금이야. 밖으로 나가자.

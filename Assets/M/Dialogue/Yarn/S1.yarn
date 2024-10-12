@@ -16,9 +16,9 @@ tags:
 
 <<Scene Maze>>
 
-지수: 길을 잃었다.
-지수: 미로 속 가장 깊은 곳에 괴물이 있다고 했는데...
-지수: 내가 잡을 수 있을까.
+길을 잃었다.
+미로 속 가장 깊은 곳에 괴물이 있다고 했는데...
+내가 잡을 수 있을까.
 <<jump S1_path1>>
 
 ===
@@ -45,7 +45,7 @@ title: LeftPath
 <<Scene Leftpath>>
 왼쪽에 길이 나있다.
 
-<<PlayAudio MonsterSound1 0.7>>
+<<PlayAudio monster1_h 0.3>>
 
 <<wait 1.0>>
 ...
@@ -113,13 +113,13 @@ title: Minotaur
 
 ---
 //(Chapter 1) 앞으로 가보자. 선택시
-<<PlayAudio MonsterSound2 0.7>>
+<<PlayAudio monster2_h 0.7>>
 <<Scene Ceiling>>
 저게 말로만 듣던 미노타우르스...
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
 검을 쥔 손에 힘이 들어가지 않아.
 
-<<PlayAudio MonsterSound3 0.7>>
+<<PlayAudio monster3_h 0.5>>
 <<wait 1.0>>
 
 녀석이 서서히 내게 다가온다.
@@ -415,7 +415,8 @@ title: JisooPhone
 <<PlayAudio PhoneAlarm>>
 <<wait 0.5>>
 <<UpdateAct 지수 Jisoo4>>
-어? 설마 휴대폰도 두고 갔나?
+이건 지원이 휴대폰 알람음인데?
+설마 휴대폰도 두고 갔나?
 
 <<wait 0.5>>
 <<PlayAudio PhoneOff>>
@@ -475,7 +476,7 @@ title: FoundJiwonPhone
 <<ChangeSceneTo VisualNovelPrefab S1_2_JiwonRoom>>
 <<wait 0.5>>
 <color=yellow>* 휴대폰 설정을 통해 진행상황을 저장할 수 있습니다. *</color>
-
+<color=yellow>* 마우스 드래그를 통해 대화 내역을 확인할 수 있습니다. *</color>
 <<UI_on MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
