@@ -25,6 +25,8 @@ public class ActionPanelButtons : MonoBehaviour
         item connectedItem = currentSlot.Item;
         Inventory.instance.UseItem(connectedItem.itemName);
         Debug.Log(connectedItem.itemName + " is currently being used");
+        //close inventory after clicking use
+        Menu.instance.UI_off();
 
 
 

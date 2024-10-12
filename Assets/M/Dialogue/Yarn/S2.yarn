@@ -2011,21 +2011,25 @@ title: obj_staffonly
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
-...
-들어가면 안될 것 같은데.
-
-...
-그래도 살펴볼까?
-
--> 일단 놔두자
-	아니야... 다른 곳부터 보자.
-	<<SetCanvasTo VisualNovelPrefab false>>
--> 살펴보자
-	혹시 모르니 살펴보자.
+<<if CheckDialogue("obj_staffonly") == false>>
+	...
+	들어가면 안될 것 같은데.
+	...
+	그래도 살펴볼까?
+	->일단 놔두자
+		아니야... 다른 곳부터 보자.
+		<<SetCanvasTo VisualNovelPrefab false>>
+	-> 살펴보자
+		혹시 모르니 살펴보자.
+		<<ChangeSceneTo VisualNovelPrefab S2_3_1_StaffOnlyLocker>>
+		청소용품만 있을 줄 알았는데.
+		직원용 사물함이 있다.
+		<<FinishedDialogue VisualNovelPrefab obj_staffonly>>
+		<<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
 	<<ChangeSceneTo VisualNovelPrefab S2_3_1_StaffOnlyLocker>>
-	청소용품만 있을 줄 알았는데.
-	직원용 사물함이 있다.
 	<<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
 
 ===
 
@@ -3928,16 +3932,27 @@ title: obj_navigation
 검색 목록을 볼 수 있나?
 
 ...
-//네비게이션 검색 목록 이미지
-<<DrawFadeIn DBG 0.75 0.75 0.2>>
-<<Draw NaviList 0.75 0.75>>
+<<jump ChooseDestination>>
 
+===
+
+title: ChooseDestination
+
+---
+
+<<if CheckDialogue("ChooseDestination")==false>>
+	//네비게이션 검색 목록 이미지
+	<<DrawFadeIn DBG 0.75 0.75 0.2>>
+	<<Draw NaviList 0.75 0.75>>
+<<endif>>
 -> 클럽 A
 	...
 	이 클럽의 주소인 것 같다.
-	<<Hide NaviList>>
-	<<Hide DBG>>
-	<<SetCanvasTo VisualNovelPrefab false>>
+	//<<Hide NaviList>>
+	//<<Hide DBG>>
+	//<<SetCanvasTo VisualNovelPrefab false>>
+	<<FinishedDialogue VisualNovelPrefab ChooseDestination>>
+	<<jump ChooseDestination>>
 -> XX 오피스텔
 	...
 	<<wait 1.0>>
@@ -3950,13 +3965,22 @@ title: obj_navigation
 		<<jump event_movetostairs>>
 	<<endif>>
 	<<SetCanvasTo VisualNovelPrefab false>>
--> 마약 떡볶이&마약 김밥
+-> 마약 김밥 & 떡볶이
 	...
 	여기를 갔었나보네.
-	<<Hide NaviList>>
-	<<Hide DBG>>
-	<<SetCanvasTo VisualNovelPrefab false>>
+	//<<Hide NaviList>>
+	//<<Hide DBG>>
+	//<<SetCanvasTo VisualNovelPrefab false>>
+	<<FinishedDialogue VisualNovelPrefab ChooseDestination>>
+	<<jump ChooseDestination>>
 
+//log Oct10
+//<<Hide NaviList>>
+//<<Hide DBG>>
+//<<SetCanvasTo VisualNovelPrefab false>>
+	//<<jump ChooseDestination>> ,finisheddialogue, if added
+//back to list for wrong choices(not to the beginning of nav)
+//solved DBG nav list recurrence
 ===
 
 title: obj_brokenglasses

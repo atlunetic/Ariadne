@@ -553,16 +553,28 @@ title: Park
 
 // 장소 1. 동네 공원
 
-<<SetCanvasTo VisualNovelPrefab true>>
-동네 공원이다.
-지원이랑 가끔 산책하러 갔었지...
-동네 공원으로 가볼까?
-    -> 가보자
-        <<GoPark MapController>>
-        <<SetCanvasTo VisualNovelPrefab false>>
-    -> 가지말자
-        다른 곳으로 가자...
-        <<SetCanvasTo VisualNovelPrefab false>>
+<<if CheckDialogue("Park")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    공원에 다시 가볼까?
+        -> 가보자.
+            <<GoPark MapController>>
+            <<SetCanvasTo VisualNovelPrefab false>>
+        -> 가지 말자.
+            다른 곳으로 가자...
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    동네 공원이다.
+    지원이랑 가끔 산책하러 갔었지...
+    동네 공원으로 가볼까?
+        -> 가보자
+            <<GoPark MapController>>
+            <<FinishedDialogue VisualNovelPrefab Park>>
+            <<SetCanvasTo VisualNovelPrefab false>>
+        -> 가지말자
+            다른 곳으로 가자...
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
 
 ===
 
@@ -686,16 +698,29 @@ title: Barstreet
 
 ---
 
-<<SetCanvasTo VisualNovelPrefab true>>
+
+<<if CheckDialogue("Barstreet")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    술집 거리에 다시 가볼까?
+        -> 가보자.
+            <<GoBarStreet MapController>>
+            <<SetCanvasTo VisualNovelPrefab false>>
+        -> 가지 말자.
+            다른 곳으로 가자...
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<SetCanvasTo VisualNovelPrefab true>>
 예전에 자주 갔던 곳인데.
 지원이도 한 번 데려가긴 했었지.
 술집 거리로 가볼까?
     -> 가보자
         <<GoBarStreet MapController>>
+        <<FinishedDialogue VisualNovelPrefab BarStreet>>
         <<SetCanvasTo VisualNovelPrefab false>>
     -> 가지말자
         다른 곳으로 가자...
         <<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
 
 ===
 
@@ -846,7 +871,7 @@ title: Officetel
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
-뭔가 번쩍번쩍한 오피스텔이네.
+오피스텔이다.
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

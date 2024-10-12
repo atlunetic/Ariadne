@@ -46,7 +46,7 @@ public class Inventory : MonoBehaviour
             {
                 clickCount++;
 
-                if (clickCount >= 2)
+                if (clickCount >= 1) //clickCount >= 2
                 {
                     Debug.Log("First Click Ended");
                     string nomore = usingitem.itemName;

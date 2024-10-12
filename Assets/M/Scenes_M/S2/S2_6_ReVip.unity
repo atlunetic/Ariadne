@@ -182,7 +182,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c51f40c6c53a7834bb7d0ed283836d0e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a20a5b76e4dc5d4c8166999cf048f43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -222,11 +222,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundRenderer: {fileID: 271568868}
   backgrounds:
-  - {fileID: 21300000, guid: c51f40c6c53a7834bb7d0ed283836d0e, type: 3}
-  - {fileID: 21300000, guid: 04c9559f92fe8d540a973758ca338028, type: 3}
-  - {fileID: 21300000, guid: 66aa9de1271adb046ba9a8d8a168f787, type: 3}
-  - {fileID: 21300000, guid: f2ecd534725989c4bb7535d9bdf90d42, type: 3}
-  swapInterval: 0.3
+  - {fileID: 21300000, guid: 2a20a5b76e4dc5d4c8166999cf048f43, type: 3}
+  - {fileID: 21300000, guid: 07c3064628631074a83c3473e2fb7a6c, type: 3}
+  - {fileID: 21300000, guid: 896b2d8c244735148be369b27bdb91fa, type: 3}
+  - {fileID: 21300000, guid: 70abedefe1baf094ea1d37f533575999, type: 3}
+  swapInterval: 0.8
 --- !u!1 &1514643989
 GameObject:
   m_ObjectHideFlags: 0

@@ -165,6 +165,7 @@ public class YarnMFunctions : MonoBehaviour
         InMemoryVariableStorage variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
         variableStorage.SetValue("$WaterBottle", GameManager.instance.SaengSoo);
     }
+
     [YarnCommand("setWaterbottle")]
     public void setWaterbottle(){
         InMemoryVariableStorage variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
