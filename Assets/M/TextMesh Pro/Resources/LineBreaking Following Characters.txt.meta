@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c2882db907419164db39ed7222763995
+=======
+guid: 91fe9b25bc8f2b247a595ad63796e622
+>>>>>>> BUILDTEST
 timeCreated: 1425440388
 licenseType: Store
 TextScriptImporter:

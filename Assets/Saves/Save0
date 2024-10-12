@@ -1,0 +1,57 @@
+{
+  "savetime": "2024-07-14 16:11:46 오후",
+  "IsLoad": true,
+  "NowScene": "S1_Park",
+  "NumOfScreenShots": 1,
+  "GeonWooScore": 0,
+  "SaengSoo": 0,
+  "ChattingLog": [
+    19,
+    18,
+    25,
+    0
+  ],
+  "PhotoList": [
+    "Letter6",
+    "Meds13",
+    "Laptop18"
+  ],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Hairpin"
+    }
+  ],
+  "FindedObjects": [
+    "Letter",
+    "Books_Diary",
+    "DrawerR_Wallet",
+    "Drawer_Hairpin"
+  ],
+  "FindedClues": [
+    "Letter",
+    "Meds",
+    "Laptop"
+  ],
+  "FinishedDialogues": [
+    "jisoo'stalk",
+    "Chatlist",
+    "DGram1st",
+    "Chocotalk1st",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsJiwon",
+    "Camera",
+    "Gallery",
+    "Map_1",
+    "ConvenienceStore",
+    "Hospital",
+    "Barstreet",
+    "Park",
+    "Where",
+    "New711",
+    "SevenEleven"
+  ],
+  "GottenPage": [],
+  "RecommendedFriends": [],
+  "visited": 7
+}

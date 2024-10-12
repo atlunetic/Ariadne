@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 81592bb3dbf5bd24eadba25c75a54c11
+=======
+guid: 895c3020c497c34429998ffd69184e2e
+>>>>>>> BUILDTEST
 ShaderImporter:
   externalObjects: {}
   defaultTextures: []
