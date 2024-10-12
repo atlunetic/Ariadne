@@ -50,7 +50,7 @@ title: StartClub
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio BarStreet 0.4>>
+<<PlayAudio club_entrance>>
 <<Scene ClubEntrance>>
 
 <<Act 지수 Jisoo4 1.17 0.322 white>>
