@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using JetBrains.Annotations;
 
 namespace Yarn.Unity.Example {
 	/// <summary>
@@ -71,6 +72,12 @@ namespace Yarn.Unity.Example {
 			runner.AddCommandHandler<float>("FadeIn", SetFadeIn );
 			runner.AddCommandHandler<string,string,float>("CamOffset", SetCameraOffset );
 
+			//M Function Command
+
+			runner.AddCommandHandler<string, string,string, float>("DrawFadeIn", FadeInSprite);
+			runner.AddCommandHandler<string, string>("UpdateAct", UpdateActorSprite);
+
+
 			// adds all Resources to internal lists / one big pile... it
 			// will scan inside all subfolders too! note: but when
 			// referencing sprites in the Yarn script, just use the file
@@ -104,15 +111,26 @@ namespace Yarn.Unity.Example {
 			// keywords (e.g. "left", "right")
 			var newActor = SetSpriteUnity( spriteName, positionX, positionY );
 
-			// define text label BG color
-            var actorColor = Color.black;
-			if (colorHex != string.Empty && ColorUtility.TryParseHtmlString( colorHex, out actorColor ) ==false ) {
-				Debug.LogErrorFormat(this, "VN Manager can't parse [{0}] as an HTML color (e.g. [#FFFFFF] or certain keywords like [white])", colorHex);
-			}
+            // define text label BG color
+            var actorColor = new Color(0f, 0f, 0f, 245f / 255f); // RGB: (1, 1, 1) (흰색), Alpha: 245 / 255
 
-			// if the actor is using a sprite already, then clone any
-			// persisting data, and destroy it (just to be safe)
-			if ( actors.ContainsKey(actorName)) {
+            if (!string.IsNullOrEmpty(colorHex))
+            {
+                if (ColorUtility.TryParseHtmlString(colorHex, out Color parsedColor))
+                {
+                    actorColor = new Color(parsedColor.r, parsedColor.g, parsedColor.b, 245f / 255f); // Use parsed RGB values and set alpha to 245 / 255
+                }
+                else
+                {
+                    Debug.LogErrorFormat(this, "VN Manager can't parse [{0}] as an HTML color (e.g. [#FFFFFF] or certain keywords like [white])", colorHex);
+                }
+            }
+
+
+
+            // if the actor is using a sprite already, then clone any
+            // persisting data, and destroy it (just to be safe)
+            if ( actors.ContainsKey(actorName)) {
 				// if any missing position params, assume the actor
 				// position should stay the same
 				var newPos = newActor.rectTransform.anchoredPosition;
@@ -137,9 +155,75 @@ namespace Yarn.Unity.Example {
 			actors.Add( actorName, new VNActor( newActor, actorColor) );
 		}
 
-		///<summary> Draw(spriteName,positionX,positionY) generic function
-		///for sprite drawing</summary>
-		public void SetSpriteYarn(string spriteName, string positionX = "", string positionY = "") {
+
+		//M Code
+        public void UpdateActorSprite(string actorName, string newSpriteName)
+        {
+            // Check if the actor exists
+            if (actors.ContainsKey(actorName))
+            {
+                var existingActor = actors[actorName];
+
+                // Update the sprite
+                SetSprite(existingActor.actorImage, newSpriteName);
+            }
+            else
+            {
+                Debug.LogErrorFormat(this, "Actor [{0}] does not exist", actorName);
+            }
+        }
+
+        private void SetSprite(Image image, string spriteName)
+        {
+            //Sprite newSprite = Resources.Load<Sprite>(spriteName);
+            Sprite newSprite = FetchAsset<Sprite>(spriteName);
+            if (newSprite != null)
+            {
+                image.sprite = newSprite;
+            }
+            else
+            {
+                Debug.LogErrorFormat(this, "Sprite [{0}] not found", spriteName);
+            }
+        }
+
+		
+		[YarnFunction("GetScore")]
+        public static int GetScore()
+        {
+			InMemoryVariableStorage variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+			int Score = GameManager.instance.GeonWooScore;
+			variableStorage.SetValue("$persuade", Score);
+            return Score;
+        }
+
+		[YarnFunction("ActedAs")]
+		public static bool ActAs()
+		{
+			return GameManager.instance.FinishedDialogues.Contains("AfterGeonwooChatAsJiwon");
+		}
+
+        [YarnFunction("CheckDialogue")]
+
+        public static bool DialogueChecked(string DialogueTitle)
+        {
+            bool Check = GameManager.instance.FinishedDialogues.Contains(DialogueTitle);
+            return Check;
+        }
+
+		[YarnFunction("StaffRoomCheck")]
+		public static bool StaffRoomCheck()
+		{
+			bool Check = GameManager.instance.StaffroomOpen;
+			return Check;
+		}
+
+
+        //M Code End
+
+        ///<summary> Draw(spriteName,positionX,positionY) generic function
+        ///for sprite drawing</summary>
+        public void SetSpriteYarn(string spriteName, string positionX = "", string positionY = "") {
 			SetSpriteUnity( spriteName, positionX, positionY );
 		}
 
@@ -379,13 +463,50 @@ namespace Yarn.Unity.Example {
 			StartCoroutine( MoveCoroutine( parent, newPos, moveTime ) );
 		}
 
+        //M Functions
+
+        public void FadeInSprite(string spriteName, string positionX = "", string positionY = "", float fadeTime = 1)
+        {
+            Image sprite = SetSpriteUnity(spriteName, positionX, positionY);
+            StartCoroutine(FadeSpriteCoroutine(sprite, 0f, 1f, fadeTime));
+        }
+
+        /* Fade out a sprite
+        public void FadeOutSprite(Image sprite, float fadeTime = 1)
+        {
+            StartCoroutine(FadeSpriteCoroutine(sprite, 1f, 0f, fadeTime));
+        }
+		*/
+
+        private IEnumerator FadeSpriteCoroutine(Image sprite, float startAlpha, float endAlpha, float fadeTime)
+        {
+            Color color = sprite.color;
+            color.a = startAlpha;
+            sprite.color = color;
+
+            float elapsedTime = 0f;
+
+            while (elapsedTime < fadeTime)
+            {
+                elapsedTime += Time.deltaTime;
+                color.a = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / fadeTime);
+                sprite.color = color;
+                yield return null;
+            }
+
+            color.a = endAlpha;
+            sprite.color = color;
+        }
+
+
+
         #endregion
 
 
 
         #region Utility
 
-		/*
+        
         public override void RunLine(LocalizedLine dialogueLine, System.Action onDialogueLineFinished)
         {
             var actorName = dialogueLine.CharacterName;
@@ -400,9 +521,9 @@ namespace Yarn.Unity.Example {
 
             onDialogueLineFinished();
         }
-		*/
+		
 
-		public void HighlightSprite (Image sprite) {
+        public void HighlightSprite (Image sprite) {
 			StopCoroutine( "HighlightSpriteCoroutine" ); // use StartCoroutine(string) overload so that we can Stop and Start the coroutine (it doesn't work otherwise?)
 			StartCoroutine( "HighlightSpriteCoroutine", sprite );
 		}

@@ -1,0 +1,55 @@
+{
+  "savetime": "2024-08-16 16:16:30 오후",
+  "IsLoad": true,
+  "NowScene": "S1_2_JiwonRoom",
+  "NumOfScreenShots": 1,
+  "GeonWooScore": 0,
+  "SaengSoo": 0,
+  "ChattingLog": [
+    12,
+    26,
+    27,
+    29
+  ],
+  "PhotoList": [
+    "Laptop19",
+    "Meds14",
+    "Letter8"
+  ],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Wallet"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Hairpin"
+    }
+  ],
+  "FindedObjects": [
+    "Letter",
+    "Books_Diary",
+    "DrawerR_Wallet",
+    "Drawer_Hairpin"
+  ],
+  "FindedClues": [
+    "Laptop",
+    "Meds",
+    "Letter"
+  ],
+  "FinishedDialogues": [
+    "DGram1st",
+    "Chatlist",
+    "Camera",
+    "jisoo'stalk",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsHerself",
+    "Chocotalk1st"
+  ],
+  "GottenPage": [],
+  "RecommendedFriends": [
+    "마약퇴치운동본부",
+    "NeverEverDrug"
+  ],
+  "visited": 0
+}

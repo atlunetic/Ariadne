@@ -1,0 +1,779 @@
+fileFormatVersion: 2
+guid: 60ffffa129746464dbab19295bbb13b7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 958
+        width: 89
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37600b8a53497dc4ba72b2e899de7b94
+      internalID: -928619516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 962
+        width: 105
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568f0247dd41a5d48a6fe02674f34d28
+      internalID: -1802977069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 959
+        width: 89
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71465ffeee915c419b56e348c2e13d1
+      internalID: -1212350124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_3
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 959
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf82ee8457ec2b419fb8245070776c8
+      internalID: -1672456993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_12
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 869
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd0fbd9192a2e543a9e194f206dcadf
+      internalID: 1004758835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_17
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 830
+        width: 89
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18acccd229282854eb65b9b140f2ef58
+      internalID: -363789619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_18
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 843
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff87b8bf46674b4ab51dfe35c370858
+      internalID: -513515654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_19
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 846
+        width: 83
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f40c5561f4b68f4cab499a4c043d59b
+      internalID: -175621444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_20
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 860
+        width: 65
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c870b8866477344bfbd5412e4be0cd
+      internalID: -1571733209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_21
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 45
+        width: 557
+        height: 945
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ecd71b101c012c4cabcd5813900076f
+      internalID: -437017385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_22
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 91
+        width: 502
+        height: 898
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d961d8c222cad4f4d8db371a557006ab
+      internalID: 1033356863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_24
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 704
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7aa63272019d6c4cbc5f9d3e0e2b45e
+      internalID: -1393498746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_25
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 704
+        width: 61
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9499666cf8f55245af01d5fcfb6ea14
+      internalID: -1716949717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_26
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 699
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4cf6645f1d20446b3c280157b2bc37
+      internalID: 1024919649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_27
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 708
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f018b444463e444a3333f10a97af1b
+      internalID: -511229091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_29
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 608
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d7ddc8d5a2b6f49bf53e1857ad6110
+      internalID: 2036167591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_30
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 602
+        width: 60
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5809cb58553987c4c87775736cf3e47f
+      internalID: 198195758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_31
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 606
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ba5ae453dea2a4ca12d803c316ec97
+      internalID: -1869926593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_32
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 610
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809507bca915f7346be26afce9aae768
+      internalID: 1932222802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_33
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 513
+        width: 502
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bedb31c8c2b891b47ac234d82f3b0069
+      internalID: 516019122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_34
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 380
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a26a067dd409e4f90f4d8632fda393
+      internalID: 2001043664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_35
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 381
+        width: 85
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6014e8d8d36a9945ac3365579899a06
+      internalID: -1426680544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_36
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 283
+        width: 161
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d84dc35991498a4f819b40362d11e7e
+      internalID: 435794909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_37
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 260
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899ead3cb67815440b91d937676fb4cc
+      internalID: 575071789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_38
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 207
+        width: 71
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 7, z: 7, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb415ebabc0120468ee6752576c6a3c
+      internalID: 1756669324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_39
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 206
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 7, z: 7, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407aaa119ccd50846ae976f637943b6c
+      internalID: -1126361344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_40
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 262
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e352c6079e34c52459c09ae42bdd5912
+      internalID: -317092308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_41
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 204
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09acb0afaad9ed4aa3f58e2e9d874d0
+      internalID: -2127574649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone&ChocoTalk_42
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 214
+        width: 75
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97256aac7e0148e45bb1bc711824ef8d
+      internalID: -642315230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Phone&ChocoTalk_0: -928619516
+      Phone&ChocoTalk_1: -1802977069
+      Phone&ChocoTalk_10: 1621697611
+      Phone&ChocoTalk_11: -769306040
+      Phone&ChocoTalk_12: 1004758835
+      Phone&ChocoTalk_13: 15875015
+      Phone&ChocoTalk_14: 1407474230
+      Phone&ChocoTalk_15: -1238791582
+      Phone&ChocoTalk_16: -1425738278
+      Phone&ChocoTalk_17: -363789619
+      Phone&ChocoTalk_18: -513515654
+      Phone&ChocoTalk_19: -175621444
+      Phone&ChocoTalk_2: -1212350124
+      Phone&ChocoTalk_20: -1571733209
+      Phone&ChocoTalk_21: -437017385
+      Phone&ChocoTalk_22: 1033356863
+      Phone&ChocoTalk_23: 1572870004
+      Phone&ChocoTalk_24: -1393498746
+      Phone&ChocoTalk_25: -1716949717
+      Phone&ChocoTalk_26: 1024919649
+      Phone&ChocoTalk_27: -511229091
+      Phone&ChocoTalk_28: 1410905498
+      Phone&ChocoTalk_29: 2036167591
+      Phone&ChocoTalk_3: -1672456993
+      Phone&ChocoTalk_30: 198195758
+      Phone&ChocoTalk_31: -1869926593
+      Phone&ChocoTalk_32: 1932222802
+      Phone&ChocoTalk_33: 516019122
+      Phone&ChocoTalk_34: 2001043664
+      Phone&ChocoTalk_35: -1426680544
+      Phone&ChocoTalk_36: 435794909
+      Phone&ChocoTalk_37: 575071789
+      Phone&ChocoTalk_38: 1756669324
+      Phone&ChocoTalk_39: -1126361344
+      Phone&ChocoTalk_4: 766431333
+      Phone&ChocoTalk_40: -317092308
+      Phone&ChocoTalk_41: -2127574649
+      Phone&ChocoTalk_42: -642315230
+      Phone&ChocoTalk_5: 816392460
+      Phone&ChocoTalk_6: -1561688453
+      Phone&ChocoTalk_7: -193982145
+      Phone&ChocoTalk_8: 850086504
+      Phone&ChocoTalk_9: 480043361
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
