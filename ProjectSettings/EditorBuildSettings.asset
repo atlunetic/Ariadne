@@ -4,5 +4,113 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/M/Scenes_M/SOpening.unity
+    guid: bb8b4ac781db3324c9800a7d4962ecf5
+  - enabled: 1
+    path: Assets/M/Scenes_M/S0.unity
+    guid: e00a827656087c34ba42363584dfd4c6
+  - enabled: 1
+    path: Assets/Hee/Scenes/Menu.unity
+    guid: 5288e2da389047245b84dbc83e01a879
+  - enabled: 1
+    path: Assets/M/Scenes_M/S1/S1.unity
+    guid: 7dab7e09a43e41248a14141387204b19
+  - enabled: 1
+    path: Assets/M/Scenes_M/S1/S1_1_JiwonRoom.unity
+    guid: 3c470575b5cca3c40a62d671470e0202
+  - enabled: 1
+    path: Assets/M/Scenes_M/S1/S1_2_JiwonRoom.unity
+    guid: 22e782cbd654742498ece93c21d8f18d
+  - enabled: 0
+    path: Assets/Scenes/NewScene.unity
+    guid: 69b234d858ce42c439d74cbb2144bb40
+  - enabled: 1
+    path: Assets/M/Scenes_M/S1/S1_Hospital.unity
+    guid: 570271b71d797984fa389f3236cb9b82
+  - enabled: 1
+    path: Assets/M/Scenes_M/S1/S1_Park.unity
+    guid: f2e496cdaf1caab42895e1c7b613a1ae
+  - enabled: 1
+    path: Assets/M/Scenes_M/S1/S1_Street.unity
+    guid: 0df01122a10d8054183f63257eb048cf
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_1_ClubCounter_Bar.unity
+    guid: 746c450ce427b254d897adbe2b9c91a0
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_2_Table.unity
+    guid: 7f37b298b65a57740bdcdf0e7e37ab25
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_3_0_RestRoom.unity
+    guid: df97f03fca11e5a4a9d7e6974efb55e7
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_3_1_StaffOnlyLocker.unity
+    guid: ac82751a67d569441af8d2bd3e2c2759
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_4_0_StaffRoomEntrance.unity
+    guid: d97637de62d8c9848bd9001b2ff021e8
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_4_1_StaffRoom.unity
+    guid: 67e9726e52dba0a4e88bddf3f71e0602
+  - enabled: 1
+    path: Assets/Su/lockpick.unity
+    guid: afc78d8c9bdbae7429200b8b9331d1d9
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_5_VipRoomEntrance.unity
+    guid: 8fed5e43fd5540c48b75002987bdd718
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_6_CounterBar.unity
+    guid: 832438e86589fd0498276ab73929b3aa
+  - enabled: 1
+    path: Assets/Su/clockpuzzle.unity
+    guid: 55911496a69d76047a94d634b5a21e0d
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_6_ReVip.unity
+    guid: 6dfb522cbba0834478804687eb0aed10
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_7_Stairs.unity
+    guid: 58e96c232b16def479807f76bb24e44f
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_8_ParkingLot.unity
+    guid: 11a860c25ceffbc41b79a6df8ea9d1f6
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_8_ParkingLot2.unity
+    guid: b98680fa3074724488ad0284b7e004ad
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_9_Car.unity
+    guid: 3614c94e9e23b5148b647eb479a78c77
+  - enabled: 1
+    path: Assets/M/Scenes_M/S2/S2_10_Stairs.unity
+    guid: fbef66b9859875649b18e967e82b0f04
+  - enabled: 0
+    path: Assets/M/Scenes_M/S2/S2_11_TBC.unity
+    guid: 9e9b2dd9e63cb4f4393cae22daf3acfa
+  - enabled: 1
+    path: Assets/M/Scenes_M/S3/S3_1_1_Door.unity
+    guid: 17b788b897caa274ca15bf93cec1b9a4
+  - enabled: 1
+    path: Assets/M/Scenes_M/S3/S3_1_2_PhoneBooth.unity
+    guid: 7703e16595413664d88740f2836629f0
+  - enabled: 1
+    path: Assets/M/Scenes_M/S3/S3_1_OfficetelEntrance.unity
+    guid: 25032e319697b1847bc40811cc5e721f
+  - enabled: 1
+    path: Assets/M/Scenes_M/S3/S3_2_Officetel1stFloor.unity
+    guid: b92c373c92cc897488453bd9e21063b9
+  - enabled: 1
+    path: Assets/M/Scenes_M/S3/S3_3_Officetel1503.unity
+    guid: af3e182f349834e4d9da53545941cda4
+  - enabled: 1
+    path: Assets/M/Scenes_M/S3/S3_4_Officetel14th.unity
+    guid: 9b4c6e250b8c90c4da7c81d194d60dee
+  - enabled: 1
+    path: Assets/M/Scenes_M/S3/S3_5_Inside1403.unity
+    guid: 902398291d817d64bb4459185a5c6db4
+  - enabled: 1
+    path: Assets/M/Scenes_M/S4/S4.unity
+    guid: 0e8d261c6460e81468f822c1e9940090
+  - enabled: 1
+    path: Assets/M/Scenes_M/SEndingCredit.unity
+    guid: c280155db30943744ab5342ddff4b659
   m_configObjects: {}
