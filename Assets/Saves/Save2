@@ -1,97 +1,175 @@
 {
-  "savetime": "2024-07-29 20:24:48 오후",
+  "savetime": "2024-09-22 18:43:03 오후",
   "IsLoad": true,
-  "NowScene": "S2_2_Table",
-  "NumOfScreenShots": 1,
-  "GeonWooScore": 9,
-  "SaengSoo": 0,
+  "NowScene": "S2_4_0_StaffRoomEntrance",
+  "NumOfScreenShots": 2,
+  "GeonWooScore": 3,
+  "SaengSoo": 2,
   "ChattingLog": [
     19,
     18,
     25,
-    12,
+    0,
+    3,
+    4,
+    15,
+    5,
+    36,
+    20,
     21,
-    20
+    60,
+    54,
+    62,
+    24,
+    22,
+    23
   ],
   "PhotoList": [
     "Letter0",
     "Laptop0",
+    "ScreenShot_1",
     "Meds0",
-    "VIPlist2"
+    "StudentID0",
+    "ToiletPaper0",
+    "VIPlist0",
+    "BrokenGlasses0",
+    "GeonwooCard1",
+    "13421"
   ],
   "items": [
     {
       "ItemType": 0,
-      "itemName": "Hairpin"
-    },
-    {
-      "ItemType": 0,
       "itemName": "WaterBottle"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "WaterBottle"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "Cup"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "Key"
     },
     {
       "ItemType": 0,
       "itemName": "Clothes"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "WaterCup"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "OfficetelCardkey"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Hairpin"
     }
-
-
   ],
   "FindedObjects": [
     "Letter",
     "Books_Diary",
-    "DrawerR_Wallet",
     "Drawer_Hairpin",
-    "Suljango",
+    "DrawerR_Wallet",
+    "3Drug",
     "Cup",
+    "Suljango",
+    "Clubtable_Drug",
+    "menu_philopon",
     "ClubTable_Geonwoo",
-    "Staffroom_Door",
+    "Toilet_costomerF",
+    "StaffRoom_staff_C",
+    "Staffroom_Tree",
     "InStaffroom_Key",
-    "InStaffroom_Radio",
-    "InStaffroom_VIPlist",
     "InStaffroom_cctv",
-    "obj_staffroomdoor"
+    "InStaffroom_Radio",
+    "obj_staffroomdoor",
+    "Locker",
+    "VIProom_customerG",
+    "Doll",
+    "Poppy",
+    "GeonwooCard",
+    "SynthWeed",
+    "Flashlight",
+    "Scribble1342",
+    "VendingMachine3"
   ],
   "FindedClues": [
     "Letter",
     "Laptop",
     "Meds",
-    "VIPlist"
+    "StudentID",
+    "ToiletPaper",
+    "VIPlist",
+    "BrokenGlasses",
+    "GeonwooCard",
+    "1342"
   ],
   "FinishedDialogues": [
     "jisoo'stalk",
     "Chatlist",
     "DGram1st",
+    "DropperRecruit",
+    "IceiceChat",
+    "Camera",
+    "Gallery",
+    "OfficetelPhoto",
     "Chocotalk1st",
     "ChooseChatName1",
-    "AfterGeonwooChatAsHerself",
-    "Camera",
+    "AfterGeonwooChatAsJiwon",
+    "OpenChat",
+    "DrugDeal",
+    "DestroySearch",
+    "DrugDeal1",
+    "DrugDeal2",
+    "DrugDeal3",
+    "DrugDeal4",
     "Map_1",
-    "Park",
     "Barstreet",
+    "Park",
+    "DiaryTutorial",
+    "Bakery",
+    "ConvenienceStore",
+    "AnotherClub",
+    "Officetel",
+    "School",
     "Hospital",
     "Where",
     "New711",
     "SevenEleven",
     "Club_S1End",
-    "event_staffroom",
+    "chocotalk_cctv",
     "event_gunwoo_begin1",
     "obj_staffroomdoor",
-    "chocotalk_cctv",
+    "event_staffroom",
     "letsgetout",
-    "ActiveM"
+    "obj_customerh",
+    "club_viproom_entry",
+    "yay",
+    "obj_customerg",
+    "chocotalk_ariadne_customerg",
+    "obj_customerg_end",
+    "obj_brokenglasses",
+    "memory_BrokenGlasses",
+    "obj_navigation",
+    "stairchocotalk1",
+    "stairchocotalk2",
+    "Poppy",
+    "GeonwooCard",
+    "memory_GeonwooCard",
+    "Scribble1342",
+    "memory_1342",
+    "InteractionFin3",
+    "ActiveM",
+    "IfEmployeeSuit"
   ],
-  "GottenPage": [],
+  "GottenPage": [
+    "Page4",
+    "Page6",
+    "Page7",
+    "Page8",
+    "Page1",
+    "Page9",
+    "Page3"
+  ],
   "RecommendedFriends": [],
-  "visited": 7
+  "visited": 7,
+  "IsAriadneHintOn": true,
+  "S1HintList": [
+    "visitHospital"
+  ],
+  "S2HintList": [],
+  "StaffroomHintList": []
 }

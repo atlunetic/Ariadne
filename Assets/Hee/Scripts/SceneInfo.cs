@@ -28,15 +28,20 @@ public class SceneInfo : MonoBehaviour
         GameManager.instance.NowScene = scene.name;
     }
 
-    public string FindClue(Rect rect){
+    public string FindClue(Rect rect)  // CameraRect
+    {
         if(Cluelist is null) return null;
-        foreach(GameObject obj in Cluelist){
+        foreach(GameObject obj in Cluelist)
+        {
             if(GameManager.instance.FindedClues.Contains(obj.name)) continue;
+
             Vector3 pos = Camera.main.WorldToScreenPoint(obj.transform.position);
-            if((rect.x + rect.width/5)<pos.x && (rect.x + rect.width/5 * 4)>pos.x){
-                if((rect.y + rect.height/5)<pos.y && (rect.y + rect.height/5 * 4)>pos.y){
+            if((rect.x + rect.width/5)<pos.x && (rect.x + rect.width/5 * 4)>pos.x)
+            {
+                if((rect.y + rect.height/5)<pos.y && (rect.y + rect.height/5 * 4)>pos.y)
+                {
                     GameManager.instance.FindedClues.Add(obj.name);
-                    print("Find "+obj.name);
+                    Debug.Log("Find Clue: "+obj.name);
                     StartCoroutine(PlayMemory(obj.name));
                     return obj.name;
                 }

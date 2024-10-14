@@ -2,29 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Fixed : MonoBehaviour
 {
 
-    /* 해상도 설정하는 함수 */
-     void Start(){        
-        var camera = GetComponent<Camera>();
-        var r = camera.rect;
-        
-        var scaleheight = ((float)Screen.width / Screen.height) / (16f / 9f);        
-        var scalewidth = 1f / scaleheight;    
-        if (scaleheight < 1f)        
-        {            
-            r.height = scaleheight;            
-            r.y = (1f - scaleheight) / 2f;        
-        }        
-        else        
-        {            
-            r.width = scalewidth;            
-            r.x = (1f - scalewidth) / 2f;        
-        }         
-        camera.rect = r;    
-        print(Screen.width+" "+Screen.height);
+    public TMP_Text resolution;
+    void Start(){
+        Debug.Log(Screen.currentResolution);
+        Debug.Log(Screen.width);
+        Debug.Log(Screen.height);
+        showResolution();
     }
-        void OnPreCull() => GL.Clear(true, true, Color.black);
+    void Update()
+    {
+        // A 키를 눌러 전체 화면 전환
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Screen.fullScreen = !Screen.fullScreen;
+            showResolution();
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Screen.SetResolution(2560, 1440, Screen.fullScreen);
+            Debug.Log(Screen.currentResolution);
+            showResolution();
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Screen.SetResolution(2880, 1800, Screen.fullScreen);
+            Debug.Log(Screen.currentResolution);
+            showResolution();
+        }
+    }
+
+    void showResolution(){
+        resolution.text = Screen.width + " "+ Screen.height + " "+ Screen.safeArea;
+    }
 }
