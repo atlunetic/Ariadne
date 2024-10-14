@@ -151,8 +151,8 @@ MonoBehaviour:
   Item:
     ItemType: 0
     itemName: 
-    itemImage: {fileID: 0}
-  itemIcon: {fileID: 7612426682902941521}
+  itemIcon: {fileID: 0}
+  WrongCombineAlertPanel: {fileID: 0}
 --- !u!114 &5567610514654725734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActionPanel: {fileID: 0}
+  CurrentSlot: {fileID: 0}
 --- !u!114 &5168207470321967442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,7 +219,7 @@ RectTransform:
   m_GameObject: {fileID: 9049773709484576568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2345944412196959769}
@@ -278,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec667fb73643b84cbb2cc50af6e69c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  parentAfterDrag: {fileID: 0}
+  isDraggable: 0
   currentSlot: {fileID: 3310785875303089467}
-  inventory: {fileID: 0}
-  WaterBottleSceneItemObj: {fileID: 0}

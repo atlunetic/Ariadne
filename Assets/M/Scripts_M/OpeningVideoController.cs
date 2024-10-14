@@ -1,10 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
-using Unity.VisualScripting;
 
 public class OpeningVideoController : MonoBehaviour
 {
@@ -42,11 +40,5 @@ public class OpeningVideoController : MonoBehaviour
     private void EndReached(VideoPlayer vp)
     {
         SceneManager.LoadScene("S0");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
