@@ -599,6 +599,22 @@ title: ParkDefault
 title: Newspaper
 
 ---
+<<if CheckDialogue("NewspaperStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump NewspaperStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump NewspaperStory>>
+<<endif>>
+
+===
+
+title: NewspaperStory
+
+---
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
@@ -614,6 +630,7 @@ title: Newspaper
 * 금단현상으로는 우울증과 무기력증이 있다. *
 <<Hide Park_News>>
 <<Hide DBG>>
+<<FinishedDialogue VisualNovelPrefab NewspaperStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -626,6 +643,23 @@ title: ParkStudents
 //동네 공원으로 이동 시
 //동네 학생들의 대화 - 다이어트 약
 //동네 학생들 NPC 무리를 클릭할 경우
+
+<<if CheckDialogue("ParkStudentsStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump ParkStudentsStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump ParkStudentsStory>>
+<<endif>>
+
+===
+
+title: ParkStudentsStory
+
+---
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
@@ -644,6 +678,7 @@ title: ParkStudents
 학생 A: 그런가...
 
 <<SetCanvasTo VisualNovelPrefab false>>
+<<FinishedDialogue VisualNovelPrefab ParkStudentsStory>>
 
 ===
 
@@ -652,6 +687,23 @@ title: VendingMachine
 ---
 
 //자판기 클릭 시
+
+<<if CheckDialogue("VendingMachineStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump VendingMachineStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump VendingMachineStory>>
+<<endif>>
+
+===
+
+title: VendingMachineStory
+
+---
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo1 1.17 0.322 white>>
@@ -664,6 +716,7 @@ title: VendingMachine
 <<UpdateAct 지수 Jisoo2>>
 밥은 먹었으려나.
 <<Hide 지수>>
+<<FinishedDialogue VisualNovelPrefab VendingMachineStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -745,6 +798,23 @@ title: Weedhof
 
 ---
 
+<<if CheckDialogue("WeedHofStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump WeedHofStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump WeedHofStory>>
+<<endif>>
+
+===
+
+title: WeedHofStory
+
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
 //<<Act 지수 Jisoo2 1.17 0.322 white>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
@@ -754,6 +824,7 @@ title: Weedhof
 
 <<HideAll>>
 
+<<FinishedDialogue VisualNovelPrefab WeedHofStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -761,6 +832,24 @@ title: Weedhof
 title: Drugsnacks
 
 ---
+
+<<if CheckDialogue("DrugsnacksStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump DrugsnacksStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump Drugsnacksstory>>
+<<endif>>
+
+===
+
+title: DrugsnacksStory
+
+---
+
 
 // 마약떡볶이&마약김밥
 <<SetCanvasTo VisualNovelPrefab true>>
@@ -774,6 +863,7 @@ title: Drugsnacks
 중독적이라는 걸 굳이 마약이라는 단어로 표현해야 하나?
 
 <<HideAll>>
+<<FinishedDialogue VisualNovelPrefab DrugsnacksStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1092,6 +1182,23 @@ title: LaptopStory
 
 ---
 
+<<if CheckDialogue("LaptopStory2")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump LaptopStory2>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump LaptopStory2>>
+<<endif>>
+
+===
+
+title: LaptopStory2
+
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Laptop(E) 0.75 0.75>>
@@ -1117,6 +1224,7 @@ title: LaptopStory
 감기약 먹방이라니...
 위험한 생각 하고 있는 거 아니야...?
 <<Hide 지수>>
+<<FinishedDialogue VisualNovelPrefab LaptopStory2>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1158,6 +1266,23 @@ title: Drawer_News
 
 ---
 
+<<if CheckDialogue("Drawer_NewsStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump Drawer_NewsStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump Drawer_NewsStory>>
+<<endif>>
+
+===
+
+title: Drawer_NewsStory
+---
+
+
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Jiwonroom_News 0.75 0.75>>
@@ -1166,6 +1291,7 @@ title: Drawer_News
 
 <<Hide Jiwonroom_News>>
 <<Hide DBG>>
+<<FinishedDialogue VisualNovelPrefab Drawer_NewsStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -1200,6 +1326,24 @@ title: JW_Meds
 
 ---
 
+<<if CheckDialogue("JW_MedsStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump JW_MedsStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump JW_MedsStory>>
+<<endif>>
+
+===
+
+title: JW_MedsStory
+
+---
+
+
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Meds(E) 0.75 0.75>>
@@ -1215,7 +1359,7 @@ title: JW_Meds
 나한테 말도 안하고. 대체 무슨 일이 있는 거야.
 
 <<Hide 지수>>
-
+<<FinishedDialogue VisualNovelPrefab JW_MedsStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

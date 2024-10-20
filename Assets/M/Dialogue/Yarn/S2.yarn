@@ -227,6 +227,23 @@ title: obj_cctv1
 
 ---
 
+<<if CheckDialogue("obj_cctv1Story")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump obj_cctv1Story>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump obj_cctv1Story>>
+<<endif>>
+
+===
+
+title: obj_cctv1Story
+
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 <<Act 지수 Jisoo1 1.17 0.322 white>>
@@ -235,13 +252,29 @@ CCTV가 있네.
 CCTV라도 볼 수 있으면 좋을텐데.
 
 <<Hide 지수>>
-
+<<FinishedDialogue VisualNovelPrefab obj_cctv1Story>>
 <<SetCanvasTo VisualNovelPrefab false>>
-
 
 ===
 
 title: obj_clock1
+
+---
+
+<<if CheckDialogue("obj_clock1Story")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump obj_clock1Story>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump obj_clock1Story>>
+<<endif>>
+
+===
+
+title: obj_clock1Story
 
 ---
 
@@ -262,7 +295,7 @@ title: obj_clock1
 손을 뻗으면 닿을 것 같다.
 
 //<<Hide 지수>>
-
+<<FinishedDialogue VisualNovelPrefab obj_clock1Story>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -396,7 +429,6 @@ title: obj_customers
 	<<SetActiveFalse VisualNovelPrefab ClubTable_NPCD>>
 	<<FinishedObj VisualNovelPrefab ClubTable_NPCD>>
 	<<FinishedDialogue VisualNovelPrefab obj_customers>>
-
 	<<wait 1.0>>
 	-> 모르는 척 하자.
 		...
@@ -420,17 +452,46 @@ title: obj_customers
 			<<jump E_NoClothes>>
 			<<SetCanvasTo VisualNovelPrefab false>>
 		-> 괜히 나서지 말자.
-			E가 결국 술을 마셨다.
+			<<Hide 클럽고객E>>
+			E가 술잔에 입을 가져다댔다.
+			걱정되네. 별 일 없었으면 좋겠는데.
+			…
+			잠시 바라보다, 자리를 옮기려는 순간.
+			E가 휘청거리기 시작했다.
+			…
+			도와줘야 하나…?
+			발걸음을 옮기는 순간, D가 기다렸다는 듯 나타나 E를 부축했다.
+			수상해….
+			…
+			저기요..!!
+			뒤돌아본 D와 눈이 마주쳤다. //(스산한 BGM 추가)
+			초점없는 E의 눈과도.
+			순간 알 수 없는 공포감이 온몸을 스쳤다.
+			나의 외침을 들은 사람은 D뿐인 듯 했다.
+			아무도 관심을 갖지 않았다.
+			아무런 말도 할 수 없었다.
+			얼마간 정적이 흘렀을까….
+			D는 고개를 돌렸고, E를 어디론가 데려갔다.
+			내가 잘못된 결정을 한 걸까…
+			<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
+			<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
+			<<SetCanvasTo VisualNovelPrefab false>>
+		-> 그래...오지랖 부리지 말자.
 			...
-			E가 어지러운 듯 이마를 짚었다.
-			뭔가 이상해 다가가려는 순간
-			D가 다시 돌아와 E를 데리고 사라졌다.
-			에이 괜찮겠지?
-			E가 흔들리는 눈빛으로 나를 쳐다본다.
-			위험 단단히 잘못 선택했음이 아주 강하게 드러났으면 좋겠어
-			기획팀아
-			너흰 할 수 있어
-			...뭐지?
+			E는 신나게 춤추고 있는 사람들을 바라봤다.
+			<<Act 지수 Jisoo1 1.17 0.322 white>>
+			지수:저는 먼저 가볼게요.
+			E가 고개를 돌려 눈인사를 했다.
+			<<Hide 클럽고객E>>
+			<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
+			<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
+ 			E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
+			<<UpdateAct 지수 Jisoo2>>
+			...
+			클럽 고객D가 E를 향해 걸어가는 모습이 보였다.
+			걱정되네...
+			<<Hide 지수>>
+			<<DelaySpawn ClubTableBG>>
 			<<SetCanvasTo VisualNovelPrefab false>>
 	-> 가서 도와주자.
 		<<Act 지수 Jisoo2 1.17 0.322 white>>
@@ -448,6 +509,29 @@ title: obj_customers
 		<<jump E_NoClothes>>
 		<<SetCanvasTo VisualNovelPrefab false>>
 <<endif>>
+===
+
+title: broken_glass
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw broken_glass_big 0.75 0.75>>
+어... 술잔이 깨져있다.
+아까 E가 들고 있던 술잔인 것 같은데.
+대체 무슨 일이...
+...
+<<HideAll>>
+클럽직원: 잠시만요.
+클럽직원: 금방 치울테니까 잠시만 자리 좀 옮겨주세요~
+직원이 나를 밀어냈다.
+...
+내가 잘못된 결정을 한걸까...
+<<SetActiveFalse VisualNovelPrefab broken_glass>>
+<<FinishedObj VisualNovelPrefab broken_glass>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: checkClothes
@@ -731,10 +815,29 @@ title: obj_menu
 //메뉴판 팝업 이미지 띄우기: 각 텍스트마다 클릭하여 상호작용 가능
 //지수 이미지는 노출 X
 
+<<if CheckDialogue("obj_menuStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump obj_menuStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump obj_menuStory>>
+<<endif>>
+
+===
+
+title: obj_menuStory
+
+---
+
+
 <<SetCanvasTo VisualNovelPrefab true>>
 <<OpenUp ClubTable_menu>>
 메뉴판이다.
 
+<<FinishedDialogue VisualNovelPrefab obj_menuStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -767,9 +870,6 @@ title: menu_philopon
 <<RevealDiary DiaryManager Page7>>
 <<SetActiveFalse VisualNovelPrefab menu_philopon>>
 <<FinishedObj VisualNovelPrefab menu_philopon>>
-<<SetCanvasTo VisualNovelPrefab false>>
-
-
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2077,6 +2177,20 @@ title: obj_staffonly_lockeropen
 
 ---
 
+<<if CheckDialogue("lockeropened")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 챙긴 직원 복장 외에 이 안에서 쓸만한 건 없는 것 같아.
+	<<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump lockeropened>>
+<<endif>>
+
+===
+
+title: lockeropened
+
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
 //인벤토리에서 열쇠를 사용하고 staff only칸의 사물함을 클릭한 경우
 
@@ -2100,10 +2214,10 @@ title: obj_staffonly_lockeropen
 <color=yellow>* 스태프 복장을 습득했다. *</color>
 //인벤토리에 「스태프 복장」 아이템이 추가됨.
 <<AddToInventoryC VisualNovelPrefab>>
-<<SetActiveFalse VisualNovelPrefab Locker>>
-<<FinishedObj VisualNovelPrefab Locker>>
+//<<SetActiveFalse VisualNovelPrefab Locker>>
+//<<FinishedObj VisualNovelPrefab Locker>>
 //<<AddToInventory VisualNovelPrefab Clothes>>
-
+<<FinishedDialogue VisualNovelPrefab lockeropened>>
 <<DeleteItem Inventory Key>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -2115,6 +2229,23 @@ title: obj_toiletpaper
 ---
 
 //클릭할 경우
+
+<<if CheckDialogue("obj_toiletpaperStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump obj_toiletpaperStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump obj_toiletpaperStory>>
+<<endif>>
+
+===
+
+title: obj_toiletpaperStory
+
+---
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
@@ -2136,7 +2267,7 @@ title: obj_toiletpaper
 <<Hide DBG>>
 
 <<Hide 지수>>
-
+<<FinishedDialogue VisualNovelPrefab obj_toiletpaperStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2499,7 +2630,23 @@ title: obj_cctv2
 //4분할 cctv 이미지
 //지수이미지노출X
 
+
+<<if CheckDialogue("obj_cctv2Story")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    다시 살펴볼 필요는 없을 것 같아.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump obj_cctv2Story>>
+<<endif>>
+
+===
+
+title: obj_cctv2Story
+
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab obj_cctv2Story>>
 <<PlayAudio WhiteNoise 0.4 loop>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw CCTV_first 0.75 0.75>>
@@ -2607,7 +2754,22 @@ title: obj_radio
 
 ---
 
+<<if CheckDialogue("obj_radioStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    다시 확인할 필요는 없을 것 같아.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump obj_radioStory>>
+<<endif>>
+
+===
+
+title: obj_radioStory
+
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab obj_radioStory>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Radio 0.75 0.75>>
 직원들끼리 쓰는 무전기인가보다.
@@ -2681,7 +2843,7 @@ title: obj_radio
 <<StartPhoneChat PhoneController 21>>
 //지수이미지 노출X
 
-<<SetActiveFalse VisualNovelPrefab InStaffroom_Radio>>
+//<<SetActiveFalse VisualNovelPrefab InStaffroom_Radio>>
 <<FinishedObj VisualNovelPrefab InStaffroom_Radio>>
 //<<SetCanvasTo VisualNovelPrefab false>>
 ===
@@ -2905,6 +3067,21 @@ title: obj_key
 
 ---
 
+<<if CheckDialogue("obj_keyStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    열쇠는 이미 챙겼어.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump obj_keyStory>>
+<<endif>>
+
+===
+
+title: obj_keyStory
+
+---
+
+
 <<SetCanvasTo VisualNovelPrefab true>>
 //서랍 클릭 시
 여기도 열어볼까..?
@@ -2926,9 +3103,9 @@ title: obj_key
 <color=yellow>* 열쇠를 습득했습니다. *</color>
 //<<Hide 지수>>
 //인벤토리에 열쇠 아이템이 추가됨.
-<<SetActiveFalse VisualNovelPrefab InStaffroom_Key>>
+//<<SetActiveFalse VisualNovelPrefab InStaffroom_Key>>
 <<FinishedObj VisualNovelPrefab InStaffroom_Key>>
-
+<<FinishedDialogue VisualNovelPrefab obj_keyStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<IfDone_getout MenuUI>>
 
@@ -2939,6 +3116,22 @@ title: obj_viplist
 
 ---
 
+<<if CheckDialogue("obj_viplistStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump obj_viplistStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump obj_viplistStory>>
+<<endif>>
+
+===
+
+title: obj_viplistStory
+
+---
 <<SetCanvasTo VisualNovelPrefab true>>
 
 'VIP 고객 명단'이라고 적힌 파일이다.
@@ -2966,6 +3159,7 @@ title: obj_viplist
 	<<Hide 지수>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 	<<FinishedObj VisualNovelPrefab InStaffroom_VIPlist>>
+	<<FinishedDialogue VisualNovelPrefab obj_viplistStory>>
 	<<IfDone_getout MenuUI>>
 
 
