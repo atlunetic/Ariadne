@@ -1146,7 +1146,7 @@ title: CheckAlert
 
 
 
-//JIWON ROOM
+//JIWON ROOM (지원의 방 아이템)
 
 
 
@@ -1156,6 +1156,21 @@ title: Diary1
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
+<<if CheckDialogue("Diary1Story")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    이미 일기장은 챙겼다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump Diary1Story>>
+<<endif>>
+
+===
+
+title: Diary1Story
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Diary 0.75 0.75>>
 이게 뭐지...?
@@ -1170,8 +1185,9 @@ title: Diary1
 
 <<Hide Diary>>
 <<Hide DBG>>
-<<SetActiveFalse VisualNovelPrefab Books_Diary>>
-<<FinishedObj VisualNovelPrefab Books_Diary>>
+//<<SetActiveFalse VisualNovelPrefab Books_Diary>>
+//<<FinishedObj VisualNovelPrefab Books_Diary>>
+<<FinishedDialogue VisualNovelPrefab Diary1Story>>
 <<ActiveD MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -1301,6 +1317,20 @@ title: JW_Wallet
 
 ---
 
+<<if CheckDialogue("JW_WalletStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    이미 여기서 지갑을 챙겼어. 더 이상 볼 건 없는 것 같아.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump JW_WalletStory>>
+<<endif>>
+
+===
+
+title: JW_WalletStory
+
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Wallet(E)_0 0.75 0.75>>
@@ -1316,8 +1346,9 @@ title: JW_Wallet
 <color=yellow>* '지원의 지갑'을 습득했다. *</color>
 
 
-<<SetActiveFalse VisualNovelPrefab DrawerR_Wallet>>
-<<FinishedObj VisualNovelPrefab DrawerR_Wallet>>
+//<<SetActiveFalse VisualNovelPrefab DrawerR_Wallet>>
+//<<FinishedObj VisualNovelPrefab DrawerR_Wallet>>
+<<FinishedDialogue VisualNovelPrefab JW_WalletStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1411,6 +1442,20 @@ title:JW_Hairpin
 
 ---
 
+<<if CheckDialogue("JW_HairpinStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    이미 헤어핀을 챙겼어. 다른 곳을 살펴보자.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump JW_HairpinStory>>
+<<endif>>
+
+===
+
+title: JW_HairpinStory
+
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Hairpin(E)_0 0.75 0.75>>
@@ -1422,10 +1467,36 @@ title:JW_Hairpin
 <<Hide DBG>>
 <color=yellow>* '헤어핀'을 습득했다. *</color>
 
-<<SetActiveFalse VisualNovelPrefab Drawer_Hairpin>>
-<<FinishedObj VisualNovelPrefab Drawer_Hairpin>>
-
+//<<SetActiveFalse VisualNovelPrefab Drawer_Hairpin>>
+//<<FinishedObj VisualNovelPrefab Drawer_Hairpin>>
+<<FinishedObj VisualNovelPrefab Drawer_HairpinStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: JW_Books
+
+---
+
+
+<<if CheckDialogue("JW_BooksStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    이미 확인했어.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump JW_BooksStory>>
+<<endif>>
+
+===
+
+title: JW_BooksStory
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+찢겨진 책 대사
+<<SetCanvasTo VisualNovelPrefab false>>
+<<FinishedDialogue VisualNovelPrefab JW_BooksStory>>
 
 ===
 

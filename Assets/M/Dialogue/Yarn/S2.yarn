@@ -52,7 +52,6 @@ title: StartClub
 <<SetCanvasTo VisualNovelPrefab true>>
 <<PlayAudio BarStreet 0.4>>
 <<Scene ClubEntrance>>
-
 <<Act 지수 Jisoo4 1.17 0.322 white>>
 이런 데가 있구나....
 
@@ -138,6 +137,7 @@ title: meet_gunwoo
 	일단 안으로 들어가보자.
 	<<Hide 지수>>
 	<<StopAudioAll>>
+	<<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
 	<<ChangeSceneTo VisualNovelPrefab S2_1_ClubCounter_Bar>>
 	<<jump club_bar>>
 
@@ -220,6 +220,19 @@ title: club_bar
 <<ActiveM MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
+
+===
+
+title: Counter_Geonwoo
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+건우가 얼버무리는 대사 추가
+<<SetCanvasTo VisualNovelPrefab false>>
+<<SetActiveFalse VisualNovelPrefab Counter_Geonwoo>>
+<<FinishedObj VisualNovelPrefab Counter_Geonwoo>>
+<<DelFinishedObj VisualNovelPrefab Table_Geonwoo>>
 
 ===
 
@@ -3240,7 +3253,7 @@ title: letsgetout
 
 ===
 
-title: club_viproom_entry
+title: club_viproom_entry1
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
@@ -3253,10 +3266,23 @@ title: club_viproom_entry
 ...
 VIP 룸? 한 번 가볼까?
 
+<<Hide 지수>>
+<<FinishedDialogue VisualNovelPrefab club_viproom_entry1>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+
+===
+
+title: club_viproom_entry2
+
+---
+
+VIP 룸으로 들어가보자.
 근데 한번 들어가면 다시 나오기는 어려울 것 같아.
 
-<<Hide 지수>>
-<<FinishedDialogue VisualNovelPrefab club_viproom_entry>>
+<<FinishedDialogue VisualNovelPrefab club_viproom_entry2>>
+<<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
+<<jump club_viproom>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
