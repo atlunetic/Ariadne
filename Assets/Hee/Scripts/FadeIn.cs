@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/* 증거 촬영시 나오는 배경들(각 씬의 Canvas_ForMemories에 존재)과 이미지 그룹(GalleryController에 존재)에 붙여주면 됨 */
 public class FadeIn : MonoBehaviour
 {
     private Image image;
