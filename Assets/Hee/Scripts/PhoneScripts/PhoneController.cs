@@ -44,8 +44,8 @@ public class PhoneController : MonoBehaviour
         }
     }
 
-    public void OpenSaveLoad(){
-        SaveAndLoad.instance.SavePanel.SetActive(true);
+    public void OpenSettings(){
+        Settings.instance.SettingsPanel.SetActive(true);
     }
     
     public void ActiveChocoTalk(){

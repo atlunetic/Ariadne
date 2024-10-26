@@ -8,12 +8,7 @@ public class Fixed : MonoBehaviour
 {
 
     public TMP_Text resolution;
-    void Start(){
-        Debug.Log(Screen.currentResolution);
-        Debug.Log(Screen.width);
-        Debug.Log(Screen.height);
-        showResolution();
-    }
+
     void Update()
     {
         // A 키를 눌러 전체 화면 전환
@@ -39,6 +34,7 @@ public class Fixed : MonoBehaviour
     }
 
     void showResolution(){
+        if(resolution==null)return;
         resolution.text = Screen.width + " "+ Screen.height + " "+ Screen.safeArea;
     }
 }
