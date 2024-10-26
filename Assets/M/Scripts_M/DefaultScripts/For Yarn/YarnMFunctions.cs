@@ -140,13 +140,38 @@ public class YarnMFunctions : MonoBehaviour
     [YarnCommand("FinishedObj")]
     public void FinishedObjects(string ObjectName)
     {
-        GameManager.instance.FindedObjects.Add(ObjectName);
+
+        if (GameManager.instance.FindedObjects.Contains(ObjectName) == true)
+        {
+            Debug.Log(ObjectName + " already in FindedObjects list");
+        }
+        else
+        {
+            GameManager.instance.FindedObjects.Add(ObjectName);
+            Debug.Log(ObjectName + " added to FindedObjects list");
+        }
     }
 
     [YarnCommand("FinishedDialogue")]
     public void FinishedDialogue(string DialogueTitle)
     {
         GameManager.instance.FinishedDialogues.Add(DialogueTitle);
+    }
+
+
+    [YarnCommand("DelFinishedObj")]
+    public void DelFinishedObj(string ObjectName)
+    {
+        if (GameManager.instance.FindedObjects.Contains(ObjectName) == false)
+        {
+            Debug.Log("There is no " + ObjectName + " in FindedObjects");
+        }
+        else
+        {
+            GameManager.instance.FindedObjects.Remove(ObjectName);
+            Debug.Log(ObjectName + " in FindedObjects is Removed");
+        }
+        
     }
 
 
