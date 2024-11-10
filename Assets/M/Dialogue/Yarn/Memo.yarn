@@ -1,0 +1,177 @@
+﻿//메모장 오브젝트 상호작용 다이얼로그 모음
+
+
+
+title: Memo_Book
+
+---
+<<SetCanvasTo VisualNovelPrefab true>>
+
+//책 팝업이미지
+
+어…. 이건 뭐지?
+....
+황소와 왕비 사이에서 태어난 미노타우르스는 점차 성장하여, 사람을 잡아먹는 괴물이 되었다.
+결국, 왕은 탈출 불가능한 미로 속에 괴물을 가두고 9년에 한 번씩 인간을 제물로 바쳤다.
+제물이 되길 자처한 테세우스는, 제 발로 미로 속으로 걸어들어가 괴물을 무찌른다.
+…
+중간 페이지가 찢겨 나갔네.
+...
+...무사히 미로를 탈출할 수 있었다.
+그 후, 영웅으로 칭송받은 테세우스는 홀로 고향으로 도망간다.
+테세우스는 이후 평생동안 미로를 헤매는 악몽을 꿨다고 전해진다.
+….
+일단 메모장에 기록해두자.
+// (메모장에 수집되고 내용 뜸)
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Memo_Letter
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+어… 편지다.
+//팝업이미지만 띄워두기 -> 이후 화면 다시 클릭하면 다음 대사 뜨게
+//팝업이미지
+<<wait 3.0>>
+아리아드네가 지원이에게 편지를…?
+우선 메모장에 기록해두자. 
+
+//(메모장에 수집되고 내용 뜸)
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Memo_Note
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+//팝업이미지
+어…. 이건 뭐지?
+이런 게 왜 여기에…
+메모장에 기록해두자.
+//(메모장에 수집되고 내용 뜸)
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Memo_Phone
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+//팝업이미지
+??: 그만둬. 네가 그럴수록 더 위험해질 뿐이야.
+아리아드네: 지수를 돕는 건 다 나를 위해서야.
+아리아드네: 그러니까….
+뭐야. 누가 두고 간 거지?
+아리아드네랑 연락을 주고 받았잖아.
+주변을 둘러봐도 수상한 사람이 보이지 않는다.
+… 일단 메모장에 기록해두자.
+//(메모장에 수집되고 내용 뜸)
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Memo_RippedPage
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+//팝업이미지
+자세히 보니 책에서 찢어져 나온 조각 같다.
+…테세우스는 아리아드네로부터 건네받은 실타래 덕분에…
+...
+어… 뭔가 익숙한데.
+일단 메모장에 기록해두자.
+//(메모장에 수집되고 내용 뜸)
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Memo_Recorder
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+//팝업이미지
+… 녹음기다.
+틀어볼까?
+…
+어떻게 나한테 그럴 수가 있지?
+그게 내 마음대로 되는 일도 아닌데…
+내 심정이 어떨지 너는 모르겠지.
+난 절대 멈추지 않을거야.
+…이 목소리는…!
+지원이잖아.
+언제 이런 걸 녹음한거지?
+…일단 메모장에 기록해두자.
+//(메모장에 수집되고 내용 뜸)
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Memo_CaseBoard
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+//팝업이미지
+…범죄 영화에서 본 것 같은 게 있네.
+그런데 뭔가 익숙한 것들이 있다
+…!
+…일단 메모장에 기록해두자.
+//(메모장에 수집되고 내용 뜸)
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Memo_VideoTape1
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+//팝업이미지
+비디오 테이프인가?
+일단 챙겨보자.
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Memo_VideoTape2
+
+---
+
+//TV에 아이템 사용 할 경우:
+//(팝업이미지가 뜸)
+
+//1. 쌍둥이 아기들이 갓 태어난, 병원에 있는 상태
+
+//2. 걸음마를 떼는 아기들의 모습
+
+//3. 같은 가방을 메고 학교에 가는 초등학생 둘의 뒷모습
+
+//(세 개의 팝업 이미지 이후 대사 나옴)
+
+육아 비디오인가?
+…어. 뭔가 익숙한데.
+…!
+…일단 메모장에 기록해두자
+//(메모장에 수집되고 내용 뜸)
+
+===
+
+
+
+
+
