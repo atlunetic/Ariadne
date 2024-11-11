@@ -43,6 +43,12 @@ title: Memo_Letter
 
 //(메모장에 수집되고 내용 뜸)
 
+<<if CheckDialogue("DoctorsRoom")==false>>
+    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("memory_Meds") == true && CheckDialogue("Memo_Letter") == true)>>
+        <<jump DoctorsRoom>>
+    <<endif>>
+<<endif>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
