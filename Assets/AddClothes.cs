@@ -25,7 +25,7 @@ public class AddClothes : MonoBehaviour
 
         else
         {
-            Debug.Log("cannot add");
+            Debug.Log("cannot add" + sceneItem);
         }
     }
 }

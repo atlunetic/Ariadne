@@ -9,6 +9,9 @@ title: Memo_Book
 
 //책 팝업이미지
 
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw book_big 0.75 0.75>>
+
 어…. 이건 뭐지?
 ....
 황소와 왕비 사이에서 태어난 미노타우르스는 점차 성장하여, 사람을 잡아먹는 괴물이 되었다.
@@ -24,6 +27,10 @@ title: Memo_Book
 일단 메모장에 기록해두자.
 // (메모장에 수집되고 내용 뜸)
 
+<<Hide DBG>>
+<<Hide book_big>>
+
+<<FinishedDialogue VisualNovelPrefab Memo_Book>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -33,15 +40,21 @@ title: Memo_Letter
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab Memo_Letter>>
 
 어… 편지다.
 //팝업이미지만 띄워두기 -> 이후 화면 다시 클릭하면 다음 대사 뜨게
 //팝업이미지
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw letter_big 0.75 0.75>>
 <<wait 3.0>>
 아리아드네가 지원이에게 편지를…?
 우선 메모장에 기록해두자. 
 
 //(메모장에 수집되고 내용 뜸)
+
+<<Hide DBG>>
+<<Hide letter_big>>
 
 <<if CheckDialogue("DoctorsRoom")==false>>
     <<if (CheckDialogue("MedsStory") == true && CheckDialogue("memory_Meds") == true && CheckDialogue("Memo_Letter") == true)>>
@@ -58,12 +71,19 @@ title: Memo_Note
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab Memo_Note>>
+
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw memo_jjogji 0.75 0.75>>
 
 //팝업이미지
 어…. 이건 뭐지?
 이런 게 왜 여기에…
 메모장에 기록해두자.
 //(메모장에 수집되고 내용 뜸)
+
+<<Hide DBG>>
+<<Hide memo_jjogji>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -74,6 +94,10 @@ title: Memo_Phone
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab Memo_Phone>>
+
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw SulPhone_big 0.75 0.75>>
 
 //팝업이미지
 ??: 그만둬. 네가 그럴수록 더 위험해질 뿐이야.
@@ -85,6 +109,9 @@ title: Memo_Phone
 … 일단 메모장에 기록해두자.
 //(메모장에 수집되고 내용 뜸)
 
+<<Hide DBG>>
+<<Hide SulPhone_big>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -93,6 +120,10 @@ title: Memo_RippedPage
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab Memo_RippedPage>>
+
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw Page_big 0.75 0.75>>
 
 //팝업이미지
 자세히 보니 책에서 찢어져 나온 조각 같다.
@@ -101,6 +132,9 @@ title: Memo_RippedPage
 어… 뭔가 익숙한데.
 일단 메모장에 기록해두자.
 //(메모장에 수집되고 내용 뜸)
+
+<<Hide DBG>>
+<<Hide Page_big>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -109,6 +143,10 @@ title: Memo_Recorder
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab Memo_Recorder>>
+
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw recorder_big 0.75 0.75>>
 
 //팝업이미지
 … 녹음기다.
@@ -123,6 +161,9 @@ title: Memo_Recorder
 언제 이런 걸 녹음한거지?
 …일단 메모장에 기록해두자.
 //(메모장에 수집되고 내용 뜸)
+
+<<Hide DBG>>
+<<Hide recorder_big>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -131,13 +172,21 @@ title: Memo_CaseBoard
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab Memo_CaseBoard>>
+<<SetActiveFalse VisualNovelPrefab Room1503_bg>>
 
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw Board_big 0.75 0.75>>
 //팝업이미지
 …범죄 영화에서 본 것 같은 게 있네.
 그런데 뭔가 익숙한 것들이 있다
 …!
 …일단 메모장에 기록해두자.
 //(메모장에 수집되고 내용 뜸)
+
+<<Hide DBG>>
+<<Hide Board_big>>
+<<FinishedObj VisualNovelPrefab Room1503_bg>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -146,10 +195,18 @@ title: Memo_VideoTape1
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab Memo_VideoTape1>>
 
 //팝업이미지
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw Video_big 0.75 0.75>>
+
+
 비디오 테이프인가?
 일단 챙겨보자.
+<<Hide DBG>>
+<<Hide Video_big>>
+<<AddToInventory VisualNovelPrefab memo_video>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

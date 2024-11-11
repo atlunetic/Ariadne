@@ -1510,24 +1510,13 @@ title: JW_Books
 ---
 
 
-<<if CheckDialogue("JW_BooksStory")==true>>
+<<if CheckDialogue("Memo_Book")==true>>
     <<SetCanvasTo VisualNovelPrefab true>>
     이미 확인했어.
     <<SetCanvasTo VisualNovelPrefab false>>
 <<else>>
-    <<jump JW_BooksStory>>
+    <<jump Memo_Book>>
 <<endif>>
-
-===
-
-title: JW_BooksStory
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-찢겨진 책 대사
-<<SetCanvasTo VisualNovelPrefab false>>
-<<FinishedDialogue VisualNovelPrefab JW_BooksStory>>
 
 ===
 

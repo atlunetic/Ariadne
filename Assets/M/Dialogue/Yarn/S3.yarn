@@ -680,19 +680,42 @@ title: Officetel1503
 <<UpdateAct 지수 Jisoo4>>
 지원이가 왜 이런 사진을 갖고 있지?
 ...
-
 //지수2
-<<UpdateAct 지수 Jisoo2>>
-일단 1503호로 가보자.
-
+//<<UpdateAct 지수 Jisoo2>>
+//일단 1503호로 가보자.
 //(자동으로 다음 장소로 넘어감)
 <<UI_off MenuUI>>
 <<Hide 지수>>
-<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
-<<jump Officetel15thfloor>>
+//<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
+//<<jump Officetel15thfloor>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
+
+title: Room101
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+어..여기는 열려있네?
+들어가볼까?
+<<ChangeSceneTo VisualNovelPrefab S3_2_Officetel101>>
+<<SetCanvasTo VisualNovelPrefab false>>
+===
+
+title: Room101Fin
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+둘러볼만한 건 다 본 것 같은데.
+일단 15층으로 가보자.
+<<SetCanvasTo VisualNovelPrefab false>>
+//<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
+//<<jump Officetel15thfloor>>
+
+===
+
 
 title: Officetel15thfloor
 
@@ -1000,6 +1023,32 @@ title: Crack
 <<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 ‘크랙’이 추가되었습니다. *</color>
 <<RevealDiary DiaryManager Page5>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: 1503TV
+
+---
+//기획팀 컨펌 바람
+<<SetCanvasTo VisualNovelPrefab true>>
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw TV_big 0.75 0.75>>
+TV다.
+이걸로 뭘 볼 수 있으려나?
+<<Hide DBG>>
+<<Hide TV_big>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: NotVideoTape
+
+---
+
+//기획팀 컨펌 바람
+<<SetCanvasTo VisualNovelPrefab true>>
+이건 재생할 수 없다.
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
