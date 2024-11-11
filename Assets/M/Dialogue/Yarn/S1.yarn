@@ -892,15 +892,32 @@ title: HospitalWaitingRoom
 
 ---
 
+<<if CheckDialogue("HospitalWaitingRoom") == false>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    병원에 사람이 많다.
+    언제쯤 들어갈 수 있으려나.
+    ...
+    <<FinishedDialogue VisualNovelPrefab HospitalWaitingRoom>>
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    //기획팀 컨펌 부탁
+    아직도 병원에 사람이 많네.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
+
+===
+
+title: DoctorsRoom
+
+---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-병원에 사람이 많다.
-언제쯤 들어갈 수 있으려나.
-...
+<<FinishedDialogue VisualNovelPrefab DoctorsRoom>>
 <<PlayAudio HospitalAlert 0.3>>
 <i>'김지수님, 1번 진료실로 들어오세요.'
 
-<<Scene H_DrRoom>>
+<<ChangeSceneTo VisualNovelPrefab S1_Hospital2>>
 
 <<Act 의사 NPC_Doctor 0.322 0.327 white>>
 <<Act 지수 Jisoo1 1.17 0.322 white>>
@@ -934,17 +951,16 @@ title: HospitalWaitingRoom
                 어쩔 수 없지. 돌아가자.
                     // 씬 변경: 지도
                     <<HideAll>>
-                    <<Scene NoBG>>
+                    <<ChangeSceneTo VisualNovelPrefab S1_Hospital>>
                     <<SetCanvasTo VisualNovelPrefab false>>
             -> 아 맞다. 그랬었지.
                 지수: 아... 그랬죠. 참.
                 지수: 알겠습니다.
                 의사: 네. 다음에 뵙죠.
-
-                병원을 나섰다.
+                //병원을 나섰다.
                 //씬 변경: 지도
                 <<HideAll>>
-                <<Scene NoBG>>
+                <<ChangeSceneTo VisualNovelPrefab S1_Hospital>>
                 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -1353,24 +1369,24 @@ title: JW_WalletStory
 
 ===
 
-title: JW_Meds
+title: Meds
 
 ---
 
-<<if CheckDialogue("JW_MedsStory")==true>>
+<<if CheckDialogue("MedsStory")==true>>
     <<SetCanvasTo VisualNovelPrefab true>>
     아까 봤던 건데. 다시 살펴볼까?
         -> 살펴보자.
-            <<jump JW_MedsStory>>
+            <<jump MedsStory>>
         -> 관두자.
             <<SetCanvasTo VisualNovelPrefab false>>
 <<else>>
-    <<jump JW_MedsStory>>
+    <<jump MedsStory>>
 <<endif>>
 
 ===
 
-title: JW_MedsStory
+title: MedsStory
 
 ---
 
@@ -1390,7 +1406,14 @@ title: JW_MedsStory
 나한테 말도 안하고. 대체 무슨 일이 있는 거야.
 
 <<Hide 지수>>
-<<FinishedDialogue VisualNovelPrefab JW_MedsStory>>
+<<FinishedDialogue VisualNovelPrefab MedsStory>>
+
+<<if CheckDialogue("DoctorsRoom")==false>>
+    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("memory_Meds") == true && CheckDialogue("Memo_Letter") == true)>>
+        <<jump DoctorsRoom>>
+    <<endif>>
+<<endif>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1434,25 +1457,33 @@ title: memory_Meds
     <<UI_off MenuUI>>
     <<Scene NoBG>>
 <<endif>>
+
+<<if CheckDialogue("DoctorsRoom")==false>>
+    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("memory_Meds") == true && CheckDialogue("Memo_Letter") == true)>>
+        <<jump DoctorsRoom>>
+    <<endif>>
+<<endif>>
+
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
-title:JW_Hairpin
+title:Hairpin
 
 ---
 
-<<if CheckDialogue("JW_HairpinStory")==true>>
+<<if CheckDialogue("HairpinStory")==true>>
     <<SetCanvasTo VisualNovelPrefab true>>
     이미 헤어핀을 챙겼어. 다른 곳을 살펴보자.
     <<SetCanvasTo VisualNovelPrefab false>>
 <<else>>
-    <<jump JW_HairpinStory>>
+    <<jump HairpinStory>>
 <<endif>>
 
 ===
 
-title: JW_HairpinStory
+title: HairpinStory
 
 ---
 
@@ -1469,7 +1500,7 @@ title: JW_HairpinStory
 
 //<<SetActiveFalse VisualNovelPrefab Drawer_Hairpin>>
 //<<FinishedObj VisualNovelPrefab Drawer_Hairpin>>
-<<FinishedObj VisualNovelPrefab Drawer_HairpinStory>>
+<<FinishedDialogue VisualNovelPrefab 6HairPin>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
