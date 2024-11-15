@@ -3617,6 +3617,7 @@ title: AfterNote
 <<DeleteItem Inventory memo_note>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw jjogji_big2 0.75 0.75>>
+<<FindMemo MemoController memo_zzokji>>
 그래….
 가족에 대해 물어보자.
 <<Hide DBG>>
