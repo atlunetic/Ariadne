@@ -14,9 +14,9 @@ title: Memo_Book
 
 어…. 이건 뭐지?
 ....
-황소와 왕비 사이에서 태어난 미노타우르스는 점차 성장하여, 사람을 잡아먹는 괴물이 되었다.
-결국, 왕은 탈출 불가능한 미로 속에 괴물을 가두고 9년에 한 번씩 인간을 제물로 바쳤다.
-제물이 되길 자처한 테세우스는, 제 발로 미로 속으로 걸어들어가 괴물을 무찌른다.
+<color=grey><i>황소와 왕비 사이에서 태어난 미노타우르스는 점차 성장하여, 사람을 잡아먹는 괴물이 되었다.
+<color=grey><i>결국, 왕은 탈출 불가능한 미로 속에 괴물을 가두고 9년에 한 번씩 인간을 제물로 바쳤다.
+<color=grey><i>제물이 되길 자처한 테세우스는, 제 발로 미로 속으로 걸어들어가 괴물을 무찌른다.
 …
 중간 페이지가 찢겨 나갔네.
 ...
@@ -25,10 +25,12 @@ title: Memo_Book
 테세우스는 이후 평생동안 미로를 헤매는 악몽을 꿨다고 전해진다.
 ….
 일단 메모장에 기록해두자.
-// (메모장에 수집되고 내용 뜸)
 
 <<Hide DBG>>
 <<Hide book_big>>
+
+// (메모장에 수집되고 내용 뜸)
+<<FindMemo MemoController memo_book>>
 
 <<FinishedDialogue VisualNovelPrefab Memo_Book>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -49,12 +51,13 @@ title: Memo_Letter
 <<Draw letter_big 0.75 0.75>>
 <<wait 3.0>>
 아리아드네가 지원이에게 편지를…?
-우선 메모장에 기록해두자. 
-
-//(메모장에 수집되고 내용 뜸)
+우선 메모장에 기록해두자.
 
 <<Hide DBG>>
 <<Hide letter_big>>
+
+//(메모장에 수집되고 내용 뜸)
+<<FindMemo MemoController memo_letter>>
 
 <<if CheckDialogue("DoctorsRoom")==false>>
     <<if (CheckDialogue("MedsStory") == true && CheckDialogue("memory_Meds") == true && CheckDialogue("Memo_Letter") == true)>>
@@ -77,15 +80,32 @@ title: Memo_Note
 <<Draw memo_jjogji 0.75 0.75>>
 
 //팝업이미지
-어…. 이건 뭐지?
-이런 게 왜 여기에…
-메모장에 기록해두자.
+어... 이게 무슨 소리지?
+건우 오빠가 왜 이런 걸...
+일단 메모장에 기록해두자.
 //(메모장에 수집되고 내용 뜸)
-
 <<Hide DBG>>
 <<Hide memo_jjogji>>
 
+<<FindMemo MemoController memo_zzokji>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: AfterNoteContent
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+...
+아리아드네가 이걸..? 정말 지켜보고 있는 건가?
+혼란스럽다.
+하지만 지금은 달리 뭘 해야 하는지 모르겠어.
+...가족에 대해 물어보자.
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 
@@ -107,10 +127,12 @@ title: Memo_Phone
 아리아드네랑 연락을 주고 받았잖아.
 주변을 둘러봐도 수상한 사람이 보이지 않는다.
 … 일단 메모장에 기록해두자.
-//(메모장에 수집되고 내용 뜸)
 
 <<Hide DBG>>
 <<Hide SulPhone_big>>
+
+//(메모장에 수집되고 내용 뜸)
+<<FindMemo MemoController memo_phone>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -131,10 +153,13 @@ title: Memo_RippedPage
 ...
 어… 뭔가 익숙한데.
 일단 메모장에 기록해두자.
-//(메모장에 수집되고 내용 뜸)
 
 <<Hide DBG>>
 <<Hide Page_big>>
+
+//(메모장에 수집되고 내용 뜸)
+<<FindMemo MemoController memo_tornpage>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -160,10 +185,14 @@ title: Memo_Recorder
 지원이잖아.
 언제 이런 걸 녹음한거지?
 …일단 메모장에 기록해두자.
-//(메모장에 수집되고 내용 뜸)
 
 <<Hide DBG>>
 <<Hide recorder_big>>
+
+//(메모장에 수집되고 내용 뜸)
+<<FindMemo MemoController memo_recorder>>
+
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -182,10 +211,13 @@ title: Memo_CaseBoard
 그런데 뭔가 익숙한 것들이 있다
 …!
 …일단 메모장에 기록해두자.
-//(메모장에 수집되고 내용 뜸)
 
 <<Hide DBG>>
 <<Hide Board_big>>
+
+//(메모장에 수집되고 내용 뜸)
+<<FindMemo MemoController memo_board>>
+
 <<FinishedObj VisualNovelPrefab Room1503_bg>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -225,12 +257,16 @@ title: Memo_VideoTape2
 //3. 같은 가방을 메고 학교에 가는 초등학생 둘의 뒷모습
 
 //(세 개의 팝업 이미지 이후 대사 나옴)
+<<SetCanvasTo VisualNovelPrefab true>>
 
 육아 비디오인가?
 …어. 뭔가 익숙한데.
 …!
 …일단 메모장에 기록해두자
 //(메모장에 수집되고 내용 뜸)
+<<FindMemo MemoController memo_videotape>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 

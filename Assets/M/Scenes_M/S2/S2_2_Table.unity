@@ -517,7 +517,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 64c12218b943c2d4c83be1c98ee3b33b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3e8815ea00c9f74eba1779882283c29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -752,7 +752,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3308344866acc0c478f5368a7cee6c1d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d28f108a4dfea2439f5545d0dedbba6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -838,7 +838,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 288818e348c1f7c49917c064c348873c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1a49fa29c824af64d9d514f9f64d337a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1423,7 +1423,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 288818e348c1f7c49917c064c348873c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1a49fa29c824af64d9d514f9f64d337a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2053,7 +2053,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 12b7221ad41efc441bb219e19c6a94e2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a16f186ba34369747b942cbf9c95ef93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2213,7 +2213,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3c795b1b90349c345b211f52f6adc232, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 589d374a2b03ef84d8cf6c44ef250d2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2764,7 +2764,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e613d545e2f496745856d02bbd0927d5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b07bda1c635f45f4cad8b85b2e3460fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3123,6 +3123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13bcfbf9ed23434fa69ae2ca1a01475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resolution: {fileID: 0}
 --- !u!1 &2112340863
 GameObject:
   m_ObjectHideFlags: 0

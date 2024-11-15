@@ -2181,7 +2181,7 @@ title: obj_staffonly
 
 ===
 
-title: StaffLocker
+title: StaffLockerFirst
 
 ---
 
@@ -2197,6 +2197,20 @@ title: StaffLocker
 어떻게 열 수 있으려나...
 <<SetCanvasTo VisualNovelPrefab false>>
 
+
+===
+
+title: StaffLocker
+
+---
+
+<<if CheckDialogue("lockeropened")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 챙긴 직원 복장 외에 이 안에서 쓸만한 건 없는 것 같아.
+	<<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump StaffLockerFirst>>
+<<endif>>
 
 ===
 
@@ -2219,19 +2233,7 @@ title: KeyUse
 이걸 사용해볼까?
 <<SetCanvasTo VisualNovelPrefab false>>
 
-===
 
-title: obj_staffonly_lockeropen
-
----
-
-<<if CheckDialogue("lockeropened")==true>>
-    <<SetCanvasTo VisualNovelPrefab true>>
-    아까 챙긴 직원 복장 외에 이 안에서 쓸만한 건 없는 것 같아.
-	<<SetCanvasTo VisualNovelPrefab false>>
-<<else>>
-    <<jump lockeropened>>
-<<endif>>
 
 ===
 
@@ -2248,6 +2250,8 @@ title: lockeropened
 <<Fade black 0.0 1.0 1.0>>
 //♫Sound: 열쇠 잘그락 소리
 <<PlayAudio KeytoLocker>>
+<<SetActiveFalse VisualNovelPrefab StaffOnlyLockerBG1>>
+<<FinishedObj VisualNovelPrefab StaffOnlyLockerBG1>>
 <<FadeIn>>
 ...됐다!!
 <<wait 1.0>>
@@ -3720,10 +3724,6 @@ title: obj_customerg_end
 	<<Hide 지수>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 <<endif>>
-
-
-	
-
 ===
 
 title: obj_customerh

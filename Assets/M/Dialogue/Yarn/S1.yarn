@@ -841,7 +841,7 @@ title: Drugsnacks
         -> 관두자.
             <<SetCanvasTo VisualNovelPrefab false>>
 <<else>>
-    <<jump Drugsnacksstory>>
+    <<jump DrugsnacksStory>>
 <<endif>>
 
 ===
@@ -880,7 +880,7 @@ title: Hospital
 생각난 김에 병원이라도 빨리 갔다 올까?
     -> 가보자
         <<GoHospital MapController>>
-        //<<jump HospitalWaitingRoom>>
+        <<jump HospitalWaitingRoom>>
         <<SetCanvasTo VisualNovelPrefab false>>
     -> 가지말자
         괜찮으려나?
@@ -914,6 +914,7 @@ title: DoctorsRoom
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<FinishedDialogue VisualNovelPrefab DoctorsRoom>>
+<<wait 1.5>>
 <<PlayAudio HospitalAlert 0.3>>
 <i>'김지수님, 1번 진료실로 들어오세요.'
 
@@ -1360,6 +1361,7 @@ title: JW_WalletStory
 <<Hide 지수>>
 
 <color=yellow>* '지원의 지갑'을 습득했다. *</color>
+<<AddToInventory VisualNovelPrefab Wallet>>
 
 
 //<<SetActiveFalse VisualNovelPrefab DrawerR_Wallet>>
@@ -1409,7 +1411,7 @@ title: MedsStory
 <<FinishedDialogue VisualNovelPrefab MedsStory>>
 
 <<if CheckDialogue("DoctorsRoom")==false>>
-    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("memory_Meds") == true && CheckDialogue("Memo_Letter") == true)>>
+    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("Memo_Letter") == true && CheckDialogue("Memory_Meds") == true)>>
         <<jump DoctorsRoom>>
     <<endif>>
 <<endif>>
@@ -1493,13 +1495,12 @@ title: HairpinStory
 
 헤어핀이다.
 혹시 모르니 하나 챙겨둘까?
-
 <<Hide Hairpin(E)_0>>
 <<Hide DBG>>
 <color=yellow>* '헤어핀'을 습득했다. *</color>
 
-//<<SetActiveFalse VisualNovelPrefab Drawer_Hairpin>>
-//<<FinishedObj VisualNovelPrefab Drawer_Hairpin>>
+<<SetActiveFalse VisualNovelPrefab Drawer_Hairpin>>
+<<FinishedObj VisualNovelPrefab Drawer_Hairpin>>
 <<FinishedDialogue VisualNovelPrefab 6HairPin>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
