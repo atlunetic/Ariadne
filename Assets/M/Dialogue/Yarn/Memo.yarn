@@ -5,7 +5,22 @@
 title: Memo_Book
 
 ---
-<<SetCanvasTo VisualNovelPrefab true>>
+
+
+
+<<if (CheckDialogue("MemoStory_Book") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_Book>>
+<<endif>>
+
+===
+
+title: MemoStory_Book
+
+---
 
 //책 팝업이미지
 
@@ -32,7 +47,7 @@ title: Memo_Book
 // (메모장에 수집되고 내용 뜸)
 <<FindMemo MemoController memo_book>>
 
-<<FinishedDialogue VisualNovelPrefab Memo_Book>>
+<<FinishedDialogue VisualNovelPrefab MemoStory_Book>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -41,8 +56,22 @@ title: Memo_Letter
 
 ---
 
+<<if (CheckDialogue("MemoStory_Letter") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_Letter>>
+<<endif>>
+
+===
+
+title: MemoStory_Letter
+
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
-<<FinishedDialogue VisualNovelPrefab Memo_Letter>>
+<<FinishedDialogue VisualNovelPrefab MemoStory_Letter>>
 
 어… 편지다.
 //팝업이미지만 띄워두기 -> 이후 화면 다시 클릭하면 다음 대사 뜨게
@@ -88,7 +117,6 @@ title: Memo_Note
 <<Hide memo_jjogji>>
 
 <<FindMemo MemoController memo_zzokji>>
-
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -113,8 +141,22 @@ title: Memo_Phone
 
 ---
 
+
+<<if (CheckDialogue("MemoStory_Phone") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_Phone>>
+<<endif>>
+
+===
+
+title: MemoStory_Phone
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
-<<FinishedDialogue VisualNovelPrefab Memo_Phone>>
+<<FinishedDialogue VisualNovelPrefab MemoStory_Phone>>
 
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw SulPhone_big 0.75 0.75>>
@@ -139,6 +181,21 @@ title: Memo_Phone
 ===
 
 title: Memo_RippedPage
+---
+
+
+<<if (CheckDialogue("MemoStory_RippedPage") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_RippedPage>>
+<<endif>>
+
+===
+
+title: MemoStory_RippedPage
+
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
@@ -167,8 +224,23 @@ title: Memo_RippedPage
 title: Memo_Recorder
 ---
 
+
+<<if (CheckDialogue("MemoStory_Recorder") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_Recorder>>
+<<endif>>
+
+===
+
+title: MemoStory_Recorder
+
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
-<<FinishedDialogue VisualNovelPrefab Memo_Recorder>>
+<<FinishedDialogue VisualNovelPrefab MemoStory_Recorder>>
 
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw recorder_big 0.75 0.75>>
@@ -200,8 +272,21 @@ title: Memo_Recorder
 title: Memo_CaseBoard
 ---
 
+
+<<if (CheckDialogue("MemoStory_CaseBoard") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_CaseBoard>>
+<<endif>>
+
+===
+
+title: MemoStory_CaseBoard
+---
 <<SetCanvasTo VisualNovelPrefab true>>
-<<FinishedDialogue VisualNovelPrefab Memo_CaseBoard>>
+<<FinishedDialogue VisualNovelPrefab MemoStory_CaseBoard>>
 <<SetActiveFalse VisualNovelPrefab Room1503_bg>>
 
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
@@ -226,8 +311,22 @@ title: Memo_CaseBoard
 title: Memo_VideoTape1
 ---
 
+<<if (CheckDialogue("MemoStory_VideoTape") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_VideoTape>>
+<<endif>>
+
+===
+
+title: MemoStory_VideoTape
+
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
-<<FinishedDialogue VisualNovelPrefab Memo_VideoTape1>>
+<<FinishedDialogue VisualNovelPrefab MemoStory_VideoTape>>
 
 //팝업이미지
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
@@ -257,17 +356,24 @@ title: Memo_VideoTape2
 //3. 같은 가방을 메고 학교에 가는 초등학생 둘의 뒷모습
 
 //(세 개의 팝업 이미지 이후 대사 나옴)
-<<SetCanvasTo VisualNovelPrefab true>>
 
+<<PlayVideo VisualNovelPrefab>>
+
+===
+
+title: Memo_VideoTape3
+
+---
+
+
+<<SetCanvasTo VisualNovelPrefab true>>
 육아 비디오인가?
-…어. 뭔가 익숙한데.
-…!
-…일단 메모장에 기록해두자
-//(메모장에 수집되고 내용 뜸)
+...어. 뭔가 익숙한데.
+...!
+...일단 메모장에 기록해두자.
+<<CloseVideo VisualNovelPrefab>>
 <<FindMemo MemoController memo_videotape>>
 <<SetCanvasTo VisualNovelPrefab false>>
-
-
 ===
 
 
