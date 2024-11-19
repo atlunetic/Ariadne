@@ -12,7 +12,7 @@ public class MemoController : MonoBehaviour
     public GameObject MemoScrollContent;
     public GameObject MemoPageContainer;
     public GameObject MemoShortPrefab;
-    public Dictionary<string,GameObject> MemoPages;
+    public Dictionary<string,GameObject> MemoPages  = new Dictionary<string, GameObject>();
 
     [HideInInspector]
     public GameObject NowOpenedPage;
