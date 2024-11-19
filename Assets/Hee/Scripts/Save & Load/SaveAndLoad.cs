@@ -40,7 +40,7 @@ public class SaveAndLoad : MonoBehaviour
             BackToMain.SetActive(true);
             SaveFiles.SetActive(true);
             BackToMainReally.SetActive(false);});
-        for(int i=0;i<5;i++)
+        for(int i=0;i<30;i++)
             AddSaveFile(i);
         LoadCollectedEndings();
     }
