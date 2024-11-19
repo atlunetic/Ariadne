@@ -465,7 +465,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47b1862fc29b6ec4285b12dec3bf8f2e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7875ce4236122e4d9263467ad6808c6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: db30536746ce45743bc6b88d586eac03, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e493234579288e2499da898b6d3db5f4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1194,7 +1194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 332afc98b5407944ca6043fd3267c34b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df0929ddc88b0444aa7a0238862db7f5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1282,7 +1282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 18092900227dc9845b7764b143f3d901, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df1953e1ceccb93439a4f835ee97df76, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1516,6 +1516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13bcfbf9ed23434fa69ae2ca1a01475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resolution: {fileID: 0}
 --- !u!164 &1934569217
 AudioReverbFilter:
   m_ObjectHideFlags: 0
