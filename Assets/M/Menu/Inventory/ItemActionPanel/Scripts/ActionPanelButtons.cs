@@ -50,8 +50,12 @@ public class ActionPanelButtons : MonoBehaviour
 
         else if (currentscene.name.StartsWith("S2"))
         {
+            if (connectedItem.itemName == "memo_note")
+            {
+                runner.StartDialogue("AfterNote");
+            }
 
-             if (currentscene.name == "S2_7_Stairs")
+            if (currentscene.name == "S2_7_Stairs")
             {
                 if (connectedItem.itemName == "DrugJelly")
                 {

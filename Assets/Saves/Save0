@@ -1,51 +1,57 @@
 {
-  "savetime": "2024-09-22 17:35:40 오후",
-  "IsLoad": false,
-  "NowScene": "S1_2_JiwonRoom",
+  "savetime": "2024-07-14 16:11:46 오후",
+  "IsLoad": true,
+  "NowScene": "S1_Park",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
   "ChattingLog": [
     19,
     18,
-    25
+    25,
+    0
   ],
-  "PhotoList": [],
-  "items": [],
+  "PhotoList": [
+    "Letter6",
+    "Meds13",
+    "Laptop18"
+  ],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Hairpin"
+    }
+  ],
   "FindedObjects": [
-    "Letter"
+    "Letter",
+    "Books_Diary",
+    "DrawerR_Wallet",
+    "Drawer_Hairpin"
   ],
-  "FindedClues": [],
+  "FindedClues": [
+    "Letter",
+    "Meds",
+    "Laptop"
+  ],
   "FinishedDialogues": [
-    "ChocotalkAlarm",
-    "DgramAlarm"
+    "jisoo'stalk",
+    "Chatlist",
+    "DGram1st",
+    "Chocotalk1st",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsJiwon",
+    "Camera",
+    "Gallery",
+    "Map_1",
+    "ConvenienceStore",
+    "Hospital",
+    "Barstreet",
+    "Park",
+    "Where",
+    "New711",
+    "SevenEleven"
   ],
   "GottenPage": [],
   "RecommendedFriends": [],
-  "visited": 0,
-  "IsAriadneHintOn": false,
-  "S1HintList": [
-    "Laptop",
-    "Meds",
-    "Letter",
-    "Drawer_Hairpin",
-    "DrawerR_Wallet",
-    "ChooseChatName1",
-    "Books_Diary",
-    "visitPark",
-    "visitBarStreet",
-    "visitHospital"
-  ],
-  "S2HintList": [
-    "ClubTable_Geonwoo",
-    "Toilet_costomerF",
-    "ToiletPaper"
-  ],
-  "StaffroomHintList": [
-    "VIPlist",
-    "InStaffroom_VIPlist",
-    "InStaffroom_cctv",
-    "InStaffroom_Key",
-    "InStaffroom_Radio"
-  ]
+  "visited": 7
 }
