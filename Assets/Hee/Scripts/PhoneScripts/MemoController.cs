@@ -67,7 +67,7 @@ public class MemoController : MonoBehaviour
 
     public void GoPrevMemo(){
         int pageidx = GameManager.instance.FindedMemoList.IndexOf(NowOpenedPage.name);
-        if(pageidx == 0) pageidx= GameManager.instance.FindedMemoList.Count+1;
+        if(pageidx == 0) pageidx= GameManager.instance.FindedMemoList.Count;
         
         NowOpenedPage = MemoPages[GameManager.instance.FindedMemoList[pageidx-1]];
         PhoneController.instance.Backward();

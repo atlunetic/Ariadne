@@ -644,7 +644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: Objectlist.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: Diarylist.Array.data[0]
@@ -962,6 +962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13bcfbf9ed23434fa69ae2ca1a01475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resolution: {fileID: 0}
 --- !u!1 &1253725034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1408,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1095354827}
-  - {fileID: 638507654}
   - {fileID: 1500569745}
   - {fileID: 481642109}
   - {fileID: 177986094}
@@ -1416,3 +1416,4 @@ SceneRoots:
   - {fileID: 896404953}
   - {fileID: 512721826}
   - {fileID: 2036630206}
+  - {fileID: 638507654}
