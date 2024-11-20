@@ -22,7 +22,7 @@ public class SaveGameManager{
     public List<string> S1HintList;
     public List<string> S2HintList;
     public List<string> StaffroomHintList;
-    public List<string> FindedMemoList;
+    public List<string> FindedMemoList = new List<string>();
 
 }
 public class GameManager : MonoBehaviour
@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
     public List<string> S1HintList = new List<string> {"Laptop", "Meds", "Letter", "Drawer_Hairpin", "DrawerR_Wallet", "ChooseChatName1", "Books_Diary", "visitPark", "visitBarStreet", "visitHospital"};
     public List<string> S2HintList = new List<string> {"ClubTable_Geonwoo", "Toilet_costomerF", "ToiletPaper"};  // ClubTable_Geonwoo -> GoStaffroom, StudentID  -> Locker
     public List<string> StaffroomHintList = new List<string> {"VIPlist", "InStaffroom_VIPlist", "InStaffroom_cctv", "InStaffroom_Key", "InStaffroom_Radio"};
-    public List<string> FindedMemoList;
+    public List<string> FindedMemoList = new List<string>();
 
     public bool S1Ended(){
         return FindedClues.Contains("Laptop") && FindedClues.Contains("Meds") && FindedClues.Contains("Letter") &&

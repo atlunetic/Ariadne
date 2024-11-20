@@ -26,6 +26,7 @@ public class SceneInfo : MonoBehaviour
         foreach(GameObject obj in Diarylist)
 	        obj.SetActive(GameManager.instance.FindedObjects.Contains("Books_Diary"));
         GameManager.instance.NowScene = scene.name;
+        Debug.Log("Scene Managed: " + scene.name);
     }
 
     public string FindClue(Rect rect)  // CameraRect
