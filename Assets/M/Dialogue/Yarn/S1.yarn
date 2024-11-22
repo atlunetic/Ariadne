@@ -1517,20 +1517,6 @@ title: HairpinStory
 <<FinishedDialogue VisualNovelPrefab 6HairPin>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
-===
-
-title: JW_Books
-
----
-
-
-<<if CheckDialogue("Memo_Book")==true>>
-    <<SetCanvasTo VisualNovelPrefab true>>
-    이미 확인했어.
-    <<SetCanvasTo VisualNovelPrefab false>>
-<<else>>
-    <<jump Memo_Book>>
-<<endif>>
 
 ===
 

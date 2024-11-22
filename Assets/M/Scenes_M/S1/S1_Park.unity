@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 512721824}
   - component: {fileID: 512721827}
   m_Layer: 0
-  m_Name: 6HairPin
+  m_Name: 6Hairpin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
