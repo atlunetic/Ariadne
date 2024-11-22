@@ -919,14 +919,13 @@ title: DoctorsRoom
 <i>'김지수님, 1번 진료실로 들어오세요.'
 
 <<ChangeSceneTo VisualNovelPrefab S1_Hospital2>>
-
+<<UI_on MenuUI>>
+<<wait 1.0>>
 <<Act 의사 NPC_Doctor 0.322 0.327 white>>
 <<Act 지수 Jisoo1 1.17 0.322 white>>
 의사: 좀 어떠셨어요.
-
 지수: 여전하네요. 약이 다 떨어져가서 왔어요.
 의사: 일에 집중하시는 데 어려움은 없으셨나요?
-
 <<UpdateAct 지수 Jisoo2>>
 지수: ...
 지수: 병원에 매번 오기도 귀찮은데.
@@ -952,8 +951,13 @@ title: DoctorsRoom
                 어쩔 수 없지. 돌아가자.
                     // 씬 변경: 지도
                     <<HideAll>>
+                    <<Fade black 0.0 1.0 2.0>>
+                    <<wait 3.0>>
                     <<ChangeSceneTo VisualNovelPrefab S1_Hospital>>
+                    <<wait 2.0>>
+                    <<FadeIn 1.0>>
                     <<SetCanvasTo VisualNovelPrefab false>>
+                    <<UI_off MenuUI>>
             -> 아 맞다. 그랬었지.
                 지수: 아... 그랬죠. 참.
                 지수: 알겠습니다.
@@ -961,8 +965,13 @@ title: DoctorsRoom
                 //병원을 나섰다.
                 //씬 변경: 지도
                 <<HideAll>>
+                <<Fade black 0.0 1.0 2.0>>
+                <<wait 3.0>>
                 <<ChangeSceneTo VisualNovelPrefab S1_Hospital>>
+                <<wait 2.0>>
+                <<FadeIn 1.0>>
                 <<SetCanvasTo VisualNovelPrefab false>>
+                <<UI_off MenuUI>>
 
 
 
@@ -1410,13 +1419,15 @@ title: MedsStory
 <<Hide 지수>>
 <<FinishedDialogue VisualNovelPrefab MedsStory>>
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 <<if CheckDialogue("DoctorsRoom")==false>>
-    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("Memo_Letter") == true && CheckDialogue("Memory_Meds") == true)>>
+    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("MemoStory_Letter") == true && CheckDialogue("memory_Meds") == true)>>
         <<jump DoctorsRoom>>
     <<endif>>
 <<endif>>
 
-<<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 
@@ -1424,7 +1435,7 @@ title: memory_Meds
 
 ---
 
-
+<<FinishedDialogue VisualNovelPrefab memory_Meds>>
 <<SetCanvasTo VisualNovelPrefab true>>
 <<PlayAudio MemoryRecall 0.5>>
 //(토하는 지수 연출)
@@ -1460,14 +1471,16 @@ title: memory_Meds
     <<Scene NoBG>>
 <<endif>>
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 <<if CheckDialogue("DoctorsRoom")==false>>
-    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("memory_Meds") == true && CheckDialogue("Memo_Letter") == true)>>
+    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("memory_Meds") == true && CheckDialogue("MemoStory_Letter") == true)>>
         <<jump DoctorsRoom>>
     <<endif>>
 <<endif>>
 
 
-<<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 
@@ -1499,8 +1512,8 @@ title: HairpinStory
 <<Hide DBG>>
 <color=yellow>* '헤어핀'을 습득했다. *</color>
 
-<<SetActiveFalse VisualNovelPrefab Drawer_Hairpin>>
-<<FinishedObj VisualNovelPrefab Drawer_Hairpin>>
+<<SetActiveFalse VisualNovelPrefab 6Hairpin>>
+<<FinishedObj VisualNovelPrefab 6Hairpin>>
 <<FinishedDialogue VisualNovelPrefab 6HairPin>>
 <<SetCanvasTo VisualNovelPrefab false>>
 

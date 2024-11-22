@@ -88,13 +88,14 @@ title: MemoStory_Letter
 //(메모장에 수집되고 내용 뜸)
 <<FindMemo MemoController memo_letter>>
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
 <<if CheckDialogue("DoctorsRoom")==false>>
-    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("memory_Meds") == true && CheckDialogue("Memo_Letter") == true)>>
+    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("MemoStory_Letter") == true && CheckDialogue("memory_Meds") == true)>>
         <<jump DoctorsRoom>>
     <<endif>>
 <<endif>>
 
-<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
