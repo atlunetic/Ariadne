@@ -1,5 +1,5 @@
 {
-  "savetime": "2024-11-22 13:25:31 오후",
+  "savetime": "2024-11-22 15:07:45 오후",
   "IsLoad": false,
   "NowScene": "S1_2_JiwonRoom",
   "NumOfScreenShots": 1,
@@ -12,13 +12,10 @@
   ],
   "PhotoList": [],
   "items": [],
-  "FindedObjects": [
-    "Letter"
-  ],
+  "FindedObjects": [],
   "FindedClues": [],
   "FinishedDialogues": [
-    "ChocotalkAlarm",
-    "DgramAlarm"
+    "ChocotalkAlarm"
   ],
   "GottenPage": [],
   "RecommendedFriends": [],

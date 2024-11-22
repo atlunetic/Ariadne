@@ -1212,7 +1212,7 @@ title: Diary1Story
 <<Hide Diary>>
 <<Hide DBG>>
 //<<SetActiveFalse VisualNovelPrefab Books_Diary>>
-//<<FinishedObj VisualNovelPrefab Books_Diary>>
+<<FinishedObj VisualNovelPrefab Books_Diary>>
 <<FinishedDialogue VisualNovelPrefab Diary1Story>>
 <<ActiveD MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -1374,7 +1374,7 @@ title: JW_WalletStory
 
 
 //<<SetActiveFalse VisualNovelPrefab DrawerR_Wallet>>
-//<<FinishedObj VisualNovelPrefab DrawerR_Wallet>>
+<<FinishedObj VisualNovelPrefab DrawerR_Wallet>>
 <<FinishedDialogue VisualNovelPrefab JW_WalletStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -1418,7 +1418,7 @@ title: MedsStory
 
 <<Hide 지수>>
 <<FinishedDialogue VisualNovelPrefab MedsStory>>
-
+<<FinishedObj VisualNovelPrefab Meds>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 <<if CheckDialogue("DoctorsRoom")==false>>
@@ -1517,20 +1517,6 @@ title: HairpinStory
 <<FinishedDialogue VisualNovelPrefab 6HairPin>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
-===
-
-title: JW_Books
-
----
-
-
-<<if CheckDialogue("Memo_Book")==true>>
-    <<SetCanvasTo VisualNovelPrefab true>>
-    이미 확인했어.
-    <<SetCanvasTo VisualNovelPrefab false>>
-<<else>>
-    <<jump Memo_Book>>
-<<endif>>
 
 ===
 
