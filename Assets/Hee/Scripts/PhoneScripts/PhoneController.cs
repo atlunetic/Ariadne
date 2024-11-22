@@ -12,6 +12,7 @@ public class PhoneController : MonoBehaviour
     public GameObject Gallery;
     public GameObject Map;
     public GameObject Dgram;
+    public GameObject Memo;
     private Stack<GameObject> TabStack;
 
     void Awake(){
@@ -57,6 +58,9 @@ public class PhoneController : MonoBehaviour
     }
     public void ActivMap(){
         ActiveTab(Map);
+    }
+    public void ActivMemo(){
+        ActiveTab(Memo);
     }
     public void ActiveDgram(){
         ActiveTab(Dgram);
