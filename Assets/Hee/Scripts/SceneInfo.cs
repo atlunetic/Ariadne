@@ -25,7 +25,9 @@ public class SceneInfo : MonoBehaviour
         foreach(GameObject obj in Objectlist)
 	        obj.SetActive(!GameManager.instance.FindedObjects.Contains(obj.name));
         foreach(GameObject obj in Diarylist)
-	        obj.SetActive(GameManager.instance.FindedObjects.Contains("Books_Diary"));
+	        obj.SetActive(GameManager.instance.FindedObjects.Contains("Books_Diary") &&
+                          !GameManager.instance.FindedObjects.Contains(obj.name));
+        
         GameManager.instance.NowScene = scene.name;
         Debug.Log("Scene Managed: " + scene.name);
     }
@@ -88,7 +90,7 @@ public class SceneInfo : MonoBehaviour
         GalleryController.instance.Glitch.SetActive(false);
 
         if(IsS4) return;
-        MemoriesBG[MemoriesBG.Length -1].GetComponent<Image>().CrossFadeAlpha(0f, 0.7f, false);
+        MemoriesBG[MemoriesBG.Length -1].SetActive(false);
         Invoke("Fadeout", 1f);
     }
 

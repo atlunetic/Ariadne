@@ -26,6 +26,13 @@ public class MapController : MonoBehaviour
     public Button Schoolbutton;
 
     public Button CurrLocationbutton;
+    public Sprite BlueDot;
+
+    void Start(){
+        if((GameManager.instance.visited & 1) != 0) Parkbutton.GetComponent<Image>().sprite = BlueDot;
+        if((GameManager.instance.visited & 2) != 0) BarStreetbutton.GetComponent<Image>().sprite = BlueDot;
+        if((GameManager.instance.visited & 4) != 0) Hospitalbutton.GetComponent<Image>().sprite = BlueDot;
+    }
 
     [YarnCommand("GoHome")]
     public void GoHome(){
@@ -39,6 +46,7 @@ public class MapController : MonoBehaviour
     public void GoPark(){     
         CurrPoint.anchoredPosition = new Vector2(-201,-8);
         Menu.instance.UI_off();
+        Parkbutton.GetComponent<Image>().sprite = BlueDot;
         DisableButton(Parkbutton);
         SceneManager.LoadScene("S1_Park");
         GameManager.instance.visited |= 1;
@@ -49,6 +57,7 @@ public class MapController : MonoBehaviour
         SceneManager.LoadScene("S1_Street");
         CurrPoint.anchoredPosition = new Vector2(27,251);
         Menu.instance.UI_off();
+        BarStreetbutton.GetComponent<Image>().sprite = BlueDot;
         DisableButton(BarStreetbutton);
         GameManager.instance.visited |= 2;
     }
@@ -58,6 +67,7 @@ public class MapController : MonoBehaviour
         SceneManager.LoadScene("S1_Hospital");
         CurrPoint.anchoredPosition = new Vector2(273,32);
         Menu.instance.UI_off();
+        Hospitalbutton.GetComponent<Image>().sprite = BlueDot;
         DisableButton(Hospitalbutton);
         GameManager.instance.visited |= 4;
     }
@@ -67,6 +77,7 @@ public class MapController : MonoBehaviour
         // 씬 바꾸기
         CurrPoint.anchoredPosition = new Vector2(715,204);
         Menu.instance.UI_off();
+        Officetelbutton.GetComponent<Image>().sprite = BlueDot;
         CallYarn.instance.InS3();
     }
 
@@ -75,10 +86,13 @@ public class MapController : MonoBehaviour
         SceneManager.LoadScene("S1");
         CurrPoint.anchoredPosition = new Vector2(108,-61);
         Menu.instance.UI_off();
+        Clubbutton.GetComponent<Image>().sprite = BlueDot;
         CallYarn.instance.InS2();
     }
     
-
+    /// <summary>
+    /// Next 버튼을 비활성화하고 현재 위치의 버튼을 활성화함
+    /// </summary>
     public void DisableButton(Button Next){
         CurrLocationbutton.enabled = true;
         Next.enabled = false;

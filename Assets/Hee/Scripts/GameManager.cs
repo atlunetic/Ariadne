@@ -39,6 +39,9 @@ public class GameManager : MonoBehaviour
         ChattingLog.Add(19);
         ChattingLog.Add(18);
         ChattingLog.Add(25);
+        S1HintList = new List<string> {"Laptop", "Meds", "Letter", "6Hairpin", "DrawerR_Wallet", "ChooseChatName1", "Books_Diary", "visitPark", "visitBarStreet", "visitHospital"};
+        S2HintList = new List<string> {"ClubTable_Geonwoo", "Toilet_costomerF", "ToiletPaper"};  // ClubTable_Geonwoo -> GoStaffroom, StudentID  -> Locker
+        StaffroomHintList = new List<string> {"VIPlist", "InStaffroom_VIPlist", "InStaffroom_cctv", "InStaffroom_Key", "InStaffroom_Radio"};
     }
     // RandomN 불러오기 시 실행
     public bool IsLoad = false;  // 불러오기 시 true
@@ -57,14 +60,15 @@ public class GameManager : MonoBehaviour
     public HashSet<string> RecommendedFriends = new HashSet<string>();
     public int visited;
     public bool IsAriadneHintOn = false;
-    public List<string> S1HintList = new List<string> {"Laptop", "Meds", "Letter", "Drawer_Hairpin", "DrawerR_Wallet", "ChooseChatName1", "Books_Diary", "visitPark", "visitBarStreet", "visitHospital"};
-    public List<string> S2HintList = new List<string> {"ClubTable_Geonwoo", "Toilet_costomerF", "ToiletPaper"};  // ClubTable_Geonwoo -> GoStaffroom, StudentID  -> Locker
-    public List<string> StaffroomHintList = new List<string> {"VIPlist", "InStaffroom_VIPlist", "InStaffroom_cctv", "InStaffroom_Key", "InStaffroom_Radio"};
+
+    public List<string> S1HintList;
+    public List<string> S2HintList;
+    public List<string> StaffroomHintList;
     public List<string> FindedMemoList = new List<string>();
 
     public bool S1Ended(){
         return FindedClues.Contains("Laptop") && FindedClues.Contains("Meds") && FindedClues.Contains("Letter") &&
-               FindedObjects.Contains("Drawer_Hairpin") && FindedObjects.Contains("DrawerR_Wallet") &&
+               FindedObjects.Contains("6Hairpin") && FindedObjects.Contains("DrawerR_Wallet") &&
                FinishedDialogues.Contains("ChooseChatName1") &&
                FinishedDialogues.Contains("Chatlist") && FindedObjects.Contains("Books_Diary") &&
                visited == 7;

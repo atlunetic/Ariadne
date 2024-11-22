@@ -1,0 +1,55 @@
+{
+  "savetime": "2024-11-23 00:47:21 오전",
+  "IsLoad": false,
+  "NowScene": "S1_2_JiwonRoom",
+  "NumOfScreenShots": 1,
+  "GeonWooScore": 0,
+  "SaengSoo": 0,
+  "ChattingLog": [
+    19,
+    18,
+    25
+  ],
+  "PhotoList": [],
+  "items": [],
+  "FindedObjects": [
+    "Letter"
+  ],
+  "FindedClues": [],
+  "FinishedDialogues": [
+    "DGram1st",
+    "Gallery",
+    "Chocotalk1st",
+    "Map_1",
+    "Camera"
+  ],
+  "GottenPage": [],
+  "RecommendedFriends": [],
+  "visited": 0,
+  "IsAriadneHintOn": false,
+  "S1HintList": [
+    "Laptop",
+    "Meds",
+    "Letter",
+    "6Hairpin",
+    "DrawerR_Wallet",
+    "ChooseChatName1",
+    "Books_Diary",
+    "visitPark",
+    "visitBarStreet",
+    "visitHospital"
+  ],
+  "S2HintList": [
+    "ClubTable_Geonwoo",
+    "Toilet_costomerF",
+    "ToiletPaper"
+  ],
+  "StaffroomHintList": [
+    "VIPlist",
+    "InStaffroom_VIPlist",
+    "InStaffroom_cctv",
+    "InStaffroom_Key",
+    "InStaffroom_Radio"
+  ],
+  "FindedMemoList": []
+}

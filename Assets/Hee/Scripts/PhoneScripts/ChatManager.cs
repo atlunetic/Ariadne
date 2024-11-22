@@ -71,6 +71,7 @@ public class ChatManager : MonoBehaviour
     [YarnCommand("StartPhoneChat")]
     public void StartChat(int i)  // yarn에서 호출
     {
+        Debug.Log("Start Chat: " + i);
         SetChat(i);
         PhoneController.instance.ActivePhone();
 
