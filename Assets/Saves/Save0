@@ -1,6 +1,6 @@
 {
-  "savetime": "2024-11-22 15:07:45 오후",
-  "IsLoad": false,
+  "savetime": "2024-11-22 15:01:35 오후",
+  "IsLoad": true,
   "NowScene": "S1_2_JiwonRoom",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
@@ -15,7 +15,9 @@
   "FindedObjects": [],
   "FindedClues": [],
   "FinishedDialogues": [
-    "ChocotalkAlarm"
+    "ChocotalkAlarm",
+    "DgramAlarm",
+    "Camera"
   ],
   "GottenPage": [],
   "RecommendedFriends": [],

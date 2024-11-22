@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Yarn.Unity;
 
@@ -24,7 +25,9 @@ public class SceneInfo : MonoBehaviour
         foreach(GameObject obj in Objectlist)
 	        obj.SetActive(!GameManager.instance.FindedObjects.Contains(obj.name));
         foreach(GameObject obj in Diarylist)
-	        obj.SetActive(GameManager.instance.FindedObjects.Contains("Books_Diary"));
+	        obj.SetActive(GameManager.instance.FindedObjects.Contains("Books_Diary") &&
+                          !GameManager.instance.FindedObjects.Contains(obj.name));
+        
         GameManager.instance.NowScene = scene.name;
         Debug.Log("Scene Managed: " + scene.name);
     }
@@ -57,15 +60,17 @@ public class SceneInfo : MonoBehaviour
 
         if(!IsS4){
             BGoff();
-            for(int i=0; i<3; i++){
+            for(int i=0; i<MemoriesBG.Length-1; i++){
                 MemoriesBG[i].SetActive(true);
-                yield return new WaitForSeconds(0.6f);
+                yield return new WaitForSeconds(0.7f);
             }
-            MemoriesBG[3].SetActive(true);
 
-            foreach(GameObject BG in MemoriesBG){
-                BG.SetActive(false);
+            MemoriesBG[MemoriesBG.Length-1].SetActive(true);
+
+            for(int i=0; i<MemoriesBG.Length-2; i++){
+                MemoriesBG[i].SetActive(false);
             }
+
         }
         GalleryController.instance.Glitch.SetActive(true);
         foreach(GameObject memoryimg in GalleryController.instance.MemoryImages)
@@ -85,7 +90,19 @@ public class SceneInfo : MonoBehaviour
         GalleryController.instance.Glitch.SetActive(false);
 
         if(IsS4) return;
-        MemoriesBG[3].SetActive(false);
+        MemoriesBG[MemoriesBG.Length -1].SetActive(false);
+        Invoke("Fadeout", 1f);
+    }
+
+    private void Fadeout(){
+        MemoriesBG[MemoriesBG.Length -2].GetComponent<Image>().CrossFadeAlpha(0f, 1.5f, false);
+        Invoke("MemBGoff", 2f);
+    }
+
+    private void MemBGoff(){
+        foreach(GameObject BG in MemoriesBG){
+            BG.SetActive(false);
+        }
         Menu.instance.UI_off();
         BGon();
     }

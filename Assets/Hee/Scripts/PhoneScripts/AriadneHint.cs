@@ -121,7 +121,7 @@ public class AriadneHint : MonoBehaviour
                     if(GameManager.instance.FindedClues.Contains(hint))
                         HintList.Remove(hint);
                     break;
-                case "Drawer_Hairpin":
+                case "6Hairpin":
                 case "DrawerR_Wallet":
                 case "Books_Diary":
                 case "Toilet_costomerF":
@@ -166,7 +166,7 @@ public class AriadneHint : MonoBehaviour
             case "Laptop": return 35;
             case "Meds": return 36;
             case "Letter": return 37;
-            case "Drawer_Hairpin": return 38;
+            case "6Hairpin": return 38;
             case "DrawerR_Wallet": return 39;
             case "Books_Diary": return 41;
             case "ChooseChatName1": return 40;

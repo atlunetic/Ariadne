@@ -196,6 +196,7 @@ public class CallYarn : MonoBehaviour
         MapController.instance.편의점711button.onClick.AddListener(wrongplace);
 
         MapController.instance.Clubbutton.enabled = false;
+        MapController.instance.Clubbutton.GetComponent<Image>().sprite = MapController.instance.BlueDot;
     }
     public void InS3(){
         MapController.instance.CurrPoint.anchoredPosition = new Vector2(176,205);
@@ -222,6 +223,7 @@ public class CallYarn : MonoBehaviour
         MapController.instance.편의점711button.onClick.AddListener(wrongplace);
 
         MapController.instance.Officetelbutton.enabled = false;
+        MapController.instance.Officetelbutton.GetComponent<Image>().sprite = MapController.instance.BlueDot;
     }
 
     [YarnCommand("Searchdrgg24")]
