@@ -50,13 +50,14 @@ public class YarnMFunctions : MonoBehaviour
         if (ItemToAdd != null)
         {
             Debug.Log(ItemToAdd.newItem.itemName + " found.");
-            item newItem = ItemToAdd.GetItem();
-            Inventory.instance.Additem(newItem);
         }
         else
         {
             Debug.LogWarning("Item not found: " + ItemName);
         }
+
+        item newItem = ItemToAdd.GetItem();
+        Inventory.instance.Additem(newItem);
     }
 
     [YarnCommand("AddToInventory2")]
@@ -67,13 +68,13 @@ public class YarnMFunctions : MonoBehaviour
         if (ItemToAdd != null)
         {
             Debug.Log(ItemToAdd.newItem.itemName + " found.");
-            item newItem = ItemToAdd.GetItem();
-            Inventory.instance.Additem(newItem);
         }
         else
         {
             Debug.LogWarning("Item not found: " + ItemName);
         }
+        item newItem = ItemToAdd.GetItem();
+        Inventory.instance.Additem(newItem);
     }
 
 
