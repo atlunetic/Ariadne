@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &5806901
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: Objectlist.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: Cluelist.Array.data[0]
@@ -358,23 +358,31 @@ PrefabInstance:
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: Objectlist.Array.data[0]
       value: 
-      objectReference: {fileID: 969891788}
+      objectReference: {fileID: 918098989}
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: Objectlist.Array.data[1]
       value: 
-      objectReference: {fileID: 918098989}
+      objectReference: {fileID: 551762518}
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: Objectlist.Array.data[2]
       value: 
-      objectReference: {fileID: 551762518}
+      objectReference: {fileID: 1876588572}
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: Objectlist.Array.data[3]
       value: 
-      objectReference: {fileID: 1876588572}
+      objectReference: {fileID: 647445090}
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: Objectlist.Array.data[4]
       value: 
-      objectReference: {fileID: 647445090}
+      objectReference: {fileID: 918098989}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[5]
+      value: 
+      objectReference: {fileID: 1263626469}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[6]
+      value: 
+      objectReference: {fileID: 5806900}
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: MemoriesImage.Array.data[0]
       value: 
@@ -876,7 +884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueTitle: event_gunwoo_begin1
+  DialogueTitle: Table_Geonwoo
 --- !u!61 &918098993
 BoxCollider2D:
   m_ObjectHideFlags: 0
