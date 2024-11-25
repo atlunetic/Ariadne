@@ -23,6 +23,7 @@ public class StartGame : MonoBehaviour
 
         SaveAndLoad.instance.SavePanel.SetActive(true);
         SaveAndLoad.instance.SavePanel.transform.GetChild(1).gameObject.SetActive(false);
+        
         foreach(GameObject i in SaveAndLoad.instance.SaveFile){
             i.transform.GetChild(1).gameObject.SetActive(false);
         }
