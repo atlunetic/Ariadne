@@ -17,7 +17,10 @@ public class SaveAndLoad : MonoBehaviour
     public GameObject SaveFiles;
     public GameObject BackToMain;
     public GameObject BackToMainReally;
-    public GameObject[] SaveFile;
+    public GameObject SaveFilesContainer;
+
+    [HideInInspector]
+    public List<GameObject> SaveFile;
     public GameObject tempCam;
     public GameObject nowLoading;
     public GameObject SavePanel;
@@ -40,8 +43,11 @@ public class SaveAndLoad : MonoBehaviour
             BackToMain.SetActive(true);
             SaveFiles.SetActive(true);
             BackToMainReally.SetActive(false);});
-        for(int i=0;i<30;i++)
+
+        for(int i=0;i<SaveFilesContainer.transform.childCount;i++){
+            SaveFile.Add(SaveFilesContainer.transform.GetChild(i).gameObject);
             AddSaveFile(i);
+        }
         LoadCollectedEndings();
     }
     public void Save(int i){
@@ -82,6 +88,8 @@ public class SaveAndLoad : MonoBehaviour
     }
 
     void AddSaveFile(int i){
+        SaveFile[i].transform.Find("filenum").GetComponent<TMP_Text>().text = "파일 "+(i+1);
+
         string Totalpath = FolderPath+"Save"+i.ToString();
         if(!File.Exists(Totalpath)) {
             SaveFile[i].transform.GetChild(2).GetComponent<Button>().enabled = false;
