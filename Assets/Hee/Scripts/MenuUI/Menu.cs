@@ -49,9 +49,10 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
         BlockClick = false;
         if(GameManager.instance.NowScene.StartsWith("S4")) return;
         UIMode.SetActive(false);
-        // UIButtons.transform.GetChild(0).gameObject.SetActive(true);
-        // UIButtons.transform.GetChild(1).gameObject.SetActive(true);
-        // UIButtons.transform.GetChild(2).gameObject.SetActive(true);
+        UIButtons.transform.GetChild(0).gameObject.SetActive(true);
+        UIButtons.transform.GetChild(1).gameObject.SetActive(true);
+        if(GameManager.instance.FindedObjects.Contains("Books_Diary")) 
+            UIButtons.transform.GetChild(2).gameObject.SetActive(true);
         UIButtons.SetActive(true);
         Phone.SetActive(false);
         Inventory.SetActive(false);
