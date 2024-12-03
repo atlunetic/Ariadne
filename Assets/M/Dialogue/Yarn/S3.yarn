@@ -44,6 +44,21 @@ title: Poppy
 
 ---
 
+<<if CheckDialogue("PoppyStory") == true>>
+	<<SetCanvasTo VisualNovelPrefab true>>
+	이미 경찰은 불렀어.
+	<<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+	<<jump PoppyStory>>
+<<endif>>
+
+===
+
+title: PoppyStory
+
+---
+
+
 <<SetCanvasTo VisualNovelPrefab true>>
 // 지수4
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
@@ -72,11 +87,11 @@ title: Poppy
 금방 오신다고 하네.
 <<Hide 지수>>
 <<Hide DBG>>
-<<FinishedObj VisualNovelPrefab Poppy>>
-<<SetActiveFalse VisualNovelPrefab Poppy>>
-<<FinishedDialogue VisualNovelPrefab Poppy>>
+//<<FinishedObj VisualNovelPrefab Poppy>>
+//<<SetActiveFalse VisualNovelPrefab Poppy>>
+<<FinishedDialogue VisualNovelPrefab PoppyStory>>
 
-<<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
+<<if CheckDialogue("PoppyStory") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 	<<jump InteractionFin3>>
 <<endif>>
 
@@ -105,20 +120,26 @@ title: VendingMachine3
 
 ---
 
-<<SetCanvasTo VisualNovelPrefab true>>
-자판기다.
-//지수1
-<<Act 지수 Jisoo1 1.17 0.322 white>>
-밑에 뭐라도 있는지 살펴볼까?
-<<Hide 지수>>
-<<Draw BlackBG 0.75 0.75>>
-<<wait 1.0>>
-...
-//지수2
-//<<UpdateAct 지수 Jisoo2>>
-어두워서 잘 안보인다.
-<<Hide BlackBG>>
-<<SetCanvasTo VisualNovelPrefab false>>
+<<if CheckDialogue("FlashVM") == true>>
+	<<SetCanvasTo VisualNovelPrefab true>>
+	이미 자판기는 살펴봤어.
+	<<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+	<<SetCanvasTo VisualNovelPrefab true>>
+	자판기다.
+	//지수1
+	<<Act 지수 Jisoo1 1.17 0.322 white>>
+	밑에 뭐라도 있는지 살펴볼까?
+	<<Hide 지수>>
+	<<Draw BlackBG 0.75 0.75>>
+	<<wait 1.0>>
+	...
+	//지수2
+	//<<UpdateAct 지수 Jisoo2>>
+	어두워서 잘 안보인다.
+	<<Hide BlackBG>>
+	<<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
 
 ===
 
@@ -248,7 +269,7 @@ title: GeonwooCard
 //<<Hide 지수>>
 <<FinishedObj VisualNovelPrefab GeonwooCard>>
 <<FinishedDialogue VisualNovelPrefab GeonwooCard>>
-<<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
+<<if CheckDialogue("PoppyStory") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 	<<jump InteractionFin3>>
 <<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -293,7 +314,7 @@ title: memory_GeonwooCard
 	<<UI_off MenuUI>>
 	<<Scene NoBG>>
 	<<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
-	<<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
+	<<if CheckDialogue("PoppyStory") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 		<<jump InteractionFin3>>
 	<<endif>>
 <<endif>>
@@ -1041,8 +1062,8 @@ title: 1503TV
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw TV_big 0.75 0.75>>
-TV다.
-이걸로 뭘 볼 수 있으려나?
+어. 어릴 때 집에 있던 TV랑 똑같이 생겼네.
+...추억이다.
 <<Hide DBG>>
 <<Hide TV_big>>
 <<SetCanvasTo VisualNovelPrefab false>>
