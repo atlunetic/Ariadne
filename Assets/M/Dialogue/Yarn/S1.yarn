@@ -549,6 +549,18 @@ title: Map_1
 
 ===
 
+title: BackHome
+
+---
+<<SetCanvasTo VisualNovelPrefab true>>
+
+집으로 돌아갈까?
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+
 title: Park
 
 ---

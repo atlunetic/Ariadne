@@ -433,7 +433,7 @@ title: obj_customers
 	두 사람이 대화하고 있다.
 
 	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.407 white>>
-	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
+	<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
 	클럽고객D: 이렇게 만난 것도 인연인데 한 잔 사드리고 싶어서요.
 	클럽고객D가 E에게 술잔을 내민다.
 
@@ -456,7 +456,7 @@ title: obj_customers
 	<<Hide DBG>>
 	<<wait 1.0>>
 	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.407 white>>
-	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
+	<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
 	클럽고객D: 저는 잠깐 화장실 좀 다녀올게요.
 	마침 클럽 고객D가 자리를 뜬다.
 	...
@@ -590,7 +590,7 @@ title: E_NoClothes
 <<Act 지수 Jisoo1 1.17 0.322 white>>
 
 지수: 안녕하세요.
-<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
+<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
 클럽고객E: 아, 안녕하세요.
 지수: 혼자 오셨어요?
 클럽고객E: 아... 네.
@@ -620,7 +620,7 @@ title: E_Clothes
 이제 말을 걸어도 괜찮을 것 같아.
 ...
 지수: 안녕하세요.
-<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
+<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
 클럽고객E: 아, 안녕하세요.
 지수: 혼자 오셨어요?
 클럽고객E: 네. 종종 와요.
@@ -800,7 +800,7 @@ E는 신나게 춤추고 있는 사람들을 바라봤다.
 
 <<UpdateAct 지수 CoJIsoo1>>
 지수:저는 먼저 가볼게요.
-<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
+<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
 E가 고개를 돌려 눈인사를 했다.
 <<Hide 클럽고객E>>
 <<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>

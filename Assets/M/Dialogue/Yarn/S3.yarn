@@ -326,41 +326,35 @@ title: OfficetelDoor
 
 ---
 
-<<SetCanvasTo VisualNovelPrefab true>>
-//오브젝트 4. 오피스텔 출입문
-
-<<ChangeSceneTo VisualNovelPrefab S3_1_1_Door>>
-//출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
-
-//지수2
-<<wait 1.0>>
-//<<Act 지수 Jisoo2 1.17 0.322 white>>
-...
-...
-카드키가 있거나 비밀번호를 알아야 할 것 같다.
-...
-//<<Hide 지수>>
-<<SetCanvasTo VisualNovelPrefab false>>
+<<if CheckDialogue("OfficetelDoor1")==false>>
+	<<SetCanvasTo VisualNovelPrefab true>>
+	//오브젝트 4. 오피스텔 출입문
+	<<ChangeSceneTo VisualNovelPrefab S3_1_1_Door>>
+	//출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
+	//지수2
+	<<wait 1.0>>
+	//<<Act 지수 Jisoo2 1.17 0.322 white>>
+	...
+	...
+	카드키가 있거나 비밀번호를 알아야 할 것 같다.
+	...
+	//<<Hide 지수>>
+	<<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+	<<jump OfficetelDoor1>>
+<<endif>>
 
 ===
 
-title: OfficetelDoor2
+title: OfficetelDoor1
 
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
 //오브젝트 4. 오피스텔 출입문
-
+<<ChangeSceneTo VisualNovelPrefab S3_1_1_Door>>
 //출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
-
-//지수2
-<<wait 1.0>>
-//<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
-...
-카드키가 있거나 비밀번호를 알아야 할 것 같다.
-...
-//<<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -572,9 +566,9 @@ title: OfficetelDoorwcard
 
 //지수2
 <<UpdateAct 지수 Jisoo2>>
-…혹시 암구호 같은 건가?
-전에 꼭 기억해야겠다고 생각한 게 있는데.
-분명 그건…
+암구호...?
+클럽에서 수상한 걸 들었던 것 같은데.
+그거랑 관련이 있으려나...
 //지수5
 <<UpdateAct 지수 Jisoo5>>
 -> 엑스터시..! 
@@ -1271,6 +1265,7 @@ title: escapegame_checkpoint1
 -> 계단으로 가자
 	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
+	<<ShowTB VisualNovelPrefab false>>
 	//블랙화면으로 페이드 아웃
 	<<Fade Black 0.0 1.0 1.0>>
 	<<wait  1.0>>
@@ -1292,6 +1287,7 @@ title: escapegame_checkpoint1
 	조직원: 거기 누구야!
 	..어떡하면 좋지?
 	//전부 블랙화면 그대로 진행
+	<<ShowTB VisualNovelPrefab true>>
 	<<InitTB VisualNovelPrefab S3_6_CP1>>
 	<<StartTB VisualNovelPrefab>>
 	-> 엘리베이터까지 빠르게 뛰어가자
