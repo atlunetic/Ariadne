@@ -1241,12 +1241,13 @@ title: escapegame_intro
 //14층 배경
 <<StopAudio Chap3ThemeP2>>
 <<PlayAudio ChooseMinigame 0.8 loop>>
+<<ShowTB VisualNovelPrefab true>>
 <color=yellow>* 오피스텔을 탈출하자! *</color>
 <color=yellow>* 당신의 선택이 중요합니다. *</color>
 <color=yellow>* 조직원에게 들키지 않도록 조심합시다. *</color>
 <color=yellow>* 들키게 될 경우, 체크포인트로 돌아옵니다. *</color>
 
-<<jump escapegame_checkpoint1>>
+<<ChangeSceneTo VisualNovelPrefab S3_6_CP1>>
 
 
 ===
@@ -1255,18 +1256,20 @@ title: escapegame_checkpoint1
 
 ---
 
-
+<<InitTB VisualNovelPrefab S3_6_CP1>>
 //14층 배경
 <<Scene Door1403>>
 <color=blue>* 체크포인트 *</color>
 
 빨리 여기서 나가야 될 것 같아.
 어디로 가지?
-
+<<StartTB VisualNovelPrefab>>
 -> 엘리베이터 쪽으로 가자
+	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
 	<<jump escapegame_elevator>>
 -> 계단으로 가자
+	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
 	//블랙화면으로 페이드 아웃
 	<<Fade Black 0.0 1.0 1.0>>
@@ -1289,7 +1292,10 @@ title: escapegame_checkpoint1
 	조직원: 거기 누구야!
 	..어떡하면 좋지?
 	//전부 블랙화면 그대로 진행
+	<<InitTB VisualNovelPrefab S3_6_CP1>>
+	<<StartTB VisualNovelPrefab>>
 	-> 엘리베이터까지 빠르게 뛰어가자
+		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		<<PlayAudio Run 0.5>>
 		//뒤쫓는 발걸음 소리
@@ -1299,6 +1305,7 @@ title: escapegame_checkpoint1
 		//블랙화면으로 페이드아웃
 		<<jump escapegame_checkpoint1>>
 	-> 같은 조직원인 척 하자
+		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		...
 		하필이면 상부 직원에게 걸렸다.
@@ -1306,6 +1313,7 @@ title: escapegame_checkpoint1
 		//블랙화면으로 페이드아웃
 		<<jump escapegame_checkpoint1>>
 	-> 옆에 있는 1407호에 들어가보자
+		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		...
 		다행히 문이 열려있었다
@@ -1315,6 +1323,7 @@ title: escapegame_checkpoint1
 		...
 		밖이 고요해졌다. 나가볼까?
 		-> 엘리베이터 쪽으로 가자
+			<<PauseTB VisualNovelPrefab>>
 			<<PlayAudio WhenChoose 0.6>>
 			<<jump escapegame_elevator>>
 
@@ -1330,8 +1339,10 @@ title: escapegame_elevator
 <<wait  1.0>>
 <<FadeIn>>
 근처에서 누군가의 발소리가 들린다. 어떻게 할까?
-
+<<InitTB VisualNovelPrefab S3_6_CP1>>
+<<StartTB VisualNovelPrefab>>
 -> 옆에 보이는 캐비넷에 몸을 숨기자
+	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
 	//블랙화면으로 페이드아웃
 	<<Fade Black 0.0 1.0 1.0>>
@@ -1344,12 +1355,17 @@ title: escapegame_elevator
 	밖이 고요해졌다. 나가볼까..?
 	...
 	엘리베이터를 탔다
-	<<jump escapegame_checkpoint2>>
+	//<<jump escapegame_checkpoint2>>
+	<<ChangeSceneTo VisualNovelPrefab S3_6_CP2>>
 -> 엘리베이터까지 빠르게 뛰어가자
+	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
 	<<PlayAudio Run 0.6>>
 	조직원: 너 뭐야!!!
+	<<InitTB VisualNovelPrefab S3_6_CP1>>
+	<<StartTB VisualNovelPrefab>>
 	-> 같은 조직원인 척 하자
+		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		<<Fade Black 0.0 1.0 1.0>>
 		//블랙화면으로 페이드 아웃
@@ -1359,28 +1375,36 @@ title: escapegame_elevator
 		//블랙화면으로 페이드아웃
 		<<jump escapegame_checkpoint1>>
 	-> 무시하고 뛰어가자
+		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		//블랙화면으로 페이드 아웃
 		<<Fade Black 0.0 1.0 1.0>>
 		...
 		겨우 엘리베이터를 탔다.
-		<<jump escapegame_checkpoint2>>
+		//<<jump escapegame_checkpoint2>>
+		<<ChangeSceneTo VisualNovelPrefab S3_6_CP2>>
 -> 옆에 있는 1401호에 들어가보자
+	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
 	//블랙화면으로 페이드아웃
 	//복도 이미지1
 	<<Scene Lobby14F>>
 	...
 	문이 안열린다...
+	<<InitTB VisualNovelPrefab S3_6_CP1>>
+	<<StartTB VisualNovelPrefab>>
 	-> 같은 조직원인 척 하자
+		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		...
 		다행히 믿는 눈치였다.
 		...
 		무사히 엘리베이터를 탔다.
 		//엘리베이터 이미지
-		<<jump escapegame_checkpoint2>>
+		//<<jump escapegame_checkpoint2>>
+		<<ChangeSceneTo VisualNovelPrefab S3_6_CP2>>
 	-> 엘리베이터까지 빠르게 뛰어가자
+		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		<<PlayAudio Run 0.6>>
 		//블랙화면으로 페이드아웃
@@ -1398,6 +1422,7 @@ title: escapegame_elevator
 title: escapegame_checkpoint2
 
 ---
+
 <<Scene Elevator>>
 <<FadeIn>>
 //엘리베이터 이미지 배경 페이드인
@@ -1426,7 +1451,10 @@ title: escapegame_stopelevator
 
 //엘리베이터 이미지 배경
 <<Scene Elevator>>
+<<InitTB VisualNovelPrefab S3_6_CP2>>
+<<StartTB VisualNovelPrefab>>
 -> 비상버튼을 눌러보자
+	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
 	-꾸욱
 	...	
@@ -1434,6 +1462,7 @@ title: escapegame_stopelevator
 	아무런 반응이 없다.
 	<<jump escapegame_stopelevator>>
 -> 문을 힘으로 열어보자
+	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
 	...
 	//살짝 열린 엘리베이터 문 배경
@@ -1456,6 +1485,7 @@ title: escapegame_stopelevator
 	<<wait  1.0>>
 	<<jump escapegame_checkpoint2>>
 -> 열림 버튼을 눌러보자
+	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
 	//덜커덩!! 하는 소리
 	<<PlayAudio ElevatorBroke 0.6>>
@@ -1486,7 +1516,10 @@ title: escapegame_brokenelevator
 
 ---
 
+<<InitTB VisualNovelPrefab S3_6_CP2>>
+<<StartTB VisualNovelPrefab>>
 -> 1층 버튼을 눌러보자
+	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
 	계속해서 1층 버튼을 눌렀다.
 	...
@@ -1515,12 +1548,14 @@ title: escapegame_brokenelevator
 	//블랙화면으로 페이드아웃
 	<<jump escapegame_checkpoint2>>
 -> 2층 버튼을 눌러보자
+	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
 	계속해서 2층 버튼을 눌러도 반응이 없다.
 	...
 	여기서 시간을 지체하면 안될 것 같아.
 	<<jump escapegame_brokenelevator>>
 -> 밖으로 나가본다
+	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
 	어쩔 수 없지...
 	여기서부턴 계단으로 내려가자.
@@ -1536,10 +1571,15 @@ title: escapegame_brokenelevator
 	정문과 가까운 중앙계단... 
 	빠르게 건물을 나갈 수 있지만, 건물 중앙에 있어서 들킬 위험은 더 클 것 같아.
 	어느 계단으로 가지...?
+	<<InitTB VisualNovelPrefab S3_6_CP2>>
+	<<StartTB VisualNovelPrefab>>
 	-> 복도 끝 비상계단	
+		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
-		<<jump escapegame_checkpoint3>>
+		//<<jump escapegame_checkpoint3>>
+		<<ChangeSceneTo VisualNovelPrefab S3_6_CP3>>
 	-> 정문과 가까운 중앙계단
+		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		//계단이미지3 배경
 		<<Scene Stair3>>
@@ -1600,12 +1640,18 @@ title: escapegame_checkpoint3
 <<FadeIn>>
 ...
 이미 조직원이 1층에 깔려있는 것 같은데... 어떡하지?
+<<InitTB VisualNovelPrefab S3_6_CP3>>
+<<StartTB VisualNovelPrefab>>
 -> 주변에 뭐가 있는지 살펴보자
+	<<PauseTB VisualNovelPrefab>>
 	어디 보자, 주변에 쓸만한 게...
 	...
 	..!
 	창문이랑 소화전이 보인다.
+	<<InitTB VisualNovelPrefab S3_6_CP3>>
+	<<StartTB VisualNovelPrefab>>
 	-> 창문으로 나가자
+		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		1층이니까, 창문으로 나가도 괜찮을 것 같아.
 		... 
@@ -1633,6 +1679,7 @@ title: escapegame_checkpoint3
 		//블랙화면으로 페이드아웃
 		<<jump escapegame_checkpoint3>>
 	-> 소화전을 울리자
+		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		화재 경보를 울려서, 그 틈에 빠져나가자.
 		...
@@ -1662,7 +1709,10 @@ title: escapegame_checkpoint3
 		<<Scene BlackBG>>
 		<<jump escapegame_checkpoint3>>
 -> 내가 가지고 있는 물건을 살펴보자
+	<<InitTB VisualNovelPrefab S3_6_CP3>>
+	<<StartTB VisualNovelPrefab>>
 	-> 지원이의 휴대폰을 이용하자
+		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		지원이의 휴대폰... 이걸 써볼까?
 		휴대폰 알람으로 유인하는거야.
@@ -1710,6 +1760,7 @@ title: escapegame_checkpoint3
 		<<StopAudio ChooseMinigame>>
 		<<jump escapegame_success>>			
 	-> 직원 복장으로 변장하자
+		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		직원 복장...
 		일단 지원이를 변장시켜서 내보내자. 
@@ -1749,6 +1800,8 @@ title: escapegame_success
 
 ---
 
+<<PauseTB VisualNovelPrefab>>
+<<ShowTB VisualNovelPrefab false>>
 //오피스텔 1층 배경 페이드인
 //지수, 지원이미지 노출 x
 <<Scene Opistal_1F_bg>>
