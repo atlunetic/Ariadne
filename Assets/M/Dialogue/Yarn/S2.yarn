@@ -964,6 +964,7 @@ title: Table_Geonwoo2
 건우 오빠가 고개를 휙 돌렸다.
 다른 장소를 먼저 둘러봐야 하나?
 <<SetCanvasTo VisualNovelPrefab false>>
+<<FinishedDialogue VisualNovelPrefab Table_Geonwoo2>>
 <<DelFinishedObj VisualNovelPrefab ClubTable_Geonwoo2>>
 ===
 
@@ -979,7 +980,6 @@ title: Table_Geonwoo3
 	건우: 안그래도 요즘 단속 심해서 빡치는데…
 	건우 오빠는 내가 뒤에 있는 걸 눈치채지 못한 모양이다.
 	다시 불러보자.
-	<<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
 	<<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 <<endif>>

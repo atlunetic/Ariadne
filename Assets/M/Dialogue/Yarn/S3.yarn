@@ -163,6 +163,7 @@ title: FlashVM
 //<<UpdateAct 지수 Jisoo2>>
 ...
 <<DeleteItem Inventory Flashlight>>
+<<FinishedDialogue VisualNovelPrefab FlashVM>>
 <<Hide BlackBG>>
 <<jump DrugCookie>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -179,8 +180,8 @@ title: DrugCookie
 <color=yellow>* 일기장에 ‘마약 쿠키’가 추가되었습니다. *</color>
 //(이후 일기장 클릭 시 ‘마약 쿠키’ 관련 정보 확인 가능)
 <<RevealDiary DiaryManager Page3>>
-<<SetActiveFalse VisualNovelPrefab VendingMachine3>>
-<<FinishedObj VisualNovelPrefab VendingMachine3>>
+//<<SetActiveFalse VisualNovelPrefab VendingMachine3>>
+//<<FinishedObj VisualNovelPrefab VendingMachine3>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -355,6 +356,7 @@ title: OfficetelDoor1
 <<ChangeSceneTo VisualNovelPrefab S3_1_1_Door>>
 //출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
 ...
+<<FinishedDialogue VisualNovelPrefab OfficetelDoor1>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

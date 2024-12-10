@@ -1,7 +1,7 @@
 {
-  "savetime": "2024-12-10 20:30:00 오후",
+  "savetime": "2024-12-10 20:22:21 오후",
   "IsLoad": true,
-  "NowScene": "S2_2_Table",
+  "NowScene": "S2_3_1_StaffOnlyLocker",
   "NumOfScreenShots": 1,
   "GeonWooScore": 7,
   "SaengSoo": 2,
@@ -32,6 +32,14 @@
     {
       "ItemType": 0,
       "itemName": "Cup"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "DrugJelly"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Clothes"
     }
   ],
   "FindedObjects": [
@@ -41,11 +49,14 @@
     "6Hairpin",
     "Meds",
     "Cup",
-    "ClubTable_Geonwoo",
+    "ClubTable_Geonwoo2",
     "Suljango",
     "counterbar_Geonwoo",
-    "ClubTable_Geonwoo2",
-    "ClubTable_NPCD"
+    "ClubTable_NPCD",
+    "Toilet_costomerF",
+    "Staffroom_Door",
+    "InStaffroom_Key",
+    "StaffOnlyLockerBG1"
   ],
   "FindedClues": [
     "Letter",
@@ -95,9 +106,14 @@
     "obj_clock1Story",
     "obj_cctv1Story",
     "obj_minirefrigeratorStory",
+    "obj_customers",
     "Table_Geonwoo",
-    "Table_Geonwoo2",
-    "obj_customers"
+    "obj_toiletpaperStory",
+    "obj_staffroomdoor",
+    "CheckMore",
+    "obj_keyStory",
+    "obj_staffonly",
+    "lockeropened"
   ],
   "GottenPage": [
     "Page4"

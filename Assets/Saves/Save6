@@ -1,5 +1,5 @@
 {
-  "savetime": "2024-12-10 20:30:00 오후",
+  "savetime": "2024-12-10 20:24:16 오후",
   "IsLoad": true,
   "NowScene": "S2_2_Table",
   "NumOfScreenShots": 1,
@@ -32,6 +32,10 @@
     {
       "ItemType": 0,
       "itemName": "Cup"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Key"
     }
   ],
   "FindedObjects": [
@@ -41,11 +45,12 @@
     "6Hairpin",
     "Meds",
     "Cup",
-    "ClubTable_Geonwoo",
+    "ClubTable_Geonwoo2",
     "Suljango",
     "counterbar_Geonwoo",
-    "ClubTable_Geonwoo2",
-    "ClubTable_NPCD"
+    "ClubTable_NPCD",
+    "Staffroom_Door",
+    "InStaffroom_Key"
   ],
   "FindedClues": [
     "Letter",
@@ -95,9 +100,11 @@
     "obj_clock1Story",
     "obj_cctv1Story",
     "obj_minirefrigeratorStory",
+    "obj_customers",
     "Table_Geonwoo",
-    "Table_Geonwoo2",
-    "obj_customers"
+    "obj_staffroomdoor",
+    "CheckMore",
+    "obj_keyStory"
   ],
   "GottenPage": [
     "Page4"
