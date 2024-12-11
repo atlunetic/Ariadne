@@ -1,34 +1,94 @@
 {
-  "savetime": "2024-11-22 15:08:58 오후",
+  "savetime": "2024-12-10 01:55:11 오전",
   "IsLoad": false,
-  "NowScene": "S1_2_JiwonRoom",
+  "NowScene": "S2_1_ClubCounter_Bar",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
   "ChattingLog": [
     19,
     18,
-    25
+    25,
+    12
   ],
-  "PhotoList": [],
-  "items": [],
-  "FindedObjects": [],
-  "FindedClues": [],
+  "PhotoList": [
+    "Letter14",
+    "Laptop29",
+    "Meds11"
+  ],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Hairpin"
+    }
+  ],
+  "FindedObjects": [
+    "DrawerR_Wallet",
+    "Books_Diary",
+    "3Drug",
+    "6Hairpin",
+    "Meds",
+    "ClubTable_Geonwoo",
+    "ClubTable_Geonwoo2",
+    "studentID"
+  ],
+  "FindedClues": [
+    "Letter",
+    "Laptop",
+    "Meds"
+  ],
   "FinishedDialogues": [
     "jisoo'stalk",
+    "JW_WalletStory",
+    "Drawer_NewsStory",
+    "MemoStory_Book",
+    "Diary1Story",
+    "LaptopStory2",
+    "Camera",
     "Chocotalk1st",
-    "OpenChat",
-    "DGram1st"
+    "ChooseChatName1",
+    "AfterGeonwooChatAsHerself",
+    "Map_1",
+    "Park",
+    "DiaryTutorial",
+    "6HairPin",
+    "VendingMachineStory",
+    "ParkStudentsStory",
+    "Barstreet",
+    "BarStreet",
+    "MemoStory_Phone",
+    "WeedHofStory",
+    "DrugsnacksStory",
+    "Hospital",
+    "HospitalWaitingRoom",
+    "memory_Meds",
+    "MemoStory_Letter",
+    "NewspaperStory",
+    "ConvenienceStore",
+    "Gallery",
+    "MedsStory",
+    "DoctorsRoom",
+    "DGram1st",
+    "Chatlist",
+    "DropperRecruit",
+    "IceiceChat",
+    "New711",
+    "Where",
+    "SevenEleven",
+    "Club_S1End",
+    "ActiveM"
   ],
-  "GottenPage": [],
+  "GottenPage": [
+    "Page4"
+  ],
   "RecommendedFriends": [],
-  "visited": 0,
-  "IsAriadneHintOn": false,
+  "visited": 7,
+  "IsAriadneHintOn": true,
   "S1HintList": [
     "Laptop",
     "Meds",
     "Letter",
-    "Drawer_Hairpin",
+    "6Hairpin",
     "DrawerR_Wallet",
     "ChooseChatName1",
     "Books_Diary",

@@ -1,6 +1,6 @@
 {
-  "savetime": "2024-11-22 15:01:35 오후",
-  "IsLoad": true,
+  "savetime": "2024-12-04 11:11:35 오전",
+  "IsLoad": false,
   "NowScene": "S1_2_JiwonRoom",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
@@ -12,12 +12,13 @@
   ],
   "PhotoList": [],
   "items": [],
-  "FindedObjects": [],
+  "FindedObjects": [
+    "Letter"
+  ],
   "FindedClues": [],
   "FinishedDialogues": [
     "ChocotalkAlarm",
-    "DgramAlarm",
-    "Camera"
+    "DgramAlarm"
   ],
   "GottenPage": [],
   "RecommendedFriends": [],
@@ -27,7 +28,7 @@
     "Laptop",
     "Meds",
     "Letter",
-    "Drawer_Hairpin",
+    "6Hairpin",
     "DrawerR_Wallet",
     "ChooseChatName1",
     "Books_Diary",

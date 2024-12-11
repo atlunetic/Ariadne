@@ -433,7 +433,7 @@ title: obj_customers
 	두 사람이 대화하고 있다.
 
 	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.407 white>>
-	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
+	<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
 	클럽고객D: 이렇게 만난 것도 인연인데 한 잔 사드리고 싶어서요.
 	클럽고객D가 E에게 술잔을 내민다.
 
@@ -456,7 +456,7 @@ title: obj_customers
 	<<Hide DBG>>
 	<<wait 1.0>>
 	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.407 white>>
-	<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
+	<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
 	클럽고객D: 저는 잠깐 화장실 좀 다녀올게요.
 	마침 클럽 고객D가 자리를 뜬다.
 	...
@@ -590,7 +590,7 @@ title: E_NoClothes
 <<Act 지수 Jisoo1 1.17 0.322 white>>
 
 지수: 안녕하세요.
-<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
+<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
 클럽고객E: 아, 안녕하세요.
 지수: 혼자 오셨어요?
 클럽고객E: 아... 네.
@@ -620,7 +620,7 @@ title: E_Clothes
 이제 말을 걸어도 괜찮을 것 같아.
 ...
 지수: 안녕하세요.
-<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
+<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
 클럽고객E: 아, 안녕하세요.
 지수: 혼자 오셨어요?
 클럽고객E: 네. 종종 와요.
@@ -724,7 +724,7 @@ title: letEknow
 지수: 저 사람이 그쪽 술에 약을 탄 것 같아서요.
 
 //클럽고객E 얼굴 공개
-<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
+<<Act 클럽고객E Eunjae1 0.322 0.227 white>>
 클럽 고객E가 고개를 돌려 나를 바라봤다.
 
 바꿔치기한 술잔을 보여줬다. 
@@ -734,15 +734,17 @@ title: letEknow
 지수: 밑에 가라앉은 가루 보이세요?
 클럽 고객E는 술잔을 자세히 바라봤다. 
 
+<<UpdateAct 클럽고객E Eunjae2>>
 클럽고객E: ...
 클럽고객E: 네... 보여요.
 
 <<wait 0.5>>
-
+<<UpdateAct 클럽고객E Eunjae1>>
 클럽고객E: 이런 경우가 있다곤 들었는데...
+<<UpdateAct 클럽고객E Eunjae2>>
 클럽고객E: 직접 겪는 건 처음이네요...
 클럽고객E는 충격을 받은 듯 했다.
-
+<<UpdateAct 클럽고객E Eunjae3>>
 클럽고객E: 너무 감사해서 그런데...
 클럽고객E: 다음 번에 밥이라도 사고 싶어서요.
 클럽고객E: 휴대폰 번호 좀 받을 수 있을까요?
@@ -757,6 +759,7 @@ title: letEknow
 -> 번호를 교환하자. 
 	클럽 고객E와 번호를 교환했다.
 	...
+	<<UpdateAct 클럽고객E Eunjae2>>
 	클럽 고객E가 갑자기 놀란 눈으로 나를 바라봤다.
 
 	클럽고객E: 어... 혹시 그 때 메일 주셨던 분 아니예요?
@@ -765,6 +768,7 @@ title: letEknow
 	이건 또 무슨 소리지?
 	지수: 어...
 	<<UpdateAct 지수 CoJIsoo2>>
+	<<UpdateAct 클럽고객E Eunjae3>>
 	지수: ...
 	클럽고객E: 아... 일단 저는 아까 그 사람이 돌아오기 전에 먼저 가볼게요.
 	클럽고객E: 도와주셔서 감사해요.
@@ -796,7 +800,7 @@ E는 신나게 춤추고 있는 사람들을 바라봤다.
 
 <<UpdateAct 지수 CoJIsoo1>>
 지수:저는 먼저 가볼게요.
-<<Act 클럽고객E NPC_Clubcustomer_E_0 0.322 0.227 white>>
+<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
 E가 고개를 돌려 눈인사를 했다.
 <<Hide 클럽고객E>>
 <<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
@@ -3526,6 +3530,26 @@ title: IgnoreE
 클럽고객G는 머쓱한 듯 말을 돌렸다.
 <<wait 1.0>>
 
+클럽고객G: 내가 말이야~. 예전에 어떤 일 했는지 알아?
+
+<<wait 1.0>>
+클럽고객G: 어마어마한 사람이었다~ 이거야.
+클럽고객G: 다들 사장님, 사장님하고 말이야...
+클럽고객G: 부인도 자식도 다들 얼마나 다정하고 좋은 사람인지...
+...
+<<wait 1.0>>
+계속 들어줘야 할까?
+예의상 다른 질문이라도 해볼까.
+<<wait 1.0>>
+<<jump obj_customerg_choose>>
+
+===
+
+title: Archived
+
+---
+
+
 클럽고객G: 학생, 이거 좀 봐봐.
 //클럽고객G의 휴대폰 화면 팝업이미지뜸. 클럽고객G, 지수 이미지 종료
 <<Hide 지수>>
@@ -3630,7 +3654,7 @@ VIP 룸으로 다시 들어가자.
 
 ===
 
-title: AfterNote
+title: AfterNote0
 
 ---
 
@@ -3640,9 +3664,24 @@ title: AfterNote
 <<DeleteItem Inventory memo_note>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw jjogji_big2 0.75 0.75>>
+어…. 이건 뭐지?
+건우 오빠가 왜 이런 걸…
+일단 메모장에 기록해두자.
 <<FindMemo MemoController memo_zzokji>>
-그래….
-가족에 대해 물어보자.
+<<SetCanvasTo VisualNovelPrefab	false>>
+
+===
+
+title: AfterNote
+
+---
+
+<<SetCanvasTo VisualNovelPrefab	true>>
+...
+아리아드네가 이걸...? 정말 지켜보고 있는 건가?
+...혼란스럽다.
+하지만 지금은 달리 뭘 해야 할지 모르겠어.
+...가족에 대해 물어보자.
 <<Hide DBG>>
 <<Hide jjogji_big2>>
 //(이후에 클럽 고객G에게 바로 말건다)

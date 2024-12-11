@@ -42,7 +42,7 @@ title: LeftPath
 
 ---
 
-<<Scene Leftpath>>
+<<Scene LeftPath>>
 왼쪽에 길이 나있다.
 
 <<PlayAudio MonsterSound1 0.7>>
@@ -114,7 +114,7 @@ title: Minotaur
 ---
 //(Chapter 1) 앞으로 가보자. 선택시
 <<PlayAudio MonsterSound2 0.7>>
-<<Scene Ceiling>>
+<<Scene Ceiling1>>
 저게 말로만 듣던 미노타우르스...
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
 검을 쥔 손에 힘이 들어가지 않아.
@@ -123,6 +123,7 @@ title: Minotaur
 <<wait 1.0>>
 
 녀석이 서서히 내게 다가온다.
+<<DrawFadeIn Ceiling2 0.75 0.75 2>>
 <<DrawFadeIn Hand 0.75 0.75 2>>
 이대로 잡아먹히는걸까.
 <<wait 1.0>>
@@ -130,6 +131,7 @@ title: Minotaur
 <<Fade black 0.0 1.0 2.0>>
 <<wait 2.5>>
 <<Hide Hand>>
+<<Hide Ceiling2>>
 
 <<wait 1.0>>
 <<StopAudioAll>>
@@ -546,6 +548,18 @@ title: Map_1
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
+
+title: BackHome
+
+---
+<<SetCanvasTo VisualNovelPrefab true>>
+
+집으로 돌아갈까?
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
 
 title: Park
 
