@@ -21,7 +21,7 @@ public class FadeIn : MonoBehaviour
         if(image == null) StartCoroutine("GroupFadeIn");
         else {
             image.canvasRenderer.SetAlpha(0.0f);
-            image.CrossFadeAlpha(1.0f, 0.7f, false);
+            image.CrossFadeAlpha(1.0f, 0.8f, false);
         }
     }
     IEnumerator GroupFadeIn()
@@ -29,7 +29,7 @@ public class FadeIn : MonoBehaviour
         imageGroup.alpha = 0f;
         while (imageGroup.alpha < 1)
         {
-            imageGroup.alpha += Time.deltaTime / 0.8f;
+            imageGroup.alpha += Time.deltaTime / 0.9f;
             yield return null;
         }
     }

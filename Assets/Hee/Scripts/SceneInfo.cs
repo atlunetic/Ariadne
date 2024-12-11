@@ -62,7 +62,7 @@ public class SceneInfo : MonoBehaviour
             BGoff();
             for(int i=0; i<MemoriesBG.Length-1; i++){
                 MemoriesBG[i].SetActive(true);
-                yield return new WaitForSeconds(0.7f);
+                yield return new WaitForSeconds(0.8f);
             }
 
             MemoriesBG[MemoriesBG.Length-1].SetActive(true);
