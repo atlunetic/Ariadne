@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour
         saveGameManager.S1HintList = instance.S1HintList;
         saveGameManager.S2HintList = instance.S2HintList;
         saveGameManager.StaffroomHintList = instance.StaffroomHintList;
+        saveGameManager.FindedMemoList = instance.FindedMemoList;
 
         return saveGameManager;
     }
@@ -127,5 +128,6 @@ public class GameManager : MonoBehaviour
         instance.S1HintList = saveGameManager.S1HintList;
         instance.S2HintList = saveGameManager.S2HintList;
         instance.StaffroomHintList = saveGameManager.StaffroomHintList;
+        instance.FindedMemoList = saveGameManager.FindedMemoList;
     }
 }

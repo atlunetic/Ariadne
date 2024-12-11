@@ -90,7 +90,7 @@ public class SceneInfo : MonoBehaviour
         GalleryController.instance.Glitch.SetActive(false);
 
         if(IsS4) return;
-        MemoriesBG[MemoriesBG.Length -1].SetActive(false);
+        MemoriesBG[MemoriesBG.Length -1].GetComponent<Image>().CrossFadeAlpha(0f, 1f, false);
         Invoke("Fadeout", 1f);
     }
 

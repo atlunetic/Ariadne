@@ -515,6 +515,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635028616}
   m_CullTransparentMesh: 1
+--- !u!1 &770291624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 770291625}
+  m_Layer: 0
+  m_Name: ToiletPaper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &770291625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770291624}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.5, y: -2.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1052642008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,7 +1234,7 @@ PrefabInstance:
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: Cluelist.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 770291624}
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: MemoriesBG.Array.data[0]
       value: 
@@ -1554,3 +1585,4 @@ SceneRoots:
   - {fileID: 1289426979}
   - {fileID: 1228131449}
   - {fileID: 1659202469}
+  - {fileID: 770291625}

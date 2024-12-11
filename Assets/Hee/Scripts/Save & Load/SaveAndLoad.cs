@@ -146,17 +146,17 @@ public class SaveAndLoad : MonoBehaviour
             case "S1_Park": return "동네 공원";
             case "S1_Street": return "술집 거리";
             case "S1_Hospital": return "병원";
-            case "S2_1_ClubCounter_Bar": return "카운터 & 바";
-            case "S2_2_Table": return "테이블";
-            case "S2_3_0_RestRoom": return "화장실";
-            case "S2_3_1_StaffOnlyLocker": return "Staff only 칸";
-            case "S2_4_0_StaffRoomEntrance": return "Staff Room 앞";
-            case "S2_4_1_StaffRoom": return "Staff Room 안";
-            case "S2_5_VipRoomEntrance": return "VIP Room";
-            case "S2_6_CounterBar": return "이상한 카운터 & 바";
-            case "S2_6_ReVip": return "이상한 VIP Room 앞";
+            case "S2_1_ClubCounter_Bar": return "클럽 카운터 & 바";
+            case "S2_2_Table": return "클럽 테이블";
+            case "S2_3_0_RestRoom": return "클럽 화장실";
+            case "S2_3_1_StaffOnlyLocker": return "클럽 Staff only 칸";
+            case "S2_4_0_StaffRoomEntrance": return "클럽 Staff Room 앞";
+            case "S2_4_1_StaffRoom": return "클럽 Staff Room 안";
+            case "S2_5_VipRoomEntrance": return "클럽 VIP Room";
+            case "S2_6_CounterBar": return "이상한 클럽 카운터 & 바";
+            case "S2_6_ReVip": return "이상한 클럽 VIP Room 앞";
             case "S2_7_Stairs":
-            case "S2_10_Stairs": return "계단";
+            case "S2_10_Stairs": return "클럽 계단";
             case "S2_8_ParkingLot":
             case "S2_8_ParkingLot2": return "클럽 뒷문 주차장";
             case "S2_9_Car": return "조직원의 차 내부";
