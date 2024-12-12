@@ -11,7 +11,9 @@ public class Settings : MonoBehaviour
     public AudioMixer masterMixer;
     public Slider audioSlider;
     public TMP_Dropdown resolutionDropdown;
-    public Toggle fullScreenToggle;
+    public Button fullScreen;
+    public Button windowMode;
+    public GameObject SaveAndLoadBtn;
     int [,] resolutionList = new int[,] { {1280, 720}, {1920, 1080}, {2560, 1440}, {3840, 2160}};
     public static Settings instance;
 
@@ -39,7 +41,8 @@ public class Settings : MonoBehaviour
         resolutionDropdown.value = resolutionDropdown.options.Count-1;
         DropBoxOptionChange(resolutionDropdown.value);
 
-        fullScreenToggle.isOn = Screen.fullScreen;
+        if(Screen.fullScreen==true) FullScreenMode();
+        else WindowMode();
     }
 
     public void DropBoxOptionChange(int x){
@@ -48,8 +51,17 @@ public class Settings : MonoBehaviour
                                 Screen.fullScreenMode);
     }
 
-    public void ToggleFullScreenMode(bool isOn){
-        Screen.fullScreen = isOn;
+    public void FullScreenMode(){
+        Debug.Log("Full Screen Mode");
+        fullScreen.interactable = false;
+        windowMode.interactable = true;
+        Screen.fullScreen = true;
+    }
+    public void WindowMode(){
+        Debug.Log("Window Mode");
+        fullScreen.interactable = true;
+        windowMode.interactable = false;
+        Screen.fullScreen = false;
     }
 
     public void AudioControl(){
@@ -64,6 +76,7 @@ public class Settings : MonoBehaviour
     public void ToggleAudioVolume(){
         AudioListener.volume = (AudioListener.volume == 0) ? 1 : 0;
     }
+    
 
     public void OpenSaveAndLoad(){
         SaveAndLoad.instance.SavePanel.SetActive(true);
@@ -72,5 +85,7 @@ public class Settings : MonoBehaviour
     
     public void DeactiveSettingsPanel(){
         SettingsPanel.SetActive(false);
+        SaveAndLoadBtn.SetActive(true);
     }
+    
 }

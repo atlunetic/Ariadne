@@ -324,6 +324,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Diarylist.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: MemoriesBG.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -335,6 +339,14 @@ PrefabInstance:
       propertyPath: Cluelist.Array.data[0]
       value: 
       objectReference: {fileID: 5806900}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Diarylist.Array.data[0]
+      value: 
+      objectReference: {fileID: 969891788}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Diarylist.Array.data[1]
+      value: 
+      objectReference: {fileID: 1377468582}
     - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
       propertyPath: MemoriesBG.Array.data[0]
       value: 
