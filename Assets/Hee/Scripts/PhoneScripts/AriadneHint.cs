@@ -12,6 +12,7 @@ public class AriadneHint : MonoBehaviour
 
     [SerializeField]
     RectTransform viewport;
+    [SerializeField]
     GameObject Hint;
     Button HintButton;
     
@@ -22,7 +23,6 @@ public class AriadneHint : MonoBehaviour
             instance = this;
     }
     void Start(){
-        Hint = this.gameObject;
         HintButton = Hint.GetComponent<Button>();
         HintButton.onClick.AddListener(giveHint);
         if(GameManager.instance.IsAriadneHintOn) On();
