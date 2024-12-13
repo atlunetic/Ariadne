@@ -1,0 +1,149 @@
+{
+  "savetime": "2024-12-10 20:22:21 오후",
+  "IsLoad": true,
+  "NowScene": "S2_3_1_StaffOnlyLocker",
+  "NumOfScreenShots": 1,
+  "GeonWooScore": 7,
+  "SaengSoo": 2,
+  "ChattingLog": [
+    19,
+    18,
+    25,
+    12
+  ],
+  "PhotoList": [
+    "Letter14",
+    "Laptop29",
+    "Meds11"
+  ],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Hairpin"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "WaterBottle"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "WaterBottle"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Cup"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "DrugJelly"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Clothes"
+    }
+  ],
+  "FindedObjects": [
+    "DrawerR_Wallet",
+    "Books_Diary",
+    "3Drug",
+    "6Hairpin",
+    "Meds",
+    "Cup",
+    "ClubTable_Geonwoo2",
+    "Suljango",
+    "counterbar_Geonwoo",
+    "ClubTable_NPCD",
+    "Toilet_costomerF",
+    "Staffroom_Door",
+    "InStaffroom_Key",
+    "StaffOnlyLockerBG1"
+  ],
+  "FindedClues": [
+    "Letter",
+    "Laptop",
+    "Meds"
+  ],
+  "FinishedDialogues": [
+    "jisoo'stalk",
+    "JW_WalletStory",
+    "Drawer_NewsStory",
+    "MemoStory_Book",
+    "Diary1Story",
+    "LaptopStory2",
+    "Camera",
+    "Chocotalk1st",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsHerself",
+    "Map_1",
+    "Park",
+    "DiaryTutorial",
+    "6HairPin",
+    "VendingMachineStory",
+    "ParkStudentsStory",
+    "Barstreet",
+    "BarStreet",
+    "MemoStory_Phone",
+    "WeedHofStory",
+    "DrugsnacksStory",
+    "Hospital",
+    "HospitalWaitingRoom",
+    "memory_Meds",
+    "MemoStory_Letter",
+    "NewspaperStory",
+    "ConvenienceStore",
+    "Gallery",
+    "MedsStory",
+    "DoctorsRoom",
+    "DGram1st",
+    "Chatlist",
+    "DropperRecruit",
+    "IceiceChat",
+    "New711",
+    "Where",
+    "SevenEleven",
+    "Club_S1End",
+    "ActiveM",
+    "obj_clock1Story",
+    "obj_cctv1Story",
+    "obj_minirefrigeratorStory",
+    "obj_customers",
+    "Table_Geonwoo",
+    "obj_toiletpaperStory",
+    "obj_staffroomdoor",
+    "CheckMore",
+    "obj_keyStory",
+    "obj_staffonly",
+    "lockeropened"
+  ],
+  "GottenPage": [
+    "Page4"
+  ],
+  "RecommendedFriends": [],
+  "visited": 7,
+  "IsAriadneHintOn": true,
+  "S1HintList": [
+    "Laptop",
+    "Meds",
+    "Letter",
+    "6Hairpin",
+    "DrawerR_Wallet",
+    "ChooseChatName1",
+    "Books_Diary",
+    "visitPark",
+    "visitBarStreet",
+    "visitHospital"
+  ],
+  "S2HintList": [
+    "ClubTable_Geonwoo",
+    "Toilet_costomerF",
+    "ToiletPaper"
+  ],
+  "StaffroomHintList": [
+    "VIPlist",
+    "InStaffroom_VIPlist",
+    "InStaffroom_cctv",
+    "InStaffroom_Key",
+    "InStaffroom_Radio"
+  ],
+  "FindedMemoList": []
+}

@@ -9,6 +9,7 @@ public class ForceDialogue2 : MonoBehaviour
     void Start()
     {
         var runner = FindObjectOfType<DialogueRunner>();
+        if (runner != null) { Debug.Log("Dialogue Runner Found."); }
         runner.StartDialogue("Table_Geonwoo3");
     }
 

@@ -16424,7 +16424,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 117.609344, y: 7.680359, z: 112.259155, w: 23.990852}
+  m_margin: {x: 121.13016, y: 17.73066, z: 112.259155, w: 23.990852}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -17333,8 +17333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 408.5, y: -82.215}
-  m_SizeDelta: {x: 777, y: 124.43}
+  m_AnchoredPosition: {x: 408.5, y: -60.325}
+  m_SizeDelta: {x: 777, y: 80.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &832834900
 MonoBehaviour:
@@ -17419,7 +17419,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 6.9396973, y: -2.5721436, z: 0, w: 100.42232}
+  m_margin: {x: 6.4403076, y: 4.4630737, z: 0, w: 52.180832}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -28957,7 +28957,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 40.085754, y: 62.39084, z: 0, w: 61.35135}
+  m_margin: {x: 40.085754, y: 34.778687, z: 0, w: 35.86326}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -39648,7 +39648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: startNode
-      value: JiwonIn1403
+      value: InteractionFin3
       objectReference: {fileID: 0}
     - target: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: yarnProgram
@@ -40011,6 +40011,9 @@ PrefabInstance:
       addedObject: {fileID: 1699657738}
     - targetCorrespondingSourceObject: {fileID: 1086358475575568, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1699657742}
+    - targetCorrespondingSourceObject: {fileID: 1086358475575568, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1699657740}
     - targetCorrespondingSourceObject: {fileID: 1086358475575568, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       insertIndex: -1
@@ -40222,6 +40225,22 @@ MonoBehaviour:
   timeBar: {fileID: 2100426718}
   timeLimit: 5
   optionsListView: {fileID: 1944675735}
+--- !u!114 &1699657742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699657714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e975710f4f1b34f8ce401df8be1da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newItem:
+    ItemType: 0
+    itemName: Bracelet
+  image: {fileID: 0}
 --- !u!1 &1712973357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5281395886503812520, guid: a95c8f77a7cd42a48a39917efb4b3004, type: 3}

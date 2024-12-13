@@ -1,36 +1,51 @@
 {
-  "savetime": "2024-11-19 21:52:08 오후",
+  "savetime": "2024-12-10 20:30:00 오후",
   "IsLoad": true,
-  "NowScene": "S1_2_JiwonRoom",
+  "NowScene": "S2_2_Table",
   "NumOfScreenShots": 1,
-  "GeonWooScore": 0,
-  "SaengSoo": 0,
+  "GeonWooScore": 7,
+  "SaengSoo": 2,
   "ChattingLog": [
     19,
     18,
     25,
-    0
+    12
   ],
   "PhotoList": [
-    "Letter9",
-    "Laptop20",
-    "Meds15"
+    "Letter14",
+    "Laptop29",
+    "Meds11"
   ],
   "items": [
     {
       "ItemType": 0,
-      "itemName": "Wallet"
+      "itemName": "Hairpin"
     },
     {
       "ItemType": 0,
-      "itemName": "Hairpin"
+      "itemName": "WaterBottle"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "WaterBottle"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Cup"
     }
   ],
   "FindedObjects": [
-    "Letter",
     "DrawerR_Wallet",
-    "Drawer_Hairpin",
-    "Books_Diary"
+    "Books_Diary",
+    "3Drug",
+    "6Hairpin",
+    "Meds",
+    "Cup",
+    "ClubTable_Geonwoo",
+    "Suljango",
+    "counterbar_Geonwoo",
+    "ClubTable_Geonwoo2",
+    "ClubTable_NPCD"
   ],
   "FindedClues": [
     "Letter",
@@ -38,22 +53,81 @@
     "Meds"
   ],
   "FinishedDialogues": [
-    "DGram1st",
-    "Chatlist",
+    "jisoo'stalk",
+    "JW_WalletStory",
+    "Drawer_NewsStory",
+    "MemoStory_Book",
+    "Diary1Story",
+    "LaptopStory2",
+    "Camera",
     "Chocotalk1st",
     "ChooseChatName1",
-    "Camera",
+    "AfterGeonwooChatAsHerself",
     "Map_1",
-    "AfterGeonwooChatAsJiwon",
+    "Park",
+    "DiaryTutorial",
+    "6HairPin",
+    "VendingMachineStory",
+    "ParkStudentsStory",
+    "Barstreet",
+    "BarStreet",
+    "MemoStory_Phone",
+    "WeedHofStory",
+    "DrugsnacksStory",
     "Hospital",
-    "ChocotalkAlarm"
+    "HospitalWaitingRoom",
+    "memory_Meds",
+    "MemoStory_Letter",
+    "NewspaperStory",
+    "ConvenienceStore",
+    "Gallery",
+    "MedsStory",
+    "DoctorsRoom",
+    "DGram1st",
+    "Chatlist",
+    "DropperRecruit",
+    "IceiceChat",
+    "New711",
+    "Where",
+    "SevenEleven",
+    "Club_S1End",
+    "ActiveM",
+    "obj_clock1Story",
+    "obj_cctv1Story",
+    "obj_minirefrigeratorStory",
+    "Table_Geonwoo",
+    "Table_Geonwoo2",
+    "obj_customers"
   ],
-  "GottenPage": [],
+  "GottenPage": [
+    "Page4"
+  ],
   "RecommendedFriends": [],
-  "visited": 4,
-  "IsAriadneHintOn": false,
-  "S1HintList": null,
-  "S2HintList": null,
-  "StaffroomHintList": null,
-  "FindedMemoList": null
+  "visited": 7,
+  "IsAriadneHintOn": true,
+  "S1HintList": [
+    "Laptop",
+    "Meds",
+    "Letter",
+    "6Hairpin",
+    "DrawerR_Wallet",
+    "ChooseChatName1",
+    "Books_Diary",
+    "visitPark",
+    "visitBarStreet",
+    "visitHospital"
+  ],
+  "S2HintList": [
+    "ClubTable_Geonwoo",
+    "Toilet_costomerF",
+    "ToiletPaper"
+  ],
+  "StaffroomHintList": [
+    "VIPlist",
+    "InStaffroom_VIPlist",
+    "InStaffroom_cctv",
+    "InStaffroom_Key",
+    "InStaffroom_Radio"
+  ],
+  "FindedMemoList": []
 }

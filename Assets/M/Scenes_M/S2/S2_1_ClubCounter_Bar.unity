@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 438750798}
   - component: {fileID: 438750797}
-  - component: {fileID: 438750800}
   - component: {fileID: 438750799}
+  - component: {fileID: 438750800}
   m_Layer: 0
   m_Name: counterbar_bg
   m_TagString: Untagged
@@ -251,10 +251,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.793094, y: 0}
+  m_Offset: {x: 3.457078, y: -3.284886}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -265,7 +265,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.991904, y: 10.8}
+  m_Size: {x: 12.285845, y: 4.2302275}
   m_EdgeRadius: 0
 --- !u!1 &696875070
 GameObject:
