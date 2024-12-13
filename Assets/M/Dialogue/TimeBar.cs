@@ -82,8 +82,8 @@ public class TimeBar : MonoBehaviour
     {
         dialogueRunner.Stop();
         Debug.Log("Dialogue Stopped");
-        StartCoroutine(HideOptionsView());
-        Debug.Log("Options view manually hidden.");
+        StartCoroutine(HideOptionsView()); Debug.Log("Options view manually hidden.");
+        ShowTimeBar(false); Debug.Log("Timebar Hidden by script");
 
         var dialogueViews = dialogueRunner.dialogueViews;
         foreach (var view in dialogueViews)

@@ -990,6 +990,7 @@ title: event_gunwoo_begin
 ---
 
 //건우 두번째 클릭 시
+<<FinishedDialogue VisualNovelPrefab event_gunwoo_begin>>
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo2 1.17 0.322 white>>
 뭐라도 아는 게 있는지 물어보자.

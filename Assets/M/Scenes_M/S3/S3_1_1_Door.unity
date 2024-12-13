@@ -1471,7 +1471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RequiredItemName: OfficetelCardkey
   CorrectItemDialogue: OfficetelDoorwcard
-  NoItemDialogue: OfficetelDoor
+  NoItemDialogue: OfficetelDoor2
   WrongItemDialogue: WrongItem
 --- !u!1 &1806198642
 GameObject:
