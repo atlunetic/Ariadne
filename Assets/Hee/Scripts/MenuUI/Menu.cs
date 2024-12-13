@@ -80,7 +80,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
             UI_off();
             return;
         }
-        if(GameManager.instance.FindedObjects.Contains("ClubTable_Geonwoo")){
+        if(GameManager.instance.FinishedDialogues.Contains("event_gunwoo_begin")){
             if(GameManager.instance.FindedObjects.Contains("StaffRoom_staff_C"))
                 CallYarn.instance.Callbybutton(MoveStaffroom.GetComponent<Button>(), "club_staffroom_nostaff");
             MoveStaffroom.SetActive(true);

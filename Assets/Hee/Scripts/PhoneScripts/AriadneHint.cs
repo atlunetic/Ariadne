@@ -100,7 +100,7 @@ public class AriadneHint : MonoBehaviour
     }
 
     void check(List<string> HintList){  // 힌트 리스트를 게임 진행 상황과 동기화
-        if(GameManager.instance.FindedObjects.Contains("ClubTable_Geonwoo")){
+        if(GameManager.instance.FinishedDialogues.Contains("event_gunwoo_begin")){
             if(!GameManager.instance.FindedObjects.Contains("InStaffroom_Key") && !GameManager.instance.ChattingLog.Contains(50) && !HintList.Contains("GoStaffroom"))
                 HintList.Add("GoStaffroom");
             if(!GameManager.instance.FindedClues.Contains("StudentID") && !GameManager.instance.ChattingLog.Contains(51) && !HintList.Contains("StudentID"))
