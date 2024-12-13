@@ -92,6 +92,7 @@ public class SceneInfo : MonoBehaviour
         if(IsS4) return;
         MemoriesBG[MemoriesBG.Length -1].GetComponent<Image>().CrossFadeAlpha(0f, 1f, false);
         Invoke("Fadeout", 1f);
+        Menu.instance.UI_off();
     }
 
     private void Fadeout(){
@@ -103,7 +104,6 @@ public class SceneInfo : MonoBehaviour
         foreach(GameObject BG in MemoriesBG){
             BG.SetActive(false);
         }
-        Menu.instance.UI_off();
         BGon();
     }
 
