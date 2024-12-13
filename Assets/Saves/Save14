@@ -1,7 +1,7 @@
 {
-  "savetime": "2024-11-23 00:47:21 오전",
+  "savetime": "2024-12-13 20:54:19 오후",
   "IsLoad": false,
-  "NowScene": "S1_2_JiwonRoom",
+  "NowScene": "S3_3_Officetel1503",
   "NumOfScreenShots": 1,
   "GeonWooScore": 0,
   "SaengSoo": 0,
@@ -11,17 +11,26 @@
     25
   ],
   "PhotoList": [],
-  "items": [],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "R1403Cardkey"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "memo_video"
+    }
+  ],
   "FindedObjects": [
-    "Letter"
+    "Room1503_bg"
   ],
   "FindedClues": [],
   "FinishedDialogues": [
-    "DGram1st",
-    "Gallery",
-    "Chocotalk1st",
-    "Map_1",
-    "Camera"
+    "ChocotalkAlarm",
+    "R1403Cardkey",
+    "MemoStory_VideoTape",
+    "MemoStory_CaseBoard",
+    "Memo_VideoTape3"
   ],
   "GottenPage": [],
   "RecommendedFriends": [],
@@ -51,5 +60,8 @@
     "InStaffroom_Key",
     "InStaffroom_Radio"
   ],
-  "FindedMemoList": []
+  "FindedMemoList": [
+    "memo_board",
+    "memo_videotape"
+  ]
 }

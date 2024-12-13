@@ -5,9 +5,9 @@
 
 title: Memo_Tutorial
 ---
-
+<<SetActiveFalse VisualNovelPrefab true>>
 메모 튜토리얼 대사
-
+<<SetActiveFalse VisualNovelPrefab false>>
 ===
 
 
@@ -316,8 +316,12 @@ title: MemoStory_CaseBoard
 
 //(메모장에 수집되고 내용 뜸)
 <<FindMemo MemoController memo_board>>
-
 <<FinishedObj VisualNovelPrefab Room1503_bg>>
+
+<<if (CheckDialogue("R1403Cardkey")==true && CheckDialogue("MemoStory_CaseBoard") == true && CheckDialogue("Memo_VideoTape3")==true)>>
+    <<jump InteractionFinto14>>
+<<endif>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -370,7 +374,8 @@ title: Memo_VideoTape2
 //3. 같은 가방을 메고 학교에 가는 초등학생 둘의 뒷모습
 
 //(세 개의 팝업 이미지 이후 대사 나옴)
-
+<<SetActiveFalse VisualNovelPrefab true>>
+<<DeleteItem Inventory memo_video>>
 <<PlayVideo VisualNovelPrefab>>
 
 ===
@@ -387,6 +392,12 @@ title: Memo_VideoTape3
 ...일단 메모장에 기록해두자.
 <<CloseVideo VisualNovelPrefab>>
 <<FindMemo MemoController memo_videotape>>
+<<FinishedDialogue VisualNovelPrefab Memo_VideoTape3>>
+
+<<if (CheckDialogue("R1403Cardkey")==true && CheckDialogue("MemoStory_CaseBoard") == true && CheckDialogue("Memo_VideoTape3")==true)>>
+    <<jump InteractionFinto14>>
+<<endif>>
+<<UI_off MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 

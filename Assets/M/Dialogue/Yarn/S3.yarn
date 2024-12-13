@@ -256,80 +256,6 @@ title: SynthWeed
 
 ===
 
-title: GeonwooCard
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-//건우의 명함 - 가짜 증거
-<<DrawFadeIn DBG 0.75 0.75 0.2>>
-<<Draw Phonebooth_namecard_BIG 0.75 0.75>>
-//명함 팝업 이미지
-//지수4
-//<<Act 지수 Jisoo4 1.17 0.322 white>>
-..?
-이건우..?
-번호도 익숙한데.
-...
-...
-<<Hide Phonebooth_namecard_BIG>>
-<<Hide DBG>>
-//<<Hide 지수>>
-<<FinishedObj VisualNovelPrefab GeonwooCard>>
-<<FinishedDialogue VisualNovelPrefab GeonwooCard>>
-<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
-    <<jump Room101Fin>>
-<<endif>>
-<<SetCanvasTo VisualNovelPrefab false>>
-
-===
-
-title: memory_GeonwooCard
-
----
-<<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
-<<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio MemoryRecall 0.5>>
-//증거 촬영 시 돌아오는 기억: 바뀌고 어두워지는 배경, 팝업이미지x, 건우 왼쪽 지수 오른쪽
-//(건우가 돈을 벌려고 심부름센터 명함을 뿌리고 다녔던 기억)
-//(건우의 명함 이미지 확대)
-
-//건우1
-//<<Act 건우 Geonwoo1 0.322 0.227 white>>
-건우: 명함도 뽑았고!
-건우: 이제 돈 빡세게 벌어야지.
-//지수4
-//<<Act 지수 Jisoo4 1.17 0.322 white>>
-지수: 왜? 뭐 사려고?
-건우: ..그런 게 있다.
-건우: 너는 알면 안돼, 임마.
-//<<HideAll>>
-<<StopMemory SceneManager>>
-<<StopAudioAll>>
-
-<<if IsS4() == false>>
-	<<UI_on MenuUI>>
-	<<Scene black_bg>>
-	<<PlayAudio EarSound 0.8>>
-	<<PlayAudio WhiteNoise 0.6>>
-
-	눈 앞이 번쩍거려..
-	<<wait 0.5>>
-	토할 것 같아...
-
-	<<StopAudioAll>>
-	<<HideAll>>
-	<<UI_off MenuUI>>
-	<<Scene NoBG>>
-<<endif>>
-
-<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3")==true && CheckDialogue("memory_Photo") == true)>>
-    	<<jump Room101Fin>>
-	<<endif>>
-<<SetCanvasTo VisualNovelPrefab false>>
-
-===
-
 title: OfficetelDoor
 
 ---
@@ -460,7 +386,6 @@ title: memory_1342
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
-
 
 title: InteractionFin3
 
@@ -703,6 +628,7 @@ title: Officetel1503
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab Officetel1503>>
 //(휴대폰 갤러리의 기존 폴더 -> 숫자 '1503'이 적힌 오피스텔 문 사진 클릭 시)
 //왼쪽에 핸드폰,
 //오른쪽에 지수 이미지 뜸
@@ -742,207 +668,6 @@ title: Room101
 들어가볼까?
 <<ChangeSceneTo VisualNovelPrefab S3_2_Officetel101>>
 <<SetCanvasTo VisualNovelPrefab false>>
-===
-
-title: Room101Fin
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-둘러볼만한 건 다 본 것 같은데.
-일단 15층으로 가보자.
-<<SetCanvasTo VisualNovelPrefab false>>
-<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
-<<jump Officetel15thfloor>>
-
-===
-
-
-title: Officetel15thfloor
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-
-//장소 3. 오피스텔 꼭대기, 15층
-<<Draw Door1503 0.75 0.75>>
-//(♫Sound: 엘리베이터 도착음)
-//(♫Sound: 아래층에서 소란스러운 소리가 들려옴+이후 문 닫히는 소리)
-<<PlayAudio ElevatorArrive 0.6>>
-<<PlayAudio ElevatorDoorOpen 0.6>>
-<<PlayAudio Crowded 0.8>>
-//지수2
-<<Act 지수 Jisoo2 1.17 0.322 white>>
-아래층이 시끄럽네.
-무슨 일이 있나?
-...
-1503호...
-
-//지수4
-<<UpdateAct 지수 Jisoo4>>
-어?
-문이 열려있네...
-...
-//지수2
-<<UpdateAct 지수 Jisoo2>>
-안에는 아무도 없는 것 같다.
-들어가보자.
-<<Hide 지수>>
-
-<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
-<<wait 0.5>>
-<<Hide Door1503>>
-<<jump OfficetelInside1503>>
-<<SetCanvasTo VisualNovelPrefab false>>
-
-===
-
-title: OfficetelInside1503BG
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-//장소 3-1. 오피스텔 꼭대기, 1503호 내부
-//(배경 클릭 시: #책상 위에 뭐가 많네... #방금 전까지 누군가 있었던 것 같아.=> 랜덤 노출)
-
-<<if $rand >= 2>>
-책상 위에 뭐가 많네...
-<<else>>
-방금 전까지 누군가 있었던 것 같아.
-<<endif>>
-<<SetCanvasTo VisualNovelPrefab false>>
-
-===
-
-title: OfficetelInside1503
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-//지수4
-<<Act 지수 Jisoo4 1.17 0.322 white>>
-설마 마약 만드는 곳인가?
-...
-//지수2
-<<UpdateAct 지수 Jisoo2>>
-지원이는 대체 어디 있는 거야...
-//지수4
-<<UpdateAct 지수 Jisoo4>>
-단서가 될만한 게 있을까?
-//지수이미지 종료
-<<Hide 지수>>
-<<SetCanvasTo VisualNovelPrefab false>>
-
-===
-
-title: GangEvent
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-//조직원이 들어오는 이벤트 
-//(오브젝트 관계없이 2번의 상호작용(마우스 클릭으로 텍스트 확인) 이후 발생)
-...
-
-//(♫Sound: 갑자기 누군가 가까워지는 소리가 복도에서 울림)
-<<PlayAudio CloserGang 0.5>>
-//지수4
-<<Act 지수 Jisoo4 1.17 0.322 white>>
-어...
-누가 이쪽으로 온다.
-...
-//지수2
-<<UpdateAct 지수 Jisoo2>>
-빨리 숨어야겠다..!
-어디에 숨지?
--> 소파 뒤
-	//지수이미지 종료
-	<<Hide 지수>>
-	...
-	...
-	조직원: 흐흐흠~
-	조직원: 아, 여깄다.
-	//조직원 이미지 종료
-	//<<Hide 조직원>>
-	수상한 사람이 책상 위에 놓인 비닐을 챙겼다.
-	...
-	//(♫Sound: 수상한 사람이 멀어지는 소리)
-	<<PlayAudio FarawayGang 0.8>>
-	...
-	//지수 이미지 등장, 지수1
-	<<Act 지수 Jisoo1 1.17 0.322 white>>
-	갔다.
-	다시 둘러볼까?
-	//지수 이미지 종료
-	<<Hide 지수>>
-	<<FinishedDialogue VisualNovelPrefab GangEvent>>
-	<<SetCanvasTo VisualNovelPrefab false>>
--> 문 뒤
-	<<jump Ending4_2>>
--> 화분 뒤
-	<<jump Ending4_2>>
-
-===
-
-title: Ending4_2
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-<<CollectEnding GameManager Ending4_2 Ending4>>
-
-<<wait 1.0>>
-...
-//(갑자기 화면 흔들리는 효과)
-조직원: 너 뭐야.
-//조직원 왼쪽, 지수 오른쪽 배치
-<<Act 조직원 NPC_gang 0.322 0.227 white>>
-//지수5
-<<Act 지수 Jisoo5 1.17 0.322 white>>
-어...
-큰일이다.
-//(♫Sound: 휴대폰 다이얼 버튼음)
-<<PlayAudio PhonecallGang 0.5>>
-조직원이 휴대폰을 꺼내 어딘가로 전화를 걸었다.
-조직원: 쥐새끼가 들어왔다.
-
-//화면 어두워짐, 엔딩일러 팝업
-<<Fade black 0.0 1.0 2.0>>
-<<HideAll>>
-<<StopAudioAll>>
-<<ChangeSceneTo VisualNovelPrefab S1>>
-...
-수상한 사람들에 의해 어딘가로 끌려갔다.
-..도망갈 수 없을 것 같아.
-<<wait 2.0>>
-<<Draw Ending4 0.75 0.75>>
-<<FadeIn 2.0>>
-<<wait 4.0>>
-<<Hide Ending4>>
-<<Scene NoBG>>
-<<BackToMainScene GameManager>>
-//엔딩 4. 조직원에게 감금되다.
-
-===
-
-title: DrugDrink
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-//주요 오브젝트 1. 마약 음료병 => 논의 후 수정
-//지수4
-<<Act 지수 Jisoo4 1.17 0.322 white>>
-뭘 마시다 남겨뒀네.
-//지수2
-<<UpdateAct 지수 Jisoo2>>
-...
-<<Hide 지수>>
-<<RevealDiary DiaryManager Page2>>
-<<PlayAudio WhenChoose 0.5>>
-<color=yellow>* 일기장에 ‘마약 음료’가 추가되었습니다. *</color>
-<<SetCanvasTo VisualNovelPrefab false>>
-
 ===
 
 title: PhotoOf3
@@ -1039,6 +764,297 @@ title: memory_Photo
 
 ===
 
+title: GeonwooCard
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+//건우의 명함 - 가짜 증거
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw Phonebooth_namecard_BIG 0.75 0.75>>
+//명함 팝업 이미지
+//지수4
+//<<Act 지수 Jisoo4 1.17 0.322 white>>
+..?
+이건우..?
+번호도 익숙한데.
+...
+...
+<<Hide Phonebooth_namecard_BIG>>
+<<Hide DBG>>
+//<<Hide 지수>>
+<<FinishedObj VisualNovelPrefab GeonwooCard>>
+<<FinishedDialogue VisualNovelPrefab GeonwooCard>>
+<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
+    <<jump Room101Fin>>
+<<endif>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: memory_GeonwooCard
+
+---
+<<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
+<<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio MemoryRecall 0.5>>
+//증거 촬영 시 돌아오는 기억: 바뀌고 어두워지는 배경, 팝업이미지x, 건우 왼쪽 지수 오른쪽
+//(건우가 돈을 벌려고 심부름센터 명함을 뿌리고 다녔던 기억)
+//(건우의 명함 이미지 확대)
+
+//건우1
+//<<Act 건우 Geonwoo1 0.322 0.227 white>>
+건우: 명함도 뽑았고!
+건우: 이제 돈 빡세게 벌어야지.
+//지수4
+//<<Act 지수 Jisoo4 1.17 0.322 white>>
+지수: 왜? 뭐 사려고?
+건우: ..그런 게 있다.
+건우: 너는 알면 안돼, 임마.
+//<<HideAll>>
+<<StopMemory SceneManager>>
+<<StopAudioAll>>
+
+<<if IsS4() == false>>
+	<<UI_on MenuUI>>
+	<<Scene black_bg>>
+	<<PlayAudio EarSound 0.8>>
+	<<PlayAudio WhiteNoise 0.6>>
+
+	눈 앞이 번쩍거려..
+	<<wait 0.5>>
+	토할 것 같아...
+
+	<<StopAudioAll>>
+	<<HideAll>>
+	<<UI_off MenuUI>>
+	<<Scene NoBG>>
+<<endif>>
+
+<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3")==true && CheckDialogue("memory_Photo") == true)>>
+    	<<jump Room101Fin>>
+<<endif>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: GangEvent
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+//조직원이 들어오는 이벤트 
+//(오브젝트 관계없이 2번의 상호작용(마우스 클릭으로 텍스트 확인) 이후 발생)
+...
+
+//(♫Sound: 갑자기 누군가 가까워지는 소리가 복도에서 울림)
+<<PlayAudio CloserGang 0.5>>
+//지수4
+<<Act 지수 Jisoo4 1.17 0.322 white>>
+어...
+누가 이쪽으로 온다.
+...
+//지수2
+<<UpdateAct 지수 Jisoo2>>
+빨리 숨어야겠다..!
+어디에 숨지?
+-> 소파 뒤
+	//지수이미지 종료
+	<<Hide 지수>>
+	...
+	...
+	조직원: 흐흐흠~
+	조직원: 아, 여깄다.
+	//조직원 이미지 종료
+	//<<Hide 조직원>>
+	수상한 사람이 책상 위에 놓인 비닐을 챙겼다.
+	...
+	//(♫Sound: 수상한 사람이 멀어지는 소리)
+	<<PlayAudio FarawayGang 0.8>>
+	...
+	//지수 이미지 등장, 지수1
+	<<Act 지수 Jisoo1 1.17 0.322 white>>
+	갔다.
+	다시 둘러볼까?
+	//지수 이미지 종료
+	<<Hide 지수>>
+	<<FinishedDialogue VisualNovelPrefab GangEvent>>
+	<<SetCanvasTo VisualNovelPrefab false>>
+-> 문 뒤
+	<<jump Ending4_2>>
+-> 화분 뒤
+	<<jump Ending4_2>>
+
+===
+
+title: Ending4_2
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<CollectEnding GameManager Ending4_2 Ending4>>
+
+<<wait 1.0>>
+...
+//(갑자기 화면 흔들리는 효과)
+조직원: 너 뭐야.
+//조직원 왼쪽, 지수 오른쪽 배치
+<<Act 조직원 NPC_gang 0.322 0.227 white>>
+//지수5
+<<Act 지수 Jisoo5 1.17 0.322 white>>
+어...
+큰일이다.
+//(♫Sound: 휴대폰 다이얼 버튼음)
+<<PlayAudio PhonecallGang 0.5>>
+조직원이 휴대폰을 꺼내 어딘가로 전화를 걸었다.
+조직원: 쥐새끼가 들어왔다.
+
+//화면 어두워짐, 엔딩일러 팝업
+<<Fade black 0.0 1.0 2.0>>
+<<HideAll>>
+<<StopAudioAll>>
+<<ChangeSceneTo VisualNovelPrefab S1>>
+...
+수상한 사람들에 의해 어딘가로 끌려갔다.
+..도망갈 수 없을 것 같아.
+<<wait 2.0>>
+<<Draw Ending4 0.75 0.75>>
+<<FadeIn 2.0>>
+<<wait 4.0>>
+<<Hide Ending4>>
+<<Scene NoBG>>
+<<BackToMainScene GameManager>>
+//엔딩 4. 조직원에게 감금되다.
+
+===
+
+title: Room101Fin
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+둘러볼만한 건 다 본 것 같은데.
+일단 15층으로 가보자.
+<<SetCanvasTo VisualNovelPrefab false>>
+<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
+<<jump Officetel15thfloor>>
+
+===
+
+title: Officetel15thfloor
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+//장소 3. 오피스텔 꼭대기, 15층
+<<Draw Door1503 0.75 0.75>>
+//(♫Sound: 엘리베이터 도착음)
+//(♫Sound: 아래층에서 소란스러운 소리가 들려옴+이후 문 닫히는 소리)
+<<PlayAudio ElevatorArrive 0.6>>
+<<PlayAudio ElevatorDoorOpen 0.6>>
+<<PlayAudio Crowded 0.8>>
+//지수2
+<<Act 지수 Jisoo2 1.17 0.322 white>>
+아래층이 시끄럽네.
+무슨 일이 있나?
+...
+1503호...
+
+//지수4
+<<UpdateAct 지수 Jisoo4>>
+어?
+문이 열려있네...
+...
+//지수2
+<<UpdateAct 지수 Jisoo2>>
+안에는 아무도 없는 것 같다.
+들어가보자.
+<<Hide 지수>>
+
+<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
+<<wait 0.5>>
+<<Hide Door1503>>
+<<jump OfficetelInside1503>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: OfficetelInside1503BG
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+//장소 3-1. 오피스텔 꼭대기, 1503호 내부
+//(배경 클릭 시: #책상 위에 뭐가 많네... #방금 전까지 누군가 있었던 것 같아.=> 랜덤 노출)
+
+<<if $rand >= 2>>
+책상 위에 뭐가 많네...
+<<else>>
+방금 전까지 누군가 있었던 것 같아.
+<<endif>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: OfficetelInside1503
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+//지수4
+<<Act 지수 Jisoo4 1.17 0.322 white>>
+설마 마약 만드는 곳인가?
+...
+//지수2
+<<UpdateAct 지수 Jisoo2>>
+지원이는 대체 어디 있는 거야...
+//지수4
+<<UpdateAct 지수 Jisoo4>>
+단서가 될만한 게 있을까?
+//지수이미지 종료
+<<Hide 지수>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+
+title: DrugDrink
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+//주요 오브젝트 1. 마약 음료병 => 논의 후 수정
+//지수4
+<<Act 지수 Jisoo4 1.17 0.322 white>>
+뭘 마시다 남겨뒀네.
+//지수2
+<<UpdateAct 지수 Jisoo2>>
+...
+<<Hide 지수>>
+<<RevealDiary DiaryManager Page2>>
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 ‘마약 음료’가 추가되었습니다. *</color>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Crack
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+//지수2
+<<Act 지수 Jisoo2 1.17 0.322 white>>
+...
+광물같이 생겼다.
+<<Hide 지수>>
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 ‘크랙’이 추가되었습니다. *</color>
+<<RevealDiary DiaryManager Page5>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
 title: R1403Cardkey
 ---
 
@@ -1061,28 +1077,15 @@ title: R1403Cardkey
 //<<AddToInventory VisualNovelPrefab R1403Cardkey>>
 <<SetActiveFalse VisualNovelPrefab R1403Cardkey>>
 
+<<if (CheckDialogue("R1403Cardkey")==true && CheckDialogue("MemoStory_CaseBoard") == true && CheckDialogue("Memo_VideoTape3")==true)>>
+    <<jump InteractionFinto14>>
+<<endif>>
 
 // 인벤토리에 습득
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
-title: Crack
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-//지수2
-<<Act 지수 Jisoo2 1.17 0.322 white>>
-...
-광물같이 생겼다.
-<<Hide 지수>>
-<<PlayAudio WhenChoose 0.5>>
-<color=yellow>* 일기장에 ‘크랙’이 추가되었습니다. *</color>
-<<RevealDiary DiaryManager Page5>>
-<<SetCanvasTo VisualNovelPrefab false>>
-
-===
 
 title: 1503TV
 
@@ -1968,13 +1971,13 @@ title:BacktoOfficetel1stFloor
 <<Hide WhiteBG>>
 <<StopAudioAll>>
 //<<SetCanvasTo VisualNovelPrefab false>>
-//Test 후 S4 씬 변경 주석만 삭제
-//<<ChangeSceneTo VisualNovelPrefab S4>>
+//Test 후 S4 씬 변경 주석만 삭제 (<<ChangeSceneTo VisualNovelPrefab S4>>)
+<<ChangeSceneTo VisualNovelPrefab S4>>
 //<<jump lastevent_intro>>
 
 //TEST용
-<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
