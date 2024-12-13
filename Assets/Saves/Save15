@@ -1,5 +1,5 @@
 {
-  "savetime": "2024-11-23 00:55:22 오전",
+  "savetime": "2024-12-13 18:26:36 오후",
   "IsLoad": true,
   "NowScene": "S1_Hospital",
   "NumOfScreenShots": 1,
@@ -9,7 +9,9 @@
     19,
     18,
     25,
-    0
+    0,
+    41,
+    42
   ],
   "PhotoList": [
     "Laptop28",
@@ -34,23 +36,19 @@
     "Hospital",
     "HospitalWaitingRoom",
     "memory_Meds",
-    "MemoStory_Letter"
+    "MemoStory_Letter",
+    "ChocotalkAlarm",
+    "Chatlist"
   ],
   "GottenPage": [],
   "RecommendedFriends": [],
   "visited": 4,
-  "IsAriadneHintOn": false,
+  "IsAriadneHintOn": true,
   "S1HintList": [
-    "Laptop",
-    "Meds",
     "Letter",
     "6Hairpin",
     "DrawerR_Wallet",
-    "ChooseChatName1",
-    "Books_Diary",
-    "visitPark",
-    "visitBarStreet",
-    "visitHospital"
+    "visitBarStreet"
   ],
   "S2HintList": [
     "ClubTable_Geonwoo",
