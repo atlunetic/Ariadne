@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         FindedObjects.Contains("InStaffroom_Radio");
     }
     public bool S2Ended(){
-        return FindedObjects.Contains("Locker") && FindedObjects.Contains("Toilet_costomerF") &&
+        return FinishedDialogues.Contains("lockeropened") && FindedObjects.Contains("Toilet_costomerF") &&
         FindedClues.Contains("StudentID") && FindedClues.Contains("ToiletPaper");
     }
 

@@ -574,7 +574,7 @@ title: checkClothes
 
 ---
 
-<<if CheckDialogue("ClothesUsed")==true>>
+<<if CheckDialogue("ClothesOnForE")==true>>
 	<<jump E_Clothes>>
 <<else>>
 	<<jump E_NoClothes>>
@@ -667,6 +667,8 @@ title: ClothesUsed
 <<else>>
 	<<UI_off MenuUI>>
 	직원 복장 옷을 입었다.
+	//옷 입고 다시 물어볼 경우 대비 빈 타이틀
+	<<FinishedDialogue VisualNovelPrefab ClothesOnForE>>
 	<<jump E_Clothes>>
 <<endif>>
 <<FinishedDialogue VisualNovelPrefab ClothesUsed>>
@@ -720,6 +722,7 @@ title: letEknow
 
 ---
 
+<<UI_off MenuUI>>
 지수: 이상한 소리 한다고 생각하실 수도 있겠지만...
 지수: 저 사람이 그쪽 술에 약을 탄 것 같아서요.
 
@@ -793,6 +796,7 @@ title: DontTellE
 
 ---
 
+<<UI_off MenuUI>>
 <<UpdateAct 지수 CoJIsoo2>>
 그래...오지랖 부리지 말자.
 ...
@@ -828,7 +832,6 @@ title: obj_lsdsticker
 ---
 
 //클릭할 경우
-
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
@@ -3157,7 +3160,6 @@ title: obj_keyStory
 
 ---
 
-
 <<SetCanvasTo VisualNovelPrefab true>>
 //서랍 클릭 시
 여기도 열어볼까..?
@@ -3180,7 +3182,7 @@ title: obj_keyStory
 //<<Hide 지수>>
 //인벤토리에 열쇠 아이템이 추가됨.
 //<<SetActiveFalse VisualNovelPrefab InStaffroom_Key>>
-<<FinishedObj VisualNovelPrefab InStaffroom_Key>>
+//<<FinishedObj VisualNovelPrefab InStaffroom_Key>>
 <<FinishedDialogue VisualNovelPrefab obj_keyStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<IfDone_getout MenuUI>>
@@ -3594,6 +3596,7 @@ title: obj_customerg_choose
 		이후로도 클럽고객G의 말은 끊이지 않았다.
 		알아낼 수 있는 게 없는 걸까...
 		<<wait 0.5>>
+		<<Hide 클럽고객G>>
 		<<jump GeonwooNote>>
 -> 클럽에 오게 된 계기를 물어보자
 	<<UpdateAct 지수 CoJIsoo1>>
@@ -3614,6 +3617,7 @@ title: obj_customerg_choose
 		이후로도 클럽고객G의 말은 끊이지 않았다.
 		알아낼 수 있는 게 없는 걸까...
 		<<wait 0.5>>
+		<<Hide 클럽고객G>>
 		<<jump GeonwooNote>>
 
 ===
@@ -3651,6 +3655,7 @@ title: GeonwooNote
 VIP 룸으로 다시 들어가자.
 //vip룸으로 다시 장소 이동
 무슨 쪽지지…?
+<<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -3679,20 +3684,22 @@ title: AfterNote
 
 <<SetCanvasTo VisualNovelPrefab	true>>
 ...
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw jjogji_big2 0.75 0.75>>
 아리아드네가 이걸...? 정말 지켜보고 있는 건가?
 ...혼란스럽다.
 하지만 지금은 달리 뭘 해야 할지 모르겠어.
-...가족에 대해 물어보자.
+//...가족에 대해 물어보자.
 <<Hide DBG>>
 <<Hide jjogji_big2>>
 //(이후에 클럽 고객G에게 바로 말건다)
-지수: 아까 가족분들이 다정하다고 하셨는데….
-지수: 가족분들이랑은 요즘 어떠세요?
+//지수: 아까 가족분들이 다정하다고 하셨는데….
+//지수: 가족분들이랑은 요즘 어떠세요?
  
-클럽 고객G가 침울한 표정을 지었다.
-이내 아무렇지 않은 듯 웃으며 휴대폰을 내밀었다.
+//클럽 고객G가 침울한 표정을 지었다.
+//이내 아무렇지 않은 듯 웃으며 휴대폰을 내밀었다.
 
-<<jump chocotalk_ariadne_customerg>>
+<<jump obj_customerg_choose_ariadne>>
 //<<SetCanvasTo VisualNovelPrefab	false>>
 ===
 
@@ -3724,7 +3731,8 @@ title: chocotalk_ariadne_customerg
 //-> 가족에 대해 물어보자
 그래...
 가족에 대해 물어보자.
-<<UpdateAct 지수 CoJIsoo1>>
+<<Act 지수 CoJIsoo3 1.17 0.322 white>>
+//<<UpdateAct 지수 CoJIsoo1>>
 지수: 아까 가족분들이 다정하다고 하셨는데...
 지수: 가족분들이랑은 요즘 어떠세요?
 <<wait 1.0>>

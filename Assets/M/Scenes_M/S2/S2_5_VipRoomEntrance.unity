@@ -857,15 +857,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1938525906}
-  - component: {fileID: 1938525905}
   - component: {fileID: 1938525904}
+  - component: {fileID: 1938525908}
+  - component: {fileID: 1938525907}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1938525904
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -911,19 +912,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0859888}
   m_EdgeRadius: 0
---- !u!114 &1938525905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938525903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogueTitle: GeonwooNote
 --- !u!4 &1938525906
 Transform:
   m_ObjectHideFlags: 0
@@ -939,6 +927,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1938525907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938525903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e975710f4f1b34f8ce401df8be1da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newItem:
+    ItemType: 0
+    itemName: WaterBottle
+  image: {fileID: 0}
+--- !u!114 &1938525908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938525903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293ee0a3658a8584d92d1598dec7bf76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneItem: {fileID: 1938525907}
 --- !u!1 &2123773215
 GameObject:
   m_ObjectHideFlags: 0

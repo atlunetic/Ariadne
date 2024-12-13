@@ -106,7 +106,7 @@ public class AriadneHint : MonoBehaviour
             if(!GameManager.instance.FindedClues.Contains("StudentID") && !GameManager.instance.ChattingLog.Contains(51) && !HintList.Contains("StudentID"))
                 HintList.Add("StudentID");
         }
-        if(GameManager.instance.FindedObjects.Contains("InStaffroom_Key") && !GameManager.instance.FindedObjects.Contains("Locker") && !GameManager.instance.ChattingLog.Contains(60) && !HintList.Contains("Locker"))
+        if(GameManager.instance.FindedObjects.Contains("InStaffroom_Key") && !GameManager.instance.FinishedDialogues.Contains("lockeropened") && !GameManager.instance.ChattingLog.Contains(60) && !HintList.Contains("Locker"))
             HintList.Add("Locker");
             
         for(int i = HintList.Count - 1; i >= 0; i--){
