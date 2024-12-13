@@ -113,8 +113,8 @@ title: NationalFlower
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 //3장 테스트용 물, 직원 복장 추가
-<<AddToInventory VisualNovelPrefab Clothes>>
-<<AddToInventory VisualNovelPrefab WaterCup>>
+//<<AddToInventory VisualNovelPrefab Clothes>>
+//<<AddToInventory VisualNovelPrefab WaterCup>>
 
 ===
 
@@ -277,9 +277,9 @@ title: GeonwooCard
 //<<Hide 지수>>
 <<FinishedObj VisualNovelPrefab GeonwooCard>>
 <<FinishedDialogue VisualNovelPrefab GeonwooCard>>
-//<<if CheckDialogue("PoppyStory") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
-	//<<jump InteractionFin3>>
-//<<endif>>
+<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
+    <<jump Room101Fin>>
+<<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -287,7 +287,7 @@ title: GeonwooCard
 title: memory_GeonwooCard
 
 ---
-
+<<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
 <<SetCanvasTo VisualNovelPrefab true>>
 <<PlayAudio MemoryRecall 0.5>>
 //증거 촬영 시 돌아오는 기억: 바뀌고 어두워지는 배경, 팝업이미지x, 건우 왼쪽 지수 오른쪽
@@ -321,11 +321,11 @@ title: memory_GeonwooCard
 	<<HideAll>>
 	<<UI_off MenuUI>>
 	<<Scene NoBG>>
-	<<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
-	//<<if CheckDialogue("PoppyStory") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
-		//<<jump InteractionFin3>>
-	//<<endif>>
 <<endif>>
+
+<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3")==true && CheckDialogue("memory_Photo") == true)>>
+    	<<jump Room101Fin>>
+	<<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -752,8 +752,8 @@ title: Room101Fin
 둘러볼만한 건 다 본 것 같은데.
 일단 15층으로 가보자.
 <<SetCanvasTo VisualNovelPrefab false>>
-//<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
-//<<jump Officetel15thfloor>>
+<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
+<<jump Officetel15thfloor>>
 
 ===
 
@@ -989,6 +989,10 @@ title: PhotoOf3Story
 <<Hide PhotoOf3>>
 <<Hide DBG>>
 
+<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
+    <<jump Room101Fin>>
+<<endif>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1013,19 +1017,23 @@ title: memory_Photo
 <<StopAudioAll>>
 
 <<if IsS4() == false>>
-<<UI_on MenuUI>>
-	<<Scene black_bg>>
-	<<PlayAudio EarSound 0.8>>
-	<<PlayAudio WhiteNoise 0.6>>
+	<<UI_on MenuUI>>
+		<<Scene black_bg>>
+		<<PlayAudio EarSound 0.8>>
+		<<PlayAudio WhiteNoise 0.6>>
 
-	정신을 잃을 것 같다.
-	<<wait 0.5>>
-	조금만 버티자.. 
+		정신을 잃을 것 같다.
+		<<wait 0.5>>
+		조금만 버티자.. 
 
-	<<StopAudioAll>>
-	<<HideAll>>
-	<<UI_off MenuUI>>
-	<<Scene NoBG>>
+		<<StopAudioAll>>
+		<<HideAll>>
+		<<UI_off MenuUI>>
+		<<Scene NoBG>>
+<<endif>>
+
+<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
+		<<jump Room101Fin>>
 <<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -1034,6 +1042,7 @@ title: memory_Photo
 title: R1403Cardkey
 ---
 
+<<FinishedDialogue VisualNovelPrefab R1403Cardkey>>
 <<SetCanvasTo VisualNovelPrefab true>>
 //지수4
 <<Act 지수 Jisoo4 1.17 0.322 white>>
@@ -1051,6 +1060,7 @@ title: R1403Cardkey
 
 //<<AddToInventory VisualNovelPrefab R1403Cardkey>>
 <<SetActiveFalse VisualNovelPrefab R1403Cardkey>>
+
 
 // 인벤토리에 습득
 <<SetCanvasTo VisualNovelPrefab false>>

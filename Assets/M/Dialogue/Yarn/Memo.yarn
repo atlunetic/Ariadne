@@ -275,9 +275,11 @@ title: MemoStory_Recorder
 
 //(메모장에 수집되고 내용 뜸)
 <<FindMemo MemoController memo_recorder>>
-
-
 <<SetCanvasTo VisualNovelPrefab false>>
+
+<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
+    <<jump Room101Fin>>
+<<endif>>
 
 ===
 
