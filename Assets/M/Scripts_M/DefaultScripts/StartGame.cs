@@ -44,4 +44,9 @@ public class StartGame : MonoBehaviour
     public void openendings(){
         SaveAndLoad.instance.CollectedEndingsPanel.SetActive(true);
     }
+
+    public void ActiveSettingsPanalOnHome(){
+        Settings.instance.SaveAndLoadBtn.SetActive(false);
+        Settings.instance.SettingsPanel.SetActive(true);
+    }
 }

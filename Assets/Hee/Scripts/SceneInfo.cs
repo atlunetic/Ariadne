@@ -62,7 +62,7 @@ public class SceneInfo : MonoBehaviour
             BGoff();
             for(int i=0; i<MemoriesBG.Length-1; i++){
                 MemoriesBG[i].SetActive(true);
-                yield return new WaitForSeconds(0.7f);
+                yield return new WaitForSeconds(0.8f);
             }
 
             MemoriesBG[MemoriesBG.Length-1].SetActive(true);
@@ -90,7 +90,7 @@ public class SceneInfo : MonoBehaviour
         GalleryController.instance.Glitch.SetActive(false);
 
         if(IsS4) return;
-        MemoriesBG[MemoriesBG.Length -1].SetActive(false);
+        MemoriesBG[MemoriesBG.Length -1].GetComponent<Image>().CrossFadeAlpha(0f, 1f, false);
         Invoke("Fadeout", 1f);
     }
 
