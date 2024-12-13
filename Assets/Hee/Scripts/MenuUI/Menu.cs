@@ -83,7 +83,8 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
         if(GameManager.instance.FinishedDialogues.Contains("event_gunwoo_begin")){
             if(GameManager.instance.FindedObjects.Contains("StaffRoom_staff_C"))
                 CallYarn.instance.Callbybutton(MoveStaffroom.GetComponent<Button>(), "club_staffroom_nostaff");
-            MoveStaffroom.SetActive(true);
+            if(!GameManager.instance.FinishedDialogues.Contains("obj_keyStory"))
+                MoveStaffroom.SetActive(true);
         }
         if(GameManager.instance.S2Ended()) {
             UnityAction openVIProom = null;

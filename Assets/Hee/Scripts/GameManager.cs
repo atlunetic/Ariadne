@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         ChattingLog.Add(25);
         S1HintList = new List<string> {"Laptop", "Meds", "Letter", "6Hairpin", "DrawerR_Wallet", "ChooseChatName1", "Books_Diary", "visitPark", "visitBarStreet", "visitHospital"};
         S2HintList = new List<string> {"ClubTable_Geonwoo", "Toilet_costomerF", "ToiletPaper"};  // ClubTable_Geonwoo -> GoStaffroom, StudentID  -> Locker
-        StaffroomHintList = new List<string> {"VIPlist", "InStaffroom_VIPlist", "InStaffroom_cctv", "InStaffroom_Key", "InStaffroom_Radio"};
+        StaffroomHintList = new List<string> {"VIPlist", "InStaffroom_VIPlist", "InStaffroom_cctv", "obj_keyStory", "InStaffroom_Radio"};
     }
     // RandomN 불러오기 시 실행
     public bool IsLoad = false;  // 불러오기 시 true
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     }
     public bool StaffroomEnded(){
         return FindedClues.Contains("VIPlist") && FindedObjects.Contains("InStaffroom_VIPlist") &&
-        FindedObjects.Contains("InStaffroom_cctv") && FindedObjects.Contains("InStaffroom_Key") &&
+        FindedObjects.Contains("InStaffroom_cctv") && FinishedDialogues.Contains("obj_keyStory") &&
         FindedObjects.Contains("InStaffroom_Radio");
     }
     public bool S2Ended(){
