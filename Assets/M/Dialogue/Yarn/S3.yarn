@@ -91,7 +91,7 @@ title: PoppyStory
 //<<SetActiveFalse VisualNovelPrefab Poppy>>
 <<FinishedDialogue VisualNovelPrefab PoppyStory>>
 
-<<if CheckDialogue("PoppyStory") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
+<<if CheckDialogue("PoppyStory") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 	<<jump InteractionFin3>>
 <<endif>>
 
@@ -112,7 +112,9 @@ title: NationalFlower
 ...
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
+//3장 테스트용 물, 직원 복장 추가
 //<<AddToInventory VisualNovelPrefab Clothes>>
+//<<AddToInventory VisualNovelPrefab WaterCup>>
 
 ===
 
@@ -163,6 +165,7 @@ title: FlashVM
 //<<UpdateAct 지수 Jisoo2>>
 ...
 <<DeleteItem Inventory Flashlight>>
+<<FinishedDialogue VisualNovelPrefab FlashVM>>
 <<Hide BlackBG>>
 <<jump DrugCookie>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -179,8 +182,8 @@ title: DrugCookie
 <color=yellow>* 일기장에 ‘마약 쿠키’가 추가되었습니다. *</color>
 //(이후 일기장 클릭 시 ‘마약 쿠키’ 관련 정보 확인 가능)
 <<RevealDiary DiaryManager Page3>>
-<<SetActiveFalse VisualNovelPrefab VendingMachine3>>
-<<FinishedObj VisualNovelPrefab VendingMachine3>>
+//<<SetActiveFalse VisualNovelPrefab VendingMachine3>>
+//<<FinishedObj VisualNovelPrefab VendingMachine3>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -190,17 +193,22 @@ title: PhoneBooth
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-
 //공중전화 내부 확대한 배경 이미지
 <<ChangeSceneTo VisualNovelPrefab S3_1_2_PhoneBooth>>
 
-//지수4
-<<wait 1.0>>
-<<Act 지수 Jisoo4 1.17 0.322 white>>
-...
-요즘도 공중전화가 있네...
-<<Hide 지수>>
-<<SetCanvasTo VisualNovelPrefab false>>
+<<if CheckDialogue("PhoneBooth") == false>>
+	//지수4
+	<<wait 0.3>>
+	<<Act 지수 Jisoo4 1.17 0.322 white>>
+	...
+	요즘도 공중전화가 있네...
+	<<Hide 지수>>
+	<<FinishedDialogue VisualNovelPrefab PhoneBooth>>
+	<<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+	<<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
+
 
 ===
 
@@ -248,100 +256,28 @@ title: SynthWeed
 
 ===
 
-title: GeonwooCard
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-//건우의 명함 - 가짜 증거
-<<DrawFadeIn DBG 0.75 0.75 0.2>>
-<<Draw Phonebooth_namecard_BIG 0.75 0.75>>
-//명함 팝업 이미지
-//지수4
-//<<Act 지수 Jisoo4 1.17 0.322 white>>
-..?
-이건우..?
-번호도 익숙한데.
-...
-...
-<<Hide Phonebooth_namecard_BIG>>
-<<Hide DBG>>
-//<<Hide 지수>>
-<<FinishedObj VisualNovelPrefab GeonwooCard>>
-<<FinishedDialogue VisualNovelPrefab GeonwooCard>>
-<<if CheckDialogue("PoppyStory") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
-	<<jump InteractionFin3>>
-<<endif>>
-<<SetCanvasTo VisualNovelPrefab false>>
-
-===
-
-title: memory_GeonwooCard
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio MemoryRecall 0.5>>
-//증거 촬영 시 돌아오는 기억: 바뀌고 어두워지는 배경, 팝업이미지x, 건우 왼쪽 지수 오른쪽
-//(건우가 돈을 벌려고 심부름센터 명함을 뿌리고 다녔던 기억)
-//(건우의 명함 이미지 확대)
-
-//건우1
-//<<Act 건우 Geonwoo1 0.322 0.227 white>>
-건우: 명함도 뽑았고!
-건우: 이제 돈 빡세게 벌어야지.
-//지수4
-//<<Act 지수 Jisoo4 1.17 0.322 white>>
-지수: 왜? 뭐 사려고?
-건우: ..그런 게 있다.
-건우: 너는 알면 안돼, 임마.
-//<<HideAll>>
-<<StopMemory SceneManager>>
-<<StopAudioAll>>
-
-<<if IsS4() == false>>
-	<<UI_on MenuUI>>
-	<<Scene black_bg>>
-	<<PlayAudio EarSound 0.8>>
-	<<PlayAudio WhiteNoise 0.6>>
-
-	눈 앞이 번쩍거려..
-	<<wait 0.5>>
-	토할 것 같아...
-
-	<<StopAudioAll>>
-	<<HideAll>>
-	<<UI_off MenuUI>>
-	<<Scene NoBG>>
-	<<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
-	<<if CheckDialogue("PoppyStory") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
-		<<jump InteractionFin3>>
-	<<endif>>
-<<endif>>
-<<SetCanvasTo VisualNovelPrefab false>>
-
-===
-
 title: OfficetelDoor
 
 ---
 
-<<if CheckDialogue("OfficetelDoor1")==false>>
+<<if CheckDialogue("OfficetelDoor")==false>>
 	<<SetCanvasTo VisualNovelPrefab true>>
 	//오브젝트 4. 오피스텔 출입문
 	<<ChangeSceneTo VisualNovelPrefab S3_1_1_Door>>
 	//출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
 	//지수2
-	<<wait 1.0>>
+	<<wait 0.5>>
 	//<<Act 지수 Jisoo2 1.17 0.322 white>>
-	...
 	...
 	카드키가 있거나 비밀번호를 알아야 할 것 같다.
 	...
 	//<<Hide 지수>>
+	<<FinishedDialogue VisualNovelPrefab OfficetelDoor>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 <<else>>
-	<<jump OfficetelDoor1>>
+	//<<jump OfficetelDoor1>>
+	<<ChangeSceneTo VisualNovelPrefab S3_1_1_Door>>
+	<<stop>>
 <<endif>>
 
 ===
@@ -355,6 +291,21 @@ title: OfficetelDoor1
 <<ChangeSceneTo VisualNovelPrefab S3_1_1_Door>>
 //출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
 ...
+<<FinishedDialogue VisualNovelPrefab OfficetelDoor1>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: OfficetelDoor2
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+//오브젝트 4. 오피스텔 출입문
+//<<ChangeSceneTo VisualNovelPrefab S3_1_1_Door>>
+//출입문 키패드&낙서 포함한 부분 확대한 배경 이미지
+...
+<<FinishedDialogue VisualNovelPrefab OfficetelDoor2>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -382,7 +333,7 @@ title: Scribble1342
 아니네...
 <<Hide 지수>>
 <<FinishedDialogue VisualNovelPrefab Scribble1342>>
-<<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
+<<if CheckDialogue("PoppyStory") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 	<<jump InteractionFin3>>
 <<endif>>
 <<FinishedObj VisualNovelPrefab Scribble1342>>
@@ -428,14 +379,13 @@ title: memory_1342
 	<<UI_off MenuUI>>
 	<<Scene NoBG>>
 	<<FinishedDialogue VisualNovelPrefab memory_1342>>
-	<<if CheckDialogue("Poppy") == true && CheckDialogue("GeonwooCard") == true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
+	<<if CheckDialogue("PoppyStory") == true && CheckDialogue("Scribble1342") == true && CheckDialogue("memory_1342") == true>>
 		<<jump InteractionFin3>>
 	<<endif>>
 <<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
-
 
 title: InteractionFin3
 
@@ -678,6 +628,7 @@ title: Officetel1503
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab Officetel1503>>
 //(휴대폰 갤러리의 기존 폴더 -> 숫자 '1503'이 적힌 오피스텔 문 사진 클릭 시)
 //왼쪽에 핸드폰,
 //오른쪽에 지수 이미지 뜸
@@ -719,93 +670,170 @@ title: Room101
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
-title: Room101Fin
+title: PhotoOf3
 
 ---
 
-<<SetCanvasTo VisualNovelPrefab true>>
-둘러볼만한 건 다 본 것 같은데.
-일단 15층으로 가보자.
-<<SetCanvasTo VisualNovelPrefab false>>
-//<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
-//<<jump Officetel15thfloor>>
+<<if CheckDialogue("GangEvent") == false>>
+	<<jump GangEvent>>
+<<elseif CheckDialogue("PhotoOf3Story") == true>>
+	<<SetCanvasTo VisualNovelPrefab true>>
+	<<DrawFadeIn DBG 0.75 0.75 0.2>>
+	<<Draw PhotoOf3 0.75 0.75>>
+	이미 확인했어. 기억이 잘 나지 않는 사진이다.
+	<<Hide PhotoOf3>>
+	<<Hide DBG>>
+	<<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+	<<jump PhotoOf3Story>>
+<<endif>>
 
 ===
 
-
-title: Officetel15thfloor
+title: PhotoOf3Story
 
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-
-//장소 3. 오피스텔 꼭대기, 15층
-<<Draw Door1503 0.75 0.75>>
-//(♫Sound: 엘리베이터 도착음)
-//(♫Sound: 아래층에서 소란스러운 소리가 들려옴+이후 문 닫히는 소리)
-<<PlayAudio ElevatorArrive 0.6>>
-<<PlayAudio ElevatorDoorOpen 0.6>>
-<<PlayAudio Crowded 0.8>>
-//지수2
-<<Act 지수 Jisoo2 1.17 0.322 white>>
-아래층이 시끄럽네.
-무슨 일이 있나?
-...
-1503호...
+<<FinishedDialogue VisualNovelPrefab PhotoOf3Story>>
+//주요 오브젝트 2. 지원, 지수, 건우가 함께 찍힌 사진 - 최종 추리 증거
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw PhotoOf3 0.75 0.75>>
 
 //지수4
-<<UpdateAct 지수 Jisoo4>>
-어?
-문이 열려있네...
+<<Act 지수 Jisoo4 1.17 0.322 white>>
 ...
-//지수2
-<<UpdateAct 지수 Jisoo2>>
-안에는 아무도 없는 것 같다.
-들어가보자.
+..뭐지?
+왜 이런 사진이 여기 있는 거야...
+//지수5
+<<UpdateAct 지수 Jisoo5>>
+...
+셋이 저러고 있었던 적이 있나?
+기억이 안나는데...
 <<Hide 지수>>
+<<Hide PhotoOf3>>
+<<Hide DBG>>
 
-<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
-<<wait 0.5>>
-<<Hide Door1503>>
-<<jump OfficetelInside1503>>
+<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
+    <<jump Room101Fin>>
+<<endif>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
-title: OfficetelInside1503BG
+title: memory_Photo
 
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-//장소 3-1. 오피스텔 꼭대기, 1503호 내부
-//(배경 클릭 시: #책상 위에 뭐가 많네... #방금 전까지 누군가 있었던 것 같아.=> 랜덤 노출)
+<<PlayAudio MemoryRecall 0.5>>
+<<FinishedDialogue VisualNovelPrefab memory_Photo>>
+//(텍스트 위치 변경하였음)
+//- 증거 촬영 시 돌아오는 기억: 배경 바뀌고 어두워짐, 팝업이미지
+//클럽에 있는 지수, 건우를 찾아온 지원. 그 셋을 지켜보고 있는 시점의 사진.
 
-<<if $rand >= 2>>
-책상 위에 뭐가 많네...
-<<else>>
-방금 전까지 누군가 있었던 것 같아.
+???: 둘이 대체 뭘 하고 다니는 거야.
+???: ...
+건우: ...
+???: 제발 정신 좀 차려.
+???: 내가 도와줄게... 응?
+<<StopMemory SceneManager>>
+<<StopAudioAll>>
+
+<<if IsS4() == false>>
+	<<UI_on MenuUI>>
+		<<Scene black_bg>>
+		<<PlayAudio EarSound 0.8>>
+		<<PlayAudio WhiteNoise 0.6>>
+
+		정신을 잃을 것 같다.
+		<<wait 0.5>>
+		조금만 버티자.. 
+
+		<<StopAudioAll>>
+		<<HideAll>>
+		<<UI_off MenuUI>>
+		<<Scene NoBG>>
+<<endif>>
+
+<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
+		<<jump Room101Fin>>
 <<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
-title: OfficetelInside1503
+title: GeonwooCard
 
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+//건우의 명함 - 가짜 증거
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw Phonebooth_namecard_BIG 0.75 0.75>>
+//명함 팝업 이미지
 //지수4
-<<Act 지수 Jisoo4 1.17 0.322 white>>
-설마 마약 만드는 곳인가?
+//<<Act 지수 Jisoo4 1.17 0.322 white>>
+..?
+이건우..?
+번호도 익숙한데.
 ...
-//지수2
-<<UpdateAct 지수 Jisoo2>>
-지원이는 대체 어디 있는 거야...
+...
+<<Hide Phonebooth_namecard_BIG>>
+<<Hide DBG>>
+//<<Hide 지수>>
+<<FinishedObj VisualNovelPrefab GeonwooCard>>
+<<FinishedDialogue VisualNovelPrefab GeonwooCard>>
+<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
+    <<jump Room101Fin>>
+<<endif>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: memory_GeonwooCard
+
+---
+<<FinishedDialogue VisualNovelPrefab memory_GeonwooCard>>
+<<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio MemoryRecall 0.5>>
+//증거 촬영 시 돌아오는 기억: 바뀌고 어두워지는 배경, 팝업이미지x, 건우 왼쪽 지수 오른쪽
+//(건우가 돈을 벌려고 심부름센터 명함을 뿌리고 다녔던 기억)
+//(건우의 명함 이미지 확대)
+
+//건우1
+//<<Act 건우 Geonwoo1 0.322 0.227 white>>
+건우: 명함도 뽑았고!
+건우: 이제 돈 빡세게 벌어야지.
 //지수4
-<<UpdateAct 지수 Jisoo4>>
-단서가 될만한 게 있을까?
-//지수이미지 종료
-<<Hide 지수>>
+//<<Act 지수 Jisoo4 1.17 0.322 white>>
+지수: 왜? 뭐 사려고?
+건우: ..그런 게 있다.
+건우: 너는 알면 안돼, 임마.
+//<<HideAll>>
+<<StopMemory SceneManager>>
+<<StopAudioAll>>
+
+<<if IsS4() == false>>
+	<<UI_on MenuUI>>
+	<<Scene black_bg>>
+	<<PlayAudio EarSound 0.8>>
+	<<PlayAudio WhiteNoise 0.6>>
+
+	눈 앞이 번쩍거려..
+	<<wait 0.5>>
+	토할 것 같아...
+
+	<<StopAudioAll>>
+	<<HideAll>>
+	<<UI_off MenuUI>>
+	<<Scene NoBG>>
+<<endif>>
+
+<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3")==true && CheckDialogue("memory_Photo") == true)>>
+    	<<jump Room101Fin>>
+<<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -900,6 +928,97 @@ title: Ending4_2
 
 ===
 
+title: Room101Fin
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+둘러볼만한 건 다 본 것 같은데.
+일단 15층으로 가보자.
+<<SetCanvasTo VisualNovelPrefab false>>
+<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
+<<jump Officetel15thfloor>>
+
+===
+
+title: Officetel15thfloor
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+//장소 3. 오피스텔 꼭대기, 15층
+<<Draw Door1503 0.75 0.75>>
+//(♫Sound: 엘리베이터 도착음)
+//(♫Sound: 아래층에서 소란스러운 소리가 들려옴+이후 문 닫히는 소리)
+<<PlayAudio ElevatorArrive 0.6>>
+<<PlayAudio ElevatorDoorOpen 0.6>>
+<<PlayAudio Crowded 0.8>>
+//지수2
+<<Act 지수 Jisoo2 1.17 0.322 white>>
+아래층이 시끄럽네.
+무슨 일이 있나?
+...
+1503호...
+
+//지수4
+<<UpdateAct 지수 Jisoo4>>
+어?
+문이 열려있네...
+...
+//지수2
+<<UpdateAct 지수 Jisoo2>>
+안에는 아무도 없는 것 같다.
+들어가보자.
+<<Hide 지수>>
+
+<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
+<<wait 0.5>>
+<<Hide Door1503>>
+<<jump OfficetelInside1503>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: OfficetelInside1503BG
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+//장소 3-1. 오피스텔 꼭대기, 1503호 내부
+//(배경 클릭 시: #책상 위에 뭐가 많네... #방금 전까지 누군가 있었던 것 같아.=> 랜덤 노출)
+
+<<if $rand >= 2>>
+책상 위에 뭐가 많네...
+<<else>>
+방금 전까지 누군가 있었던 것 같아.
+<<endif>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: OfficetelInside1503
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+//지수4
+<<Act 지수 Jisoo4 1.17 0.322 white>>
+설마 마약 만드는 곳인가?
+...
+//지수2
+<<UpdateAct 지수 Jisoo2>>
+지원이는 대체 어디 있는 거야...
+//지수4
+<<UpdateAct 지수 Jisoo4>>
+단서가 될만한 게 있을까?
+//지수이미지 종료
+<<Hide 지수>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+
 title: DrugDrink
 
 ---
@@ -920,88 +1039,18 @@ title: DrugDrink
 
 ===
 
-title: PhotoOf3
-
----
-
-<<if CheckDialogue("GangEvent") == false>>
-	<<jump GangEvent>>
-<<elseif CheckDialogue("PhotoOf3Story") == true>>
-	<<SetCanvasTo VisualNovelPrefab true>>
-	<<DrawFadeIn DBG 0.75 0.75 0.2>>
-	<<Draw PhotoOf3 0.75 0.75>>
-	이미 확인했어. 기억이 잘 나지 않는 사진이다.
-	<<Hide PhotoOf3>>
-	<<Hide DBG>>
-	<<SetCanvasTo VisualNovelPrefab false>>
-<<else>>
-	<<jump PhotoOf3Story>>
-<<endif>>
-
-===
-
-title: PhotoOf3Story
-
+title: Crack
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<FinishedDialogue VisualNovelPrefab PhotoOf3Story>>
-//주요 오브젝트 2. 지원, 지수, 건우가 함께 찍힌 사진 - 최종 추리 증거
-<<DrawFadeIn DBG 0.75 0.75 0.2>>
-<<Draw PhotoOf3 0.75 0.75>>
-
-//지수4
-<<Act 지수 Jisoo4 1.17 0.322 white>>
+//지수2
+<<Act 지수 Jisoo2 1.17 0.322 white>>
 ...
-..뭐지?
-왜 이런 사진이 여기 있는 거야...
-//지수5
-<<UpdateAct 지수 Jisoo5>>
-...
-셋이 저러고 있었던 적이 있나?
-기억이 안나는데...
+광물같이 생겼다.
 <<Hide 지수>>
-<<Hide PhotoOf3>>
-<<Hide DBG>>
-
-<<SetCanvasTo VisualNovelPrefab false>>
-
-===
-
-title: memory_Photo
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio MemoryRecall 0.5>>
-<<FinishedDialogue VisualNovelPrefab memory_Photo>>
-//(텍스트 위치 변경하였음)
-//- 증거 촬영 시 돌아오는 기억: 배경 바뀌고 어두워짐, 팝업이미지
-//클럽에 있는 지수, 건우를 찾아온 지원. 그 셋을 지켜보고 있는 시점의 사진.
-
-???: 둘이 대체 뭘 하고 다니는 거야.
-???: ...
-건우: ...
-???: 제발 정신 좀 차려.
-???: 내가 도와줄게... 응?
-<<StopMemory SceneManager>>
-<<StopAudioAll>>
-
-<<if IsS4() == false>>
-<<UI_on MenuUI>>
-	<<Scene black_bg>>
-	<<PlayAudio EarSound 0.8>>
-	<<PlayAudio WhiteNoise 0.6>>
-
-	정신을 잃을 것 같다.
-	<<wait 0.5>>
-	조금만 버티자.. 
-
-	<<StopAudioAll>>
-	<<HideAll>>
-	<<UI_off MenuUI>>
-	<<Scene NoBG>>
-<<endif>>
+<<PlayAudio WhenChoose 0.5>>
+<color=yellow>* 일기장에 ‘크랙’이 추가되었습니다. *</color>
+<<RevealDiary DiaryManager Page5>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1009,6 +1058,7 @@ title: memory_Photo
 title: R1403Cardkey
 ---
 
+<<FinishedDialogue VisualNovelPrefab R1403Cardkey>>
 <<SetCanvasTo VisualNovelPrefab true>>
 //지수4
 <<Act 지수 Jisoo4 1.17 0.322 white>>
@@ -1027,27 +1077,15 @@ title: R1403Cardkey
 //<<AddToInventory VisualNovelPrefab R1403Cardkey>>
 <<SetActiveFalse VisualNovelPrefab R1403Cardkey>>
 
+<<if (CheckDialogue("R1403Cardkey")==true && CheckDialogue("MemoStory_CaseBoard") == true && CheckDialogue("Memo_VideoTape3")==true)>>
+    <<jump InteractionFinto14>>
+<<endif>>
+
 // 인벤토리에 습득
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
-title: Crack
-
----
-
-<<SetCanvasTo VisualNovelPrefab true>>
-//지수2
-<<Act 지수 Jisoo2 1.17 0.322 white>>
-...
-광물같이 생겼다.
-<<Hide 지수>>
-<<PlayAudio WhenChoose 0.5>>
-<color=yellow>* 일기장에 ‘크랙’이 추가되었습니다. *</color>
-<<RevealDiary DiaryManager Page5>>
-<<SetCanvasTo VisualNovelPrefab false>>
-
-===
 
 title: 1503TV
 
@@ -1235,7 +1273,6 @@ title: escapegame_intro
 //14층 배경
 <<StopAudio Chap3ThemeP2>>
 <<PlayAudio ChooseMinigame 0.8 loop>>
-<<ShowTB VisualNovelPrefab true>>
 <color=yellow>* 오피스텔을 탈출하자! *</color>
 <color=yellow>* 당신의 선택이 중요합니다. *</color>
 <color=yellow>* 조직원에게 들키지 않도록 조심합시다. *</color>
@@ -1253,6 +1290,7 @@ title: escapegame_checkpoint1
 <<InitTB VisualNovelPrefab S3_6_CP1>>
 //14층 배경
 <<Scene Door1403>>
+<<ShowTB VisualNovelPrefab true>>
 <color=blue>* 체크포인트 *</color>
 
 빨리 여기서 나가야 될 것 같아.
@@ -1261,6 +1299,7 @@ title: escapegame_checkpoint1
 -> 엘리베이터 쪽으로 가자
 	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
+	<<ShowTB VisualNovelPrefab false>>
 	<<jump escapegame_elevator>>
 -> 계단으로 가자
 	<<PauseTB VisualNovelPrefab>>
@@ -1299,6 +1338,7 @@ title: escapegame_checkpoint1
 		엘리베이터가 너무 멀다...
 		//[발각]
 		//블랙화면으로 페이드아웃
+		<<ShowTB VisualNovelPrefab false>>
 		<<jump escapegame_checkpoint1>>
 	-> 같은 조직원인 척 하자
 		<<PauseTB VisualNovelPrefab>>
@@ -1307,6 +1347,7 @@ title: escapegame_checkpoint1
 		하필이면 상부 직원에게 걸렸다.
 		//[발각]
 		//블랙화면으로 페이드아웃
+		<<ShowTB VisualNovelPrefab false>>
 		<<jump escapegame_checkpoint1>>
 	-> 옆에 있는 1407호에 들어가보자
 		<<PauseTB VisualNovelPrefab>>
@@ -1321,6 +1362,7 @@ title: escapegame_checkpoint1
 		-> 엘리베이터 쪽으로 가자
 			<<PauseTB VisualNovelPrefab>>
 			<<PlayAudio WhenChoose 0.6>>
+			<<ShowTB VisualNovelPrefab false>>
 			<<jump escapegame_elevator>>
 
 
@@ -1329,17 +1371,18 @@ title: escapegame_checkpoint1
 title: escapegame_elevator
 
 ---
-
+<<InitTB VisualNovelPrefab S3_6_CP1>>
 //복도이미지1 배경
 <<Scene Lobby14F>>
 <<wait  1.0>>
 <<FadeIn>>
 근처에서 누군가의 발소리가 들린다. 어떻게 할까?
-<<InitTB VisualNovelPrefab S3_6_CP1>>
 <<StartTB VisualNovelPrefab>>
+<<ShowTB VisualNovelPrefab true>>
 -> 옆에 보이는 캐비넷에 몸을 숨기자
 	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
+	<<ShowTB VisualNovelPrefab false>>
 	//블랙화면으로 페이드아웃
 	<<Fade Black 0.0 1.0 1.0>>
 	<<wait  1.0>>
@@ -1358,21 +1401,25 @@ title: escapegame_elevator
 	<<PlayAudio WhenChoose 0.6>>
 	<<PlayAudio Run 0.6>>
 	조직원: 너 뭐야!!!
+	<<ShowTB VisualNovelPrefab false>>
 	<<InitTB VisualNovelPrefab S3_6_CP1>>
 	<<StartTB VisualNovelPrefab>>
 	-> 같은 조직원인 척 하자
 		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
+		<<ShowTB VisualNovelPrefab false>>
 		<<Fade Black 0.0 1.0 1.0>>
 		//블랙화면으로 페이드 아웃
 		...
 		하필이면 상부 직원에게 걸렸다.
 		//[발각]
 		//블랙화면으로 페이드아웃
+		<<ShowTB VisualNovelPrefab false>>
 		<<jump escapegame_checkpoint1>>
 	-> 무시하고 뛰어가자
 		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
+		<<ShowTB VisualNovelPrefab false>>
 		//블랙화면으로 페이드 아웃
 		<<Fade Black 0.0 1.0 1.0>>
 		...
@@ -1398,11 +1445,13 @@ title: escapegame_elevator
 		무사히 엘리베이터를 탔다.
 		//엘리베이터 이미지
 		//<<jump escapegame_checkpoint2>>
+		<<ShowTB VisualNovelPrefab false>>
 		<<ChangeSceneTo VisualNovelPrefab S3_6_CP2>>
 	-> 엘리베이터까지 빠르게 뛰어가자
 		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		<<PlayAudio Run 0.6>>
+		<<ShowTB VisualNovelPrefab false>>
 		//블랙화면으로 페이드아웃
 		<<Fade Black 0.0 1.0 1.0>>
 		...
@@ -1418,7 +1467,7 @@ title: escapegame_elevator
 title: escapegame_checkpoint2
 
 ---
-
+<<InitTB VisualNovelPrefab S3_6_CP2>>
 <<Scene Elevator>>
 <<FadeIn>>
 //엘리베이터 이미지 배경 페이드인
@@ -1444,11 +1493,11 @@ title: escapegame_checkpoint2
 title: escapegame_stopelevator
 
 ---
-
+<<InitTB VisualNovelPrefab S3_6_CP2>>
 //엘리베이터 이미지 배경
 <<Scene Elevator>>
-<<InitTB VisualNovelPrefab S3_6_CP2>>
 <<StartTB VisualNovelPrefab>>
+<<ShowTB VisualNovelPrefab true>>
 -> 비상버튼을 눌러보자
 	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
@@ -1456,6 +1505,7 @@ title: escapegame_stopelevator
 	...	
 	...
 	아무런 반응이 없다.
+	<<ShowTB VisualNovelPrefab false>>
 	<<jump escapegame_stopelevator>>
 -> 문을 힘으로 열어보자
 	<<PauseTB VisualNovelPrefab>>
@@ -1469,6 +1519,7 @@ title: escapegame_stopelevator
 	지원이부터 위로 올려줘야지...
 	지원: ...
 	..됐다. 이제 올라가볼까?
+	<<ShowTB VisualNovelPrefab false>>
 	//블랙화면으로 페이드 아웃
 	<<Fade Black 0.0 1.0 1.0>>
 	<<wait  1.0>>
@@ -1477,7 +1528,7 @@ title: escapegame_stopelevator
 	...
 	//[지원이가 다시 끌려감]
 	//블랙화면으로 페이드아웃
-	<<Fade Black 0.0 1.0 1.0>>
+	//<<Fade Black 0.0 1.0 1.0>>
 	<<wait  1.0>>
 	<<jump escapegame_checkpoint2>>
 -> 열림 버튼을 눌러보자
@@ -1503,6 +1554,7 @@ title: escapegame_stopelevator
 	...
 	<<wait 2.0>>
 	엘리베이터가 고장난 것 같다. 어떡하지?
+	<<ShowTB VisualNovelPrefab false>>
 	<<jump escapegame_brokenelevator>>
 
 
@@ -1514,6 +1566,7 @@ title: escapegame_brokenelevator
 
 <<InitTB VisualNovelPrefab S3_6_CP2>>
 <<StartTB VisualNovelPrefab>>
+<<ShowTB VisualNovelPrefab true>>
 -> 1층 버튼을 눌러보자
 	<<PauseTB VisualNovelPrefab>>
 	<<PlayAudio WhenChoose 0.6>>
@@ -1532,6 +1585,7 @@ title: escapegame_brokenelevator
 	<<PlayAudio ElevatorSlower 0.6>>
 	이제 1층이다..!
 	...
+	<<ShowTB VisualNovelPrefab false>>
 	//블랙화면으로 페이드아웃
 	<<Fade Black 0.0 1.0 1.0>>
 	<<wait  1.0>>
@@ -1549,6 +1603,7 @@ title: escapegame_brokenelevator
 	계속해서 2층 버튼을 눌러도 반응이 없다.
 	...
 	여기서 시간을 지체하면 안될 것 같아.
+	<<ShowTB VisualNovelPrefab false>>
 	<<jump escapegame_brokenelevator>>
 -> 밖으로 나가본다
 	<<PauseTB VisualNovelPrefab>>
@@ -1573,6 +1628,7 @@ title: escapegame_brokenelevator
 		<<PauseTB VisualNovelPrefab>>
 		<<PlayAudio WhenChoose 0.6>>
 		//<<jump escapegame_checkpoint3>>
+		<<ShowTB VisualNovelPrefab false>>
 		<<ChangeSceneTo VisualNovelPrefab S3_6_CP3>>
 	-> 정문과 가까운 중앙계단
 		<<PauseTB VisualNovelPrefab>>
@@ -1589,6 +1645,7 @@ title: escapegame_brokenelevator
 		그 때, 근처에서 발소리가 들렸다.
 		지원이를 부축하며 열심히 발걸음을 옮겼다.
 		//블랙화면으로 페이드아웃
+		<<ShowTB VisualNovelPrefab false>>
 		<<Fade Black 0.0 1.0 1.0>>
 		<<wait  1.0>>
 		...
@@ -1609,7 +1666,7 @@ title: escapegame_brokenelevator
 title: escapegame_checkpoint3
 
 ---
-
+<<InitTB VisualNovelPrefab S3_6_CP3>>
 <<Scene Lobby3F>>
 <color=blue>* 체크포인트 *</color>
 1층에는 이미 조직원들이 대기하고 있을 거야.
@@ -1638,6 +1695,7 @@ title: escapegame_checkpoint3
 이미 조직원이 1층에 깔려있는 것 같은데... 어떡하지?
 <<InitTB VisualNovelPrefab S3_6_CP3>>
 <<StartTB VisualNovelPrefab>>
+<<ShowTB VisualNovelPrefab true>>
 -> 주변에 뭐가 있는지 살펴보자
 	<<PauseTB VisualNovelPrefab>>
 	어디 보자, 주변에 쓸만한 게...
@@ -1656,6 +1714,7 @@ title: escapegame_checkpoint3
 		지수: ...
 		지수: 알겠어.
 		...
+		<<ShowTB VisualNovelPrefab false>>
 		//블랙화면으로 페이드아웃
 		<<Fade Black 0.0 1.0 1.0>>
 		<<wait  1.0>>
@@ -1689,6 +1748,7 @@ title: escapegame_checkpoint3
 		..지금이다.
 		//블랙화면으로 페이드아웃
 		...
+		<<ShowTB VisualNovelPrefab false>>
 		<<Fade Black 0.0 1.0 1.0>>
 		<<wait  1.0>>
 		문 손잡이를 잡은 순간, 누군가의 목소리가 들렸다.
@@ -1720,6 +1780,7 @@ title: escapegame_checkpoint3
 		지원: 조심해...
 		//블랙화면으로 페이드아웃
 		...
+		<<ShowTB VisualNovelPrefab false>>
 		<<Fade Black 0.0 1.0 1.0>>
 		<<wait  1.0>>
 		2층 중앙계단 근처로 향했다. 
@@ -1744,7 +1805,7 @@ title: escapegame_checkpoint3
 		//블랙화면 페이드 아웃
 		<<Fade Black 0.0 1.0 1.0>>
 		//1층 배경 페이드인
-		<<Scene OpistalEntrance>>
+		<<Scene OpistallEntrance_bg>>
 		<<wait  1.0>>
 		<<FadeIn>>
 		다행히 1층에는 아무도 없었다.
@@ -1769,6 +1830,7 @@ title: escapegame_checkpoint3
 		지수: 얼른 가.
 		지원: ...
 		지원: 알았어.
+		<<ShowTB VisualNovelPrefab false>>
 		//블랙화면으로 페이드 아웃
 		<<Fade Black 0.0 1.0 1.0>>
 		<<wait  1.0>>
@@ -1909,8 +1971,13 @@ title:BacktoOfficetel1stFloor
 <<Hide WhiteBG>>
 <<StopAudioAll>>
 //<<SetCanvasTo VisualNovelPrefab false>>
+//Test 후 S4 씬 변경 주석만 삭제 (<<ChangeSceneTo VisualNovelPrefab S4>>)
 <<ChangeSceneTo VisualNovelPrefab S4>>
 //<<jump lastevent_intro>>
+
+//TEST용
+//<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 

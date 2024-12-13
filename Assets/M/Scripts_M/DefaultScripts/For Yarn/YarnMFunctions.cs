@@ -6,6 +6,7 @@ using Yarn.Unity;
 
 public class YarnMFunctions : MonoBehaviour
 {
+
     [YarnCommand("ChangeSceneTo")]
     public void ChangeSceneTo(string sceneName1, string sceneName2 = "")
     {
