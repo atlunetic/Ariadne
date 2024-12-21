@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueTitle: 
+  DialogueTitle: future_coke
 --- !u!1 &1757525227
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueTitle: 
+  DialogueTitle: future_students
 --- !u!61 &1757525231
 BoxCollider2D:
   m_ObjectHideFlags: 0

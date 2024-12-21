@@ -3183,6 +3183,7 @@ title: obj_keyStory
 //인벤토리에 열쇠 아이템이 추가됨.
 //<<SetActiveFalse VisualNovelPrefab InStaffroom_Key>>
 //<<FinishedObj VisualNovelPrefab InStaffroom_Key>>
+<<AddToInventory VisualNovelPrefab Key>>
 <<FinishedDialogue VisualNovelPrefab obj_keyStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<IfDone_getout MenuUI>>
@@ -3631,6 +3632,7 @@ title: GeonwooNote
 
 건우: 지수야, 잠깐만 얘기좀 하자.
 //지수를 VIP ROOM 문 앞으로 데려감.
+//검정 배경경
 상황을 채 파악하기도 전에, 건우 오빠에 의해 밖으로 끌려나갔다.
 건우: 너 대체 뭐하고 다니는 거야?
 건우: 이 옷은 대체 어디서 났냐? 미치겠다.
@@ -3669,11 +3671,12 @@ title: AfterNote0
 <<SetCanvasTo VisualNovelPrefab	true>>
 <<DeleteItem Inventory memo_note>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
-<<Draw jjogji_big2 0.75 0.75>>
-어…. 이건 뭐지?
+<<Draw jjogji_big 0.75 0.75>>
 건우 오빠가 왜 이런 걸…
 일단 메모장에 기록해두자.
 <<FindMemo MemoController memo_zzokji>>
+<<HideAll>>
+<<jump AfterNote>>
 <<SetCanvasTo VisualNovelPrefab	false>>
 
 ===
@@ -3689,36 +3692,12 @@ title: AfterNote
 아리아드네가 이걸...? 정말 지켜보고 있는 건가?
 ...혼란스럽다.
 하지만 지금은 달리 뭘 해야 할지 모르겠어.
-//...가족에 대해 물어보자.
 <<Hide DBG>>
 <<Hide jjogji_big2>>
-//(이후에 클럽 고객G에게 바로 말건다)
-//지수: 아까 가족분들이 다정하다고 하셨는데….
-//지수: 가족분들이랑은 요즘 어떠세요?
- 
-//클럽 고객G가 침울한 표정을 지었다.
-//이내 아무렇지 않은 듯 웃으며 휴대폰을 내밀었다.
-
-<<jump obj_customerg_choose_ariadne>>
-//<<SetCanvasTo VisualNovelPrefab	false>>
+<<jump chocotalk_ariadne_customerg>>
+<<SetCanvasTo VisualNovelPrefab	false>>
 ===
 
-title: obj_customerg_choose_ariadne
-
----
-
-//휴대폰 진동과 함께 알림이 온다.
-<<PlayAudio PhoneAlarm>>
-<<UpdateAct 지수 CoJIsoo2>>
-어... 아리아드네다.
-확인해볼까?
-<<Hide 클럽고객G>>
-<<AriadneHintOff PhoneController>>
-<<StartPhoneChat PhoneController 24>>
-//<<SetCanvasTo VisualNovelPrefab false>>
-
-
-===
 
 title: chocotalk_ariadne_customerg
 
@@ -3726,9 +3705,7 @@ title: chocotalk_ariadne_customerg
 
 <<AriadneHintOn PhoneController>>
 <<UI_off MenuUI>>
-//초코톡에서 아리아드네의 톡 확인 후
-//...
-//-> 가족에 대해 물어보자
+...
 그래...
 가족에 대해 물어보자.
 <<Act 지수 CoJIsoo3 1.17 0.322 white>>
@@ -4521,6 +4498,22 @@ title: WrongClothes
 
 <<SetCanvasTo VisualNovelPrefab true>>
 지금 입으면 눈에 띌 것 같아...
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: testInventory
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+인벤토리 테스트
+<<AddToInventory VisualNovelPrefab Bracelet>>
+<<AddToInventory VisualNovelPrefab Cup>>
+<<AddToInventory VisualNovelPrefab WaterCup>>
+<<AddToInventory VisualNovelPrefab DrugJelly>>
+<<AddToInventory VisualNovelPrefab R1403Cardkey>>
+<<AddToInventory VisualNovelPrefab Key>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
