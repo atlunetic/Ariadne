@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/* 증거 촬영시 나오는 배경들(각 씬의 Canvas_ForMemories에 존재)과 이미지 그룹(GalleryController에 존재)에 붙여주면 됨 */
 public class FadeIn : MonoBehaviour
 {
     private Image image;
@@ -20,7 +21,7 @@ public class FadeIn : MonoBehaviour
         if(image == null) StartCoroutine("GroupFadeIn");
         else {
             image.canvasRenderer.SetAlpha(0.0f);
-            image.CrossFadeAlpha(1.0f, 0.6f, false);
+            image.CrossFadeAlpha(1.0f, 0.8f, false);
         }
     }
     IEnumerator GroupFadeIn()
@@ -28,7 +29,7 @@ public class FadeIn : MonoBehaviour
         imageGroup.alpha = 0f;
         while (imageGroup.alpha < 1)
         {
-            imageGroup.alpha += Time.deltaTime / 0.8f;
+            imageGroup.alpha += Time.deltaTime / 0.9f;
             yield return null;
         }
     }

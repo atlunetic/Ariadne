@@ -42,7 +42,7 @@ title: LeftPath
 
 ---
 
-<<Scene Leftpath>>
+<<Scene LeftPath>>
 왼쪽에 길이 나있다.
 
 <<PlayAudio MonsterSound1 0.7>>
@@ -114,7 +114,7 @@ title: Minotaur
 ---
 //(Chapter 1) 앞으로 가보자. 선택시
 <<PlayAudio MonsterSound2 0.7>>
-<<Scene Ceiling>>
+<<Scene Ceiling1>>
 저게 말로만 듣던 미노타우르스...
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
 검을 쥔 손에 힘이 들어가지 않아.
@@ -123,6 +123,7 @@ title: Minotaur
 <<wait 1.0>>
 
 녀석이 서서히 내게 다가온다.
+<<DrawFadeIn Ceiling2 0.75 0.75 2>>
 <<DrawFadeIn Hand 0.75 0.75 2>>
 이대로 잡아먹히는걸까.
 <<wait 1.0>>
@@ -130,6 +131,7 @@ title: Minotaur
 <<Fade black 0.0 1.0 2.0>>
 <<wait 2.5>>
 <<Hide Hand>>
+<<Hide Ceiling2>>
 
 <<wait 1.0>>
 <<StopAudioAll>>
@@ -476,6 +478,9 @@ title: FoundJiwonPhone
 <<wait 0.5>>
 <color=yellow>* 휴대폰 설정을 통해 진행상황을 저장할 수 있습니다. *</color>
 
+
+//실팔찌 추가
+<<AddToInventory VisualNovelPrefab Bracelet>>
 <<UI_on MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -547,22 +552,46 @@ title: Map_1
 
 ===
 
+title: BackHome
+
+---
+<<SetCanvasTo VisualNovelPrefab true>>
+
+집으로 돌아갈까?
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+
 title: Park
 
 ---
 
 // 장소 1. 동네 공원
 
-<<SetCanvasTo VisualNovelPrefab true>>
-동네 공원이다.
-지원이랑 가끔 산책하러 갔었지...
-동네 공원으로 가볼까?
-    -> 가보자
-        <<GoPark MapController>>
-        <<SetCanvasTo VisualNovelPrefab false>>
-    -> 가지말자
-        다른 곳으로 가자...
-        <<SetCanvasTo VisualNovelPrefab false>>
+<<if CheckDialogue("Park")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    공원에 다시 가볼까?
+        -> 가보자.
+            <<GoPark MapController>>
+            <<SetCanvasTo VisualNovelPrefab false>>
+        -> 가지 말자.
+            다른 곳으로 가자...
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    동네 공원이다.
+    지원이랑 가끔 산책하러 갔었지...
+    동네 공원으로 가볼까?
+        -> 가보자
+            <<GoPark MapController>>
+            <<FinishedDialogue VisualNovelPrefab Park>>
+            <<SetCanvasTo VisualNovelPrefab false>>
+        -> 가지말자
+            다른 곳으로 가자...
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
 
 ===
 
@@ -587,6 +616,22 @@ title: ParkDefault
 title: Newspaper
 
 ---
+<<if CheckDialogue("NewspaperStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump NewspaperStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump NewspaperStory>>
+<<endif>>
+
+===
+
+title: NewspaperStory
+
+---
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
@@ -602,6 +647,7 @@ title: Newspaper
 * 금단현상으로는 우울증과 무기력증이 있다. *
 <<Hide Park_News>>
 <<Hide DBG>>
+<<FinishedDialogue VisualNovelPrefab NewspaperStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -614,6 +660,23 @@ title: ParkStudents
 //동네 공원으로 이동 시
 //동네 학생들의 대화 - 다이어트 약
 //동네 학생들 NPC 무리를 클릭할 경우
+
+<<if CheckDialogue("ParkStudentsStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump ParkStudentsStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump ParkStudentsStory>>
+<<endif>>
+
+===
+
+title: ParkStudentsStory
+
+---
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
@@ -632,6 +695,7 @@ title: ParkStudents
 학생 A: 그런가...
 
 <<SetCanvasTo VisualNovelPrefab false>>
+<<FinishedDialogue VisualNovelPrefab ParkStudentsStory>>
 
 ===
 
@@ -640,6 +704,23 @@ title: VendingMachine
 ---
 
 //자판기 클릭 시
+
+<<if CheckDialogue("VendingMachineStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump VendingMachineStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump VendingMachineStory>>
+<<endif>>
+
+===
+
+title: VendingMachineStory
+
+---
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo1 1.17 0.322 white>>
@@ -652,6 +733,7 @@ title: VendingMachine
 <<UpdateAct 지수 Jisoo2>>
 밥은 먹었으려나.
 <<Hide 지수>>
+<<FinishedDialogue VisualNovelPrefab VendingMachineStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -686,16 +768,29 @@ title: Barstreet
 
 ---
 
-<<SetCanvasTo VisualNovelPrefab true>>
+
+<<if CheckDialogue("Barstreet")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    술집 거리에 다시 가볼까?
+        -> 가보자.
+            <<GoBarStreet MapController>>
+            <<SetCanvasTo VisualNovelPrefab false>>
+        -> 가지 말자.
+            다른 곳으로 가자...
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<SetCanvasTo VisualNovelPrefab true>>
 예전에 자주 갔던 곳인데.
 지원이도 한 번 데려가긴 했었지.
 술집 거리로 가볼까?
     -> 가보자
         <<GoBarStreet MapController>>
+        <<FinishedDialogue VisualNovelPrefab BarStreet>>
         <<SetCanvasTo VisualNovelPrefab false>>
     -> 가지말자
         다른 곳으로 가자...
         <<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
 
 ===
 
@@ -720,6 +815,23 @@ title: Weedhof
 
 ---
 
+<<if CheckDialogue("WeedHofStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump WeedHofStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump WeedHofStory>>
+<<endif>>
+
+===
+
+title: WeedHofStory
+
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
 //<<Act 지수 Jisoo2 1.17 0.322 white>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
@@ -729,6 +841,7 @@ title: Weedhof
 
 <<HideAll>>
 
+<<FinishedDialogue VisualNovelPrefab WeedHofStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -736,6 +849,24 @@ title: Weedhof
 title: Drugsnacks
 
 ---
+
+<<if CheckDialogue("DrugsnacksStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump DrugsnacksStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump DrugsnacksStory>>
+<<endif>>
+
+===
+
+title: DrugsnacksStory
+
+---
+
 
 // 마약떡볶이&마약김밥
 <<SetCanvasTo VisualNovelPrefab true>>
@@ -749,6 +880,7 @@ title: Drugsnacks
 중독적이라는 걸 굳이 마약이라는 단어로 표현해야 하나?
 
 <<HideAll>>
+<<FinishedDialogue VisualNovelPrefab DrugsnacksStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -777,23 +909,40 @@ title: HospitalWaitingRoom
 
 ---
 
+<<if CheckDialogue("HospitalWaitingRoom") == false>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    병원에 사람이 많다.
+    언제쯤 들어갈 수 있으려나.
+    ...
+    <<FinishedDialogue VisualNovelPrefab HospitalWaitingRoom>>
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    //기획팀 컨펌 부탁
+    아직도 병원에 사람이 많네.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<endif>>
+
+===
+
+title: DoctorsRoom
+
+---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-병원에 사람이 많다.
-언제쯤 들어갈 수 있으려나.
-...
+<<FinishedDialogue VisualNovelPrefab DoctorsRoom>>
+<<wait 1.5>>
 <<PlayAudio HospitalAlert 0.3>>
 <i>'김지수님, 1번 진료실로 들어오세요.'
 
-<<Scene H_DrRoom>>
-
+<<ChangeSceneTo VisualNovelPrefab S1_Hospital2>>
+<<UI_on MenuUI>>
+<<wait 1.0>>
 <<Act 의사 NPC_Doctor 0.322 0.327 white>>
 <<Act 지수 Jisoo1 1.17 0.322 white>>
 의사: 좀 어떠셨어요.
-
 지수: 여전하네요. 약이 다 떨어져가서 왔어요.
 의사: 일에 집중하시는 데 어려움은 없으셨나요?
-
 <<UpdateAct 지수 Jisoo2>>
 지수: ...
 지수: 병원에 매번 오기도 귀찮은데.
@@ -819,18 +968,27 @@ title: HospitalWaitingRoom
                 어쩔 수 없지. 돌아가자.
                     // 씬 변경: 지도
                     <<HideAll>>
-                    <<Scene NoBG>>
+                    <<Fade black 0.0 1.0 2.0>>
+                    <<wait 3.0>>
+                    <<ChangeSceneTo VisualNovelPrefab S1_Hospital>>
+                    <<wait 2.0>>
+                    <<FadeIn 1.0>>
                     <<SetCanvasTo VisualNovelPrefab false>>
+                    <<UI_off MenuUI>>
             -> 아 맞다. 그랬었지.
                 지수: 아... 그랬죠. 참.
                 지수: 알겠습니다.
                 의사: 네. 다음에 뵙죠.
-
-                병원을 나섰다.
+                //병원을 나섰다.
                 //씬 변경: 지도
                 <<HideAll>>
-                <<Scene NoBG>>
+                <<Fade black 0.0 1.0 2.0>>
+                <<wait 3.0>>
+                <<ChangeSceneTo VisualNovelPrefab S1_Hospital>>
+                <<wait 2.0>>
+                <<FadeIn 1.0>>
                 <<SetCanvasTo VisualNovelPrefab false>>
+                <<UI_off MenuUI>>
 
 
 
@@ -846,7 +1004,7 @@ title: Officetel
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
-뭔가 번쩍번쩍한 오피스텔이네.
+오피스텔이다.
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1031,7 +1189,7 @@ title: CheckAlert
 
 
 
-//JIWON ROOM
+//JIWON ROOM (지원의 방 아이템)
 
 
 
@@ -1041,6 +1199,21 @@ title: Diary1
 
 <<SetCanvasTo VisualNovelPrefab true>>
 
+<<if CheckDialogue("Diary1Story")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    이미 일기장은 챙겼다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump Diary1Story>>
+<<endif>>
+
+===
+
+title: Diary1Story
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Diary 0.75 0.75>>
 이게 뭐지...?
@@ -1055,8 +1228,9 @@ title: Diary1
 
 <<Hide Diary>>
 <<Hide DBG>>
-<<SetActiveFalse VisualNovelPrefab Books_Diary>>
+//<<SetActiveFalse VisualNovelPrefab Books_Diary>>
 <<FinishedObj VisualNovelPrefab Books_Diary>>
+<<FinishedDialogue VisualNovelPrefab Diary1Story>>
 <<ActiveD MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -1064,6 +1238,23 @@ title: Diary1
 ===
 
 title: LaptopStory
+
+---
+
+<<if CheckDialogue("LaptopStory2")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump LaptopStory2>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump LaptopStory2>>
+<<endif>>
+
+===
+
+title: LaptopStory2
 
 ---
 
@@ -1092,6 +1283,7 @@ title: LaptopStory
 감기약 먹방이라니...
 위험한 생각 하고 있는 거 아니야...?
 <<Hide 지수>>
+<<FinishedDialogue VisualNovelPrefab LaptopStory2>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1133,6 +1325,23 @@ title: Drawer_News
 
 ---
 
+<<if CheckDialogue("Drawer_NewsStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump Drawer_NewsStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump Drawer_NewsStory>>
+<<endif>>
+
+===
+
+title: Drawer_NewsStory
+---
+
+
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Jiwonroom_News 0.75 0.75>>
@@ -1141,12 +1350,27 @@ title: Drawer_News
 
 <<Hide Jiwonroom_News>>
 <<Hide DBG>>
+<<FinishedDialogue VisualNovelPrefab Drawer_NewsStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
 
 title: JW_Wallet
+
+---
+
+<<if CheckDialogue("JW_WalletStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    이미 여기서 지갑을 챙겼어. 더 이상 볼 건 없는 것 같아.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump JW_WalletStory>>
+<<endif>>
+
+===
+
+title: JW_WalletStory
 
 ---
 
@@ -1163,17 +1387,37 @@ title: JW_Wallet
 <<Hide 지수>>
 
 <color=yellow>* '지원의 지갑'을 습득했다. *</color>
+<<AddToInventory VisualNovelPrefab Wallet>>
 
 
-<<SetActiveFalse VisualNovelPrefab DrawerR_Wallet>>
+//<<SetActiveFalse VisualNovelPrefab DrawerR_Wallet>>
 <<FinishedObj VisualNovelPrefab DrawerR_Wallet>>
+<<FinishedDialogue VisualNovelPrefab JW_WalletStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
-title: JW_Meds
+title: Meds
 
 ---
+
+<<if CheckDialogue("MedsStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    아까 봤던 건데. 다시 살펴볼까?
+        -> 살펴보자.
+            <<jump MedsStory>>
+        -> 관두자.
+            <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MedsStory>>
+<<endif>>
+
+===
+
+title: MedsStory
+
+---
+
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
@@ -1190,8 +1434,17 @@ title: JW_Meds
 나한테 말도 안하고. 대체 무슨 일이 있는 거야.
 
 <<Hide 지수>>
-
+<<FinishedDialogue VisualNovelPrefab MedsStory>>
+<<FinishedObj VisualNovelPrefab Meds>>
 <<SetCanvasTo VisualNovelPrefab false>>
+
+<<if CheckDialogue("DoctorsRoom")==false>>
+    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("MemoStory_Letter") == true && CheckDialogue("memory_Meds") == true)>>
+        <<jump DoctorsRoom>>
+    <<endif>>
+<<endif>>
+
+
 
 ===
 
@@ -1199,7 +1452,7 @@ title: memory_Meds
 
 ---
 
-
+<<FinishedDialogue VisualNovelPrefab memory_Meds>>
 <<SetCanvasTo VisualNovelPrefab true>>
 <<PlayAudio MemoryRecall 0.5>>
 //(토하는 지수 연출)
@@ -1234,11 +1487,35 @@ title: memory_Meds
     <<UI_off MenuUI>>
     <<Scene NoBG>>
 <<endif>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
+
+<<if CheckDialogue("DoctorsRoom")==false>>
+    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("memory_Meds") == true && CheckDialogue("MemoStory_Letter") == true)>>
+        <<jump DoctorsRoom>>
+    <<endif>>
+<<endif>>
+
+
+
 
 ===
 
-title:JW_Hairpin
+title:Hairpin
+
+---
+
+<<if CheckDialogue("HairpinStory")==true>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    이미 헤어핀을 챙겼어. 다른 곳을 살펴보자.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump HairpinStory>>
+<<endif>>
+
+===
+
+title: HairpinStory
 
 ---
 
@@ -1248,15 +1525,15 @@ title:JW_Hairpin
 
 헤어핀이다.
 혹시 모르니 하나 챙겨둘까?
-
 <<Hide Hairpin(E)_0>>
 <<Hide DBG>>
 <color=yellow>* '헤어핀'을 습득했다. *</color>
 
-<<SetActiveFalse VisualNovelPrefab Drawer_Hairpin>>
-<<FinishedObj VisualNovelPrefab Drawer_Hairpin>>
-
+<<SetActiveFalse VisualNovelPrefab 6Hairpin>>
+<<FinishedObj VisualNovelPrefab 6Hairpin>>
+<<FinishedDialogue VisualNovelPrefab 6HairPin>>
 <<SetCanvasTo VisualNovelPrefab false>>
+
 
 ===
 

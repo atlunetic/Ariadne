@@ -1,0 +1,92 @@
+{
+  "savetime": "2024-11-25 23:28:10 오후",
+  "IsLoad": true,
+  "NowScene": "S1_Hospital",
+  "NumOfScreenShots": 1,
+  "GeonWooScore": 0,
+  "SaengSoo": 0,
+  "ChattingLog": [
+    19,
+    18,
+    25,
+    0
+  ],
+  "PhotoList": [
+    "Laptop28",
+    "Meds10"
+  ],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Hairpin"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "Wallet"
+    }
+  ],
+  "FindedObjects": [
+    "Letter",
+    "6Hairpin",
+    "DrawerR_Wallet",
+    "Books_Diary",
+    "3Drug"
+  ],
+  "FindedClues": [
+    "Laptop",
+    "Meds"
+  ],
+  "FinishedDialogues": [
+    "DGram1st",
+    "Gallery",
+    "Chocotalk1st",
+    "Map_1",
+    "Camera",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsJiwon",
+    "Hospital",
+    "HospitalWaitingRoom",
+    "memory_Meds",
+    "MemoStory_Letter",
+    "Barstreet",
+    "BarStreet",
+    "MemoStory_Phone",
+    "Park",
+    "6HairPin",
+    "JW_WalletStory",
+    "MemoStory_Book",
+    "Diary1Story",
+    "DiaryTutorial"
+  ],
+  "GottenPage": [
+    "Page4"
+  ],
+  "RecommendedFriends": [],
+  "visited": 7,
+  "IsAriadneHintOn": false,
+  "S1HintList": [
+    "Laptop",
+    "Meds",
+    "Letter",
+    "6Hairpin",
+    "DrawerR_Wallet",
+    "ChooseChatName1",
+    "Books_Diary",
+    "visitPark",
+    "visitBarStreet",
+    "visitHospital"
+  ],
+  "S2HintList": [
+    "ClubTable_Geonwoo",
+    "Toilet_costomerF",
+    "ToiletPaper"
+  ],
+  "StaffroomHintList": [
+    "VIPlist",
+    "InStaffroom_VIPlist",
+    "InStaffroom_cctv",
+    "InStaffroom_Key",
+    "InStaffroom_Radio"
+  ],
+  "FindedMemoList": []
+}

@@ -12,6 +12,7 @@ public class AriadneHint : MonoBehaviour
 
     [SerializeField]
     RectTransform viewport;
+    [SerializeField]
     GameObject Hint;
     Button HintButton;
     
@@ -22,7 +23,6 @@ public class AriadneHint : MonoBehaviour
             instance = this;
     }
     void Start(){
-        Hint = this.gameObject;
         HintButton = Hint.GetComponent<Button>();
         HintButton.onClick.AddListener(giveHint);
         if(GameManager.instance.IsAriadneHintOn) On();
@@ -100,13 +100,13 @@ public class AriadneHint : MonoBehaviour
     }
 
     void check(List<string> HintList){  // 힌트 리스트를 게임 진행 상황과 동기화
-        if(GameManager.instance.FindedObjects.Contains("ClubTable_Geonwoo")){
-            if(!GameManager.instance.FindedObjects.Contains("InStaffroom_Key") && !GameManager.instance.ChattingLog.Contains(50) && !HintList.Contains("GoStaffroom"))
+        if(GameManager.instance.FinishedDialogues.Contains("event_gunwoo_begin")){
+            if(GameManager.instance.NowScene!="S2_4_1_StaffRoom" && !GameManager.instance.FinishedDialogues.Contains("obj_keyStory") && !GameManager.instance.ChattingLog.Contains(50) && !HintList.Contains("GoStaffroom"))
                 HintList.Add("GoStaffroom");
-            if(!GameManager.instance.FindedClues.Contains("StudentID") && !GameManager.instance.ChattingLog.Contains(51) && !HintList.Contains("StudentID"))
+            if(GameManager.instance.NowScene!="S2_4_1_StaffRoom" && !GameManager.instance.FindedClues.Contains("StudentID") && !GameManager.instance.ChattingLog.Contains(51) && !HintList.Contains("StudentID"))
                 HintList.Add("StudentID");
         }
-        if(GameManager.instance.FindedObjects.Contains("InStaffroom_Key") && !GameManager.instance.FindedObjects.Contains("Locker") && !GameManager.instance.ChattingLog.Contains(60) && !HintList.Contains("Locker"))
+        if(GameManager.instance.NowScene!="S2_4_1_StaffRoom" && GameManager.instance.FinishedDialogues.Contains("obj_keyStory") && !GameManager.instance.FinishedDialogues.Contains("lockeropened") && !GameManager.instance.ChattingLog.Contains(60) && !HintList.Contains("Locker"))
             HintList.Add("Locker");
             
         for(int i = HintList.Count - 1; i >= 0; i--){
@@ -121,13 +121,12 @@ public class AriadneHint : MonoBehaviour
                     if(GameManager.instance.FindedClues.Contains(hint))
                         HintList.Remove(hint);
                     break;
-                case "Drawer_Hairpin":
+                case "6Hairpin":
                 case "DrawerR_Wallet":
                 case "Books_Diary":
                 case "Toilet_costomerF":
                 case "InStaffroom_VIPlist":
                 case "InStaffroom_cctv":
-                case "InStaffroom_Key":
                 case "InStaffroom_Radio":
                 case "ClubTable_Geonwoo":
                 case "Locker":
@@ -135,6 +134,7 @@ public class AriadneHint : MonoBehaviour
                         HintList.Remove(hint);
                     break;
                 case "ChooseChatName1":
+                case "obj_keyStory":
                     if(GameManager.instance.FinishedDialogues.Contains(hint))
                         HintList.Remove(hint);
                     break;
@@ -166,7 +166,7 @@ public class AriadneHint : MonoBehaviour
             case "Laptop": return 35;
             case "Meds": return 36;
             case "Letter": return 37;
-            case "Drawer_Hairpin": return 38;
+            case "6Hairpin": return 38;
             case "DrawerR_Wallet": return 39;
             case "Books_Diary": return 41;
             case "ChooseChatName1": return 40;

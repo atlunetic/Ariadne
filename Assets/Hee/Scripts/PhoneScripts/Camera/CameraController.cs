@@ -78,18 +78,18 @@ public class CameraController : MonoBehaviour
     }
 
     public void SaveScreenShot(){
-        int num = GameManager.instance.NumOfScreenShots++;
+        int i = GameManager.instance.NumOfScreenShots++;
 
         if (Directory.Exists(FolderPath) == false){
             Directory.CreateDirectory(FolderPath);
         }
 
-        string filename = "ScreenShot_" + num.ToString();
-        TotalPath = string.Copy(FolderPath) + filename;
-        File.WriteAllBytes(TotalPath, PNGbuffer);
+        TotalPath = string.Copy(FolderPath) + "ScreenShot_";
+        while (File.Exists(TotalPath + i.ToString())) i++;
+        File.WriteAllBytes(TotalPath + i.ToString(), PNGbuffer);
             
-        GalleryController.instance.PrintToGallery(filename);
-        GameManager.instance.PhotoList.Add(filename);
+        GalleryController.instance.PrintToGallery("ScreenShot_" + i.ToString());
+        GameManager.instance.PhotoList.Add("ScreenShot_" + i.ToString());
         closePopUP();
     }
 

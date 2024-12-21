@@ -25,6 +25,8 @@ public class ActionPanelButtons : MonoBehaviour
         item connectedItem = currentSlot.Item;
         Inventory.instance.UseItem(connectedItem.itemName);
         Debug.Log(connectedItem.itemName + " is currently being used");
+        //close inventory after clicking use
+        Menu.instance.UI_off();
 
 
 
@@ -48,8 +50,12 @@ public class ActionPanelButtons : MonoBehaviour
 
         else if (currentscene.name.StartsWith("S2"))
         {
+            if (connectedItem.itemName == "memo_note")
+            {
+                runner.StartDialogue("AfterNote");
+            }
 
-             if (currentscene.name == "S2_7_Stairs")
+            if (currentscene.name == "S2_7_Stairs")
             {
                 if (connectedItem.itemName == "DrugJelly")
                 {

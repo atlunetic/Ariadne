@@ -1,0 +1,407 @@
+﻿//메모장 오브젝트 상호작용 다이얼로그 모음
+
+
+
+
+title: Memo_Tutorial
+---
+<<SetActiveFalse VisualNovelPrefab true>>
+메모 튜토리얼 대사
+<<SetActiveFalse VisualNovelPrefab false>>
+===
+
+
+title: Memo_Book
+
+---
+
+
+
+<<if (CheckDialogue("MemoStory_Book") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_Book>>
+<<endif>>
+
+===
+
+title: MemoStory_Book
+
+---
+
+//책 팝업이미지
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<UI_on MenuUI>>
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw book_big 0.75 0.75>>
+
+어…. 이건 뭐지?
+....
+<color=\#9fa2a4><i>황소와 왕비 사이에서 태어난 미노타우르스는 점차 성장하여, 사람을 잡아먹는 괴물이 되었다.
+<color=\#9fa2a4><i>결국, 왕은 탈출 불가능한 미로 속에 괴물을 가두고 9년에 한 번씩 인간을 제물로 바쳤다.
+<color=\#9fa2a4><i>제물이 되길 자처한 테세우스는, 제 발로 미로 속으로 걸어들어가 괴물을 무찌른다.
+…
+중간 페이지가 찢겨 나갔네.
+...
+<color=grey><i>...무사히 미로를 탈출할 수 있었다.
+<color=grey><i>그 후, 영웅으로 칭송받은 테세우스는 홀로 고향으로 도망간다.
+<color=grey><i>테세우스는 이후 평생동안 미로를 헤매는 악몽을 꿨다고 전해진다.
+….
+일단 메모장에 기록해두자.
+
+<<Hide DBG>>
+<<Hide book_big>>
+
+// (메모장에 수집되고 내용 뜸)
+<<FindMemo MemoController memo_book>>
+<<FinishedDialogue VisualNovelPrefab MemoStory_Book>>
+<<UI_off MenuUI>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Memo_Letter
+
+---
+
+<<if (CheckDialogue("MemoStory_Letter") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_Letter>>
+<<endif>>
+
+===
+
+title: MemoStory_Letter
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab MemoStory_Letter>>
+
+어… 편지다.
+//팝업이미지만 띄워두기 -> 이후 화면 다시 클릭하면 다음 대사 뜨게
+//팝업이미지
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw letter_big 0.75 0.75>>
+<<wait 3.0>>
+아리아드네가 지원이에게 편지를…?
+우선 메모장에 기록해두자.
+
+<<Hide DBG>>
+<<Hide letter_big>>
+
+//(메모장에 수집되고 내용 뜸)
+<<FindMemo MemoController memo_letter>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+<<if CheckDialogue("DoctorsRoom")==false>>
+    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("MemoStory_Letter") == true && CheckDialogue("memory_Meds") == true)>>
+        <<jump DoctorsRoom>>
+    <<endif>>
+<<endif>>
+
+
+===
+
+title: Memo_Note
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab Memo_Note>>
+
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw memo_jjogji 0.75 0.75>>
+
+//팝업이미지
+어... 이게 무슨 소리지?
+건우 오빠가 왜 이런 걸...
+일단 메모장에 기록해두자.
+//(메모장에 수집되고 내용 뜸)
+<<Hide DBG>>
+<<Hide memo_jjogji>>
+
+<<FindMemo MemoController memo_zzokji>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: AfterNoteContent
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+...
+아리아드네가 이걸..? 정말 지켜보고 있는 건가?
+혼란스럽다.
+하지만 지금은 달리 뭘 해야 하는지 모르겠어.
+...가족에 대해 물어보자.
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+
+===
+
+title: Memo_Phone
+
+---
+
+
+<<if (CheckDialogue("MemoStory_Phone") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_Phone>>
+<<endif>>
+
+===
+
+title: MemoStory_Phone
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab MemoStory_Phone>>
+
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw SulPhone_big 0.75 0.75>>
+
+//팝업이미지
+??: *그만둬. 네가 그럴수록 더 위험해질 뿐이야.*
+아리아드네: *지수를 돕는 건 다 나를 위해서야.*
+아리아드네: *그러니까….*
+뭐야. 누가 두고 간 거지?
+아리아드네랑 연락을 주고 받았잖아.
+주변을 둘러봐도 수상한 사람이 보이지 않는다.
+… 일단 메모장에 기록해두자.
+
+<<Hide DBG>>
+<<Hide SulPhone_big>>
+
+//(메모장에 수집되고 내용 뜸)
+<<FindMemo MemoController memo_phone>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Memo_RippedPage
+---
+
+
+<<if (CheckDialogue("MemoStory_RippedPage") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_RippedPage>>
+<<endif>>
+
+===
+
+title: MemoStory_RippedPage
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab Memo_RippedPage>>
+
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw Page_big 0.75 0.75>>
+
+//팝업이미지
+자세히 보니 책에서 찢어져 나온 조각 같다.
+…테세우스는 아리아드네로부터 건네받은 실타래 덕분에…
+...
+어… 뭔가 익숙한데.
+일단 메모장에 기록해두자.
+
+<<Hide DBG>>
+<<Hide Page_big>>
+
+//(메모장에 수집되고 내용 뜸)
+<<FindMemo MemoController memo_tornpage>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Memo_Recorder
+---
+
+
+<<if (CheckDialogue("MemoStory_Recorder") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_Recorder>>
+<<endif>>
+
+===
+
+title: MemoStory_Recorder
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab MemoStory_Recorder>>
+
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw recorder_big 0.75 0.75>>
+
+//팝업이미지
+… 녹음기다.
+틀어볼까?
+…
+어떻게 나한테 그럴 수가 있지?
+그게 내 마음대로 되는 일도 아닌데…
+내 심정이 어떨지 너는 모르겠지.
+난 절대 멈추지 않을거야.
+…이 목소리는…!
+지원이잖아.
+언제 이런 걸 녹음한거지?
+…일단 메모장에 기록해두자.
+
+<<Hide DBG>>
+<<Hide recorder_big>>
+
+//(메모장에 수집되고 내용 뜸)
+<<FindMemo MemoController memo_recorder>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
+    <<jump Room101Fin>>
+<<endif>>
+
+===
+
+title: Memo_CaseBoard
+---
+
+
+<<if (CheckDialogue("MemoStory_CaseBoard") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_CaseBoard>>
+<<endif>>
+
+===
+
+title: MemoStory_CaseBoard
+---
+<<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab MemoStory_CaseBoard>>
+<<SetActiveFalse VisualNovelPrefab Room1503_bg>>
+
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw Board_big 0.75 0.75>>
+//팝업이미지
+…범죄 영화에서 본 것 같은 게 있네.
+그런데 뭔가 익숙한 것들이 있다
+…!
+…일단 메모장에 기록해두자.
+
+<<Hide DBG>>
+<<Hide Board_big>>
+
+//(메모장에 수집되고 내용 뜸)
+<<FindMemo MemoController memo_board>>
+<<FinishedObj VisualNovelPrefab Room1503_bg>>
+
+<<if (CheckDialogue("R1403Cardkey")==true && CheckDialogue("MemoStory_CaseBoard") == true && CheckDialogue("Memo_VideoTape3")==true)>>
+    <<jump InteractionFinto14>>
+<<endif>>
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Memo_VideoTape1
+---
+
+<<if (CheckDialogue("MemoStory_VideoTape") == true)>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    더 둘러봐도 별다른 점이 없어 보인다.
+    <<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+    <<jump MemoStory_VideoTape>>
+<<endif>>
+
+===
+
+title: MemoStory_VideoTape
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab MemoStory_VideoTape>>
+
+//팝업이미지
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw Video_big 0.75 0.75>>
+
+
+비디오 테이프인가?
+일단 챙겨보자.
+<<Hide DBG>>
+<<Hide Video_big>>
+<<AddToInventory VisualNovelPrefab memo_video>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Memo_VideoTape2
+
+---
+
+//TV에 아이템 사용 할 경우:
+//(팝업이미지가 뜸)
+
+//1. 쌍둥이 아기들이 갓 태어난, 병원에 있는 상태
+
+//2. 걸음마를 떼는 아기들의 모습
+
+//3. 같은 가방을 메고 학교에 가는 초등학생 둘의 뒷모습
+
+//(세 개의 팝업 이미지 이후 대사 나옴)
+<<SetActiveFalse VisualNovelPrefab true>>
+<<DeleteItem Inventory memo_video>>
+<<PlayVideo VisualNovelPrefab>>
+
+===
+
+title: Memo_VideoTape3
+
+---
+
+
+<<SetCanvasTo VisualNovelPrefab true>>
+육아 비디오인가?
+...어. 뭔가 익숙한데.
+...!
+...일단 메모장에 기록해두자.
+<<CloseVideo VisualNovelPrefab>>
+<<FindMemo MemoController memo_videotape>>
+<<FinishedDialogue VisualNovelPrefab Memo_VideoTape3>>
+
+<<if (CheckDialogue("R1403Cardkey")==true && CheckDialogue("MemoStory_CaseBoard") == true && CheckDialogue("Memo_VideoTape3")==true)>>
+    <<jump InteractionFinto14>>
+<<endif>>
+<<UI_off MenuUI>>
+<<SetCanvasTo VisualNovelPrefab false>>
+===
+
+
+
+
+

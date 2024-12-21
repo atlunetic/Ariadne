@@ -5,11 +5,17 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/M/Scenes_M/SOpening.unity
+  - enabled: 0
+    path: Assets/M/Scenes_M/S0/SLogo.unity
+    guid: f5cc2d653f26c6342bdbc5a43e5e4745
+  - enabled: 0
+    path: Assets/M/Scenes_M/S0/SWarning.unity
+    guid: 415957934f9a4444bbaad56dbb254190
+  - enabled: 0
+    path: Assets/M/Scenes_M/S0/SOpening.unity
     guid: bb8b4ac781db3324c9800a7d4962ecf5
   - enabled: 1
-    path: Assets/M/Scenes_M/S0.unity
+    path: Assets/M/Scenes_M/S0/S0.unity
     guid: e00a827656087c34ba42363584dfd4c6
   - enabled: 1
     path: Assets/Hee/Scenes/Menu.unity
@@ -29,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/M/Scenes_M/S1/S1_Hospital.unity
     guid: 570271b71d797984fa389f3236cb9b82
+  - enabled: 1
+    path: Assets/M/Scenes_M/S1/S1_Hospital2.unity
+    guid: a319103c5bcc8aa45a7d235a2ca24db6
   - enabled: 1
     path: Assets/M/Scenes_M/S1/S1_Park.unity
     guid: f2e496cdaf1caab42895e1c7b613a1ae
@@ -99,6 +108,9 @@ EditorBuildSettings:
     path: Assets/M/Scenes_M/S3/S3_2_Officetel1stFloor.unity
     guid: b92c373c92cc897488453bd9e21063b9
   - enabled: 1
+    path: Assets/M/Scenes_M/S3/S3_2_Officetel101.unity
+    guid: 466fae3f4b92be74b896f9d45903105a
+  - enabled: 1
     path: Assets/M/Scenes_M/S3/S3_3_Officetel1503.unity
     guid: af3e182f349834e4d9da53545941cda4
   - enabled: 1
@@ -107,6 +119,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/M/Scenes_M/S3/S3_5_Inside1403.unity
     guid: 902398291d817d64bb4459185a5c6db4
+  - enabled: 1
+    path: Assets/M/Scenes_M/S3/ForTest.unity
+    guid: 09fc4e89fe7627f4781c690bbd5fbc9f
+  - enabled: 1
+    path: Assets/M/Scenes_M/S3/S3_6_CP1.unity
+    guid: 56e9aa77059fc9347bc84e1239623738
+  - enabled: 1
+    path: Assets/M/Scenes_M/S3/S3_6_CP2.unity
+    guid: 58a54adf52cbbaa41820b7ae8b620205
+  - enabled: 1
+    path: Assets/M/Scenes_M/S3/S3_6_CP3.unity
+    guid: 920b613a73965064bbbf3fb89e26a8b3
   - enabled: 1
     path: Assets/M/Scenes_M/S4/S4.unity
     guid: 0e8d261c6460e81468f822c1e9940090
