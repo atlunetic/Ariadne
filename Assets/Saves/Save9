@@ -1,0 +1,53 @@
+{
+  "savetime": "2024-12-22 11:40:24 오전",
+  "IsLoad": false,
+  "NowScene": "S3_2_Officetel101",
+  "NumOfScreenShots": 1,
+  "GeonWooScore": 0,
+  "SaengSoo": 0,
+  "ChattingLog": [
+    19,
+    18,
+    25
+  ],
+  "PhotoList": [],
+  "items": [],
+  "FindedObjects": [
+    "101_drug"
+  ],
+  "FindedClues": [],
+  "FinishedDialogues": [
+    "ChocotalkAlarm"
+  ],
+  "GottenPage": [
+    "Page5"
+  ],
+  "RecommendedFriends": [],
+  "visited": 0,
+  "IsAriadneHintOn": false,
+  "S1HintList": [
+    "Laptop",
+    "Meds",
+    "Letter",
+    "6Hairpin",
+    "DrawerR_Wallet",
+    "ChooseChatName1",
+    "Books_Diary",
+    "visitPark",
+    "visitBarStreet",
+    "visitHospital"
+  ],
+  "S2HintList": [
+    "ClubTable_Geonwoo",
+    "Toilet_costomerF",
+    "ToiletPaper"
+  ],
+  "StaffroomHintList": [
+    "VIPlist",
+    "InStaffroom_VIPlist",
+    "InStaffroom_cctv",
+    "obj_keyStory",
+    "InStaffroom_Radio"
+  ],
+  "FindedMemoList": []
+}

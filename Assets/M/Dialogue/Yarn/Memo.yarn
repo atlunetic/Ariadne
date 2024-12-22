@@ -6,7 +6,8 @@
 title: Memo_Tutorial
 ---
 <<SetActiveFalse VisualNovelPrefab true>>
-메모 튜토리얼 대사
+메모장이다.
+중요한 것들이 있다면 기록해두면 될 것 같아.
 <<SetActiveFalse VisualNovelPrefab false>>
 ===
 

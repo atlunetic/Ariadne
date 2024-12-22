@@ -681,8 +681,7 @@ title: UsedWaterCup
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 
-<<UI_off MenuUI>>
-
+//<<UI_off MenuUI>>
 <<Act 지수 CoJIsoo1 1.17 0.322 white>>
 <<DeleteItem Inventory WaterCup>>
 
@@ -723,6 +722,7 @@ title: letEknow
 ---
 
 <<UI_off MenuUI>>
+<<Scene NoBG>>
 지수: 이상한 소리 한다고 생각하실 수도 있겠지만...
 지수: 저 사람이 그쪽 술에 약을 탄 것 같아서요.
 
@@ -3633,7 +3633,11 @@ title: GeonwooNote
 건우: 지수야, 잠깐만 얘기좀 하자.
 //지수를 VIP ROOM 문 앞으로 데려감.
 //검정 배경경
+//<<Fade Black 0.0 1.0 1.0>>
+<<DrawFadeIn BlackBG 0.75 0.75 0.8>>
+<<wait 1.0>>
 상황을 채 파악하기도 전에, 건우 오빠에 의해 밖으로 끌려나갔다.
+<<Act 건우 Geonwoo0 0.322 0.227 white>>
 건우: 너 대체 뭐하고 다니는 거야?
 건우: 이 옷은 대체 어디서 났냐? 미치겠다.
 건우: 너 자꾸 그렇게 들쑤시고 다니면 오빠가 못 도와줘.
@@ -3651,11 +3655,13 @@ title: GeonwooNote
 <<wait 1.0>>
 <<Hide DBG>>
 <<Hide jjogji_big>>
-
+<<wait 0.5>>
+<<Hide 건우>>
 내용을 확인하기도 전에, 건우 오빠는 화가난 듯 저 멀리로 사라졌다.
 계속 여기서 서성이면 수상해 보일 것 같아.
 VIP 룸으로 다시 들어가자.
 //vip룸으로 다시 장소 이동
+<<Hide BlackBG>>
 무슨 쪽지지…?
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -3689,6 +3695,7 @@ title: AfterNote
 ...
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw jjogji_big2 0.75 0.75>>
+<<wait 1.0>>
 아리아드네가 이걸...? 정말 지켜보고 있는 건가?
 ...혼란스럽다.
 하지만 지금은 달리 뭘 해야 할지 모르겠어.

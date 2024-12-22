@@ -1035,6 +1035,8 @@ title: DrugDrink
 <<RevealDiary DiaryManager Page2>>
 <<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 ‘마약 음료’가 추가되었습니다. *</color>
+<<SetActiveFalse VisualNovelPrefab DrugDrink>>
+<<FinishedObj VisualNovelPrefab DrugDrink>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1051,6 +1053,8 @@ title: Crack
 <<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 ‘크랙’이 추가되었습니다. *</color>
 <<RevealDiary DiaryManager Page5>>
+<<SetActiveFalse VisualNovelPrefab 101_drug>>
+<<FinishedObj VisualNovelPrefab 101_drug>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
