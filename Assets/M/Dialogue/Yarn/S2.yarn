@@ -3461,6 +3461,7 @@ title: WaterToE
 
 생각해보니 생수병을 챙겨 뒀었지.
 이걸 주면 될 것 같은데?
+<<DeleteItem Inventory WaterBottle>>
 		
 <<UpdateAct 지수 CoJIsoo1>>
 지수: 여기 있습니다.
