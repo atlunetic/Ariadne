@@ -43,8 +43,6 @@
 ===
 
 
-
-
 title: StartClub
 
 ---
@@ -665,7 +663,7 @@ title: ClothesUsed
 <<if CheckDialogue("club_viproom_entry")==true>>
 	<<jump club_viproom_changeuniform>>
 <<else>>
-	<<UI_off MenuUI>>
+	//<<UI_off MenuUI>>
 	직원 복장 옷을 입었다.
 	//옷 입고 다시 물어볼 경우 대비 빈 타이틀
 	<<FinishedDialogue VisualNovelPrefab ClothesOnForE>>
@@ -721,8 +719,7 @@ title: letEknow
 
 ---
 
-<<UI_off MenuUI>>
-<<Scene NoBG>>
+//<<UI_off MenuUI>>
 지수: 이상한 소리 한다고 생각하실 수도 있겠지만...
 지수: 저 사람이 그쪽 술에 약을 탄 것 같아서요.
 
@@ -796,7 +793,7 @@ title: DontTellE
 
 ---
 
-<<UI_off MenuUI>>
+//<<UI_off MenuUI>>
 <<UpdateAct 지수 CoJIsoo2>>
 그래...오지랖 부리지 말자.
 ...

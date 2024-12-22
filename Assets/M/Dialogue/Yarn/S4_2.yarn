@@ -6,6 +6,7 @@
 
 //지수7
 //화면 암전 후 전환. 병실 이미지
+<<ChangeSceneTo VisualNovelPrefab s4_1_Hospital>>
 <<PlayAudio HospitalBGM 1.0 loop>>
 <<Act 지수 Jisoo8 1.17 0.322 black>>
 …여긴 어디지?
@@ -170,7 +171,7 @@ title: future_jisooroom
 //지도를 통해 다른 장소 이동, 2장의 이동 버튼을 통해 지원의방/지수의방 이동 가능
 ===
 
-//지수수 방
+//지수 방
 
 title: future_laptop
 ---
@@ -628,6 +629,7 @@ title: normal_ending
 아리아드네:….
 아리아드네:이제 아프지마.
 //화면 암전 후 전환. 병실 이미지
+<<ChangeSceneTo VisualNovelPrefab s4_1_Hospital>>
 <<PlayAudio HospitalBGM 1.0 loop>>
 <<Act 지수 Jisoo8 1.17 0.322 black>>
 …여긴 어디지?
@@ -772,6 +774,7 @@ title: normal_drug
 아리아드네: 제발···. 다시 내 손을 잡아···.
 
 //심정지 삐-소리
+<<PlayAudio Dead 0.7>>
 <<FadeIn>>
 <<DrawFadeIn Ending7 0.75 0.75>>
 <<wait  4.0>>

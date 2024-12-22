@@ -188,6 +188,10 @@ title: DrugCookie
 
 ===
 
+
+//공중전화
+
+
 title: PhoneBooth
 
 ---
@@ -255,6 +259,10 @@ title: SynthWeed
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
+
+
+//오피스텔 현관 확대
+
 
 title: OfficetelDoor
 
@@ -659,6 +667,10 @@ title: Officetel1503
 
 ===
 
+
+//101호 (1층)
+
+
 title: Room101
 
 ---
@@ -941,6 +953,10 @@ title: Room101Fin
 
 ===
 
+
+//15층
+
+
 title: Officetel15thfloor
 
 ---
@@ -1117,6 +1133,9 @@ title: NotVideoTape
 
 ===
 
+//14층
+
+
 title: InteractionFinto14
 
 ---
@@ -1269,6 +1288,9 @@ title: OutofOfficetel
 <<jump escapegame_intro>>
 
 ===
+
+//탈출게임
+
 
 title: escapegame_intro
 
