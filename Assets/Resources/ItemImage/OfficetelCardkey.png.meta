@@ -100,10 +100,10 @@ TextureImporter:
       name: OfficetelCardkey_0
       rect:
         serializedVersion: 2
-        x: 566
-        y: 227
-        width: 757
-        height: 757
+        x: 27
+        y: 25
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdf259869932ae34fb6fc6d8fa204575
-      internalID: -2074862986
+      spriteID: a0e234ae44cd5024cb337131ec9b6550
+      internalID: -1569883452
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      OfficetelCardkey_0: -2074862986
+      OfficetelCardkey_0: -1569883452
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

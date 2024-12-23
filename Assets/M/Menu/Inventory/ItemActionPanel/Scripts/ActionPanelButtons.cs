@@ -52,7 +52,7 @@ public class ActionPanelButtons : MonoBehaviour
         {
             if (connectedItem.itemName == "memo_note")
             {
-                runner.StartDialogue("AfterNote");
+                runner.StartDialogue("AfterNote0");
             }
 
             if (currentscene.name == "S2_7_Stairs")

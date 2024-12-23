@@ -188,6 +188,10 @@ title: DrugCookie
 
 ===
 
+
+//공중전화
+
+
 title: PhoneBooth
 
 ---
@@ -255,6 +259,10 @@ title: SynthWeed
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
+
+
+//오피스텔 현관 확대
+
 
 title: OfficetelDoor
 
@@ -659,6 +667,10 @@ title: Officetel1503
 
 ===
 
+
+//101호 (1층)
+
+
 title: Room101
 
 ---
@@ -941,6 +953,10 @@ title: Room101Fin
 
 ===
 
+
+//15층
+
+
 title: Officetel15thfloor
 
 ---
@@ -1035,6 +1051,8 @@ title: DrugDrink
 <<RevealDiary DiaryManager Page2>>
 <<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 ‘마약 음료’가 추가되었습니다. *</color>
+<<SetActiveFalse VisualNovelPrefab DrugDrink>>
+<<FinishedObj VisualNovelPrefab DrugDrink>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1051,6 +1069,8 @@ title: Crack
 <<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 ‘크랙’이 추가되었습니다. *</color>
 <<RevealDiary DiaryManager Page5>>
+<<SetActiveFalse VisualNovelPrefab 101_drug>>
+<<FinishedObj VisualNovelPrefab 101_drug>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1112,6 +1132,9 @@ title: NotVideoTape
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
+
+//14층
+
 
 title: InteractionFinto14
 
@@ -1265,6 +1288,9 @@ title: OutofOfficetel
 <<jump escapegame_intro>>
 
 ===
+
+//탈출게임
+
 
 title: escapegame_intro
 

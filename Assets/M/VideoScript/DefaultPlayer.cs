@@ -7,6 +7,7 @@ public class DefaultPlayer : MonoBehaviour
     public VideoPlayer videoPlayer;
     public GameObject VideoParent;
     public GameObject DialogueCanvas;
+    //public GameObject ariadnePlayer;
 
     [YarnCommand("PlayVideo")]
     public void PlayVideo()

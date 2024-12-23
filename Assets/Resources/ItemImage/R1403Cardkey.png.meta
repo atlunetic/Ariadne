@@ -100,19 +100,19 @@ TextureImporter:
       name: R1403Cardkey_0
       rect:
         serializedVersion: 2
-        x: 626
-        y: 337
-        width: 673
-        height: 673
+        x: 23
+        y: 25
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8025618bc8a060d4887c9f29453bbce7
-      internalID: 28343864
+      spriteID: 09be1989c77a64848b655dbe4d53991e
+      internalID: -179766688
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      R1403Cardkey_0: 28343864
+      R1403Cardkey_0: -179766688
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -43,8 +43,6 @@
 ===
 
 
-
-
 title: StartClub
 
 ---
@@ -665,7 +663,7 @@ title: ClothesUsed
 <<if CheckDialogue("club_viproom_entry")==true>>
 	<<jump club_viproom_changeuniform>>
 <<else>>
-	<<UI_off MenuUI>>
+	//<<UI_off MenuUI>>
 	직원 복장 옷을 입었다.
 	//옷 입고 다시 물어볼 경우 대비 빈 타이틀
 	<<FinishedDialogue VisualNovelPrefab ClothesOnForE>>
@@ -681,8 +679,7 @@ title: UsedWaterCup
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 
-<<UI_off MenuUI>>
-
+//<<UI_off MenuUI>>
 <<Act 지수 CoJIsoo1 1.17 0.322 white>>
 <<DeleteItem Inventory WaterCup>>
 
@@ -722,7 +719,7 @@ title: letEknow
 
 ---
 
-<<UI_off MenuUI>>
+//<<UI_off MenuUI>>
 지수: 이상한 소리 한다고 생각하실 수도 있겠지만...
 지수: 저 사람이 그쪽 술에 약을 탄 것 같아서요.
 
@@ -796,7 +793,7 @@ title: DontTellE
 
 ---
 
-<<UI_off MenuUI>>
+//<<UI_off MenuUI>>
 <<UpdateAct 지수 CoJIsoo2>>
 그래...오지랖 부리지 말자.
 ...
@@ -3183,6 +3180,7 @@ title: obj_keyStory
 //인벤토리에 열쇠 아이템이 추가됨.
 //<<SetActiveFalse VisualNovelPrefab InStaffroom_Key>>
 //<<FinishedObj VisualNovelPrefab InStaffroom_Key>>
+<<AddToInventory VisualNovelPrefab Key>>
 <<FinishedDialogue VisualNovelPrefab obj_keyStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<IfDone_getout MenuUI>>
@@ -3317,6 +3315,9 @@ title: letsgetout
 
 
 ===
+
+
+//VIP룸 입장
 
 title: club_viproom_entry1
 
@@ -3460,6 +3461,7 @@ title: WaterToE
 
 생각해보니 생수병을 챙겨 뒀었지.
 이걸 주면 될 것 같은데?
+<<DeleteItem Inventory WaterBottle>>
 		
 <<UpdateAct 지수 CoJIsoo1>>
 지수: 여기 있습니다.
@@ -3631,7 +3633,12 @@ title: GeonwooNote
 
 건우: 지수야, 잠깐만 얘기좀 하자.
 //지수를 VIP ROOM 문 앞으로 데려감.
+//검정 배경경
+//<<Fade Black 0.0 1.0 1.0>>
+<<DrawFadeIn BlackBG 0.75 0.75 0.8>>
+<<wait 1.0>>
 상황을 채 파악하기도 전에, 건우 오빠에 의해 밖으로 끌려나갔다.
+<<Act 건우 Geonwoo0 0.322 0.227 white>>
 건우: 너 대체 뭐하고 다니는 거야?
 건우: 이 옷은 대체 어디서 났냐? 미치겠다.
 건우: 너 자꾸 그렇게 들쑤시고 다니면 오빠가 못 도와줘.
@@ -3649,11 +3656,13 @@ title: GeonwooNote
 <<wait 1.0>>
 <<Hide DBG>>
 <<Hide jjogji_big>>
-
+<<wait 0.5>>
+<<Hide 건우>>
 내용을 확인하기도 전에, 건우 오빠는 화가난 듯 저 멀리로 사라졌다.
 계속 여기서 서성이면 수상해 보일 것 같아.
 VIP 룸으로 다시 들어가자.
 //vip룸으로 다시 장소 이동
+<<Hide BlackBG>>
 무슨 쪽지지…?
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -3669,11 +3678,12 @@ title: AfterNote0
 <<SetCanvasTo VisualNovelPrefab	true>>
 <<DeleteItem Inventory memo_note>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
-<<Draw jjogji_big2 0.75 0.75>>
-어…. 이건 뭐지?
+<<Draw jjogji_big 0.75 0.75>>
 건우 오빠가 왜 이런 걸…
 일단 메모장에 기록해두자.
 <<FindMemo MemoController memo_zzokji>>
+<<HideAll>>
+<<jump AfterNote>>
 <<SetCanvasTo VisualNovelPrefab	false>>
 
 ===
@@ -3686,39 +3696,16 @@ title: AfterNote
 ...
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw jjogji_big2 0.75 0.75>>
+<<wait 1.0>>
 아리아드네가 이걸...? 정말 지켜보고 있는 건가?
 ...혼란스럽다.
 하지만 지금은 달리 뭘 해야 할지 모르겠어.
-//...가족에 대해 물어보자.
 <<Hide DBG>>
 <<Hide jjogji_big2>>
-//(이후에 클럽 고객G에게 바로 말건다)
-//지수: 아까 가족분들이 다정하다고 하셨는데….
-//지수: 가족분들이랑은 요즘 어떠세요?
- 
-//클럽 고객G가 침울한 표정을 지었다.
-//이내 아무렇지 않은 듯 웃으며 휴대폰을 내밀었다.
-
-<<jump obj_customerg_choose_ariadne>>
-//<<SetCanvasTo VisualNovelPrefab	false>>
+<<jump chocotalk_ariadne_customerg>>
+<<SetCanvasTo VisualNovelPrefab	false>>
 ===
 
-title: obj_customerg_choose_ariadne
-
----
-
-//휴대폰 진동과 함께 알림이 온다.
-<<PlayAudio PhoneAlarm>>
-<<UpdateAct 지수 CoJIsoo2>>
-어... 아리아드네다.
-확인해볼까?
-<<Hide 클럽고객G>>
-<<AriadneHintOff PhoneController>>
-<<StartPhoneChat PhoneController 24>>
-//<<SetCanvasTo VisualNovelPrefab false>>
-
-
-===
 
 title: chocotalk_ariadne_customerg
 
@@ -3726,9 +3713,7 @@ title: chocotalk_ariadne_customerg
 
 <<AriadneHintOn PhoneController>>
 <<UI_off MenuUI>>
-//초코톡에서 아리아드네의 톡 확인 후
-//...
-//-> 가족에 대해 물어보자
+...
 그래...
 가족에 대해 물어보자.
 <<Act 지수 CoJIsoo3 1.17 0.322 white>>
@@ -4521,6 +4506,22 @@ title: WrongClothes
 
 <<SetCanvasTo VisualNovelPrefab true>>
 지금 입으면 눈에 띌 것 같아...
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: testInventory
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+인벤토리 테스트
+<<AddToInventory VisualNovelPrefab Bracelet>>
+<<AddToInventory VisualNovelPrefab Cup>>
+<<AddToInventory VisualNovelPrefab WaterCup>>
+<<AddToInventory VisualNovelPrefab DrugJelly>>
+<<AddToInventory VisualNovelPrefab R1403Cardkey>>
+<<AddToInventory VisualNovelPrefab Key>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

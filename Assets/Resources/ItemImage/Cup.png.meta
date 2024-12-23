@@ -100,19 +100,19 @@ TextureImporter:
       name: Cup_0
       rect:
         serializedVersion: 2
-        x: 1554
-        y: 468
-        width: 61
-        height: 80
+        x: 24
+        y: 26
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e8fe814f374e8f41891f55cfe72ca81
-      internalID: 1629879786
+      spriteID: bf3cb186686f34e4e8a3bc7adcd29e5b
+      internalID: -527349214
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cup_0: 1629879786
+      Cup_0: -527349214
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
