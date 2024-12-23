@@ -4,7 +4,7 @@
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Scene H1)park>>
 <<PlayAudio OtherPlaces 1.0 loop>>
-<<Act 지수 Jisoo1_smile 1.17 0.322 black>>
+<<Act 지수 Jisoo1 1.17 0.322 black>>
 <<Act 지원 Jiwon8_smile 0.322 0.227 green>>
 지수: 아~ 우리가 스무 살이래. 말이 돼?
 지원: 그러게. 대학교까지 같이 올 줄 몰랐는데.
