@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueTitle: 
+  DialogueTitle: Eunjaehiddenstory_1
 --- !u!61 &720139018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -629,7 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueTitle: 
+  DialogueTitle: Jisoojiwonhiddenstory_1
 --- !u!61 &1573322183
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b80b26de81a247aca72a18419b125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueTitle: 
+  DialogueTitle: HiddenEnding
 --- !u!61 &2121504541
 BoxCollider2D:
   m_ObjectHideFlags: 0
