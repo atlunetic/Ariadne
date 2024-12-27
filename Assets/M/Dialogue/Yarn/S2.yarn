@@ -4,6 +4,7 @@
 
 //240816 BIC 용 수정본
 
+<<PlayAudio ClubstreetBGM loop>>
 <<Act 건우 Geonwoo0 0.322 0.227 white>>
 
 <<UpdateAct 지수 Jisoo4>>
@@ -71,7 +72,7 @@ title: meet_gunwoo
 
 ---
 
-//<<PlayAudio 클럽내부theme파일이름>>
+<<PlayAudio ClubstreetBGM>>
 
 
 <<Act 건우 Geonwoo0 0.322 0.227 white>>
@@ -798,6 +799,7 @@ title: DontTellE
 그래...오지랖 부리지 말자.
 ...
 E는 신나게 춤추고 있는 사람들을 바라봤다.
+<<<<<<< Updated upstream
 
 <<UpdateAct 지수 CoJIsoo1>>
 지수:저는 먼저 가볼게요.
@@ -807,14 +809,18 @@ E가 고개를 돌려 눈인사를 했다.
 <<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
 <<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
 
+=======
+… 누굴 찾고 있는 것 같은데?
+>>>>>>> Stashed changes
 E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
 <<UpdateAct 지수 CoJIsoo2>>
 ...
-
 클럽 고객D가 E를 향해 걸어가는 모습이 보였다.
-걱정되네...
+걱정되네….
 ...
 일단 의심받기 전에 옷부터 갈아입자.
+
+<<PlayAudio Clotheschange>>
 //(이후 기본 복장으로 자동 변경)
 <color=yellow>* 직원 복장 옷을 벗었다. *</color>
 
@@ -1808,21 +1814,23 @@ title: event_gunwoo_q6a
 	<<UpdateAct 건우 Geonwoo2>>
 	건우: ...
 	건우: 아마 그렇겠지.
+	<<wait 1.0>>
+	건우 오빠의 표정이 흔들렸다.
 	<<jump event_gunwoo_end>>
--> 지원이가 연락했던 마약상에 대해 알고 싶다.
+-> 지원이가 방문했던 이 클럽 자체가 수상하다.
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 지원이가 연락했던 마약상에 대해 알고 싶어요.
-	지수: 그러면...
-	지수: 그 사람들이 지원이 행방을 알 수도 있잖아요.
-	지수: 어딨는지 물어봐야죠.
+	지수: 지원이가 여기 온 것 자체가 수상해요.
+	지수: 혹시….
+	지수: 최근에 이 클럽에서 이상한 일 없었어요?
+	지수: 여기 왔던 사람들이 사라졌다거나….
 	<<wait 1.0>>
 	<<UpdateAct 건우 Geonwoo3>>
-	건우: ...
-	건우: 내가 그걸 어떻게 아냐..?
+	건우: 뭐? 너 요즘 도시괴담 같은 거 관심있냐?
+	건우: 그게 뭔 소리야.
 	<<wait 1.0>>
-	건우 오빠의 표정이 흔들렸다.
+	건우 오빠의 표정이 좋지 않다.
 	<<jump event_gunwoo_end>>
 	
 
@@ -1854,20 +1862,20 @@ title: event_gunwoo_q6b
 <<wait 1.0>>
 
 //선택지 랜덤 출력
--> 지원이가 연락했던 마약상에 대해 알고 싶다.
+-> 지원이가 방문했던 이 클럽 자체가 수상하다.
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 지원이가 연락했던 마약상에 대해 알고 싶어요.
-	지수: 그러면...
-	지수: 그 사람들이 지원이 행방을 알 수도 있잖아요.
-	지수: 어딨는지 물어봐야죠.
+	지수: 지원이가 여기 온 것 자체가 수상해요.
+	지수: 혹시….
+	지수: 최근에 이 클럽에서 이상한 일 없었어요?
+	지수: 여기 왔던 사람들이 사라졌다거나….
 	<<wait 1.0>>
 	<<UpdateAct 건우 Geonwoo3>>
-	건우: ...
-	건우: 내가 그걸 어떻게 아냐..?
+	건우: 뭐? 너 요즘 도시괴담 같은 거 관심있냐?
+	건우: 그게 뭔 소리야.
 	<<wait 1.0>>
-	건우 오빠의 표정이 흔들렸다.
+	건우 오빠의 표정이 좋지 않다.
 	<<jump event_gunwoo_end>>
 -> 지원이가 여기서 뭘 하고 다녔는지 알고 싶다.
 	//설득점수 +1
@@ -1880,6 +1888,8 @@ title: event_gunwoo_q6b
 	<<UpdateAct 건우 Geonwoo2>>
 	건우: ...
 	건우: 아마 그렇겠지.
+	<<wait 1.0>>
+	건우 오빠의 표정이 흔들렸다.
 	<<jump event_gunwoo_end>>
 	
 
@@ -2109,7 +2119,11 @@ title: obj_drugjelly
 에휴...
 옷이라도 주워주자.
 
+<<PlayAudio clothesdrop>>
+
 조심스레 겉옷을 주워 클럽 고객F에게 덮어줬다.
+
+<<PlayAudio dropjelly>>
 그 순간 바닥으로 무언가 떨어졌다.
 <<Hide 지수>>
 <<Hide 클럽고객F>>
@@ -3378,7 +3392,7 @@ title: club_viproom_changeuniform
 ---
 
 <<Scene BlackBG>>
-<<PlayAudio ClothesChange_h(2)>>
+<<PlayAudio Clotheschange>>
 화장실로 가서 옷을 갈아입었다.
 <<Scene NoBG>>
 //club_viproom_entry 이후 플레이어가 인벤토리에서 직원복장 사용시
