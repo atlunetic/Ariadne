@@ -199,7 +199,7 @@ title: HaesolAftertruth
 ...
 ...
 <<StartPhoneChat PhoneController 11>>
-<<SetCanvasTo VisualNovelPrefab false>>
+//<<SetCanvasTo VisualNovelPrefab false>>
 
 
 ===
@@ -215,6 +215,17 @@ title: Haesol2
 <<StartPhoneChat PhoneController 9>>
 //<<SetCanvasTo VisualNovelPrefab false>>
 
+
+===
+
+title: Haesol3
+
+---
+
+<<wait 0.5>>
+
+...
+<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 

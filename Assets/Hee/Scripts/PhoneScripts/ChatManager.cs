@@ -71,6 +71,7 @@ public class ChatManager : MonoBehaviour
     [YarnCommand("StartPhoneChat")]
     public void StartChat(int i)  // yarn에서 호출
     {
+        Debug.Log("Start Chat: " + i);
         SetChat(i);
         PhoneController.instance.ActivePhone();
 
@@ -250,7 +251,7 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "근데 너 혹시 지수야?");
         AddChatToLast(false, "말투가 지원이가 아닌데...");
 
-        ChattingList.Add(new Chatting(false, "해솔", null));  // 11
+        ChattingList.Add(new Chatting(false, "해솔", "Haesol3"));  // 11
         AddChatToLast(false, "지원이가 휴대폰을 두고 사라졌다고?");
         AddChatToLast(false, "그럴 애가 아닌데...");
         AddChatToLast(false, "나도 찾아보고 연락해줄게.");

@@ -1,0 +1,67 @@
+{
+  "savetime": "2024-12-13 20:54:19 오후",
+  "IsLoad": false,
+  "NowScene": "S3_3_Officetel1503",
+  "NumOfScreenShots": 1,
+  "GeonWooScore": 0,
+  "SaengSoo": 0,
+  "ChattingLog": [
+    19,
+    18,
+    25
+  ],
+  "PhotoList": [],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "R1403Cardkey"
+    },
+    {
+      "ItemType": 0,
+      "itemName": "memo_video"
+    }
+  ],
+  "FindedObjects": [
+    "Room1503_bg"
+  ],
+  "FindedClues": [],
+  "FinishedDialogues": [
+    "ChocotalkAlarm",
+    "R1403Cardkey",
+    "MemoStory_VideoTape",
+    "MemoStory_CaseBoard",
+    "Memo_VideoTape3"
+  ],
+  "GottenPage": [],
+  "RecommendedFriends": [],
+  "visited": 0,
+  "IsAriadneHintOn": false,
+  "S1HintList": [
+    "Laptop",
+    "Meds",
+    "Letter",
+    "6Hairpin",
+    "DrawerR_Wallet",
+    "ChooseChatName1",
+    "Books_Diary",
+    "visitPark",
+    "visitBarStreet",
+    "visitHospital"
+  ],
+  "S2HintList": [
+    "ClubTable_Geonwoo",
+    "Toilet_costomerF",
+    "ToiletPaper"
+  ],
+  "StaffroomHintList": [
+    "VIPlist",
+    "InStaffroom_VIPlist",
+    "InStaffroom_cctv",
+    "InStaffroom_Key",
+    "InStaffroom_Radio"
+  ],
+  "FindedMemoList": [
+    "memo_board",
+    "memo_videotape"
+  ]
+}

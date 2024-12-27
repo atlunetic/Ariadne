@@ -100,19 +100,19 @@ TextureImporter:
       name: Clothes_0
       rect:
         serializedVersion: 2
-        x: 446
-        y: 198
-        width: 975
-        height: 789
+        x: 23
+        y: 25
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df96d6a4da43d934cb57c104be6ce67a
-      internalID: 615351827
+      spriteID: cdeba3b1c628efe45abc7889fb03e7d6
+      internalID: 899807902
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Clothes_0: 615351827
+      Clothes_0: 899807902
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

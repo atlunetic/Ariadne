@@ -1,0 +1,66 @@
+{
+  "savetime": "2024-12-13 18:26:36 오후",
+  "IsLoad": true,
+  "NowScene": "S1_Hospital",
+  "NumOfScreenShots": 1,
+  "GeonWooScore": 0,
+  "SaengSoo": 0,
+  "ChattingLog": [
+    19,
+    18,
+    25,
+    0,
+    41,
+    42
+  ],
+  "PhotoList": [
+    "Laptop28",
+    "Meds10"
+  ],
+  "items": [],
+  "FindedObjects": [
+    "Letter"
+  ],
+  "FindedClues": [
+    "Laptop",
+    "Meds"
+  ],
+  "FinishedDialogues": [
+    "DGram1st",
+    "Gallery",
+    "Chocotalk1st",
+    "Map_1",
+    "Camera",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsJiwon",
+    "Hospital",
+    "HospitalWaitingRoom",
+    "memory_Meds",
+    "MemoStory_Letter",
+    "ChocotalkAlarm",
+    "Chatlist"
+  ],
+  "GottenPage": [],
+  "RecommendedFriends": [],
+  "visited": 4,
+  "IsAriadneHintOn": true,
+  "S1HintList": [
+    "Letter",
+    "6Hairpin",
+    "DrawerR_Wallet",
+    "visitBarStreet"
+  ],
+  "S2HintList": [
+    "ClubTable_Geonwoo",
+    "Toilet_costomerF",
+    "ToiletPaper"
+  ],
+  "StaffroomHintList": [
+    "VIPlist",
+    "InStaffroom_VIPlist",
+    "InStaffroom_cctv",
+    "InStaffroom_Key",
+    "InStaffroom_Radio"
+  ],
+  "FindedMemoList": []
+}

@@ -1,97 +1,107 @@
 {
-  "savetime": "2024-07-29 20:24:48 오후",
+  "savetime": "2024-12-13 15:58:40 오후",
   "IsLoad": true,
-  "NowScene": "S2_2_Table",
+  "NowScene": "S1_Hospital",
   "NumOfScreenShots": 1,
-  "GeonWooScore": 9,
+  "GeonWooScore": 0,
   "SaengSoo": 0,
   "ChattingLog": [
     19,
     18,
     25,
-    12,
-    21,
-    20
+    12
   ],
   "PhotoList": [
-    "Letter0",
-    "Laptop0",
-    "Meds0",
-    "VIPlist2"
+    "Laptop30",
+    "Letter15",
+    "Meds12"
   ],
   "items": [
     {
       "ItemType": 0,
       "itemName": "Hairpin"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "WaterBottle"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "WaterBottle"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "Cup"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "Key"
-    },
-    {
-      "ItemType": 0,
-      "itemName": "Clothes"
     }
-
-
   ],
   "FindedObjects": [
     "Letter",
-    "Books_Diary",
     "DrawerR_Wallet",
-    "Drawer_Hairpin",
-    "Suljango",
-    "Cup",
-    "ClubTable_Geonwoo",
-    "Staffroom_Door",
-    "InStaffroom_Key",
-    "InStaffroom_Radio",
-    "InStaffroom_VIPlist",
-    "InStaffroom_cctv",
-    "obj_staffroomdoor"
+    "Books_Diary",
+    "3Drug",
+    "6Hairpin",
+    "Meds"
   ],
   "FindedClues": [
-    "Letter",
     "Laptop",
-    "Meds",
-    "VIPlist"
+    "Letter",
+    "Meds"
   ],
   "FinishedDialogues": [
     "jisoo'stalk",
     "Chatlist",
-    "DGram1st",
+    "JW_WalletStory",
+    "MemoStory_Book",
+    "Diary1Story",
+    "LaptopStory2",
+    "Camera",
+    "Gallery",
+    "Map_1",
+    "Park",
+    "ParkStudentsStory",
+    "DiaryTutorial",
+    "6HairPin",
+    "VendingMachineStory",
     "Chocotalk1st",
     "ChooseChatName1",
     "AfterGeonwooChatAsHerself",
-    "Camera",
-    "Map_1",
-    "Park",
     "Barstreet",
+    "BarStreet",
+    "MemoStory_Phone",
+    "DrugsnacksStory",
     "Hospital",
-    "Where",
+    "HospitalWaitingRoom",
+    "memory_Meds",
+    "MedsStory",
+    "MemoStory_Letter",
+    "DoctorsRoom",
+    "DGram1st",
+    "DropperRecruit",
+    "IceiceChat",
     "New711",
-    "SevenEleven",
-    "Club_S1End",
-    "event_staffroom",
-    "event_gunwoo_begin1",
-    "obj_staffroomdoor",
-    "chocotalk_cctv",
-    "letsgetout",
-    "ActiveM"
+    "Where"
   ],
-  "GottenPage": [],
+  "GottenPage": [
+    "Page4"
+  ],
   "RecommendedFriends": [],
-  "visited": 7
+  "visited": 7,
+  "IsAriadneHintOn": true,
+  "S1HintList": [
+    "Laptop",
+    "Meds",
+    "Letter",
+    "6Hairpin",
+    "DrawerR_Wallet",
+    "ChooseChatName1",
+    "Books_Diary",
+    "visitPark",
+    "visitBarStreet",
+    "visitHospital"
+  ],
+  "S2HintList": [
+    "ClubTable_Geonwoo",
+    "Toilet_costomerF",
+    "ToiletPaper"
+  ],
+  "StaffroomHintList": [
+    "VIPlist",
+    "InStaffroom_VIPlist",
+    "InStaffroom_cctv",
+    "InStaffroom_Key",
+    "InStaffroom_Radio"
+  ],
+  "FindedMemoList": [
+    "memo_book",
+    "memo_phone",
+    "memo_letter"
+  ]
 }

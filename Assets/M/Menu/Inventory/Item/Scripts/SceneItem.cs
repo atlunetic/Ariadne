@@ -14,6 +14,7 @@ public class SceneItem : MonoBehaviour
         newItem.ItemType = _item.ItemType;
 
         image.sprite = Resources.Load<Sprite>("ItemImage/" + _item.itemName);
+        //image.sprite = Resources.Load<Sprite>("ItemImage/" + _item.itemName + "_0");
     }
 
     public item GetItem()

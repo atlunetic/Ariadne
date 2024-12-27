@@ -6,6 +6,7 @@ using Yarn.Unity;
 
 public class YarnMFunctions : MonoBehaviour
 {
+
     [YarnCommand("ChangeSceneTo")]
     public void ChangeSceneTo(string sceneName1, string sceneName2 = "")
     {
@@ -49,14 +50,15 @@ public class YarnMFunctions : MonoBehaviour
         SceneItem ItemToAdd = SceneItem.Find(ItemName);
         if (ItemToAdd != null)
         {
-            Debug.Log(ItemToAdd.newItem.itemName + " found.");
-            item newItem = ItemToAdd.GetItem();
-            Inventory.instance.Additem(newItem);
+            Debug.Log(ItemToAdd.newItem.itemName + " found, added by <<AddToInventory>>");
         }
         else
         {
             Debug.LogWarning("Item not found: " + ItemName);
         }
+
+        item newItem = ItemToAdd.GetItem();
+        Inventory.instance.Additem(newItem);
     }
 
     [YarnCommand("AddToInventory2")]
@@ -67,13 +69,13 @@ public class YarnMFunctions : MonoBehaviour
         if (ItemToAdd != null)
         {
             Debug.Log(ItemToAdd.newItem.itemName + " found.");
-            item newItem = ItemToAdd.GetItem();
-            Inventory.instance.Additem(newItem);
         }
         else
         {
             Debug.LogWarning("Item not found: " + ItemName);
         }
+        item newItem = ItemToAdd.GetItem();
+        Inventory.instance.Additem(newItem);
     }
 
 
@@ -140,13 +142,38 @@ public class YarnMFunctions : MonoBehaviour
     [YarnCommand("FinishedObj")]
     public void FinishedObjects(string ObjectName)
     {
-        GameManager.instance.FindedObjects.Add(ObjectName);
+
+        if (GameManager.instance.FindedObjects.Contains(ObjectName) == true)
+        {
+            Debug.Log(ObjectName + " already in FindedObjects list");
+        }
+        else
+        {
+            GameManager.instance.FindedObjects.Add(ObjectName);
+            Debug.Log(ObjectName + " added to FindedObjects list");
+        }
     }
 
     [YarnCommand("FinishedDialogue")]
     public void FinishedDialogue(string DialogueTitle)
     {
         GameManager.instance.FinishedDialogues.Add(DialogueTitle);
+    }
+
+
+    [YarnCommand("DelFinishedObj")]
+    public void DelFinishedObj(string ObjectName)
+    {
+        if (GameManager.instance.FindedObjects.Contains(ObjectName) == false)
+        {
+            Debug.Log("There is no " + ObjectName + " in FindedObjects");
+        }
+        else
+        {
+            GameManager.instance.FindedObjects.Remove(ObjectName);
+            Debug.Log(ObjectName + " in FindedObjects is Removed");
+        }
+        
     }
 
 
@@ -165,6 +192,7 @@ public class YarnMFunctions : MonoBehaviour
         InMemoryVariableStorage variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
         variableStorage.SetValue("$WaterBottle", GameManager.instance.SaengSoo);
     }
+
     [YarnCommand("setWaterbottle")]
     public void setWaterbottle(){
         InMemoryVariableStorage variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();

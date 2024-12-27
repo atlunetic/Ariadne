@@ -100,10 +100,10 @@ TextureImporter:
       name: Flashlight_0
       rect:
         serializedVersion: 2
-        x: 619
-        y: 322
-        width: 675
-        height: 675
+        x: 30
+        y: 27
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35d3185e0c5adb24c8fd4e7ccbb00813
-      internalID: -1504615833
+      spriteID: 41ebb39304a91ed489ed4d118a201b06
+      internalID: 308372820
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Flashlight_0: -1504615833
+      Flashlight_0: 308372820
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
