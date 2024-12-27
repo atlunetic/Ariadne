@@ -499,6 +499,8 @@ title: obj_customers
 			수상해….
 			…
 			저기요..!!
+			<<StopAudio All>
+			<<PlayAudio chapter3meetJiwon loop>>
 			뒤돌아본 D와 눈이 마주쳤다. //(스산한 BGM 추가)
 			초점없는 E의 눈과도.
 			순간 알 수 없는 공포감이 온몸을 스쳤다.
@@ -799,19 +801,7 @@ title: DontTellE
 그래...오지랖 부리지 말자.
 ...
 E는 신나게 춤추고 있는 사람들을 바라봤다.
-<<<<<<< Updated upstream
-
-<<UpdateAct 지수 CoJIsoo1>>
-지수:저는 먼저 가볼게요.
-<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
-E가 고개를 돌려 눈인사를 했다.
-<<Hide 클럽고객E>>
-<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
-<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
-
-=======
 … 누굴 찾고 있는 것 같은데?
->>>>>>> Stashed changes
 E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
 <<UpdateAct 지수 CoJIsoo2>>
 ...
@@ -3299,7 +3289,7 @@ title: obj_locker
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 <<Act 지수 Jisoo1 1.17 0.322 white>>
-<<PlayAudio HairpinSuccess 0.4>>
+<<PlayAudio lockeropenandclose>>
 어, 그냥 열리네?
 안이 비어있다.
 ...
@@ -3670,6 +3660,7 @@ title: GeonwooNote
 건우: 내가 안돕고 있다 생각해???
 건우: 하..
 건우: 자.
+<<PlayAudio handingoveranote>>
 건우: 누가 너한테 주라더라.
 건우 오빠가 건넨 것은 쪽지였다.
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
