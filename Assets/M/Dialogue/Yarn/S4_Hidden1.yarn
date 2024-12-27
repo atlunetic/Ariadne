@@ -191,7 +191,7 @@ title: Eunjaehiddenstory_5
 뭐? 조직원을 만나러 간다고?
 그게 무슨 말도 안되는...
 <<PlayAudio phonecall>>
-<color=gray>*연결이 되지 않아...</color>
+<color=grey>*연결이 되지 않아...</color>
 <<UpdateAct 은재 Uenjae1_reflect>>
 ...
 일단 기다려보자.
