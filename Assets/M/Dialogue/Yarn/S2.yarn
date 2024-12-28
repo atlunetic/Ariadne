@@ -787,7 +787,7 @@ title: letEknow
 	<<Hide 클럽고객E>>
 	//(이후 기본 복장으로 자동 변경)
 	//상호작용 종료 및 히든 스토리 해금 (초코톡에 클럽 고객E의 프로필이 생성됨)
-	<color=yellow>* 직원 복장 옷을 벗었다. *</color>
+	<color=yellow>* 직원 복장을 벗었다. *</color>
 	<<FinishedDialogue VisualNovelPrefab letEknow>>
 	<<OpenHiddenStory ChocoTalkController>>
 	<<SetCanvasTo VisualNovelPrefab false>>
@@ -814,7 +814,7 @@ E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
 
 <<PlayAudio Clotheschange>>
 //(이후 기본 복장으로 자동 변경)
-<color=yellow>* 직원 복장 옷을 벗었다. *</color>
+<color=yellow>* 직원 복장을 벗었다. *</color>
 
 <<Hide 지수>>
 
@@ -2363,10 +2363,10 @@ title: memory_ToiletPaper
 <<PlayAudio MemoryRecall 0.5>>
 //증거 촬영 시 돌아오는 기억: 지원이와 지수가 함께 마약 관련 뉴스를 보는 장면
 
-TV: 최근 해외에서 논란이 되고 있는 영상입니다.
-TV: 공중화장실에서 마약을 투여한 뒤...
-TV: 휴지에 주사기 바늘을 꽂아 닦는 경우가 있다고 하는데요.
-TV: ...
+<color=\#9fa2a4><i>TV: <color=\#9fa2a4><i>최근 해외에서 논란이 되고 있는 영상입니다.
+<color=\#9fa2a4><i>TV: <color=\#9fa2a4><i>공중화장실에서 마약을 투여한 뒤...
+<color=\#9fa2a4><i>TV: <color=\#9fa2a4><i>휴지에 주사기 바늘을 꽂아 닦는 경우가 있다고 하는데요.
+<color=\#9fa2a4><i>TV: <color=\#9fa2a4><i>...
 <<wait 1.0>>
 
 지수: 저게 뭐야..?
@@ -2869,17 +2869,17 @@ title: obj_radioStory
 
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
 <<PlayAudio Radio1 0.6>>
-<i>공지할게.. ... ..다.
+<color=\#9fa2a4><i>공지할게.. ... ..다.
 <<PlayAudio Radio2 0.6>>
-<i>요즘 ......를 빼가려고 하는 ..들이 많아졌다.
+<color=\#9fa2a4><i>요즘 ......를 빼가려고 하는 ..들이 많아졌다.
 <<PlayAudio Radio3 0.6>>
-<i>어제도 ....가 .....해서 가둬두는 일이 생겼고...
+<color=\#9fa2a4><i>어제도 ....가 .....해서 가둬두는 일이 생겼고...
 <<PlayAudio Radio4 0.6>>
-<i>....보안을 강화할 필...가 있으니..
+<color=\#9fa2a4><i>....보안을 강화할 필...가 있으니..
 <<PlayAudio Radio5 0.6>>
-<i>이 ...를 듣고 꼭 .....
+<color=\#9fa2a4><i>>이 ...를 듣고 꼭 .....
 <<PlayAudio Radio6 0.6>>
-<i>기억해야 ....</i>
+<color=\#9fa2a4><i>기억해야 ....
 <<Hide Radio>>
 <<Hide DBG>>
 <<wait 1.0>>
@@ -2916,7 +2916,7 @@ title: obj_radioStory
 <<wait 1.0>>
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
 <<PlayAudio Radio2>>
-<i>그럼 ... ..하도록 하자. 이만.</i>
+<color=\#9fa2a4><i>그럼 ... ..하도록 하자. 이만.
 <<AriadneHintOff PhoneController>>
 <<wait 1.0>>
 무전이 끊겼다.
@@ -3531,10 +3531,10 @@ title: IgnoreE
 메시지가 온다.
 
 //텍스트로 진행
-<i>'수진이 아빠. 애들 봐서라도 이제 정신 좀 차리면 안될까?'
-<i>'애들도 알 거 아는 나이야. 자기 약에 빠져 사는 걸 모르겠어?'
-<i>'나도 옆에서 계속 마음 졸이는 거 그만하고 싶어.'
-<i>'약 안 끊을 거면 우리 이혼하자.'
+<color=\#9fa2a4><i>'수진이 아빠. 애들 봐서라도 이제 정신 좀 차리면 안될까?'
+<color=\#9fa2a4><i>'애들도 알 거 아는 나이야. 자기 약에 빠져 사는 걸 모르겠어?'
+<color=\#9fa2a4><i>'나도 옆에서 계속 마음 졸이는 거 그만하고 싶어.'
+<color=\#9fa2a4><i>'약 안 끊을 거면 우리 이혼하자.'
 <<wait 1.0>>
 
 ...
