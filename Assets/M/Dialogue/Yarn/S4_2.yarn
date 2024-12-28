@@ -6,7 +6,6 @@
 //지수7
 //화면 암전 후 전환. 병실 이미지
 <<ChangeSceneTo VisualNovelPrefab s4_1_Hospital>>
-<<PlayAudio HospitalBGM 0.6 loop>>
 <<Act 지수 Jisoo8 1.17 0.322 black>>
 …여긴 어디지?
 ….
@@ -20,7 +19,7 @@
 간호사: 환자분….
 <<Hide 간호사>>
 //우당탕당~ 사운드
-<<PlayAudio noise>>
+<<PlayAudio noise 0.8>>
 <<UpdateAct 지수 Jisoo9>>
 머리가 지끈거려.
 ….
@@ -626,8 +625,9 @@ title: normal_ending
 아리아드네:이제 아프지마.
 //화면 암전 후 전환. 병실 이미지
 <<ChangeSceneTo VisualNovelPrefab s4_1_Hospital>>
-<<PlayAudio normalEnding 0.6 loop>>
+<<BGoff SceneManager>>
 <<Act 지수 Jisoo8 1.17 0.322 black>>
+<<PlayAudio normalEnding 0.6>>
 …여긴 어디지?
 ….
 병원인가…?
@@ -637,7 +637,7 @@ title: normal_ending
 간호사: 어…!
 간호사: 환자분….
 <<Hide 간호사>>
-<<PlayAudio noise>>
+<<PlayAudio noise 0.8>>
 //우당탕당~ 사운드
 <<UpdateAct 지수 Jisoo9>>
 머리가 지끈거려.
@@ -770,7 +770,7 @@ title: normal_drug
 아리아드네: 제발···. 다시 내 손을 잡아···.
 
 //심정지 삐-소리
-<<PlayAudio Dead 0.7>>
+<<PlayAudio Dead 0.2>>
 <<FadeIn>>
 <<DrawFadeIn Ending7 0.75 0.75>>
 <<wait  4.0>>
