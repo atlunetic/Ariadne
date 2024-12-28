@@ -1,7 +1,7 @@
 ﻿title: Geonwoohiddenstory_1
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio geonwoodaily 1.0 loop>>
+<<PlayAudio geonwoodaily 0.15 loop>>
 <<Scene H2)school>>
 <<Act 건우친구 NPC_G_friend 0.322 0.227 green>>
 <<Act 교복건우 s_Geonwoo1 1.17 0.322 black>>
@@ -85,7 +85,7 @@ title: Geonwoohiddenstory_3
 ---
 <<Scene H2)napgoldang>>
 <<Act 교복건우 s_Geonwoo1 1.17 0.322 black>>
-<<PlayAudio geonwoosadday 1.0 loop>>
+<<PlayAudio geonwoosadday 0.15 loop>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
 
@@ -180,7 +180,7 @@ title: Geonwoohiddenstory_5
 
 //계속 울리는 전화 소리
 
-<<PlayAudio geonwoobellring>>
+<<PlayAudio geonwoobellring 0.2>>
 쓸데없는 전화들..
 ...
 귀찮아...
@@ -261,7 +261,7 @@ title: Geonwoohiddenstory_7
 
 이것까지 하면.. 더 넓은 집으로 이사갈 수 있겠다.
 //바스락 소리
-<<PlayAudio Clotheschange>>
+<<PlayAudio Clotheschange 0.2>>
 <<wait 1.0>>
 
 벌써 가지러 왔나?? 빨리 자리를 피해야겠다.
@@ -305,7 +305,7 @@ title: Geonwoohiddenstory_7
 퀭한 눈가에 초점이 없던 눈동자.
 ...
 나는 바로 지원이에게 전화를 걸었다.
-<<PlayAudio PhonecallGang>>
+<<PlayAudio PhonecallGang 0.1>>
 //전화 다이얼 소리
 <<wait 2.0>>
 <<StopAudio PhonecallGang>>
@@ -350,22 +350,22 @@ title: Geonwoohiddenstory_8
 지금이라도 바로잡아야 하는 걸까.
 
 //문자오는 소리
-<<PlayAudio PhoneAlarm>>
+<<PlayAudio PhoneAlarm 0.2>>
 <color=\#9fa2a4><i>등록금 납부 마감일입니다. 다음 학기 재학생들은 반드시 등록금을 납부해주시기 바랍니다.</color>
 <<UpdateAct 건우 Geonwoo5>>
 건우: 하... 제발..
 
 <<wait 1.0>>
 //문자오는 소리
-<<PlayAudio PhoneAlarm>>
+<<PlayAudio PhoneAlarm 0.2>>
 <color=\#9fa2a4><i>학생~ 월세 아직 안냈던데? 나도 사정이 있어서 더 이상 봐주기는 힘들어요~</color>
 건우: 엄마... 나 조금만.. 조금만 봐주라.
 
 <<wait 1.0>>
 //문자오는 소리
-<<PlayAudio PhoneAlarm>>
+<<PlayAudio PhoneAlarm 0.2>>
 <color=\#9fa2a4><i>야 너 아는 동생? 이라던 애, 우리 단골된 거 아냐? 돈이 많은 친군가봐?</color>
-<<PlayAudio PhoneAlarm>>
+<<PlayAudio PhoneAlarm 0.2>>
 <color=\#9fa2a4><i>아, 그리고 이번 건도 방금 돈 보냈으니까 확인해보고~ 건수 또 생기면 연락줄게</color>
 <<UpdateAct 건우 Geonwoo4_reflect>>
 <<Fade black 0.0 1.0 2.0>>

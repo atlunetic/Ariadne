@@ -3,7 +3,7 @@
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Scene H1)park>>
-<<PlayAudio OtherPlaces 1.0 loop>>
+<<PlayAudio OtherPlaces 0.15 loop>>
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 <<Act 지원 Jiwon8_smile 0.322 0.227 green>>
 지수: 아~ 우리가 스무 살이래. 말이 돼?
@@ -53,7 +53,7 @@
 지원: 어. 알면서 왜 묻냐.
 
 <<wait 1.0>>
-<<PlayAudio canopen 0.5>>
+<<PlayAudio canopen 0.3>>
 <<wait 0.5>>
 지수: 자. 받아.
 
@@ -88,7 +88,7 @@
 지원: 괜찮네. 포장해서 집에서 먹을까?
 지수: 좋아. 내가 가자마자 옷 세탁해줄게.
 지원: 그래. 가자.
-<<PlayAudio laughing 0.6>>
+<<PlayAudio laughing 0.15>>
 <<Fade black 0.0 1.0 2.0>>
 <<wait 5.0>>
 <<HideAll>>

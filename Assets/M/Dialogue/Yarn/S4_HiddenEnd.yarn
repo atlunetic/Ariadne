@@ -1,15 +1,15 @@
 title: HiddenEnding
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio threadbracelet 1.0 loop>>
+<<PlayAudio threadbracelet 0.2 loop>>
 <<Scene H3)jiwon_room>> // 지원의 방 배경
-<<PlayAudio KnockingSound>>
+<<PlayAudio KnockingSound 0.2>>
 <<Act 지원 Jiwon9_resting 1.17 0.322 black>>
 지원: 누구세요?
 지수: 난데~
 지원: 왜?
 지수: 잠깐 들어갈게~
-<<PlayAudio DoorOpenandClose>>
+<<PlayAudio DoorOpenandClose 0.2>>
 <<Fade black 0.0 1.0 2.0>>
 <<FadeIn 2.0>>
 
@@ -72,7 +72,7 @@ title: HiddenEnding
 지수: 작전 성공~ 절대 빼지 마라~
 
 <<Hide 지수>>
-<<PlayAudio DoorOpenandClose>>
+<<PlayAudio DoorOpenandClose 0.2>>
 
 <<UpdateAct 지원 Jiwon8_smile>>
 지원: 귀찮아 죽겠어 정말...

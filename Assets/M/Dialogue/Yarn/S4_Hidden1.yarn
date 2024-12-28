@@ -3,7 +3,7 @@
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Scene H1)company>>
-<<PlayAudio Eunjaedaily 0.5 loop>>
+<<PlayAudio Eunjaedaily 0.15 loop>>
 <<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
 하암~ 오늘은 평화롭네.
 
@@ -36,7 +36,7 @@ title: Eunjaehiddenstory_2
 <<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
-<<PlayAudio EunjaemeetJiwon 1.0 loop>>
+<<PlayAudio EunjaemeetJiwon 0.2 loop>>
 저기 있는 사람인가? 겁에 질려 보이네.
 
 은재: 안녕하세요, 메일 주신 지원씨 맞으세요?
@@ -82,7 +82,7 @@ title: Eunjaehiddenstory_2
 풀이 죽어 보여..
 은재: 아, 이런 말 해놓고 할 소리는 아니긴 한데...
 은재: 밥은 먹었어요?
-<<PlayAudio stomachgrowling>>
+<<PlayAudio stomachgrowling 0.1>>
 지원: ... 
 
 <<wait 0.5>>
@@ -150,7 +150,7 @@ title: Eunjaehiddenstory_4
 <<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
-<<PlayAudio Eunjaedaily 0.5 loop>>
+<<PlayAudio Eunjaedaily 0.15 loop>>
 
 이후로 매일 같이 지원 씨와 연락을 주고 받았다.
 밥을 챙겨 먹었는지, 잠은 잘 잤는지 물어보는 게 일상이 됐다.
@@ -163,7 +163,7 @@ title: Eunjaehiddenstory_4
 미로 속을 평생 헤매야 하는 고통이니까.
 잠깐이나마 출구가 되어주고 싶었다.
 
-<<PlayAudio PhoneAlarm 3.0>>
+<<PlayAudio PhoneAlarm 0.2>>
 <<UpdateAct 은재 Uenjae3_reflect>>
 앗, 오늘도 같이 밥 먹자고 왔네. 좋다.
 <<UpdateAct 은재 Uenjae1_reflect>>
@@ -189,12 +189,12 @@ title: Eunjaehiddenstory_5
 지원이한테 연락도 못했고.
 
 <<wait 0.5>>
-<<PlayAudio Eunjaeaftermessage>>
-<<PlayAudio PhoneAlarm>>
+<<PlayAudio Eunjaeaftermessage 0.15>>
+<<PlayAudio PhoneAlarm 0.2>>
 <<UpdateAct 은재 Uenjae3_reflect>>
 어, 지원이다.
 <<StopAudioAll>>
-<<PlayAudio Eunjaeaftermessage 1.0 loop>>
+<<PlayAudio Eunjaeaftermessage 0.15 loop>>
 <<wait 1.0>>
 <<UpdateAct 은재 Uenjae1_reflect>>
 ...?
@@ -206,7 +206,7 @@ title: Eunjaehiddenstory_5
 <<UpdateAct 은재 Uenjae2_reflect>>
 뭐? 조직원을 만나러 간다고?
 그게 무슨 말도 안되는...
-<<PlayAudio phonecall>>
+<<PlayAudio phonecall 0.1>>
 <<wait 3.0>>
 <<StopAudio phonecall>>
 <color=\#9fa2a4><i>연결이 되지 않아...</color>
@@ -236,7 +236,7 @@ title: Eunjaehiddenstory_6
 연락해보는 게 맞는 걸까.
 
 <<wait 0.5>>
-<<PlayAudio phonecall>>
+<<PlayAudio phonecall 0.1>>
 <<wait 5.0>>
 <<Act 지수 black_Jisoo_reflect 0.322 0.227 black>>
 <color=\#9fa2a4><i>??</color>: <color=\#9fa2a4><i>여보세요?</color>
@@ -259,9 +259,9 @@ title: Eunjaehiddenstory_6
 
 <<wait 0.5>>
 <<Hide 지수>>
-<<PlayAudio endingacall>>
+<<PlayAudio endingacall 0.1>>
 어...
-<<PlayAudio phonecall>>
+<<PlayAudio phonecall 0.1>>
 <<wait 3.0>>
 <<StopAudio phonecall>>
 
@@ -285,7 +285,7 @@ title: Eunjaehiddenstory_7
 <<FadeIn 1.0>>
 <<wait 1.0>>
 
-<<PlayAudio MemoInsert>>
+<<PlayAudio MemoInsert 0.2>>
 어, 메일이 왔다.
 
 <color=\#9fa2a4><i>안녕하세요, 전에 xx 관련 메일 드렸던 사람입니다.</color>
@@ -310,7 +310,7 @@ title: Eunjaehiddenstory_8
 <<Scene H1)police1>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
-<<PlayAudio Chapter4conference 1.0 loop>>
+<<PlayAudio Chapter4conference 0.15 loop>>
 
 벌써 다른 기자들이 많이 와 있네.
 
@@ -356,21 +356,21 @@ title: Eunjaehiddenstory_9
 
 <<FadeIn 1.0>>
 <<wait 1.0>>
-<<PlayAudio Eunjaeaftermessage 1.0 loop>>
+<<PlayAudio Eunjaeaftermessage 0.15 loop>>
 
 발표도 끝났으니 이제 돌아가자.
 
 그나저나 지원아... 제발 연락 좀 받아라... 제발.
 
 <<wait 1.0>>
-<<PlayAudio geonwoobellring>>
+<<PlayAudio geonwoobellring 0.2>>
 <<UpdateAct 은재 Uenjae2_reflect>>
 지원인가?
 <<wait 0.5>>
 아... 모르는 번호네.
 
 <<StopAudio geonwoobellring>>
-<<PlayAudio endingacall>>
+<<PlayAudio endingacall 0.1>>
 <<UpdateAct 은재 Uenjae1_reflect>>
 은재: 네 여보세요?
 <<wait 0.5>>
@@ -382,7 +382,7 @@ title: Eunjaehiddenstory_9
 <<UpdateAct 은재 Uenjae2_reflect>>
 ...
 <<StopAudio Eunjaeaftermessage>>
-<<PlayAudio angryeunjae 1.0 loop>>
+<<PlayAudio angryeunjae 0.2 loop>>
 <<Fade black 0.0 1.0 2.0>>
 <<wait 2.0>>
 //화면 전환
