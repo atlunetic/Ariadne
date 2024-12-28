@@ -34,8 +34,8 @@
 
 <<wait 1.0>>
 <<UpdateAct 지원 Jiwon9_resting>>
-<<UpdateAct 지수 Jisoo4>>
 지원: 아, 맞다. 다들 술 못 마시더라. 마지막에 나 혼자 남았어.
+<<UpdateAct 지수 Jisoo4>>
 지수: 헐 뭐야? 대박이다. 너 그렇게 잘 마셔? 다음에 나랑도 마시자.
 지원: 그러던가.
 
@@ -53,11 +53,13 @@
 지원: 어. 알면서 왜 묻냐.
 
 <<wait 1.0>>
+<<PlayAudio canopen 0.5>>
+<<wait 0.5>>
 지수: 자. 받아.
+
 지원: 고맙다.
 
 <<wait 1.0>>
-<<PlayAudio canopen>>
 <<UpdateAct 지수 Jisoo4>>
 지수: 어, 어어....
 
@@ -86,7 +88,10 @@
 지원: 괜찮네. 포장해서 집에서 먹을까?
 지수: 좋아. 내가 가자마자 옷 세탁해줄게.
 지원: 그래. 가자.
-<<PlayAudio laughing>>
+<<PlayAudio laughing 0.6>>
+<<Fade black 0.0 1.0 2.0>>
+<<wait 5.0>>
 <<HideAll>>
+<<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===

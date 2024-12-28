@@ -11,15 +11,15 @@
 건우: 관심없다~
 ???: 야 좀 빼지말고~ 몇번째냐 진짜..
 건우: 이번엔 진짜 일정 있어. 나 먼저 간다~
-???: 야!!
 <<Hide 교복건우>>
+???: 야!!
+<<wait 0.5>>
 ???: 저 새끼는.. 반반하게 생겨가지고 얼굴 쓸 줄을 몰라.
 
-<<HideAll>>
 
 <<Fade black 0.0 1.0 2.0>>
-<<wait 2.0>>
-<<StopAudioAll>>
+<<wait 3.0>>
+<<HideAll>>
 //화면이 검게 페이드인 되었다가 다음 장면으로 페이드
 
 <<jump Geonwoohiddenstory_2>>
@@ -28,12 +28,13 @@
 
 title: Geonwoohiddenstory_2
 ---
-<<PlayAudio geonwoodaily 1.0 loop>>
-<<FadeIn 2.0>>
-
 <<Scene H2)cafe>>
 <<Act 교복지수 s_Jisoo1 0.322 0.227 green>>
 <<Act 교복건우 s_Geonwoo1 1.17 0.322 black>>
+<<FadeIn 1.0>>
+<<wait 1.0>>
+
+
 지수: 오빠 못 본 사이에 더 큰 것 같다???
 <<Hide 교복지수>>
 <<Act 교복지원 s_Jiwon1 0.322 0.227 green>>
@@ -61,61 +62,71 @@ title: Geonwoohiddenstory_2
 <<Hide 교복지원>>
 <<Act 교복지수 s_Jisoo1 0.322 0.227 green>>
 지수: 오~ 오빠 노릇 한다 이거지~
+건우: 늦겠다~ 가자.
 <<Hide 교복지수>>
 <<Hide 교복건우>>
+
+<<wait 1.0>>
 <<Act 교복지원 s_Jiwon1 0.322 0.227 green>>
-지원: …
+지원: ...
 <<wait 2.0>>
-지원: …고마워.
+지원: ...고마워.
+
+<<Fade black 0.0 1.0 2.0>>
+<<wait 3.0>>
 <<HideAll>>
 <<StopAudioAll>>
-<<Fade black 0.0 1.0 2.0>>
+<<wait 1.0>>
 <<jump Geonwoohiddenstory_3>>
 
 ===
 
 title: Geonwoohiddenstory_3
 ---
-<<FadeIn 2.0>>
-<<PlayAudio geonwoosadday 1.0 loop>>
 <<Scene H2)napgoldang>>
-
 <<Act 교복건우 s_Geonwoo1 1.17 0.322 black>>
-…
+<<PlayAudio geonwoosadday 1.0 loop>>
+<<FadeIn 1.0>>
+<<wait 1.0>>
+
+...
 엄마.
-…
+...
 나 평생 엄마가 그리울 줄 알았는데.
 너무 외로울 줄 알았는데.
 엄마가 보내준 거지?
-엄마가 보내준 착한 동생들이랑, 아저씨 아줌마랑…
+엄마가 보내준 착한 동생들이랑, 아저씨 아줌마랑...
 <<UpdateAct 교복건우 s_Geonwoo2>>
 잘 지낼게. 너무 걱정하지마.
 나 나중에 돈 많이 벌어서, 꼭 은혜 갚을거야.
 엄마한테 자랑스러운 아들이 될게. 약속해.
-<<HideAll>>
-<<StopAudioAll>>
+
 <<Fade black 0.0 1.0 2.0>>
+<<wait 3.0>>
+<<HideAll>>
 <<jump Geonwoohiddenstory_4>>
 ===
 
 title: Geonwoohiddenstory_4
 ---
-<<FadeIn 2.0>>
+
 <<Scene H1)park>>
-<<PlayAudio geonwoosadday 1.0 loop>>
 <<Act 교복건우 s_Geonwoo2 1.17 0.322 black>>
 <<Act 교복지수 s_Jisoo3 0.322 0.227 green>>
+<<FadeIn 1.0>>
+<<wait 1.0>>
+
 건우: 무슨 일인데 이렇게 급하게 보자고 한거야?
-지수: 그.. 저기 오빠…
+지수: 그.. 저기 오빠...
 <<UpdateAct 교복건우 s_Geonwoo1>>
 건우: 뭔데.. 뭔데 이렇게 뜸을 들여? 돈 필요해?
 지수: 아니 그게 아니고.. 사실..
-지수: …
-지수: …우리 이사가. 좀 멀리.
+지수: ...
+지수: ...우리 이사가. 좀 멀리.
 건우: 뭐? 언제 가는데?
-지수: 다음주에…
-건우: 얼마 안남았네…
-지수: 오빠, 미안해…
+지수: 다음주에...
+건우: 얼마 안남았네...
+지수: 오빠, 미안해...
 <<UpdateAct 교복건우 s_Geonwoo2>>
 건우: 이게 미안할 일이야? 괜찮아~ 자주 연락하면 되지. 가서도 잘 지내고..
 <<UpdateAct 교복지수 s_Jisoo1>>
@@ -124,137 +135,153 @@ title: Geonwoohiddenstory_4
 <<UpdateAct 교복지수 s_Jisoo3>>
 지수: 오빠 얼굴 못 보겠다고 같이 안오려 해서.. 나혼자 왔어.
 <<UpdateAct 교복건우 s_Geonwoo3>>
-건우: 그래… 뭐 지원이한테도 잘 지내라고 전해줘.
+건우: 그래... 뭐 지원이한테도 잘 지내라고 전해줘.
 <<UpdateAct 교복지수 s_Jisoo1>>
 지수: 응! 나 이만 가볼게.
 건우: 어? 어. 어 그래.
 <<Hide 교복지수>> 
 <<UpdateAct 교복건우 s_Geonwoo1>>
 지수가 갔다.
-갔다…
+갔다...
 괜찮지 않다.
 슬프다.
 갑자기 이 세상에 혼자 남겨진 것 같은 공허함이 내 주변을 맴돌았다.
 
 //검은 화면
-<<HideAll>>
 <<Fade black 0.0 1.0 2.0>>
+<<wait 2.0>>
+<<HideAll>>
 
 그 이후로 종종 오는 지수와 지원이의 연락은 보지 않았다.
 홀로 남은 나에게 친구가 되자며 말을 건 사람들은 나의 겉모습만 보고 다가온 것이었고,
 그들의 친근함은 나를 이용하려는 가식에 불과했다.
 외롭고 쓸쓸했다.
 엄마에게 전했던 다짐은 더 이상 소용이 없었다.
-…
+...
 난 그런 생활을 견디지 못하고 학교를 자퇴했다.
 그리고 미친듯이 돈을 벌었다.
 돈을 많이 벌어서 할머니댁에 있는 어린 동생을 데려올 계획이었다.
 그렇게 난 금세 어른이 되었다.
-<<StopAudioAll>>
+
+<<wait 2.0>>
+<<HideAll>>
+
 <<jump Geonwoohiddenstory_5>>
 
 ===
 
 title: Geonwoohiddenstory_5
 ---
-<<FadeIn 2.0>>
-<<PlayAudio geonwoosadday 1.0 loop>>
+
 <<Scene H2)geonwoo_room>>
 <<Act 건우 Geonwoo2_reflect 1.17 0.322 black>>
+<<FadeIn 1.0>>
+<<wait 1.0>>
+
 //계속 울리는 전화 소리
 
 <<PlayAudio geonwoobellring>>
-…
-귀찮아…
+쓸데없는 전화들..
+...
+귀찮아...
 <<StopAudio geonwoobellring>>
 건우: 뭔데?
-???: 야 왤케 전화를 안받아~ 여기 물 개좋다니까 진짜? 좀 나와라 응?
+<color=\#9fa2a4><i>???</color>: <color=\#9fa2a4><i>야 왤케 전화를 안받아~ 여기 물 개좋다니까 진짜? 좀 나와라 응?</color>
 건우: 관심 없다고 했잖아. 나 곧 일하러 가야돼. 끊어라
-???: 아아아 잠시만!! 너 아직도 그 쥐꼬리만한 돈주는 알바 다니냐?
+<color=\#9fa2a4><i>???</color>: <color=\#9fa2a4><i>아아아 잠시만!! 너 아직도 그 쥐꼬리만한 돈주는 알바 다니냐?</color>
 <<UpdateAct 건우 Geonwoo5>>
 건우: 너 뭐라고 했냐?
-???: 아니~ 개꿀 알바 있는데 소개시켜주려그랬지~ 너 동생도 다시 데려와야한다며. 돈 많이 필요한 거 아니야?
+<color=\#9fa2a4><i>???</color>: <color=\#9fa2a4><i>아니~ 개꿀 알바 있는데 소개시켜주려그랬지~ 너 동생도 다시 데려와야한다며. 돈 많이 필요한 거 아니야?</color>
 <<UpdateAct 건우 Geonwoo2_reflect>>
 건우: 무슨 알반데?
-???: 그냥 물건 배달하는거~ 너 배달 경력도 있으니까 특별히 너한테만 알려주는거야.
-???: 아, 이럴게 아니라 일단 만나서 얘기하자. 시간 언제 돼?
+<color=\#9fa2a4><i>???</color>: <color=\#9fa2a4><i>그냥 물건 배달하는거~ 너 배달 경력도 있으니까 특별히 너한테만 알려주는거야.</color>
+<color=\#9fa2a4><i>???</color>: <color=\#9fa2a4><i>아, 이럴게 아니라 일단 만나서 얘기하자. 시간 언제 돼?</color>
+
 <<Fade black 0.0 1.0 2.0>>
+<<wait 5.0>>
 <<HideAll>>
-<<StopAudioAll>>
 <<jump Geonwoohiddenstory_6>>
 ===
 
 title: Geonwoohiddenstory_6
 ---
-<<FadeIn 2.0>>
-<<PlayAudio geonwoosadday 1.0 loop>>
+
 <<Scene H2)napgoldang>>
 <<Act 건우 Geonwoo2_reflect 1.17 0.322 black>>
-…
+<<FadeIn 1.0>>
+<<wait 1.0>>
+
+...
 엄마. 오랜만이지.
 이거 봐. 나 대학교 붙었다?
-…
+...
 나 돈도 많이 벌었어. 그때 약속했잖아.
 은혜 갚을 거라고.
-갚아야하는 사람이 사라져서 돈만 남긴 했지만….
-그래도 동생도 데려왔고…
+갚아야하는 사람이 사라져서 돈만 남긴 했지만..
+그래도 동생도 데려왔고...
 다 잘 된거지? 그렇다고 말해줘..
 나 잘하고 있는거지?
-…
-…
+...
+...
 ???: 오..빠?
-…?
+..?
 <<Act 지원 Jiwon7 0.322 0.227 green>>
 지원: 오빠!
 <<UpdateAct 건우 Geonwoo4_reflect>>
-건우: 너… 여길 어떻게…
+건우: 너... 여길 어떻게..
 <<UpdateAct 지원 Jiwon8_smile>>
-지원: 잘 지냈어? 왜 그동안 납골당 안왔어. 오빠랑 그때 인사 못한게 너무 후회되어서 매년 왔었는데… 뭐하고 지내?
-<<UpdateAct 건우 Geonwoo2_reflect>>
-건우: …
+지원: 잘 지냈어? 왜 그동안 납골당 안왔어. 오빠랑 그때 인사 못한게 너무 후회되어서 매년 왔었는데... 뭐하고 지내?
+<<UpdateAct 건우 Geonwoo5>>
+건우: ...
 건우: 다음에 얘기하자. 급한 일이 있어서.
 <<Hide 건우>>
+<<UpdateAct 지원 Jiwon7>>
 지원: 오빠!!!
 <<Hide All>>
 //블랙화면으로 페이드
 <<Fade black 0.0 1.0 2.0>>
 왜였을까. 순간 지원이가 너무 미웠다.
 아니, 그 시절의 나를 혼자 두고 가버린 사람들이 원망스러웠다.
-…
+...
 그래, 돈을 열심히 벌자.
 돈이 많으면 외롭지 않을거야.
+
+<<wait 2.0>>
 <<HideAll>>
-<<StopAudioAll>>
 <<jump Geonwoohiddenstory_7>>
 ===
 
 title: Geonwoohiddenstory_7
 ---
-<<FadeIn 2.0>>
-<<PlayAudio geonwoosadday 1.0 loop>>
+
 <<Scene H2)golmok>>
 <<Act 건우 Geonwoo2_reflect 1.17 0.322 black>>
+<<FadeIn 1.0>>
+<<wait 1.0>>
+
 이것까지 하면.. 더 넓은 집으로 이사갈 수 있겠다.
 //바스락 소리
 <<PlayAudio Clotheschange>>
+<<wait 1.0>>
 
 벌써 가지러 왔나?? 빨리 자리를 피해야겠다.
 <<Act 지수 black_Jisoo_reflect 0.322 0.227 green>>
 ???: 건우 오빠?
 <<UpdateAct 건우 Geonwoo4_reflect>>
 믿을 수가 없었다.
-내 눈 앞에는…
+내 눈 앞에는...
 내가 방금 두었던 것을 손에 쥐고 해맑게 나를 부르는
 지수가 있었다.
 <<UpdateAct 지수 Jisoo4_reflect>>
 지수: 아..!
 자신도 모르게 날 불렀는지 무척 당황한 표정으로 서있던 지수는 황급히 손을 뒤로 숨겼다.
-지수: 아.. 하하.. 진짜 오랜만이네,… 잘 지냈어?
+<<UpdateAct 지수 Jisoo6_reflect>>
+지수: 아.. 하하.. 진짜 오랜만이네.. 잘 지냈어?
 건우: 너.. 뭐야?
 <<UpdateAct 지수 Jisoo1_reflect>>
 지수: 뭐가?
-<<UpdateAct 건우 Geonwoo2_reflect>>
-건우: …
+<<UpdateAct 건우 Geonwoo5>>
+건우: ...
 그렇게 숨막히는 정적이 이어졌다.
 <<UpdateAct 지수 Jisoo2_reflect>>
 지수: 하.. 오빠. 그래. 솔직히 말할게. 오빠가 생각하는 거 맞아.
@@ -262,88 +289,98 @@ title: Geonwoohiddenstory_7
 지수: 근데 나도 오빠가 이런 일을 하는 줄은 몰랐네.
 건우: 지원이랑 부모님은 아셔?
 지수: 오빠야말로 아셔? 가족들 다 아냐고.
-건우: 너 어쩌다가… 하..
+건우: 너 어쩌다가... 하..
 지수: 오빠. 이 사실 알려져봤자 손해보는 건 우리잖아. 우리 그냥 비밀로 하고 지나가면 안될까?
-지수: 뭐 가끔씩 마주칠 수 있겠지만, 아는 사이면 오히려 좋을 수도 있고.. 또…
-<<UpdateAct 건우 Geonwoo5>>
+지수: 뭐 가끔씩 마주칠 수 있겠지만, 아는 사이면 오히려 좋을 수도 있고.. 또...
+
 건우: 뭐라고? 너 제정신이야 지금?
 <<UpdateAct 지수 Jisoo3_reflect>>
 지수: 그럼 뭐 어떡할건데. 다 말하고 벌이라도 받자고?
-<<UpdateAct 건우 Geonwoo2_reflect>>
-건우: 아니…
+
+건우: 아니...
 <<UpdateAct 지수 Jisoo6_reflect>>
 지수: 그럼 동의한 걸로 알고, 나 바빠서 먼저 가볼게.
 <<Hide 지수>>
-<<UpdateAct 건우 Geonwoo5>>
 방금 마주친 건, 내가 알던 지수가 아니었다.
 퀭한 눈가에 초점이 없던 눈동자.
-<<UpdateAct 건우 Geonwoo2_reflect>>
-…
+...
 나는 바로 지원이에게 전화를 걸었다.
 <<PlayAudio PhonecallGang>>
 //전화 다이얼 소리
-지원: 오빠? 무슨일이야?
-건우: 어 지원아 그게 지수가…
-지원: 김지수? 걔 또 뭐 사고 쳤어?
+<<wait 2.0>>
+<<StopAudio PhonecallGang>>
+<<Act 지원 JIwon3_fear 0.322 0.227 black>>
+<color=\#9fa2a4><i>지원</color>: <color=\#9fa2a4><i>오빠? 무슨일이야?</color>
+건우: 어 지원아 그게 지수가...
+<color=\#9fa2a4><i>지원</color>: <color=\#9fa2a4><i>김지수? 걔 또 뭐 사고 쳤어?</color>
+<<UpdateAct 건우 Geonwoo4_reflect>>
 건우: 이미 알고 있어?
-지원: 뭘? 말도 마. 걔 요즘 집에도 잘 안들어오고 연락도 잘 안돼.
+<color=\#9fa2a4><i>지원</color>: <color=\#9fa2a4><i>뭘? 말도 마. 걔 요즘 집에도 잘 안들어오고 연락도 잘 안돼.</color>
 건우: 아니 방금 지수를 만났는데,
 <<UpdateAct 건우 Geonwoo5>>
 순간, 비좁은 방 안에서 날 기다리고 있는 동생과
 내가 힘들게 버텨왔던 대학 생활과, 그리고.
-진실을 고백한 이후의 것들이 떠올랐다.
-지원: 오빠? 왜 말을 하다 말아.
+진실을 고백한다면.. 벌어질 상황들이 떠올랐다.
+<color=\#9fa2a4><i>지원</color>: <color=\#9fa2a4><i>오빠? 왜 말을 하다 말아.</color>
 <<UpdateAct 건우 Geonwoo3_reflect>>
 건우: 아, 그.. 잘 지내는 것 같더라. 너 얘길 안하길래, 둘이 사이 안좋나 싶어서.. 그래서 전화했어.
-지원: 몰라. 성인 되니까 이젠 남이다 이거지. 무튼, 오빠! 자주 좀 연락해. 저번에 마주치고 한번도 연락 안하더니만.
+<color=\#9fa2a4><i>지원</color>: <color=\#9fa2a4><i>몰라. 성인 되니까 이젠 남이다 이거지. 무튼, 오빠! 자주 좀 연락해. 저번에 마주치고 한번도 연락 안하더니만.</color>
 <<UpdateAct 건우 Geonwoo2_reflect>>
 건우: 어... 어 그래. 다음에 또 연락할게.
+
+
 <<Fade black 0.0 1.0 2.0>>
+<<wait 3.0>>
 <<HideAll>>
-<<StopAudioAll>>
 <<jump Geonwoohiddenstory_8>>
 ===
 
 title: Geonwoohiddenstory_8
 ---
-<<FadeIn 2.0>>
-<<PlayAudio geonwoosadday 1.0 loop>>
+
 <<Scene H2)geonwoo_room>>
 <<Act 건우 Geonwoo2_reflect 1.17 0.322 black>>
+<<FadeIn 1.0>>
+<<wait 1.0>>
+
 수많은 후회들 때문에 어지러웠다.
 왜 그날, 날 혼자 두고 가지 말라고
 같이 있어달라고 말하지 못했을까.
 잘못된 일임을 알면서도 왜 멈추지 못했을까.
 지금이라도 바로잡아야 하는 걸까.
 
-//문자오는 소리<<PlayAudio PhoneAlarm>>
-*등록금 납부 마감일입니다. 다음 학기 재학생들은 반드시 등록금을 납부해주시기 바랍니다.*
-
 //문자오는 소리
 <<PlayAudio PhoneAlarm>>
-
-*학생~ 월세 아직 안냈던데? 나도 사정이 있어서 더 이상 봐주기는 힘들어요~*
+<color=\#9fa2a4><i>등록금 납부 마감일입니다. 다음 학기 재학생들은 반드시 등록금을 납부해주시기 바랍니다.</color>
 <<UpdateAct 건우 Geonwoo5>>
-건우: 하…
-건우: 엄마… 나 조금만.. 조금만 봐주라.
+건우: 하... 제발..
 
+<<wait 1.0>>
 //문자오는 소리
 <<PlayAudio PhoneAlarm>>
-*야 너 아는 동생? 이라던 애, 우리 단골된 거 아냐? 돈이 많은 친군가봐?*
-*아, 그리고 이번 건도 방금 돈 보냈으니까 확인해보고~ 건수 또 생기면 연락줄게*
-<<UpdateAct 건우 Geonwoo2_reflect>>
-…
+<color=\#9fa2a4><i>학생~ 월세 아직 안냈던데? 나도 사정이 있어서 더 이상 봐주기는 힘들어요~</color>
+건우: 엄마... 나 조금만.. 조금만 봐주라.
+
+<<wait 1.0>>
+//문자오는 소리
+<<PlayAudio PhoneAlarm>>
+<color=\#9fa2a4><i>야 너 아는 동생? 이라던 애, 우리 단골된 거 아냐? 돈이 많은 친군가봐?</color>
+<<PlayAudio PhoneAlarm>>
+<color=\#9fa2a4><i>아, 그리고 이번 건도 방금 돈 보냈으니까 확인해보고~ 건수 또 생기면 연락줄게</color>
+<<UpdateAct 건우 Geonwoo4_reflect>>
+<<Fade black 0.0 1.0 2.0>>
+<<wait 2.0>>
+...
 잘못된 일임을 알고 있다.
 잘못된 일임을 알고 있었다.
-분명히 알고 있었는데….
-…
+분명히 알고 있었는데..
+...
 어쩌다 이렇게 된걸까?
-…
+...
 밀려오는 죄책감을 참지 못하고,
 눈을 감아버렸다.
 
-<<Fade black 0.0 1.0 2.0>>
-//블랙화면 페이드(천천히)
+<<wait 2.0>>
 <<HideAll>>
 <<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>

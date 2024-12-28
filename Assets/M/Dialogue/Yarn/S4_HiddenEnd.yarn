@@ -1,6 +1,7 @@
-﻿title: HiddenEnding
+title: HiddenEnding
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<PlayAudio threadbracelet 1.0 loop>>
 <<Scene H3)jiwon_room>> // 지원의 방 배경
 <<PlayAudio KnockingSound>>
 <<Act 지원 Jiwon9_resting 1.17 0.322 black>>
@@ -22,7 +23,7 @@
 
 <<HideAll>>
 <<Draw H3)bracelet 0.75 0.75>>
-<<wait 2.0>>
+<<wait 4.0>>
 <<Hide H3)bracelet>>
 
 <<Act 지원 Jiwon7 1.17 0.322 black>>
