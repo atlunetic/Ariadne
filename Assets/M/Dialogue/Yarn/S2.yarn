@@ -49,7 +49,7 @@ title: StartClub
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio club_entrance>>
+<<PlayAudio club_entrance 0.4 loop>>
 <<Scene ClubEntrance>>
 <<Act 지수 Jisoo4 1.17 0.322 white>>
 이런 데가 있구나....
@@ -71,8 +71,6 @@ title: StartClub
 title: meet_gunwoo
 
 ---
-
-<<PlayAudio ClubstreetBGM>>
 
 
 <<Act 건우 Geonwoo0 0.322 0.227 white>>
@@ -3699,6 +3697,7 @@ title: AfterNote0
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw jjogji_big 0.75 0.75>>
 건우 오빠가 왜 이런 걸...
+<<PlayAudio MemoInsert 0.6>>
 일단 메모장에 기록해두자.
 <<FindMemo MemoController memo_zzokji>>
 <<HideAll>>
@@ -4243,7 +4242,7 @@ title: obj_car_outside
 		문을 열어볼까..?
 		문 손잡이를 잡아 당겼다.
 		...
-		<<PlayAudio CarAlarm>>
+		<<PlayAudio CarAlarm 0.5>>
 		//경보음&경보가 울림을 알 수 있을 법한 연출
 		//사운드 우선 추가
 		어...
@@ -4255,6 +4254,7 @@ title: obj_car_outside
 		<<Fade black 0.0 1.0 2.0>>
 		<<ChangeSceneTo VisualNovelPrefab S1>>
 		<<Scene BlackBG>>
+		<<StopAudioAll>>
 		어...
 		갑작스레 느껴지는 통증에 머리가 울렸다.
 		<<wait 2.0>>

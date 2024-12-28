@@ -47,11 +47,11 @@ title: MemoStory_Book
 …
 중간 페이지가 찢겨 나갔네.
 ...
-<color=grey><i>...무사히 미로를 탈출할 수 있었다.
-<color=grey><i>그 후, 영웅으로 칭송받은 테세우스는 홀로 고향으로 도망간다.
-<color=grey><i>테세우스는 이후 평생동안 미로를 헤매는 악몽을 꿨다고 전해진다.
+<color=\#9fa2a4><i>...무사히 미로를 탈출할 수 있었다.
+<color=\#9fa2a4><i>그 후, 영웅으로 칭송받은 테세우스는 홀로 고향으로 도망간다.
+<color=\#9fa2a4><i>테세우스는 이후 평생동안 미로를 헤매는 악몽을 꿨다고 전해진다.
 ….
-<<PlayAudio MemoInsert>>
+<<PlayAudio MemoInsert 0.6>>
 일단 메모장에 기록해두자.
 
 <<Hide DBG>>
@@ -93,7 +93,7 @@ title: MemoStory_Letter
 <<Draw letter_big 0.75 0.75>>
 <<wait 3.0>>
 아리아드네가 지원이에게 편지를…?
-<<PlayAudio MemoInsert>>
+<<PlayAudio MemoInsert 0.6>>
 우선 메모장에 기록해두자.
 
 <<Hide DBG>>
@@ -126,7 +126,7 @@ title: Memo_Note
 //팝업이미지
 어... 이게 무슨 소리지?
 건우 오빠가 왜 이런 걸...
-<<PlayAudio MemoInsert>>
+<<PlayAudio MemoInsert 0.6>>
 일단 메모장에 기록해두자.
 //(메모장에 수집되고 내용 뜸)
 <<Hide DBG>>
@@ -178,13 +178,13 @@ title: MemoStory_Phone
 <<Draw SulPhone_big 0.75 0.75>>
 
 //팝업이미지
-??: *그만둬. 네가 그럴수록 더 위험해질 뿐이야.*
-아리아드네: *지수를 돕는 건 다 나를 위해서야.*
-아리아드네: *그러니까….*
+<color=\#9fa2a4><i>??: <color=\#9fa2a4><i>그만둬. 네가 그럴수록 더 위험해질 뿐이야.
+<color=\#9fa2a4><i>아리아드네: <color=\#9fa2a4><i>지수를 돕는 건 다 나를 위해서야.
+<color=\#9fa2a4><i>아리아드네: <color=\#9fa2a4><i>그러니까….
 뭐야. 누가 두고 간 거지?
 아리아드네랑 연락을 주고 받았잖아.
 주변을 둘러봐도 수상한 사람이 보이지 않는다.
-<<PlayAudio MemoInsert>>
+<<PlayAudio MemoInsert 0.6>>
 … 일단 메모장에 기록해두자.
 
 <<Hide DBG>>
@@ -226,7 +226,7 @@ title: MemoStory_RippedPage
 …테세우스는 아리아드네로부터 건네받은 실타래 덕분에…
 ...
 어… 뭔가 익숙한데.
-<<PlayAudio MemoInsert>>
+<<PlayAudio MemoInsert 0.6>>
 일단 메모장에 기록해두자.
 
 <<Hide DBG>>
@@ -267,7 +267,7 @@ title: MemoStory_Recorder
 … 녹음기다.
 틀어볼까?
 …
-<<PlayAudio Recording>>
+<<PlayAudio Recording 0.7>>
 어떻게 나한테 그럴 수가 있지?
 그게 내 마음대로 되는 일도 아닌데…
 내 심정이 어떨지 너는 모르겠지.
@@ -277,7 +277,7 @@ title: MemoStory_Recorder
 언제 이런 걸 녹음한거지?
 <<StopAudioAll>>
 
-<<PlayAudio MemoInsert>>
+<<PlayAudio MemoInsert 0.6>>
 …일단 메모장에 기록해두자.
 
 <<Hide DBG>>
@@ -319,7 +319,7 @@ title: MemoStory_CaseBoard
 …범죄 영화에서 본 것 같은 게 있네.
 그런데 뭔가 익숙한 것들이 있다
 …!
-<<PlayAudio MemoInsert>>
+<<PlayAudio MemoInsert 0.6>>
 …일단 메모장에 기록해두자.
 
 <<Hide DBG>>
@@ -400,7 +400,7 @@ title: Memo_VideoTape3
 육아 비디오인가?
 ...어. 뭔가 익숙한데.
 ...!
-<<PlayAudio MemoInsert>>
+<<PlayAudio MemoInsert 0.6>>
 ...일단 메모장에 기록해두자.
 <<CloseVideo VisualNovelPrefab>>
 <<FindMemo MemoController memo_videotape>>

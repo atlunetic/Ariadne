@@ -3,11 +3,10 @@
 <<SetCanvasTo VisualNovelPrefab true>>
 아리아드네:….
 아리아드네:이제 아프지마.
-
 //지수7
 //화면 암전 후 전환. 병실 이미지
 <<ChangeSceneTo VisualNovelPrefab s4_1_Hospital>>
-<<PlayAudio HospitalBGM 1.0 loop>>
+<<PlayAudio HospitalBGM 0.6 loop>>
 <<Act 지수 Jisoo8 1.17 0.322 black>>
 …여긴 어디지?
 ….
@@ -163,7 +162,6 @@ title: future_jisooroom
 //지수의 방 배경
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo2_resting 1.17 0.322 black>>
-<<PlayAudio realendingTheme 1.0 loop>>
 ….
 앞으로 나는 어떻게 살아야 할까.
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -511,7 +509,6 @@ title: future_beer
 --- 
 //클릭할 시
 <<SetCanvasTo VisualNovelPrefab true>>
-\<<PlayAudio BarStreet 1.0 loop>>
 어···. 가게 이름이 원래 저거였나?
 술집 주인분이 나왔다. 말을 걸어볼까?
 -> 예
@@ -550,7 +547,6 @@ title: future_students
 --- 
 //클릭할 시
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio OtherPlaces 1.0 loop>>
 학생들이 대화를 하고 있다. 들어볼까?
 -> 예
 	학생들: 너 그거 들었어?
@@ -630,7 +626,7 @@ title: normal_ending
 아리아드네:이제 아프지마.
 //화면 암전 후 전환. 병실 이미지
 <<ChangeSceneTo VisualNovelPrefab s4_1_Hospital>>
-<<PlayAudio HospitalBGM 1.0 loop>>
+<<PlayAudio normalEnding 0.6 loop>>
 <<Act 지수 Jisoo8 1.17 0.322 black>>
 …여긴 어디지?
 ….
