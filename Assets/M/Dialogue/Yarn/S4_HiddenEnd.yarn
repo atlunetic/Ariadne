@@ -12,73 +12,74 @@
 <<Fade black 0.0 1.0 2.0>>
 <<FadeIn 2.0>>
 
-<<Act 지원 Jiwon10 1.17 0.322 black>>
-<<Act 지수 Jisoo1_smile 0.322 0.227 green>>
+<<UpdateAct 지원 Jiwon10>>
+<<Act 지수 Jisoo1_reflect 0.322 0.227 green>>
 지원: 야. 니 맘대로 들어오냐?
 
-<<Act 지수 Jisoo1_smile 0.322 0.227 green>>
 지수: 나 그럼 그냥 나간다? 후회할텐데~
 지원: 아오 진짜.. 뭔데??
 지수: 자.
 
-<<Hide All>>
+<<HideAll>>
 <<Draw H3)bracelet 0.75 0.75>>
 <<wait 2.0>>
 <<Hide H3)bracelet>>
 
 <<Act 지원 Jiwon7 1.17 0.322 black>>
-<<Act 지수 Jisoo1_smile 0.322 0.227 green>>
+<<Act 지수 Jisoo1_reflect 0.322 0.227 green>>
 지원: 이게 뭔데??
 지수: 소원 팔찌. 한번도 안들어봤어? 에휴, 낭만 없기는..
 
-<<Act 지원 Jiwon10 1.17 0.322 black>>
+<<UpdateAct 지원 Jiwon10>>
 지원: 그래. 나 낭만 없다. 그래서 뭐?
 지수: 손 줘봐.
 
-<<Act 지원 Jiwon9_resting 1.17 0.322 black>>
+<<UpdateAct 지원 Jiwon9_resting>>
 지원: 아.. 뭐해~
 지수: 가만히 좀 있어.
 
-<<Act 지원 Jiwon10 1.17 0.322 black>>
+<<UpdateAct 지원 Jiwon10>>
 지원: 아~ 이런거 거슬린다고!!
 지수: 됐다!!
 지수: 팔찌가 끊어지면 소원이 이루어진대.
 
-<<Act 지원 Jiwon9_resting 1.17 0.322 black>>
+<<UpdateAct 지원 Jiwon9_resting>>
 지원: 그런 미신을 믿냐?
 지수: 혹시 모르잖아~ 너 무슨 소원 빌래?
 
-<<Act 지원 Jiwon10 1.17 0.322 black>>
+<<UpdateAct 지원 Jiwon10>>
 지원: 너랑 떨어져 살게 해달라고.
 
-<<Act 지수 Jisoo3_angry 0.322 0.227 green>>
+<<UpdateAct 지수 Jisoo3_reflect>>
 지수: 야!! 선물을 줘도... 서운하네 정말.
 
-<<Act 지수 Jisoo1_smile 0.322 0.227 green>>
+<<UpdateAct 지수 Jisoo1_reflect>>
 지수: 내가 직접 만든거야~ 차고 다녀. 알겠지??
 
-<<Act 지원 Jiwon9_resting 1.17 0.322 black>>
+<<UpdateAct 지원 Jiwon9_resting>>
 지원: 귀찮은데...
 
-<<Act 지수 Jisoo3_angry 0.322 0.227 green>>
+<<UpdateAct 지수 Jisoo3_reflect>>
 지수: 차고 다닐거야 안다닐거야.
 지원: ...
 지수: 다닐거냐고 안다닐거냐고!!!
 
-<<Act 지원 Jiwon10 1.17 0.322 black>>
+<<UpdateAct 지원 Jiwon10>>
 지원: 아 알겠어! 차고 다니면 되잖아. 됐어?
 
-<<Act 지수 Jisoo1_smile 0.322 0.227 green>>
+<<UpdateAct 지수 Jisoo1_reflect>>
 지수: 작전 성공~ 절대 빼지 마라~
 
-<<Hide 지수 Jisoo1_smile 0.322 0.227 green>>
-<<PlayAudio DoorOpenandClose >>
+<<Hide 지수>>
+<<PlayAudio DoorOpenandClose>>
 
-<<Act 지원 Jiwon8_smile 1.17 0.322 black>>
+<<UpdateAct 지원 Jiwon8_smile>>
 지원: 귀찮아 죽겠어 정말...
 
 //(검은 화면으로 전환)
 <<Fade black 0.0 1.0 2.0>>
+<<wait 2.0>>
+<<HideAll>>
 지원: ...
 지원: 내 소원은...
 ...

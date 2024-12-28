@@ -499,7 +499,7 @@ title: obj_customers
 			수상해….
 			…
 			저기요..!!
-			<<StopAudio All>
+			<<StopAudio All>>
 			<<PlayAudio chapter3meetJiwon loop>>
 			뒤돌아본 D와 눈이 마주쳤다. //(스산한 BGM 추가)
 			초점없는 E의 눈과도.
