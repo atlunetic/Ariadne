@@ -93,5 +93,6 @@
 <<wait 5.0>>
 <<HideAll>>
 <<StopAudioAll>>
+<<FadeIn>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===

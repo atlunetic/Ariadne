@@ -11,15 +11,15 @@
 <<wait 1.0>>
 <<Hide BlackBG>>
 <<Scene Hospital_bg>>
-<<PlayAudio TrueEndTheme 0.5>>
-<<Act 지수 Jisoo8 1.17 0.322 black>>
+<<PlayAudio TrueEndTheme 0.5 loop>>
+<<Act 지수 Jisoo8 1.17 0.322 white>>
 …여긴 어디지?
 ….
 병원인가…?
 //문 열리는 사운드
 <<PlayAudio chapter4dooropen>>
 //간호사
-<<Act 간호사 Nurse 0.322 0.227 green>>
+<<Act 간호사 Nurse 0.322 0.227 white>>
 간호사: 어…!
 간호사: 환자분….
 <<Hide 간호사>>
@@ -34,12 +34,12 @@
 //문 닫히는 사운드
 <<PlayAudio chapter4doorclose>>
 //의사 
-<<Act 의사 NPC_Doctor 0.322 0.227 green>>
+<<Act 의사 NPC_Doctor 0.322 0.227 white>>
 의사: 상태가….
 의사: ….
 <<Hide 의사>>
 //간호사
-<<Act 간호사 Nurse 0.322 0.227 green>>
+<<Act 간호사 Nurse 0.322 0.227 white>>
 간호사: 방금 깨어나서….
 간호사: ….
 <<UpdateAct 지수 Jisoo9>>
@@ -51,7 +51,7 @@
 //의사, 간호사 제거
 <<Hide 간호사>>
 //엄마
-<<Act 엄마 Mom 0.322 0.227 green>>
+<<Act 엄마 Mom 0.322 0.227 white>>
 엄마: 지수야…!
 <<UpdateAct 지수 Jisoo10>>
 어….
@@ -74,11 +74,11 @@
 엄마는 대답 없이 더 크게 오열했다.
 <<Hide 엄마>>
 //간호사
-<<Act 간호사 Nurse 0.322 0.227 green>>
+<<Act 간호사 Nurse 0.322 0.227 white>>
 간호사: 환자분께서 혼수 상태에서 깨어난지 얼마 안 돼서….
 간호사: 정신이 온전히 돌아오지 않은 상태일 수 있어요.
 <<Hide 간호사>>
-<<Act 엄마 Mom 0.322 0.227 green>>
+<<Act 엄마 Mom 0.322 0.227 white>>
 엄마: 아이고 지수야….
 <<Hide 엄마>>
 ….
@@ -88,7 +88,9 @@
 뭔가 떠올랐다.
 <<Hide 지수>>
 <<Hide Hospital_bg>>
+<<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<Break BlackBG>>
 ===
 
 //돌아오는 기억 1,2,3,4,5가 이어져 전개
@@ -101,13 +103,13 @@ title: trueending_1
 어….
 기억났다,
 지원이는 나를 구하려다가….
-<<Act 지수 Jisoo8 1.17 0.322 black>>
+<<Act 지수 Jisoo8 1.17 0.322 white>>
 //<<Act 지수 우는 지수 1.17 0.322 black>>
 ….
 꿈에서도 넌 나를 지켜줬는데.
 
 //엄마
-<<Act 엄마 Mom 0.322 0.227 green>>
+<<Act 엄마 Mom 0.322 0.227 white>>
 엄마: …지수야.
  
 나를 바라보던 엄마는 말없이 등을 다독여줬다.
@@ -118,7 +120,7 @@ title: trueending_1
 <<PlayAudio chapter4dooropen>>
 <<Hide 엄마>>
 //아빠
-<<Act 아빠 Dad 0.322 0.227 green>>
+<<Act 아빠 Dad 0.322 0.227 white>>
 아빠: 허어…. 헉….
 아빠: 지수야….
 
@@ -158,13 +160,8 @@ title: trueending_1
 마약류 복용에 대한 처벌로 1년 2개월 형을 선고받았다.
 죗값을 치른 후, 정부 기관의 도움으로 치료 센터에 다녔다.
 <<StopAudio All>>
-<<SetCanvasTo VisualNovelPrefab false>>
-===
-
-title: future_jisooroom
----
 //지수의 방 배경
-<<SetCanvasTo VisualNovelPrefab true>>
+//<<SetCanvasTo VisualNovelPrefab true>>
 <<GoReality MenuUI>>
 <<Act 지수 Jisoo2_resting 1.17 0.322 black>>
 ….
@@ -172,6 +169,7 @@ title: future_jisooroom
 <<SetCanvasTo VisualNovelPrefab false>>
 //이후 휴대폰 등 아이콘 나옴. 오브젝트 상호작용 가능
 //지도를 통해 다른 장소 이동, 2장의 이동 버튼을 통해 지원의방/지수의방 이동 가능
+//<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 //지수 방
@@ -477,8 +475,8 @@ title: reporter_yeshid
 벤치에 앉자마자, 기자분이 나를 다독여줬다.
 //기자
 //지수
-<<Act 기자 Uenjae1 0.322 0.227 green>>
-<<Act 지수 Jisoo5_panic 1.17 0.322 black>>
+<<Act 기자 Uenjae1 0.322 0.227 white>>
+<<Act 지수 Jisoo5_panic 1.17 0.322 white>>
 기자: 많이 힘들었죠···.
 //지수 우는 표정으로 변경
 순간 눈물이 쏟아져 나왔다.
@@ -526,9 +524,9 @@ title: future_beer
 어···. 가게 이름이 원래 저거였나?
 술집 주인분이 나왔다. 말을 걸어볼까?
 -> 예
-	<<Act 지수 Jisoo1_smile 1.17 0.322 black>>
+	<<Act 지수 Jisoo1_smile 1.17 0.322 white>>
 	지수: 안녕하세요. 가게 간판 바꾸셨네요?
-	<<Act 술집주인 Merchant 0.322 0.227 green>>
+	<<Act 술집주인 Merchant 0.322 0.227 white>>
 	술집주인: 아~ 지수씨. 잘 지내셨어요? 오랜만이네.
 	술집주인: 그냥 가게 이름을 바꿨어요.
 	술집주인: 진짜 ···파는 줄 알고 사람들이 자꾸 오해하길래요.
@@ -609,7 +607,7 @@ title: future_club
 //#이제 집으로 갈까. 
 //하고 지수의 방으로 이동. 
 
-//이후 지수의 독백과 엔딩 크레딧
+//이후 지수의 독백과 엔딩 크레딧 
 
 title: backhome
 
@@ -652,13 +650,13 @@ title: normal_ending
 <<wait 1.0>>
 <<Hide BlackBG>>
 <<Scene Hospital_bg>>
-<<Act 지수 Jisoo8 1.17 0.322 black>>
+<<Act 지수 Jisoo8 1.17 0.322 white>>
 <<PlayAudio normalEnding 0.6 loop>>
 …여긴 어디지?
 ….
 병원인가…?
 <<PlayAudio chapter4dooropen>>
-<<Act 간호사 Nurse 0.322 0.227 green>>
+<<Act 간호사 Nurse 0.322 0.227 white>>
 //간호사
 간호사: 어…!
 간호사: 환자분….
@@ -671,11 +669,11 @@ title: normal_ending
 <<UpdateAct 지수 Jisoo8>>
 <<PlayAudio chapter4dooropen>>
 <<PlayAudio chapter4doorclose>>
-<<Act 의사 NPC_Doctor 0.322 0.227 green>>
+<<Act 의사 NPC_Doctor 0.322 0.227 white>>
 의사: 상태가….
 의사: ….
 <<Hide 의사>>
-<<Act 간호사 Nurse 0.322 0.227 green>>
+<<Act 간호사 Nurse 0.322 0.227 white>>
 간호사: 방금 깨어나서….
 간호사: ….
 <<UpdateAct 지수 Jisoo9>>
@@ -683,7 +681,7 @@ title: normal_ending
 뭐라고 하는지 잘 안들리네….
 <<PlayAudio chapter4dooropen>>
 <<Hide 간호사>>
-<<Act 엄마 Mom 0.322 0.227 green>>
+<<Act 엄마 Mom 0.322 0.227 white>>
 엄마: 지수야…!
 <<UpdateAct 지수 Jisoo10>>
 어….
@@ -703,11 +701,11 @@ title: normal_ending
 엄마: ….
 엄마는 대답 없이 더 크게 오열했다.
 <<Hide 엄마>>
-<<Act 간호사 Nurse 0.322 0.227 green>>
+<<Act 간호사 Nurse 0.322 0.227 white>>
 간호사: 환자분께서 혼수 상태에서 깨어난지 얼마 안 돼서….
 간호사: 정신이 온전히 돌아오지 않은 상태일 수 있어요.
 <<Hide 간호사>>
-<<Act 엄마 Mom 0.322 0.227 green>>
+<<Act 엄마 Mom 0.322 0.227 white>>
 엄마: 아이고 지수야….
 <<Hide 엄마>>
 ….
@@ -719,6 +717,8 @@ title: normal_ending
 <<Hide 지수>>
 <<Hide Hospital_bg>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<StopAudioAll>>
+<<Break BlackBG>>
 ===
 
 title:  normal_ending_1
@@ -728,13 +728,13 @@ title:  normal_ending_1
 어….
 기억났다,
 지원이는 나를 구하려다가….
-<<Act 지수 Jisoo8 1.17 0.322 black>>
+<<Act 지수 Jisoo8 1.17 0.322 white>>
 //<<Act 지수 우는 지수 1.17 0.322 black>>
 ….
 꿈에서도 넌 나를 지켜줬는데.
 
 //엄마
-<<Act 엄마 Mom 0.322 0.227 green>>
+<<Act 엄마 Mom 0.322 0.227 white>>
 엄마: …지수야.
  
 나를 바라보던 엄마는 말없이 등을 다독여줬다.
@@ -745,7 +745,7 @@ title:  normal_ending_1
 <<PlayAudio chapter4dooropen>>
 <<Hide 엄마>>
 //아빠
-<<Act 아빠 Dad 0.322 0.227 green>>
+<<Act 아빠 Dad 0.322 0.227 white>>
 아빠: 허어…. 헉….
 아빠: 지수야….
 

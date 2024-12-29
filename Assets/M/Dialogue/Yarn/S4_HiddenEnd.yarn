@@ -4,7 +4,7 @@ title: HiddenEnding
 <<PlayAudio threadbracelet 0.2 loop>>
 <<Scene H3)jiwon_room>> // 지원의 방 배경
 <<PlayAudio KnockingSound 0.2>>
-<<Act 지원 Jiwon9_resting 1.17 0.322 black>>
+<<Act 지원 Jiwon9_reflect 1.17 0.322 black>>
 지원: 누구세요?
 지수: 난데~
 지원: 왜?
@@ -13,7 +13,7 @@ title: HiddenEnding
 <<Fade black 0.0 1.0 2.0>>
 <<FadeIn 2.0>>
 
-<<UpdateAct 지원 Jiwon10>>
+<<UpdateAct 지원 Jiwon10_reflect>>
 <<Act 지수 Jisoo1_reflect 0.322 0.227 black>>
 지원: 야. 니 맘대로 들어오냐?
 
@@ -29,29 +29,29 @@ title: HiddenEnding
 <<Hide H3)bracelet>>
 <<Hide DBG>>
 
-<<Act 지원 Jiwon7 1.17 0.322 black>>
+<<Act 지원 Jiwon7_reflect 1.17 0.322 black>>
 <<Act 지수 Jisoo1_reflect 0.322 0.227 green>>
 지원: 이게 뭔데??
 지수: 소원 팔찌. 한번도 안들어봤어? 에휴, 낭만 없기는..
 
-<<UpdateAct 지원 Jiwon10>>
+<<UpdateAct 지원 Jiwon10_reflect>>
 지원: 그래. 나 낭만 없다. 그래서 뭐?
 지수: 손 줘봐.
 
-<<UpdateAct 지원 Jiwon9_resting>>
+<<UpdateAct 지원 Jiwon9_reflect>>
 지원: 아.. 뭐해~
 지수: 가만히 좀 있어.
 
-<<UpdateAct 지원 Jiwon10>>
+<<UpdateAct 지원 Jiwon10_reflect>>
 지원: 아~ 이런거 거슬린다고!!
 지수: 됐다!!
 지수: 팔찌가 끊어지면 소원이 이루어진대.
 
-<<UpdateAct 지원 Jiwon9_resting>>
+<<UpdateAct 지원 Jiwon9_reflect>>
 지원: 그런 미신을 믿냐?
 지수: 혹시 모르잖아~ 너 무슨 소원 빌래?
 
-<<UpdateAct 지원 Jiwon10>>
+<<UpdateAct 지원 Jiwon10_reflect>>
 지원: 너랑 떨어져 살게 해달라고.
 
 <<UpdateAct 지수 Jisoo3_reflect>>
@@ -60,7 +60,7 @@ title: HiddenEnding
 <<UpdateAct 지수 Jisoo1_reflect>>
 지수: 내가 직접 만든거야~ 차고 다녀. 알겠지??
 
-<<UpdateAct 지원 Jiwon9_resting>>
+<<UpdateAct 지원 Jiwon9_reflect>>
 지원: 귀찮은데...
 
 <<UpdateAct 지수 Jisoo3_reflect>>
@@ -68,7 +68,7 @@ title: HiddenEnding
 지원: ...
 지수: 다닐거냐고 안다닐거냐고!!!
 
-<<UpdateAct 지원 Jiwon10>>
+<<UpdateAct 지원 Jiwon10_reflect>>
 지원: 아 알겠어! 차고 다니면 되잖아. 됐어?
 
 <<UpdateAct 지수 Jisoo1_reflect>>
@@ -77,7 +77,7 @@ title: HiddenEnding
 <<Hide 지수>>
 <<PlayAudio DoorOpenandClose 0.2>>
 
-<<UpdateAct 지원 Jiwon8_smile>>
+<<UpdateAct 지원 Jiwon8_reflect>>
 지원: 귀찮아 죽겠어 정말...
 
 //(검은 화면으로 전환)

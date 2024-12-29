@@ -1317,7 +1317,7 @@ title: escapegame_checkpoint1
 //14층 배경
 <<Scene Door1403>>
 <<ShowTB VisualNovelPrefab true>>
-<color=blue>* 체크포인트 *</color>
+<color=yellow>* 체크포인트 *</color>
 
 빨리 여기서 나가야 될 것 같아.
 어디로 가지?
@@ -1365,6 +1365,7 @@ title: escapegame_checkpoint1
 		//[발각]
 		//블랙화면으로 페이드아웃
 		<<ShowTB VisualNovelPrefab false>>
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint1>>
 	-> 같은 조직원인 척 하자
 		<<PauseTB VisualNovelPrefab>>
@@ -1374,6 +1375,7 @@ title: escapegame_checkpoint1
 		//[발각]
 		//블랙화면으로 페이드아웃
 		<<ShowTB VisualNovelPrefab false>>
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint1>>
 	-> 옆에 있는 1407호에 들어가보자
 		<<PauseTB VisualNovelPrefab>>
@@ -1441,6 +1443,7 @@ title: escapegame_elevator
 		//[발각]
 		//블랙화면으로 페이드아웃
 		<<ShowTB VisualNovelPrefab false>>
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint1>>
 	-> 무시하고 뛰어가자
 		<<PauseTB VisualNovelPrefab>>
@@ -1485,6 +1488,7 @@ title: escapegame_elevator
 		갑자기 나타난 다른 조직원이 가로막았다.
 		//[발각]
 		//블랙화면으로 페이드아웃
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint1>>
 
 
@@ -1498,7 +1502,7 @@ title: escapegame_checkpoint2
 <<FadeIn>>
 //엘리베이터 이미지 배경 페이드인
 <<wait  1.0>>
-<color=blue>* 체크포인트 *</color>
+<color=yellow>* 체크포인트 *</color>
 엘리베이터에 타자마자 1층을 눌렀다.
 닫힘 버튼을 눌렀다.
 ..휴. 위험했어.
@@ -1555,7 +1559,7 @@ title: escapegame_stopelevator
 	//[지원이가 다시 끌려감]
 	//블랙화면으로 페이드아웃
 	//<<Fade Black 0.0 1.0 1.0>>
-	<<wait  1.0>>
+	<<wait  2.0>>
 	<<jump escapegame_checkpoint2>>
 -> 열림 버튼을 눌러보자
 	<<PauseTB VisualNovelPrefab>>
@@ -1622,6 +1626,7 @@ title: escapegame_brokenelevator
 	몸이 굳어 움직일 수가 없어...
 	//[발각]
 	//블랙화면으로 페이드아웃
+	<<wait 2.0>>
 	<<jump escapegame_checkpoint2>>
 -> 2층 버튼을 눌러보자
 	<<PauseTB VisualNovelPrefab>>
@@ -1684,6 +1689,7 @@ title: escapegame_brokenelevator
 		<<PlayAudio Uddangtangtang 0.5>>
 		//[발각]
 		//블랙화면으로 페이드아웃
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint2>>
 
 
@@ -1694,7 +1700,7 @@ title: escapegame_checkpoint3
 ---
 <<InitTB VisualNovelPrefab S3_6_CP3>>
 <<Scene Lobby3F>>
-<color=blue>* 체크포인트 *</color>
+<color=yellow>* 체크포인트 *</color>
 1층에는 이미 조직원들이 대기하고 있을 거야.
 비상계단으로 가자..!
 //계단 이미지2 배경
@@ -1758,6 +1764,7 @@ title: escapegame_checkpoint3
 		<<PlayAudio LoudDoor 0.6>>
 		//[지원이가 다시 끌려감]
 		//블랙화면으로 페이드아웃
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint3>>
 	-> 소화전을 울리자
 		<<PauseTB VisualNovelPrefab>>
@@ -1789,6 +1796,7 @@ title: escapegame_checkpoint3
 		//[발각]
 		//블랙화면으로 페이드아웃
 		<<Scene BlackBG>>
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint3>>
 -> 내가 가지고 있는 물건을 살펴보자
 	<<InitTB VisualNovelPrefab S3_6_CP3>>
@@ -1875,6 +1883,7 @@ title: escapegame_checkpoint3
 		변명해 볼 여지도 없이 지원이는 조직원들에게 붙잡혔다.
 		//[지원이가 다시 끌려감]
 		//블랙화면으로 페이드아웃
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint3>>
 
 
