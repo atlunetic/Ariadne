@@ -182,8 +182,10 @@ title: DrugCookie
 <color=yellow>* 일기장에 ‘마약 쿠키’가 추가되었습니다. *</color>
 //(이후 일기장 클릭 시 ‘마약 쿠키’ 관련 정보 확인 가능)
 <<RevealDiary DiaryManager Page3>>
+<<FinishedDialogue VisualNovelPrefab DrugCookie>>
 //<<SetActiveFalse VisualNovelPrefab VendingMachine3>>
 //<<FinishedObj VisualNovelPrefab VendingMachine3>>
+<<jump Hint_DrugCookie>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -738,38 +740,42 @@ title: memory_Photo
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio MemoryRecall 0.5>>
-<<FinishedDialogue VisualNovelPrefab memory_Photo>>
-//(텍스트 위치 변경하였음)
-//- 증거 촬영 시 돌아오는 기억: 배경 바뀌고 어두워짐, 팝업이미지
-//클럽에 있는 지수, 건우를 찾아온 지원. 그 셋을 지켜보고 있는 시점의 사진.
+<<if CheckDialogue("DrugDrink") == true>>
+	<<jump realmemory_3>>
+<<else>>
+	<<PlayAudio MemoryRecall 0.5>>
+	<<FinishedDialogue VisualNovelPrefab memory_Photo>>
+	//(텍스트 위치 변경하였음)
+	//- 증거 촬영 시 돌아오는 기억: 배경 바뀌고 어두워짐, 팝업이미지
+	//클럽에 있는 지수, 건우를 찾아온 지원. 그 셋을 지켜보고 있는 시점의 사진.
 
-???: 둘이 대체 뭘 하고 다니는 거야.
-???: ...
-건우: ...
-???: 제발 정신 좀 차려.
-???: 내가 도와줄게... 응?
-<<StopMemory SceneManager>>
-<<StopAudioAll>>
+	???: 둘이 대체 뭘 하고 다니는 거야.
+	???: ...
+	건우: ...
+	???: 제발 정신 좀 차려.
+	???: 내가 도와줄게... 응?
+	<<StopMemory SceneManager>>
+	<<StopAudioAll>>
 
-<<if IsS4() == false>>
-	<<UI_on MenuUI>>
-		<<Scene black_bg>>
-		<<PlayAudio EarSound 0.8>>
-		<<PlayAudio WhiteNoise 0.6>>
+	<<if IsS4() == false>>
+		<<UI_on MenuUI>>
+			<<Scene black_bg>>
+			<<PlayAudio EarSound 0.8>>
+			<<PlayAudio WhiteNoise 0.6>>
 
-		정신을 잃을 것 같다.
-		<<wait 0.5>>
-		조금만 버티자.. 
+			정신을 잃을 것 같다.
+			<<wait 0.5>>
+			조금만 버티자.. 
 
-		<<StopAudioAll>>
-		<<HideAll>>
-		<<UI_off MenuUI>>
-		<<Scene NoBG>>
-<<endif>>
+			<<StopAudioAll>>
+			<<HideAll>>
+			<<UI_off MenuUI>>
+			<<Scene NoBG>>
+	<<endif>>
 
-<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
-		<<jump Room101Fin>>
+	<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
+			<<jump Room101Fin>>
+	<<endif>>
 <<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -1052,6 +1058,8 @@ title: DrugDrink
 <color=yellow>* 일기장에 ‘마약 음료’가 추가되었습니다. *</color>
 <<SetActiveFalse VisualNovelPrefab DrugDrink>>
 <<FinishedObj VisualNovelPrefab DrugDrink>>
+<<FinishedDialogue VisualNovelPrefab DrugDrink>>
+<<jump Hint_DrugDrink>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1070,6 +1078,8 @@ title: Crack
 <<RevealDiary DiaryManager Page5>>
 <<SetActiveFalse VisualNovelPrefab 101_drug>>
 <<FinishedObj VisualNovelPrefab 101_drug>>
+<<FinishedDialogue VisualNovelPrefab Crack>>
+<<jump Hint_Crack>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

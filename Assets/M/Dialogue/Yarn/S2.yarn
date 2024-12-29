@@ -838,7 +838,8 @@ title: obj_lsdsticker
 
 <<SetActiveFalse VisualNovelPrefab Clubtable_Drug>>
 <<FinishedObj VisualNovelPrefab Clubtable_Drug>>
-
+<<FinishedDialogue VisualNovelPrefab LSD>>
+<<jump Hint_LSD>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -906,6 +907,8 @@ title: menu_philopon
 <<RevealDiary DiaryManager Page7>>
 <<SetActiveFalse VisualNovelPrefab menu_philopon>>
 <<FinishedObj VisualNovelPrefab menu_philopon>>
+<<FinishedDialogue VisualNovelPrefab Philophon>>
+<<jump Hint_Philophon>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -2017,35 +2020,32 @@ title: memory_StudentID
 //증거 촬영 시 돌아오는 기억: 바뀌고 어두워지는 배경, 팝업이미지X, 건우와의 대화 형식, 건우만 왼쪽
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio MemoryRecall 0.5>>
-???: 오빠, 왜 동생 학생증을 들고 다녀요?
-
-
-건우: 아...
-건우: 학생인 척 하는 게 일할 때 편하거든.
-건우: 사람들이 미성년자는 의심을 잘 안 해.
-건우: 애들이 이런 거 옮긴다고 상상이나 하겠어?
-
-
-<<StopMemory SceneManager>>
-<<StopAudioAll>>
-
-<<if IsS4() == false>>
-	<<UI_on MenuUI>>
-	<<Scene black_bg>>
-	<<PlayAudio EarSound 0.8>>
-	<<PlayAudio WhiteNoise 0.6>>
-
-	하...
-	<<wait 0.5>>
-	머리가 깨질 것 같아...
-
+<<if CheckDialogue("DrugCookie") == true>>
+	<<jump realmemory_1>>
+<<else>>
+	<<PlayAudio MemoryRecall 0.5>>
+	???: 오빠, 왜 동생 학생증을 들고 다녀요?
+	건우: 아...
+	건우: 학생인 척 하는 게 일할 때 편하거든.
+	건우: 사람들이 미성년자는 의심을 잘 안 해.
+	건우: 애들이 이런 거 옮긴다고 상상이나 하겠어?
+	<<StopMemory SceneManager>>
 	<<StopAudioAll>>
-	<<HideAll>>
-	<<UI_off MenuUI>>
-	<<Scene NoBG>>
+	<<if IsS4() == false>>
+		<<UI_on MenuUI>>
+		<<Scene black_bg>>
+		<<PlayAudio EarSound 0.8>>
+		<<PlayAudio WhiteNoise 0.6>>
+		하...
+		<<wait 0.5>>
+		머리가 깨질 것 같아...
+		<<StopAudioAll>>
+		<<HideAll>>
+		<<UI_off MenuUI>>
+		<<Scene NoBG>>
+	<<endif>>
+	<<SetCanvasTo VisualNovelPrefab false>>
 <<endif>>
-<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: club_toilet
@@ -4387,37 +4387,41 @@ title: memory_BrokenGlasses
 
 //증거 촬영 시 돌아오는 기억: 건우가 지수에게 지원의 유품인 '깨진 안경'을 건넸을 때의 기억이 돌아옴.
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio MemoryRecall 0.5>>
-건우: 현장에 이게 있었어.
-건우: 몰래 챙겨왔는데...
-???: ...
-건우: 너한테 주는 게 맞는 것 같아서.
-건우: ...
-건우: 미안하다.
-???: ...
-<<StopMemory SceneManager>>
-<<StopAudioAll>>
-
-<<if IsS4() == false>>
-	<<UI_on MenuUI>>
-	<<Scene black_bg>>
-	<<PlayAudio EarSound 0.8>>
-	<<PlayAudio WhiteNoise 0.6>>
-
-	악몽을 꾼 것 같은 기분이야
-	<<wait 0.5>>
-	...
-
+<<if CheckDialogue("Crack") == true>>
+	<<jump realmemory_5>>
+<<else>>
+	<<PlayAudio MemoryRecall 0.5>>
+	건우: 현장에 이게 있었어.
+	건우: 몰래 챙겨왔는데...
+	???: ...
+	건우: 너한테 주는 게 맞는 것 같아서.
+	건우: ...
+	건우: 미안하다.
+	???: ...
+	<<StopMemory SceneManager>>
 	<<StopAudioAll>>
-	<<HideAll>>
-	<<UI_off MenuUI>>
-	<<Scene NoBG>>
-	<<FinishedDialogue VisualNovelPrefab memory_BrokenGlasses>>
-	<<if CheckDialogue("obj_navigation") == true>>
-		<<jump event_movetostairs>>
+
+	<<if IsS4() == false>>
+		<<UI_on MenuUI>>
+		<<Scene black_bg>>
+		<<PlayAudio EarSound 0.8>>
+		<<PlayAudio WhiteNoise 0.6>>
+
+		악몽을 꾼 것 같은 기분이야
+		<<wait 0.5>>
+		...
+
+		<<StopAudioAll>>
+		<<HideAll>>
+		<<UI_off MenuUI>>
+		<<Scene NoBG>>
+		<<FinishedDialogue VisualNovelPrefab memory_BrokenGlasses>>
+		<<if CheckDialogue("obj_navigation") == true>>
+			<<jump event_movetostairs>>
+		<<endif>>
 	<<endif>>
+	<<SetCanvasTo VisualNovelPrefab false>>
 <<endif>>
-<<SetCanvasTo VisualNovelPrefab false>>
 ===
 
 title: event_movetostairs
