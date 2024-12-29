@@ -7,17 +7,20 @@ using UnityEngine.SceneManagement;
 public class MoveS4 : MonoBehaviour
 {
     public GameObject MoveS4Panel;
-    void Awake() {
-        SceneManager.sceneLoaded+= (Scene s, LoadSceneMode l) => {
-            if(SceneManager.GetActiveScene().name=="S4_2_R_JisooRoom" || 
-                SceneManager.GetActiveScene().name=="S4_3_R_JiwonRoom")
-                gameObject.SetActive(true);
-            else 
-                gameObject.SetActive(false);
-        }; 
-    }
-    void Start(){
+
+    void Start() {
+        SceneManager.sceneLoaded+= CheckScene;
         GetComponent<Button>().onClick.AddListener(()=>{MoveS4Panel.SetActive(!MoveS4Panel.activeSelf);});
+    }
+
+    public void CheckScene(Scene s, LoadSceneMode l){
+        if(SceneManager.GetActiveScene().name=="S4_2_R_JisooRoom" || 
+            SceneManager.GetActiveScene().name=="S4_3_R_JiwonRoom"){
+                gameObject.SetActive(true);
+        }
+        else{
+             gameObject.SetActive(false);
+        }
     }
 
     public void GoJiwonRoom(){
@@ -29,5 +32,9 @@ public class MoveS4 : MonoBehaviour
         if(GameManager.instance.NowScene=="S4_2_R_JisooRoom") return;
         SceneManager.LoadScene("S4_2_R_JisooRoom");
         MoveS4Panel.SetActive(false);
+    }
+
+    private void OnDestroy() {
+        SceneManager.sceneLoaded-= CheckScene;
     }
 }
