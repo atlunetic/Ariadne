@@ -92,3 +92,84 @@ title: HiddenEnding
 이루어졌다.
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
+
+
+title: Hint_DrugCookie
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+<color=\#9fa2a4><i>???</color>: <color=\#9fa2a4><i>오빠, 왜 동생 학생증을 들고 다녀요?</color>
+쓰러질 것 같아.
+….
+<color=\#9fa2a4><i>건우</color>: <color=\#9fa2a4><i>니가 시킨 거나 가져가라.</color>
+….
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Hint_LSD
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+<color=\#9fa2a4><i>???</color>: <color=\#9fa2a4><i>우웩</color>
+쓰러질 것 같아.
+….
+<color=\#9fa2a4><i>???</color>: <color=\#9fa2a4><i>요즘 상태가 왜 저러지?</color>
+….
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Hint_DrugDrink
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+<color=\#9fa2a4><i>???</color>: <color=\#9fa2a4><i>둘이 대체 뭘 하고 다니는 거야.</color>
+쓰러질 것 같아.
+….
+<color=\#9fa2a4><i>지원</color>: <color=\#9fa2a4><i>잠시만. 건우 오빠.</color>
+….
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Hint_Philophon
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+<color=\#9fa2a4><i>???</color>: <color=\#9fa2a4><i>나도 이제 더 이상은 못해먹겠어.</color>
+쓰러질 것 같아.
+….
+<color=\#9fa2a4><i>???</color>: <color=\#9fa2a4><i>어이없네. 내가 언제 도와달래?</color>
+….
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Hint_Crack
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+
+<color=\#9fa2a4><i>건우</color>: <color=\#9fa2a4><i>건우: 현장에 이게 있었어.</color>
+쓰러질 것 같아.
+….
+<color=\#9fa2a4><i>건우</color>: <color=\#9fa2a4><i>내가 미리 알았으면 어떻게든 막았을텐데….</color>
+….
+
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
