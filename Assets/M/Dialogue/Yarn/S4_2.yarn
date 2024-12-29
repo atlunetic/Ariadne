@@ -160,6 +160,7 @@ title: future_jisooroom
 ---
 //지수의 방 배경
 <<SetCanvasTo VisualNovelPrefab true>>
+<<GoReality MenuUI>>
 <<Act 지수 Jisoo2_resting 1.17 0.322 black>>
 ….
 앞으로 나는 어떻게 살아야 할까.
@@ -185,6 +186,7 @@ title: future_laptop
 <<Hide DBG>>
 <<FinishedDialogue VisualNovelPrefab future_laptop>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<S4Ended GameManager>>
 
 ===
 
@@ -200,6 +202,7 @@ title: future_medicine
 <<Hide DBG>>
 <<FinishedDialogue VisualNovelPrefab future_medicine>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<S4Ended GameManager>>
 ===
 
 title: future_minobook
@@ -228,6 +231,7 @@ title: future_minobook
 <<Hide DBG>>
 <<FinishedDialogue VisualNovelPrefab future_minobook>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<S4Ended GameManager>>
 
 ===
 
@@ -244,6 +248,7 @@ title: future_letterjisoo
 <<Hide DBG>>
 <<FinishedDialogue VisualNovelPrefab future_letterjisoo>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<S4Ended GameManager>>
 ===
 
 title: future_videotape
@@ -264,6 +269,7 @@ title: future_videotape
 <<HideAll>>
 <<FinishedDialogue VisualNovelPrefab future_videotape>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<S4Ended GameManager>>
 ===
 
 
@@ -281,6 +287,7 @@ title: future_pic
 <<HideAll>>
 <<FinishedDialogue VisualNovelPrefab future_pic>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<S4Ended GameManager>>
 
 ===
 
@@ -295,6 +302,7 @@ title: future_hairpin
 <<HideAll>>
 <<FinishedDialogue VisualNovelPrefab future_hairpin>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<S4Ended GameManager>>
 
 ===
 
@@ -309,6 +317,7 @@ title: future_letter
 <<HideAll>>
 <<FinishedDialogue VisualNovelPrefab future_letter>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<S4Ended GameManager>>
 ===
 
 title: future_record
@@ -324,6 +333,7 @@ title: future_record
 <<HideAll>>
 <<FinishedDialogue VisualNovelPrefab future_record>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<S4Ended GameManager>>
 //상호작용 가능한 아이템을 다 둘러보고 나면: #더 둘러볼 건 없는 것 같아.
 //상호작용 가능 아이템 = 지원, 지수 방 아이템 전부 -> 이후 지도 상호작용 가능능
 //독백 뜨고, 이후 플레이어의 선택에 맡김 (이동 버튼or지도)
@@ -535,6 +545,7 @@ title: future_beer
 	<<Hide 술집주인>>
 	<<Hide 지수>>
 	<<SetCanvasTo VisualNovelPrefab false>>
+	<<S4Ended GameManager>>
 -> 아니오
 	//상호작용 종료
 	<<SetCanvasTo VisualNovelPrefab false>>
@@ -559,6 +570,7 @@ title: future_students
 	학생들: 맞아. 조심하자.
 	<<FinishedDialogue VisualNovelPrefab future_students>>
 	<<SetCanvasTo VisualNovelPrefab false>>
+	<<S4Ended GameManager>>
 -> 아니오
 	//상호작용 종료
 	<<SetCanvasTo VisualNovelPrefab false>>
@@ -600,6 +612,8 @@ title: backhome
 
 <<SetCanvasTo VisualNovelPrefab true>>
 이제 집으로 갈까.
+<<ChangeSceneTo VisualNovelPrefab S4_2_R_JisooRoom>>
+<<jump realend_last>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -607,6 +621,7 @@ title: backhome
 title: realend_last
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<wait 1.0>>
 지원이에게 어떻게 용서를 구할지 고민한 끝에,
 또 다른 나, 혹은 지원이가 생기지 않았으면 좋겠다는 신념이 생겼다.
 지금의 나는 마약류의 위험에 대해 알리고, 마약류 범죄를 예방하는 활동을 하고 있다
@@ -764,14 +779,16 @@ title: normal_drug
 여기 있다···.
 이걸 먹으면···.
 //화면 까맣게 페이드 아웃
-<<Fade Black 0.0 1.0 1.0>>
+<<DrawFadeIn BlackBG 0.75 0.75 0.2>>
 //검은 화면에 아리아드네(4장의 위습 형태)가 나옴. 비디오 연결
+<<StartAriadne VisualNovelPrefab>>
 아리아드네: 이제 벗어나야지, 지수야.
 아리아드네: 제발···. 다시 내 손을 잡아···.
+<<EndAriadne VisualNovelPrefab>>
 
 //심정지 삐-소리
 <<PlayAudio Dead 0.2>>
-<<FadeIn>>
+//<<FadeIn>>
 <<DrawFadeIn Ending7 0.75 0.75>>
 <<wait  4.0>>
 //배경 보이는 작은 오류 (희원과 코드 체크)
