@@ -91,14 +91,13 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
         }
         if(GameManager.instance.S2Ended()) {
             UnityAction openVIProom = null;
-            openVIProom = () => { MoveViproom.SetActive(true);
-                CallYarn.instance.Callbybutton(MoveViproom.GetComponent<Button>(), "yay"); //yay에서 수정 (10.25)
-                MoveViproom.GetComponent<Button>().onClick.AddListener(()=>{deActiveM();
-                                                                            UI_off();});
+            openVIProom = () => { 
+                MoveViproom.SetActive(true);
+                MoveViproom.GetComponent<Button>().onClick.AddListener(()=>{UI_off();CallYarn.instance.callYarn("club_viproom_entry2");});
             };
-            if(GameManager.instance.FinishedDialogues.Contains("club_viproom_entry")) openVIProom.Invoke(); //club_viproom_entry에서 변경 (10.25)
+            if(GameManager.instance.FinishedDialogues.Contains("club_viproom_entry1")) openVIProom.Invoke(); //club_viproom_entry에서 변경 (10.25)
             else MoveTable.GetComponent<Button>().onClick.AddListener(openVIProom);
-            CallYarn.instance.Callbybutton(MoveTable.GetComponent<Button>(), "club_viproom_entry");
+            CallYarn.instance.Callbybutton(MoveTable.GetComponent<Button>(), "club_viproom_entry1");
         }
         
         UI_on();
