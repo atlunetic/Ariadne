@@ -9,6 +9,7 @@ public class MoveS4 : MonoBehaviour
     public GameObject MoveS4Panel;
 
     void Start() {
+        gameObject.SetActive(false);
         SceneManager.sceneLoaded+= CheckScene;
         GetComponent<Button>().onClick.AddListener(()=>{MoveS4Panel.SetActive(!MoveS4Panel.activeSelf);});
     }
