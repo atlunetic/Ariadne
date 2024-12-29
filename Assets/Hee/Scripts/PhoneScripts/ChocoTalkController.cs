@@ -145,6 +145,7 @@ public class ChocoTalkController : MonoBehaviour
 
     [YarnCommand("OpenHiddenStory")]
     public void OpenHiddenStory(){
+        SaveAndLoad.instance.unlockHiddenEnd(0);
         chatbuttons["은재"].gameObject.SetActive(true);
         ClubCustomerE.SetActive(true);
     }

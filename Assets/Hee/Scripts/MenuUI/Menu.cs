@@ -93,6 +93,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
             UnityAction openVIProom = null;
             openVIProom = () => { 
                 MoveViproom.SetActive(true);
+                 MoveViproom.GetComponent<Button>().onClick.RemoveAllListeners();
                 MoveViproom.GetComponent<Button>().onClick.AddListener(()=>{UI_off();CallYarn.instance.callYarn("club_viproom_entry2");});
             };
             if(GameManager.instance.FinishedDialogues.Contains("club_viproom_entry1")) openVIProom.Invoke(); //club_viproom_entry에서 변경 (10.25)
