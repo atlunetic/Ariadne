@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class SaveGameManager{
     public string savetime;
@@ -81,6 +82,22 @@ public class GameManager : MonoBehaviour
     public bool S2Ended(){
         return FinishedDialogues.Contains("lockeropened") && FindedObjects.Contains("Toilet_costomerF") &&
         FindedClues.Contains("StudentID") && FindedClues.Contains("ToiletPaper");
+    }
+
+    [YarnCommand("S4Ended")]
+    public void S4Ended(){
+        if(FinishedDialogues.Contains("future_laptop") && FinishedDialogues.Contains("future_medicine") &&
+        FinishedDialogues.Contains("future_minobook") && FinishedDialogues.Contains("future_letterjisoo") && 
+        FinishedDialogues.Contains("future_videotape") && FinishedDialogues.Contains("future_pic") && 
+        FinishedDialogues.Contains("future_hairpin") && FinishedDialogues.Contains("future_letter") && 
+        FinishedDialogues.Contains("future_record") && FinishedDialogues.Contains("future_beer") && 
+        FinishedDialogues.Contains("future_students")) {
+            var runner = FindObjectOfType<DialogueRunner>();
+            if(NowScene=="S4_2_R_JisooRoom" || NowScene=="S4_3_R_JiwonRoom")
+                runner.StartDialogue("realend_last");
+            else
+                runner.StartDialogue("backhome");
+        }
     }
 
     public SaveGameManager Convert(){

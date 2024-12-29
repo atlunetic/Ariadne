@@ -21,12 +21,22 @@ public class DgramController : MonoBehaviour
     public GameObject IceiceChatroom; 
     public GameObject drgg24Chatroom; 
 
+    public GameObject lsdlsdlsdChatroom_real; 
+    public GameObject eoak123Chatroom_real; 
+    public GameObject drgg24Chatroom_real; 
+
     void Awake()
     {
         if (instance == null)
             instance = this;
     }
     void Start(){
+        if(GameManager.instance.NowScene.StartsWith("S4_")){
+            ChatMap.Add("realdrgg24", drgg24Chatroom_real);
+            ChatMap.Add("lsdlsdlsd", lsdlsdlsdChatroom_real);
+            ChatMap.Add("eoak123", eoak123Chatroom_real);
+            return;
+        }
         ChatScroll = PhoneController.instance.Dgram.transform.GetChild(0).GetComponent<ScrollRect>();
         ChatMap.Add("아리아드네", AriadneChatroom);
         ChatMap.Add("work8282", work8282Chatroom);
