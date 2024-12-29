@@ -389,7 +389,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1617503742}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: ToggleAudioVolume
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15595,6 +15595,7 @@ GameObject:
   - component: {fileID: 768187129}
   - component: {fileID: 768187128}
   - component: {fileID: 768187131}
+  - component: {fileID: 768187132}
   m_Layer: 5
   m_Name: SettingsPanel
   m_TagString: Untagged
@@ -15716,6 +15717,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &768187132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768187126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e0c74ee1b7d164d958956f568e44d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &770765464
 GameObject:
   m_ObjectHideFlags: 0
@@ -32628,7 +32641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e750b25f874b0a4d98b5bf550c5f4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  memobutton: {fileID: 0}
+  memobutton: {fileID: 2101446772}
   gallerybutton: {fileID: 1652641438}
   camerabutton: {fileID: 1600071562}
   chocotalkbutton: {fileID: 237761665}
