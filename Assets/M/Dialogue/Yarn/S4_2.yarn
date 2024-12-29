@@ -1,16 +1,20 @@
 ﻿title: true_ending
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<BGoff SceneManager>>
+//선정 (원하는 BGM 넣기-병원 장면) -> 병원 장면 끝날 때 꺼주기기
 아리아드네:….
 아리아드네:이제 아프지마.
 //지수7
 //화면 암전 후 전환. 병실 이미지
-<<ChangeSceneTo VisualNovelPrefab s4_1_Hospital>>
+<<DrawFadeIn BlackBG 0.75 0.75 1.0>>
+<<wait 1.0>>
+<<Hide BlackBG>>
+<<Scene Hospital_bg>>
 <<Act 지수 Jisoo8 1.17 0.322 black>>
 …여긴 어디지?
 ….
 병원인가…?
- 
 //문 열리는 사운드
 <<PlayAudio chapter4dooropen>>
 //간호사
@@ -82,7 +86,7 @@
 …!
 뭔가 떠올랐다.
 <<Hide 지수>>
-
+<<Hide Hospital_bg>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -635,14 +639,20 @@ title: realend_last
 
 title: normal_ending
 ---
+
 <<SetCanvasTo VisualNovelPrefab true>>
+<<BGoff SceneManager>>
+//선정 (원하는 BGM 넣기-병원 장면) -> 병원 장면 끝날 때 꺼주기기
 아리아드네:….
 아리아드네:이제 아프지마.
+//지수7
 //화면 암전 후 전환. 병실 이미지
-<<ChangeSceneTo VisualNovelPrefab S4_1_Hospital>>
-<<BGoff SceneManager>>
+<<DrawFadeIn BlackBG 0.75 0.75 1.0>>
+<<wait 1.0>>
+<<Hide BlackBG>>
+<<Scene Hospital_bg>>
 <<Act 지수 Jisoo8 1.17 0.322 black>>
-<<PlayAudio normalEnding 0.6>>
+<<PlayAudio normalEnding 0.6 loop>>
 …여긴 어디지?
 ….
 병원인가…?
@@ -706,10 +716,11 @@ title: normal_ending
 …!
 뭔가 떠올랐다.
 <<Hide 지수>>
+<<Hide Hospital_bg>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
-title: trueending_2
+title:  normal_ending_1
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
@@ -768,6 +779,7 @@ title: trueending_2
 나는 입원 기간 내내 악몽에 시달렸다.
 //페이드 아웃 이후 지수의 방으로 배경 페이드
 긴 입원 생활이 끝나고, 드디어 집에 왔다.
+<<ChangeSceneTo VisualNovelPrefab S4_6_N_JisooRoom>>
 어지러워…. 죽을 것 같아….
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
