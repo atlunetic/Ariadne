@@ -244,31 +244,30 @@ title: memory_Letter
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio MemoryRecall 0.5>>
-<color=\#9fa2a4><i>'나도 이제 더 이상은 못해먹겠어.'
-<color=\#9fa2a4><i>'내 인생 내가 알아서 살 테니까 훈수 두지마.' 
-<color=\#9fa2a4><i>'이번이 진짜 마지막이야. 반성하면 연락해.'
-<color=\#9fa2a4><i>'오지랖 좀 그만 부려.'
 
-
-
-
-<<StopMemory SceneManager>>
-<<StopAudioAll>>
-<<if IsS4() == false>>
-    <<UI_on MenuUI>>
-    <<Scene black_bg>>
-    <<PlayAudio EarSound 0.8>>
-    <<PlayAudio WhiteNoise 0.6>>
-
-    아.. 방금 뭐였지?
-    <<wait 0.5>>
-    ..어지러워
-
+<<if CheckDialogue("Philophon") == true>>
+    <<jump realmemory_4>>
+<<else>>
+    <<PlayAudio MemoryRecall 0.5>>
+    <color=\#9fa2a4><i>'나도 이제 더 이상은 못해먹겠어.'
+    <color=\#9fa2a4><i>'내 인생 내가 알아서 살 테니까 훈수 두지마.' 
+    <color=\#9fa2a4><i>'이번이 진짜 마지막이야. 반성하면 연락해.'
+    <color=\#9fa2a4><i>'오지랖 좀 그만 부려.'
+    <<StopMemory SceneManager>>
     <<StopAudioAll>>
-    <<HideAll>>
-    <<UI_off MenuUI>>
-    <<Scene NoBG>>
+    <<if IsS4() == false>>
+        <<UI_on MenuUI>>
+        <<Scene black_bg>>
+        <<PlayAudio EarSound 0.8>>
+        <<PlayAudio WhiteNoise 0.6>>
+        아.. 방금 뭐였지?
+        <<wait 0.5>>
+        ..어지러워
+        <<StopAudioAll>>
+        <<HideAll>>
+        <<UI_off MenuUI>>
+        <<Scene NoBG>>
+    <<endif>>
 <<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -1448,47 +1447,49 @@ title: memory_Meds
 
 ---
 
-<<FinishedDialogue VisualNovelPrefab memory_Meds>>
-<<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio MemoryRecall 0.5>>
-//(토하는 지수 연출)
-??:헉... 헉...
-??:...
-//(토하는 사운드)
-<<PlayAudio Vomit2 0.5>>
-??:우웩...
-??:...
+<<if CheckDialogue("LSD") == true>>
+    <<jump realmemory_2>>
+<<else>>
+    <<FinishedDialogue VisualNovelPrefab memory_Meds>>
+    <<SetCanvasTo VisualNovelPrefab true>>
+    <<PlayAudio MemoryRecall 0.5>>
+    //(토하는 지수 연출)
+    ??:헉... 헉...
+    ??:...
+    //(토하는 사운드)
+    <<PlayAudio Vomit2 0.5>>
+    ??:우웩...
+    ??:...
 
-<<wait 0.5>>
-
-???:...!
-
-//화장실에서 토하고 있는 사람의 실루엣
-//밖에서 그걸 목격한 사람의 실루엣
-<<StopMemory SceneManager>>
-<<StopAudioAll>>
-
-<<if IsS4() == false>>
-    <<UI_on MenuUI>>
-    <<Scene black_bg>>
-    <<PlayAudio EarSound 0.8>>
-    <<PlayAudio WhiteNoise 0.6>>
-
-    ...
     <<wait 0.5>>
-    내가 지금 피곤한가..?
 
+    ???:...!
+
+    //화장실에서 토하고 있는 사람의 실루엣
+    //밖에서 그걸 목격한 사람의 실루엣
+    <<StopMemory SceneManager>>
     <<StopAudioAll>>
-    <<HideAll>>
-    <<UI_off MenuUI>>
-    <<Scene NoBG>>
-<<endif>>
 
-<<SetCanvasTo VisualNovelPrefab false>>
+    <<if IsS4() == false>>
+        <<UI_on MenuUI>>
+        <<Scene black_bg>>
+        <<PlayAudio EarSound 0.8>>
+        <<PlayAudio WhiteNoise 0.6>>
 
-<<if CheckDialogue("DoctorsRoom")==false>>
-    <<if (CheckDialogue("MedsStory") == true && CheckDialogue("memory_Meds") == true && CheckDialogue("MemoStory_Letter") == true)>>
-        <<jump DoctorsRoom>>
+        ...
+        <<wait 0.5>>
+        내가 지금 피곤한가..?
+
+        <<StopAudioAll>>
+        <<HideAll>>
+        <<UI_off MenuUI>>
+        <<Scene NoBG>>
+    <<endif>>
+    <<SetCanvasTo VisualNovelPrefab false>>
+    <<if CheckDialogue("DoctorsRoom")==false>>
+        <<if (CheckDialogue("MedsStory") == true && CheckDialogue("memory_Meds") == true && CheckDialogue("MemoStory_Letter") == true)>>
+            <<jump DoctorsRoom>>
+        <<endif>>
     <<endif>>
 <<endif>>
 
@@ -1565,5 +1566,7 @@ title: DiaryTutorial
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
+
+
 
 

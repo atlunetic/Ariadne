@@ -182,8 +182,10 @@ title: DrugCookie
 <color=yellow>* 일기장에 ‘마약 쿠키’가 추가되었습니다. *</color>
 //(이후 일기장 클릭 시 ‘마약 쿠키’ 관련 정보 확인 가능)
 <<RevealDiary DiaryManager Page3>>
+<<FinishedDialogue VisualNovelPrefab DrugCookie>>
 //<<SetActiveFalse VisualNovelPrefab VendingMachine3>>
 //<<FinishedObj VisualNovelPrefab VendingMachine3>>
+<<jump Hint_DrugCookie>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -738,38 +740,42 @@ title: memory_Photo
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio MemoryRecall 0.5>>
-<<FinishedDialogue VisualNovelPrefab memory_Photo>>
-//(텍스트 위치 변경하였음)
-//- 증거 촬영 시 돌아오는 기억: 배경 바뀌고 어두워짐, 팝업이미지
-//클럽에 있는 지수, 건우를 찾아온 지원. 그 셋을 지켜보고 있는 시점의 사진.
+<<if CheckDialogue("DrugDrink") == true>>
+	<<jump realmemory_3>>
+<<else>>
+	<<PlayAudio MemoryRecall 0.5>>
+	<<FinishedDialogue VisualNovelPrefab memory_Photo>>
+	//(텍스트 위치 변경하였음)
+	//- 증거 촬영 시 돌아오는 기억: 배경 바뀌고 어두워짐, 팝업이미지
+	//클럽에 있는 지수, 건우를 찾아온 지원. 그 셋을 지켜보고 있는 시점의 사진.
 
-???: 둘이 대체 뭘 하고 다니는 거야.
-???: ...
-건우: ...
-???: 제발 정신 좀 차려.
-???: 내가 도와줄게... 응?
-<<StopMemory SceneManager>>
-<<StopAudioAll>>
+	???: 둘이 대체 뭘 하고 다니는 거야.
+	???: ...
+	건우: ...
+	???: 제발 정신 좀 차려.
+	???: 내가 도와줄게... 응?
+	<<StopMemory SceneManager>>
+	<<StopAudioAll>>
 
-<<if IsS4() == false>>
-	<<UI_on MenuUI>>
-		<<Scene black_bg>>
-		<<PlayAudio EarSound 0.8>>
-		<<PlayAudio WhiteNoise 0.6>>
+	<<if IsS4() == false>>
+		<<UI_on MenuUI>>
+			<<Scene black_bg>>
+			<<PlayAudio EarSound 0.8>>
+			<<PlayAudio WhiteNoise 0.6>>
 
-		정신을 잃을 것 같다.
-		<<wait 0.5>>
-		조금만 버티자.. 
+			정신을 잃을 것 같다.
+			<<wait 0.5>>
+			조금만 버티자.. 
 
-		<<StopAudioAll>>
-		<<HideAll>>
-		<<UI_off MenuUI>>
-		<<Scene NoBG>>
-<<endif>>
+			<<StopAudioAll>>
+			<<HideAll>>
+			<<UI_off MenuUI>>
+			<<Scene NoBG>>
+	<<endif>>
 
-<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
-		<<jump Room101Fin>>
+	<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
+			<<jump Room101Fin>>
+	<<endif>>
 <<endif>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -1052,6 +1058,8 @@ title: DrugDrink
 <color=yellow>* 일기장에 ‘마약 음료’가 추가되었습니다. *</color>
 <<SetActiveFalse VisualNovelPrefab DrugDrink>>
 <<FinishedObj VisualNovelPrefab DrugDrink>>
+<<FinishedDialogue VisualNovelPrefab DrugDrink>>
+<<jump Hint_DrugDrink>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1070,6 +1078,8 @@ title: Crack
 <<RevealDiary DiaryManager Page5>>
 <<SetActiveFalse VisualNovelPrefab 101_drug>>
 <<FinishedObj VisualNovelPrefab 101_drug>>
+<<FinishedDialogue VisualNovelPrefab Crack>>
+<<jump Hint_Crack>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -1317,7 +1327,7 @@ title: escapegame_checkpoint1
 //14층 배경
 <<Scene Door1403>>
 <<ShowTB VisualNovelPrefab true>>
-<color=blue>* 체크포인트 *</color>
+<color=yellow>* 체크포인트 *</color>
 
 빨리 여기서 나가야 될 것 같아.
 어디로 가지?
@@ -1365,6 +1375,7 @@ title: escapegame_checkpoint1
 		//[발각]
 		//블랙화면으로 페이드아웃
 		<<ShowTB VisualNovelPrefab false>>
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint1>>
 	-> 같은 조직원인 척 하자
 		<<PauseTB VisualNovelPrefab>>
@@ -1374,6 +1385,7 @@ title: escapegame_checkpoint1
 		//[발각]
 		//블랙화면으로 페이드아웃
 		<<ShowTB VisualNovelPrefab false>>
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint1>>
 	-> 옆에 있는 1407호에 들어가보자
 		<<PauseTB VisualNovelPrefab>>
@@ -1441,6 +1453,7 @@ title: escapegame_elevator
 		//[발각]
 		//블랙화면으로 페이드아웃
 		<<ShowTB VisualNovelPrefab false>>
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint1>>
 	-> 무시하고 뛰어가자
 		<<PauseTB VisualNovelPrefab>>
@@ -1485,6 +1498,7 @@ title: escapegame_elevator
 		갑자기 나타난 다른 조직원이 가로막았다.
 		//[발각]
 		//블랙화면으로 페이드아웃
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint1>>
 
 
@@ -1498,7 +1512,7 @@ title: escapegame_checkpoint2
 <<FadeIn>>
 //엘리베이터 이미지 배경 페이드인
 <<wait  1.0>>
-<color=blue>* 체크포인트 *</color>
+<color=yellow>* 체크포인트 *</color>
 엘리베이터에 타자마자 1층을 눌렀다.
 닫힘 버튼을 눌렀다.
 ..휴. 위험했어.
@@ -1555,7 +1569,7 @@ title: escapegame_stopelevator
 	//[지원이가 다시 끌려감]
 	//블랙화면으로 페이드아웃
 	//<<Fade Black 0.0 1.0 1.0>>
-	<<wait  1.0>>
+	<<wait  2.0>>
 	<<jump escapegame_checkpoint2>>
 -> 열림 버튼을 눌러보자
 	<<PauseTB VisualNovelPrefab>>
@@ -1622,6 +1636,7 @@ title: escapegame_brokenelevator
 	몸이 굳어 움직일 수가 없어...
 	//[발각]
 	//블랙화면으로 페이드아웃
+	<<wait 2.0>>
 	<<jump escapegame_checkpoint2>>
 -> 2층 버튼을 눌러보자
 	<<PauseTB VisualNovelPrefab>>
@@ -1684,6 +1699,7 @@ title: escapegame_brokenelevator
 		<<PlayAudio Uddangtangtang 0.5>>
 		//[발각]
 		//블랙화면으로 페이드아웃
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint2>>
 
 
@@ -1694,7 +1710,7 @@ title: escapegame_checkpoint3
 ---
 <<InitTB VisualNovelPrefab S3_6_CP3>>
 <<Scene Lobby3F>>
-<color=blue>* 체크포인트 *</color>
+<color=yellow>* 체크포인트 *</color>
 1층에는 이미 조직원들이 대기하고 있을 거야.
 비상계단으로 가자..!
 //계단 이미지2 배경
@@ -1758,6 +1774,7 @@ title: escapegame_checkpoint3
 		<<PlayAudio LoudDoor 0.6>>
 		//[지원이가 다시 끌려감]
 		//블랙화면으로 페이드아웃
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint3>>
 	-> 소화전을 울리자
 		<<PauseTB VisualNovelPrefab>>
@@ -1789,6 +1806,7 @@ title: escapegame_checkpoint3
 		//[발각]
 		//블랙화면으로 페이드아웃
 		<<Scene BlackBG>>
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint3>>
 -> 내가 가지고 있는 물건을 살펴보자
 	<<InitTB VisualNovelPrefab S3_6_CP3>>
@@ -1875,6 +1893,7 @@ title: escapegame_checkpoint3
 		변명해 볼 여지도 없이 지원이는 조직원들에게 붙잡혔다.
 		//[지원이가 다시 끌려감]
 		//블랙화면으로 페이드아웃
+		<<wait 2.0>>
 		<<jump escapegame_checkpoint3>>
 
 
@@ -1903,6 +1922,7 @@ title:BacktoOfficetel1stFloor
 
 ---
 
+//<<SetCanvasTo VisualNovelPrefab true>>
 //지수2
 <<Act 지수 Jisoo2 1.17 0.322 white>>
 지수: 지원아...

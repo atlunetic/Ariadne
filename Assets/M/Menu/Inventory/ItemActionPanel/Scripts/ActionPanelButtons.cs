@@ -28,10 +28,23 @@ public class ActionPanelButtons : MonoBehaviour
         //close inventory after clicking use
         Menu.instance.UI_off();
 
+        if (connectedItem.itemName == "Bracelet")
+        {
+            if (GameManager.instance.FinishedDialogues.Contains("Bracelet1"))
+            {
+                if (currentscene.name.StartsWith("S1")) { runner.StartDialogue("Bracelet2"); }
+                else if (currentscene.name.StartsWith("S2_7_Stairs")){ runner.StartDialogue("inventory_notjelly"); }
+                else { runner.StartDialogue("WrongItem"); }
+            }
+            else
+            {
+                runner.StartDialogue("Bracelet1");
+            }
+        }
 
 
 
-        if (connectedItem.itemName == "Wallet")
+        else if (connectedItem.itemName == "Wallet")
         {
             if (GameManager.instance.S1Ended() == true)
             {
