@@ -246,6 +246,7 @@ title: memory_Letter
 <<SetCanvasTo VisualNovelPrefab true>>
 
 <<if CheckDialogue("Philophon") == true>>
+    <<StopMemory SceneManager>>
     <<jump realmemory_4>>
 <<else>>
     <<PlayAudio MemoryRecall 0.5>>
@@ -1443,6 +1444,7 @@ title: memory_Meds
 ---
 
 <<if CheckDialogue("LSD") == true>>
+    <<StopMemory SceneManager>>
     <<jump realmemory_2>>
 <<else>>
     <<FinishedDialogue VisualNovelPrefab memory_Meds>>

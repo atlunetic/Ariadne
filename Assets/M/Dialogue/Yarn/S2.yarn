@@ -2040,6 +2040,7 @@ title: memory_StudentID
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<if CheckDialogue("DrugCookie") == true>>
+	<<StopMemory SceneManager>>
 	<<jump realmemory_1>>
 <<else>>
 	<<PlayAudio MemoryRecall 0.5>>
@@ -4409,6 +4410,7 @@ title: memory_BrokenGlasses
 //증거 촬영 시 돌아오는 기억: 건우가 지수에게 지원의 유품인 '깨진 안경'을 건넸을 때의 기억이 돌아옴.
 <<SetCanvasTo VisualNovelPrefab true>>
 <<if CheckDialogue("Crack") == true>>
+	<<StopMemory SceneManager>>
 	<<jump realmemory_5>>
 <<else>>
 	<<PlayAudio MemoryRecall 0.5>>

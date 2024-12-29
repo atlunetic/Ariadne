@@ -16,5 +16,6 @@ public class Ending : MonoBehaviour
         if(SaveAndLoad.instance.endings.endingNums.Contains(EndingNum)){
             gameObject.SetActive(true);
         }
+        else gameObject.SetActive(false);
     }
 }

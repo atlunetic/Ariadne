@@ -741,6 +741,7 @@ title: memory_Photo
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<if CheckDialogue("DrugDrink") == true>>
+	<<StopMemory SceneManager>>
 	<<jump realmemory_3>>
 <<else>>
 	<<PlayAudio MemoryRecall 0.5>>
