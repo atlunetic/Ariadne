@@ -18,7 +18,7 @@
 <<wait 2.0>>
 
 //신비로운 사운드
-<<PlayAudio Ariadne 0.7>>
+<<PlayAudio Ariadne 0.55>>
 
 <color=purple>아리아드네</color>: <color=purple>일어났어?</color>
 ...
@@ -749,18 +749,18 @@ title: ending_merrybad
 <<Scene Leftpath>>
 왼쪽에 길이 나있다.
 //♫Sound: 괴물 울음소리
-<<PlayAudio MonsterSound1 0.7>>
+<<PlayAudio MonsterSound1 0.3>>
 <<wait 1.0>>
 불길한 소리가 들린다.
 
 //높은 천장. 지수를 내려다보는 거대한 그림자. 1인칭 시점 배경 
-<<PlayAudio MonsterSound2 0.7>>
+<<PlayAudio MonsterSound2 0.1>>
 <<Scene Ceiling>>
 저게 말로만 듣던 미노타우르스...
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
 검을 쥔 손에 힘이 들어가지 않아.
 //♫Sound: 크게 들리는 괴물 울음소리
-<<PlayAudio MonsterSound3 0.7>>
+<<PlayAudio MonsterSound3 0.3>>
 <<wait 1.0>>
 
 //거대한 그림자가 보다 가까이 다가온 1인칭 시점 배경 이미지
@@ -786,6 +786,7 @@ title: ending_merrybad
 //효과지수4
 <<wait 1.0>>
 <<FadeIn>>
+<<PlayAudio merrybadending 0.4>>
 <<Act 지수 EJisoo4 1.17 0.322 white>>
 헉..!
 ...
@@ -793,7 +794,6 @@ title: ending_merrybad
 <<UpdateAct 지수 EJisoo2>>
 꿈을 꿨나?
 <<wait 2.0>>
-
 ...
 //문을 두드리는 사운드
 //문열리는 사운드
@@ -848,7 +848,7 @@ title: ending_merrybad
 <<PlayAudio DoorOpenandClose 0.5>>
 <<wait 2.0>>
 //이후 심박수 측정기 사운드가 뒤섞이다 멈춤
-<<PlayAudio MixedNoise 0.7>>
+<<PlayAudio MixedNoise 0.6>>
 
 //어두워지는 배경, 어두운 배경에 엔딩 일러스트 등장
 <<Fade Black 0.0 1.0 2.0>>
@@ -876,7 +876,7 @@ title: ending_bad
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio NightmareBGM 0.6 loop>>
+<<PlayAudio badending 0.6 loop>>
 <<CollectEnding GameManager ending_bad Ending5>>
 <<Scene Maze>>
 
@@ -886,18 +886,18 @@ title: ending_bad
 
 <<Scene Leftpath>>
 왼쪽에 길이 나있다.
-<<PlayAudio MonsterSound1 0.7>>
+<<PlayAudio MonsterSound1 0.3>>
 <<wait 1.0>>
 불길한 소리가 들린다.
 
-<<PlayAudio MonsterSound2 0.7>>
+<<PlayAudio MonsterSound2 0.1>>
 <<Scene Ceiling>>
 저게 말로만 듣던 미노타우르스...
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
 검을 쥔 손에 힘이 들어가지 않아.
 
 
-<<PlayAudio MonsterSound3 0.7>>
+<<PlayAudio MonsterSound3 0.3>>
 <<wait 1.0>>
 
 녀석이 서서히 내게 다가온다.
@@ -910,7 +910,7 @@ title: ending_bad
 <<Hide Hand>>
 <<StopAudioAll>>
 //동시에 심박수 삐-사운드
-<<PlayAudio Dead 0.7>>
+<<PlayAudio Dead 0.6>>
 //어두운 배경에 엔딩 일러스트 등장
 
 <<Draw Ending5 0.75 0.75>>

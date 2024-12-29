@@ -180,6 +180,7 @@ namespace Yarn.Unity.Example {
             if (newSprite != null)
             {
                 image.sprite = newSprite;
+				image.SetNativeSize();
             }
             else
             {
