@@ -11,6 +11,7 @@
 <<wait 1.0>>
 <<Hide BlackBG>>
 <<Scene Hospital_bg>>
+<<PlayAudio TrueEndTheme 0.5>>
 <<Act 지수 Jisoo8 1.17 0.322 black>>
 …여긴 어디지?
 ….
@@ -156,7 +157,7 @@ title: trueending_1
  
 마약류 복용에 대한 처벌로 1년 2개월 형을 선고받았다.
 죗값을 치른 후, 정부 기관의 도움으로 치료 센터에 다녔다.
-
+<<StopAudio All>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
