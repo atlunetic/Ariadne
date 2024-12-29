@@ -93,7 +93,7 @@ title: Ending0
 <<ChangeSceneTo VisualNovelPrefab S1>>
 <<SetCanvasTo VisualNovelPrefab true>>
 <<StopAudioAll>>
-<<CollectEnding GameManager Ending0 Ending0>>
+<<CollectEnding GameManager 0>>
 <<PlayAudio CardiacArrest 0.2>> 
 <<Fade white 0.0 1.0 2.0>>
 <<Scene WhiteBG>>
@@ -382,7 +382,7 @@ title: Ending1
 ---
 
 <<Fade Black 0.0 1.0 2.0>>
-<<CollectEnding GameManager Ending1 Ending1>>
+<<CollectEnding GameManager 1>>
 <<wait 3.0>>
 <<ChangeSceneTo VisualNovelPrefab S1>>
 <<Scene BlackBG>>
@@ -491,7 +491,7 @@ title: PhoneBoothEnd2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<CollectEnding GameManager PhoneBoothEnd2 Ending2>>
+<<CollectEnding GameManager 2>>
 <<Scene DrugDealBG>>
 <<ChangeSceneTo VisualNovelPrefab S1>>
 이미지 속 장소를 찾아왔다.

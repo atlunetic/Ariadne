@@ -1,6 +1,7 @@
 ﻿title: true_ending
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<CollectEnding GameManager 8>> 
 <<BGoff SceneManager>>
 //선정 (원하는 BGM 넣기-병원 장면) -> 병원 장면 끝날 때 꺼주기기
 아리아드네:….
@@ -641,6 +642,7 @@ title: normal_ending
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<CollectEnding GameManager 7>>
 <<BGoff SceneManager>>
 //선정 (원하는 BGM 넣기-병원 장면) -> 병원 장면 끝날 때 꺼주기기
 아리아드네:….
