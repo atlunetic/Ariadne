@@ -536,11 +536,13 @@ title: obj_customers
 		클럽 고객D가 E를 향해 걸어가는 모습이 보였다.
 		걱정되네...
 		...
-		일단 의심받기 전에 옷부터 갈아입자.
-		<<PlayAudio Clotheschange>>
+		//일단 의심받기 전에 옷부터 갈아입자.
+		//<<PlayAudio Clotheschange>>
 		//(이후 기본 복장으로 자동 변경)
-		<color=yellow>* 직원 복장 옷을 벗었다. *</color>
+		//<color=yellow>* 직원 복장 옷을 벗었다. *</color>
 		<<Hide 지수>>
+		<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
+		<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
 		<<SetCanvasTo VisualNovelPrefab false>>
 -> 가서 도와주자.
 	<<Act 지수 Jisoo2 1.17 0.322 white>>
