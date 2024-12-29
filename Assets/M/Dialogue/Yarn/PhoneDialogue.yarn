@@ -318,10 +318,10 @@ title: Chatlist
 <<wait 0.8>>
 뭐야. 무슨 소리야?
 내 이름은 왜 보내둔 거지? 무서워.
--> 너는 누구야...?
-    <<wait 1.5>>
--> 지원이랑 무슨 사이야?
-    <<wait 1.5>>
+-> 누구세요...?
+    <<StartPhoneChat PhoneController 74>>
+-> 지원이랑 무슨 사이예요?
+    <<StartPhoneChat PhoneController 76>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -329,7 +329,8 @@ title: A_Rapport1
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
--> 지원이랑 무슨 사이야?
+-> 지원이랑 무슨 사이예요?
+    <<StartPhoneChat PhoneController 75>>
     <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -338,7 +339,8 @@ title: A_Rapport2
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
--> 너는 누구야...?
+-> 누구세요...?
+    <<StartPhoneChat PhoneController 77>>
     <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -348,6 +350,7 @@ title: A_Rapport3
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 누구지 도대체.
+<<StartPhoneChat PhoneController 78>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -356,9 +359,32 @@ title: A_Rapport4
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+...
+이게 뭔 소리지..?
+<<StartPhoneChat PhoneController 79>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: A_Rapport5
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+뭐야...무서워.
+<<StartPhoneChat PhoneController 80>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: A_Rapport6
+
+---
+<<SetCanvasTo VisualNovelPrefab true>>
 수상한 사람은 아닐까...?
 그래도 혹시 모르니까...나중에 필요하면 연락해보자.
 들어온 김에 다른 채팅들도 살펴봐야겠다.
+<<AriadneHintOn PhoneController>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
