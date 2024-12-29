@@ -15,6 +15,7 @@ public class CallYarn : MonoBehaviour
             instance = this;
     }
     Dictionary<string, bool> IsDialogShowed;
+    public Button memobutton;
     public Button gallerybutton;
     public Button camerabutton;
     public Button chocotalkbutton;
@@ -64,6 +65,9 @@ public class CallYarn : MonoBehaviour
         Callbybutton(gallerybutton, "Gallery");  // 갤러리 켰을 때
 
         Callbybutton(camerabutton, "Camera");  // 카메라 켰을 때
+
+        Callbybutton(memobutton,"Memo_Tutorial");  // 메모장 켰을 때
+
         UnityAction camera = null;
         camera = () => {camerabutton.onClick.AddListener(CameraController.instance.ActiveCamera);
                         camerabutton.onClick.RemoveListener(camera);};

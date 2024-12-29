@@ -28,6 +28,8 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     public GameObject UIButtons;
 
     public GameObject Phone;
+    public GameObject Controllers;
+    public GameObject JisooPhone;
     public GameObject Inventory;
     public GameObject Diary;
     public GameObject MoveS2_;
@@ -47,7 +49,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     [YarnCommand("UI_off")]
     public void UI_off(){
         BlockClick = false;
-        if(GameManager.instance.NowScene.StartsWith("S4")) return;
+        if(GameManager.instance.NowScene=="S4") return;
         UIMode.SetActive(false);
         UIButtons.transform.GetChild(0).gameObject.SetActive(true);
         UIButtons.transform.GetChild(1).gameObject.SetActive(true);
@@ -84,18 +86,19 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
             if(GameManager.instance.FindedObjects.Contains("StaffRoom_staff_C"))
                 CallYarn.instance.Callbybutton(MoveStaffroom.GetComponent<Button>(), "club_staffroom_nostaff");
             if(!GameManager.instance.FinishedDialogues.Contains("obj_keyStory"))
-                MoveStaffroom.SetActive(true);
+                if(!GameManager.instance.FinishedDialogues.Contains("StaffroomEnd~"))
+                    MoveStaffroom.SetActive(true);
         }
         if(GameManager.instance.S2Ended()) {
             UnityAction openVIProom = null;
             openVIProom = () => { MoveViproom.SetActive(true);
-                CallYarn.instance.Callbybutton(MoveViproom.GetComponent<Button>(), "club_viproom_entry2"); //yay에서 수정 (10.25)
+                CallYarn.instance.Callbybutton(MoveViproom.GetComponent<Button>(), "yay"); //yay에서 수정 (10.25)
                 MoveViproom.GetComponent<Button>().onClick.AddListener(()=>{deActiveM();
                                                                             UI_off();});
             };
-            if(GameManager.instance.FinishedDialogues.Contains("club_viproom_entry1")) openVIProom.Invoke(); //club_viproom_entry에서 변경 (10.25)
+            if(GameManager.instance.FinishedDialogues.Contains("club_viproom_entry")) openVIProom.Invoke(); //club_viproom_entry에서 변경 (10.25)
             else MoveTable.GetComponent<Button>().onClick.AddListener(openVIProom);
-            CallYarn.instance.Callbybutton(MoveTable.GetComponent<Button>(), "club_viproom_entry1");
+            CallYarn.instance.Callbybutton(MoveTable.GetComponent<Button>(), "club_viproom_entry");
         }
         
         UI_on();
@@ -147,10 +150,10 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     [YarnCommand("IfDone_getout")]
     public void IfDone_getout(){
         if(!GameManager.instance.StaffroomEnded()) return;
-        GameManager.instance.FindedObjects.Add("obj_staffroomdoor");
+        GameManager.instance.FinishedDialogues.Add("StaffroomEnd~");
+        MoveStaffroom.SetActive(false);
         StartCoroutine("fordelaystart");       
     }
-
     IEnumerator fordelaystart(){
         yield return new WaitForSeconds(1f);
         CallYarn.instance.callYarn("letsgetout");
@@ -160,5 +163,26 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     public void RemoveUI(){
         GameManager.instance.FinishedDialogues.Add("RemoveUI");
         UIButtons.SetActive(false);
+    }
+
+    [YarnCommand("GoReality")]
+    public void GoReality(){
+        GameManager.instance.ChattingLog.Clear();
+        GameManager.instance.visited=0;
+        LoadReality();
+    }
+    [YarnCommand("LoadReality")]
+    public void LoadReality(){
+        Destroy(Phone);
+        Destroy(Controllers);
+        PhoneController.instance=null;
+        ChocoTalkController.instance=null;
+        DgramController.instance=null;
+        MapController.instance=null;
+        
+        GameObject temp = Instantiate(JisooPhone, transform);
+        temp.transform.SetSiblingIndex(1);
+
+        Phone = temp.transform.GetChild(0).gameObject;
     }
 }

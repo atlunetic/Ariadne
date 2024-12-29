@@ -29,6 +29,16 @@ public class MapController : MonoBehaviour
     public Sprite BlueDot;
 
     void Start(){
+        if(GameManager.instance.NowScene.StartsWith("S4_")){
+            Homebutton.onClick.AddListener(GoHome);
+            BarStreetbutton.onClick.AddListener(GoBarStreet);
+            Parkbutton.onClick.AddListener(GoPark);
+            DisableButton(Homebutton);
+            if((GameManager.instance.visited & 1) != 0) Parkbutton.GetComponent<Image>().sprite = BlueDot;
+            if((GameManager.instance.visited & 2) != 0) BarStreetbutton.GetComponent<Image>().sprite = BlueDot;
+            return;
+        }
+
         if((GameManager.instance.visited & 1) != 0) Parkbutton.GetComponent<Image>().sprite = BlueDot;
         if((GameManager.instance.visited & 2) != 0) BarStreetbutton.GetComponent<Image>().sprite = BlueDot;
         if((GameManager.instance.visited & 4) != 0) Hospitalbutton.GetComponent<Image>().sprite = BlueDot;
@@ -39,7 +49,10 @@ public class MapController : MonoBehaviour
         CurrPoint.anchoredPosition = new Vector2(-254,156);
         Menu.instance.UI_off();
         DisableButton(Homebutton);
-        SceneManager.LoadScene("S1_2_JiwonRoom");
+        if(GameManager.instance.NowScene.StartsWith("S4_"))
+            SceneManager.LoadScene("S4_2_R_JisooRoom");
+        else
+            SceneManager.LoadScene("S1_2_JiwonRoom");
     }
 
     [YarnCommand("GoPark")]
@@ -48,13 +61,19 @@ public class MapController : MonoBehaviour
         Menu.instance.UI_off();
         Parkbutton.GetComponent<Image>().sprite = BlueDot;
         DisableButton(Parkbutton);
-        SceneManager.LoadScene("S1_Park");
+        if(GameManager.instance.NowScene.StartsWith("S4_"))
+            SceneManager.LoadScene("S4_5_R_Park");
+        else 
+            SceneManager.LoadScene("S1_Park");
         GameManager.instance.visited |= 1;
     }
 
     [YarnCommand("GoBarStreet")]
     public void GoBarStreet(){
-        SceneManager.LoadScene("S1_Street");
+        if(GameManager.instance.NowScene.StartsWith("S4_"))
+            SceneManager.LoadScene("S4_4_R_Street");
+        else 
+            SceneManager.LoadScene("S1_Street");
         CurrPoint.anchoredPosition = new Vector2(27,251);
         Menu.instance.UI_off();
         BarStreetbutton.GetComponent<Image>().sprite = BlueDot;

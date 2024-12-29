@@ -21,6 +21,9 @@ public class PhoneController : MonoBehaviour
             TabStack = new Stack<GameObject>();
         }
     }
+    void Start(){Menu.instance.PhoneButton.GetComponent<Button>().onClick.AddListener(ActivePhone);
+                 TabStack = new Stack<GameObject>();
+                 print(TabStack.Count);}
     
     [YarnCommand("ActivePhone")]
     public void ActivePhone(){
@@ -31,10 +34,13 @@ public class PhoneController : MonoBehaviour
 
     public void ActiveTab(GameObject tab){
         if(tab.activeSelf) return;
+        print(TabStack.Count);
         TabStack.Push(tab);
         tab.SetActive(true);
+        print(TabStack.Count);
     }
     public void Backward(){
+        print(TabStack.Count);
         if(TabStack.Count!=0)
             TabStack.Pop().SetActive(false);
     }

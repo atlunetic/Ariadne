@@ -30,6 +30,11 @@ public class ChocoTalkController : MonoBehaviour
     public GameObject trend1;
     public GameObject trend2;
     public GameObject[] RecommendedFriends;
+
+    public GameObject jiwon;
+    public GameObject editor;
+    public GameObject realGunwoo;
+    public GameObject realHaesol;
     public GameObject ClubCustomerE;
     void Awake()
     {
@@ -37,15 +42,23 @@ public class ChocoTalkController : MonoBehaviour
             instance = this;
     }
     void Start(){
-        ChatScroll = ChatTab.transform.GetChild(0).GetComponent<ScrollRect>();
-        CreateChatRoom("건우 오빠");
-        CreateChatRoom("의사 선생님");
-        CreateChatRoom("해솔");
-        ChatMap.Add("지수", jisoo);
-        ChatMap.Add("D", D);
         ChatMap.Add("마약퇴치운동본부", RecommendedFriends[0]);
         ChatMap.Add("NeverEverDrug", RecommendedFriends[1]);
         ChatMap.Add("Team ARIADNE", RecommendedFriends[2]);
+        ChatScroll = ChatTab.transform.GetChild(0).GetComponent<ScrollRect>();
+        if(GameManager.instance.NowScene.StartsWith("S4_")){
+            ChatMap.Add("지원", jiwon);
+            ChatMap.Add("기자", editor);
+            ChatMap.Add("건우 오빠", realGunwoo);
+            ChatMap.Add("해솔", realHaesol);
+            return;
+        } 
+
+        CreateChatRoom("건우 오빠");
+        CreateChatRoom("해솔");
+        CreateChatRoom("의사 선생님");
+        ChatMap.Add("지수", jisoo);
+        ChatMap.Add("D", D);
         CreateChatRoom("은재");
         if(!GameManager.instance.FinishedDialogues.Contains("letEknow")){
             chatbuttons["은재"].gameObject.SetActive(false);

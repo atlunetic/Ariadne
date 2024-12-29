@@ -137,4 +137,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/M/Scenes_M/SEndingCredit.unity
     guid: c280155db30943744ab5342ddff4b659
+  - enabled: 1
+    path: Assets/M/Scenes_M/S4/S4_2_R_JisooRoom.unity
+    guid: f888bc39dd9ff024780f35f35acf29e8
+  - enabled: 1
+    path: Assets/M/Scenes_M/S4/S4_5_R_Park.unity
+    guid: 30bbe77de753cbf4584ddbcd0a60c8d4
+  - enabled: 1
+    path: Assets/M/Scenes_M/S4/S4_4_R_Street.unity
+    guid: 56932a2730349b74193adfc1621fa76e
+  - enabled: 1
+    path: Assets/M/Scenes_M/S4/S4_3_R_JiwonRoom.unity
+    guid: 9f188f4efe3eaac468cc045b0d72f80f
   m_configObjects: {}
