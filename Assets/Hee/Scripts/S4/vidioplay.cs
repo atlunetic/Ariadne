@@ -81,6 +81,7 @@ public class vidioplay : MonoBehaviour
     }
 
     IEnumerator fordelaystart(){
+        SaveAndLoad.instance.unlockHiddenEnd(1);
         yield return new WaitForSeconds(1f);
         transform.GetChild(0).gameObject.SetActive(false);
         if(FinalReason.instance.ending=="normal_ending")
