@@ -29,7 +29,7 @@
 //문 닫히는 사운드
 <<PlayAudio chapter4doorclose>>
 //의사 
-<<Act 의사 NPC_doctor 0.322 0.227 green>>
+<<Act 의사 NPC_Doctor 0.322 0.227 green>>
 의사: 상태가….
 의사: ….
 <<Hide 의사>>
@@ -639,7 +639,7 @@ title: normal_ending
 아리아드네:….
 아리아드네:이제 아프지마.
 //화면 암전 후 전환. 병실 이미지
-<<ChangeSceneTo VisualNovelPrefab s4_1_Hospital>>
+<<ChangeSceneTo VisualNovelPrefab S4_1_Hospital>>
 <<BGoff SceneManager>>
 <<Act 지수 Jisoo8 1.17 0.322 black>>
 <<PlayAudio normalEnding 0.6>>
@@ -660,7 +660,7 @@ title: normal_ending
 <<UpdateAct 지수 Jisoo8>>
 <<PlayAudio chapter4dooropen>>
 <<PlayAudio chapter4doorclose>>
-<<Act 의사 NPC_doctor 0.322 0.227 green>>
+<<Act 의사 NPC_Doctor 0.322 0.227 green>>
 의사: 상태가….
 의사: ….
 <<Hide 의사>>
