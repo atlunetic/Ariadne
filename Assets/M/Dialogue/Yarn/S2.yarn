@@ -4,6 +4,7 @@
 
 //240816 BIC 용 수정본
 
+<<PlayAudio ClubstreetBGM loop>>
 <<Act 건우 Geonwoo0 0.322 0.227 white>>
 
 <<UpdateAct 지수 Jisoo4>>
@@ -48,7 +49,7 @@ title: StartClub
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio BarStreet 0.4>>
+<<PlayAudio club_entrance 0.4 loop>>
 <<Scene ClubEntrance>>
 <<Act 지수 Jisoo4 1.17 0.322 white>>
 이런 데가 있구나....
@@ -70,8 +71,6 @@ title: StartClub
 title: meet_gunwoo
 
 ---
-
-//<<PlayAudio 클럽내부theme파일이름>>
 
 
 <<Act 건우 Geonwoo0 0.322 0.227 white>>
@@ -489,43 +488,49 @@ title: obj_customers
 			<<Hide 클럽고객E>>
 			E가 술잔에 입을 가져다댔다.
 			걱정되네. 별 일 없었으면 좋겠는데.
-			…
+			...
 			잠시 바라보다, 자리를 옮기려는 순간.
 			E가 휘청거리기 시작했다.
-			…
-			도와줘야 하나…?
+			...
+			도와줘야 하나...?
 			발걸음을 옮기는 순간, D가 기다렸다는 듯 나타나 E를 부축했다.
-			수상해….
-			…
+			수상해...
+			...
 			저기요..!!
+			<<Fade black 0.0 1.0 2.0>>
+			<<wait 2.0>>
+			<<BGoff SceneManager>>
+			<<PlayAudio chapter3meetJiwon 0.8 loop>>
 			뒤돌아본 D와 눈이 마주쳤다. //(스산한 BGM 추가)
 			초점없는 E의 눈과도.
 			순간 알 수 없는 공포감이 온몸을 스쳤다.
 			나의 외침을 들은 사람은 D뿐인 듯 했다.
 			아무도 관심을 갖지 않았다.
 			아무런 말도 할 수 없었다.
-			얼마간 정적이 흘렀을까….
+			얼마간 정적이 흘렀을까...
 			D는 고개를 돌렸고, E를 어디론가 데려갔다.
-			내가 잘못된 결정을 한 걸까…
+			내가 잘못된 결정을 한 걸까...
+			<<StopAudio chapter3meetJiwon>>
+			<<BGon SceneManager>>
 			<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
 			<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
+			<<FadeIn 2.0>>
 			<<SetCanvasTo VisualNovelPrefab false>>
 		-> 그래...오지랖 부리지 말자.
 			...
 			E는 신나게 춤추고 있는 사람들을 바라봤다.
-			<<Act 지수 Jisoo1 1.17 0.322 white>>
-			지수:저는 먼저 가볼게요.
-			E가 고개를 돌려 눈인사를 했다.
-			<<Hide 클럽고객E>>
-			<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
-			<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
- 			E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
-			<<UpdateAct 지수 Jisoo2>>
+			... 누굴 찾고 있는 것 같은데?
+			E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
+			<<UpdateAct 지수 CoJIsoo2>>
 			...
 			클럽 고객D가 E를 향해 걸어가는 모습이 보였다.
 			걱정되네...
+			...
+			일단 의심받기 전에 옷부터 갈아입자.
+			<<PlayAudio Clotheschange>>
+			//(이후 기본 복장으로 자동 변경)
+			<color=yellow>* 직원 복장 옷을 벗었다. *</color>
 			<<Hide 지수>>
-			<<DelaySpawn ClubTableBG>>
 			<<SetCanvasTo VisualNovelPrefab false>>
 	-> 가서 도와주자.
 		<<Act 지수 Jisoo2 1.17 0.322 white>>
@@ -782,7 +787,7 @@ title: letEknow
 	<<Hide 클럽고객E>>
 	//(이후 기본 복장으로 자동 변경)
 	//상호작용 종료 및 히든 스토리 해금 (초코톡에 클럽 고객E의 프로필이 생성됨)
-	<color=yellow>* 직원 복장 옷을 벗었다. *</color>
+	<color=yellow>* 직원 복장을 벗었다. *</color>
 	<<FinishedDialogue VisualNovelPrefab letEknow>>
 	<<OpenHiddenStory ChocoTalkController>>
 	<<SetCanvasTo VisualNovelPrefab false>>
@@ -798,25 +803,18 @@ title: DontTellE
 그래...오지랖 부리지 말자.
 ...
 E는 신나게 춤추고 있는 사람들을 바라봤다.
-
-<<UpdateAct 지수 CoJIsoo1>>
-지수:저는 먼저 가볼게요.
-<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
-E가 고개를 돌려 눈인사를 했다.
-<<Hide 클럽고객E>>
-<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
-<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
-
+... 누굴 찾고 있는 것 같은데?
 E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
 <<UpdateAct 지수 CoJIsoo2>>
 ...
-
 클럽 고객D가 E를 향해 걸어가는 모습이 보였다.
-걱정되네...
+걱정되네....
 ...
 일단 의심받기 전에 옷부터 갈아입자.
+
+<<PlayAudio Clotheschange>>
 //(이후 기본 복장으로 자동 변경)
-<color=yellow>* 직원 복장 옷을 벗었다. *</color>
+<color=yellow>* 직원 복장을 벗었다. *</color>
 
 <<Hide 지수>>
 
@@ -959,7 +957,7 @@ title: Table_Geonwoo2
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
-지수: 건…
+지수: 건...
 건우: 아. 조금만 있다가 말 걸라니까.
 건우 오빠가 고개를 휙 돌렸다.
 다른 장소를 먼저 둘러봐야 하나?
@@ -977,7 +975,7 @@ title: Table_Geonwoo3
 	<<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
 	<<SetCanvasTo VisualNovelPrefab true>>
 	건우: 아 겨우 한숨 돌렸네.
-	건우: 안그래도 요즘 단속 심해서 빡치는데…
+	건우: 안그래도 요즘 단속 심해서 빡치는데...
 	건우 오빠는 내가 뒤에 있는 걸 눈치채지 못한 모양이다.
 	다시 불러보자.
 	<<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
@@ -1808,21 +1806,23 @@ title: event_gunwoo_q6a
 	<<UpdateAct 건우 Geonwoo2>>
 	건우: ...
 	건우: 아마 그렇겠지.
+	<<wait 1.0>>
+	건우 오빠의 표정이 흔들렸다.
 	<<jump event_gunwoo_end>>
--> 지원이가 연락했던 마약상에 대해 알고 싶다.
+-> 지원이가 방문했던 이 클럽 자체가 수상하다.
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 지원이가 연락했던 마약상에 대해 알고 싶어요.
-	지수: 그러면...
-	지수: 그 사람들이 지원이 행방을 알 수도 있잖아요.
-	지수: 어딨는지 물어봐야죠.
+	지수: 지원이가 여기 온 것 자체가 수상해요.
+	지수: 혹시...
+	지수: 최근에 이 클럽에서 이상한 일 없었어요?
+	지수: 여기 왔던 사람들이 사라졌다거나...
 	<<wait 1.0>>
 	<<UpdateAct 건우 Geonwoo3>>
-	건우: ...
-	건우: 내가 그걸 어떻게 아냐..?
+	건우: 뭐? 너 요즘 도시괴담 같은 거 관심있냐?
+	건우: 그게 뭔 소리야.
 	<<wait 1.0>>
-	건우 오빠의 표정이 흔들렸다.
+	건우 오빠의 표정이 좋지 않다.
 	<<jump event_gunwoo_end>>
 	
 
@@ -1854,20 +1854,20 @@ title: event_gunwoo_q6b
 <<wait 1.0>>
 
 //선택지 랜덤 출력
--> 지원이가 연락했던 마약상에 대해 알고 싶다.
+-> 지원이가 방문했던 이 클럽 자체가 수상하다.
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 지원이가 연락했던 마약상에 대해 알고 싶어요.
-	지수: 그러면...
-	지수: 그 사람들이 지원이 행방을 알 수도 있잖아요.
-	지수: 어딨는지 물어봐야죠.
+	지수: 지원이가 여기 온 것 자체가 수상해요.
+	지수: 혹시...
+	지수: 최근에 이 클럽에서 이상한 일 없었어요?
+	지수: 여기 왔던 사람들이 사라졌다거나...
 	<<wait 1.0>>
 	<<UpdateAct 건우 Geonwoo3>>
-	건우: ...
-	건우: 내가 그걸 어떻게 아냐..?
+	건우: 뭐? 너 요즘 도시괴담 같은 거 관심있냐?
+	건우: 그게 뭔 소리야.
 	<<wait 1.0>>
-	건우 오빠의 표정이 흔들렸다.
+	건우 오빠의 표정이 좋지 않다.
 	<<jump event_gunwoo_end>>
 -> 지원이가 여기서 뭘 하고 다녔는지 알고 싶다.
 	//설득점수 +1
@@ -1880,6 +1880,8 @@ title: event_gunwoo_q6b
 	<<UpdateAct 건우 Geonwoo2>>
 	건우: ...
 	건우: 아마 그렇겠지.
+	<<wait 1.0>>
+	건우 오빠의 표정이 흔들렸다.
 	<<jump event_gunwoo_end>>
 	
 
@@ -1976,8 +1978,8 @@ title: event_gunwoo_fail
 <<UpdateAct 건우 Geonwoo2>>
 건우: ...
 <<wait 0.5>>
-건우 오빠가 대답이 없네….
-다시 설득해볼까…?
+건우 오빠가 대답이 없네...
+다시 설득해볼까...?
 
 <<Hide 지수>>
 <<Hide 건우>>
@@ -2109,7 +2111,11 @@ title: obj_drugjelly
 에휴...
 옷이라도 주워주자.
 
+<<PlayAudio clothesdrop>>
+
 조심스레 겉옷을 주워 클럽 고객F에게 덮어줬다.
+
+<<PlayAudio dropjelly>>
 그 순간 바닥으로 무언가 떨어졌다.
 <<Hide 지수>>
 <<Hide 클럽고객F>>
@@ -2357,10 +2363,10 @@ title: memory_ToiletPaper
 <<PlayAudio MemoryRecall 0.5>>
 //증거 촬영 시 돌아오는 기억: 지원이와 지수가 함께 마약 관련 뉴스를 보는 장면
 
-TV: 최근 해외에서 논란이 되고 있는 영상입니다.
-TV: 공중화장실에서 마약을 투여한 뒤...
-TV: 휴지에 주사기 바늘을 꽂아 닦는 경우가 있다고 하는데요.
-TV: ...
+<color=\#9fa2a4><i>TV: <color=\#9fa2a4><i>최근 해외에서 논란이 되고 있는 영상입니다.
+<color=\#9fa2a4><i>TV: <color=\#9fa2a4><i>공중화장실에서 마약을 투여한 뒤...
+<color=\#9fa2a4><i>TV: <color=\#9fa2a4><i>휴지에 주사기 바늘을 꽂아 닦는 경우가 있다고 하는데요.
+<color=\#9fa2a4><i>TV: <color=\#9fa2a4><i>...
 <<wait 1.0>>
 
 지수: 저게 뭐야..?
@@ -2863,17 +2869,17 @@ title: obj_radioStory
 
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
 <<PlayAudio Radio1 0.6>>
-<i>공지할게.. ... ..다.
+<color=\#9fa2a4><i>공지할게.. ... ..다.
 <<PlayAudio Radio2 0.6>>
-<i>요즘 ......를 빼가려고 하는 ..들이 많아졌다.
+<color=\#9fa2a4><i>요즘 ......를 빼가려고 하는 ..들이 많아졌다.
 <<PlayAudio Radio3 0.6>>
-<i>어제도 ....가 .....해서 가둬두는 일이 생겼고...
+<color=\#9fa2a4><i>어제도 ....가 .....해서 가둬두는 일이 생겼고...
 <<PlayAudio Radio4 0.6>>
-<i>....보안을 강화할 필...가 있으니..
+<color=\#9fa2a4><i>....보안을 강화할 필...가 있으니..
 <<PlayAudio Radio5 0.6>>
-<i>이 ...를 듣고 꼭 .....
+<color=\#9fa2a4><i>>이 ...를 듣고 꼭 .....
 <<PlayAudio Radio6 0.6>>
-<i>기억해야 ....</i>
+<color=\#9fa2a4><i>기억해야 ....
 <<Hide Radio>>
 <<Hide DBG>>
 <<wait 1.0>>
@@ -2910,7 +2916,7 @@ title: obj_radioStory
 <<wait 1.0>>
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
 <<PlayAudio Radio2>>
-<i>그럼 ... ..하도록 하자. 이만.</i>
+<color=\#9fa2a4><i>그럼 ... ..하도록 하자. 이만.
 <<AriadneHintOff PhoneController>>
 <<wait 1.0>>
 무전이 끊겼다.
@@ -3102,6 +3108,9 @@ title: event_staffroom_gunwoo2_choose
 	<<endif>>
 -> 락카 안
 	<<Hide 지수>>
+	<<PlayAudio lockerOpen_h>>
+	<<wait 2.0>>
+	<<PlayAudio lockerClose_h(2)>>
 	락카 안에 숨자마자 누군가 들어왔다
 	<<Fade black 0.0 1.0 0.3>>
 	...
@@ -3282,7 +3291,7 @@ title: obj_locker
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 <<Act 지수 Jisoo1 1.17 0.322 white>>
-<<PlayAudio HairpinSuccess 0.4>>
+<<PlayAudio lockeropenandclose>>
 어, 그냥 열리네?
 안이 비어있다.
 ...
@@ -3362,7 +3371,11 @@ title: yay
 이대로 들어가면 의심받을 것 같아.
 직원 복장을 입을까?
 
-<<jump club_viproom_changeuniform>>
+-> 입자
+   <<jump club_viproom_changeuniform>>
+-> 입지말자
+   그냥 들어갈 순 없을 것 같은데...
+   <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -3370,8 +3383,10 @@ title: club_viproom_changeuniform
 
 ---
 
-입었다.
-
+<<Scene BlackBG>>
+<<PlayAudio Clotheschange>>
+화장실로 가서 옷을 갈아입었다.
+<<Scene NoBG>>
 //club_viproom_entry 이후 플레이어가 인벤토리에서 직원복장 사용시
 직원 복장을 입고 있으니까...
 의심 받을 일은 없겠지?
@@ -3381,6 +3396,7 @@ title: club_viproom_changeuniform
 <<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
 <<jump club_viproom>>
 <<SetCanvasTo VisualNovelPrefab false>>
+
 ===
 
 title: club_viproom
@@ -3515,10 +3531,10 @@ title: IgnoreE
 메시지가 온다.
 
 //텍스트로 진행
-<i>'수진이 아빠. 애들 봐서라도 이제 정신 좀 차리면 안될까?'
-<i>'애들도 알 거 아는 나이야. 자기 약에 빠져 사는 걸 모르겠어?'
-<i>'나도 옆에서 계속 마음 졸이는 거 그만하고 싶어.'
-<i>'약 안 끊을 거면 우리 이혼하자.'
+<color=\#9fa2a4><i>'수진이 아빠. 애들 봐서라도 이제 정신 좀 차리면 안될까?'
+<color=\#9fa2a4><i>'애들도 알 거 아는 나이야. 자기 약에 빠져 사는 걸 모르겠어?'
+<color=\#9fa2a4><i>'나도 옆에서 계속 마음 졸이는 거 그만하고 싶어.'
+<color=\#9fa2a4><i>'약 안 끊을 거면 우리 이혼하자.'
 <<wait 1.0>>
 
 ...
@@ -3646,6 +3662,7 @@ title: GeonwooNote
 건우: 내가 안돕고 있다 생각해???
 건우: 하..
 건우: 자.
+<<PlayAudio handingoveranote>>
 건우: 누가 너한테 주라더라.
 건우 오빠가 건넨 것은 쪽지였다.
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
@@ -3663,7 +3680,7 @@ title: GeonwooNote
 VIP 룸으로 다시 들어가자.
 //vip룸으로 다시 장소 이동
 <<Hide BlackBG>>
-무슨 쪽지지…?
+무슨 쪽지지...?
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -3679,7 +3696,8 @@ title: AfterNote0
 <<DeleteItem Inventory memo_note>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw jjogji_big 0.75 0.75>>
-건우 오빠가 왜 이런 걸…
+건우 오빠가 왜 이런 걸...
+<<PlayAudio MemoInsert 0.6>>
 일단 메모장에 기록해두자.
 <<FindMemo MemoController memo_zzokji>>
 <<HideAll>>
@@ -4102,11 +4120,12 @@ CCTV에 찍힌 그 인형이야.
 <<wait 1.0>>
 
 ...
-인벤토리를 살펴보자.
+내가 지금 가지고 있는 게...
 //건우, 지수 이미지 종료
 <<HideAll>>
 
 <<SetCanvasTo VisualNovelPrefab false>>
+
 
 
 ===
@@ -4166,7 +4185,7 @@ title: inventory_drugjelly
 ...
 
 <<wait 1.0>>
-
+<<PlayAudio stairdown_h>>
 건우 오빠가 수상한 사람을 데리고 계단을 내려갔다.
 <<wait 1.0>>
 지금이야. 밖으로 나가자.
@@ -4223,7 +4242,7 @@ title: obj_car_outside
 		문을 열어볼까..?
 		문 손잡이를 잡아 당겼다.
 		...
-		<<PlayAudio CarAlarm>>
+		<<PlayAudio CarAlarm 0.5>>
 		//경보음&경보가 울림을 알 수 있을 법한 연출
 		//사운드 우선 추가
 		어...
@@ -4235,6 +4254,7 @@ title: obj_car_outside
 		<<Fade black 0.0 1.0 2.0>>
 		<<ChangeSceneTo VisualNovelPrefab S1>>
 		<<Scene BlackBG>>
+		<<StopAudioAll>>
 		어...
 		갑작스레 느껴지는 통증에 머리가 울렸다.
 		<<wait 2.0>>

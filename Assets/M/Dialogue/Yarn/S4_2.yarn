@@ -3,11 +3,9 @@
 <<SetCanvasTo VisualNovelPrefab true>>
 아리아드네:….
 아리아드네:이제 아프지마.
-
 //지수7
 //화면 암전 후 전환. 병실 이미지
 <<ChangeSceneTo VisualNovelPrefab s4_1_Hospital>>
-<<PlayAudio HospitalBGM 1.0 loop>>
 <<Act 지수 Jisoo8 1.17 0.322 black>>
 …여긴 어디지?
 ….
@@ -21,7 +19,7 @@
 간호사: 환자분….
 <<Hide 간호사>>
 //우당탕당~ 사운드
-<<PlayAudio noise>>
+<<PlayAudio noise 0.8>>
 <<UpdateAct 지수 Jisoo9>>
 머리가 지끈거려.
 ….
@@ -163,7 +161,6 @@ title: future_jisooroom
 //지수의 방 배경
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Act 지수 Jisoo2_resting 1.17 0.322 black>>
-<<PlayAudio realendingTheme 1.0 loop>>
 ….
 앞으로 나는 어떻게 살아야 할까.
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -438,19 +435,19 @@ title: reporter_yeshid
 <<wait  1.0>>
 지수: <i>여보세요?
 //<<Act 기자 ClubcustomerE 0.322 0.227 green>>
-기자: <i>안녕하세요, 지수씨. 어디서부터 말씀드려야 할지···.
+<color=\#9fa2a4><i>기자: <color=\#9fa2a4><i>안녕하세요, 지수씨. 어디서부터 말씀드려야 할지···.
 지수: <i>아···. 
 지수: <i>지원이랑은 어떤 사이이신지···.
 //<<Act 지수 Jisoo4_weird 1.17 0.322 black>>
-기자: <i>지원씨가 마약류 범죄에 대해 조사를 하고 계셨어요.
-기자: <i>제가 쓴 마약류 범죄 관련 기사를 보고 먼저 연락을 주셨구요.
-기자: <i>그렇게 몇 번 만나뵙고 이야기 나눴습니다.
-기자: <i>지수씨가 --을 하셨다는 것도 다 말씀하셨구요.
-기자: <i>지수씨를 도우려고 많이 노력하셨어요.
-기자: <i>···. 
-기자: <i>지원 씨와는 꽤 친밀한 관계였다고 생각합니다.
-기자: <i>그래서, 저라도 당신을 마저 돕고 싶었어요.
-기자: <i>지금은 어떻게 지내시나요?
+<color=\#9fa2a4><i>기자: <color=\#9fa2a4><i>지원씨가 마약류 범죄에 대해 조사를 하고 계셨어요.
+<color=\#9fa2a4><i>기자: <color=\#9fa2a4><i>제가 쓴 마약류 범죄 관련 기사를 보고 먼저 연락을 주셨구요.
+<color=\#9fa2a4><i>기자: <color=\#9fa2a4><i>그렇게 몇 번 만나뵙고 이야기 나눴습니다.
+<color=\#9fa2a4><i>기자: <color=\#9fa2a4><i>지수씨가 --을 하셨다는 것도 다 말씀하셨구요.
+<color=\#9fa2a4><i>기자: <color=\#9fa2a4><i>지수씨를 도우려고 많이 노력하셨어요.
+<color=\#9fa2a4><i>기자: <color=\#9fa2a4><i>....
+<color=\#9fa2a4><i>기자: <color=\#9fa2a4><i>지원 씨와는 꽤 친밀한 관계였다고 생각합니다.
+<color=\#9fa2a4><i>기자: <color=\#9fa2a4><i>그래서, 저라도 당신을 마저 돕고 싶었어요.
+<color=\#9fa2a4><i>기자: <color=\#9fa2a4><i>지금은 어떻게 지내시나요?
 ...
 //<<Hide 지수>>
 //<<Hide 유은재>>
@@ -511,7 +508,6 @@ title: future_beer
 --- 
 //클릭할 시
 <<SetCanvasTo VisualNovelPrefab true>>
-\<<PlayAudio BarStreet 1.0 loop>>
 어···. 가게 이름이 원래 저거였나?
 술집 주인분이 나왔다. 말을 걸어볼까?
 -> 예
@@ -550,7 +546,6 @@ title: future_students
 --- 
 //클릭할 시
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio OtherPlaces 1.0 loop>>
 학생들이 대화를 하고 있다. 들어볼까?
 -> 예
 	학생들: 너 그거 들었어?
@@ -630,8 +625,9 @@ title: normal_ending
 아리아드네:이제 아프지마.
 //화면 암전 후 전환. 병실 이미지
 <<ChangeSceneTo VisualNovelPrefab s4_1_Hospital>>
-<<PlayAudio HospitalBGM 1.0 loop>>
+<<BGoff SceneManager>>
 <<Act 지수 Jisoo8 1.17 0.322 black>>
+<<PlayAudio normalEnding 0.6>>
 …여긴 어디지?
 ….
 병원인가…?
@@ -641,7 +637,7 @@ title: normal_ending
 간호사: 어…!
 간호사: 환자분….
 <<Hide 간호사>>
-<<PlayAudio noise>>
+<<PlayAudio noise 0.8>>
 //우당탕당~ 사운드
 <<UpdateAct 지수 Jisoo9>>
 머리가 지끈거려.
@@ -774,7 +770,7 @@ title: normal_drug
 아리아드네: 제발···. 다시 내 손을 잡아···.
 
 //심정지 삐-소리
-<<PlayAudio Dead 0.7>>
+<<PlayAudio Dead 0.2>>
 <<FadeIn>>
 <<DrawFadeIn Ending7 0.75 0.75>>
 <<wait  4.0>>
@@ -834,7 +830,7 @@ title: reporter_yeshidtest
 <<Fade Black 0.0 1.0 1.0>>
 <<wait  1.0>>
 
-기자: <i>지금은 어떻게 지내시나요?
+<color=\#9fa2a4><i>기자: <color=\#9fa2a4><i> <i>지금은 어떻게 지내시나요?
 ...
 <<wait 1.0>>
 그렇게 한참동안 통화를 했고

@@ -1,8 +1,14 @@
 {
   "endingSprites": [
-    "Ending3"
+    "Ending3",
+    "Ending0",
+    "Ending6",
+    "Ending5"
   ],
   "endingDialogue": [
-    "Ending3"
+    "Ending3",
+    "Ending0",
+    "ending_merrybad",
+    "ending_bad"
   ]
 }

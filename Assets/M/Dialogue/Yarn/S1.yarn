@@ -12,7 +12,7 @@ tags:
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<PlayAudio NightmareBGM 0.6 loop>>
+<<PlayAudio NightmareBGM 0.7 loop>>
 
 <<Scene Maze>>
 
@@ -45,7 +45,7 @@ title: LeftPath
 <<Scene LeftPath>>
 왼쪽에 길이 나있다.
 
-<<PlayAudio MonsterSound1 0.7>>
+<<PlayAudio MonsterSound1 0.3>>
 
 <<wait 1.0>>
 ...
@@ -94,7 +94,7 @@ title: Ending0
 <<SetCanvasTo VisualNovelPrefab true>>
 <<StopAudioAll>>
 <<CollectEnding GameManager Ending0 Ending0>>
-<<PlayAudio CardiacArrest 0.4>> 
+<<PlayAudio CardiacArrest 0.2>> 
 <<Fade white 0.0 1.0 2.0>>
 <<Scene WhiteBG>>
 갑자기 눈 앞이 흐려진다.
@@ -113,13 +113,13 @@ title: Minotaur
 
 ---
 //(Chapter 1) 앞으로 가보자. 선택시
-<<PlayAudio MonsterSound2 0.7>>
+<<PlayAudio MonsterSound2 0.1>>
 <<Scene Ceiling1>>
 저게 말로만 듣던 미노타우르스...
 거대한 녀석을 마주하자 몸이 얼어 붙었다.
 검을 쥔 손에 힘이 들어가지 않아.
 
-<<PlayAudio MonsterSound3 0.7>>
+<<PlayAudio MonsterSound3 0.3>>
 <<wait 1.0>>
 
 녀석이 서서히 내게 다가온다.
@@ -144,7 +144,7 @@ title: Jisoo_Room
 
 ---
 <<FadeIn 2.0>>
-<<PlayAudio WhiteNoise 1.0 loop>>
+<<PlayAudio WhiteNoise 0.6 loop>>
 <<Scene JisooRoomBG>>
 흐릿한 시야 사이로 익숙한 풍경이 보인다.
 
@@ -155,9 +155,9 @@ title: Jisoo_Room
 <<Draw Prescription 0.75 0.75>>
 약이라도 먹어야겠다.
 
-<<PlayAudio OpeningMedsSound 0.7>>
+<<PlayAudio OpeningMedsSound 0.65>>
 <<wait 1.0>>
-<<PlayAudio DrinkingSound 0.7>>
+<<PlayAudio DrinkingSound 0.65>>
 
 //<<Act 지수 Jisoo1 1.17 0.322 white>>
 <<wait 1.0>>
@@ -190,7 +190,7 @@ title: Realized
 
 <<Scene JiwonRoomDoor>>
 -> 문을 두드린다
-    <<PlayAudio KnockingSound 0.6>>
+    <<PlayAudio KnockingSound 0.5>>
     지수: 지원아. 뭐해?
     //<<UpdateAct 지수 Jisoo4>>
     아무런 반응이 없다.
@@ -199,7 +199,7 @@ title: Realized
     -> 문을 열어본다.
         잠깐 들어가도 괜찮겠지.
         //<<Hide 지수>>
-        <<PlayAudio DoorOpeningSound>>
+        <<PlayAudio DoorOpeningSound 0.8>>
         <<Scene NoBG>>
         <<ChangeSceneTo VisualNovelPrefab S1_1_JiwonRoom>>
         <<HideAll>>
@@ -245,10 +245,10 @@ title: memory_Letter
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<PlayAudio MemoryRecall 0.5>>
-'나도 이제 더 이상은 못해먹겠어.'
-'내 인생 내가 알아서 살 테니까 훈수 두지마.' 
-'이번이 진짜 마지막이야. 반성하면 연락해.'
-'오지랖 좀 그만 부려.'
+<color=\#9fa2a4><i>'나도 이제 더 이상은 못해먹겠어.'
+<color=\#9fa2a4><i>'내 인생 내가 알아서 살 테니까 훈수 두지마.' 
+<color=\#9fa2a4><i>'이번이 진짜 마지막이야. 반성하면 연락해.'
+<color=\#9fa2a4><i>'오지랖 좀 그만 부려.'
 
 
 
@@ -414,13 +414,13 @@ title: JisooPhone
 ...
 
 
-<<PlayAudio PhoneAlarm>>
+<<PlayAudio PhoneAlarm 0.6>>
 <<wait 0.5>>
 <<UpdateAct 지수 Jisoo4>>
 어? 설마 휴대폰도 두고 갔나?
 
 <<wait 0.5>>
-<<PlayAudio PhoneOff>>
+<<PlayAudio PhoneOff 0.6>>
 <<wait 0.5>>
 앗... 내 휴대폰 전원이 꺼졌다.
 <<UpdateAct 지수 Jisoo2>>
@@ -468,7 +468,7 @@ title: FoundJiwonPhone
 ...걱정되네.
 
 <<ActivePI MenuUI>>
-<<PlayAudio PhoneAlarm>>
+<<PlayAudio PhoneAlarm 0.6>>
 <<DgramAlarm Controllers>>
 <<wait 0.5>>
 
@@ -636,15 +636,15 @@ title: NewspaperStory
 <<SetCanvasTo VisualNovelPrefab true>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Park_News 0.75 0.9>>
-* (제목) 유명 의원 A, 마약류 처방으로 경찰 입건 *
+<color=\#9fa2a4><i>(제목) 유명 의원 A, 마약류 처방으로 경찰 입건
 
 <<wait 1.0>>
 
-* 다이어트약 처방으로 유명한 의원A. *
-* 마약류 식욕 억제제를 과다 처방하여 마약류관리법 위반 혐의로 조사를 받고 있다. *
-* 해당 의원에서 처방한 약물인 '펜디메트라진'의 경우.. *
-* 과도하게 사용할 경우 정신병을 유발할 수 있다. *
-* 금단현상으로는 우울증과 무기력증이 있다. *
+<color=\#9fa2a4><i>다이어트약 처방으로 유명한 의원A.
+<color=\#9fa2a4><i>마약류 식욕 억제제를 과다 처방하여 마약류관리법 위반 혐의로 조사를 받고 있다.
+<color=\#9fa2a4><i>해당 의원에서 처방한 약물인 '펜디메트라진'의 경우..
+<color=\#9fa2a4><i>과도하게 사용할 경우 정신병을 유발할 수 있다.
+<color=\#9fa2a4><i>금단현상으로는 우울증과 무기력증이 있다. 
 <<Hide Park_News>>
 <<Hide DBG>>
 <<FinishedDialogue VisualNovelPrefab NewspaperStory>>
@@ -945,8 +945,8 @@ title: DoctorsRoom
 의사: 일에 집중하시는 데 어려움은 없으셨나요?
 <<UpdateAct 지수 Jisoo2>>
 지수: ...
-지수: 병원에 매번 오기도 귀찮은데.
-지수: 약을 더 처방해달라고 할까?
+병원에 매번 오기도 귀찮은데.
+약을 더 처방해달라고 할까?
     -> 약을 더 처방해달라고 하자
         지수: 저... 집중이 잘 안돼서요.
         지수: 혹시 약을 더 처방해주실 수 있나요?
@@ -1263,10 +1263,10 @@ title: LaptopStory2
 //사운드 추가
 <<PlayAudio LaptopVideo 0.2>>
 
-* 감기약 먹방에 대해 들어보신 적 있나요? *
-* 약물 과다복용 시 발생할 수 있는 부작용들이 있는데요. *
-* 이를 마약 복용 시 발생하는 환각 등과 동일시하여 *
-* 마약 대용으로 생각하고 과다복용 하는 경우가 있다고 합니다. *
+<color=\#9fa2a4><i>감기약 먹방에 대해 들어보신 적 있나요?
+<color=\#9fa2a4><i>약물 과다복용 시 발생할 수 있는 부작용들이 있는데요.
+<color=\#9fa2a4><i>이를 마약 복용 시 발생하는 환각 등과 동일시하여
+<color=\#9fa2a4><i>마약 대용으로 생각하고 과다복용 하는 경우가 있다고 합니다.
 
 <<Hide Laptop(E)>>
 <<Hide DBG>>
