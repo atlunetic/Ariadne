@@ -22,9 +22,11 @@
 지수: 자.
 
 <<Hide All>>
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw H3)bracelet 0.75 0.75>>
 <<wait 2.0>>
 <<Hide H3)bracelet>>
+<<Hide DBG>>
 
 <<Act 지원 Jiwon7 1.17 0.322 black>>
 <<Act 지수 Jisoo1_smile 0.322 0.227 green>>
