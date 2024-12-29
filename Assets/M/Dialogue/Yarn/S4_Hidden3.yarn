@@ -3,15 +3,15 @@
 <<SetCanvasTo VisualNovelPrefab true>>
 <<PlayAudio geonwoodaily 0.15 loop>>
 <<Scene H2)school>>
-<<Act 건우친구 NPC_G_friend 0.322 0.227 green>>
-<<Act 교복건우 s_Geonwoo1 1.17 0.322 black>>
+<<Act 건우친구 NPC_G_friend 0.322 0.227 white>>
+<<Act 건우 s_Geonwoo1 1.17 0.322 white>>
 ???: 이건우!! 이번주 주말에 뭐하냐?
 건우: 왜 또.
 ???: 나 아는 여자애들이 쪽수 맞춰서 놀자는데. 같이 안갈래?
 건우: 관심없다~
 ???: 야 좀 빼지말고~ 몇번째냐 진짜..
 건우: 이번엔 진짜 일정 있어. 나 먼저 간다~
-<<Hide 교복건우>>
+<<Hide 건우>>
 ???: 야!!
 <<wait 0.5>>
 ???: 저 새끼는.. 반반하게 생겨가지고 얼굴 쓸 줄을 몰라.
@@ -25,49 +25,49 @@
 <<jump Geonwoohiddenstory_2>>
 ===
 
-
+ 
 title: Geonwoohiddenstory_2
 ---
 <<Scene H2)cafe>>
-<<Act 교복지수 s_Jisoo1 0.322 0.227 green>>
-<<Act 교복건우 s_Geonwoo1 1.17 0.322 black>>
+<<Act 지수 s_Jisoo1 0.322 0.227 white>>
+<<Act 건우 s_Geonwoo1 1.17 0.322 white>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
 
 
 지수: 오빠 못 본 사이에 더 큰 것 같다???
-<<Hide 교복지수>>
-<<Act 교복지원 s_Jiwon1 0.322 0.227 green>>
+<<Hide 지수>>
+<<Act 지원 s_Jiwon1 0.322 0.227 white>>
 지원: 뭐래. 별 차이 없는데?
-<<Hide 교복지원>>
-<<Act 교복지수 s_Jisoo1 0.322 0.227 green>>
+<<Hide 지원>>
+<<Act 지수 s_Jisoo1 0.322 0.227 white>>
 지수: 오빠 초등학교 때 기억 안나? 키 작다고 맨날 애들이 괴롭혀서 우리가 혼내줬잖아.
-<<Hide 교복지수>>
-<<Act 교복지원 s_Jiwon1 0.322 0.227 green>>
+<<Hide 지수>>
+<<Act 지원 s_Jiwon1 0.322 0.227 white>>
 지원: 야 우리 이제 중3이야. 되게 옛날 일인 것처럼 말하네.
-<<UpdateAct 교복건우 s_Geonwoo2>>
+<<UpdateAct 건우 s_Geonwoo2>>
 건우: 기억 안나는데?
 지원: 와~ 양심 어디갔냐..
 건우: 야 그래도 내가 너네 오빠 노릇 하고 있잖아~ 이렇게 잘생긴 오빠가 어딨냐?
-<<UpdateAct 교복지원 s_Jiwon2>>
+<<UpdateAct 지원 s_Jiwon2>>
 지원: 우웩.
-<<Hide 교복지원>>
-<<Act 교복지수 s_Jisoo2 0.322 0.227 green>>
+<<Hide 지원>>
+<<Act 지수 s_Jisoo2 0.322 0.227 white>>
 지수: 우웩.
 건우: 영화 시간 다 됐어. 슬 일어나자.
-<<Hide 교복지수>>
-<<Act 교복지원 s_Jiwon1 0.322 0.227 green>>
+<<Hide 지수>>
+<<Act 지원 s_Jiwon1 0.322 0.227 white>>
 지원: 계산은?
 건우: 아까 내가 다 했다~
-<<Hide 교복지원>>
-<<Act 교복지수 s_Jisoo1 0.322 0.227 green>>
+<<Hide 지원>>
+<<Act 지수 s_Jisoo1 0.322 0.227 white>>
 지수: 오~ 오빠 노릇 한다 이거지~
 건우: 늦겠다~ 가자.
-<<Hide 교복지수>>
-<<Hide 교복건우>>
+<<Hide 지수>>
+<<Hide 건우>>
 
 <<wait 1.0>>
-<<Act 교복지원 s_Jiwon1 0.322 0.227 green>>
+<<Act 지원 s_Jiwon1 0.322 0.227 white>>
 지원: ...
 <<wait 2.0>>
 지원: ...고마워.
@@ -84,7 +84,7 @@ title: Geonwoohiddenstory_2
 title: Geonwoohiddenstory_3
 ---
 <<Scene H2)napgoldang>>
-<<Act 교복건우 s_Geonwoo1 1.17 0.322 black>>
+<<Act 건우 s_Geonwoo1 1.17 0.322 white>>
 <<PlayAudio geonwoosadday 0.15 loop>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
@@ -96,7 +96,7 @@ title: Geonwoohiddenstory_3
 너무 외로울 줄 알았는데.
 엄마가 보내준 거지?
 엄마가 보내준 착한 동생들이랑, 아저씨 아줌마랑...
-<<UpdateAct 교복건우 s_Geonwoo2>>
+<<UpdateAct 건우 s_Geonwoo2>>
 잘 지낼게. 너무 걱정하지마.
 나 나중에 돈 많이 벌어서, 꼭 은혜 갚을거야.
 엄마한테 자랑스러운 아들이 될게. 약속해.
@@ -111,14 +111,14 @@ title: Geonwoohiddenstory_4
 ---
 
 <<Scene H1)park>>
-<<Act 교복건우 s_Geonwoo2 1.17 0.322 black>>
-<<Act 교복지수 s_Jisoo3 0.322 0.227 green>>
+<<Act 건우 s_Geonwoo2 1.17 0.322 white>>
+<<Act 지수 s_Jisoo3 0.322 0.227 white>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
 
 건우: 무슨 일인데 이렇게 급하게 보자고 한거야?
 지수: 그.. 저기 오빠...
-<<UpdateAct 교복건우 s_Geonwoo1>>
+<<UpdateAct 건우 s_Geonwoo1>>
 건우: 뭔데.. 뭔데 이렇게 뜸을 들여? 돈 필요해?
 지수: 아니 그게 아니고.. 사실..
 지수: ...
@@ -127,20 +127,20 @@ title: Geonwoohiddenstory_4
 지수: 다음주에...
 건우: 얼마 안남았네...
 지수: 오빠, 미안해...
-<<UpdateAct 교복건우 s_Geonwoo2>>
+<<UpdateAct 건우 s_Geonwoo2>>
 건우: 이게 미안할 일이야? 괜찮아~ 자주 연락하면 되지. 가서도 잘 지내고..
-<<UpdateAct 교복지수 s_Jisoo1>>
+<<UpdateAct 지수 s_Jisoo1>>
 지수: 오빠두 항상 잘 지내!
 건우: 근데 지원이는?
-<<UpdateAct 교복지수 s_Jisoo3>>
+<<UpdateAct 지수 s_Jisoo3>>
 지수: 오빠 얼굴 못 보겠다고 같이 안오려 해서.. 나혼자 왔어.
-<<UpdateAct 교복건우 s_Geonwoo3>>
+<<UpdateAct 건우 s_Geonwoo3>>
 건우: 그래... 뭐 지원이한테도 잘 지내라고 전해줘.
-<<UpdateAct 교복지수 s_Jisoo1>>
+<<UpdateAct 지수 s_Jisoo1>>
 지수: 응! 나 이만 가볼게.
 건우: 어? 어. 어 그래.
-<<Hide 교복지수>> 
-<<UpdateAct 교복건우 s_Geonwoo1>>
+<<Hide 지수>> 
+<<UpdateAct 건우 s_Geonwoo1>>
 지수가 갔다.
 갔다...
 괜찮지 않다.
@@ -174,7 +174,7 @@ title: Geonwoohiddenstory_5
 ---
 
 <<Scene H2)geonwoo_room>>
-<<Act 건우 Geonwoo2_reflect 1.17 0.322 black>>
+<<Act 건우 Geonwoo2_reflect 1.17 0.322 white>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
 
@@ -207,7 +207,7 @@ title: Geonwoohiddenstory_6
 ---
 
 <<Scene H2)napgoldang>>
-<<Act 건우 Geonwoo2_reflect 1.17 0.322 black>>
+<<Act 건우 Geonwoo2_reflect 1.17 0.322 white>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
 
@@ -225,7 +225,7 @@ title: Geonwoohiddenstory_6
 ...
 ???: 오..빠?
 ..?
-<<Act 지원 Jiwon7 0.322 0.227 green>>
+<<Act 지원 Jiwon7 0.322 0.227 white>>
 지원: 오빠!
 <<UpdateAct 건우 Geonwoo4_reflect>>
 건우: 너... 여길 어떻게..
@@ -255,7 +255,7 @@ title: Geonwoohiddenstory_7
 ---
 
 <<Scene H2)golmok>>
-<<Act 건우 Geonwoo2_reflect 1.17 0.322 black>>
+<<Act 건우 Geonwoo2_reflect 1.17 0.322 white>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
 
@@ -265,7 +265,7 @@ title: Geonwoohiddenstory_7
 <<wait 1.0>>
 
 벌써 가지러 왔나?? 빨리 자리를 피해야겠다.
-<<Act 지수 black_Jisoo_reflect 0.322 0.227 green>>
+<<Act 지수 black_Jisoo_reflect 0.322 0.227 white>>
 ???: 건우 오빠?
 <<UpdateAct 건우 Geonwoo4_reflect>>
 믿을 수가 없었다.
@@ -309,7 +309,7 @@ title: Geonwoohiddenstory_7
 //전화 다이얼 소리
 <<wait 2.0>>
 <<StopAudio PhonecallGang>>
-<<Act 지원 JIwon3_fear 0.322 0.227 black>>
+<<Act 지원 JIwon3_fear 0.322 0.227 white>>
 <color=\#9fa2a4><i>지원</color>: <color=\#9fa2a4><i>오빠? 무슨일이야?</color>
 건우: 어 지원아 그게 지수가...
 <color=\#9fa2a4><i>지원</color>: <color=\#9fa2a4><i>김지수? 걔 또 뭐 사고 쳤어?</color>
@@ -339,7 +339,7 @@ title: Geonwoohiddenstory_8
 ---
 
 <<Scene H2)geonwoo_room>>
-<<Act 건우 Geonwoo2_reflect 1.17 0.322 black>>
+<<Act 건우 Geonwoo2_reflect 1.17 0.322 white>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
 
