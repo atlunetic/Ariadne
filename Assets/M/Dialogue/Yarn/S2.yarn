@@ -2884,17 +2884,17 @@ title: obj_radioStory
 
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
 <<PlayAudio Radio1 0.6>>
-<i>공지할게.. ... ..다.
+<color=\#9fa2a4><i>공지할게.. ... ..다.
 <<PlayAudio Radio2 0.6>>
-<i>요즘 ......를 빼가려고 하는 ..들이 많아졌다.
+<color=\#9fa2a4><i>요즘 ......를 빼가려고 하는 ..들이 많아졌다.
 <<PlayAudio Radio3 0.6>>
-<i>어제도 ....가 .....해서 가둬두는 일이 생겼고...
+<color=\#9fa2a4><i>어제도 ....가 .....해서 가둬두는 일이 생겼고...
 <<PlayAudio Radio4 0.6>>
-<i>....보안을 강화할 필...가 있으니..
+<color=\#9fa2a4><i>....보안을 강화할 필...가 있으니..
 <<PlayAudio Radio5 0.6>>
-<i>이 ...를 듣고 꼭 .....
+<color=\#9fa2a4><i>이 ...를 듣고 꼭 .....
 <<PlayAudio Radio6 0.6>>
-<i>기억해야 ....</i>
+<color=\#9fa2a4><i>기억해야 ....</i>
 <<Hide Radio>>
 <<Hide DBG>>
 <<wait 1.0>>
@@ -2931,7 +2931,7 @@ title: obj_radioStory
 <<wait 1.0>>
 //무전기 글씨는 기울이기+회색: 지수의 독백과 구분
 <<PlayAudio Radio2>>
-<i>그럼 ... ..하도록 하자. 이만.</i>
+<color=\#9fa2a4><i>그럼 ... ..하도록 하자. 이만.</i>
 <<AriadneHintOff PhoneController>>
 <<wait 1.0>>
 무전이 끊겼다.
