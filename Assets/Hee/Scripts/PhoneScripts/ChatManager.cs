@@ -393,7 +393,7 @@ public class ChatManager : MonoBehaviour
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 36
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "약통을 촬영해보면 어때?");
+        AddChatToLast(false, "병원에 있는 약통은 촬영해봤어?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 37
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
@@ -401,7 +401,7 @@ public class ChatManager : MonoBehaviour
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 38
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "책상 밑의 서랍장 두 번째 칸을 확인해 봐.");
+        AddChatToLast(false, "공원 벤치 근처에 떨어져 있는 게 뭔지 확인해봤어?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 39
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
