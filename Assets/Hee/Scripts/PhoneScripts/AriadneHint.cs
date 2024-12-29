@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class AriadneHint : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class AriadneHint : MonoBehaviour
     void Start(){
         HintButton = Hint.GetComponent<Button>();
         HintButton.onClick.AddListener(giveHint);
+        HintButton.transform.GetChild(0).GetComponent<TMP_Text>().text = "뭘 해야 할지 모르겠어. 도와줘 ("+GameManager.instance.remainHint+"/)";
+        if(GameManager.instance.remainHint==0) HintButton.enabled = false;
+
         if(GameManager.instance.IsAriadneHintOn) On();
         else Off();
 
@@ -50,6 +54,9 @@ public class AriadneHint : MonoBehaviour
     }
 
     private void giveHint(){
+        GameManager.instance.remainHint--;
+        if(GameManager.instance.remainHint==0) HintButton.enabled = false;
+        HintButton.transform.GetChild(0).GetComponent<TMP_Text>().text = "뭘 해야 할지 모르겠어. 도와줘 ("+GameManager.instance.remainHint+"/)";
         if(GameManager.instance.NowScene.StartsWith("S1"))
         {
             if(giveHintFromList(S1HintList)) return;

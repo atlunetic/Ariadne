@@ -497,7 +497,51 @@ public class ChatManager : MonoBehaviour
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 62
         AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
-        AddChatToLast(false, "VIP 룸에 가보는 건 어때? 뜻밖의 정보를 얻을 수 있을지도 몰라.");
+        AddChatToLast(false, "VIP Room에 가보는 건 어때? 뜻밖의 정보를 얻을 수 있을지도 몰라.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 63
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "VIP Room에 있는 사람들과 대화는 잘 끝냈어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 64
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "네비게이션은 확인해봤어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 65
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "저 시계, 수상하지 않아?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 66
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "깨진 안경은 촬영해봤어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 67
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "출입문 위에 있는 낙서는 촬영해봤어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 68
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "가지고 있는 다른 옷의 주머니를 살펴봐.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 69
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "열려있는 곳은 들어가봤어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 70
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "컴퓨터 근처에 있는 사진은 촬영해봤어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 71
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "바닥에 떨어져 있는 명함은 촬영해봤어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 72
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "소파 쪽에 카드키가 떨어져 있을텐데. 확인해봤어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 73
+        AddChatToLast(true, "뭘 해야 할지 모르겠어. 도와줘");
+        AddChatToLast(false, "1403호 카드키를 사용해봐.");
 
         foreach (int i in GameManager.instance.ChattingLog)
             PrintChat(i);
