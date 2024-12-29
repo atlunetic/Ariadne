@@ -1418,17 +1418,12 @@ title: MedsStory
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Meds(E) 0.75 0.75>>
 
-뭐야. 처음 보는 약통인데?
-지원이가 아픈 데가 있었나...? 건강해 보였는데.
-...
-
+누군가의 약통이다.
+...?
+어디서 본 것 같은데...
+뭐, 병원이니까.
 <<Hide Meds(E)>>
 <<Hide DBG>>
-<<Act 지수 Jisoo2 1.17 0.322 white>>
-
-나한테 말도 안하고. 대체 무슨 일이 있는 거야.
-
-<<Hide 지수>>
 <<FinishedDialogue VisualNovelPrefab MedsStory>>
 <<FinishedObj VisualNovelPrefab Meds>>
 <<SetCanvasTo VisualNovelPrefab false>>
