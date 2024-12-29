@@ -16,15 +16,13 @@ title: HiddenEnding
 <<UpdateAct 지원 Jiwon10_reflect>>
 <<Act 지수 Jisoo1_reflect 0.322 0.227 black>>
 지원: 야. 니 맘대로 들어오냐?
-
 지수: 나 그럼 그냥 나간다? 후회할텐데~
 지원: 아오 진짜.. 뭔데??
 지수: 자.
-
 <<HideAll>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
-<<wait 0.7>>
-<<Draw H3)bracelet 0.75 0.75>>
+//<<wait 0.7>>
+<<DrawFadeIn H3)bracelet 0.75 0.75>>
 <<wait 4.0>>
 <<Hide H3)bracelet>>
 <<Hide DBG>>
@@ -170,6 +168,29 @@ title: Hint_Crack
 <color=\#9fa2a4><i>건우</color>: <color=\#9fa2a4><i>내가 미리 알았으면 어떻게든 막았을텐데….</color>
 ….
 
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Bracelet1
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+끊어져 있는 실팔찌다.
+어딘가 낯이 익은데...
+<<FinishedDialogue VisualNovelPrefab Bracelet1>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
+===
+
+title: Bracelet2
+
+---
+
+<<SetCanvasTo VisualNovelPrefab true>>
+이미 살펴본 물건이다.
+<<FinishedDialogue VisualNovelPrefab Bracelet2>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
