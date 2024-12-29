@@ -424,112 +424,57 @@ title: obj_customers
 
 ---
 
+title: obj_customers
+
+---
+
 <<SetCanvasTo VisualNovelPrefab true>>
 <<if CheckDialogue("obj_customers") == true>>
-	<<jump checkClothes>>
+<<jump checkClothes>>
 <<else>>
-	<<Act 지수 Jisoo1 1.17 0.322 white>>
-	두 사람이 대화하고 있다.
+<<Act 지수 Jisoo1 1.17 0.322 white>>
+두 사람이 대화하고 있다.
 
-	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.407 white>>
-	<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
-	클럽고객D: 이렇게 만난 것도 인연인데 한 잔 사드리고 싶어서요.
-	클럽고객D가 E에게 술잔을 내민다.
+<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.407 white>>
+<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
+클럽고객D: 이렇게 만난 것도 인연인데 한 잔 사드리고 싶어서요.
+클럽고객D가 E에게 술잔을 내민다.
 
-	<<UpdateAct 지수 Jisoo2>>
-	...
+<<UpdateAct 지수 Jisoo2>>
+...
 
-	클럽고객E: 감사해요.
-	클럽 고객E가 술잔을 받았다.
-	<<HideAll>>
-	<<DrawFadeIn DBG 0.75 0.75 0.2>>
-	<<Draw Clubtable_Glass 0.725 0.75>>
+클럽고객E: 감사해요.
+클럽 고객E가 술잔을 받았다.
+<<HideAll>>
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw Clubtable_Glass 0.725 0.75>>
 
+...
+//<<UpdateAct 지수 Jisoo3>>
+뭔가 수상한데?
+술잔 바닥에 가루가 가라앉아 있어.
+...
+약을 탔나?
+<<Hide Clubtable_Glass>>
+<<Hide DBG>>
+<<wait 1.0>>
+<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.407 white>>
+<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
+클럽고객D: 저는 잠깐 화장실 좀 다녀올게요.
+마침 클럽 고객D가 자리를 뜬다.
+...
+어떡하지. 도와줄까?
+<<Hide 클럽고객D>>
+<<SetActiveFalse VisualNovelPrefab ClubTable_NPCD>>
+<<FinishedObj VisualNovelPrefab ClubTable_NPCD>>
+<<FinishedDialogue VisualNovelPrefab obj_customers>>
+<<wait 1.0>>
+-> 모르는 척 하자.
 	...
-	//<<UpdateAct 지수 Jisoo3>>
-	뭔가 수상한데?
-	술잔 바닥에 가루가 가라앉아 있어.
+	그래. 괜히 나섰다가 욕 먹는 것보단 낫지.
 	...
-	약을 탔나?
-	<<Hide Clubtable_Glass>>
-	<<Hide DBG>>
-	<<wait 1.0>>
-	<<Act 클럽고객D NPC_Clubcustomer_D_0 0.6 0.407 white>>
-	<<Act 클럽고객E NPC_Clubcustomer_E 0.322 0.227 white>>
-	클럽고객D: 저는 잠깐 화장실 좀 다녀올게요.
-	마침 클럽 고객D가 자리를 뜬다.
-	...
-	어떡하지. 도와줄까?
-	<<Hide 클럽고객D>>
-	<<SetActiveFalse VisualNovelPrefab ClubTable_NPCD>>
-	<<FinishedObj VisualNovelPrefab ClubTable_NPCD>>
-	<<FinishedDialogue VisualNovelPrefab obj_customers>>
-	<<wait 1.0>>
-	-> 모르는 척 하자.
-		...
-		그래. 괜히 나섰다가 욕 먹는 것보단 낫지.
-		...
-		E가 술을 마시려고 하고 있어.
-		정말 모르는 척 하는게 맞을까?
-		-> 가서 도와주자.
-			<<Act 지수 Jisoo2 1.17 0.322 white>>
-			...
-			진짜로 약을 탄거면...
-			<<UpdateAct 지수 Jisoo3>>
-			무슨 일을 당할지 몰라.
-			<<wait 1.0>>
-			<<UpdateAct 지수 Jisoo2>>
-			...
-			이 틈에 E를 도울 수 있는 방법이 없을까?
-			우선 말을 걸어보자.
-			<<Hide 지수>>
-			<<Hide 클럽고객E>>
-			<<jump E_NoClothes>>
-			<<SetCanvasTo VisualNovelPrefab false>>
-		-> 괜히 나서지 말자.
-			<<Hide 클럽고객E>>
-			E가 술잔에 입을 가져다댔다.
-			걱정되네. 별 일 없었으면 좋겠는데.
-			…
-			잠시 바라보다, 자리를 옮기려는 순간.
-			E가 휘청거리기 시작했다.
-			…
-			도와줘야 하나…?
-			발걸음을 옮기는 순간, D가 기다렸다는 듯 나타나 E를 부축했다.
-			수상해….
-			…
-			저기요..!!
-			<<StopAudio All>>
-			<<PlayAudio chapter3meetJiwon loop>>
-			뒤돌아본 D와 눈이 마주쳤다. //(스산한 BGM 추가)
-			초점없는 E의 눈과도.
-			순간 알 수 없는 공포감이 온몸을 스쳤다.
-			나의 외침을 들은 사람은 D뿐인 듯 했다.
-			아무도 관심을 갖지 않았다.
-			아무런 말도 할 수 없었다.
-			얼마간 정적이 흘렀을까….
-			D는 고개를 돌렸고, E를 어디론가 데려갔다.
-			내가 잘못된 결정을 한 걸까…
-			<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
-			<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
-			<<SetCanvasTo VisualNovelPrefab false>>
-		-> 그래...오지랖 부리지 말자.
-			...
-			E는 신나게 춤추고 있는 사람들을 바라봤다.
-			<<Act 지수 Jisoo1 1.17 0.322 white>>
-			지수:저는 먼저 가볼게요.
-			E가 고개를 돌려 눈인사를 했다.
-			<<Hide 클럽고객E>>
-			<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
-			<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
- 			E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
-			<<UpdateAct 지수 Jisoo2>>
-			...
-			클럽 고객D가 E를 향해 걸어가는 모습이 보였다.
-			걱정되네...
-			<<Hide 지수>>
-			<<DelaySpawn ClubTableBG>>
-			<<SetCanvasTo VisualNovelPrefab false>>
+	E가 술을 마시려고 하고 있어.
+	정말 모르는 척 하는게 맞을까?
 	-> 가서 도와주자.
 		<<Act 지수 Jisoo2 1.17 0.322 white>>
 		...
@@ -545,6 +490,70 @@ title: obj_customers
 		<<Hide 클럽고객E>>
 		<<jump E_NoClothes>>
 		<<SetCanvasTo VisualNovelPrefab false>>
+	-> 괜히 나서지 말자.
+		<<Hide 클럽고객E>>
+		E가 술잔에 입을 가져다댔다.
+		걱정되네. 별 일 없었으면 좋겠는데.
+		...
+		잠시 바라보다, 자리를 옮기려는 순간.
+		E가 휘청거리기 시작했다.
+		...
+		도와줘야 하나...?
+		발걸음을 옮기는 순간, D가 기다렸다는 듯 나타나 E를 부축했다.
+		수상해...
+		...
+		저기요..!!
+		<<Fade black 0.0 1.0 2.0>>
+		<<wait 2.0>>
+		<<BGoff SceneManager>>
+		<<PlayAudio chapter3meetJiwon 0.8 loop>>
+		뒤돌아본 D와 눈이 마주쳤다. //(스산한 BGM 추가)
+		초점없는 E의 눈과도.
+		순간 알 수 없는 공포감이 온몸을 스쳤다.
+		나의 외침을 들은 사람은 D뿐인 듯 했다.
+		아무도 관심을 갖지 않았다.
+		아무런 말도 할 수 없었다.
+		얼마간 정적이 흘렀을까...
+		D는 고개를 돌렸고, E를 어디론가 데려갔다.
+		내가 잘못된 결정을 한 걸까...
+		<<StopAudio chapter3meetJiwon>>
+		<<BGon SceneManager>>
+		<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
+		<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
+		<<FadeIn 2.0>>
+		<<SetCanvasTo VisualNovelPrefab false>>
+	-> 그래...오지랖 부리지 말자.
+		...
+		E는 신나게 춤추고 있는 사람들을 바라봤다.
+		... 누굴 찾고 있는 것 같은데?
+		E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
+		<<UpdateAct 지수 CoJIsoo2>>
+		...
+		클럽 고객D가 E를 향해 걸어가는 모습이 보였다.
+		걱정되네...
+		...
+		일단 의심받기 전에 옷부터 갈아입자.
+		<<PlayAudio Clotheschange>>
+		//(이후 기본 복장으로 자동 변경)
+		<color=yellow>* 직원 복장 옷을 벗었다. *</color>
+		<<Hide 지수>>
+		<<SetCanvasTo VisualNovelPrefab false>>
+-> 가서 도와주자.
+	<<Act 지수 Jisoo2 1.17 0.322 white>>
+	...
+	진짜로 약을 탄거면...
+	<<UpdateAct 지수 Jisoo3>>
+	무슨 일을 당할지 몰라.
+	<<wait 1.0>>
+	<<UpdateAct 지수 Jisoo2>>
+	...
+	이 틈에 E를 도울 수 있는 방법이 없을까?
+	우선 말을 걸어보자.
+	<<Hide 지수>>
+	<<Hide 클럽고객E>>
+	<<jump E_NoClothes>>
+	<<SetCanvasTo VisualNovelPrefab false>>
+
 <<endif>>
 ===
 
@@ -801,12 +810,12 @@ title: DontTellE
 그래...오지랖 부리지 말자.
 ...
 E는 신나게 춤추고 있는 사람들을 바라봤다.
-… 누굴 찾고 있는 것 같은데?
+... 누굴 찾고 있는 것 같은데?
 E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
 <<UpdateAct 지수 CoJIsoo2>>
 ...
 클럽 고객D가 E를 향해 걸어가는 모습이 보였다.
-걱정되네….
+걱정되네....
 ...
 일단 의심받기 전에 옷부터 갈아입자.
 
@@ -958,7 +967,7 @@ title: Table_Geonwoo2
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
-지수: 건…
+지수: 건...
 건우: 아. 조금만 있다가 말 걸라니까.
 건우 오빠가 고개를 휙 돌렸다.
 다른 장소를 먼저 둘러봐야 하나?
@@ -976,12 +985,13 @@ title: Table_Geonwoo3
 	<<SetActiveFalse VisualNovelPrefab ClubTable_Geonwoo>>
 	<<SetCanvasTo VisualNovelPrefab true>>
 	건우: 아 겨우 한숨 돌렸네.
-	건우: 안그래도 요즘 단속 심해서 빡치는데…
+	건우: 안그래도 요즘 단속 심해서 빡치는데...
 	건우 오빠는 내가 뒤에 있는 걸 눈치채지 못한 모양이다.
 	다시 불러보자.
 	<<FinishedObj VisualNovelPrefab ClubTable_Geonwoo>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 <<endif>>
+
 ===
 
 title: event_gunwoo_begin
@@ -1797,34 +1807,34 @@ title: event_gunwoo_q6a
 
 //선택지 랜덤 출력
 -> 지원이가 여기서 뭘 하고 다녔는지 알고 싶다.
-	//설득점수 +1
-	<<set $persuade = $persuade + 1>>
-	<<UpdateAct 지수 Jisoo3>>
-	지수: 지원이가 여기서 뭘 하고 다녔는지라도 알고 싶어요.
-	지수: 그러면... 
-	지수: 행방을 알 수 있지 않을까 싶어서요.
-	<<wait 1.0>>
-	<<UpdateAct 건우 Geonwoo2>>
-	건우: ...
-	건우: 아마 그렇겠지.
-	<<wait 1.0>>
-	건우 오빠의 표정이 흔들렸다.
-	<<jump event_gunwoo_end>>
+//설득점수 +1
+<<set $persuade = $persuade + 1>>
+<<UpdateAct 지수 Jisoo3>>
+지수: 지원이가 여기서 뭘 하고 다녔는지라도 알고 싶어요.
+지수: 그러면...
+지수: 행방을 알 수 있지 않을까 싶어서요.
+<<wait 1.0>>
+<<UpdateAct 건우 Geonwoo2>>
+건우: ...
+건우: 아마 그렇겠지.
+<<wait 1.0>>
+건우 오빠의 표정이 흔들렸다.
+<<jump event_gunwoo_end>>
 -> 지원이가 방문했던 이 클럽 자체가 수상하다.
-	//설득점수 -1
-	<<set $persuade = $persuade - 1>>
-	<<UpdateAct 지수 Jisoo3>>
-	지수: 지원이가 여기 온 것 자체가 수상해요.
-	지수: 혹시….
-	지수: 최근에 이 클럽에서 이상한 일 없었어요?
-	지수: 여기 왔던 사람들이 사라졌다거나….
-	<<wait 1.0>>
-	<<UpdateAct 건우 Geonwoo3>>
-	건우: 뭐? 너 요즘 도시괴담 같은 거 관심있냐?
-	건우: 그게 뭔 소리야.
-	<<wait 1.0>>
-	건우 오빠의 표정이 좋지 않다.
-	<<jump event_gunwoo_end>>
+//설득점수 -1
+<<set $persuade = $persuade - 1>>
+<<UpdateAct 지수 Jisoo3>>
+지수: 지원이가 여기 온 것 자체가 수상해요.
+지수: 혹시...
+지수: 최근에 이 클럽에서 이상한 일 없었어요?
+지수: 여기 왔던 사람들이 사라졌다거나...
+<<wait 1.0>>
+<<UpdateAct 건우 Geonwoo3>>
+건우: 뭐? 너 요즘 도시괴담 같은 거 관심있냐?
+건우: 그게 뭔 소리야.
+<<wait 1.0>>
+건우 오빠의 표정이 좋지 않다.
+<<jump event_gunwoo_end>>
 	
 
 ===
@@ -1849,20 +1859,18 @@ title: event_gunwoo_q6b
 건우: ...
 건우: 잘 모르겠네.
 <<wait 1.0>>
-
 //혼잣말 같은 연출(폰트 크기를 조금 작게 한다거나)
 건우: 나도 도와주고 싶은데... 에휴.
 <<wait 1.0>>
-
 //선택지 랜덤 출력
 -> 지원이가 방문했던 이 클럽 자체가 수상하다.
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<UpdateAct 지수 Jisoo3>>
 	지수: 지원이가 여기 온 것 자체가 수상해요.
-	지수: 혹시….
+	지수: 혹시...
 	지수: 최근에 이 클럽에서 이상한 일 없었어요?
-	지수: 여기 왔던 사람들이 사라졌다거나….
+	지수: 여기 왔던 사람들이 사라졌다거나...
 	<<wait 1.0>>
 	<<UpdateAct 건우 Geonwoo3>>
 	건우: 뭐? 너 요즘 도시괴담 같은 거 관심있냐?
@@ -1875,7 +1883,7 @@ title: event_gunwoo_q6b
 	<<set $persuade = $persuade + 1>>
 	<<UpdateAct 지수 Jisoo3>>
 	지수: 지원이가 여기서 뭘 하고 다녔는지라도 알고 싶어요.
-	지수: 그러면... 
+	지수: 그러면...
 	지수: 행방을 알 수 있지 않을까 싶어서요.
 	<<wait 1.0>>
 	<<UpdateAct 건우 Geonwoo2>>
@@ -1884,8 +1892,6 @@ title: event_gunwoo_q6b
 	<<wait 1.0>>
 	건우 오빠의 표정이 흔들렸다.
 	<<jump event_gunwoo_end>>
-	
-
 ===
 
 title: event_gunwoo_end
@@ -1979,8 +1985,8 @@ title: event_gunwoo_fail
 <<UpdateAct 건우 Geonwoo2>>
 건우: ...
 <<wait 0.5>>
-건우 오빠가 대답이 없네….
-다시 설득해볼까…?
+건우 오빠가 대답이 없네...
+다시 설득해볼까...?
 
 <<Hide 지수>>
 <<Hide 건우>>
@@ -3352,11 +3358,18 @@ title: club_viproom_entry2
 
 VIP 룸으로 들어가보자.
 근데 한번 들어가면 다시 나오기는 어려울 것 같아.
-
-<<FinishedDialogue VisualNovelPrefab club_viproom_entry2>>
-<<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
-<<jump club_viproom>>
-<<SetCanvasTo VisualNovelPrefab false>>
+-> 들어가자.
+	근데 이대로 들어가면 의심받을 거 같아. 직원 복장을 입자.
+	<<wait 1.0>>
+	입었다. 이제 들어가보자.
+	<<FinishedDialogue VisualNovelPrefab club_viproom_entry2>>
+	<<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
+	<<jump club_viproom>>
+	<<deActiveM MenuUI>>
+	<<SetCanvasTo VisualNovelPrefab false>>
+-> 들어가지 말자.
+	그래, 좀 더 둘러보자.
+	<<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -3365,15 +3378,12 @@ title: yay
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-
+VIP 룸으로 들어가보자.
+근데 한번 들어가면 다시 나오기는 어려울 것 같아.
 이대로 들어가면 의심받을 것 같아.
 직원 복장을 입을까?
-
 -> 입자
    <<jump club_viproom_changeuniform>>
--> 입지말자
-   그냥 들어갈 순 없을 것 같은데...
-   <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
 
@@ -3402,10 +3412,8 @@ title: club_viproom
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 //배경이미지 viproom으로 전환
-
 ...
 VIP룸이다.
-
 <<SetCanvasTo VisualNovelPrefab false>>
 
 
@@ -3656,7 +3664,7 @@ title: GeonwooNote
 건우: 너 대체 뭐하고 다니는 거야?
 건우: 이 옷은 대체 어디서 났냐? 미치겠다.
 건우: 너 자꾸 그렇게 들쑤시고 다니면 오빠가 못 도와줘.
-지수: 오빠가 안도와주니까 이러는 거죠. 
+지수: 오빠가 안도와주니까 이러는 거죠.
 건우: 내가 안돕고 있다 생각해???
 건우: 하..
 건우: 자.
@@ -3678,7 +3686,7 @@ title: GeonwooNote
 VIP 룸으로 다시 들어가자.
 //vip룸으로 다시 장소 이동
 <<Hide BlackBG>>
-무슨 쪽지지…?
+무슨 쪽지지...?
 <<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
@@ -3694,7 +3702,7 @@ title: AfterNote0
 <<DeleteItem Inventory memo_note>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw jjogji_big 0.75 0.75>>
-건우 오빠가 왜 이런 걸…
+건우 오빠가 왜 이런 걸...
 일단 메모장에 기록해두자.
 <<FindMemo MemoController memo_zzokji>>
 <<HideAll>>
