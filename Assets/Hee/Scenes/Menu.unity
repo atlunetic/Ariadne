@@ -2477,6 +2477,10 @@ MonoBehaviour:
   - {fileID: 762975946}
   - {fileID: 1291913389}
   - {fileID: 1392797629}
+  jiwon: {fileID: 0}
+  editor: {fileID: 0}
+  realGunwoo: {fileID: 0}
+  realHaesol: {fileID: 0}
   ClubCustomerE: {fileID: 889920934}
 --- !u!1001 &142814365
 PrefabInstance:
@@ -19142,6 +19146,9 @@ MonoBehaviour:
   work8282Chatroom: {fileID: 1650849782}
   IceiceChatroom: {fileID: 279070681}
   drgg24Chatroom: {fileID: 1046941870}
+  lsdlsdlsdChatroom_real: {fileID: 0}
+  eoak123Chatroom_real: {fileID: 0}
+  drgg24Chatroom_real: {fileID: 0}
 --- !u!1 &912774397 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8393682995783048945, guid: a95c8f77a7cd42a48a39917efb4b3004, type: 3}
@@ -28196,6 +28203,8 @@ MonoBehaviour:
   MoveS2Button: {fileID: 286013652}
   UIButtons: {fileID: 558936099}
   Phone: {fileID: 1803340215}
+  Controllers: {fileID: 0}
+  JisooPhone: {fileID: 0}
   Inventory: {fileID: 1449754556}
   Diary: {fileID: 1266879036}
   MoveS2_: {fileID: 1661472268}
@@ -32619,6 +32628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e750b25f874b0a4d98b5bf550c5f4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  memobutton: {fileID: 0}
   gallerybutton: {fileID: 1652641438}
   camerabutton: {fileID: 1600071562}
   chocotalkbutton: {fileID: 237761665}
@@ -36166,6 +36176,7 @@ MonoBehaviour:
   items: []
   visited: 0
   IsAriadneHintOn: 0
+  remainHint: 3
   S1HintList:
   - Laptop
   - Meds
@@ -39423,7 +39434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1496080899532580, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1515087920938002, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: m_Layer
