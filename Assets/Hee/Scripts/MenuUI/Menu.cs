@@ -167,6 +167,7 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
 
     [YarnCommand("GoReality")]
     public void GoReality(){
+        SceneManager.LoadScene("S4_2_R_JisooRoom");
         GameManager.instance.ChattingLog.Clear();
         GameManager.instance.visited=0;
         LoadReality();

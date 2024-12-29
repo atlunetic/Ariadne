@@ -20,6 +20,7 @@ public class SaveGameManager{
     public HashSet<string> RecommendedFriends = new HashSet<string>();
     public int visited;
     public bool IsAriadneHintOn = false;
+    public int remainHint;
     public List<string> S1HintList;
     public List<string> S2HintList;
     public List<string> StaffroomHintList;
@@ -61,6 +62,7 @@ public class GameManager : MonoBehaviour
     public HashSet<string> RecommendedFriends = new HashSet<string>();
     public int visited;
     public bool IsAriadneHintOn = false;
+    public int remainHint = 3;
 
     public List<string> S1HintList;
     public List<string> S2HintList;
@@ -121,6 +123,7 @@ public class GameManager : MonoBehaviour
         saveGameManager.S2HintList = instance.S2HintList;
         saveGameManager.StaffroomHintList = instance.StaffroomHintList;
         saveGameManager.FindedMemoList = instance.FindedMemoList;
+        saveGameManager.remainHint = instance.remainHint;
 
         return saveGameManager;
     }
@@ -146,5 +149,6 @@ public class GameManager : MonoBehaviour
         instance.S2HintList = saveGameManager.S2HintList;
         instance.StaffroomHintList = saveGameManager.StaffroomHintList;
         instance.FindedMemoList = saveGameManager.FindedMemoList;
+        instance.remainHint = saveGameManager.remainHint;
     }
 }

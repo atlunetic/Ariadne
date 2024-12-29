@@ -8,6 +8,8 @@ using Yarn.Unity;
 public class FinalReason : MonoBehaviour
 {
     public static FinalReason instance;
+
+    DialogueRunner runner;
     public SceneInfo scenemanager;
     public GameObject confirmB;
     public GameObject perfectImg;
@@ -42,7 +44,8 @@ public class FinalReason : MonoBehaviour
 
         PhoneController.instance.Phone.SetActive(true);
         PhoneController.instance.Gallery.SetActive(true);
-        perfectVid.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {vidioplay.instance.breakmemory();};
+        runner = FindAnyObjectByType<DialogueRunner>();
+        perfectVid.GetComponent<VideoPlayer>().loopPointReached += (VideoPlayer vp) => {runner.StartDialogue("true_ending");};
     }
 
     void PickAnswer(GameObject img, GameObject pic){
@@ -75,12 +78,11 @@ public class FinalReason : MonoBehaviour
             case 1: 
             case 2: ending = "ending_merrybad"; break;
             case 3:
-            case 4: ending = "ending_normal"; break;
-            case 5: ending = "realmemory_6"; StartCoroutine("perfect"); return;
+            case 4: ending = "normal_ending"; break;
+            case 5: ending = "true_ending"; StartCoroutine("perfect"); return;
             default: print("error"); break;
         }
-
-        vidioplay.instance.breakmemory();
+        runner.StartDialogue(ending);
     }
 
     IEnumerator perfect(){
