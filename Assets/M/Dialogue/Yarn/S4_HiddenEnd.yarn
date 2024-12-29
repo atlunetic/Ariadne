@@ -14,7 +14,7 @@ title: HiddenEnding
 <<FadeIn 2.0>>
 
 <<UpdateAct 지원 Jiwon10>>
-<<Act 지수 Jisoo1_reflect 0.322 0.227 green>>
+<<Act 지수 Jisoo1_reflect 0.322 0.227 black>>
 지원: 야. 니 맘대로 들어오냐?
 
 지수: 나 그럼 그냥 나간다? 후회할텐데~
@@ -22,9 +22,12 @@ title: HiddenEnding
 지수: 자.
 
 <<HideAll>>
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<wait 0.7>>
 <<Draw H3)bracelet 0.75 0.75>>
 <<wait 4.0>>
 <<Hide H3)bracelet>>
+<<Hide DBG>>
 
 <<Act 지원 Jiwon7 1.17 0.322 black>>
 <<Act 지수 Jisoo1_reflect 0.322 0.227 green>>
