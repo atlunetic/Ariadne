@@ -3,25 +3,26 @@
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Scene H1)company>>
-<<PlayAudio Eunjaedaily 1.0 loop>>
-<<Act 은재 Uenjae1_reflect 1.17 0.322 green>>
+<<PlayAudio Eunjaedaily 0.15 loop>>
+<<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
 하암~ 오늘은 평화롭네.
 
-<<wait 1.0>>
-나 유은재, xx 뉴스의 사회부 기자다.
+<<wait 0.5>>
+나는 유은재, xx 뉴스의 사회부 기자다.
 최근에는 마약 문제와 관련된 기획 시리즈를 주로 다루고 있다.
 가끔 메일로 익명의 제보가 오곤 해서, 메일함을 자주 확인하는 편이다.
 
-<<wait 1.0>>
+<<wait 0.5>>
 그런데, 오늘은 자기 연락처를 적어 보낸 사람이 있었다.
 다짜고짜 맨 첫 줄에 나랑 대화하고 싶다고 써뒀길래.
 이상한 메일인 줄 알고 지우려고 했는데...
 바로 다음 줄에 언니가 마약중독자로 의심된다는 내용이 적혀 있었다.
 
-<<wait 1.0>>
+<<wait 0.5>>
 <<UpdateAct 은재 Uenjae2_reflect>>
-…인터뷰하러 가볼까.
-<<wait 2.0>>
+..인터뷰하러 가볼까.
+<<Fade black 0.0 1.0 2.0>>
+<<wait 3.0>>
 <<StopAudioAll>>
 <<HideAll>>
 <<jump Eunjaehiddenstory_2>>
@@ -32,62 +33,64 @@ title: Eunjaehiddenstory_2
 
 ---
 <<Scene H1)park>>
-<<PlayAudio EunjaemeetJiwon 1.0 loop>>
+<<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
+<<FadeIn 1.0>>
+<<wait 1.0>>
+<<PlayAudio EunjaemeetJiwon 0.2 loop>>
 저기 있는 사람인가? 겁에 질려 보이네.
 
-<<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
-은재: 안녕하세요, 메일 주신 지원 씨 맞으세요?
+은재: 안녕하세요, 메일 주신 지원씨 맞으세요?
 
-<<Act 지원 JIwon3_fear 0.322 0.227 green>>
-지원: …네.
+<<Act 지원 JIwon3_fear 0.322 0.227 black>>
+지원: ..네.
 은재: 네, 반갑습니다. xx뉴스 사회부 기자 유은재 입니다.
 은재: 사전에 말씀드렸던 대로, 오늘 인터뷰 녹음하는 것에 동의하시나요?
 
-<<wait 1.0>>
-지원: 네. 그런데... 혹시 바로 기사로 나가나요…?
+<<wait 0.5>>
+지원: 네. 그런데... 혹시 바로 기사로 나가나요..?
 지원: 아직 확실하지도 않고, 제 추측일 뿐이라서... 그게...
 지원: 일단은... 제가 섣부르게 판단한 게 아닐까 싶어서...
 
-<<wait 3.0>>
-…끼어들 틈을 안 주네. 많이 불안한가보다.
-녹음기와 수첩을 가방에 집어넣고, 지원 씨를 바라봤다.
-
 <<wait 1.0>>
+..끼어들 틈을 안 주네. 많이 불안한가보다.
+녹음기와 수첩을 가방에 집어넣고, 지원씨를 바라봤다.
+
+<<wait 0.5>>
 <<UpdateAct 은재 Uenjae3_reflect>>
-은재: 지원 씨, 혹시 사탕 좋아해요?
+은재: 지원씨, 혹시 사탕 좋아해요?
 
-<<wait 1.0>>
+<<wait 0.5>>
 <<UpdateAct 지원 Jiwon9_resting>>
 지원: 아... 네. 좋아해요.
 가방 안에 있던 사탕을 꺼내 지원 씨의 손에 쥐어 주었다.
 
-<<wait 1.0>>
-지원 씨는 망설이는 듯 하더니 사탕을 까서 입에 넣었다.
+<<wait 0.5>>
+지원씨는 망설이는 듯 하더니 사탕을 까서 입에 넣었다.
 잠시 아무 말 없이 오물거리더니, 쑥스러운 듯 눈치를 본다.
 은재: 지원 씨. 요즘엔 남이 주는 거 의심 없이 받아 먹으면 안 돼요.
 은재: 사탕, 젤리, 심지어 스티커처럼 생긴 마약도 있거든요.
 
 <<UpdateAct 지원 JIwon3_fear>>
-지원 씨는 놀란 눈으로 나를 바라봤다.
+지원씨는 놀란 눈으로 나를 바라봤다.
 은재: 그러니까 앞으로는 이렇게 의심 없이 먹지 마요.
 
 <<UpdateAct 지원 Jiwon9_resting>>
-지원: …네.
+지원: ..네.
 
-<<wait 1.0>>
+<<wait 0.5>>
 <<UpdateAct 은재 Uenjae1_reflect>>
-풀이 죽어 보이네. 
+풀이 죽어 보여..
 은재: 아, 이런 말 해놓고 할 소리는 아니긴 한데...
 은재: 밥은 먹었어요?
-<<PlayAudio stomachgrowling>>
+<<PlayAudio stomachgrowling 0.1>>
 지원: ... 
 
-<<wait 1.0>>
+<<wait 0.5>>
 <<UpdateAct 은재 Uenjae3_reflect>>
 은재: 같이 밥 먹으러 갈까요.
 
-<<wait 2.0>>
-<<StopAudioAll>>
+<<Fade black 0.0 1.0 2.0>>
+<<wait 3.0>>
 <<HideAll>>
 <<jump Eunjaehiddenstory_3>>
 
@@ -97,40 +100,43 @@ title: Eunjaehiddenstory_3
 
 ---
 <<Scene R_Street_BG>>
-<<PlayAudio EunjaemeetJiwon 1.0 loop>>
 <<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
-<<Act 지원 Jiwon8_smile 0.322 0.227 green>>
+<<Act 지원 Jiwon8_smile 0.322 0.227 black>>
+
+<<FadeIn 1.0>>
+<<wait 1.0>>
 
 낯을 가리던 지원 씨는, 어느 순간 재잘재잘 이야기를 이어갔다.
-자신의 학교 생활,친하게 지내는 친구...
+자신의 학교 생활, 친하게 지내는 친구...
 그렇게 한참을 떠들다가, 잠시 망설이더니.
 
-<<wait 1.0>>
+<<wait 0.5>>
 <<UpdateAct 지원 JIwon3_fear>>
 언니가 최근 들어 이상한 행동을 한다는 말을 꺼냈다.
 
 지원: 집에 들어갔는데... 저를 보자마자 어떤 봉투를 숨기더라고요.
 그 외에도 계속 돈을 빌려달라고 하고, 토하는 일이 많아지고.
 평소 같지 않은 모습들이 이어졌다고 했다.
-<<wait 1.0>>
+<<wait 0.5>>
 지원: 다리를 피가 나도록 긁기도 하고, 갑자기 이상한 소리를 하고...
 지원: 제가 알던 언니가 아니었어요.
 
-<<wait 1.0>>
+<<wait 0.5>>
 <<UpdateAct 은재 Uenjae2_reflect>>
 <<UpdateAct 지원 Jiwon6>>
-지원 씨는 참았던 울음을 터뜨렸다.
+지원씨는 참았던 울음을 터뜨렸다.
 
-<<wait 1.0>>
+<<wait 0.5>>
 <<UpdateAct 은재 Uenjae1_reflect>>
-…한창 이것저것 즐기고 웃기만 해도 바쁠 나이에.
+한창 이것저것 즐기고 웃기만 해도 바쁠 나이에..
 아무한테도 말 못하고 마음 고생 많이 했나 보네.
-<<wait 1.0>>
+<<Fade black 0.0 1.0 2.0>>
+<<wait 2.0>>
 그 후로도 자리를 옮겨 한참 동안 지원 씨의 이야기를 들어줬다.
 시간이 늦어져 다음 번에 인터뷰를 진행하기로 하고 헤어졌다.
-…마음이 쓰이네.
+..마음이 쓰이네.
 
-<<wait 2.0>>
+<<wait 1.0>>
 <<StopAudioAll>>
 <<HideAll>>
 <<jump Eunjaehiddenstory_4>>
@@ -141,20 +147,23 @@ title: Eunjaehiddenstory_4
 
 ---
 <<Scene H1)company>>
-<<PlayAudio Eunjaedaily 1.0 loop>>
 <<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
+<<FadeIn 1.0>>
+<<wait 1.0>>
+<<PlayAudio Eunjaedaily 0.15 loop>>
+
 이후로 매일 같이 지원 씨와 연락을 주고 받았다.
 밥을 챙겨 먹었는지, 잠은 잘 잤는지 물어보는 게 일상이 됐다.
 
-<<wait 1.0>>
-…별다른 이유는 없다.
+<<wait 0.5>>
+..별다른 이유는 없다.
 그냥, 본가에 있는 동생 생각도 나고.
 취재 하면서 이런 경우를 워낙 많이 봤으니까.
 마약 중독은 본인 뿐 아니라 주변 사람들에게도...
 미로 속을 평생 헤매야 하는 고통이니까.
 잠깐이나마 출구가 되어주고 싶었다.
 
-<<PlayAudio PhoneAlarm>>
+<<PlayAudio PhoneAlarm 0.2>>
 <<UpdateAct 은재 Uenjae3_reflect>>
 앗, 오늘도 같이 밥 먹자고 왔네. 좋다.
 <<UpdateAct 은재 Uenjae1_reflect>>
@@ -162,9 +171,8 @@ title: Eunjaehiddenstory_4
 인터뷰는 언젠가 하면 되니까.
 
 <<Fade black 0.0 1.0 2.0>>
-<<wait 2.0>>
+<<wait 3.0>>
 <<HideAll>>
-<<StopAudioAll>>
 <<jump Eunjaehiddenstory_5>>
 
 ===
@@ -172,33 +180,42 @@ title: Eunjaehiddenstory_4
 title: Eunjaehiddenstory_5
 
 ---
-<<FadeIn 2.0>>
 <<Scene H1)company>>
-<<PlayAudio Eunjaedaily 1.0 loop>>
 <<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
+<<FadeIn 1.0>>
+<<wait 1.0>>
+
 하아... 오늘은 바쁘네.
 지원이한테 연락도 못했고.
 
-<<wait 1.0>>
-<<PlayAudio Eunjaeaftermessage>>
-<<PlayAudio PhoneAlarm>>
+<<wait 0.5>>
+<<PlayAudio Eunjaeaftermessage 0.15>>
+<<PlayAudio PhoneAlarm 0.2>>
 <<UpdateAct 은재 Uenjae3_reflect>>
 어, 지원이다.
-<color=grey>*언니. 나 조직원들 만나러 클럽 갈 거야.</color>
-<color=grey>*연락 안 돼도 걱정하지 마. 그동안 고마웠어.</color>
+<<StopAudioAll>>
+<<PlayAudio Eunjaeaftermessage 0.15 loop>>
+<<wait 1.0>>
+<<UpdateAct 은재 Uenjae1_reflect>>
+...?
+<<wait 1.0>>
+
+<color=\#9fa2a4><i>언니. 나 조직원들 만나러 클럽 갈 거야.</color>
+<color=\#9fa2a4><i>연락 안 돼도 걱정하지 마. 그동안 고마웠어.</color>
 
 <<UpdateAct 은재 Uenjae2_reflect>>
 뭐? 조직원을 만나러 간다고?
 그게 무슨 말도 안되는...
-<<PlayAudio phonecall>>
-<color=grey>*연결이 되지 않아...</color>
+<<PlayAudio phonecall 0.1>>
+<<wait 3.0>>
+<<StopAudio phonecall>>
+<color=\#9fa2a4><i>연결이 되지 않아...</color>
 <<UpdateAct 은재 Uenjae1_reflect>>
 ...
 일단 기다려보자.
 <<Fade black 0.0 1.0 2.0>>
-<<wait 2.0>>
+<<wait 3.0>>
 <<HideAll>>
-<<StopAudioAll>>
 <<jump Eunjaehiddenstory_6>>
 
 ===
@@ -206,50 +223,56 @@ title: Eunjaehiddenstory_5
 title: Eunjaehiddenstory_6
 
 ---
-<<FadeIn 2.0>>
 <<Scene H1)company>>
-<<PlayAudio Eunjaeaftermessage 1.0 loop>>
 <<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
+<<FadeIn 1.0>>
+<<wait 1.0>>
+
+
 
 지원이가 3일째 연락이 안된다.
 ...
-언니 전화번호라고 받긴 했는데. 지수 씨 였지.
+언니 전화번호라고 받긴 했는데. 지수씨 였지.
 연락해보는 게 맞는 걸까.
 
-<<wait 1.0>>
-<<PlayAudio phonecall>>
+<<wait 0.5>>
+<<PlayAudio phonecall 0.1>>
+<<wait 5.0>>
 <<Act 지수 black_Jisoo_reflect 0.322 0.227 black>>
-??: 여보세요?
-은재: 안녕하세요, 지원 씨 친구 유은재라고 합니다. 지수 씨 휴대폰 맞을까요?
-
+<color=\#9fa2a4><i>??</color>: <color=\#9fa2a4><i>여보세요?</color>
+은재: 안녕하세요, 지원씨 친구 유은재라고 합니다. 지수씨 휴대폰 맞을까요?
 <<wait 1.0>>
-지수: 맞는데요. 무슨 일이시죠?
+
+<color=\#9fa2a4><i>지수</color>: <color=\#9fa2a4><i>맞는데요. 무슨 일이시죠?</color>
 은재: 다름이 아니라... 지원이가 연락이 안돼서요.
 은재: 혹시 무슨 일이 있는 건 아닐까 걱정돼서 연락드려요.
+<<wait 0.5>>
 
-<<wait 1.0>>
-지수: 그걸 왜 저한테 물어보세요?
+<color=\#9fa2a4><i>지수</color>: <color=\#9fa2a4><i>그걸 왜 저한테 물어보세요?</color>
 은재: 그게... 마지막으로 연락했을 때 xx클럽으로 갈 거라고 했거든요.
-은재: 지수 씨가 자주 가신다고 들었는데... 혹시 아시는 것 없나요?
+은재: 지수씨가 자주 가신다고 들었는데... 혹시 아시는 것 없나요?
+<<wait 0.5>>
 
-<<wait 1.0>>
-지수: ... 김지원이 다 말했어요?
-지수: 아...
+<color=\#9fa2a4><i>지수</color>: <color=\#9fa2a4><i>... 김지원이 다 말했어요?</color>
+<color=\#9fa2a4><i>지수</color>: <color=\#9fa2a4><i>아...</color>
 전화기 너머로 욕설이 들려왔다.
-<<PlayAudio endingacall>>
-어...
-<<PlayAudio phonecall>>
 
-<<wait 1.0>>
+<<wait 0.5>>
+<<Hide 지수>>
+<<PlayAudio endingacall 0.1>>
+어...
+<<PlayAudio phonecall 0.1>>
+<<wait 3.0>>
+<<StopAudio phonecall>>
+
 차단했나 보네. 어떡하지.
 아무 일도 없는데 신고했다가 조직원들이 잠적해버리면...
-<<wait 1.0>>
+<<wait 0.5>>
 하아... 지원이한테 별 일 없어야 할 텐데.
 
 <<Fade black 0.0 1.0 2.0>>
-<<wait 2.0>>
+<<wait 3.0>>
 <<HideAll>>
-<<StopAudioAll>>
 <<jump Eunjaehiddenstory_7>>
 
 ===
@@ -257,23 +280,24 @@ title: Eunjaehiddenstory_6
 title: Eunjaehiddenstory_7
 
 ---
-<<FadeIn 2.0>>
 <<Scene H1)company>>
-<<PlayAudio Eunjaeaftermessage 1.0 loop>>
 <<Act 은재 Uenjae2_reflect 1.17 0.322 black>>
-<<PlayAudio MemoInsert>>
+<<FadeIn 1.0>>
+<<wait 1.0>>
+
+<<PlayAudio MemoInsert 0.2>>
 어, 메일이 왔다.
 
-*안녕하세요, 전에 xx 관련 메일 드렸던 사람입니다.
-*마약 조직에 의해 일반인 사망자가 발생해 수사 진행 중이라고 합니다...
+<color=\#9fa2a4><i>안녕하세요, 전에 xx 관련 메일 드렸던 사람입니다.</color>
+<color=\#9fa2a4><i>마약 조직에 의해 일반인 사망자가 발생해 수사 진행 중이라고 합니다...</color>
 <<wait 1.0>>
 
 <<UpdateAct 은재 Uenjae1_reflect>>
-…에이 설마. 아닐 거야.
+..에이 설마. 아닐 거야.
 일단 관할서에 연락해보자.
 //화면 전환
 <<Fade black 0.0 1.0 2.0>>
-<<wait 2.0>>
+<<wait 3.0>>
 <<HideAll>>
 <<StopAudioAll>>
 <<jump Eunjaehiddenstory_8>>
@@ -283,35 +307,32 @@ title: Eunjaehiddenstory_7
 title: Eunjaehiddenstory_8
 
 ---
-<<FadeIn 2.0>>
 <<Scene H1)police1>>
-<<PlayAudio Eunjaeaftermessage 1.0 loop>>
-<<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
+<<FadeIn 1.0>>
+<<wait 1.0>>
+<<PlayAudio Chapter4conference 0.15 loop>>
 
 벌써 다른 기자들이 많이 와 있네.
 
-<<wait 1.0>>
-<<UpdateAct 은재 Uenjae2_reflect>>
+<<wait 0.5>>
 ..왜 이렇게 불안하지.
 
 <<wait 1.0>>
-경찰:  xx경찰서장입니다.
+경찰: xx경찰서장입니다.
 경찰: 지금부터, 지난 xx월 xx일 발생한 xx구 마약 조직에 의한 일반인 살인 사건 수사 결과를 브리핑 하겠습니다.
 경찰: 사고 발생 경위입니다.
 
-<<wait 1.0>>
-<<UpdateAct 은재 Uenjae1_reflect>>
+<<wait 0.5>>
 이럴 때일수록 정신 차려야 돼, 유은재.
 다시는 이런 일들이 반복되지 않도록...
 기사 쓰는 데 집중하자.
 
-<<wait 1.0>>
+<<wait 0.5>>
 경찰: 피해자인 20대 김 모 씨는 xx클럽에서 마약 조직과 접선을 시도한 것으로 밝혀졌습니다.
 경찰: 정확한 접선 원인은 파악 중에 있으며...
 
-<<wait 1.0>>
-<<UpdateAct 은재 Uenjae2_reflect>>
-…뭐? 에이... 아닐 거야.
+<<wait 0.5>>
+..뭐? 에이... 아닐 거야.
 경찰: 사인은 급성 마약 중독으로 인한 것으로 추정됩니다.
 경찰: 조직원 A는 피해자 김 모 씨에게 강제로 마약을 투여했으며...
 <<wait 1.0>>
@@ -319,7 +340,7 @@ title: Eunjaehiddenstory_8
 ...
 
 <<Fade black 0.0 1.0 2.0>>
-<<wait 2.0>>
+<<wait 3.0>>
 <<HideAll>>
 <<StopAudioAll>>
 <<jump Eunjaehiddenstory_9>>
@@ -330,35 +351,40 @@ title: Eunjaehiddenstory_8
 title: Eunjaehiddenstory_9
 
 ---
-<<FadeIn 2.0>>
 <<Scene H1)police2>>
-<<PlayAudio Eunjaeaftermessage 1.0 loop>>
 <<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
+
+<<FadeIn 1.0>>
+<<wait 1.0>>
+<<PlayAudio Eunjaeaftermessage 0.15 loop>>
 
 발표도 끝났으니 이제 돌아가자.
 
-<<UpdateAct 은재 Uenjae2_reflect>>
 그나저나 지원아... 제발 연락 좀 받아라... 제발.
 
 <<wait 1.0>>
-<<PlayAudio geonwoobellring>>
+<<PlayAudio geonwoobellring 0.2>>
+<<UpdateAct 은재 Uenjae2_reflect>>
 지원인가?
-<<UpdateAct 은재 Uenjae1_reflect>>
+<<wait 0.5>>
 아... 모르는 번호네.
 
 <<StopAudio geonwoobellring>>
+<<PlayAudio endingacall 0.1>>
+<<UpdateAct 은재 Uenjae1_reflect>>
 은재: 네 여보세요?
-<<wait 1.0>>
-??: 안녕하세요, xx경찰서입니다.
-??: 유은재씨 맞으십니까?
+<<wait 0.5>>
+<color=\#9fa2a4><i>??</color>: <color=\#9fa2a4><i>안녕하세요, xx경찰서입니다.</color>
+<color=\#9fa2a4><i>??</color>: <color=\#9fa2a4><i>유은재씨 맞으십니까?</color>
 은재: 네, 맞는데요.
+<color=\#9fa2a4><i>??</color>: <color=\#9fa2a4><i>마약 조직 사망사건 피해자 분이 마지막으로 연락하셨던 분이 유은재씨 라서요.</color>
+<color=\#9fa2a4><i>??</color>: <color=\#9fa2a4><i>경찰 조사 출석 부탁드립니다.</color>
 <<UpdateAct 은재 Uenjae2_reflect>>
-??: 마약 조직 사망사건 피해자 분이 마지막으로 연락하셨던 분이 유은재씨 라서요.
-??: 경찰 조사 출석 부탁드립니다.
 ...
 <<StopAudio Eunjaeaftermessage>>
-<<PlayAudio angryeunjae 1.0 loop>>
+<<PlayAudio angryeunjae 0.2 loop>>
 <<Fade black 0.0 1.0 2.0>>
+<<wait 2.0>>
 //화면 전환
 ...
 ...
@@ -378,6 +404,7 @@ title: Eunjaehiddenstory_9
 잠입 취재를 해서라도, 위험을 무릅쓰더라도...
 지원이 네가 하려던 거, 내가 마무리 지어 줄게.
 약속해.
+<<wait 1.0>>
 <<HideAll>>
 <<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>

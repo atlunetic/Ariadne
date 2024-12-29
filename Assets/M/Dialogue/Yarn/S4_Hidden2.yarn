@@ -3,7 +3,7 @@
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Scene H1)park>>
-<<PlayAudio OtherPlaces 1.0 loop>>
+<<PlayAudio OtherPlaces 0.15 loop>>
 <<Act 지수 Jisoo1 1.17 0.322 black>>
 <<Act 지원 Jiwon8_smile 0.322 0.227 green>>
 지수: 아~ 우리가 스무 살이래. 말이 돼?
@@ -12,16 +12,16 @@
 <<UpdateAct 지수 Jisoo6_scoff>>
 지수: 지긋지긋하다, 진짜로.
 
-<<UpdateAct 지원 JIwon1_resting>>
+<<UpdateAct 지원 Jiwon9_resting>>
 지원: 그럼 따로 살던가.
 
-<<UpdateAct 지수 Jisoo2_resting>>
+<<UpdateAct 지수 Jisoo2>>
 지수: 몰라. 돈 없어. 
 지수: 대학 졸업할 때 까지만 참아볼게.
 지원: 그러세요~.
 
 <<wait 1.0>>
-<<UpdateAct 지수 Jisoo1_smile>>
+<<UpdateAct 지수 Jisoo1>>
 지수: 아 근데 있잖아. 나 얼마 전에 과 OT 간 거 기억해?
 지수: 아니 내 옆에 앉은 애가 번호를 달라는 거야~.
 지수: 알고 보니까 같은 방이더라고. 그래서 같이 얘기도 많이 하고....
@@ -33,39 +33,40 @@
 지원: 선배들이 학회 가입하라고 영업하던데. 신청할까 고민 중.
 
 <<wait 1.0>>
-<<UpdateAct 지원 JIwon1_resting>>
-<<UpdateAct 지수 Jisoo4_weird>>
+<<UpdateAct 지원 Jiwon9_resting>>
 지원: 아, 맞다. 다들 술 못 마시더라. 마지막에 나 혼자 남았어.
+<<UpdateAct 지수 Jisoo4>>
 지수: 헐 뭐야? 대박이다. 너 그렇게 잘 마셔? 다음에 나랑도 마시자.
 지원: 그러던가.
 
 <<wait 1.0>>
-<<UpdateAct 지수 Jisoo2_resting>>
+<<UpdateAct 지수 Jisoo2>>
 지수: 아 나 근데 오랜만에 산책하니까 힘들어.
 지수: 저기 자판기 있네. 뭐라도 좀 마시자. 
 지원: 그래. 옆에 벤치도 있네. 좀 쉬자.
 
 <<wait 1.0>>
-<<UpdateAct 지수 Jisoo1_smile>>
+<<UpdateAct 지수 Jisoo1>>
 지수: 콜라?
 
 <<UpdateAct 지원 Jiwon8_smile>>
 지원: 어. 알면서 왜 묻냐.
 
 <<wait 1.0>>
+<<PlayAudio canopen 0.3>>
+<<wait 0.5>>
 지수: 자. 받아.
+
 지원: 고맙다.
 
 <<wait 1.0>>
-<<PlayAudio canopen>>
-<<UpdateAct 지수 Jisoo4_weird>>
+<<UpdateAct 지수 Jisoo4>>
 지수: 어, 어어....
 
-<<UpdateAct 지원 JIwon1_resting>>
-<<Act 지원 JIwon1_resting 0.322 0.227 green>>
+<<UpdateAct 지원 Jiwon9_resting>>
 지원: 옷에 묻었네.
 
-<<UpdateAct 지수 Jisoo5_panic>>
+<<UpdateAct 지수 Jisoo5>>
 지수: .... 미안. 
 지수: 그거 건우 오빠가 선물해준 옷 아냐...?
 
@@ -73,21 +74,24 @@
 지원: 맞아. 근데 뭐, 괜찮아.
 지원: 비밀로 해줄게. 괜히 건우 오빠한테 말하고 잔소리 듣지 마라.
 
-<<UpdateAct 지수 Jisoo2_resting>>
+<<UpdateAct 지수 Jisoo2>>
 지수: 힝.... 대신 내가 맛있는 거 사줄게.
 
 <<wait 1.0>>
-<<UpdateAct 지원 JIwon1_resting>>
+<<UpdateAct 지원 Jiwon9_resting>>
 지원: ...웬 애교야? 뭐 사줄 건데.
 
-<<UpdateAct 지수 Jisoo1_smile>>
+<<UpdateAct 지수 Jisoo1>>
 지수: 떡볶이 어때. 떡볶이 국물에 김밥 찍어 먹기!
 
 <<UpdateAct 지원 Jiwon8_smile>>
 지원: 괜찮네. 포장해서 집에서 먹을까?
 지수: 좋아. 내가 가자마자 옷 세탁해줄게.
 지원: 그래. 가자.
-<<PlayAudio laughing>>
+<<PlayAudio laughing 0.15>>
+<<Fade black 0.0 1.0 2.0>>
+<<wait 5.0>>
 <<HideAll>>
+<<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
