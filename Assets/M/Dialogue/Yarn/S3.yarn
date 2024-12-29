@@ -1903,6 +1903,7 @@ title:BacktoOfficetel1stFloor
 
 ---
 
+//<<SetCanvasTo VisualNovelPrefab true>>
 //지수2
 <<Act 지수 Jisoo2 1.17 0.322 white>>
 지수: 지원아...
