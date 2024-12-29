@@ -51,6 +51,7 @@ public class vidioplay : MonoBehaviour
 
     [YarnCommand("Break")]
     public void breakmemory(){
+        transform.GetChild(0).gameObject.SetActive(true);
         if(FinalReason.instance.rightanswer.Count == 0) {
             StartCoroutine("fordelaystart");
             return;
@@ -61,6 +62,7 @@ public class vidioplay : MonoBehaviour
 
     int before;
     IEnumerator breakglasses(int next){
+        GetComponent<AudioSource>().Play();
         for(int i = 1; i<13; i++){
             yield return new WaitForSeconds(0.09f);
             breakglass[i-1].SetActive(false);
@@ -80,7 +82,11 @@ public class vidioplay : MonoBehaviour
 
     IEnumerator fordelaystart(){
         yield return new WaitForSeconds(1f);
-        runner.StartDialogue(FinalReason.instance.ending);
+        transform.GetChild(0).gameObject.SetActive(false);
+        if(FinalReason.instance.ending=="normal_ending")
+            runner.StartDialogue("normal_ending_1");
+        else if(FinalReason.instance.ending=="true_ending")
+            runner.StartDialogue("trueending_1");
     }
 
 }
