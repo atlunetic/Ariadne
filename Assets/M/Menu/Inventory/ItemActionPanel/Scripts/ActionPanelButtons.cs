@@ -32,9 +32,9 @@ public class ActionPanelButtons : MonoBehaviour
         {
             if (GameManager.instance.FinishedDialogues.Contains("Bracelet1"))
             {
-                if (currentscene.name.StartsWith("S1")) {runner.StartDialogue("Bracelet2"); }
-                else if (currentscene.name.StartsWith("S2_7_Stairs"){ runner.StartDialogue("inventory_notjelly"); }
-                else (runner.StartDialogue("WrongItem");)
+                if (currentscene.name.StartsWith("S1")) { runner.StartDialogue("Bracelet2"); }
+                else if (currentscene.name.StartsWith("S2_7_Stairs")){ runner.StartDialogue("inventory_notjelly"); }
+                else { runner.StartDialogue("WrongItem"); }
             }
             else
             {
