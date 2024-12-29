@@ -909,7 +909,7 @@ title: Ending4_2
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<CollectEnding GameManager Ending4_2 Ending4>>
+<<CollectEnding GameManager 4>>
 
 <<wait 1.0>>
 ...

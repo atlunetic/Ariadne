@@ -25,8 +25,8 @@ public class SaveAndLoad : MonoBehaviour
     public GameObject nowLoading;
     public GameObject SavePanel;
     public GameObject CollectedEndingsPanel;
-    public GameObject CollectedEndings;
-    CollectedEndings endings = new CollectedEndings();
+    public GameObject[] CollectedEndings;
+    public CollectedEndings endings = new CollectedEndings();
     public GameObject endingImgPrefab;
     private string FolderPath;
     void Awake(){
@@ -110,36 +110,36 @@ public class SaveAndLoad : MonoBehaviour
             Directory.CreateDirectory(FolderPath);
         }
         if(File.Exists(FolderPath+"Endings") == false){  // 수집한 엔딩이 없을 때
-            CollectedEndingsPanel.transform.GetChild(1).gameObject.SetActive(true);
             return;
         }
         string json = File.ReadAllText(FolderPath+"Endings");
         endings = JsonConvert.DeserializeObject<CollectedEndings>(json);
-        
-        for(int i=0;i<endings.endingDialogue.Count;i++){
-            Sprite sprite = Resources.Load<Sprite>(endings.endingSprites[i]);
-            GameObject endingImg = Instantiate(endingImgPrefab, CollectedEndings.transform);
-            endingImg.GetComponent<Image>().sprite = sprite;
-            endingImg.name = endings.endingDialogue[i];
-            endingImg.GetComponent<Button>().onClick.AddListener(()=>{CallYarn.instance.callYarn(endingImg.name);});
-        }
+        foreach(int i in endings.endingNums)
+            CollectedEndings[i].SetActive(true);
     }
 
     [YarnCommand("CollectEnding")]
-    public void CollectEnding(string endingDialogue, string spritename){
+    public void CollectEnding(int endingNum){
         string json;
         if(File.Exists(FolderPath+"Endings")){
             json = File.ReadAllText(FolderPath+"Endings");
             endings = JsonConvert.DeserializeObject<CollectedEndings>(json);
-            if(endings.endingDialogue.Contains(endingDialogue)) return;
+            if(endings.endingNums.Contains(endingNum)) return;
         }
 
-        endings.endingDialogue.Add(endingDialogue);
-        endings.endingSprites.Add(spritename);
+        endings.endingNums.Add(endingNum);
         json = JsonConvert.SerializeObject(endings, Formatting.Indented);
         File.WriteAllText(FolderPath+"Endings", json);
     }
 
+    [YarnCommand("unlockHiddenEnd")]
+    public void unlockHiddenEnd(int i){
+        if(endings.HiddenConditions[i] == true) return;
+        endings.HiddenConditions[i] = true;
+
+        string json = JsonConvert.SerializeObject(endings, Formatting.Indented);
+        File.WriteAllText(FolderPath+"Endings", json);
+    }
     string Location(string scene){
         switch(scene){
             case "S1_2_JiwonRoom": return "지원의 방";
@@ -204,7 +204,7 @@ public class SaveAndLoad : MonoBehaviour
     }
 }
 
-class CollectedEndings{
-    public List<string> endingSprites = new List<string>();
-    public List<string> endingDialogue = new List<string>();
+public class CollectedEndings{
+    public HashSet<int> endingNums = new HashSet<int>();
+    public bool[] HiddenConditions = new bool[4];
 }

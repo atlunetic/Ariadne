@@ -9,7 +9,6 @@ public class MoveS4 : MonoBehaviour
     public GameObject MoveS4Panel;
     void Awake() {
         SceneManager.sceneLoaded+= (Scene s, LoadSceneMode l) => {
-            print(SceneManager.GetActiveScene().name);
             if(SceneManager.GetActiveScene().name=="S4_2_R_JisooRoom" || 
                 SceneManager.GetActiveScene().name=="S4_3_R_JiwonRoom")
                 gameObject.SetActive(true);
