@@ -46,6 +46,10 @@ public class SceneInfo : MonoBehaviour
                 {
                     GameManager.instance.FindedClues.Add(obj.name);
                     Debug.Log("Find Clue: "+obj.name);
+                    if(obj.name=="VendingMachine") {
+                        SaveAndLoad.instance.unlockHiddenEnd(2);
+                        return null;
+                    }
                     StartCoroutine(PlayMemory(obj.name));
                     return obj.name;
                 }

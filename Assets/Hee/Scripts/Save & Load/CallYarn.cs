@@ -56,7 +56,6 @@ public class CallYarn : MonoBehaviour
         yield return new WaitForSeconds(2f);
         if(GameManager.instance.NowScene.StartsWith("S4_")){
             Menu.instance.LoadReality();
-            StopCoroutine("LateStart");
         }
         HashSet<string> FinishedDialogues = GameManager.instance.FinishedDialogues;
         Haesolchatbutton = ChocoTalkController.instance.chatbuttons["해솔"];

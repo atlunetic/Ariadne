@@ -34,10 +34,15 @@ public class GameManager : MonoBehaviour
         if(instance == null){
             instance = this;
             DontDestroyOnLoad(gameObject);
+            Init();
         }
         else{
             DestroyImmediate(gameObject);
         }
+    }
+
+    public void Init(){
+        Debug.Log("INIT!!!!");
         ChattingLog.Add(19);
         ChattingLog.Add(18);
         ChattingLog.Add(25);
@@ -94,12 +99,15 @@ public class GameManager : MonoBehaviour
         FinishedDialogues.Contains("future_hairpin") && FinishedDialogues.Contains("future_letter") && 
         FinishedDialogues.Contains("future_record") && FinishedDialogues.Contains("future_beer") && 
         FinishedDialogues.Contains("future_students")) {
-            var runner = FindObjectOfType<DialogueRunner>();
+            Invoke("RealTrueEnd", 0.5f);
+        }
+    }
+    private void RealTrueEnd(){
+        var runner = FindObjectOfType<DialogueRunner>();
             if(NowScene=="S4_2_R_JisooRoom" || NowScene=="S4_3_R_JiwonRoom")
                 runner.StartDialogue("realend_last");
             else
                 runner.StartDialogue("backhome");
-        }
     }
 
     public SaveGameManager Convert(){

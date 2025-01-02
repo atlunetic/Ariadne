@@ -1,5 +1,5 @@
 {
-  "savetime": "2024-12-04 11:11:35 오전",
+  "savetime": "2025-01-03 00:29:23 오전",
   "IsLoad": false,
   "NowScene": "S1_2_JiwonRoom",
   "NumOfScreenShots": 1,
@@ -11,7 +11,12 @@
     25
   ],
   "PhotoList": [],
-  "items": [],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Bracelet"
+    }
+  ],
   "FindedObjects": [
     "Letter"
   ],
@@ -24,6 +29,7 @@
   "RecommendedFriends": [],
   "visited": 0,
   "IsAriadneHintOn": false,
+  "remainHint": 3,
   "S1HintList": [
     "Laptop",
     "Meds",
@@ -45,7 +51,7 @@
     "VIPlist",
     "InStaffroom_VIPlist",
     "InStaffroom_cctv",
-    "InStaffroom_Key",
+    "obj_keyStory",
     "InStaffroom_Radio"
   ],
   "FindedMemoList": []

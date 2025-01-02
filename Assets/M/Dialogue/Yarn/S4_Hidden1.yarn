@@ -2,6 +2,7 @@
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<BGoff SceneManager>>
 <<Scene H1)company>>
 <<PlayAudio Eunjaedaily 0.15 loop>>
 <<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
@@ -410,5 +411,6 @@ title: Eunjaehiddenstory_9
 <<HideAll>>
 <<StopAudioAll>>
 <<FadeIn>>
+<<BGon SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===

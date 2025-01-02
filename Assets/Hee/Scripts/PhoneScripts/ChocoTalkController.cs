@@ -46,6 +46,7 @@ public class ChocoTalkController : MonoBehaviour
         ChatMap.Add("NeverEverDrug", RecommendedFriends[1]);
         ChatMap.Add("Team ARIADNE", RecommendedFriends[2]);
         ChatScroll = ChatTab.transform.GetChild(0).GetComponent<ScrollRect>();
+        Debug.Log(GameManager.instance.NowScene);
         if(GameManager.instance.NowScene.StartsWith("S4_")){
             ChatMap.Add("지원", jiwon);
             ChatMap.Add("기자", editor);

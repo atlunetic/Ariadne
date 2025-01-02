@@ -2,6 +2,7 @@
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<BGoff SceneManager>>
 <<Scene H1)park>>
 <<PlayAudio OtherPlaces 0.15 loop>>
 <<Act 지수 Jisoo1 1.17 0.322 white>>
@@ -94,5 +95,6 @@
 <<HideAll>>
 <<StopAudioAll>>
 <<FadeIn>>
+<<BGon SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===

@@ -169,21 +169,30 @@ public class Menu : MonoBehaviour  // DontDestroyOnLoad 적용
     public void GoReality(){
         SceneManager.LoadScene("S4_2_R_JisooRoom");
         GameManager.instance.ChattingLog.Clear();
+        GameManager.instance.FinishedDialogues.Remove("RemoveUI");
+        UIButtons.SetActive(true);
         GameManager.instance.visited=0;
         LoadReality();
     }
     [YarnCommand("LoadReality")]
     public void LoadReality(){
-        Destroy(Phone);
-        Destroy(Controllers);
+        DestroyImmediate(Phone);
+        DestroyImmediate(Controllers);
         PhoneController.instance=null;
         ChocoTalkController.instance=null;
         DgramController.instance=null;
         MapController.instance=null;
-        
+        if(GameManager.instance.NowScene!="S4")SceneManager.LoadScene(GameManager.instance.NowScene);
+        ActivePI();
+        ActiveD();
+        Invoke("LoadReality2", 1.5f);
+    }
+
+    private void LoadReality2(){
         GameObject temp = Instantiate(JisooPhone, transform);
         temp.transform.SetSiblingIndex(1);
 
         Phone = temp.transform.GetChild(0).gameObject;
+        Phone.SetActive(false);
     }
 }
