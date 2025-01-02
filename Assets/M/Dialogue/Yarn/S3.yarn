@@ -563,6 +563,7 @@ title: Ending4
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<CollectEnding GameManager 4>>
 조직원: ...
 조직원: ...
 ..맞췄나?
@@ -664,6 +665,11 @@ title: Officetel1503
 <<Hide 지수>>
 //<<ChangeSceneTo VisualNovelPrefab S3_3_Officetel1503>>
 //<<jump Officetel15thfloor>>
+
+<<if (CheckDialogue("Officetel1503")==true && CheckDialogue("MemoStory_Recorder") == true && CheckDialogue("GeonwooCard")==true && CheckDialogue("memory_GeonwooCard") == true && CheckDialogue("PhotoOf3Story")==true && CheckDialogue("memory_Photo") == true)>>
+    <<jump Room101Fin>>
+<<endif>>
+
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

@@ -1,5 +1,5 @@
 {
-  "savetime": "2024-12-04 11:15:00 오전",
+  "savetime": "2025-01-03 00:22:32 오전",
   "IsLoad": false,
   "NowScene": "S1_2_JiwonRoom",
   "NumOfScreenShots": 1,
@@ -9,37 +9,61 @@
     19,
     18,
     25,
-    12,
-    13
+    74,
+    75,
+    78,
+    79,
+    80,
+    0,
+    8,
+    9,
+    10,
+    1,
+    11
   ],
-  "PhotoList": [
-    "Letter13"
+  "PhotoList": [],
+  "items": [
+    {
+      "ItemType": 0,
+      "itemName": "Bracelet"
+    }
   ],
-  "items": [],
   "FindedObjects": [
     "Letter"
   ],
-  "FindedClues": [
-    "Letter"
-  ],
+  "FindedClues": [],
   "FinishedDialogues": [
     "jisoo'stalk",
     "Chatlist",
-    "Chocotalk1st",
-    "ChooseChatName1",
-    "AfterGeonwooChatAsHerself",
-    "ChooseChatName2",
-    "JustOffCanvas",
-    "OpenChat",
     "DGram1st",
+    "A_Rapport1",
+    "A_Rapport3",
+    "A_Rapport4",
+    "A_Rapport5",
+    "A_Rapport6",
     "DropperRecruit",
     "IceiceChat",
-    "Camera"
+    "Chocotalk1st",
+    "ChooseChatName1",
+    "AfterGeonwooChatAsJiwon",
+    "ChooseChatName2",
+    "Haesol2",
+    "AfterHaesolChat",
+    "HaesolSuspicious",
+    "HaesolAftertruth",
+    "Haesol3",
+    "OpenChat",
+    "Camera",
+    "Gallery",
+    "JellyPhoto",
+    "Memo_Tutorial",
+    "Map_1"
   ],
   "GottenPage": [],
   "RecommendedFriends": [],
   "visited": 0,
   "IsAriadneHintOn": true,
+  "remainHint": 3,
   "S1HintList": [
     "Laptop",
     "Meds",
@@ -61,7 +85,7 @@
     "VIPlist",
     "InStaffroom_VIPlist",
     "InStaffroom_cctv",
-    "InStaffroom_Key",
+    "obj_keyStory",
     "InStaffroom_Radio"
   ],
   "FindedMemoList": []

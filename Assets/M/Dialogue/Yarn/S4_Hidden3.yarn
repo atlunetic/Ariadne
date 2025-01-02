@@ -1,6 +1,7 @@
 ﻿title: Geonwoohiddenstory_1
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<BGoff SceneManager>>
 <<PlayAudio geonwoodaily 0.15 loop>>
 <<Scene H2)school>>
 <<Act 건우친구 NPC_G_friend 0.322 0.227 white>>
@@ -389,5 +390,6 @@ title: Geonwoohiddenstory_8
 <<HideAll>>
 <<StopAudioAll>>
 <<FadeIn>>
+<<BGon SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===

@@ -14,6 +14,7 @@ public class vidioplay : MonoBehaviour
     public GameObject[] breakglass;
     public GameObject[] memoryBG;
     public DialogueRunner runner;
+    public GameObject HospitalBG;
     
     public static vidioplay instance;
     void Awake(){instance = this;}
@@ -49,14 +50,17 @@ public class vidioplay : MonoBehaviour
         FinalreasonCanvas.SetActive(true);
     }
 
+    bool isFirst = true;
+
     [YarnCommand("Break")]
     public void breakmemory(){
         transform.GetChild(0).gameObject.SetActive(true);
-        if(FinalReason.instance.rightanswer.Count == 0) {
+        if(FinalReason.instance.rightanswer.Count == 0) {  // 맞춘 기억 전부 보여준 뒤
             StartCoroutine("fordelaystart");
             return;
         }
         int i = FinalReason.instance.rightanswer.Dequeue();
+        if(isFirst){HospitalBG.SetActive(true); isFirst=false;}
         StartCoroutine(breakglasses(i));
     }
 

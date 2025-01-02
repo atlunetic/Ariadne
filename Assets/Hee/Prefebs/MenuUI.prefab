@@ -8688,7 +8688,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1918857382, guid: abcd822bd39b7ff4ab116e53e55cff04, type: 3}
+  m_Sprite: {fileID: 197016983, guid: b0bb24a41fe4b754d8b057a2cbef2b13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20289,7 +20289,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1195003452, guid: abcd822bd39b7ff4ab116e53e55cff04, type: 3}
+  m_Sprite: {fileID: -363998958, guid: b0bb24a41fe4b754d8b057a2cbef2b13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -35663,7 +35663,7 @@ PrefabInstance:
     - target: {fileID: 7891083629519134185, guid: 5678255996fcb074a8c888f8f57cc6bd, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 858709447, guid: 7f6ae041afe36eb418d35c561e3c3210, type: 3}
+      objectReference: {fileID: -686872653, guid: 4c23e9013192fbe46bf2fd807b8893e9, type: 3}
     - target: {fileID: 8093414670835777553, guid: 5678255996fcb074a8c888f8f57cc6bd, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -40661,7 +40661,7 @@ PrefabInstance:
     - target: {fileID: 2188147165122480227, guid: a9b1ac1df88d4ee479c3b56af2fd47ea, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 858709447, guid: 7f6ae041afe36eb418d35c561e3c3210, type: 3}
+      objectReference: {fileID: -686872653, guid: 4c23e9013192fbe46bf2fd807b8893e9, type: 3}
     - target: {fileID: 3759447264199250518, guid: a9b1ac1df88d4ee479c3b56af2fd47ea, type: 3}
       propertyPath: m_Name
       value: JellyPhoto
@@ -42641,6 +42641,10 @@ PrefabInstance:
     - target: {fileID: 5925632719178091714, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
       propertyPath: m_Sprite
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5925632719178091714, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5925632719178091714, guid: 088f85a481aa6ad4cb56cb7dbceee57d, type: 3}
       propertyPath: m_WasSpriteAssigned

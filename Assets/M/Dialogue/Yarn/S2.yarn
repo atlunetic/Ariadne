@@ -1949,6 +1949,9 @@ title: event_gunwoo_success
 
 건우 오빠가 자리를 떠났다.
 ...
+<<if $persuade >= 11>>
+	<<unlockHiddenEnd GameManager 3>>
+<<endif>>
 <<Hide 지수>>
 <<Hide 건우>>
 <<StopAudioAll>>
@@ -3378,8 +3381,8 @@ VIP 룸으로 들어가보자.
 	입었다. 이제 들어가보자.
 	<<FinishedDialogue VisualNovelPrefab club_viproom_entry2>>
 	<<ChangeSceneTo VisualNovelPrefab S2_5_VipRoomEntrance>>
-	<<jump club_viproom>>
 	<<deActiveM MenuUI>>
+	<<jump club_viproom>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 -> 들어가지 말자.
 	그래, 좀 더 둘러보자.

@@ -371,7 +371,7 @@ public class ChatManager : MonoBehaviour
 
         ChattingList.Add(new Chatting(true, "아리아드네", "AfterDChat3"));  // 31
         AddChatToLast(true, "아리아드네");
-        AddChatToLast(true, "혹시 XX 오피스텔 현관 비밀번호 알아?");
+        AddChatToLast(true, "혹시 XX 오피스텔 현관 비밀번호 알아요?");
         AddChatToLast(false, "등잔 밑이 어두운 법이지.");
         AddChatToLast(false, "주머니는 뒤져봤어?");
 
@@ -517,7 +517,7 @@ public class ChatManager : MonoBehaviour
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 67
         AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
-        AddChatToLast(false, "출입문 위에 있는 낙서는 촬영해봤어?");
+        AddChatToLast(false, "출입문 위에 있는 낙서를 촬영해봐.");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 68
         AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
@@ -537,7 +537,7 @@ public class ChatManager : MonoBehaviour
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 72
         AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
-        AddChatToLast(false, "소파 쪽에 카드키가 떨어져 있을텐데. 확인해봤어?");
+        AddChatToLast(false, "소파 위에 카드키가 떨어져 있을텐데. 확인해봤어?");
 
         ChattingList.Add(new Chatting(true, "아리아드네", null));  // 73
         AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
@@ -548,9 +548,11 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "글쎄.");
 
         ChattingList.Add(new Chatting(true, "아리아드네", "A_Rapport3"));  // 75
+        AddChatToLast(true, "지원이랑 무슨 사이예요?");
         AddChatToLast(false, "내가 빚진 게 있어.");
 
         ChattingList.Add(new Chatting(true, "아리아드네", "A_Rapport2"));  // 76
+        AddChatToLast(true, "지원이랑 무슨 사이예요?");
         AddChatToLast(false, "내가 빚진 게 있어.");
 
         ChattingList.Add(new Chatting(true, "아리아드네", "A_Rapport3"));  // 77
@@ -568,6 +570,54 @@ public class ChatManager : MonoBehaviour
 
         ChattingList.Add(new Chatting(true, "아리아드네", "A_Rapport6"));  // 80
         AddChatToLast(false, "아까도 말했지만, 도움이 필요하면 연락해.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 81
+        AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
+        AddChatToLast(false, "문을 살펴봐.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 82
+        AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
+        AddChatToLast(false, "아까 나한테 보냈던 사진…. 살펴볼래?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 83
+        AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
+        AddChatToLast(false, "동화에서는 먹을 걸로 유인하는 경우가 많던데.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 84
+        AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
+        AddChatToLast(false, "화단은 전부 확인해봤어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 85
+        AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
+        AddChatToLast(false, "출입문 위에 있는 낙서는 확인해봤어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 86
+        AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
+        AddChatToLast(false, "카드키를 사용해 오피스텔 안으로 들어가봐.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 87
+        AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
+        AddChatToLast(false, "컴퓨터 근처에 있는 사진은 확인해봤어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 88
+        AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
+        AddChatToLast(false, "바닥에 떨어져 있는 명함은 확인해봤어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 89
+        AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
+        AddChatToLast(false, "책상 위에 있는 녹음기는 확인해봤어?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 90
+        AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
+        AddChatToLast(false, "휴대폰 갤러리에 이 오피스텔의 사진처럼 보이는 게 있었지. 그걸 확인해봐.");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 91
+        AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
+        AddChatToLast(false, "커튼 뒤에 무언가 보이지 않아?");
+
+        ChattingList.Add(new Chatting(true, "아리아드네", null));  // 92
+        AddChatToLast(true, "뭘 해야 할지 모르겠어요. 도와주세요");
+        AddChatToLast(false, "비디오 테이프는 재생해봤어?");
 
         foreach (int i in GameManager.instance.ChattingLog)
             PrintChat(i);

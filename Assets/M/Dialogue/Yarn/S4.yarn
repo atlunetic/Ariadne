@@ -100,6 +100,7 @@ title: realmemory_1
 //건우가 건네는 마약 확대
 
 <<HideAll>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 <<Break BlackBG>>
 ===
@@ -127,6 +128,7 @@ title: realmemory_2
 지원: 아냐.. 아닐거야
 
 <<HideAll>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 <<Break BlackBG>>
 ===
@@ -181,6 +183,7 @@ title: realmemory_3
 지수: ...
 
 <<HideAll>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 <<Break BlackBG>>
 ===
@@ -224,6 +227,8 @@ title: realmemory_4
 <<PlayAudio LoudDoorClose 0.7>>
 
 <<HideAll>>
+<<SetCanvasTo VisualNovelPrefab false>>
+
 <<Break BlackBG>>
 ===
 
@@ -267,6 +272,7 @@ title: realmemory_5
 건우: 사람이 쓰러졌어요!
 
 <<HideAll>>
+<<SetCanvasTo VisualNovelPrefab false>>
 
 <<Break BlackBG>> 
 
@@ -734,6 +740,7 @@ title: ending_merrybad
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<BGoff SceneManager>>
 <<PlayAudio NightmareBGM 0.6 loop>>
 <<CollectEnding GameManager 6>>
 
@@ -876,6 +883,7 @@ title: ending_bad
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<BGoff SceneManager>>
 <<PlayAudio badending 0.6 loop>>
 <<CollectEnding GameManager 5>>
 <<Scene Maze>>

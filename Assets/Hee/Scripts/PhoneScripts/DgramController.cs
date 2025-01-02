@@ -31,6 +31,7 @@ public class DgramController : MonoBehaviour
             instance = this;
     }
     void Start(){
+        Debug.Log(GameManager.instance.NowScene);
         if(GameManager.instance.NowScene.StartsWith("S4_")){
             ChatMap.Add("realdrgg24", drgg24Chatroom_real);
             ChatMap.Add("lsdlsdlsd", lsdlsdlsdChatroom_real);

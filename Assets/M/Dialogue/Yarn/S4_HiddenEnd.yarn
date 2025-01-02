@@ -1,6 +1,8 @@
 title: HiddenEnding
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<BGoff SceneManager>>
+
 <<PlayAudio threadbracelet 0.2 loop>>
 <<Scene H3)jiwon_room>> // 지원의 방 배경
 <<PlayAudio KnockingSound 0.2>>
@@ -88,6 +90,9 @@ title: HiddenEnding
 ...
 ...
 이루어졌다.
+<<StopAudioAll>>
+<<FadeIn>>
+<<BGon SceneManager>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 

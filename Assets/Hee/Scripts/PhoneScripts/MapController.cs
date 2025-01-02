@@ -36,12 +36,29 @@ public class MapController : MonoBehaviour
             DisableButton(Homebutton);
             if((GameManager.instance.visited & 1) != 0) Parkbutton.GetComponent<Image>().sprite = BlueDot;
             if((GameManager.instance.visited & 2) != 0) BarStreetbutton.GetComponent<Image>().sprite = BlueDot;
+            switch(GameManager.instance.NowScene){
+                case "S4_2_R_JisooRoom":
+                case "S4_3_R_JiwonRoom": 
+                    CurrPoint.anchoredPosition = new Vector2(-254,156);
+                    DisableButton(Homebutton);
+                    break;
+                case "S4_5_R_Park": 
+                    CurrPoint.anchoredPosition = new Vector2(-201,-8);
+                    DisableButton(Parkbutton);
+                    break;
+                case "S4_4_R_Street": 
+                    CurrPoint.anchoredPosition = new Vector2(27,251);
+                    DisableButton(BarStreetbutton);
+                    break;
+                default: Debug.Log("unknown place: "+GameManager.instance.NowScene); break;
+            }
             return;
         }
 
         if((GameManager.instance.visited & 1) != 0) Parkbutton.GetComponent<Image>().sprite = BlueDot;
         if((GameManager.instance.visited & 2) != 0) BarStreetbutton.GetComponent<Image>().sprite = BlueDot;
         if((GameManager.instance.visited & 4) != 0) Hospitalbutton.GetComponent<Image>().sprite = BlueDot;
+        if(!GameManager.instance.NowScene.StartsWith("S1")) Clubbutton.GetComponent<Image>().sprite = BlueDot;
     }
 
     [YarnCommand("GoHome")]

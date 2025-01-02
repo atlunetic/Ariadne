@@ -88,7 +88,7 @@
 …!
 뭔가 떠올랐다.
 <<Hide 지수>>
-<<Hide Hospital_bg>>
+<<Scene NoBG>>
 <<StopAudioAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 <<Break BlackBG>>
@@ -101,6 +101,8 @@ title: trueending_1
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<Scene Hospital_bg>>
+<<PlayAudio TrueEndTheme 0.5 loop>>
 어….
 기억났다,
 지원이는 나를 구하려다가….
@@ -160,13 +162,16 @@ title: trueending_1
  
 마약류 복용에 대한 처벌로 1년 2개월 형을 선고받았다.
 죗값을 치른 후, 정부 기관의 도움으로 치료 센터에 다녔다.
-<<StopAudio All>>
+<<StopAudioAll>>
 //지수의 방 배경
 //<<SetCanvasTo VisualNovelPrefab true>>
 <<GoReality MenuUI>>
+<<Scene NoBG>>
+<<FadeIn>>
 <<Act 지수 Jisoo2_resting 1.17 0.322 black>>
 ….
 앞으로 나는 어떻게 살아야 할까.
+<<HideAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
 //이후 휴대폰 등 아이콘 나옴. 오브젝트 상호작용 가능
 //지도를 통해 다른 장소 이동, 2장의 이동 버튼을 통해 지원의방/지수의방 이동 가능
@@ -717,8 +722,7 @@ title: normal_ending
 …!
 뭔가 떠올랐다.
 <<Hide 지수>>
-<<Hide Hospital_bg>>
-<<SetCanvasTo VisualNovelPrefab false>>
+<<Scene NoBG>>
 <<StopAudioAll>>
 <<Break BlackBG>>
 ===
@@ -727,6 +731,7 @@ title:  normal_ending_1
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
+<<Scene Hospital_bg>>
 어….
 기억났다,
 지원이는 나를 구하려다가….
@@ -784,6 +789,7 @@ title:  normal_ending_1
 긴 입원 생활이 끝나고, 드디어 집에 왔다.
 <<ChangeSceneTo VisualNovelPrefab S4_6_N_JisooRoom>>
 어지러워…. 죽을 것 같아….
+<<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
  

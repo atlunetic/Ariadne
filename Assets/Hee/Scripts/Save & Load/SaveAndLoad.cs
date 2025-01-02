@@ -28,9 +28,16 @@ public class SaveAndLoad : MonoBehaviour
     public GameObject[] CollectedEndings;
     public CollectedEndings endings = new CollectedEndings();
     public GameObject endingImgPrefab;
+    public GameObject NoramlEndings;
+    public GameObject HiddenEndings;
     private string FolderPath;
     void Awake(){
-        if(instance == null) instance=this;
+        if(instance == null){
+            instance = this;
+        }
+        else{
+            DestroyImmediate(gameObject);
+        }
     #if UNITY_EDITOR
         FolderPath = $"{Application.dataPath}/Saves/";
     #else
@@ -114,8 +121,6 @@ public class SaveAndLoad : MonoBehaviour
         }
         string json = File.ReadAllText(FolderPath+"Endings");
         endings = JsonConvert.DeserializeObject<CollectedEndings>(json);
-        foreach(int i in endings.endingNums)
-            CollectedEndings[i].SetActive(true);
     }
 
     [YarnCommand("CollectEnding")]
@@ -130,6 +135,7 @@ public class SaveAndLoad : MonoBehaviour
         endings.endingNums.Add(endingNum);
         json = JsonConvert.SerializeObject(endings, Formatting.Indented);
         File.WriteAllText(FolderPath+"Endings", json);
+        Debug.Log("Collect Ending: "+ endingNum);
     }
 
     [YarnCommand("unlockHiddenEnd")]
@@ -139,6 +145,7 @@ public class SaveAndLoad : MonoBehaviour
 
         string json = JsonConvert.SerializeObject(endings, Formatting.Indented);
         File.WriteAllText(FolderPath+"Endings", json);
+        Debug.Log("Unlock Hidden Ending Condition: "+i);
     }
     string Location(string scene){
         switch(scene){
@@ -168,6 +175,10 @@ public class SaveAndLoad : MonoBehaviour
             case "S3_1_2_PhoneBooth":
             case "S3_1_OfficetelEntrance": return "오피스텔 입구";
             case "S4": return "아리아드네";
+            case "S4_2_R_JisooRoom": return "지수의 방 (현실)";
+            case "S4_3_R_JiwonRoom": return "지원의 방 (현실)";
+            case "S4_4_R_Street": return "동네 거리 (현실)";
+            case "S4_5_R_Park": return "동네 공원 (현실)";
             default: return "???";
         }
     }
@@ -182,9 +193,11 @@ public class SaveAndLoad : MonoBehaviour
     [YarnCommand("BackToMainScene")]
     public void BackToMainScene(){
         SavePanel.SetActive(false);
-        DestroyImmediate(GameObject.Find("GameManager"));
+        SavePanel.GetComponent<Button>().onClick.Invoke();
+        DestroyImmediate(GameObject.Find("GameManager").GetComponent<GameManager>());
+        GameObject.Find("GameManager").AddComponent<GameManager>();
         DestroyImmediate(GameObject.Find("MenuUI"));
-        Destroy(GameObject.Find("VisualNovelPrefab"));
+        DestroyImmediate(GameObject.Find("VisualNovelPrefab"));
         SceneManager.LoadScene("Menu");
         SceneManager.LoadScene("S0");
     }
@@ -202,6 +215,11 @@ public class SaveAndLoad : MonoBehaviour
     }
     public void closeendings(){
         CollectedEndingsPanel.SetActive(false);
+    }
+
+    public void EndingToggle(bool isOn){
+        if(isOn){ NoramlEndings.SetActive(true); HiddenEndings.SetActive(false); }
+        else { NoramlEndings.SetActive(false); HiddenEndings.SetActive(true); }
     }
 }
 

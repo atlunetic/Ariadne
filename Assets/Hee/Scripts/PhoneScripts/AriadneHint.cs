@@ -81,6 +81,27 @@ public class AriadneHint : MonoBehaviour
                 else  
                     ChatManager.instance.StartChat(59);
             }
+            else if(GameManager.instance.NowScene.StartsWith("S2_5_VipRoomEntrance")){
+                ChatManager.instance.StartChat(63);
+            }
+            else if(GameManager.instance.NowScene.StartsWith("S2_6_CounterBar")){
+                ChatManager.instance.StartChat(65);
+            }
+            else if(GameManager.instance.NowScene.StartsWith("S2_6_ReVip")){
+                ChatManager.instance.StartChat(81);
+            }
+            else if(GameManager.instance.NowScene.StartsWith("S2_8_ParkingLot")){
+                ChatManager.instance.StartChat(82);
+            }
+            else if(GameManager.instance.NowScene.StartsWith("S2_7_Stairs")){
+                ChatManager.instance.StartChat(83);
+            }
+            else if(GameManager.instance.NowScene.StartsWith("S2_9_Car")){
+                if(!GameManager.instance.FinishedDialogues.Contains("memory_BrokenGlasses"))
+                    ChatManager.instance.StartChat(66);
+                else if(!GameManager.instance.FinishedDialogues.Contains("ChooseDestination"))
+                    ChatManager.instance.StartChat(64);
+            }
             else
             {
                 if(giveHintFromList(S2HintList)) return;
@@ -91,6 +112,55 @@ public class AriadneHint : MonoBehaviour
                     ChatManager.instance.StartChat(61);
                 else
                     ChatManager.instance.StartChat(62);
+            }
+        }
+        else if(GameManager.instance.NowScene.StartsWith("S3"))
+        {
+            if(GameManager.instance.NowScene.StartsWith("S3_1"))
+            {
+                if(!GameManager.instance.FinishedDialogues.Contains("PoppyStory"))
+                    ChatManager.instance.StartChat(84);
+                else if(!GameManager.instance.FinishedDialogues.Contains("Scribble1342"))
+                    ChatManager.instance.StartChat(85);
+                else if(!GameManager.instance.FinishedDialogues.Contains("memory_1342"))
+                    ChatManager.instance.StartChat(67);
+                else if(GameManager.instance.FinishedDialogues.Contains("InteractionFin3")){
+                    if(GameManager.instance.FinishedDialogues.Contains("IfEmployeeSuit"))
+                        ChatManager.instance.StartChat(86);
+                    else
+                        ChatManager.instance.StartChat(68);
+                }
+            }
+            else if(GameManager.instance.NowScene.StartsWith("S3_2_Officetel1stFloor"))
+            {
+                ChatManager.instance.StartChat(69);
+            }
+            else if(GameManager.instance.NowScene.StartsWith("S3_2_Officetel101"))
+            {
+                if(!GameManager.instance.FinishedDialogues.Contains("MemoStory_Recorder"))
+                    ChatManager.instance.StartChat(89);
+                else if(!GameManager.instance.FinishedDialogues.Contains("GeonwooCard"))
+                    ChatManager.instance.StartChat(88);
+                else if(!GameManager.instance.FinishedDialogues.Contains("memory_GeonwooCard"))
+                    ChatManager.instance.StartChat(71);
+                else if(!GameManager.instance.FinishedDialogues.Contains("PhotoOf3Story"))
+                    ChatManager.instance.StartChat(87);
+                else if(!GameManager.instance.FinishedDialogues.Contains("memory_Photo"))
+                    ChatManager.instance.StartChat(70);
+                else if(!GameManager.instance.FinishedDialogues.Contains("Officetel1503"))
+                    ChatManager.instance.StartChat(90);
+            }
+            else if(GameManager.instance.NowScene.StartsWith("S3_3_Officetel1503"))
+            {
+                if(!GameManager.instance.FinishedDialogues.Contains("R1403Cardkey"))
+                    ChatManager.instance.StartChat(72);
+                else if(!GameManager.instance.FinishedDialogues.Contains("MemoStory_CaseBoard"))
+                    ChatManager.instance.StartChat(91);
+                else if(!GameManager.instance.FinishedDialogues.Contains("Memo_VideoTape3"))
+                    ChatManager.instance.StartChat(92);
+            }
+            else{
+                    ChatManager.instance.StartChat(73);
             }
         }
     }
