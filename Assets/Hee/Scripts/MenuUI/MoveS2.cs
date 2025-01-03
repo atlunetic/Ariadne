@@ -13,6 +13,7 @@ public class MoveS2 : MonoBehaviour
 
     private void OnEnable() {
         if(GameManager.instance.NowScene=="S2_"+gameObject.name) GetComponent<Button>().enabled = false;
+        else GetComponent<Button>().enabled = true;
     }
 
     public void Moveto(){
