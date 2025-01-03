@@ -217,4 +217,10 @@ public class YarnMFunctions : MonoBehaviour
         variableStorage.TryGetValue("$WaterBottle", out bottles);
         GameManager.instance.SaengSoo = (int)bottles;
     }
+
+    [YarnCommand("ButtonOff")]
+    public void ButtonOff()
+    {
+        Menu.instance.UIButtons.SetActive(false);
+    }
 }
