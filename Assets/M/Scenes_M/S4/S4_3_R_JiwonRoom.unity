@@ -471,6 +471,26 @@ PrefabInstance:
       propertyPath: IsS4
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[0]
+      value: 
+      objectReference: {fileID: 2012099890}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[1]
+      value: 
+      objectReference: {fileID: 1041993373}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[2]
+      value: 
+      objectReference: {fileID: 398103465}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[3]
+      value: 
+      objectReference: {fileID: 348259994}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

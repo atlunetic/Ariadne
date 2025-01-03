@@ -1,5 +1,5 @@
 {
-  "savetime": "2025-01-03 07:49:28 오전",
+  "savetime": "2025-01-03 08:21:09 오전",
   "IsLoad": true,
   "NowScene": "S4_3_R_JiwonRoom",
   "NumOfScreenShots": 2,
@@ -66,10 +66,7 @@
     "101_drug",
     "GeonwooCard",
     "Room1503_bg",
-    "DrugDrink",
-    "realdrgg24_real",
-    "eoak123_real",
-    "lsdlsdlsd_real"
+    "DrugDrink"
   ],
   "FindedClues": [
     "Letter",
@@ -193,25 +190,19 @@
     "DrugDrink",
     "MemoStory_VideoTape",
     "Memo_VideoTape3",
+    "future_gallerypic3",
     "future_camera",
     "future_medicine",
-    "future_minobook",
     "future_letterjisoo",
+    "future_minobook",
     "future_videotape",
     "future_laptop",
-    "future_students",
-    "future_beer",
-    "dgram_end",
-    "future_gallerypic6",
-    "future_gallerypic5",
-    "future_gallerypic4_1",
-    "future_gallerypic4_2",
-    "future_gallerypic3",
-    "future_gallerypic2",
-    "future_gallerypic1",
     "future_pic",
     "future_record",
-    "future_hairpin"
+    "future_hairpin",
+    "future_letter",
+    "future_beer",
+    "future_students"
   ],
   "GottenPage": [
     "Page4",
