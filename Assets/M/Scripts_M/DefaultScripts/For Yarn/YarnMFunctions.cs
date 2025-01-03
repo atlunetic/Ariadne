@@ -7,6 +7,22 @@ using Yarn.Unity;
 public class YarnMFunctions : MonoBehaviour
 {
 
+    public static YarnMFunctions instance;
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            DestroyImmediate(gameObject);
+        }
+    }
+
+    public static YarnMFunctions Instance { get; private set; }
+
     [YarnCommand("ChangeSceneTo")]
     public void ChangeSceneTo(string sceneName1, string sceneName2 = "")
     {

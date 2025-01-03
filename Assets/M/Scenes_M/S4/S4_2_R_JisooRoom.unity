@@ -411,6 +411,50 @@ PrefabInstance:
       propertyPath: IsS4
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[0]
+      value: 
+      objectReference: {fileID: 425199864}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[1]
+      value: 
+      objectReference: {fileID: 576173298}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[2]
+      value: 
+      objectReference: {fileID: 353489368}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[3]
+      value: 
+      objectReference: {fileID: 1108494809}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[4]
+      value: 
+      objectReference: {fileID: 207027292}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[5]
+      value: 
+      objectReference: {fileID: 576173298}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[6]
+      value: 
+      objectReference: {fileID: 353489368}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[7]
+      value: 
+      objectReference: {fileID: 1108494809}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[8]
+      value: 
+      objectReference: {fileID: 207027292}
+    - target: {fileID: 8428956401029936333, guid: 257ab062a7cb24d448e8b09fc4d18366, type: 3}
+      propertyPath: Objectlist.Array.data[9]
+      value: 
+      objectReference: {fileID: 207027292}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1210,9 +1254,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 425199865}
   - {fileID: 576173299}
   - {fileID: 353489369}
+  - {fileID: 425199865}
   - {fileID: 1108494810}
   - {fileID: 207027293}
   m_Father: {fileID: 0}
@@ -1290,7 +1334,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1465093268}
-  - {fileID: 253840441}
   - {fileID: 39617820}
   - {fileID: 1684048042}
   - {fileID: 1786077872}
+  - {fileID: 253840441}
