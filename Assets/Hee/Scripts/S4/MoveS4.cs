@@ -11,7 +11,7 @@ public class MoveS4 : MonoBehaviour
     void Start() {
         gameObject.SetActive(false);
         SceneManager.sceneLoaded+= CheckScene;
-        GetComponent<Button>().onClick.AddListener(()=>{MoveS4Panel.SetActive(!MoveS4Panel.activeSelf);});
+        GetComponent<Button>().onClick.AddListener(()=>{MoveS4Panel.SetActive(!MoveS4Panel.activeSelf); Menu.instance.BlockClick=true;});
     }
 
     public void CheckScene(Scene s, LoadSceneMode l){
@@ -28,11 +28,13 @@ public class MoveS4 : MonoBehaviour
         if(GameManager.instance.NowScene=="S4_3_R_JiwonRoom") return;
         SceneManager.LoadScene("S4_3_R_JiwonRoom");
         MoveS4Panel.SetActive(false);
+        Menu.instance.BlockClick=false;
     }
     public void GoJisooRoom(){
         if(GameManager.instance.NowScene=="S4_2_R_JisooRoom") return;
         SceneManager.LoadScene("S4_2_R_JisooRoom");
         MoveS4Panel.SetActive(false);
+        Menu.instance.BlockClick=false;
     }
 
     private void OnDestroy() {
