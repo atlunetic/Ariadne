@@ -830,7 +830,8 @@ E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
 <color=yellow>* 직원 복장 옷을 벗었다. *</color>
 
 <<Hide 지수>>
-
+<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
+<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -3554,10 +3555,10 @@ title: IgnoreE
 메시지가 온다.
 
 //텍스트로 진행
-<i>'수진이 아빠. 애들 봐서라도 이제 정신 좀 차리면 안될까?'
-<i>'애들도 알 거 아는 나이야. 자기 약에 빠져 사는 걸 모르겠어?'
-<i>'나도 옆에서 계속 마음 졸이는 거 그만하고 싶어.'
-<i>'약 안 끊을 거면 우리 이혼하자.'
+<color=\#9fa2a4><i>'수진이 아빠. 애들 봐서라도 이제 정신 좀 차리면 안될까?'
+<color=\#9fa2a4><i>'애들도 알 거 아는 나이야. 자기 약에 빠져 사는 걸 모르겠어?'
+<color=\#9fa2a4><i>'나도 옆에서 계속 마음 졸이는 거 그만하고 싶어.'
+<color=\#9fa2a4><i>'약 안 끊을 거면 우리 이혼하자.'
 <<wait 1.0>>
 
 ...
@@ -3690,7 +3691,7 @@ title: GeonwooNote
 건우 오빠가 건넨 것은 쪽지였다.
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw jjogji_big 0.75 0.75>>
-*쪽지를 습득했다.*
+<color=yellow>* 쪽지를 습득했다. *</color>
 <<AddToInventory VisualNovelPrefab memo_note>>
 
 <<wait 1.0>>
@@ -3720,6 +3721,7 @@ title: AfterNote0
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw jjogji_big 0.75 0.75>>
 건우 오빠가 왜 이런 걸...
+<<PlayAudio MemoInsert 0.6>>
 일단 메모장에 기록해두자.
 <<FindMemo MemoController memo_zzokji>>
 <<HideAll>>

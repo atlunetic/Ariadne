@@ -823,7 +823,7 @@ title: ending_merrybad
 <<wait 2.0>>
 
 //효과지원1
-<<UpdateAct 지원 EJiwon1>>
+<<UpdateAct 지원 EJiwon1_0>>
 지원: ...
 //효과지원5
 <<UpdateAct 지원 JIwon5>>
@@ -948,4 +948,67 @@ Blackbg test
 //<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
 //<<SetCanvasTo VisualNovelPrefab false>>
 
+===
+
+
+title: testJiwon
+
+---
+<<SetCanvasTo VisualNovelPrefab true>>
+<<Act 지수 EJisoo4 1.17 0.322 white>>
+헉..!
+...
+//효과지수2
+<<UpdateAct 지수 EJisoo2>>
+꿈을 꿨나?
+<<wait 2.0>>
+...
+//문을 두드리는 사운드
+//문열리는 사운드
+<<PlayAudio KnockOpenDoor 0.5>>
+
+//효과지원5
+<<Act 지원 JIwon5 0.322 0.227 white>>
+지원: 지수야!
+//효과지수4
+<<UpdateAct 지수 EJisoo4>>
+지수: 어... 지원아!
+지수: 괜찮아? 안다쳤어?
+<<wait 2.0>>
+
+지원: 무슨 소리야?
+지수: ..?
+지수: 우리... 오피스텔에서 빠져나오다가...
+지수: 지원이 너... 다시 붙잡혔잖아.
+지수: 어떻게 집으로 돌아온 거야?
+<<wait 2.0>>
+
+//효과지원1
+<<UpdateAct 지원 EJiwon1_0>>
+지원: ...
+//효과지원5
+<<UpdateAct 지원 JIwon5>>
+지원: 얘가 꿈을 꿨나보네.
+지원: 라면 끓여뒀으니까 얼른 나와.
+지원: 너 꼬들꼬들한 면 좋아하잖아. 다 불겠다.
+<<wait 2.0>>
+
+지수: 어... 그래.
+지원: 정신차리고 얼른 나와. 나 먼저 먹는다.
+//지원 이미지 종료
+<<Hide 지원>>
+
+//문닫히는 사운드
+<<PlayAudio StaffCloseDoor 0.5>>
+//효과지수3
+<<UpdateAct 지수 EJisoo3>>
+...
+아무리 생각해도 생생한데.
+...
+<<wait 1.0>>
+악몽을 꿨나보다.
+라면이나 먹으러 갈까?
+...
+//지수 이미지 종료
+<<Hide 지수>>
 ===
