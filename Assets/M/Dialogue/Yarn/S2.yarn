@@ -4437,7 +4437,7 @@ title: ChooseDestination2
 -> 마약 김밥 & 떡볶이
 	...
 	여기를 갔었나보네.
-	<<Hide NaviList>>
+	<<Hide Nevi_big>>
 	<<Hide DBG>>
 	<<SetCanvasTo VisualNovelPrefab false>>
 
