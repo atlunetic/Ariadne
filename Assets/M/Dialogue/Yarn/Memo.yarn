@@ -216,11 +216,9 @@ title: MemoStory_RippedPage
 ---
 
 <<SetCanvasTo VisualNovelPrefab true>>
-<<FinishedDialogue VisualNovelPrefab Memo_RippedPage>>
-
+<<FinishedDialogue VisualNovelPrefab MemoStory_RippedPage>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw Page_big 0.75 0.75>>
-
 //팝업이미지
 자세히 보니 책에서 찢어져 나온 조각 같다.
 <color=\#9fa2a4><i>…테세우스는 아리아드네로부터 건네받은 실타래 덕분에…
@@ -228,13 +226,10 @@ title: MemoStory_RippedPage
 어… 뭔가 익숙한데.
 <<PlayAudio MemoInsert 0.6>>
 일단 메모장에 기록해두자.
-
 <<Hide DBG>>
 <<Hide Page_big>>
-
 //(메모장에 수집되고 내용 뜸)
 <<FindMemo MemoController memo_tornpage>>
-
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

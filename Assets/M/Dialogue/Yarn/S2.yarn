@@ -4339,15 +4339,32 @@ title: obj_navigation
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
+<<if CheckDialogue("ChooseDestination")==true>>
+	네비게이션을 다시 살펴볼까?
+	-> 살펴보자.
+		<<jump ChooseDestination2>>
+	-> 관두자.
+		<<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+	<<jump obj_navigationStory>>
+<<endif>>
+
+===
+
+title: obj_navigationStory
+
+---
+<<SetCanvasTo VisualNovelPrefab true>>
+<<FinishedDialogue VisualNovelPrefab obj_navigationStory>>
 //클릭할 경우
 네비게이션이다.
 ...
 검색 목록을 볼 수 있나?
-
 ...
 <<jump ChooseDestination>>
 
 ===
+
 
 title: ChooseDestination
 
@@ -4396,14 +4413,64 @@ title: ChooseDestination
 //solved DBG nav list recurrence
 ===
 
+title: ChooseDestination2
+
+---
+
+//네비게이션 검색 목록 이미지
+<<DrawFadeIn DBG 0.75 0.75 0.2>>
+<<Draw Nevi_big 0.75 0.75>>
+-> 클럽 A
+	...
+	이 클럽의 주소인 것 같다.
+	<<Hide Nevi_big>>
+	<<Hide DBG>>
+	<<SetCanvasTo VisualNovelPrefab false>>
+-> XX 오피스텔
+	...
+	<<wait 1.0>>
+	수상한데?
+	주소를 기억해둬야 할 것 같아.
+	<<Hide Nevi_big>>
+	<<Hide DBG>>
+	<<SetCanvasTo VisualNovelPrefab false>>
+-> 마약 김밥 & 떡볶이
+	...
+	여기를 갔었나보네.
+	<<Hide NaviList>>
+	<<Hide DBG>>
+	<<SetCanvasTo VisualNovelPrefab false>>
+
+//log Oct10
+//<<Hide NaviList>>
+//<<Hide DBG>>
+//<<SetCanvasTo VisualNovelPrefab false>>
+	//<<jump ChooseDestination>> ,finisheddialogue, if added
+//back to list for wrong choices(not to the beginning of nav)
+//solved DBG nav list recurrence
+===
+
 title: obj_brokenglasses
+
+---
+<<SetCanvasTo VisualNovelPrefab true>>
+<<if CheckDialogue("obj_brokenglassesStory") == true>>
+	깨진 안경은 이미 확인했어.
+	<<SetCanvasTo VisualNovelPrefab false>>
+<<else>>
+	<<jump obj_brokenglassesStory>>
+<<endif>>
+
+===
+
+title: obj_brokenglassesStory
 
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
 안경..?
 깨져있네...
-<<FinishedDialogue VisualNovelPrefab obj_brokenglasses>>
+<<FinishedDialogue VisualNovelPrefab obj_brokenglassesStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
