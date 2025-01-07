@@ -616,6 +616,7 @@ title: future_coke
 <<FinishedObj VisualNovelPrefab R_Park_VM>>
 <<FinishedDialogue VisualNovelPrefab future_coke>>
 <<SetCanvasTo VisualNovelPrefab false>>
+<<S4Ended GameManager>>
 ===
 
 title: future_hospital
