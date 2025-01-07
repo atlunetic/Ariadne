@@ -39,7 +39,7 @@ title: MemoStory_Book
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw book_big 0.75 0.75>>
 
-어…. 이건 뭐지?
+어... 이건 뭐지?
 ....
 <color=\#9fa2a4><i>황소와 왕비 사이에서 태어난 미노타우르스는 점차 성장하여, 사람을 잡아먹는 괴물이 되었다.
 <color=\#9fa2a4><i>결국, 왕은 탈출 불가능한 미로 속에 괴물을 가두고 9년에 한 번씩 인간을 제물로 바쳤다.
@@ -50,7 +50,7 @@ title: MemoStory_Book
 <color=\#9fa2a4><i>...무사히 미로를 탈출할 수 있었다.
 <color=\#9fa2a4><i>그 후, 영웅으로 칭송받은 테세우스는 홀로 고향으로 도망간다.
 <color=\#9fa2a4><i>테세우스는 이후 평생동안 미로를 헤매는 악몽을 꿨다고 전해진다.
-….
+...
 <<PlayAudio MemoInsert 0.6>>
 일단 메모장에 기록해두자.
 
@@ -180,7 +180,7 @@ title: MemoStory_Phone
 //팝업이미지
 <color=\#9fa2a4><i>??: <color=\#9fa2a4><i>그만둬. 네가 그럴수록 더 위험해질 뿐이야.
 <color=\#9fa2a4><i>아리아드네: <color=\#9fa2a4><i>지수를 돕는 건 다 나를 위해서야.
-<color=\#9fa2a4><i>아리아드네: <color=\#9fa2a4><i>그러니까….
+<color=\#9fa2a4><i>아리아드네: <color=\#9fa2a4><i>그러니까...
 뭐야. 누가 두고 간 거지?
 아리아드네랑 연락을 주고 받았잖아.
 주변을 둘러봐도 수상한 사람이 보이지 않는다.
@@ -380,7 +380,7 @@ title: Memo_VideoTape2
 //3. 같은 가방을 메고 학교에 가는 초등학생 둘의 뒷모습
 
 //(세 개의 팝업 이미지 이후 대사 나옴)
-<<SetActiveFalse VisualNovelPrefab true>>
+<<SetCanvasTo VisualNovelPrefab true>>
 <<DeleteItem Inventory memo_video>>
 <<PlayVideo VisualNovelPrefab>>
 
@@ -404,7 +404,6 @@ title: Memo_VideoTape3
 <<if (CheckDialogue("R1403Cardkey")==true && CheckDialogue("MemoStory_CaseBoard") == true && CheckDialogue("Memo_VideoTape3")==true)>>
     <<jump InteractionFinto14>>
 <<endif>>
-<<UI_off MenuUI>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 

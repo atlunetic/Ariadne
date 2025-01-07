@@ -427,10 +427,6 @@ title: obj_customers
 
 ---
 
-title: obj_customers
-
----
-
 <<SetCanvasTo VisualNovelPrefab true>>
 <<if CheckDialogue("obj_customers") == true>>
 <<jump checkClothes>>
@@ -2416,6 +2412,8 @@ TV: ...
 ===
 
 
+//스태프룸 앞
+
 title: club_staffroom_front
 
 ---
@@ -2565,6 +2563,8 @@ title: club_staffroomdoor_nostaff
 
 ===
 
+//문따기 게임
+
 title: game_openthedoor_intro
 
 ---
@@ -2710,6 +2710,10 @@ title: obj_cocatree
 
 ===
 
+
+//스태프룸 내부
+
+
 title: club_staffroom_inside
 
 ---
@@ -2767,6 +2771,7 @@ title: cctvOptions
 
 ---
 어느 장소를 확인해볼까?
+<<FinishedDialogue VisualNovelPrefab obj_cctv2Story>>
 
 //선택지 랜덤 노출
 -> 클럽 카운터&바
@@ -2774,7 +2779,7 @@ title: cctvOptions
 	<<Draw CCTV_counterbar 0.75 0.75>>
 	중요한 영상은 없는 것 같다...
 	<<Hide CCTV_counterbar>>
-	<<Hide DBG>>
+	//<<Hide DBG>>
 	<<Draw CCTV_first 0.75 0.75>>
 	<<jump cctvOptions>>
 -> VIP Room
@@ -2782,7 +2787,7 @@ title: cctvOptions
 	<<Draw CCTV_VIP 0.75 0.75>>
 	중요한 영상은 없는 것 같다...
 	<<Hide CCTV_VIP>>
-	<<Hide DBG>>
+	//<<Hide DBG>>
 	<<Draw CCTV_first 0.75 0.75>>
 	<<jump cctvOptions>>
 -> 클럽 입구
@@ -2790,7 +2795,7 @@ title: cctvOptions
 	<<Draw CCTV_entrance 0.75 0.75>>
 	중요한 영상은 없는 것 같다...
 	<<Hide CCTV_entrance>>
-	<<Hide DBG>>
+	//<<Hide DBG>>
 	<<Draw CCTV_first 0.75 0.75>>
 	<<jump cctvOptions>>
 -> 주차장
@@ -3456,42 +3461,41 @@ title: obj_customerg
 ---
 <<SetCanvasTo VisualNovelPrefab true>>
 //클릭할 경우
-<<FinishedDialogue VisualNovelPrefab obj_customerg>>
-<<Act 지수 CoJIsoo1 1.17 0.322 white>>
-술냄새가 진동한다... 
-얼른 지나갈까?
-<<wait 1.0>>
-클럽고객G: 어이 거기!
 
-<<Act 클럽고객G NPC_clubcustomer_G_0 0.322 0.527 white>>
-
-...
-<<UpdateAct 지수 CoJIsoo4>>
-나를 부르는 건가?
-
-클럽고객G: 어어, 그래. 너 말이야.
-
-<<UpdateAct 지수 CoJIsoo2>>
-<<wait 0.5>>
-지수: 네, 무슨 일이시죠?
-클럽고객G: 물 좀 갖다줘.
-<<wait 1.0>>
-
-
-아 맞다. 지금 직원 옷을 입고 있었지.
-직원인 줄 아는 것 같은데...
-어떡하지?
-<<getWaterbottle VisualNovelPrefab>>
-<<if $WaterBottle == 2>>
-	-> 챙겨뒀던 생수병을 주자
-		<<jump WaterToE>>
-	-> 지원이를 찾는 게 급하다. 무시하자.
-		<<jump IgnoreE>>
+<<if CheckDialogue("obj_customerg") == true>>
+	무슨 질문을 해야 할지 모르겠어...
+	<<SetCanvasTo VisualNovelPrefab false>>
 <<else>>
-	-> 지원이를 찾는 게 급하다. 무시하자.
-		<<jump IgnoreE>>
+	<<FinishedDialogue VisualNovelPrefab obj_customerg>>
+	<<Act 지수 CoJIsoo1 1.17 0.322 white>>
+	술냄새가 진동한다... 
+	얼른 지나갈까?
+	<<wait 1.0>>
+	클럽고객G: 어이 거기!
+	<<Act 클럽고객G NPC_clubcustomer_G_0 0.322 0.527 white>>
+	...
+	<<UpdateAct 지수 CoJIsoo4>>
+	나를 부르는 건가?
+	클럽고객G: 어어, 그래. 너 말이야.
+	<<UpdateAct 지수 CoJIsoo2>>
+	<<wait 0.5>>
+	지수: 네, 무슨 일이시죠?
+	클럽고객G: 물 좀 갖다줘.
+	<<wait 1.0>>
+	아 맞다. 지금 직원 옷을 입고 있었지.
+	직원인 줄 아는 것 같은데...
+	어떡하지?
+	<<getWaterbottle VisualNovelPrefab>>
+	<<if $WaterBottle == 2>>
+		-> 챙겨뒀던 생수병을 주자
+			<<jump WaterToE>>
+		-> 지원이를 찾는 게 급하다. 무시하자.
+			<<jump IgnoreE>>
+	<<else>>
+		-> 지원이를 찾는 게 급하다. 무시하자.
+			<<jump IgnoreE>>
+	<<endif>>
 <<endif>>
-
 
 ===
 
@@ -3689,23 +3693,22 @@ title: GeonwooNote
 <<PlayAudio handingoveranote>>
 건우: 누가 너한테 주라더라.
 건우 오빠가 건넨 것은 쪽지였다.
+<<Hide 건우>>
+<<Hide 지수>>
 <<DrawFadeIn DBG 0.75 0.75 0.2>>
 <<Draw jjogji_big 0.75 0.75>>
 <color=yellow>* 쪽지를 습득했다. *</color>
 <<AddToInventory VisualNovelPrefab memo_note>>
-
 <<wait 1.0>>
 <<Hide DBG>>
 <<Hide jjogji_big>>
 <<wait 0.5>>
-<<Hide 건우>>
 내용을 확인하기도 전에, 건우 오빠는 화가난 듯 저 멀리로 사라졌다.
 계속 여기서 서성이면 수상해 보일 것 같아.
 VIP 룸으로 다시 들어가자.
 //vip룸으로 다시 장소 이동
 <<Hide BlackBG>>
 무슨 쪽지지...?
-<<Hide 지수>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===

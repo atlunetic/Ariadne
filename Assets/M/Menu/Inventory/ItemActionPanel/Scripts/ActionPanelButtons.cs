@@ -117,7 +117,7 @@ public class ActionPanelButtons : MonoBehaviour
 
             if (currentscene.name.StartsWith("S3_1"))
             {
-                if (GameManager.instance.FinishedDialogues.Contains("InteractionFin3"))
+                if (GameManager.instance.FinishedDialogues.Contains("AfterD3")) //InteractionFin3에서 AfterD3으로 수정
                 {
                     if (GameManager.instance.FinishedDialogues.Contains("IfEmployeeSuit"))
                     {

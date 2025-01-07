@@ -5,7 +5,7 @@
 <<BGoff SceneManager>>
 <<Scene H1)company>>
 <<PlayAudio Eunjaedaily 0.15 loop>>
-<<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
+<<Act 은재 Uenjae1_reflect 1.17 0.322 white>>
 하암~ 오늘은 평화롭네.
 
 <<wait 0.5>>
@@ -42,7 +42,7 @@ title: Eunjaehiddenstory_2
 
 은재: 안녕하세요, 메일 주신 지원씨 맞으세요?
 
-<<Act 지원 JIwon3_fear 0.322 0.227 black>>
+<<Act 지원 JIwon3_fear 0.322 0.227 white>>
 지원: ..네.
 은재: 네, 반갑습니다. xx뉴스 사회부 기자 유은재 입니다.
 은재: 사전에 말씀드렸던 대로, 오늘 인터뷰 녹음하는 것에 동의하시나요?
@@ -103,8 +103,8 @@ title: Eunjaehiddenstory_3
 
 ---
 <<Scene R_Street_BG>>
-<<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
-<<Act 지원 Jiwon8_smile 0.322 0.227 black>>
+<<Act 은재 Uenjae1_reflect 1.17 0.322 white>>
+<<Act 지원 Jiwon8_smile 0.322 0.227 white>>
 
 <<FadeIn 1.0>>
 <<wait 1.0>>
@@ -150,7 +150,7 @@ title: Eunjaehiddenstory_4
 
 ---
 <<Scene H1)company>>
-<<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
+<<Act 은재 Uenjae1_reflect 1.17 0.322 white>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
 <<PlayAudio Eunjaedaily 0.15 loop>>
@@ -184,7 +184,7 @@ title: Eunjaehiddenstory_5
 
 ---
 <<Scene H1)company>>
-<<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
+<<Act 은재 Uenjae1_reflect 1.17 0.322 white>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
 
@@ -227,7 +227,7 @@ title: Eunjaehiddenstory_6
 
 ---
 <<Scene H1)company>>
-<<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
+<<Act 은재 Uenjae1_reflect 1.17 0.322 white>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
 
@@ -241,7 +241,7 @@ title: Eunjaehiddenstory_6
 <<wait 0.5>>
 <<PlayAudio phonecall 0.1>>
 <<wait 5.0>>
-<<Act 지수 black_Jisoo_reflect 0.322 0.227 black>>
+<<Act 지수 black_Jisoo_reflect 0.322 0.227 white>>
 <color=\#9fa2a4><i>??</color>: <color=\#9fa2a4><i>여보세요?</color>
 은재: 안녕하세요, 지원씨 친구 유은재라고 합니다. 지수씨 휴대폰 맞을까요?
 <<wait 1.0>>
@@ -284,7 +284,7 @@ title: Eunjaehiddenstory_7
 
 ---
 <<Scene H1)company>>
-<<Act 은재 Uenjae2_reflect 1.17 0.322 black>>
+<<Act 은재 Uenjae2_reflect 1.17 0.322 white>>
 <<FadeIn 1.0>>
 <<wait 1.0>>
 
@@ -355,7 +355,7 @@ title: Eunjaehiddenstory_9
 
 ---
 <<Scene H1)police2>>
-<<Act 은재 Uenjae1_reflect 1.17 0.322 black>>
+<<Act 은재 Uenjae1_reflect 1.17 0.322 white>>
 
 <<FadeIn 1.0>>
 <<wait 1.0>>

@@ -4,7 +4,7 @@
 <<CollectEnding GameManager 8>> 
 <<BGoff SceneManager>>
 //선정 (원하는 BGM 넣기-병원 장면) -> 병원 장면 끝날 때 꺼주기기
-아리아드네:….
+아리아드네:...
 아리아드네:이제 아프지마.
 //지수7
 //화면 암전 후 전환. 병실 이미지
@@ -14,21 +14,21 @@
 <<Scene Hospital_bg>>
 <<PlayAudio TrueEndTheme 0.5 loop>>
 <<Act 지수 Jisoo8 1.17 0.322 white>>
-…여긴 어디지?
-….
-병원인가…?
+...여긴 어디지?
+...
+병원인가...?
 //문 열리는 사운드
 <<PlayAudio chapter4dooropen>>
 //간호사
 <<Act 간호사 Nurse 0.322 0.227 white>>
-간호사: 어…!
-간호사: 환자분….
+간호사: 어...!
+간호사: 환자분...
 <<Hide 간호사>>
 //우당탕당~ 사운드
 <<PlayAudio noise 0.8>>
 <<UpdateAct 지수 Jisoo9>>
 머리가 지끈거려.
-….
+...
 <<UpdateAct 지수 Jisoo8>>
 //문 열리는 사운드
 <<PlayAudio chapter4dooropen>>
@@ -36,16 +36,16 @@
 <<PlayAudio chapter4doorclose>>
 //의사 
 <<Act 의사 NPC_Doctor 0.322 0.227 white>>
-의사: 상태가….
-의사: ….
+의사: 상태가...
+의사: ...
 <<Hide 의사>>
 //간호사
 <<Act 간호사 Nurse 0.322 0.227 white>>
-간호사: 방금 깨어나서….
-간호사: ….
+간호사: 방금 깨어나서...
+간호사: ...
 <<UpdateAct 지수 Jisoo9>>
-이명이 들려서 그런가….
-뭐라고 하는지 잘 안들리네….
+이명이 들려서 그런가...
+뭐라고 하는지 잘 안들리네...
  
 //문 열리는 사운드
 <<PlayAudio chapter4dooropen>>
@@ -53,36 +53,36 @@
 <<Hide 간호사>>
 //엄마
 <<Act 엄마 Mom 0.322 0.227 white>>
-엄마: 지수야…!
+엄마: 지수야...!
 <<UpdateAct 지수 Jisoo10>>
-어….
+어...
 엄마다.
  
-지수: 엄마…?
-엄마: 아이고…. 지수야….
-엄마: 엄마가 얼마나….
+지수: 엄마...?
+엄마: 아이고... 지수야...
+엄마: 엄마가 얼마나...
 <<UpdateAct 지수 Jisoo8>>
 엄마가 눈물을 흘렸다.
 내가 왜 여기 이러고 있지?
-뭔가 기억 날 듯 말 듯 한데….
+뭔가 기억 날 듯 말 듯 한데...
 <<UpdateAct 지수 Jisoo9>>
-….
+...
 지원이는 어디 있지…?
 <<UpdateAct 지수 Jisoo8>>
 지수: 엄마. 지원이는요?
-엄마: ….
+엄마: ...
  
 엄마는 대답 없이 더 크게 오열했다.
 <<Hide 엄마>>
 //간호사
 <<Act 간호사 Nurse 0.322 0.227 white>>
-간호사: 환자분께서 혼수 상태에서 깨어난지 얼마 안 돼서….
+간호사: 환자분께서 혼수 상태에서 깨어난지 얼마 안 돼서...
 간호사: 정신이 온전히 돌아오지 않은 상태일 수 있어요.
 <<Hide 간호사>>
 <<Act 엄마 Mom 0.322 0.227 white>>
-엄마: 아이고 지수야….
+엄마: 아이고 지수야...
 <<Hide 엄마>>
-….
+...
 //사운드: 이명 같은 소리가 갑자기 커졌다 끊김
 <<PlayAudio tinnitus>> 
 …!
@@ -103,12 +103,12 @@ title: trueending_1
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Scene Hospital_bg>>
 <<PlayAudio TrueEndTheme 0.5 loop>>
-어….
+어...
 기억났다,
-지원이는 나를 구하려다가….
+지원이는 나를 구하려다가...
 <<Act 지수 Jisoo8 1.17 0.322 white>>
 //<<Act 지수 우는 지수 1.17 0.322 black>>
-….
+...
 꿈에서도 넌 나를 지켜줬는데.
 
 //엄마
@@ -124,32 +124,32 @@ title: trueending_1
 <<Hide 엄마>>
 //아빠
 <<Act 아빠 Dad 0.322 0.227 white>>
-아빠: 허어…. 헉….
-아빠: 지수야….
+아빠: 허어... 헉...
+아빠: 지수야...
 
 <<UpdateAct 지수 Jisoo8>>
 아빠와 눈이 마주쳤다.
  
-지수: 아빠….
+지수: 아빠...
 아빠: 몸은 좀 어떠니.
 지수: 계속 어지러워요.
 <<UpdateAct 지수 Jisoo9>> 
-….
+...
 문득 건우 오빠가 생각났다.
-지원이가 그렇게 됐는데….
+지원이가 그렇게 됐는데...
 건우 오빠는 지금 어디서 뭘 하고 있지…?
  
 지수: …그런데 아빠.
 지수: 건우 오빠는요? 지금 어디서 뭐 하고 있어요?
 
 //아빠 화난표정 
-아빠: ….
+아빠: ...
 아빠: 그놈 감옥갔다.
 아빠: 마약 팔아재낀 놈이니까 감옥 가야지.
 아빠: 너도 이 녀석아.
 아빠: 잘못했으니 죗값은 치러야지.
 <<UpdateAct 지수 Jisoo10>>
-지수: ….
+지수: ...
 //인물 모두 사라지기 
 <<Hide 아빠>>
 <<Hide 지수>>
@@ -157,7 +157,7 @@ title: trueending_1
 <<Fade black 0.0 1.0 2.0>>
 <<Fade white 0.0 1.0 2.0>>
 그렇게 한 달이 지났을까.
-퇴원하고 나서 가장 먼저….
+퇴원하고 나서 가장 먼저...
 집에 숨겨뒀던 마약류를 자진신고 했다.
  
 마약류 복용에 대한 처벌로 1년 2개월 형을 선고받았다.
@@ -169,7 +169,7 @@ title: trueending_1
 <<Scene NoBG>>
 <<FadeIn>>
 <<Act 지수 Jisoo2 1.17 0.322 black>>
-….
+...
 앞으로 나는 어떻게 살아야 할까.
 <<HideAll>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -396,7 +396,7 @@ title: future_gallerypic3
 ---
 //상호 작용 시
 <<SetCanvasTo VisualNovelPrefab true>>
-이때라도 멈췄다면…. 
+이때라도 멈췄다면... 
 <<FinishedDialogue VisualNovelPrefab future_gallerypic3>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
@@ -413,7 +413,7 @@ title: future_gallerypic4_2
 ---
 //상호 작용 시
 <<SetCanvasTo VisualNovelPrefab true>>
-이 날 먹은 떡볶이가 진짜 맛있었는데….
+이 날 먹은 떡볶이가 진짜 맛있었는데...
 <<FinishedDialogue VisualNovelPrefab future_gallerypic4_2>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
@@ -421,7 +421,7 @@ title: future_gallerypic5
 ---
 //상호 작용 시
 <<SetCanvasTo VisualNovelPrefab true>>
-아…. 이건.
+아... 이건.
 새삼스럽지만…진짜 똑같이 생겼네. 
 <<FinishedDialogue VisualNovelPrefab future_gallerypic5>>
 <<SetCanvasTo VisualNovelPrefab false>>
@@ -431,7 +431,7 @@ title: future_gallerypic6
 //상호 작용 시
 <<SetCanvasTo VisualNovelPrefab true>>
 그 땐 이렇게 될 줄 몰랐겠지.
-….
+...
 <<FinishedDialogue VisualNovelPrefab future_gallerypic6>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
@@ -558,7 +558,7 @@ title: future_beer
 	지수: 아···. 그래요?
 	가게주인: 네. 안그래도 요즘 ···문제가 심각하잖아요.
 	가게주인: 이미지를 너무 가볍게 만드는 것 같아서, 고민하다 바꿨어요.
-	가게주인: 아참, 요즘에 왜이렇게 안왔어요? 동생이랑 자주 붙어다니더니…. 싸웠어요?
+	가게주인: 아참, 요즘에 왜이렇게 안왔어요? 동생이랑 자주 붙어다니더니... 싸웠어요?
 	<<UpdateAct 지수 Jisoo3>>
 	지수: 아···. 그게···.
 	가게주인: 하하, 자매 싸움은 칼로 물베기라고, 얼른 화해하고 자주 놀려오세요~~ 사이도 좋아보이드만.
@@ -614,6 +614,7 @@ title: future_coke
 콜라가 품절이네···.
 <<SetActiveFalse VisualNovelPrefab R_Park_VM>>
 <<FinishedObj VisualNovelPrefab R_Park_VM>>
+<<FinishedDialogue VisualNovelPrefab future_coke>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===
 
@@ -658,16 +659,21 @@ title: realend_last
 지원이에게 어떻게 용서를 구할지 고민한 끝에,
 또 다른 나, 혹은 지원이가 생기지 않았으면 좋겠다는 신념이 생겼다.
 지금의 나는 마약류의 위험에 대해 알리고, 마약류 범죄를 예방하는 활동을 하고 있다
-….
-미로에서 탈출할 수 있게 나를 도와준 건….
+...
+미로에서 탈출할 수 있게 나를 도와준 건...
 <<ButtonOff VisualNovelPrefab>>
 //다이얼로그 종료 후 엔딩 일러스트 등장
 <<Fade Black 0.0 1.0 2.0>>
 //<<SetCanvasTo VisualNovelPrefab false>>
 <<wait 2.0>>
-<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+<<Scene Ending8>>
 <<FadeIn>>
-<<wait 2.0>>
+<<wait 4.0>>
+<<Fade Black 0.0 1.0 2.0>>
+<<wait 3.0>>
+<<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
+<<Scene NoBG>>
+<<FadeIn>>
 <<StartCredits BlackBG>>
 ===
 
@@ -680,7 +686,7 @@ title: normal_ending
 <<CollectEnding GameManager 7>>
 <<BGoff SceneManager>>
 //선정 (원하는 BGM 넣기-병원 장면) -> 병원 장면 끝날 때 꺼주기기
-아리아드네:….
+아리아드네:...
 아리아드네:이제 아프지마.
 //지수7
 //화면 암전 후 전환. 병실 이미지
@@ -691,62 +697,62 @@ title: normal_ending
 <<Act 지수 Jisoo8 1.17 0.322 white>>
 <<PlayAudio normalEnding 0.6 loop>>
 …여긴 어디지?
-….
+...
 병원인가…?
 <<PlayAudio chapter4dooropen>>
 <<Act 간호사 Nurse 0.322 0.227 white>>
 //간호사
 간호사: 어…!
-간호사: 환자분….
+간호사: 환자분...
 <<Hide 간호사>>
 <<PlayAudio noise 0.8>>
 //우당탕당~ 사운드
 <<UpdateAct 지수 Jisoo9>>
 머리가 지끈거려.
-….
+...
 <<UpdateAct 지수 Jisoo8>>
 <<PlayAudio chapter4dooropen>>
 <<PlayAudio chapter4doorclose>>
 <<Act 의사 NPC_Doctor 0.322 0.227 white>>
-의사: 상태가….
-의사: ….
+의사: 상태가...
+의사: ...
 <<Hide 의사>>
 <<Act 간호사 Nurse 0.322 0.227 white>>
-간호사: 방금 깨어나서….
-간호사: ….
+간호사: 방금 깨어나서...
+간호사: ...
 <<UpdateAct 지수 Jisoo9>>
-이명이 들려서 그런가….
-뭐라고 하는지 잘 안들리네….
+이명이 들려서 그런가...
+뭐라고 하는지 잘 안들리네...
 <<PlayAudio chapter4dooropen>>
 <<Hide 간호사>>
 <<Act 엄마 Mom 0.322 0.227 white>>
 엄마: 지수야…!
 <<UpdateAct 지수 Jisoo10>>
-어….
+어...
 엄마다.
 지수: 엄마…?
-엄마: 아이고…. 지수야….
-엄마: 엄마가 얼마나….
+엄마: 아이고... 지수야...
+엄마: 엄마가 얼마나...
 <<UpdateAct 지수 Jisoo8>>
 엄마가 눈물을 흘렸다.
 내가 왜 여기 이러고 있지?
-뭔가 기억 날 듯 말 듯 한데….
+뭔가 기억 날 듯 말 듯 한데...
 <<UpdateAct 지수 Jisoo9>>
-….
+...
 지원이는 어디 있지…?
 <<UpdateAct 지수 Jisoo8>>
 지수: 엄마. 지원이는요?
-엄마: ….
+엄마: ...
 엄마는 대답 없이 더 크게 오열했다.
 <<Hide 엄마>>
 <<Act 간호사 Nurse 0.322 0.227 white>>
-간호사: 환자분께서 혼수 상태에서 깨어난지 얼마 안 돼서….
+간호사: 환자분께서 혼수 상태에서 깨어난지 얼마 안 돼서...
 간호사: 정신이 온전히 돌아오지 않은 상태일 수 있어요.
 <<Hide 간호사>>
 <<Act 엄마 Mom 0.322 0.227 white>>
-엄마: 아이고 지수야….
+엄마: 아이고 지수야...
 <<Hide 엄마>>
-….
+...
 <<PlayAudio tinnitus>>
 //사운드: 이명 같은 소리가 갑자기 커졌다 끊김
 <<UpdateAct 지수 Jisoo10>>
@@ -763,12 +769,12 @@ title:  normal_ending_1
 
 <<SetCanvasTo VisualNovelPrefab true>>
 <<Scene Hospital_bg>>
-어….
+어...
 기억났다,
-지원이는 나를 구하려다가….
+지원이는 나를 구하려다가...
 <<Act 지수 Jisoo8 1.17 0.322 white>>
 //<<Act 지수 우는 지수 1.17 0.322 black>>
-….
+...
 꿈에서도 넌 나를 지켜줬는데.
 
 //엄마
@@ -784,32 +790,32 @@ title:  normal_ending_1
 <<Hide 엄마>>
 //아빠
 <<Act 아빠 Dad 0.322 0.227 white>>
-아빠: 허어…. 헉….
-아빠: 지수야….
+아빠: 허어... 헉...
+아빠: 지수야...
 
 <<UpdateAct 지수 Jisoo8>>
 아빠와 눈이 마주쳤다.
  
-지수: 아빠….
+지수: 아빠...
 아빠: 몸은 좀 어떠니.
 지수: 계속 어지러워요.
 <<UpdateAct 지수 Jisoo9>> 
-….
+...
 문득 건우 오빠가 생각났다.
-지원이가 그렇게 됐는데….
+지원이가 그렇게 됐는데...
 건우 오빠는 지금 어디서 뭘 하고 있지…?
  
 지수: …그런데 아빠.
 지수: 건우 오빠는요? 지금 어디서 뭐 하고 있어요?
 
 //아빠 화난표정 
-아빠: ….
+아빠: ...
 아빠: 그놈 감옥갔다.
 아빠: 마약 팔아재낀 놈이니까 감옥 가야지.
 아빠: 너도 이 녀석아.
 아빠: 잘못했으니 죗값은 치러야지.
 <<UpdateAct 지수 Jisoo10>>
-지수: ….
+지수: ...
 //인물 모두 사라지기 
 <<Hide 아빠>>
 <<Hide 지수>>
@@ -819,7 +825,7 @@ title:  normal_ending_1
 //페이드 아웃 이후 지수의 방으로 배경 페이드
 긴 입원 생활이 끝나고, 드디어 집에 왔다.
 <<ChangeSceneTo VisualNovelPrefab S4_6_N_JisooRoom>>
-어지러워…. 죽을 것 같아….
+어지러워... 죽을 것 같아...
 <<Scene NoBG>>
 <<SetCanvasTo VisualNovelPrefab false>>
 ===

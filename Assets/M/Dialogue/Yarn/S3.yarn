@@ -254,6 +254,7 @@ title: SynthWeed
 <<Hide 지수>>
 
 <<RevealDiary DiaryManager Page9>>
+<<RevealDiary DiaryManager Page10>>
 <<SetActiveFalse VisualNovelPrefab SynthWeed>>
 <<FinishedObj VisualNovelPrefab SynthWeed>>
 <<PlayAudio WhenChoose 0.5>>
@@ -1716,6 +1717,8 @@ title: escapegame_brokenelevator
 title: escapegame_checkpoint3
 
 ---
+
+<<SetCanvasTo VisualNovelPrefab true>>
 <<InitTB VisualNovelPrefab S3_6_CP3>>
 <<Scene Lobby3F>>
 <color=yellow>* 체크포인트 *</color>
@@ -1915,7 +1918,7 @@ title: escapegame_success
 <<ShowTB VisualNovelPrefab false>>
 //오피스텔 1층 배경 페이드인
 //지수, 지원이미지 노출 x
-<<Scene Opistal_1F_bg>>
+<<Scene BlackBG>>
 <<FadeIn>>
 ..휴우.
 겨우 문 앞까지 왔네.

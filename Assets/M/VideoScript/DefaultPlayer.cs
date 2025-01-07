@@ -12,7 +12,7 @@ public class DefaultPlayer : MonoBehaviour
     [YarnCommand("PlayVideo")]
     public void PlayVideo()
     {
-        Menu.instance.UI_on();
+        Menu.instance.UIButtons.SetActive(false);
         DialogueCanvas.SetActive(true);
         //YarnMFunctions.instance.SetDialogueCanvas(true);
         VideoParent.SetActive(true);
@@ -35,6 +35,7 @@ public class DefaultPlayer : MonoBehaviour
     [YarnCommand("CloseVideo")]
     public void CloseVideo()
     {
+        Menu.instance.UIButtons.SetActive(true);
         VideoParent.SetActive(false);
     }
 }

@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
         FinishedDialogues.Contains("future_videotape") && FinishedDialogues.Contains("future_pic") && 
         FinishedDialogues.Contains("future_hairpin") && FinishedDialogues.Contains("future_letter") && 
         FinishedDialogues.Contains("future_record") && FinishedDialogues.Contains("future_beer") && 
-        FinishedDialogues.Contains("future_students")) {
+        FinishedDialogues.Contains("future_students") && FinishedDialogues.Contains("future_coke")) {
             Invoke("RealTrueEnd", 0.5f);
         }
     }
