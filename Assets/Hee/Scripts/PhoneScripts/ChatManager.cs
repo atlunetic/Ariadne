@@ -197,7 +197,7 @@ public class ChatManager : MonoBehaviour
        
         ChattingList.Add(new Chatting(false, "건우 오빠", "AfterGeonwooChatAsJiwon"));  // 0
         AddChatToLast(true,"오빠");
-        AddChatToLast(true, "저희 언제 마지막으로 만났죠?");
+        AddChatToLast(true, "우리 언제 마지막으로 만났지?");
         AddChatToLast(false, "뭔 소리야? 어제 클럽에서 봤잖아.");
         AddChatToLast(false, "너 그렇게 가고나서 걱정했다.");
         AddChatToLast(false, "내가 할 수 있는게 없어서.");
@@ -257,8 +257,8 @@ public class ChatManager : MonoBehaviour
         AddChatToLast(false, "나도 찾아보고 연락해줄게.");
 
         ChattingList.Add(new Chatting(false, "건우 오빠", "AfterGeonwooChatAsHerself"));  // 12
-        AddChatToLast(true, "오빠. 저 지수인데요");
-        AddChatToLast(true, "지원이 어디 있는지 아세요?");
+        AddChatToLast(true, "오빠. 나 지순데");
+        AddChatToLast(true, "지원이 어디 있는지 알아?");
         AddChatToLast(false, "아... 글쎄?");
         AddChatToLast(false, "어제 클럽에서 마주치긴 했는데.");
         AddChatToLast(false, "근데 왜 지원이걸로 톡하냐?");
@@ -327,11 +327,11 @@ public class ChatManager : MonoBehaviour
 
         ChattingList.Add(new Chatting(false, "건우 오빠", "stairchocotalk1"));  // 22
         AddChatToLast(false, "뭐라도 알아냈어?");
-        AddChatToLast(true, "오피스텔 주소를 얻었어요.");
-        AddChatToLast(true, "제일 수상해 보여서... 여기를 조사해보려구요.");
+        AddChatToLast(true, "오피스텔 주소를 얻었어.");
+        AddChatToLast(true, "제일 수상해 보여서... 일단 여기를 조사해보려고.");
 
         ChattingList.Add(new Chatting(false, "건우 오빠", "stairchocotalk2"));  // 23
-        AddChatToLast(true, "그런데 젤리는 어떻게 했어요?");
+        AddChatToLast(true, "근데 젤리는 어떻게 했어?");
         AddChatToLast(false, "...");
         AddChatToLast(false, "마침 나도 곰젤리가 있어서.");
         AddChatToLast(false, "마약젤리 준다고 하면서 그거 줬어");
