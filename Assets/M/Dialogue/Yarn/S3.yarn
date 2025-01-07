@@ -1337,7 +1337,7 @@ title: escapegame_checkpoint1
 <<Scene Door1403>>
 <<ShowTB VisualNovelPrefab true>>
 <color=yellow>* 체크포인트 *</color>
-
+<<wait 2.0>>
 빨리 여기서 나가야 될 것 같아.
 어디로 가지?
 <<StartTB VisualNovelPrefab>>
@@ -1522,6 +1522,7 @@ title: escapegame_checkpoint2
 //엘리베이터 이미지 배경 페이드인
 <<wait  1.0>>
 <color=yellow>* 체크포인트 *</color>
+<<wait 2.0>>
 엘리베이터에 타자마자 1층을 눌렀다.
 닫힘 버튼을 눌렀다.
 ..휴. 위험했어.
@@ -1722,6 +1723,7 @@ title: escapegame_checkpoint3
 <<InitTB VisualNovelPrefab S3_6_CP3>>
 <<Scene Lobby3F>>
 <color=yellow>* 체크포인트 *</color>
+<<wait 2.0>>
 1층에는 이미 조직원들이 대기하고 있을 거야.
 비상계단으로 가자..!
 //계단 이미지2 배경

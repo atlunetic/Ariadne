@@ -535,7 +535,7 @@ title: obj_customers
 		//일단 의심받기 전에 옷부터 갈아입자.
 		//<<PlayAudio Clotheschange>>
 		//(이후 기본 복장으로 자동 변경)
-		//<color=yellow>* 직원 복장 옷을 벗었다. *</color>
+		//<color=yellow>* 스태프 복장을 벗었다. *</color>
 		<<Hide 지수>>
 		<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
 		<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
@@ -678,7 +678,7 @@ title: ClothesUsed
 	<<jump club_viproom_changeuniform>>
 <<else>>
 	//<<UI_off MenuUI>>
-	직원 복장 옷을 입었다.
+	스태프 복장을 입었다.
 	//옷 입고 다시 물어볼 경우 대비 빈 타이틀
 	<<FinishedDialogue VisualNovelPrefab ClothesOnForE>>
 	<<jump E_Clothes>>
@@ -796,7 +796,7 @@ title: letEknow
 	<<Hide 클럽고객E>>
 	//(이후 기본 복장으로 자동 변경)
 	//상호작용 종료 및 히든 스토리 해금 (초코톡에 클럽 고객E의 프로필이 생성됨)
-	<color=yellow>* 직원 복장 옷을 벗었다. *</color>
+	스태프 복장을 벗었다.
 	<<FinishedDialogue VisualNovelPrefab letEknow>>
 	<<OpenHiddenStory ChocoTalkController>>
 	<<SetCanvasTo VisualNovelPrefab false>>
@@ -823,7 +823,7 @@ E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
 
 <<PlayAudio Clotheschange>>
 //(이후 기본 복장으로 자동 변경)
-<color=yellow>* 직원 복장 옷을 벗었다. *</color>
+스태프 복장을 벗었다.
 
 <<Hide 지수>>
 <<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
@@ -2254,7 +2254,7 @@ title: StaffLocker
 
 <<if CheckDialogue("lockeropened")==true>>
     <<SetCanvasTo VisualNovelPrefab true>>
-    아까 챙긴 직원 복장 외에 이 안에서 쓸만한 건 없는 것 같아.
+    아까 챙긴 스태프 복장 외에 이 안에서 쓸만한 건 없는 것 같아.
 	<<SetCanvasTo VisualNovelPrefab false>>
 <<else>>
     <<jump StaffLockerFirst>>
@@ -3382,7 +3382,7 @@ title: club_viproom_entry2
 VIP 룸으로 들어가보자.
 근데 한번 들어가면 다시 나오기는 어려울 것 같아.
 -> 들어가자.
-	근데 이대로 들어가면 의심받을 거 같아. 직원 복장을 입자.
+	근데 이대로 들어가면 의심받을 거 같아. 스태프 복장을 입자.
 	<<wait 1.0>>
 	입었다. 이제 들어가보자.
 	<<FinishedDialogue VisualNovelPrefab club_viproom_entry2>>
@@ -3404,7 +3404,7 @@ title: yay
 VIP 룸으로 들어가보자.
 근데 한번 들어가면 다시 나오기는 어려울 것 같아.
 이대로 들어가면 의심받을 것 같아.
-직원 복장을 입을까?
+스태프 복장을 입을까?
 -> 입자
    <<jump club_viproom_changeuniform>>
 
@@ -3419,7 +3419,7 @@ title: club_viproom_changeuniform
 화장실로 가서 옷을 갈아입었다.
 <<Scene NoBG>>
 //club_viproom_entry 이후 플레이어가 인벤토리에서 직원복장 사용시
-직원 복장을 입고 있으니까...
+스태프 복장을 입고 있으니까...
 의심 받을 일은 없겠지?
 <<wait 0.5>>
 들어가보자.
@@ -3482,7 +3482,7 @@ title: obj_customerg
 	지수: 네, 무슨 일이시죠?
 	클럽고객G: 물 좀 갖다줘.
 	<<wait 1.0>>
-	아 맞다. 지금 직원 옷을 입고 있었지.
+	아 맞다. 지금 스태프 복장을 입고 있었지.
 	직원인 줄 아는 것 같은데...
 	어떡하지?
 	<<getWaterbottle VisualNovelPrefab>>
@@ -3954,7 +3954,7 @@ title: game_clock_success
 
 
 ...
-아까 클럽고객G에게 연락온 건 분명 'drgg24'...
+아까 클럽고객G에게 연락온 건 'drgg24'...
 분명 11시 반에 만나자고 했지.
 ...
 <<SetActiveFalse VisualNovelPrefab Clock>>
