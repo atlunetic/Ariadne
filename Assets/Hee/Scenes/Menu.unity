@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogName: Jisoojiwonhiddenstory_1
-  conditions: 02000000
+  conditions: 0200000001000000
 --- !u!1 &747211482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,7 +2288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogName: Geonwoohiddenstory_1
-  conditions: 03000000
+  conditions: 0300000001000000
 --- !u!1 &1285689037
 GameObject:
   m_ObjectHideFlags: 0
