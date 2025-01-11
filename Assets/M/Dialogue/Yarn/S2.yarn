@@ -102,11 +102,11 @@ title: meet_gunwoo
 	<<jump ImJiwon>>
 -> 나라고 밝히자.
 	<<UpdateAct 지수 Jisoo1>>
-	지수: 저 지수예요.
+	지수: 나 지수야.
 	<<UpdateAct 건우 Geonwoo1>>
 	건우: 아... 지수.
 	건우: 지원인 줄 알고 깜짝 놀랐네.
-	지수: 왜요? 지원이한테 죄라도 지었어요?
+	지수: 왜? 지원이한테 무슨 죄라도 지었어?
 	<<UpdateAct 건우 Geonwoo3>>
 	건우: 뭐? 뭔 소리 하는 거야.
 	<<UpdateAct 건우 Geonwoo1>>
@@ -121,8 +121,8 @@ title: meet_gunwoo
 	술을 마신 것 같진 않은데. 취했나?
 	어제 누구랑 봤는지도 헷갈릴 정도로?
 	<<wait 1.0>>
-	지수: 건우 오빠, 무슨 소리에요?
-	지수: 어제 지원이랑 마주쳤다면서요.
+	지수: 오빠, 무슨 소리야?
+	지수: 어제 지원이랑 마주쳤다면서.
 	<<wait 1.0>>
 	<<UpdateAct 건우 Geonwoo3>>
 	건우: 아, 난 바빠서 이만.
@@ -150,7 +150,7 @@ title: ImJiwon
 
 <<CollectEnding GameManager 3>>
 <<UpdateAct 지수 Jisoo1>>
-지수: 저 지원이예요.
+지수: 나 지원이야.
 <<UpdateAct 건우 Geonwoo4>>
 건우: ...
 건우: 너 어떻게 나왔어?
@@ -535,7 +535,7 @@ title: obj_customers
 		//일단 의심받기 전에 옷부터 갈아입자.
 		//<<PlayAudio Clotheschange>>
 		//(이후 기본 복장으로 자동 변경)
-		//<color=yellow>* 직원 복장 옷을 벗었다. *</color>
+		//<color=yellow>* 스태프 복장을 벗었다. *</color>
 		<<Hide 지수>>
 		<<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
 		<<FinishedObj VisualNovelPrefab ClubTable_NPCE>>
@@ -678,7 +678,7 @@ title: ClothesUsed
 	<<jump club_viproom_changeuniform>>
 <<else>>
 	//<<UI_off MenuUI>>
-	직원 복장 옷을 입었다.
+	스태프 복장을 입었다.
 	//옷 입고 다시 물어볼 경우 대비 빈 타이틀
 	<<FinishedDialogue VisualNovelPrefab ClothesOnForE>>
 	<<jump E_Clothes>>
@@ -796,7 +796,7 @@ title: letEknow
 	<<Hide 클럽고객E>>
 	//(이후 기본 복장으로 자동 변경)
 	//상호작용 종료 및 히든 스토리 해금 (초코톡에 클럽 고객E의 프로필이 생성됨)
-	<color=yellow>* 직원 복장 옷을 벗었다. *</color>
+	스태프 복장을 벗었다.
 	<<FinishedDialogue VisualNovelPrefab letEknow>>
 	<<OpenHiddenStory ChocoTalkController>>
 	<<SetCanvasTo VisualNovelPrefab false>>
@@ -823,7 +823,7 @@ E와 어느 정도 멀어지고 나서 뒤를 돌아봤다.
 
 <<PlayAudio Clotheschange>>
 //(이후 기본 복장으로 자동 변경)
-<color=yellow>* 직원 복장 옷을 벗었다. *</color>
+스태프 복장을 벗었다.
 
 <<Hide 지수>>
 <<SetActiveFalse VisualNovelPrefab ClubTable_NPCE>>
@@ -1061,8 +1061,8 @@ title: event_gunwoo_q1a
 ---
 
 <<Act 지수 Jisoo2 1.17 0.322 white>>
-지수: 오빠. 어제 지원이랑 마주쳤다고 했잖아요.
-지수: 지원이 상태가 어땠어요?
+지수: 오빠. 어제 지원이랑 마주쳤다고 했잖아.
+지수: 지원이.. 상태가 어땠어?
 
 <<Act 건우 Geonwoo3 0.322 0.227 white>>
 건우: ..글쎄?
@@ -1070,16 +1070,16 @@ title: event_gunwoo_q1a
 <<wait 1.0>>
 
 //선택지 랜덤 출력
--> 정말 기억이 안나는 거예요?
+-> 정말 기억이 안나는 거야?
 	//설득점수 +1
 	<<set $persuade += 1>>
 	<<UpdateAct 지수 Jisoo4>>
-	지수: 정말 기억이 안나는 거예요?
-	지수: 처음 본 사람들 상태도 잘 파악하는 사람이...
+	지수: 정말 기억이 안나는 거야?
+	지수: 오빠 처음 본 사람들 상태도 잘 파악하잖아.
 	<<UpdateAct 건우 Geonwoo2>>
 	건우: ...
 	<<UpdateAct 지수 Jisoo2>>
-	지수: 다른 사람도 아니고 지원이면 당연히 알 것 같아서 물어봤어요.
+	지수: 다른 사람도 아니고 지원이면 당연히 알 것 같아서 물어봤어.
 	건우: ..그러게.
 	<<wait 1.0>>
 	건우 오빠의 표정이 흔들렸다.
@@ -1089,11 +1089,11 @@ title: event_gunwoo_q1a
 	<<else>>
 		<<jump event_gunwoo_q2b>>
 	<<endif>>
--> 정말 마주친 건 맞아요?
+-> 정말 마주친 건 맞아?
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 정말 마주친 건 맞아요?
+	지수: 정말 마주친 건 맞아?
 	<<UpdateAct 건우 Geonwoo2>>
 	건우: ... 그런 걸로 왜 거짓말을 하겠냐.
 	<<wait 1.0>>
@@ -1114,8 +1114,8 @@ title: event_gunwoo_q1b
 ---
 
 <<Act 지수 Jisoo2 1.17 0.322 white>>
-지수: 오빠. 어제 지원이랑 마주쳤다고 했잖아요.
-지수: 지원이 상태가 어땠어요?
+지수: 오빠. 어제 지원이랑 마주쳤다고 했잖아.
+지수: 지원이 상태가 어땠어?
 
 <<Act 건우 Geonwoo3 0.322 0.227 white>>
 건우: ..글쎄?
@@ -1123,11 +1123,11 @@ title: event_gunwoo_q1b
 <<wait 1.0>>
 
 //선택지 랜덤 출력
--> 정말 마주친 건 맞아요?
+-> 정말 마주친 건 맞아?
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 정말 마주친 건 맞아요?
+	지수: 정말 마주친 건 맞아?
 	<<UpdateAct 건우 Geonwoo2>>
 	건우: ... 그런 걸로 왜 거짓말을 하겠냐.
 	<<wait 1.0>>
@@ -1139,16 +1139,16 @@ title: event_gunwoo_q1b
 	<<else>>
 		<<jump event_gunwoo_q2b>>
 	<<endif>>
--> 정말 기억이 안나는 거예요?
+-> 정말 기억이 안나는 거야?
 	//설득점수 +1
 	<<set $persuade = $persuade + 1>>
 	<<UpdateAct 지수 Jisoo4>>
 	지수: 정말 기억이 안나는 거예요?
-	지수: 처음 본 사람들 상태도 잘 파악하는 사람이...
+	지수: 오빠 처음 본 사람들 상태도 잘 파악하잖아.
 	<<UpdateAct 건우 Geonwoo2>>
 	건우: ...
 	<<UpdateAct 지수 Jisoo2>>
-	지수: 다른 사람도 아니고 지원이면 당연히 알 것 같아서 물어봤어요.
+	지수: 다른 사람도 아니고 지원이면 당연히 알 것 같아서 물어봤어.
 	건우: ..그러게.
 	<<wait 1.0>>
 	건우 오빠의 표정이 흔들렸다.
@@ -1167,19 +1167,19 @@ title: event_gunwoo_q2a
 ---
 
 <<UpdateAct 지수 Jisoo5>>
-지수: 어제 이후로 지원이랑 연락이 안 돼요.
-지수: 집 나간다고 편지 하나 남겨두고 사라졌어요.
+지수: 어제 이후로 지원이랑 연락이 안 돼.
+지수: 집 나간다고 편지 하나 남겨두고 사라졌어.
 
 <<UpdateAct 건우 Geonwoo2>>
 건우: ...
 <<wait 1.0>>
 
 //선택지 랜덤 출력
--> 왜 아무런 말도 없어요?
+-> 왜 아무런 말도 없어?
 	//설득점수 +1
 	<<set $persuade = $persuade + 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 왜 아무런 말도 없어요?
+	지수: 왜 아무런 말도 없어?
 	지수: 평소 같으면 무슨 일이냐고 난리쳤을 사람이...
 	<<UpdateAct 건우 Geonwoo2>>
 	건우: ...
@@ -1192,11 +1192,11 @@ title: event_gunwoo_q2a
 	<<else>>
 		<<jump event_gunwoo_q3b>>
 	<<endif>>
--> 걱정되지도 않아요?
+-> 걱정되지도 않아?
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 오빠는 지원이가 걱정되지도 않아요?
+	지수: 오빠는 지원이가 걱정되지도 않아?
 	<<UpdateAct 지수 Jisoo2>>
 	지수: 예전에 오빠 아팠을 때 지원이가 간병도 해줬는데...
 	<<UpdateAct 건우 Geonwoo2>>
@@ -1219,19 +1219,19 @@ title: event_gunwoo_q2b
 ---
 
 <<UpdateAct 지수 Jisoo5>>
-지수: 어제 이후로 지원이랑 연락이 안 돼요.
-지수: 집 나간다고 편지 하나 남겨두고 사라졌어요.
+지수: 어제 이후로 지원이랑 연락이 안 돼.
+지수: 집 나간다고 편지 하나 남겨두고 사라졌어.
 
 <<UpdateAct 건우 Geonwoo2>>
 건우: ...
 <<wait 1.0>>
 
 //선택지 랜덤 출력
--> 걱정되지도 않아요?
+-> 걱정되지도 않아?
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 오빠는 지원이가 걱정되지도 않아요?
+	지수: 오빠는 지원이가 걱정되지도 않아?
 	<<UpdateAct 지수 Jisoo2>>
 	지수: 예전에 오빠 아팠을 때 지원이가 간병도 해줬는데...
 	<<UpdateAct 건우 Geonwoo2>>
@@ -1245,11 +1245,11 @@ title: event_gunwoo_q2b
 	<<else>>
 		<<jump event_gunwoo_q3b>>
 	<<endif>>
--> 왜 아무런 말도 없어요?
+-> 왜 아무런 말도 없어?
 	//설득점수 +1
 	<<set $persuade = $persuade + 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 왜 아무런 말도 없어요?
+	지수: 왜 아무런 말도 없어?
 	지수: 평소 같으면 무슨 일이냐고 난리쳤을 사람이...
 	<<UpdateAct 건우 Geonwoo2>>
 	건우: ...
@@ -1270,11 +1270,11 @@ title: event_gunwoo_q3a
 ---
 
 <<UpdateAct 지수 Jisoo5>>
-지수: 지원이가 너무 걱정돼요.
+지수: 지원이가 너무 걱정돼.
 지수: 한 번도 이런 적 없는 애라서...
 
 <<UpdateAct 지수 Jisoo2>>
-지수: 오빠도 알잖아요.
+지수: 오빠도 알잖아.
 
 <<UpdateAct 건우 Geonwoo2>>
 건우: ...
@@ -1282,17 +1282,17 @@ title: event_gunwoo_q3a
 <<wait 1.0>>
 
 //선택지 랜덤 출력
--> 오빠한테도 아무런 얘기 없었어요?
+-> 오빠한테도 아무런 얘기 없었어?
 	//설득점수 +1
 	<<set $persuade = $persuade + 1>>
 	<<UpdateAct 지수 Jisoo4>>
-	지수: 정말 오빠한테도 아무런 얘기 없었어요?
+	지수: 정말 오빠한테도 아무런 얘기 없었어?
 	지수: 맨날 둘이 고민상담 주고받던 거 아는데...
 	<<UpdateAct 건우 Geonwoo4>>
 	건우: ..그건 어떻게 알았어?
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 지원이 걔 어릴 때부터 저랑 싸우면 맨날...
-	지수: 방에 틀어박혀서 오빠랑 전화했잖아요.
+	지수: 지원이 걔 어릴 때부터 나랑 싸우면 맨날...
+	지수: 방에 틀어박혀서 오빠랑 전화했잖아.
 	<<UpdateAct 지수 Jisoo2>>
 	지수: 안 듣고 싶어도 들리던데...
 	<<UpdateAct 건우 Geonwoo3>>
@@ -1307,13 +1307,13 @@ title: event_gunwoo_q3a
 	<<else>>
 		<<jump event_gunwoo_q4b>>
 	<<endif>>
--> 저한테 뭐 숨기는 거 있어요?
+-> 나한테 뭐 숨기는 거 있어?
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<UpdateAct 지수 Jisoo3>>
 	지수: 뭔가 평소같지 않은데...
-	지수: 오빠 저한테 뭐 숨기는 거 있어요?
-	지수: 아는 거 있죠.
+	지수: 오빠 나한테 뭐 숨기는 거 있어?
+	지수: 아는 거 있지.
 	<<UpdateAct 건우 Geonwoo3>>
 	건우: ...
 	건우: 왜 이렇게 사람을 몰아가냐...
@@ -1338,11 +1338,11 @@ title: event_gunwoo_q3b
 ---
 
 <<UpdateAct 지수 Jisoo5>>
-지수: 지원이가 너무 걱정돼요.
+지수: 지원이가 너무 걱정돼.
 지수: 한 번도 이런 적 없는 애라서...
 
 <<UpdateAct 지수 Jisoo2>>
-지수: 오빠도 알잖아요.
+지수: 오빠도 알잖아.
 
 <<UpdateAct 건우 Geonwoo2>>
 건우: ...
@@ -1350,13 +1350,13 @@ title: event_gunwoo_q3b
 <<wait 1.0>>
 
 //선택지 랜덤 출력
--> 저한테 뭐 숨기는 거 있어요?
+-> 나한테 뭐 숨기는 거 있어?
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<UpdateAct 지수 Jisoo3>>
 	지수: 뭔가 평소같지 않은데...
-	지수: 오빠 저한테 뭐 숨기는 거 있어요?
-	지수: 아는 거 있죠.
+	지수: 오빠 나한테 뭐 숨기는 거 있어?
+	지수: 아는 거 있지.
 	<<UpdateAct 건우 Geonwoo3>>
 	건우: ...
 	건우: 왜 이렇게 사람을 몰아가냐...
@@ -1372,17 +1372,17 @@ title: event_gunwoo_q3b
 	<<else>>
 		<<jump event_gunwoo_q4b>>
 	<<endif>>
--> 오빠한테도 아무런 얘기 없었어요?
+-> 오빠한테도 아무런 얘기 없었어?
 	//설득점수 +1
 	<<set $persuade = $persuade + 1>>
 	<<UpdateAct 지수 Jisoo4>>
-	지수: 정말 오빠한테도 아무런 얘기 없었어요?
+	지수: 정말 오빠한테도 아무런 얘기 없었어?
 	지수: 맨날 둘이 고민상담 주고받던 거 아는데...
 	<<UpdateAct 건우 Geonwoo4>>
 	건우: ..그건 어떻게 알았어?
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 지원이 걔 어릴 때부터 저랑 싸우면 맨날...
-	지수: 방에 틀어박혀서 오빠랑 전화했잖아요.
+	지수: 지원이 걔 어릴 때부터 나랑 싸우면 맨날...
+	지수: 방에 틀어박혀서 오빠랑 전화했잖아.
 	<<UpdateAct 지수 Jisoo2>>
 	지수: 안 듣고 싶어도 들리던데...
 	<<UpdateAct 건우 Geonwoo3>>
@@ -1406,9 +1406,9 @@ title: event_gunwoo_q4a
 ---
 
 <<UpdateAct 지수 Jisoo2>>
-지수: 정말 아는 거 없어요?
+지수: 정말 아는 거 없어?
 지수: 오빠는 클럽 자주 다니니까...
-지수: 전해 들은 거라도 있나 싶어서요.
+지수: 전해 들은 거라도 있나 싶어서.
 
 <<UpdateAct 건우 Geonwoo2>>
 건우: ...
@@ -1464,9 +1464,9 @@ title: event_gunwoo_q4b
 ---
 
 <<UpdateAct 지수 Jisoo2>>
-지수: 정말 아는 거 없어요?
+지수: 정말 아는 거 없어?
 지수: 오빠는 클럽 자주 다니니까...
-지수: 전해 들은 거라도 있나 싶어서요.
+지수: 전해 들은 거라도 있나 싶어서.
 
 <<UpdateAct 건우 Geonwoo2>>
 건우: ...
@@ -1533,12 +1533,12 @@ title: event_gunwoo_q5a
 <<wait 1.0>>
 
 <<UpdateAct 지수 Jisoo2>>
-지수: 오빠... 잠시만요!
+지수: 오빠... 잠시만!
 <<StopAudio Minigame>>
 
 <<UpdateAct 지수 Jisoo3>>
 지수: 사실...
-지수: 지원이가 마약에 관심을 갖고 있는 것 같아요.
+지수: 지원이가 마약에 관심을 갖고 있는 것 같아.
 <<PlayAudio ChooseMinigame 0.6>>
 
 
@@ -1555,7 +1555,7 @@ title: event_gunwoo_q5a
 	//설득점수 +1
 	<<set $persuade = $persuade + 1>>
 	<<UpdateAct 지수 Jisoo2>>
-	지수: 지원이가 마약상을 찾아 다닌 것 같아요.
+	지수: 지원이가 마약상을 찾아 다닌 것 같아.
 	<<UpdateAct 건우 Geonwoo4>>
 	건우: 어..?
 	<<if ActedAs() == true>>
@@ -1592,11 +1592,11 @@ title: event_gunwoo_q5b
 <<wait 1.0>>
 
 <<UpdateAct 지수 Jisoo2>>
-지수: 오빠... 잠시만요!
+지수: 오빠... 잠시만!
 
 <<UpdateAct 지수 Jisoo3>>
 지수: 사실...
-지수: 지원이가 마약에 관심을 갖고 있는 것 같아요.
+지수: 지원이가 마약에 관심을 갖고 있는 것 같아.
 <<PlayAudio ChooseMinigame 0.6>>
 <<StopAudio Minigame>>
 
@@ -1622,7 +1622,7 @@ title: event_gunwoo_q5b
 	//설득점수 +1
 	<<set $persuade = $persuade + 1>>
 	<<UpdateAct 지수 Jisoo2>>
-	지수: 지원이가 마약상을 찾아 다닌 것 같아요.
+	지수: 지원이가 마약상을 찾아 다닌 것 같아.
 	<<UpdateAct 건우 Geonwoo4>>
 	건우: 어..?
 	<<if ActedAs() == true>>
@@ -1638,18 +1638,18 @@ title: event_gunwoo_q5_jisu1
 ---
 
 <<UpdateAct 지수 Jisoo2>>
-지수: 아까 제가 지원이 초코톡으로 연락했잖아요.
-지수: 사실... 지원이가 사라졌어요.
+지수: 아까 내가 지원이 초코톡으로 연락했잖아.
+지수: 사실... 지원이가 사라졌어.
 지수: 휴대폰도 두고 가서...
-지수: 안에 뭐라도 남겨뒀나 하고 살펴봤어요.
+지수: 안에 뭐라도 남겨뒀나 하고 살펴봤거든.
 지수: 그런데...
 지수: ...
-지수: 수상한 사람이랑 오픈 채팅을 했더라구요.
+지수: 수상한 사람이랑 오픈 채팅을 했더라고.
 지수: 누군가 싶어서 연락해봤는데...
 
 <<UpdateAct 지수 Jisoo3>>
 지수: ...
-지수: 마약상이었어요.
+지수: 마약상이었어.
 <<jump event_gunwoo_q5_1>>
 
 
@@ -1660,8 +1660,8 @@ title: event_gunwoo_q5_jiwon1
 ---
 
 <<UpdateAct 지수 Jisoo2>>
-지수: 아까 지원이한테서 연락 왔죠?
-지수: 그거 제가 보낸 거에요.
+지수: 아까 지원이한테서 연락 왔지?
+지수: 그거 사실 내가 보낸 거야.
 
 <<UpdateAct 건우 Geonwoo4>>
 건우: 어..?
@@ -1669,22 +1669,22 @@ title: event_gunwoo_q5_jiwon1
 <<wait 1.0>>
 
 <<UpdateAct 지수 Jisoo5>>
-지수: 사실... 지원이가 사라졌어요.
+지수: 사실... 지원이가 사라졌어.
 지수: 휴대폰도 두고 가서...
-지수: 안에 뭐라도 남겨뒀나 하고 살펴봤어요.
-지수: 그러다 오빠한테 연락한 거에요.
+지수: 안에 뭐라도 남겨뒀나 하고 살펴봤거든.
+지수: 그러다 오빠한테 연락한 거야.
 
 <<UpdateAct 지수 Jisoo2>>
 지수: ...
 <<wait 2.0>>
 
 지수: 아무튼...
-지수: 지원이가 수상한 사람이랑 오픈 채팅을 했더라구요.
+지수: 지원이가 수상한 사람이랑 오픈 채팅을 했더라고.
 지수: 누군가 싶어서 연락해봤는데...
 
 <<UpdateAct 지수 Jisoo3>>
 지수: ...
-지수: 마약상이었어요.
+지수: 마약상이었어.
 <<jump event_gunwoo_q5_1>>
 
 
@@ -1718,18 +1718,18 @@ title: event_gunwoo_q5_jisu2
 ---
 
 <<UpdateAct 지수 Jisoo2>>
-지수: 아까 제가 지원이 초코톡으로 연락했잖아요.
-지수: 사실... 지원이가 사라졌어요.
+지수: 아까 내가 지원이 초코톡으로 연락했잖아.
+지수: 사실... 지원이가 사라졌어.
 지수: 휴대폰도 두고 가서...
-지수: 안에 뭐라도 남겨뒀나 하고 살펴봤어요.
+지수: 안에 뭐라도 남겨뒀나 하고 살펴봤거든.
 지수: 그런데...
 지수: ...
-지수: 어떤 의사랑 채팅을 했더라구요.
+지수: 어떤 의사랑 채팅을 했더라고.
 지수: 무슨 내용인지 봤는데...
 
 <<UpdateAct 지수 Jisoo3>>
 지수: ...
-지수: 마약류로 취급되는 약을 처방받은 것 같아요.
+지수: 마약류로 취급되는 약을 처방받은 것 같아.
 <<jump event_gunwoo_q5_2>>
 
 
@@ -1740,30 +1740,30 @@ title: event_gunwoo_q5_jiwon2
 ---
 
 <<UpdateAct 지수 Jisoo2>>
-지수: 아까 지원이한테서 연락 왔죠?
-지수: 그거 제가 보낸 거에요.
+지수: 아까 지원이한테서 연락 왔지?
+지수: 그거 사실 내가 보낸 거야.
 
 <<UpdateAct 건우 Geonwoo4>>
 건우: 어..?
 건우: 무슨 소리야.
 
 <<UpdateAct 지수 Jisoo5>>
-지수: 사실... 지원이가 사라졌어요.
+지수: 사실... 지원이가 사라졌어.
 지수: 휴대폰도 두고 가서...
-지수: 안에 뭐라도 남겨뒀나 하고 살펴봤어요.
-지수: 그러다 오빠한테 연락한 거에요.
+지수: 안에 뭐라도 남겨뒀나 하고 살펴봤거든.
+지수: 그러다 오빠한테 연락한 거야.
 
 <<UpdateAct 지수 Jisoo2>>
 지수: ...
 <<wait 1.0>>
 
 지수: 아무튼...
-지수: 어떤 의사랑 채팅을 했더라구요.
+지수: 어떤 의사랑 채팅을 했더라고.
 지수: 무슨 내용인지 봤는데...
 
 <<UpdateAct 지수 Jisoo3>>
 지수: ...
-지수: 마약류로 취급되는 약을 처방받은 것 같아요.
+지수: 마약류로 취급되는 약을 처방받은 것 같아.
 <<jump event_gunwoo_q5_2>>
 
 
@@ -1795,15 +1795,15 @@ title: event_gunwoo_q6a
 ---
 
 <<UpdateAct 지수 Jisoo2>>
-지수: ..오빠라도 도와주세요.
+지수: ..오빠라도 도와줘.
 
 <<UpdateAct 지수 Jisoo5>>
-지수: 지원이가 진짜로 마약을 한 거면 어떡해요?
-지수: 중독되기라도 하면요..?
+지수: 지원이가 진짜로 마약을 한 거면 어떡해?
+지수: 중독되기라도 하면..?
 지수: ...
 
 <<UpdateAct 지수 Jisoo3>>
-지수: 오빠도 클럽 자주 오면 보고 듣는 것도 있지 않아요?
+지수: 오빠도 클럽 자주 오면 보고 듣는 것도 있지 않아?
 지수: 요즘 이런 데서 마약 많이 한다던데...
 
 <<UpdateAct 건우 Geonwoo2>>
@@ -1820,9 +1820,9 @@ title: event_gunwoo_q6a
 	//설득점수 +1
 	<<set $persuade = $persuade + 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 지원이가 여기서 뭘 하고 다녔는지라도 알고 싶어요.
+	지수: 지원이가 여기서 뭘 하고 다녔는지라도 알고 싶어.
 	지수: 그러면...
-	지수: 행방을 알 수 있지 않을까 싶어서요.
+	지수: 행방을 알 수 있지 않을까 싶어서.
 	<<wait 1.0>>
 	<<UpdateAct 건우 Geonwoo2>>
 	건우: ...
@@ -1834,9 +1834,9 @@ title: event_gunwoo_q6a
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 지원이가 여기 온 것 자체가 수상해요.
+	지수: 지원이가 여기 온 것 자체가 수상해.
 	지수: 혹시...
-	지수: 최근에 이 클럽에서 이상한 일 없었어요?
+	지수: 최근에 이 클럽에서 이상한 일 없었어?
 	지수: 여기 왔던 사람들이 사라졌다거나...
 	<<wait 1.0>>
 	<<UpdateAct 건우 Geonwoo3>>
@@ -1854,15 +1854,15 @@ title: event_gunwoo_q6b
 ---
 
 <<UpdateAct 지수 Jisoo2>>
-지수: ..오빠라도 도와주세요.
+지수: ..오빠라도 도와줘.
 
 <<UpdateAct 지수 Jisoo5>>
-지수: 지원이가 진짜로 마약을 한 거면 어떡해요?
-지수: 중독되기라도 하면요..?
+지수: 지원이가 진짜로 마약을 한 거면 어떡해?
+지수: 중독되기라도 하면..?
 지수: ...
 
 <<UpdateAct 지수 Jisoo3>>
-지수: 오빠도 클럽 자주 오면 보고 듣는 것도 있지 않아요?
+지수: 오빠도 클럽 자주 오면 보고 듣는 것도 있지 않아?
 지수: 요즘 이런 데서 마약 많이 한다던데...
 
 <<UpdateAct 건우 Geonwoo2>>
@@ -1877,9 +1877,9 @@ title: event_gunwoo_q6b
 	//설득점수 -1
 	<<set $persuade = $persuade - 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 지원이가 여기 온 것 자체가 수상해요.
+	지수: 지원이가 여기 온 것 자체가 수상해.
 	지수: 혹시...
-	지수: 최근에 이 클럽에서 이상한 일 없었어요?
+	지수: 최근에 이 클럽에서 이상한 일 없었어?
 	지수: 여기 왔던 사람들이 사라졌다거나...
 	<<wait 1.0>>
 	<<UpdateAct 건우 Geonwoo3>>
@@ -1892,9 +1892,9 @@ title: event_gunwoo_q6b
 	//설득점수 +1
 	<<set $persuade = $persuade + 1>>
 	<<UpdateAct 지수 Jisoo3>>
-	지수: 지원이가 여기서 뭘 하고 다녔는지라도 알고 싶어요.
+	지수: 지원이가 여기서 뭘 하고 다녔는지라도 알고 싶어.
 	지수: 그러면...
-	지수: 행방을 알 수 있지 않을까 싶어서요.
+	지수: 행방을 알 수 있지 않을까 싶어서.
 	<<wait 1.0>>
 	<<UpdateAct 건우 Geonwoo2>>
 	건우: ...
@@ -1914,7 +1914,7 @@ title: event_gunwoo_end
 
 <<UpdateAct 지수 Jisoo2>>
 지수: 오빠는 클럽 직원들이랑 친하니까...
-지수: CCTV라도 볼 수 있게 도와주면 안돼요?
+지수: CCTV라도 볼 수 있게 도와주면 안돼?
 <<PersuadeScore VisualNovelPrefab>>
 <<if $persuade >= 7>>
 	<<jump event_gunwoo_success>>
@@ -1942,7 +1942,7 @@ title: event_gunwoo_success
 
 <<UpdateAct 지수 Jisoo1>>
 지수: ...
-지수: 고마워요.
+지수: 고마워.
 
 건우 오빠가 자리를 떠났다.
 ...
@@ -1970,11 +1970,11 @@ title: event_gunwoo_3_6
 건우: 알겠으니까...
 건우: 나 이제 가봐도 되냐? 바쁘다고...
 
-지수: 아... 알겠어요.
+지수: 아... 알겠어.
 <<wait 1.0>>
 
 <<UpdateAct 지수 Jisoo1>>
-지수: ... 믿을게요.
+지수: ... 믿을게.
 
 <<UpdateAct 지수 Jisoo2>>
 건우가 자리를 떠났다.
@@ -2044,7 +2044,7 @@ title: memory_StudentID
 	<<jump realmemory_1>>
 <<else>>
 	<<PlayAudio MemoryRecall 0.5>>
-	???: 오빠, 왜 동생 학생증을 들고 다녀요?
+	???: 오빠, 왜 동생 학생증을 들고 다녀?
 	건우: 아...
 	건우: 학생인 척 하는 게 일할 때 편하거든.
 	건우: 사람들이 미성년자는 의심을 잘 안 해.
@@ -2254,7 +2254,7 @@ title: StaffLocker
 
 <<if CheckDialogue("lockeropened")==true>>
     <<SetCanvasTo VisualNovelPrefab true>>
-    아까 챙긴 직원 복장 외에 이 안에서 쓸만한 건 없는 것 같아.
+    아까 챙긴 스태프 복장 외에 이 안에서 쓸만한 건 없는 것 같아.
 	<<SetCanvasTo VisualNovelPrefab false>>
 <<else>>
     <<jump StaffLockerFirst>>
@@ -3285,10 +3285,10 @@ title: memory_VIPlist
 //증거 촬영 시 돌아오는 기억: 건우가 ??에게 VIP 명단을 보여주는 기억
 
 건우: 야, 이거 봐라.
-???: 이게 뭔데요?
+???: 이게 뭔데?
 건우: 이게 VIP 명단이라는 거야~.
 ???: 우와...
-???: 이런 것도 있어요?
+???: 이런 것도 있어?
 <<StopMemory SceneManager>>
 <<StopAudioAll>>
 
@@ -3382,7 +3382,7 @@ title: club_viproom_entry2
 VIP 룸으로 들어가보자.
 근데 한번 들어가면 다시 나오기는 어려울 것 같아.
 -> 들어가자.
-	근데 이대로 들어가면 의심받을 거 같아. 직원 복장을 입자.
+	근데 이대로 들어가면 의심받을 거 같아. 스태프 복장을 입자.
 	<<wait 1.0>>
 	입었다. 이제 들어가보자.
 	<<FinishedDialogue VisualNovelPrefab club_viproom_entry2>>
@@ -3404,7 +3404,7 @@ title: yay
 VIP 룸으로 들어가보자.
 근데 한번 들어가면 다시 나오기는 어려울 것 같아.
 이대로 들어가면 의심받을 것 같아.
-직원 복장을 입을까?
+스태프 복장을 입을까?
 -> 입자
    <<jump club_viproom_changeuniform>>
 
@@ -3419,7 +3419,7 @@ title: club_viproom_changeuniform
 화장실로 가서 옷을 갈아입었다.
 <<Scene NoBG>>
 //club_viproom_entry 이후 플레이어가 인벤토리에서 직원복장 사용시
-직원 복장을 입고 있으니까...
+스태프 복장을 입고 있으니까...
 의심 받을 일은 없겠지?
 <<wait 0.5>>
 들어가보자.
@@ -3482,7 +3482,7 @@ title: obj_customerg
 	지수: 네, 무슨 일이시죠?
 	클럽고객G: 물 좀 갖다줘.
 	<<wait 1.0>>
-	아 맞다. 지금 직원 옷을 입고 있었지.
+	아 맞다. 지금 스태프 복장을 입고 있었지.
 	직원인 줄 아는 것 같은데...
 	어떡하지?
 	<<getWaterbottle VisualNovelPrefab>>
@@ -3686,7 +3686,7 @@ title: GeonwooNote
 건우: 너 대체 뭐하고 다니는 거야?
 건우: 이 옷은 대체 어디서 났냐? 미치겠다.
 건우: 너 자꾸 그렇게 들쑤시고 다니면 오빠가 못 도와줘.
-지수: 오빠가 안도와주니까 이러는 거죠.
+지수: 오빠가 안도와주니까 이러는 거잖아.
 건우: 내가 안돕고 있다 생각해???
 건우: 하..
 건우: 자.
@@ -3954,7 +3954,7 @@ title: game_clock_success
 
 
 ...
-아까 클럽고객G에게 연락온 건 분명 'drgg24'...
+아까 클럽고객G에게 연락온 건 'drgg24'...
 분명 11시 반에 만나자고 했지.
 ...
 <<SetActiveFalse VisualNovelPrefab Clock>>
@@ -4079,11 +4079,11 @@ title: club_stair
 건우: 여기서 뭐해?
 지수: 아... 오빠.
 
-지수: 일단 조용히 해요.
+지수: 일단 조용히 해봐.
 건우: ..응.
 
 지수: 아까 CCTV에서...
-지수: 지원이가 주차장에 있는 장면을 봤어요.
+지수: 지원이가 주차장에 있는 장면을 봤어.
 지수: 분명 저 차 중에 하나를 타고 간 것 같은데..
 지수: 대체 어디로 갔는지...
 지수: ...
@@ -4120,7 +4120,7 @@ CCTV에 찍힌 그 인형이야.
 
 <<Act 지수 Jisoo3 1.17 0.322 white>>
 <<Act 건우 Geonwoo2 0.322 0.227 white>>
-지수: 가운데에 있는 차요.
+지수: 가운데에 있는 차야.
 <<UpdateAct 지수 Jisoo2>>
 지수: ...
 지수: 차 안이라도 살펴볼 수 있으면 좋을텐데...
@@ -4130,19 +4130,19 @@ CCTV에 찍힌 그 인형이야.
 
 
 <<UpdateAct 지수 Jisoo4>>
-지수: 어... 누가 나오는데요?
+지수: 어... 누가 나오는데?
 건우: ...
 건우: 저 사람 내가 아는 사람인데.
 건우: 뭐... 잠깐 다른 데로 데리고 갔다 오면 돼?
 
 지수: ...
 <<UpdateAct 지수 Jisoo3>>
-지수: 그렇게 할 수 있어요?
+지수: 그렇게 할 수 있어?
 
 건우: 응. 그런데 어디 데려갈 명분이 없긴 해.
 건우: 너 뭐... 아무거나 가지고 있는 거 없냐?
 
-지수: 가지고 있는 거요?
+지수: 가지고 있는 거?
 건우: 응. 뭐든.
 <<wait 1.0>>
 
@@ -4183,16 +4183,16 @@ title: inventory_drugjelly
 건우: 이거 어디서 났어?
 
 <<Act 지수 Jisoo4 1.17 0.322 white>>
-지수: 아... 아까 화장실에서 주웠어요.
+지수: 아... 아까 화장실에서 주웠는데.
 건우: ...
 건우: 너 이거 먹었냐?
-지수: 안 먹었는데 왜요?
+지수: 안 먹었어. 왜?
 건우: ... 이거 마약젤리 같은데.
 <<PlayAudio WhenChoose 0.5>>
 <color=yellow>* 일기장에 '마약 젤리'가 추가되었습니다. *</color>
 <<RevealDiary DiaryManager Page1>>
 
-지수: 네..?
+지수: 뭐..?
 건우: 안 먹었다니 다행이네.
 
 <<UpdateAct 건우 Geonwoo1>>
@@ -4202,7 +4202,7 @@ title: inventory_drugjelly
 <<DeleteItem Inventory DrugJelly>>
 
 <<UpdateAct 지수 Jisoo2>>
-지수: 아... 네.
+지수: 아... 응.
 
 //건우, 지수이미지 종료, 그냥 계단 배경
 <<HideAll>>
