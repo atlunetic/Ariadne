@@ -666,10 +666,10 @@ title: realend_last
 //다이얼로그 종료 후 엔딩 일러스트 등장
 <<Fade Black 0.0 1.0 2.0>>
 //<<SetCanvasTo VisualNovelPrefab false>>
-<<wait 2.0>>
+<<wait 4.0>>
 <<Scene Ending8>>
 <<FadeIn>>
-<<wait 4.0>>
+<<wait 5.0>>
 <<Fade Black 0.0 1.0 2.0>>
 <<wait 3.0>>
 <<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
