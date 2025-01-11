@@ -515,7 +515,7 @@ title: OfficetelDoorwcard
 
 //조직원 왼쪽, 지수 오른쪽 배치
 
-<<Act 조직원 NPC_gang 0.322 0.35 white>>
+<<Act 조직원 NPC_gang 0.322 0.38 white>>
 
 조직원: 내가 제일 좋아하는 건?
 
@@ -1935,7 +1935,7 @@ title:BacktoOfficetel1stFloor
 
 ---
 
-//<<SetCanvasTo VisualNovelPrefab true>>
+<<SetCanvasTo VisualNovelPrefab true>>
 //지수2
 <<Act 지수 Jisoo2 1.17 0.322 white>>
 지수: 지원아...
@@ -1963,6 +1963,8 @@ title:BacktoOfficetel1stFloor
 ..!
 <<PlayAudio Uddangtangtang 0.5>>
 지원이가 중심을 잃고 넘어졌다.
+<<DrawFadeIn BlackBG 0.75 0.75>>
+<<wait 2.0>>
 <<Act 지수 Jisoo4 1.17 0.322 white>>
 //지수4
 지수: ..! 얼른 내 손 잡아.
@@ -1995,14 +1997,14 @@ title:BacktoOfficetel1stFloor
 <<Hide 지원>>
 //(화면이 흔들리는 연출)
 //화면이 어두워졌다가 콘크리트 바닥 배경으로
-<<Fade Black 0.0 1.0 1.0>>
+//<<Fade Black 0.0 1.0 1.0>>
 //(♫Sound: 세게 밀치는 소리)
 <<PlayAudio PushHard 0.7>>
 //(♫Sound: 바닥에 쿵 떨어지는 소리)
 <<wait 1.0>>
 <<PlayAudio FalldownJisu 0.6>>
 <<wait  2.0>>
-<<FadeIn>>
+<<DrawFadeIn NoBG 0.75 0.75 1.0>>
 //지수 이미지 노출 x, 1인칭 시점
 ..!
 지원이가 나를 밀쳤다.

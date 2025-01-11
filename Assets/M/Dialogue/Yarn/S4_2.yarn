@@ -672,6 +672,7 @@ title: realend_last
 <<FadeIn>>
 <<wait 5.0>>
 <<Fade Black 0.0 1.0 2.0>>
+<<StopAudioAll>>
 <<wait 3.0>>
 <<ChangeSceneTo VisualNovelPrefab SEndingCredit>>
 <<Scene NoBG>>
