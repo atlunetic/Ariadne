@@ -2029,7 +2029,9 @@ title:BacktoOfficetel1stFloor
 //(암전, 사이렌 소리 사라짐)
 <<Fade Black 0.0 1.0 1.0>>
 <<wait 2.0>>
+<<Hide BlackBG>>
 <<Hide WhiteBG>>
+<<Scene NoBG>>
 <<StopAudioAll>>
 //<<SetCanvasTo VisualNovelPrefab false>>
 //Test 후 S4 씬 변경 주석만 삭제 (<<ChangeSceneTo VisualNovelPrefab S4>>)
