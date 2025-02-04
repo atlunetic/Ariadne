@@ -617,7 +617,7 @@ title: E_NoClothes
 
 <<Hide 지수>>
 <<Hide 클럽고객E>>
-
+<<FinishedDialogue VisualNovelPrefab E_NoClothes>>
 <<SetCanvasTo VisualNovelPrefab false>>
 
 ===
@@ -3866,7 +3866,7 @@ title: obj_customerh
 <<Hide 클럽고객H>>
 
 <<SetActiveFalse VisualNovelPrefab VIProom_customerH>>
-
+<<FinishedObj VisualNovelPrefab VIProom_customerH>>
 <<UpdateAct 지수 CoJIsoo2>>
 ...
 이상한 사람이다.

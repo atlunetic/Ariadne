@@ -570,7 +570,7 @@ title: Park
 
 // 장소 1. 동네 공원
 
-<<if CheckDialogue("Park")==true>>
+<<if CheckDialogue("ParkC")==true>>
     <<SetCanvasTo VisualNovelPrefab true>>
     공원에 다시 가볼까?
         -> 가보자.
@@ -586,6 +586,7 @@ title: Park
     동네 공원으로 가볼까?
         -> 가보자
             <<GoPark MapController>>
+            <<FinishedDialogue VisualNovelPrefab ParkC>>
             <<FinishedDialogue VisualNovelPrefab Park>>
             <<SetCanvasTo VisualNovelPrefab false>>
         -> 가지말자
@@ -769,7 +770,7 @@ title: Barstreet
 ---
 
 
-<<if CheckDialogue("Barstreet")==true>>
+<<if CheckDialogue("BarstreetC")==true>>
     <<SetCanvasTo VisualNovelPrefab true>>
     술집 거리에 다시 가볼까?
         -> 가보자.
@@ -785,6 +786,7 @@ title: Barstreet
 술집 거리로 가볼까?
     -> 가보자
         <<GoBarStreet MapController>>
+        <<FinishedDialogue VisualNovelPrefab BarStreetC>>
         <<FinishedDialogue VisualNovelPrefab BarStreet>>
         <<SetCanvasTo VisualNovelPrefab false>>
     -> 가지말자

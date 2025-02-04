@@ -515,7 +515,7 @@ title: OfficetelDoorwcard
 
 //조직원 왼쪽, 지수 오른쪽 배치
 
-<<Act 조직원 NPC_gang 0.322 0.38 white>>
+<<Act 조직원 NPC_gang 0.322 0.3 white>>
 
 조직원: 내가 제일 좋아하는 건?
 
@@ -924,7 +924,7 @@ title: Ending4_2
 //(갑자기 화면 흔들리는 효과)
 조직원: 너 뭐야.
 //조직원 왼쪽, 지수 오른쪽 배치
-<<Act 조직원 NPC_gang 0.322 0.227 white>>
+<<Act 조직원 NPC_gang 0.322 0.3 white>>
 //지수5
 <<Act 지수 Jisoo5 1.17 0.322 white>>
 어...

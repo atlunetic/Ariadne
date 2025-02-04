@@ -100,7 +100,7 @@ public class ActionPanelButtons : MonoBehaviour
             {
                 if (currentscene.name == "S2_7_Stairs") { runner.StartDialogue("inventory_notjelly"); }
 
-                else if (GameManager.instance.FinishedDialogues.Contains("obj_customers"))
+                else if (GameManager.instance.FinishedDialogues.Contains("E_NoClothes") && currentscene.name == "S2_2_Table")
                 {
                     runner.StartDialogue("ClothesUsed");
                 }
@@ -117,7 +117,7 @@ public class ActionPanelButtons : MonoBehaviour
 
             if (currentscene.name.StartsWith("S3_1"))
             {
-                if (GameManager.instance.FinishedDialogues.Contains("AfterD3")) //InteractionFin3¿¡¼­ AfterD3À¸·Î ¼öÁ¤
+                if (GameManager.instance.FinishedDialogues.Contains("AfterD3")) //InteractionFin3ï¿½ï¿½ï¿½ï¿½ AfterD3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 {
                     if (GameManager.instance.FinishedDialogues.Contains("IfEmployeeSuit"))
                     {
