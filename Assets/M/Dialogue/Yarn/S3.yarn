@@ -1114,6 +1114,7 @@ title: R1403Cardkey
 
 //<<AddToInventory VisualNovelPrefab R1403Cardkey>>
 <<SetActiveFalse VisualNovelPrefab R1403Cardkey>>
+<<FinishedObj VisualNovelPrefab	R1403Cardkey>>
 
 <<if (CheckDialogue("R1403Cardkey")==true && CheckDialogue("MemoStory_CaseBoard") == true && CheckDialogue("Memo_VideoTape3")==true)>>
     <<jump InteractionFinto14>>
@@ -1314,7 +1315,7 @@ title: OutofOfficetel
 title: escapegame_intro
 
 ---
-
+<<SetCanvasTo VisualNovelPrefab true>>
 //14층 배경
 <<BGoff SceneManager>>
 <<PlayAudio ChooseMinigame 0.8 loop>>
@@ -1335,6 +1336,7 @@ title: escapegame_checkpoint1
 <<InitTB VisualNovelPrefab S3_6_CP1>>
 //14층 배경
 <<Scene Door1403>>
+<<FadeIn>>
 <<ShowTB VisualNovelPrefab true>>
 <color=yellow>* 체크포인트 *</color>
 <<wait 2.0>>
@@ -1722,6 +1724,7 @@ title: escapegame_checkpoint3
 <<SetCanvasTo VisualNovelPrefab true>>
 <<InitTB VisualNovelPrefab S3_6_CP3>>
 <<Scene Lobby3F>>
+<<FadeIn>>
 <color=yellow>* 체크포인트 *</color>
 <<wait 2.0>>
 1층에는 이미 조직원들이 대기하고 있을 거야.

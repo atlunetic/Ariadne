@@ -102,6 +102,15 @@ public class Inventory : MonoBehaviour
         items.Remove(FinishedItem);
         onChangeItem.Invoke();
     }
+
+    [YarnCommand("EmptyInventory")]
+    public void EmptyInventory()
+    {
+        items.Clear(); // Clears all items from the inventory
+        ClearUsingItem(); // Ensures no item is currently being used
+        onChangeItem?.Invoke(); // Notifies that the inventory has changed
+        Debug.Log("Inventory has been emptied."); 
+    }
 }
 
 

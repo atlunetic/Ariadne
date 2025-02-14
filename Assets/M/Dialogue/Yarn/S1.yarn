@@ -880,7 +880,6 @@ title: DrugsnacksStory
 <<UpdateAct 지수 Jisoo2>>
 그런데...
 중독적이라는 걸 굳이 마약이라는 단어로 표현해야 하나?
-
 <<HideAll>>
 <<FinishedDialogue VisualNovelPrefab DrugsnacksStory>>
 <<SetCanvasTo VisualNovelPrefab false>>
