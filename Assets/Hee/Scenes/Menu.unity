@@ -247,6 +247,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 354579345427799927, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728730582621200504, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 879125613990802976, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -331,10 +339,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 986993110352792218, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1211982659065262339, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1941013364164641171, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
       propertyPath: m_Name
       value: MenuUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3761928260193578655, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009917607700646543, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281303542187789748, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629066467480620952, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159571611762792587, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5321075760885430696, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406138357443810690, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526823178532093346, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394417366853453958, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a81fc8755acc233448aed51087872786, type: 3}
     m_RemovedComponents:
     - {fileID: 6227341718652881859, guid: 4eca83a81fcea93428e158b6c29dc1f0, type: 3}
     m_RemovedGameObjects: []
